@@ -3,25 +3,37 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Threading;
 
 public class VmsComThread : IDisposable
 {
-    public VmsComThread()
+    public VmsComThread(Dispatcher disp = null)
     {
-        using (mre = new ManualResetEvent(false))
+        if (disp!=null)
         {
-            thread = new Thread(() =>
+            //For plugins
+            thread = disp.Thread;
+            ctx = new DispatcherSynchronizationContext(disp);
+        }
+        else
+        {
+            //For standalone apps
+            using (mre = new ManualResetEvent(false))
             {
-                //Hack to initiate a windows message pump (keeps the thread alive) :(
-                Application.Idle += Initialize;
-                Application.Run();
-            });
-            thread.IsBackground = true;
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            mre.WaitOne();
+                thread = new Thread(() =>
+                {
+                    //Hack to initiate a windows message pump (keeps the thread alive) :(
+                    Application.Idle += Initialize;
+                    Application.Run();
+                });
+                thread.IsBackground = true;
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+                mre.WaitOne();
+            }
         }
     }
+
     public void BeginInvoke(Delegate dlg, params Object[] args)
     {
         if (ctx == null) throw new ObjectDisposedException("VmsComThread");

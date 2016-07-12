@@ -50,6 +50,15 @@ namespace ESAPIX.Proxies
             return InvokeAndWrap<Patient>(MethodBase.GetCurrentMethod().Name, id);
         }
 
+        public async Task<IPatient> OpenPatientByIdAsync(string id)
+        {
+            return await Task.Run(() =>
+            {
+                return InvokeAndWrap<Patient>(MethodBase.GetCurrentMethod().Name, id);
+            });
+            
+        }
+
         public void Dispose()
         {
             try

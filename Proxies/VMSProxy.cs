@@ -53,7 +53,9 @@ namespace ESAPIX.Proxies
         {
             var objects = GetEnumerable(propName);
             var enumer = objects.GetEnumerator();
-            while (enumer.MoveNext())
+            var hasNext = false;
+            VmsThread.Invoke(() => { hasNext = enumer.MoveNext();});
+            while (hasNext)
             {
                 dynamic proxy = default(T);
                 VmsThread.Invoke(() =>
@@ -67,6 +69,7 @@ namespace ESAPIX.Proxies
                     }
                 });
                 yield return (T)proxy;
+                VmsThread.Invoke(() => { hasNext = enumer.MoveNext(); });
             }
         }
 
