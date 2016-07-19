@@ -17,6 +17,6 @@ namespace ESAPIX.AppKit
             XExecute(plugCtx, window);
         }
 
-        public abstract void XExecute(IScriptContext ctx, Window w);
+        public abstract void XExecute(PluginContext ctx, Window w);
     }
 }

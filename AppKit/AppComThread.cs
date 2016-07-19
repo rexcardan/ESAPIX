@@ -83,5 +83,13 @@ namespace ESAPIX.AppKit
         private Thread thread;
         private SynchronizationContext ctx;
         private ManualResetEvent mre;
+
+        public int ThreadId
+        {
+            get
+            {
+                return thread.ManagedThreadId;
+            }
+        }
     }
 }

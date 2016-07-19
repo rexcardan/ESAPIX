@@ -1,4 +1,4 @@
-﻿using ESAPIX.Appkit;
+﻿using ESAPIX.AppKit;
 using ESAPIX.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -11,9 +11,9 @@ namespace ESAPIX.Helpers
 {
     public class ScriptContextHelper
     {
-        public static IScriptContext FromApp(Application app)
-        {
-            return new AppContext(app);
-        }
+        //public static IScriptContext FromApp(Application app)
+        //{
+        //    return new StandAloneContext(app);
+        //}
     }
 }

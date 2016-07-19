@@ -11,5 +11,7 @@ namespace ESAPIX.Interfaces
         Task InvokeAsync(Action action);
 
         void Invoke(Action action);
+
+        int ThreadId { get; }
     }
 }

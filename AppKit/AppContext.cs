@@ -11,7 +11,7 @@ namespace ESAPIX.AppKit
     /// <summary>
     /// Wraps a VMS application in a way that replicates the ScriptContext class. Can be used for debugging or building two sided apps
     /// </summary>
-    public class AppContext : IScriptContext
+    public class StandAloneContext : IScriptContext
     {
         private Application _app;
         private Course _course;
@@ -20,7 +20,7 @@ namespace ESAPIX.AppKit
         private BrachyPlanSetup _brachyPlanSetup;
         private ExternalPlanSetup _exPlanSetup;
 
-        public AppContext(Application app, IVMSThread thread)
+        public StandAloneContext(Application app, IVMSThread thread)
         {
             _app = app;
             Thread = thread ?? new AppComThread(false); //Same thread
@@ -32,7 +32,7 @@ namespace ESAPIX.AppKit
         /// <param name="username">VMS username</param>
         /// <param name="password">VMS password</param>
         /// <returns>app context</returns>
-        public static AppContext Create(string username, string password)
+        public static StandAloneContext Create(string username, string password)
         {
             var thread = new AppComThread();
             Application app = null;
@@ -40,7 +40,7 @@ namespace ESAPIX.AppKit
             {
                 app = Application.CreateApplication(username, password);
             });
-            return new AppContext(app, thread);
+            return new StandAloneContext(app, thread);
         }
 
         public bool SetPatient(string id)

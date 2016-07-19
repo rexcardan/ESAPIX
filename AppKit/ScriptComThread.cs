@@ -17,6 +17,14 @@ namespace ESAPIX.AppKit
             _disp = disp;
         }
 
+        public int ThreadId
+        {
+            get
+            {
+                return _disp.Thread.ManagedThreadId;
+            }
+        }
+
         public void Dispose()
         {
             _disp.BeginInvokeShutdown(DispatcherPriority.Background);
