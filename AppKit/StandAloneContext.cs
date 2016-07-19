@@ -11,7 +11,7 @@ namespace ESAPIX.AppKit
     /// <summary>
     /// Wraps a VMS application in a way that replicates the ScriptContext class. Can be used for debugging or building two sided apps
     /// </summary>
-    public class StandAloneContext : IScriptContext
+    public class StandAloneContext : IScriptContext, IDisposable
     {
         private Application _app;
         private Course _course;
@@ -79,6 +79,22 @@ namespace ESAPIX.AppKit
             _planSetup = bs;
             _brachyPlanSetup = bs;
             return _brachyPlanSetup != null;
+        }
+
+        public void ClosePatient()
+        {
+            Thread.Invoke(() =>
+            {
+                _app.ClosePatient();
+            });
+        }
+
+        public void Dispose()
+        {
+            Thread.Invoke(() =>
+            {
+                _app.Dispose();
+            });
         }
 
         public Course Course { get; }
