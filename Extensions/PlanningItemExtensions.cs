@@ -5,12 +5,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
-using ESAPIX.Enums;
 using ESAPIX.Interfaces;
-using ESAPIX.Proxies;
-using ESAPIX.Types;
-
-
+using VMS.TPS.Common.Model.API;
+using VMS.TPS.Common.Model.Types;
+using static ESAPIX.Helpers.MathHelper;
 namespace ESAPIX.Extensions
 {
     public static class PlanningItemExtensions
@@ -20,25 +18,18 @@ namespace ESAPIX.Extensions
         /// </summary>
         /// <param name="plan">the planning item</param>
         /// <returns>the referenced structure set</returns>
-        public static IEnumerable<IStructure> GetStructures(this IPlanningItem plan)
+        public static IEnumerable<Structure> GetStructures(this PlanningItem plan)
         {
             if (plan is PlanSetup && plan != null)
             {
                 var p = plan as PlanSetup;
-                if (p.StructureSet != null)
-                {
-                    return p.StructureSet.Structures;
-                }
+                return p.StructureSet?.Structures;
             }
             if (plan is PlanSum && plan != null)
             {
                 var p = plan as PlanSum;
-                if (p.StructureSet != null)
-                {
-                    return p.StructureSet.Structures;
-                }
+                return p.StructureSet?.Structures;
             }
-            MessageBox.Show("Structure set from plan " + plan.Id + " was null!");
             return null;
         }
 
@@ -50,13 +41,13 @@ namespace ESAPIX.Extensions
         /// <param name="structId">the structure id to match</param>
         /// <param name="regex">the optional regex expression to match against a structure id</param>
         /// <returns></returns>
-        public static bool ContainsStructure(this IPlanningItem plan, string structId, string regex = null)
+        public static bool ContainsStructure(this PlanningItem plan, string structId, string regex = null)
         {
-            IStructure s;
+            Structure s;
             return plan.ContainsStructure(structId, regex, out s);
         }
 
-        private static bool ContainsStructure(this IPlanningItem plan, string structId, string regex, out IStructure s)
+        private static bool ContainsStructure(this PlanningItem plan, string structId, string regex, out Structure s)
         {
             foreach (var struc in plan.GetStructures())
             {
@@ -71,9 +62,9 @@ namespace ESAPIX.Extensions
         /// <summary>
         /// Gets a structure (if it exists from the structure set references by the planning item
         /// </summary>
-        public static IStructure GetStructure(this IPlanningItem plan, string structId, string regex = null)
+        public static Structure GetStructure(this PlanningItem plan, string structId, string regex = null)
         {
-            IStructure s;
+            Structure s;
             plan.ContainsStructure(structId, regex, out s);
             return s;
         }
@@ -81,12 +72,12 @@ namespace ESAPIX.Extensions
         /// <summary>
         /// Enables a shorter method for doing a common task (getting the DVH from a structure). Contains default values.
         /// </summary>
-        public static IDVHData GetDefaultDVHCumulativeData(this IPlanningItem plan, IStructure s, DoseValuePresentation dvp = DoseValuePresentation.Absolute, VolumePresentation vp = VolumePresentation.Relative, double binWidth = 0.1)
+        public static DVHData GetDefaultDVHCumulativeData(this PlanningItem plan, Structure s, DoseValuePresentation dvp = DoseValuePresentation.Absolute, VolumePresentation vp = VolumePresentation.Relative, double binWidth = 0.1)
         {
             return plan.GetDVHCumulativeData(s, dvp, vp, binWidth);
         }
 
-        public static DoseValue GetDoseAtVolume(this IPlanningItem i, IStructure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+        public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
         {
             var dvh = i.GetDVHCumulativeData(s, dPres, vPres, 0.1);
             var curve = dvh.CurveData;
@@ -106,8 +97,7 @@ namespace ESAPIX.Extensions
             //Overvolume scenario
             if ((s.Volume < volume && vPres == VolumePresentation.AbsoluteCm3) || (vPres == VolumePresentation.Relative && volume > 100.0))
             {
-                point.Dose = double.NaN;
-                return point;
+                return new DoseValue(double.NaN, point.Unit);
             }
             else
             {
@@ -118,66 +108,42 @@ namespace ESAPIX.Extensions
                 var point1 = higherPoints.Last();
                 var point2 = lowerPoints.First();
                 var doseAtPoint = Interpolate(point1.Volume, point2.Volume, point1.DoseValue.Dose, point2.DoseValue.Dose, volume);
-                point.Dose = doseAtPoint;
-                return point;
+                return new DoseValue(doseAtPoint, point.Unit);
             }
         }
 
 
         //TODO This
-        public static DoseValue GetMinimumDoseAtVolume(this IPlanningItem i, IStructure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+        public static DoseValue GetMinimumDoseAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            if (i is IPlanSetup)
+            if (i is PlanSetup)
             {
-                var plan = i as IPlanSetup;
+                var plan = i as PlanSetup;
                 var dvh = plan.GetDefaultDVHCumulativeData(s, dPres, vPres);
                 return dvh.CurveData.GetMinimumDoseAtVolume(volume);
             }
             else
             {
-                var plan = i as IPlanSum;
+                var plan = i as PlanSum;
                 var dvh = plan.GetDefaultDVHCumulativeData(s, dPres, vPres);
                 return dvh.CurveData.GetMinimumDoseAtVolume(volume);
             }
         }
 
-        public static double GetVolumeAtDose(this IPlanningItem pi, IStructure s, double dose, VolumePresentation vPres, DoseValuePresentation dPres)
+        public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
         {
-            var dvh = pi.GetDVHCumulativeData(s, dPres, vPres, 0.1);
-            var point = dvh.MaxDose;
-            point.Dose = dose;
-
-            if (dvh != null)
-            {
-                var curve = dvh.CurveData;
-                var rx = pi.TotalPrescribedDoseGy();
-                if (dvh.MaxDose.GetDoseGy(rx) < point.GetDoseGy(rx)) { return 0; }
-                if (dvh.MinDose.GetDoseGy(rx) > point.GetDoseGy(rx)) { return vPres == VolumePresentation.AbsoluteCm3 ? s.Volume : 1.0; } //100
-                else
-                {
-                    var dosePointGy = dPres == DoseValuePresentation.Absolute ? dose : dose * rx;
-                    //Interpolate
-                    var higherPoints = curve.Where(p => p.DoseValue.GetDoseGy(rx) > point.GetDoseGy(rx));
-                    var lowerPoints = curve.Where(p => p.DoseValue.GetDoseGy(rx) <= point.GetDoseGy(rx));
-
-                    var point1 = higherPoints.First();
-                    var point2 = lowerPoints.Last();
-                    var volumeAtPoint = Interpolate(point1.DoseValue.GetDoseGy(rx), point2.DoseValue.GetDoseGy(rx), point1.Volume, point2.Volume, dosePointGy);
-                    return volumeAtPoint;
-                }
-
-            }
-            return double.NaN;
+            var dpres = dv.GetPresentation();
+            return pi
+                .GetDVHCumulativeData(s, dpres, vPres, 0.1)
+                .CurveData
+                .GetVolumeAtDose(dv);
         }
 
-        private static double Interpolate(double x1, double x3, double y1, double y3, double x2)
-        {
-            return (x2 - x1) * (y3 - y1) / (x3 - x1) + y1;
-        }
+       
 
-        public static double TotalPrescribedDoseGy(this IPlanningItem pi)
+        public static double TotalPrescribedDoseGy(this PlanningItem pi)
         {
-            Func<IPlanSetup, double> getDoseFromRx = new Func<IPlanSetup, double>(ps =>
+            Func<PlanSetup, double> getDoseFromRx = new Func<PlanSetup, double>(ps =>
             {
                 return ps.TotalPrescribedDose.GetDoseGy();
             });

@@ -4,14 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
-using ESAPIX.Proxies;
-using ESAPIX.Types;
+using VMS.TPS.Common.Model.API;
+using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Extensions
 {
     public static class StructureExtensions
     {
-        public static double[,] VoxelsOnSlice(this IStructure str, IImage image, int sliceZ){
+        /// <summary>
+        /// Returns the voxel HU from a given slice within a structure. Voxels outside the structure are NaN
+        /// </summary>
+        /// <param name="str">the structure</param>
+        /// <param name="image">the image containing voxels</param>
+        /// <param name="sliceZ">the slice of the image</param>
+        /// <returns></returns>
+        public static double[,] VoxelsOnSlice(this Structure str, Image image, int sliceZ){
             int[,] buffer = new int[image.XSize, image.YSize];
             double[,] hu = new double[image.XSize, image.YSize];
 

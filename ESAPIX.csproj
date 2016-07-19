@@ -70,22 +70,19 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="VMS.TPS.Common.Model.API">
+      <HintPath>..\VMSlib\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.Types">
+      <HintPath>..\VMSlib\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\BankIndex.cs" />
-    <Compile Include="Enums\BlockType.cs" />
-    <Compile Include="Enums\DoseUnit.cs" />
-    <Compile Include="Enums\DoseValuePresentation.cs" />
-    <Compile Include="Enums\DosimeterUnit.cs" />
-    <Compile Include="Enums\GantryDirection.cs" />
-    <Compile Include="Enums\MLCPlanType.cs" />
-    <Compile Include="Enums\PatientOrientation.cs" />
-    <Compile Include="Enums\PlanSetupApprovalStatus.cs" />
-    <Compile Include="Enums\PlanType.cs" />
-    <Compile Include="Enums\SeriesModality.cs" />
-    <Compile Include="Enums\SetupTechnique.cs" />
-    <Compile Include="Enums\VolumePresentation.cs" />
+    <Compile Include="AppKit\AppContext.cs" />
+    <Compile Include="AppKit\PluginContext.cs" />
+    <Compile Include="AppKit\XScriptBase.cs" />
+    <Compile Include="AppKit\XScriptMultithreadBase.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Extensions\DoseExtensions.cs" />
     <Compile Include="Extensions\DVHDataExtensions.cs" />
@@ -96,126 +93,17 @@
     <Compile Include="Extensions\SerializationExtensions.cs" />
     <Compile Include="Extensions\StructureExtensions.cs" />
     <Compile Include="Extensions\VVectorExtensions.cs" />
-    <Compile Include="Fakes\AddOnMaterial.cs" />
-    <Compile Include="Fakes\ApiDataObject.cs" />
-    <Compile Include="Fakes\Application.cs" />
-    <Compile Include="Fakes\Applicator.cs" />
-    <Compile Include="Fakes\Beam.cs" />
-    <Compile Include="Fakes\BeamCalculationLog.cs" />
-    <Compile Include="Fakes\Block.cs" />
-    <Compile Include="Fakes\Bolus.cs" />
-    <Compile Include="Fakes\Compensator.cs" />
-    <Compile Include="Fakes\ControlPoint.cs" />
-    <Compile Include="Fakes\ControlPointCollection.cs" />
-    <Compile Include="Fakes\Course.cs" />
-    <Compile Include="Fakes\Dose.cs" />
-    <Compile Include="Fakes\DVHData.cs" />
-    <Compile Include="Fakes\ExternalBeam.cs" />
-    <Compile Include="Fakes\Faker.cs" />
-    <Compile Include="Fakes\FakeScriptContext.cs" />
-    <Compile Include="Fakes\FieldReferencePoint.cs" />
-    <Compile Include="Fakes\Fractionation.cs" />
-    <Compile Include="Fakes\HistoryTimestamp.cs" />
-    <Compile Include="Fakes\Image.cs" />
-    <Compile Include="Fakes\Isodose.cs" />
-    <Compile Include="Fakes\MLC.cs" />
-    <Compile Include="Fakes\Patient.cs" />
-    <Compile Include="Fakes\PlanningItem.cs" />
-    <Compile Include="Fakes\PlanSetup.cs" />
-    <Compile Include="Fakes\PlanSum.cs" />
-    <Compile Include="Fakes\ReferencePoint.cs" />
-    <Compile Include="Fakes\ScriptContext.cs" />
-    <Compile Include="Fakes\Slot.cs" />
-    <Compile Include="Fakes\Structure.cs" />
-    <Compile Include="Fakes\StructureSet.cs" />
-    <Compile Include="Fakes\Technique.cs" />
-    <Compile Include="Fakes\Tray.cs" />
-    <Compile Include="Fakes\TreatmentSession.cs" />
-    <Compile Include="Fakes\User.cs" />
-    <Compile Include="Fakes\Wedge.cs" />
     <Compile Include="Helpers\MapHelper.cs" />
-    <Compile Include="Helpers\VmsComThread.cs" />
-    <Compile Include="Interfaces\IAddOn.cs" />
-    <Compile Include="Interfaces\IAddOnMaterial.cs" />
-    <Compile Include="Interfaces\IApiDataObject.cs" />
-    <Compile Include="Interfaces\IApplication.cs" />
-    <Compile Include="Interfaces\IApplicator.cs" />
-    <Compile Include="Interfaces\IBeam.cs" />
-    <Compile Include="Interfaces\IBeamCalculationLog.cs" />
-    <Compile Include="Interfaces\IBlock.cs" />
-    <Compile Include="Interfaces\IBolus.cs" />
-    <Compile Include="Interfaces\ICompensator.cs" />
-    <Compile Include="Interfaces\IControlPoint.cs" />
-    <Compile Include="Interfaces\IControlPointCollection.cs" />
-    <Compile Include="Interfaces\ICourse.cs" />
-    <Compile Include="Interfaces\IDose.cs" />
-    <Compile Include="Interfaces\IDVHData.cs" />
-    <Compile Include="Interfaces\IExternalBeam.cs" />
-    <Compile Include="Interfaces\IFieldReferencePoint.cs" />
-    <Compile Include="Interfaces\IFractionation.cs" />
-    <Compile Include="Interfaces\IImage.cs" />
-    <Compile Include="Interfaces\IIsodose.cs" />
-    <Compile Include="Interfaces\IMLC.cs" />
-    <Compile Include="Interfaces\IPatient.cs" />
-    <Compile Include="Interfaces\IPlanningItem.cs" />
-    <Compile Include="Interfaces\IPlanSetup.cs" />
-    <Compile Include="Interfaces\IPlanSum.cs" />
-    <Compile Include="Interfaces\IReferencePoint.cs" />
+    <Compile Include="Helpers\MathHelper.cs" />
+    <Compile Include="AppKit\ScriptComThread.cs" />
+    <Compile Include="Helpers\ScriptContextHelper.cs" />
+    <Compile Include="AppKit\AppComThread.cs" />
     <Compile Include="Interfaces\IScriptContext.cs" />
-    <Compile Include="Interfaces\ISlot.cs" />
-    <Compile Include="Interfaces\IStructure.cs" />
-    <Compile Include="Interfaces\IStructureSet.cs" />
-    <Compile Include="Interfaces\ITechnique.cs" />
-    <Compile Include="Interfaces\ITray.cs" />
-    <Compile Include="Interfaces\IUser.cs" />
-    <Compile Include="Interfaces\IVmsProxy.cs" />
-    <Compile Include="Interfaces\IWedge.cs" />
+    <Compile Include="Interfaces\IVMSThread.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Logging\LogStrings.cs" />
     <Compile Include="Profiles\VMS136Profile.cs" />
-    <Compile Include="Proxies\AddOnMaterial.cs" />
-    <Compile Include="Proxies\ApiDataObject.cs" />
-    <Compile Include="Proxies\Application.cs" />
-    <Compile Include="Proxies\Applicator.cs" />
-    <Compile Include="Proxies\Beam.cs" />
-    <Compile Include="Proxies\BeamCalculationLog.cs" />
-    <Compile Include="Proxies\Block.cs" />
-    <Compile Include="Proxies\Bolus.cs" />
-    <Compile Include="Proxies\Compensator.cs" />
-    <Compile Include="Proxies\ControlPoint.cs" />
-    <Compile Include="Proxies\ControlPointCollection.cs" />
-    <Compile Include="Proxies\Course.cs" />
-    <Compile Include="Proxies\Dose.cs" />
-    <Compile Include="Proxies\ExternalBeam.cs" />
-    <Compile Include="Proxies\FieldReferencePoint.cs" />
-    <Compile Include="Proxies\MLC.cs" />
-    <Compile Include="Proxies\ProxyEnumerator.cs" />
-    <Compile Include="Proxies\Slot.cs" />
-    <Compile Include="Proxies\Technique.cs" />
-    <Compile Include="Proxies\Tray.cs" />
-    <Compile Include="Proxies\Wedge.cs" />
-    <Compile Include="Types\DoseValue.cs" />
-    <Compile Include="Proxies\DVHData.cs" />
-    <Compile Include="Types\DVHPoint.cs" />
-    <Compile Include="Proxies\Fractionation.cs" />
-    <Compile Include="Proxies\HistoryTimestamp.cs" />
-    <Compile Include="Proxies\Image.cs" />
-    <Compile Include="Proxies\Isodose.cs" />
-    <Compile Include="Proxies\Patient.cs" />
-    <Compile Include="Proxies\PlanningItem.cs" />
-    <Compile Include="Proxies\PlanSetup.cs" />
-    <Compile Include="Proxies\PlanSum.cs" />
-    <Compile Include="Proxies\ReferencePoint.cs" />
-    <Compile Include="Proxies\ScriptContext.cs" />
-    <Compile Include="Proxies\Structure.cs" />
-    <Compile Include="Proxies\StructureSet.cs" />
-    <Compile Include="Proxies\TreatmentSession.cs" />
-    <Compile Include="Proxies\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proxies\VMSProxy.cs" />
-    <Compile Include="Types\MetersetValue.cs" />
-    <Compile Include="Types\VRect.cs" />
-    <Compile Include="Types\VVector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -227,6 +115,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

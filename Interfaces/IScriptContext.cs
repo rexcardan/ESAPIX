@@ -3,25 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Interfaces
 {
     public interface IScriptContext
     {
-        IUser CurrentUser { get; }
+        string ApplicationName { get; }
 
-        ICourse Course { get; }
+        BrachyPlanSetup BrachyPlanSetup { get; }
 
-        IImage Image { get; }
+        IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get;}
 
-        IPatient Patient { get; }
+        User CurrentUser { get; }
 
-        IPlanSetup PlanSetup { get; }
+        Course Course { get; }
 
-        IEnumerable<IPlanSetup> PlansInScope { get; }
+        Image Image { get; }
 
-        IEnumerable<IPlanSum> PlanSumsInScope{ get; }
+        Patient Patient { get; }
 
-        IStructureSet StructureSet { get; }
+        ExternalPlanSetup ExternalPlanSetup { get; }
+
+        IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
+
+        PlanSetup PlanSetup { get; }
+
+        IEnumerable<PlanSetup> PlansInScope { get; }
+
+        IEnumerable<PlanSum> PlanSumsInScope{ get; }
+
+        StructureSet StructureSet { get; }
+
+        IVMSThread Thread { get; }
     }
 }

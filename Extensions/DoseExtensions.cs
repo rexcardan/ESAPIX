@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESAPIX.Enums;
-using ESAPIX.Types;
+using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Extensions
 {
@@ -11,11 +10,11 @@ namespace ESAPIX.Extensions
     {
         public static double GetDoseGy(this DoseValue dv)
         {
-            if (dv.Unit == DoseUnit.Gy)
+            if (dv.Unit == DoseValue.DoseUnit.Gy)
             {
                 return dv.Dose;
             }
-            else if (dv.Unit == DoseUnit.cGy)
+            else if (dv.Unit == DoseValue.DoseUnit.cGy)
             {
                 return dv.Dose / 100;
             }
@@ -25,13 +24,22 @@ namespace ESAPIX.Extensions
             }
         }
 
+        public static DoseValuePresentation GetPresentation(this DoseValue dv)
+        {
+            if (dv.Unit == DoseValue.DoseUnit.Percent)
+            {
+                return DoseValuePresentation.Relative;
+            }
+            return DoseValuePresentation.Absolute; 
+        }
+
         public static double GetDoseGy(this DoseValue dv, double prescriptionDoseGy)
         {
-            if (dv.Unit == DoseUnit.Gy)
+            if (dv.Unit == DoseValue.DoseUnit.Gy)
             {
                 return dv.Dose;
             }
-            else if (dv.Unit == DoseUnit.cGy)
+            else if (dv.Unit == DoseValue.DoseUnit.cGy)
             {
                 return dv.Dose / 100;
             }
@@ -41,17 +49,17 @@ namespace ESAPIX.Extensions
             }
         }
 
-        public static double GetDose(this DoseValue dv, DoseUnit unit)
+        public static double GetDose(this DoseValue dv, DoseValue.DoseUnit unit)
         {
             if (dv.Unit == unit)
             {
                 return dv.Dose;
             }
-            else if (dv.Unit == DoseUnit.cGy && unit == DoseUnit.Gy)
+            else if (dv.Unit == DoseValue.DoseUnit.cGy && unit == DoseValue.DoseUnit.Gy)
             {
                 return dv.Dose / 100;
             }
-            else if (dv.Unit == DoseUnit.Gy && unit == DoseUnit.cGy)
+            else if (dv.Unit == DoseValue.DoseUnit.Gy && unit == DoseValue.DoseUnit.cGy)
             {
                 return dv.Dose * 100;
             }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
-using ESAPIX.Types;
+using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Extensions
 {
     public static class ImageExtensions
     {
-        private static double[,] GetSliceHU(this IImage image, int sliceZ)
+        private static double[,] GetSliceHU(this Image image, int sliceZ)
         {
             int[,] buffer = new int[image.XSize, image.YSize];
             double[,] hu = new double[image.XSize, image.YSize];

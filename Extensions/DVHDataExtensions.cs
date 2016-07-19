@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESAPIX.Enums;
-using ESAPIX.Types;
+using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Extensions
 {
@@ -15,25 +14,25 @@ namespace ESAPIX.Extensions
         /// <param name="dvh">the dvhPoint array that is queried</param>
         /// <param name="doseGy">the dose at which to find the volume</param>
         /// <returns>the volume in the same units as the DVH point array</returns>
-        public static double GetVolumeAtDose(this DVHPoint[] dvh, double dose, DoseUnit units = DoseUnit.Gy)
+        public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
         {
-            var curve = dvh.Select(d => new { Dose = d.DoseValue.GetDose(units), Volume = d.Volume, VolumeUnit = d.VolumeUnit });
+            var curve = dvh.Select(d => new { Dose = d.DoseValue.Dose, Volume = d.Volume, VolumeUnit = d.VolumeUnit });
             var maxDose = curve.Max(d => d.Dose);
             var minDose = curve.Min(d => d.Dose);
 
-            if (maxDose < dose || dose< minDose)
+            //If the max dose is less than the queried dose, then there is no volume at the queried dose (out of range)
+            //If the min dose is greater than the queried dose, then 100% of the volume is at the queried dose
+            if (maxDose < dv.Dose || dv.Dose < minDose)
             {
-                return maxDose < dose ? 0 : dvh.Max(d=>d.Volume);
+                return maxDose < dv.Dose ? 0 : dvh.Max(d => d.Volume);
             }
             else
             {
-                //Interpolate
-                var higherPoints = curve.Where(p => p.Dose > dose);
-                var lowerPoints = curve.Where(p => p.Dose <= dose);
+                //If it makes it this far, we will have to interpolate
+                var higherPoint = curve.First(p => p.Dose > dv.Dose);
+                var lowerPoint = curve.Last(p => p.Dose <= dv.Dose);
 
-                var point1 = higherPoints.First();
-                var point2 = lowerPoints.Last();
-                var volumeAtPoint = Interpolate(point1.Dose, point2.Dose, point1.Volume, point2.Volume, dose);
+                var volumeAtPoint = Interpolate(higherPoint.Dose, lowerPoint.Dose, higherPoint.Volume, lowerPoint.Volume, dv.Dose);
                 return volumeAtPoint;
             }
         }
