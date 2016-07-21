@@ -58,6 +58,7 @@ namespace ESAPIX.AppKit
                 //Inject patient selection
                 shell.ContentRendered += shell_ContentRendered;
             }
+            shell.MinWidth = 750;
             shell.ShowDialog();
         }
 

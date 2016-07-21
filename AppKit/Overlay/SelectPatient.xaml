@@ -17,17 +17,17 @@
                     <TextBlock Text="Patient Id" Padding="5" Margin="5" Foreground="White"/>
                     <TextBox Text="{Binding PatientId}" Width="150" Padding="5" Margin="5"/>
                     <Button Content="Update Patient Context" MaxWidth="150" Margin="5" Padding="5" Click="Button_Click"/>
-                    <ComboBox ItemsSource="{Binding Courses}" Padding="5" Margin="5" Width="150" SelectedItem="{Binding SelectedCourse}">
+                    <ComboBox ItemsSource="{Binding Courses}" Padding="5" Margin="5" Width="150" SelectedItem="{Binding SelectedCourse, Mode=TwoWay}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Id}" Padding="2"/>
+                                <TextBlock Text="{Binding}" Padding="2"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox ItemsSource="{Binding PlanItems}" Padding="5" Margin="5" Width="150" SelectedItem="{Binding SelectedPlanItem}">
+                    <ComboBox ItemsSource="{Binding PlanItems}" Padding="5" Margin="5" Width="150" SelectedItem="{Binding SelectedPlanItem, Mode=TwoWay}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Id}" Padding="2"/>
+                                <TextBlock Text="{Binding}" Padding="2"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>

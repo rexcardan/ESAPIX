@@ -26,44 +26,78 @@ namespace ESAPIX.AppKit.Overlay
     /// </summary>
     public partial class SelectPatient : Page, INotifyPropertyChanged
     {
+        Dispatcher _disp;
+
         public SelectPatient(StandAloneContext app)
         {
+            _disp = Dispatcher.CurrentDispatcher;
             InitializeComponent();
             _app = app;
             this.DataContext = this;
             this.patientContextMenu.Visibility = System.Windows.Visibility.Visible;
             this.hideContextButton.Visibility = System.Windows.Visibility.Visible;
             this.showContextButton.Visibility = System.Windows.Visibility.Collapsed;
-            Courses = new ObservableCollection<Course>();
-            PlanItems = new ObservableCollection<PlanSetup>();
+            Courses = new ObservableCollection<string>();
+            PlanItems = new ObservableCollection<string>();
         }
 
         public string PatientId { get; set; }
         public string Status { get; set; }
-        public ObservableCollection<Course> Courses { get; set; }
-        public ObservableCollection<PlanSetup> PlanItems { get; set; }
-        private Course _selCourse;
+        public ObservableCollection<string> Courses { get; set; }
+        public ObservableCollection<string> PlanItems { get; set; }
+        private string _selCourse;
         private StandAloneContext _app;
 
-        public Course SelectedCourse
+        public string SelectedCourse
         {
             get { return _selCourse; }
             set
             {
                 _selCourse = value;
-                PlanItems.Clear();
-                _selCourse.PlanSetups.ToList().ForEach(PlanItems.Add);
+                var plans = new List<string>();
+                Action asyncA = new Action(async () =>
+                {
+                    //Call VMS
+                    await _app.Thread.InvokeAsync(() =>
+                    {
+                        var course = _app.Patient?.Courses.FirstOrDefault(c => c.Id == _selCourse);
+                        _app.SetCourse(course);
+                        UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName, _app.Patient.FirstName, "Loading plans...."));
+                        plans = course != null ? course.PlanSetups.Select(ps => ps.Id).ToList() : new List<string>();
+                        UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName, _app.Patient.FirstName, _app.Patient.Id));
+                    });
+
+                    //Update UI
+                    _disp.Invoke(new Action(() =>
+                    {
+                        PlanItems.Clear();
+                        plans.ForEach(PlanItems.Add);
+                        SelectedPlanItem = PlanItems.FirstOrDefault();
+                        OnPropertyChanged("SelectedPlanItem");
+                        OnPropertyChanged("SelectedCourse");
+
+                    }));
+
+                });
+                asyncA.Invoke();
             }
         }
 
-        private PlanSetup _selectedPlanItem;
-        public PlanSetup SelectedPlanItem
+        private string _selectedPlanItem;
+        public string SelectedPlanItem
         {
             get { return _selectedPlanItem; }
             set
             {
                 _selectedPlanItem = value;
-                _app.SetExternalPlanSetup(value as ExternalPlanSetup);
+                if (value != null)
+                {
+                    _app.Thread.InvokeAsync(() =>
+                    {
+                        var plan = _app.Course.PlanSetups.FirstOrDefault(ps => ps.Id == value);
+                        _app.SetPlanSetup(plan);
+                    });
+                }
             }
         }
 
@@ -84,12 +118,13 @@ namespace ESAPIX.AppKit.Overlay
                     {
                         if (_app.Patient != null)
                         {
+                            var courses = _app.Patient.Courses.Select(c => c.Id).ToList();
+                            _disp.Invoke(new Action(() =>
+                            {
+                                Courses.Clear();
+                                courses.ForEach(Courses.Add);
+                            }));
                             UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName, _app.Patient.FirstName, _app.Patient.Id));
-                            Courses.Clear();
-
-                            _app.Patient.Courses
-                                .ToList()
-                                .ForEach(Courses.Add);
                             SelectedCourse = Courses.FirstOrDefault();
                             OnPropertyChanged("Courses");
                             OnPropertyChanged("SelectedCourse");
@@ -98,7 +133,7 @@ namespace ESAPIX.AppKit.Overlay
                     }
                     else
                     {
-                        MessageBox.Show("Patient not found!");
+                        UpdateStatus("Patient not found!");
                     }
                 });
             }

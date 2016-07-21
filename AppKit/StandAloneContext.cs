@@ -48,6 +48,7 @@ namespace ESAPIX.AppKit
             Thread.Invoke(() =>
             {
                 _patient = _app.OpenPatientById(id);
+                OnPatientChanged(_patient);
             });
             return _patient != null;
         }
@@ -57,6 +58,7 @@ namespace ESAPIX.AppKit
             await Thread.InvokeAsync(() =>
             {
                 _patient = _app.OpenPatientById(id);
+                OnPatientChanged(_patient);
             });
             return _patient != null;
         }
@@ -64,6 +66,7 @@ namespace ESAPIX.AppKit
         public bool SetCourse(Course course)
         {
             _course = course;
+            OnCourseChanged();
             return _course != null;
         }
 
@@ -86,6 +89,7 @@ namespace ESAPIX.AppKit
             Thread.Invoke(() =>
             {
                 _app.ClosePatient();
+                OnPatientChanged(null);
             });
         }
 
@@ -97,7 +101,7 @@ namespace ESAPIX.AppKit
             });
         }
 
-        public Course Course { get; }
+        public Course Course { get { return _course; } }
 
         public User CurrentUser { get { return _app?.CurrentUser; } }
 
@@ -115,14 +119,25 @@ namespace ESAPIX.AppKit
 
         public IVMSThread Thread { get; private set; }
 
+        #region CONTEXT CHANGED EVENTS
+        public delegate void PatientChangedHandler(Patient newPatient);
+        public event PatientChangedHandler PatientChanged;
+        public void OnPatientChanged(Patient p) => PatientChanged?.Invoke(p);
         public string ApplicationName { get; set; } = "VMS Application";
 
         public BrachyPlanSetup BrachyPlanSetup { get; }
 
         public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get { return _course?.BrachyPlanSetups; } }
 
+        public delegate void PlanSetupChangedHandler();
+        public event PlanSetupChangedHandler PlanSetupChanged;
+        public void OnPlanSetupChanged() => PlanSetupChanged?.Invoke();
         public ExternalPlanSetup ExternalPlanSetup { get { return _exPlanSetup; } }
 
+        public delegate void CourseChangedHandler();
+        public event CourseChangedHandler CourseChanged;
+        public void OnCourseChanged() => CourseChanged?.Invoke();
+        #endregion
         public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get { return _course?.ExternalPlanSetups; } }
     }
 }
