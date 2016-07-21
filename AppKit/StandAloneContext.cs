@@ -48,6 +48,7 @@ namespace ESAPIX.AppKit
             Thread.Invoke(() =>
             {
                 _patient = _app.OpenPatientById(id);
+                //Notify
                 OnPatientChanged(_patient);
             });
             return _patient != null;
@@ -58,6 +59,7 @@ namespace ESAPIX.AppKit
             await Thread.InvokeAsync(() =>
             {
                 _patient = _app.OpenPatientById(id);
+                //Notify
                 OnPatientChanged(_patient);
             });
             return _patient != null;
@@ -66,14 +68,26 @@ namespace ESAPIX.AppKit
         public bool SetCourse(Course course)
         {
             _course = course;
-            OnCourseChanged();
+            //Notify
+            OnCourseChanged(course);
             return _course != null;
+        }
+
+        public bool SetPlanSetup(PlanSetup plan)
+        {
+            _planSetup = plan;
+            //Notify
+            OnPlanSetupChanged(plan);
+            return _planSetup != null;
         }
 
         public bool SetExternalPlanSetup(ExternalPlanSetup ex)
         {
             _planSetup = ex;
             _exPlanSetup = ex;
+            //Notify
+            OnExternalPlanSetupChanged(ex);
+            OnPlanSetupChanged(ex);
             return _exPlanSetup != null;
         }
 
@@ -81,6 +95,9 @@ namespace ESAPIX.AppKit
         {
             _planSetup = bs;
             _brachyPlanSetup = bs;
+            //Notify
+            OnBrachyPlanSetupChanged(bs);
+            OnPlanSetupChanged(bs);
             return _brachyPlanSetup != null;
         }
 
@@ -119,25 +136,37 @@ namespace ESAPIX.AppKit
 
         public IVMSThread Thread { get; private set; }
 
+        public string ApplicationName { get; set; } = "VMS Application";
+
+        public BrachyPlanSetup BrachyPlanSetup { get { return _brachyPlanSetup; } }
+
+        public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get { return _course?.BrachyPlanSetups; } }
+
+        public ExternalPlanSetup ExternalPlanSetup { get { return _exPlanSetup; } }
+
+        public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get { return _course?.ExternalPlanSetups; } }
+
         #region CONTEXT CHANGED EVENTS
         public delegate void PatientChangedHandler(Patient newPatient);
         public event PatientChangedHandler PatientChanged;
         public void OnPatientChanged(Patient p) => PatientChanged?.Invoke(p);
-        public string ApplicationName { get; set; } = "VMS Application";
 
-        public BrachyPlanSetup BrachyPlanSetup { get; }
-
-        public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get { return _course?.BrachyPlanSetups; } }
-
-        public delegate void PlanSetupChangedHandler();
+        public delegate void PlanSetupChangedHandler(PlanSetup ps);
         public event PlanSetupChangedHandler PlanSetupChanged;
-        public void OnPlanSetupChanged() => PlanSetupChanged?.Invoke();
-        public ExternalPlanSetup ExternalPlanSetup { get { return _exPlanSetup; } }
+        public void OnPlanSetupChanged(PlanSetup ps) => PlanSetupChanged?.Invoke(ps);
 
-        public delegate void CourseChangedHandler();
+        public delegate void ExternalPlanSetupChangedHandler(ExternalPlanSetup ps);
+        public event ExternalPlanSetupChangedHandler ExternalPlanSetupChanged;
+        public void OnExternalPlanSetupChanged(ExternalPlanSetup ps) => ExternalPlanSetupChanged?.Invoke(ps);
+
+        public delegate void BrachyPlanSetupChangedHandler(BrachyPlanSetup ps);
+        public event PlanSetupChangedHandler BrachyPlanSetupChanged;
+        public void OnBrachyPlanSetupChanged(BrachyPlanSetup ps) => BrachyPlanSetupChanged?.Invoke(ps);
+
+        public delegate void CourseChangedHandler(Course c);
         public event CourseChangedHandler CourseChanged;
-        public void OnCourseChanged() => CourseChanged?.Invoke();
+        public void OnCourseChanged(Course c) => CourseChanged?.Invoke(c);
         #endregion
-        public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get { return _course?.ExternalPlanSetups; } }
+
     }
 }
