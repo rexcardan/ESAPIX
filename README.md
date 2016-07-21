@@ -12,11 +12,11 @@ Getting Started
 > - Create a new WPF project and set its build to x64
 > - Reference with VMS.TPS.Common.Model.API and VMS.TPS.Common.Model.Types dlls
 > - Use NuGet to download ESAPIX and dependencies
-> -Add a folder called "Views"
-> -Add a folder called "ViewModels"
-> -Add a new Window in the Views folder called "Main"
-> -Add a new class to the ViewModels folder called "MainViewModel.cs"
-> -Remove the "StartupUri="MainWindow.xaml" from the App.xaml file
+> - Add a folder called "Views"
+> - Add a folder called "ViewModels"
+> - Add a new Window in the Views folder called "Main"
+> - Add a new class to the ViewModels folder called "MainViewModel.cs"
+> - Remove the "StartupUri="MainWindow.xaml" from the App.xaml file
 
 #### <i class="icon-pencil"></i> Modify the App.cs file
 Launching your app in default multithreaded mode is easy. Just override the OnStartup method and you are set!
