@@ -1,4 +1,5 @@
-﻿using ESAPIX.Interfaces;
+﻿using ESAPIX.Helpers;
+using ESAPIX.Interfaces;
 using Microsoft.Practices.Unity;
 using Prism.Events;
 using Prism.Unity;
@@ -24,6 +25,7 @@ namespace ESAPIX.AppKit
 
         public ScriptBootstrapper(PluginContext ctx, DispatcherFrame frame)
         {
+            XamlAssemblyLoader.LoadAssemblies();
             _sc = ctx;
             _ea = new EventAggregator();
             _frame = frame;
@@ -50,10 +52,11 @@ namespace ESAPIX.AppKit
             _frame.Continue = false;
         }
 
-        public new void Run()
+        public new void Run(Func<Window> getSplash = null)
         {
             Thread ui = new Thread(() =>
             {
+                if (getSplash != null) { getSplash().ShowDialog(); }
                 base.Run();
             });
             ui.SetApartmentState(ApartmentState.STA);

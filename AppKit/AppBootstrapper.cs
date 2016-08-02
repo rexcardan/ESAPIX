@@ -62,9 +62,15 @@ namespace ESAPIX.AppKit
             shell.ShowDialog();
         }
 
-        public new void Run()
+        public new void Run(Func<Window> getSplash = null)
         {
-            if (_showSplash) { Splasher.ShowSplash(); }
+            if (getSplash != null)
+            {
+                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
+                {
+                    getSplash().ShowDialog();
+                }));
+            }
             base.Run();
         }
 
