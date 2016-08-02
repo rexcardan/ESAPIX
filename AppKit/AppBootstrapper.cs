@@ -12,6 +12,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Practices.Unity;
 using ESAPIX.AppKit.Overlay;
+using System.Windows.Threading;
 
 namespace ESAPIX.AppKit
 {
@@ -19,11 +20,9 @@ namespace ESAPIX.AppKit
     {
         private EventAggregator _ea;
         private StandAloneContext _ctx;
-        private bool _showSplash;
 
-        public AppBootstrapper(string vmsUsername, string vmsPassword, bool showSplash = true)
+        public AppBootstrapper(string vmsUsername, string vmsPassword)
         {
-            _showSplash = showSplash;
             _ctx = StandAloneContext.Create(vmsUsername, vmsPassword);
             _ea = new EventAggregator();
         }
