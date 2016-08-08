@@ -51,6 +51,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Tests\ESAPIXTests\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
@@ -68,7 +69,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>D:\VS2013_PROJECTS\Projects\XCheck3\XCheck\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -129,8 +130,8 @@
     <Compile Include="Extensions\VVectorExtensions.cs" />
     <Compile Include="Helpers\MathHelper.cs" />
     <Compile Include="AppKit\ScriptComThread.cs" />
-    <Compile Include="Helpers\ScriptContextHelper.cs" />
     <Compile Include="AppKit\AppComThread.cs" />
+    <Compile Include="Helpers\XamlAssemblyLoader.cs" />
     <Compile Include="Interfaces\IScriptContext.cs" />
     <Compile Include="Interfaces\IVMSThread.cs" />
     <Compile Include="Logging\Logger.cs" />

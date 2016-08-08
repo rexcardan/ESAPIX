@@ -117,6 +117,15 @@ namespace ESAPIX.Extensions
             return plan.GetDVHCumulativeData(s, dvp, vp, binWidth);
         }
 
+        /// <summary>
+        /// Finds the dose at a certain volume input of a structure
+        /// </summary>
+        /// <param name="i">the planning item</param>
+        /// <param name="s">the strucutre to analyze</param>
+        /// <param name="volume">the volume to sample (units are in the vPres variable)</param>
+        /// <param name="vPres">the units of the input volume</param>
+        /// <param name="dPres">the dose value presentation you want returned</param>
+        /// <returns></returns>
         public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
         {
             var dvh = i.GetDVHCumulativeData(s, dPres, vPres, 0.1);
@@ -160,13 +169,13 @@ namespace ESAPIX.Extensions
             {
                 var plan = i as PlanSetup;
                 var dvh = plan.GetDefaultDVHCumulativeData(s, dPres, vPres);
-                return dvh.CurveData.GetMinimumDoseAtVolume(volume);
+                return dvh.CurveData.GetColdspot(volume);
             }
             else
             {
                 var plan = i as PlanSum;
                 var dvh = plan.GetDefaultDVHCumulativeData(s, dPres, vPres);
-                return dvh.CurveData.GetMinimumDoseAtVolume(volume);
+                return dvh.CurveData.GetColdspot(volume);
             }
         }
 

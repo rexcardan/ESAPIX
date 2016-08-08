@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using VMS.TPS.Common.Model.Types;
+using static ESAPIX.Helpers.MathHelper;
 
 namespace ESAPIX.Extensions
 {
@@ -37,6 +38,12 @@ namespace ESAPIX.Extensions
             }
         }
 
+        /// <summary>
+        /// Gets the dose value at the specified volume for the curve
+        /// </summary>
+        /// <param name="dvh">the dvhPoint array that is queried</param>
+        /// <param name="volume">the volume in the same units as the DVH curve</param>
+        /// <returns></returns>
         public static DoseValue GetDoseAtVolume(this DVHPoint[] dvh, double volume)
         {
             var minVol = dvh.Min(d => d.Volume);
@@ -74,16 +81,17 @@ namespace ESAPIX.Extensions
             }
         }
 
-        public static DoseValue GetMinimumDoseAtVolume(this DVHPoint[] dvh, double volume)
+        /// <summary>
+        /// Gets the coldest dose for the specified volume (the cold spot). Calculated by taking the total volume and subtracting the input volume.
+        /// </summary>
+        /// <param name="dvh">the dvhPoint array that is queried</param>
+        /// <param name="volume">the volume in the same units as the DVH curve</param>
+        /// <returns>the cold spot dose at the specified volume</returns>
+        public static DoseValue GetColdspot(this DVHPoint[] dvh, double volume)
         {
             var maxVol = dvh.Max(d => d.Volume);
             var volOfInterest = maxVol - volume;
             return GetDoseAtVolume(dvh, volOfInterest);
-        }
-
-        private static double Interpolate(double x1, double x3, double y1, double y3, double x2)
-        {
-            return (x2 - x1) * (y3 - y1) / (x3 - x1) + y1;
         }
     }
 }
