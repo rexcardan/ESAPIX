@@ -54,6 +54,26 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
+        /// Returns the image from the planning item. Removes the need to cast to plan or plan sum.
+        /// </summary>
+        /// <param name="plan">the planning item</param>
+        /// <returns>the referenced structure set</returns>
+        public static Image GetImage(this PlanningItem plan)
+        {
+            if (plan is PlanSetup && plan != null)
+            {
+                var p = plan as PlanSetup;
+                return p.StructureSet?.Image;
+            }
+            if (plan is PlanSum && plan != null)
+            {
+                var p = plan as PlanSum;
+                return p.StructureSet?.Image;
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Returns true if the planning item references a structure set with the input structure id. Also allows a regex
         /// expression to match to structure id.
         /// </summary>
