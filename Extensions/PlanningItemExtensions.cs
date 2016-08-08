@@ -14,7 +14,7 @@ namespace ESAPIX.Extensions
     public static class PlanningItemExtensions
     {
         /// <summary>
-        /// Returns the structure set from the planning item. Removes the need to cast to plan or plan sum.
+        /// Returns the structures from the planning item. Removes the need to cast to plan or plan sum.
         /// </summary>
         /// <param name="plan">the planning item</param>
         /// <returns>the referenced structure set</returns>
@@ -29,6 +29,26 @@ namespace ESAPIX.Extensions
             {
                 var p = plan as PlanSum;
                 return p.StructureSet?.Structures;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Returns the structure set from the planning item. Removes the need to cast to plan or plan sum.
+        /// </summary>
+        /// <param name="plan">the planning item</param>
+        /// <returns>the referenced structure set</returns>
+        public static StructureSet GetStructureSet(this PlanningItem plan)
+        {
+            if (plan is PlanSetup && plan != null)
+            {
+                var p = plan as PlanSetup;
+                return p.StructureSet;
+            }
+            if (plan is PlanSum && plan != null)
+            {
+                var p = plan as PlanSum;
+                return p.StructureSet;
             }
             return null;
         }
