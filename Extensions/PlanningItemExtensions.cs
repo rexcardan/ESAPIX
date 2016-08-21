@@ -121,7 +121,7 @@ namespace ESAPIX.Extensions
         /// Finds the dose at a certain volume input of a structure
         /// </summary>
         /// <param name="i">the planning item</param>
-        /// <param name="s">the strucutre to analyze</param>
+        /// <param name="s">the structure to analyze</param>
         /// <param name="volume">the volume to sample (units are in the vPres variable)</param>
         /// <param name="vPres">the units of the input volume</param>
         /// <param name="dPres">the dose value presentation you want returned</param>
@@ -161,9 +161,37 @@ namespace ESAPIX.Extensions
             }
         }
 
+        /// <summary>
+        /// Finds the dose at a certain volume input of a structure
+        /// </summary>
+        /// <param name="i">the planning item</param>
+        /// <param name="s">the structure to analyze</param>
+        /// <param name="volume">the volume to sample (units are in the vPres variable)</param>
+        /// <param name="vPres">the units of the input volume</param>
+        /// <param name="dPres">the dose value presentation you want returned</param>
+        /// <returns></returns>
+        public static DoseValue GetDoseAtVolume(this PlanningItem pi, IEnumerable<Structure> ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+        {
+            var dvhs = ss.Select(s => pi.GetDVHCumulativeData(s, dPres, VolumePresentation.AbsoluteCm3, 0.1));
+            var mergedDVH = dvhs.MergeDVHs();
 
-        //TODO This
-        public static DoseValue GetMinimumDoseAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+            if(vPres == VolumePresentation.Relative)
+            {
+                mergedDVH = mergedDVH.ConvertToRelativeVolume();
+            }
+            return mergedDVH.GetDoseAtVolume(volume);    
+        }
+
+        /// <summary>
+        /// Return the coldspot dose for a given volume. This is equivalent to taking the total volume of the object and subtracting the input volume
+        /// </summary>
+        /// <param name="i">the current planning item</param>
+        /// <param name="s">the input structure</param>
+        /// <param name="volume">the volume to query</param>
+        /// <param name="vPres">the volume presentation of the input volume</param>
+        /// <param name="dPres">the dose presentation to return</param>
+        /// <returns>Return the coldspot dose for a given volume.</returns>
+        public static DoseValue GetColdspotAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
         {
             if (i is PlanSetup)
             {
@@ -179,6 +207,14 @@ namespace ESAPIX.Extensions
             }
         }
 
+        /// <summary>
+        /// Returns the volume of the input structure at a given input dose
+        /// </summary>
+        /// <param name="pi">the current planning item</param>
+        /// <param name="ss">the structure to query</param>
+        /// <param name="dv">the dose value to query</param>
+        /// <param name="vPres">the volume presentation to return</param>
+        /// <returns>the volume at the requested presentation</returns>
         public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
         {
             var dpres = dv.GetPresentation();
@@ -188,7 +224,18 @@ namespace ESAPIX.Extensions
                 .GetVolumeAtDose(dv);
         }
 
-       
+        /// <summary>
+        /// Returns the sum of the volumes across the input structures at a given input dose
+        /// </summary>
+        /// <param name="pi">the current planning item</param>
+        /// <param name="ss">the structures to query</param>
+        /// <param name="dv">the dose value to query</param>
+        /// <param name="vPres">the volume presentation to return</param>
+        /// <returns>the volume at the requested presentation</returns>
+        public static double GetVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv, VolumePresentation vPres)
+        {
+            return ss.Sum(s => pi.GetVolumeAtDose(s, dv, vPres));
+        }
 
         public static double TotalPrescribedDoseGy(this PlanningItem pi)
         {

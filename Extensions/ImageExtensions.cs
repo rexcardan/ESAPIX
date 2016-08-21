@@ -10,6 +10,12 @@ namespace ESAPIX.Extensions
 {
     public static class ImageExtensions
     {
+        /// <summary>
+        /// Gets an array of Hounsfield units for the given slice z
+        /// </summary>
+        /// <param name="image">the image to sample</param>
+        /// <param name="sliceZ">the slice of the sample</param>
+        /// <returns>a 2D (x,y) array of Hounsfield units</returns>
         private static double[,] GetSliceHU(this Image image, int sliceZ)
         {
             int[,] buffer = new int[image.XSize, image.YSize];

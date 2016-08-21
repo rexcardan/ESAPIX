@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 using static ESAPIX.Helpers.MathHelper;
 
@@ -92,6 +93,46 @@ namespace ESAPIX.Extensions
             var maxVol = dvh.Max(d => d.Volume);
             var volOfInterest = maxVol - volume;
             return GetDoseAtVolume(dvh, volOfInterest);
+        }
+
+       /// <summary>
+       /// Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
+       /// </summary>
+       /// <param name="dvhs"></param>
+       /// <returns></returns>
+        public static DVHPoint[] MergeDVHs(this IEnumerable<DVHData> dvhs)
+        {
+            var maxLength = dvhs.Max(d => d.CurveData.Length);
+            var mergedDVH = new DVHPoint[maxLength];
+
+            foreach (var dvh in dvhs)
+            {
+                for (int i = 0; i < dvh.CurveData.Length; i++)
+                {
+                    var current = mergedDVH[i];
+                    mergedDVH[i] = new DVHPoint(current.DoseValue, current.Volume + mergedDVH[i].Volume, current.VolumeUnit);
+                }
+            }
+            return mergedDVH;
+        }
+
+        /// <summary>
+        /// If appropriate, converts the DVH curve into relative volume points instead of absolute volume
+        /// </summary>
+        /// <param name="dvh">the input DVH</param>
+        /// <returns>the dvh with relative volume points</returns>
+        public static DVHPoint[] ConvertToRelativeVolume(this DVHPoint[] dvh)
+        {
+            var maxVol = dvh.Max(d => d.Volume);
+            
+            if(dvh.Any() && dvh.First().VolumeUnit != "%")
+            {
+                for (int i = 0; i < dvh.Length; i++)
+                {
+                    dvh[i] = new DVHPoint(dvh[i].DoseValue, dvh[i].Volume / maxVol, "%");
+                }
+            }
+            return dvh;
         }
     }
 }
