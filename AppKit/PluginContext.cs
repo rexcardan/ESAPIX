@@ -46,5 +46,25 @@ namespace ESAPIX.AppKit
         public StructureSet StructureSet { get { return _ctx?.StructureSet; } }
 
         public IVMSThread Thread { get; private set; }
+
+        public async Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
+        {
+            T result = default(T);
+            await Thread.InvokeAsync(() =>
+            {
+                result = toExecute(this);
+            });
+            return result;
+        }
+
+        public T GetValue<T>(Func<IScriptContext, T> toExecute)
+        {
+            T result = default(T);
+            Thread.Invoke(() =>
+            {
+                result = toExecute(this);
+            });
+            return result;
+        }
     }
 }

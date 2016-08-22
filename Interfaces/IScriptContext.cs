@@ -35,6 +35,25 @@ namespace ESAPIX.Interfaces
 
         StructureSet StructureSet { get; }
 
+        /// <summary>
+        /// The thread that can access VMS objects
+        /// </summary>
         IVMSThread Thread { get; }
+
+        /// <summary>
+        /// Gets a value on the correct thread and returns it
+        /// </summary>
+        /// <typeparam name="T">the type of value to be returned</typeparam>
+        /// <param name="toExecute">the function that assigns the value</param>
+        /// <returns>the value requested</returns>
+        T GetValue<T>(Func<IScriptContext, T> toExecute);
+
+        /// <summary>
+        /// Gets a value asynchronously on the correct thread and returns it
+        /// </summary>
+        /// <typeparam name="T">the type of value to be returned</typeparam>
+        /// <param name="toExecute">the function that assigns the value</param>
+        /// <returns>a task of the value requested</returns>
+        Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute);
     }
 }

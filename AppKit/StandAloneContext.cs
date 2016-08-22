@@ -166,6 +166,26 @@ namespace ESAPIX.AppKit
         public delegate void CourseChangedHandler(Course c);
         public event CourseChangedHandler CourseChanged;
         public void OnCourseChanged(Course c) => CourseChanged?.Invoke(c);
+
+        public async Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
+        {
+            T result = default(T);
+            await Thread.InvokeAsync(() =>
+            {
+                result = toExecute(this);
+            });
+            return result;
+        }
+
+        public T GetValue<T>(Func<IScriptContext, T> toExecute)
+        {
+            T result = default(T);
+            Thread.Invoke(() =>
+            {
+                result = toExecute(this);
+            });
+            return result;
+        }
         #endregion
 
     }
