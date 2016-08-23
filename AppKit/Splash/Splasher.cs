@@ -9,11 +9,18 @@ using System.Windows;
 
 namespace ESAPIX.AppKit.Splash
 {
+    /// <summary>
+    /// Contains methods to help with the splash screen
+    /// </summary>
     public class Splasher
     {
-        public static Window ShowSplash()
+        /// <summary>
+        /// Provides a quick method for the constructor of the ScriptBootstrapper, or AppBootstrapper classes which take a Func of return type window
+        /// </summary>
+        /// <returns>the splash screen to show</returns>
+        public static Window GetSplash()
         {
-                var calling = Assembly.GetEntryAssembly();
+                var calling = Assembly.GetCallingAssembly();
                 var name = calling.GetName().Name;
                 var version = calling.GetName().Version;
                 var label = string.Format("{0} {1}", name, version);

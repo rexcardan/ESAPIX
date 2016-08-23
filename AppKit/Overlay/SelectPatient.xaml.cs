@@ -22,7 +22,7 @@ using VMS.TPS.Common.Model.API;
 namespace ESAPIX.AppKit.Overlay
 {
     /// <summary>
-    /// Interaction logic for SelectPatient.xaml
+    /// Interaction logic for SelectPatient.xaml, helps to pick a patient when using a StandAloneContext. Will display at the top of the designed window
     /// </summary>
     public partial class SelectPatient : Page, INotifyPropertyChanged
     {

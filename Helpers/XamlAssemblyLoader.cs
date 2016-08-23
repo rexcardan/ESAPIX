@@ -15,7 +15,9 @@ namespace ESAPIX.Helpers
 {
     public class XamlAssemblyLoader
     {
-        //This method exists as a hack to get the XAML assebmlies loaded in the plugin
+        /// <summary>
+        ///   This method exists as a hack to get the XAML assemblies loaded in the plugin. 
+        /// </summary>
         public static void LoadAssemblies()
         {
             i.InvokeCommandAction action = new i.InvokeCommandAction();

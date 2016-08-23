@@ -7,6 +7,9 @@ using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Interfaces
 {
+    /// <summary>
+    /// The common interface for use in standalone and plugin applications. It exposes properties that found in a the "ScriptContext" class
+    /// </summary>
     public interface IScriptContext
     {
         string ApplicationName { get; }
