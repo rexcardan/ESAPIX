@@ -174,7 +174,6 @@ namespace ESAPIX.Extensions
         {
             var dvhs = ss.Select(s => pi.GetDVHCumulativeData(s, dPres, VolumePresentation.AbsoluteCm3, 0.1));
             var mergedDVH = dvhs.MergeDVHs();
-
             if(vPres == VolumePresentation.Relative)
             {
                 mergedDVH = mergedDVH.ConvertToRelativeVolume();

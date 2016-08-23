@@ -95,24 +95,29 @@ namespace ESAPIX.Extensions
             return GetDoseAtVolume(dvh, volOfInterest);
         }
 
-       /// <summary>
-       /// Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
-       /// </summary>
-       /// <param name="dvhs"></param>
-       /// <returns></returns>
+        /// <summary>
+        /// Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
+        /// </summary>
+        /// <param name="dvhs"></param>
+        /// <returns></returns>
         public static DVHPoint[] MergeDVHs(this IEnumerable<DVHData> dvhs)
         {
             var maxLength = dvhs.Max(d => d.CurveData.Length);
-            var mergedDVH = new DVHPoint[maxLength];
+            var maxDVH = dvhs.First(d => d.CurveData.Length == maxLength);
+            var mergedDVH = maxDVH.CurveData.Select(d => new DVHPoint(d.DoseValue, 0, d.VolumeUnit)).ToArray();
+            var volUnit = dvhs.First().CurveData.First().VolumeUnit;
+
+            if (volUnit == "%") { throw new ArgumentException("Cannot merge relative DVHs. Must be in absolute volume format"); }
 
             foreach (var dvh in dvhs)
             {
                 for (int i = 0; i < dvh.CurveData.Length; i++)
                 {
-                    var current = mergedDVH[i];
+                    var current = dvh.CurveData[i];
                     mergedDVH[i] = new DVHPoint(current.DoseValue, current.Volume + mergedDVH[i].Volume, current.VolumeUnit);
                 }
             }
+
             return mergedDVH;
         }
 
@@ -124,12 +129,12 @@ namespace ESAPIX.Extensions
         public static DVHPoint[] ConvertToRelativeVolume(this DVHPoint[] dvh)
         {
             var maxVol = dvh.Max(d => d.Volume);
-            
-            if(dvh.Any() && dvh.First().VolumeUnit != "%")
+
+            if (dvh.Any() && dvh.First().VolumeUnit != "%")
             {
                 for (int i = 0; i < dvh.Length; i++)
                 {
-                    dvh[i] = new DVHPoint(dvh[i].DoseValue, dvh[i].Volume / maxVol, "%");
+                    dvh[i] = new DVHPoint(dvh[i].DoseValue, 100 * dvh[i].Volume / maxVol, "%");
                 }
             }
             return dvh;
