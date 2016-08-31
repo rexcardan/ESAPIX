@@ -20,7 +20,7 @@ namespace ESAPIX.AppKit.Splash
         /// <returns>the splash screen to show</returns>
         public static Window GetSplash()
         {
-                var calling = Assembly.GetCallingAssembly();
+                var calling = Assembly.GetExecutingAssembly();
                 var name = calling.GetName().Name;
                 var version = calling.GetName().Version;
                 var label = string.Format("{0} {1}", name, version);

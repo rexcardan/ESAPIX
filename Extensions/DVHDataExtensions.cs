@@ -70,7 +70,7 @@ namespace ESAPIX.Extensions
                 var index1 = dvhList.IndexOf(closestPoint);
                 var index2 = closestPoint.Volume < volume ? index1 - 1 : index1 + 1;
 
-                if (index1 > 0 && index2 < dvh.Count())
+                if (index1 >= 0 && index2 < dvh.Count())
                 {
                     var point1 = dvhList[index1];
                     var point2 = dvhList[index2];
