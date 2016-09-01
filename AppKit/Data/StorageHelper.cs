@@ -33,7 +33,7 @@ namespace ESAPIX.AppKit.Data
 
         public static string GetSettingsPath(string settingsFileName = "")
         {
-            var filePath = Path.Combine(GetBasePath(), string.IsNullOrEmpty(settingsFileName) ? defaultStoragePath : defaultSettingsFileName);
+            var filePath = Path.Combine(GetBasePath(), string.IsNullOrEmpty(settingsFileName) ? defaultSettingsFileName : settingsFileName);
             return filePath;
         }
 

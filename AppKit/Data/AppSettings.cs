@@ -1,7 +1,9 @@
 ﻿using ESAPIX.Helpers;
+using ESAPIX.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,15 +13,15 @@ namespace ESAPIX.AppKit.Data
 {
     public class AppSettings
     {
-        private Dictionary<string, object> Settings { get; set; } = new Dictionary<string, object>();
+        public Dictionary<string, object> Settings { get; set; } = new Dictionary<string, object>();
 
-        public static async Task<AppSettings> LoadAsync(string settingsPath = "")
+        public static AppSettings Load(string settingsPath = "")
         {
             var path = string.IsNullOrEmpty(settingsPath) ? StorageHelper.GetSettingsPath() : settingsPath;
             if (File.Exists(path))
             {
                 var read = File.ReadAllText(path);
-                return await Task.Run<AppSettings>(() => JsonConvert.DeserializeObject<AppSettings>(read));
+                return JsonConvert.DeserializeObject<AppSettings>(read);
             }
             else
             {
@@ -27,12 +29,21 @@ namespace ESAPIX.AppKit.Data
             }
         }
 
-        public void Save(string settingsPath = "")
+        public bool Save(string settingsPath = "")
         {
-            var path = string.IsNullOrEmpty(settingsPath) ? StorageHelper.GetSettingsPath() : settingsPath;
-            StorageHelper.CreateBasePathIfNotExists(path);
-            var json = JsonConvert.SerializeObject(this);
-            File.WriteAllText(path, json);
+            try
+            {
+                var path = string.IsNullOrEmpty(settingsPath) ? StorageHelper.GetSettingsPath() : settingsPath;
+                StorageHelper.CreateBasePathIfNotExists(path);
+                var json = JsonConvert.SerializeObject(this);
+                File.WriteAllText(path, json);
+                return true;
+            }
+            catch(Exception e)
+            {
+                Debug.Write(e.Message);
+                return false;
+            }
         }
 
         public T Get<T>(string key)
