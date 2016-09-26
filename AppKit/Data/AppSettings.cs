@@ -50,11 +50,7 @@ namespace ESAPIX.AppKit.Data
         {
             if (Settings.ContainsKey(key))
             {
-                if (Settings[key] is T)
-                {
-                    return (T)Settings[key];
-                }
-                else { throw new InvalidCastException($"Object not of type {default(T).GetType()}"); }
+                return JsonConvert.DeserializeObject<T>(Settings[key].ToString());
             }
             return default(T) ;
         }
