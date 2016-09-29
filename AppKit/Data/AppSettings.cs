@@ -50,7 +50,14 @@ namespace ESAPIX.AppKit.Data
         {
             if (Settings.ContainsKey(key))
             {
-                return JsonConvert.DeserializeObject<T>(Settings[key].ToString());
+                if(typeof(T) == typeof(string))
+                {
+                    return (T)Settings[key];
+                }
+                else
+                {
+                    return JsonConvert.DeserializeObject<T>(Settings[key].ToString());
+                }
             }
             return default(T) ;
         }
