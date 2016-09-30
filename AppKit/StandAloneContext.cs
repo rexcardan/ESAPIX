@@ -43,6 +43,23 @@ namespace ESAPIX.AppKit
             return new StandAloneContext(app, thread);
         }
 
+        /// <summary>
+        /// Creates a new application context and binds it to a new thread
+        /// </summary>
+        /// <param name="username">VMS username</param>
+        /// <param name="password">VMS password</param>
+        /// <returns>app context</returns>
+        public static StandAloneContext CreateSingleThread(string username, string password)
+        {
+            var thread = new AppComThread(false);
+            Application app = null;
+            thread.Invoke(() =>
+            {
+                app = Application.CreateApplication(username, password);
+            });
+            return new StandAloneContext(app, thread);
+        }
+
         public bool SetPatient(string id)
         {
             Thread.Invoke(() =>

@@ -33,7 +33,7 @@ namespace ESAPIX.AppKit
 
         protected override DependencyObject CreateShell()
         {
-            return Activator.CreateInstance<T>();
+            return this.Container.Resolve<T>();
         }
 
         protected override void ConfigureContainer()

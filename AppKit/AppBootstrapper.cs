@@ -21,18 +21,24 @@ namespace ESAPIX.AppKit
         private EventAggregator _ea;
         private StandAloneContext _ctx;
 
-        public AppBootstrapper(string vmsUsername, string vmsPassword)
+        public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
         {
-            _ctx = StandAloneContext.Create(vmsUsername, vmsPassword);
+            if (singleThread)
+            {
+                _ctx = StandAloneContext.CreateSingleThread(vmsUsername, vmsPassword);
+            }
+            else
+            {
+                _ctx = StandAloneContext.Create(vmsUsername, vmsPassword);
+            }
             _ea = new EventAggregator();
         }
 
-
         protected override DependencyObject CreateShell()
         {
-            return Activator.CreateInstance<T>();
+            return this.Container.Resolve<T>();
         }
-
+    
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
