@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ESAPIX.DVH.Query;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,21 @@ namespace ESAPIX.Extensions
 {
     public static class DVHDataExtensions
     {
+
+
+        public static double Query(this DVHPoint[] dvh, MayoQuery query)
+        {
+            switch (query.QueryType)
+            {
+                case QueryType.DOSE: return QueryDose(dvh, query);
+            }
+        }
+
+        private static double QueryDose(DVHPoint[] dvh, MayoQuery query)
+        {
+            query.
+        }
+
         /// <summary>
         /// Gets the volume that recieves the input dose
         /// </summary>

@@ -100,10 +100,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="VMS.TPS.Common.Model.API">
-      <HintPath>C:\Program Files (x86)\Varian\Vision\13.6\Bin64\VMS.TPS.Common.Model.API.dll</HintPath>
+      <HintPath>..\VMSlib\VMS.TPS.Common.Model.API.dll</HintPath>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>C:\Program Files (x86)\Varian\Vision\13.6\Bin64\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>..\VMSlib\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -124,6 +124,14 @@
     </Compile>
     <Compile Include="AppKit\XScriptBase.cs" />
     <Compile Include="AppKit\XScriptMultithreadBase.cs" />
+    <Compile Include="DVH\Query\Discriminator.cs" />
+    <Compile Include="DVH\Query\MayoConstraint.cs" />
+    <Compile Include="DVH\Query\MayoQuery.cs" />
+    <Compile Include="DVH\Query\MayoQueryReader.cs" />
+    <Compile Include="DVH\Query\MayoQueryWriter.cs" />
+    <Compile Include="DVH\Query\MayoRegex.cs" />
+    <Compile Include="DVH\Query\QueryType.cs" />
+    <Compile Include="DVH\Query\Units.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Extensions\DoseExtensions.cs" />
     <Compile Include="Extensions\DVHDataExtensions.cs" />
