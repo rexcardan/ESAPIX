@@ -32,8 +32,8 @@ namespace ESAPIX.DVH.Query
         /// <summary>
         /// Reads only the numerical value in the query (if one exists)
         /// </summary>
-        /// <param name="query"></param>
-        /// <returns></returns>
+        /// <param name="query">the full string of the query</param>
+        /// <returns>the numerical queried value, the x in Dxcc[Gy]</returns>
         public static double ReadQueryValue(string query)
         {
             var match = Regex.Match(query, MayoRegex.QueryValue);

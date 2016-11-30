@@ -1,4 +1,5 @@
 ﻿using ESAPIX.DVH.Query;
+using ESAPIX.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,6 @@ namespace ESAPIX.Extensions
 {
     public static class DVHDataExtensions
     {
-
-
         public static double Query(this DVHPoint[] dvh, MayoQuery query)
         {
             switch (query.QueryType)
@@ -23,7 +22,28 @@ namespace ESAPIX.Extensions
 
         private static double QueryDose(DVHPoint[] dvh, MayoQuery query)
         {
-            query.
+            var volumeValue = query.QueryValue;
+            var volumeUnits = query.QueryUnits;
+            var convertDVH = dvh.ConvertToQueryVolumeUnits(volumeUnits);
+            if (dvh.Any())
+            {
+                if (dvh.FirstOrDefault().VolumeUnit != MagicStrings.VolumeUnits.PERCENT)
+                {
+                    
+                }
+            }
+        }
+
+        private static DVHPoint[] dvh ConvertToQueryVolumeUnits(DVHPoint[] dvh, Units units)
+        {
+            if (dvh.Any())
+            {
+                var sample = dvh.First();
+
+                if (dvh.FirstOrDefault().VolumeUnit == MagicStrings.VolumeUnits.PERCENT && units == Units.PERC) ||
+
+               
+            }
         }
 
         /// <summary>
@@ -123,7 +143,7 @@ namespace ESAPIX.Extensions
             var mergedDVH = maxDVH.CurveData.Select(d => new DVHPoint(d.DoseValue, 0, d.VolumeUnit)).ToArray();
             var volUnit = dvhs.First().CurveData.First().VolumeUnit;
 
-            if (volUnit == "%") { throw new ArgumentException("Cannot merge relative DVHs. Must be in absolute volume format"); }
+            if (volUnit == MagicStrings.VolumeUnits.PERCENT) { throw new ArgumentException("Cannot merge relative DVHs. Must be in absolute volume format"); }
 
             foreach (var dvh in dvhs)
             {
@@ -146,11 +166,11 @@ namespace ESAPIX.Extensions
         {
             var maxVol = dvh.Max(d => d.Volume);
 
-            if (dvh.Any() && dvh.First().VolumeUnit != "%")
+            if (dvh.Any() && dvh.First().VolumeUnit != MagicStrings.VolumeUnits.PERCENT)
             {
                 for (int i = 0; i < dvh.Length; i++)
                 {
-                    dvh[i] = new DVHPoint(dvh[i].DoseValue, 100 * dvh[i].Volume / maxVol, "%");
+                    dvh[i] = new DVHPoint(dvh[i].DoseValue, 100 * dvh[i].Volume / maxVol, MagicStrings.VolumeUnits.PERCENT);
                 }
             }
             return dvh;
