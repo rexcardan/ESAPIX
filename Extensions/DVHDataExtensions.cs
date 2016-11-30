@@ -12,39 +12,39 @@ namespace ESAPIX.Extensions
 {
     public static class DVHDataExtensions
     {
-        public static double Query(this DVHPoint[] dvh, MayoQuery query)
-        {
-            switch (query.QueryType)
-            {
-                case QueryType.DOSE: return QueryDose(dvh, query);
-            }
-        }
+        //public static double Query(this DVHPoint[] dvh, MayoQuery query)
+        //{
+        //    switch (query.QueryType)
+        //    {
+        //        case QueryType.DOSE: return QueryDose(dvh, query);
+        //    }
+        //}
 
-        private static double QueryDose(DVHPoint[] dvh, MayoQuery query)
-        {
-            var volumeValue = query.QueryValue;
-            var volumeUnits = query.QueryUnits;
-            var convertDVH = dvh.ConvertToQueryVolumeUnits(volumeUnits);
-            if (dvh.Any())
-            {
-                if (dvh.FirstOrDefault().VolumeUnit != MagicStrings.VolumeUnits.PERCENT)
-                {
+        //private static double QueryDose(DVHPoint[] dvh, MayoQuery query)
+        //{
+        //    var volumeValue = query.QueryValue;
+        //    var volumeUnits = query.QueryUnits;
+        //    var convertDVH = dvh.ConvertToQueryVolumeUnits(volumeUnits);
+        //    if (dvh.Any())
+        //    {
+        //        if (dvh.FirstOrDefault().VolumeUnit != MagicStrings.VolumeUnits.PERCENT)
+        //        {
                     
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
-        private static DVHPoint[] dvh ConvertToQueryVolumeUnits(DVHPoint[] dvh, Units units)
-        {
-            if (dvh.Any())
-            {
-                var sample = dvh.First();
+        //private static DVHPoint[] dvh ConvertToQueryVolumeUnits(DVHPoint[] dvh, Units units)
+        //{
+        //    if (dvh.Any())
+        //    {
+        //        var sample = dvh.First();
 
-                if (dvh.FirstOrDefault().VolumeUnit == MagicStrings.VolumeUnits.PERCENT && units == Units.PERC) ||
+        //        if (dvh.FirstOrDefault().VolumeUnit == MagicStrings.VolumeUnits.PERCENT && units == Units.PERC) ||
 
                
-            }
-        }
+        //    }
+        //}
 
         /// <summary>
         /// Gets the volume that recieves the input dose

@@ -46,7 +46,6 @@ namespace ESAPIX.AppKit
 
         protected override void InitializeShell()
         {
-            CreateShell();
             var shell = (Window)this.Shell;
             shell.ShowDialog();
             _frame.Continue = false;

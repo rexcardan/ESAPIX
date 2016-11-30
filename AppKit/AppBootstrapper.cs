@@ -49,7 +49,6 @@ namespace ESAPIX.AppKit
 
         protected override void InitializeShell()
         {
-            CreateShell();
             var shell = (Window)this.Shell;
             shell.Closed += (send, args) =>
             {
@@ -65,6 +64,7 @@ namespace ESAPIX.AppKit
             }
             shell.MinWidth = 750;
             shell.ShowDialog();
+            shell.ContentRendered -= shell_ContentRendered;
         }
 
         public new void Run(Func<Window> getSplash = null)
