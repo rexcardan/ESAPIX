@@ -12,45 +12,11 @@ namespace ESAPIX.Extensions
 {
     public static class DVHDataExtensions
     {
-        //public static double Query(this DVHPoint[] dvh, MayoQuery query)
-        //{
-        //    switch (query.QueryType)
-        //    {
-        //        case QueryType.DOSE: return QueryDose(dvh, query);
-        //    }
-        //}
-
-        //private static double QueryDose(DVHPoint[] dvh, MayoQuery query)
-        //{
-        //    var volumeValue = query.QueryValue;
-        //    var volumeUnits = query.QueryUnits;
-        //    var convertDVH = dvh.ConvertToQueryVolumeUnits(volumeUnits);
-        //    if (dvh.Any())
-        //    {
-        //        if (dvh.FirstOrDefault().VolumeUnit != MagicStrings.VolumeUnits.PERCENT)
-        //        {
-                    
-        //        }
-        //    }
-        //}
-
-        //private static DVHPoint[] dvh ConvertToQueryVolumeUnits(DVHPoint[] dvh, Units units)
-        //{
-        //    if (dvh.Any())
-        //    {
-        //        var sample = dvh.First();
-
-        //        if (dvh.FirstOrDefault().VolumeUnit == MagicStrings.VolumeUnits.PERCENT && units == Units.PERC) ||
-
-               
-        //    }
-        //}
-
         /// <summary>
         /// Gets the volume that recieves the input dose
         /// </summary>
-        /// <param name="dvh">the dvhPoint array that is queried</param>
-        /// <param name="doseGy">the dose at which to find the volume</param>
+        /// <param name="dvh">the dose volume histogram for this structure</param>
+        /// <param name="dv">the dose value to sample the curve</param>
         /// <returns>the volume in the same units as the DVH point array</returns>
         public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
         {
@@ -76,6 +42,19 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
+        /// Gets the compliment volume (volume about a certain dose point) for the structure dvh
+        /// </summary>
+        /// <param name="dvh">the dose volume histogram for this structure</param>
+        /// <param name="dv">the dose value to sample the curve</param>
+        /// <returns></returns>
+        public static double GetComplimentVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
+        {
+            var maxVol = dvh.Max(d => d.Volume);
+            var normalVolume = dvh.GetVolumeAtDose(dv);
+            return maxVol - normalVolume;
+        }
+
+        /// <summary>
         /// Gets the dose value at the specified volume for the curve
         /// </summary>
         /// <param name="dvh">the dvhPoint array that is queried</param>
@@ -87,19 +66,29 @@ namespace ESAPIX.Extensions
             var maxVol = dvh.Max(d => d.Volume);
 
             //Check for max point dose scenario
-            if (volume <= minVol) { return dvh.FirstOrDefault(dos => dos.DoseValue.Dose == dvh.Max(d => d.DoseValue.Dose)).DoseValue; }
-            var dvhList = dvh.ToList();
+            if (volume <= minVol) { return dvh.MaxDose(); }
 
-            //Check dose to total volume scenario
-            if (volume >= maxVol)
+            //Check dose to total volume scenario (min dose)
+            if (volume == maxVol)
             {
-                return dvh.First(d => d.Volume == maxVol).DoseValue;
+                return dvh.MinDose();
             }
 
+            //Overvolume scenario, undefined
+            if (volume > maxVol)
+            {
+                return DoseValue.UndefinedDose();
+            }
+
+            //Convert to list so we can grab indices
+            var dvhList = dvh.ToList();
+
+            //Find the closest point to the requested volume,
+            //If its really close, let's use it instead of interpolating
             var minVolumeDiff = dvhList.Min(d => Math.Abs(d.Volume - volume));
             var closestPoint = dvhList.First(d => Math.Abs(d.Volume - volume) == minVolumeDiff);
-
             if (minVolumeDiff < 0.001) { return closestPoint.DoseValue; }
+
             else
             {
                 //Interpolate
@@ -119,12 +108,12 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        /// Gets the coldest dose for the specified volume (the cold spot). Calculated by taking the total volume and subtracting the input volume.
+        /// Gets the compliment dose for the specified volume (the cold spot). Calculated by taking the total volume and subtracting the input volume.
         /// </summary>
         /// <param name="dvh">the dvhPoint array that is queried</param>
         /// <param name="volume">the volume in the same units as the DVH curve</param>
         /// <returns>the cold spot dose at the specified volume</returns>
-        public static DoseValue GetColdspot(this DVHPoint[] dvh, double volume)
+        public static DoseValue GetComplimentDose(this DVHPoint[] dvh, double volume)
         {
             var maxVol = dvh.Max(d => d.Volume);
             var volOfInterest = maxVol - volume;
@@ -138,22 +127,38 @@ namespace ESAPIX.Extensions
         /// <returns></returns>
         public static DVHPoint[] MergeDVHs(this IEnumerable<DVHData> dvhs)
         {
-            var maxLength = dvhs.Max(d => d.CurveData.Length);
-            var maxDVH = dvhs.First(d => d.CurveData.Length == maxLength);
-            var mergedDVH = maxDVH.CurveData.Select(d => new DVHPoint(d.DoseValue, 0, d.VolumeUnit)).ToArray();
-            var volUnit = dvhs.First().CurveData.First().VolumeUnit;
+            return dvhs.Select(d => d.CurveData).MergeDVHs();
+        }
 
+        /// <summary>
+        /// Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
+        /// </summary>
+        /// <param name="dvhs">the multiple dvh curves to merge</param>
+        /// <returns>the combined dvh from multiple structures</returns>
+        public static DVHPoint[] MergeDVHs(this IEnumerable<DVHPoint[]> dvhs)
+        {
+            //The merged DVH must be the same length as the maximum length DVH input
+            var maxLength = dvhs.Max(d => d.Length);
+            var maxDVH = dvhs.First(d => d.Length == maxLength);
+            var mergedDVH = maxDVH.Select(d => new DVHPoint(d.DoseValue, 0, d.VolumeUnit)).ToArray();
+
+            //Lets check units before we continue
+            var volUnit = dvhs.First().First().VolumeUnit;
+            var doseUnit = dvhs.First().First().DoseValue.Unit;
+
+            if (dvhs.Any(d => d.First().DoseValue.Unit != doseUnit)) { throw new ArgumentException("Cannot merge relative DVHs. All DVHs must have the same dose units"); }
+            if (dvhs.Any(d => d.First().VolumeUnit != volUnit)) { throw new ArgumentException("Cannot merge relative DVHs. All DVHs must have the same volume units"); }
             if (volUnit == MagicStrings.VolumeUnits.PERCENT) { throw new ArgumentException("Cannot merge relative DVHs. Must be in absolute volume format"); }
 
+            //Everything looks good, let's do it
             foreach (var dvh in dvhs)
             {
-                for (int i = 0; i < dvh.CurveData.Length; i++)
+                for (int i = 0; i < dvh.Length; i++)
                 {
-                    var current = dvh.CurveData[i];
+                    var current = dvh[i];
                     mergedDVH[i] = new DVHPoint(current.DoseValue, current.Volume + mergedDVH[i].Volume, current.VolumeUnit);
                 }
             }
-
             return mergedDVH;
         }
 
@@ -175,5 +180,76 @@ namespace ESAPIX.Extensions
             }
             return dvh;
         }
+
+        /// <summary>
+        /// If appropriate, converts the DVH curve into relative dose points instead of absolute dose
+        /// </summary>
+        /// <param name="dvh">the input DVH</param>
+        /// <param name="scalingPoint">the dose value which represents 100%, all doses will be scaled in reference to this</param>
+        /// <returns>the dvh with relative dose points</returns>
+        public static DVHPoint[] ConvertToRelativeDose(this DVHPoint[] dvh, DoseValue scalingPoint)
+        {
+            if (dvh.Any() && dvh.First().DoseValue.Unit == DoseValue.DoseUnit.Percent)
+            {
+                return dvh; //Already in relative format
+            }
+            else
+            {
+                for (int i = 0; i < dvh.Length; i++)
+                {
+                    dvh[i] = new DVHPoint(dvh[i].DoseValue.Divide(scalingPoint) * 100, dvh[i].Volume, dvh[i].VolumeUnit);
+                }
+                return dvh;
+            }
+        }
+
+        /// <summary>
+        /// Returns the max dose from the dvh curve
+        /// </summary>
+        /// <param name="dvh">the dvh curve</param>
+        /// <returns>the max dose in the same units as the curve</returns>
+        public static DoseValue MaxDose(this DVHPoint[] dvh)
+        {
+            if (dvh.Any())
+            {
+                var unit = dvh.First().DoseValue.Unit;
+                var maxVal = dvh.Max(d => d.DoseValue.Dose);
+                return new DoseValue(maxVal, unit);
+            }
+            return DoseValue.UndefinedDose();
+        }
+
+        /// <summary>
+        /// Returns the min dose from the dvh curve
+        /// </summary>
+        /// <param name="dvh">the dvh curve</param>
+        /// <returns>the minimum dose in the same units as the curve</returns>
+        public static DoseValue MinDose(this DVHPoint[] dvh)
+        {
+            if (dvh.Any())
+            {
+                var unit = dvh.First().DoseValue.Unit;
+                var minVal = dvh.Min(d => d.DoseValue.Dose);
+                return new DoseValue(minVal, unit);
+            }
+            return DoseValue.UndefinedDose();
+        }
+
+        /// <summary>
+        /// Returns the mean dose from the dvh curve
+        /// </summary>
+        /// <param name="dvh">the dvh curve</param>
+        /// <returns>the mean dose in the same units as the curve</returns>
+        public static DoseValue MeanDose(this DVHPoint[] dvh)
+        {
+            if (dvh.Any())
+            {
+                var unit = dvh.First().DoseValue.Unit;
+                var meanVal = dvh.Average(d => d.DoseValue.Dose);
+                return new DoseValue(meanVal, unit);
+            }
+            return DoseValue.UndefinedDose();
+        }
+
     }
 }

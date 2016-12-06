@@ -17,5 +17,10 @@ namespace ESAPIX.DVH.Query
         {
             return MayoQueryWriter.Write(this);
         }
+
+        public static MayoQuery Read(string query)
+        {
+            return MayoQueryReader.Read(query);
+        }
     }
 }

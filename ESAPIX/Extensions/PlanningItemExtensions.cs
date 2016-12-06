@@ -128,37 +128,8 @@ namespace ESAPIX.Extensions
         /// <returns></returns>
         public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            var dvh = i.GetDVHCumulativeData(s, dPres, vPres, 0.1);
-            var curve = dvh.CurveData;
-
-            var point = dvh.MaxDose;
-
-            //Max vol scenario
-            if ((s.Volume == volume && vPres == VolumePresentation.AbsoluteCm3) || (vPres == VolumePresentation.Relative && volume == 100.0))
-            {
-                return dvh.MinDose;
-            }
-            //Min vol scenario
-            if ((s.Volume == 0.0))
-            {
-                return dvh.MaxDose;
-            }
-            //Overvolume scenario
-            if ((s.Volume < volume && vPres == VolumePresentation.AbsoluteCm3) || (vPres == VolumePresentation.Relative && volume > 100.0))
-            {
-                return new DoseValue(double.NaN, point.Unit);
-            }
-            else
-            {
-                //Interpolate
-                var higherPoints = curve.Where(p => p.Volume > volume);
-                var lowerPoints = curve.Where(p => p.Volume <= volume);
-
-                var point1 = higherPoints.Last();
-                var point2 = lowerPoints.First();
-                var doseAtPoint = Interpolate(point1.Volume, point2.Volume, point1.DoseValue.Dose, point2.DoseValue.Dose, volume);
-                return new DoseValue(doseAtPoint, point.Unit);
-            }
+            var dvhCurve = i.GetMultipleStructureDVH(new List<Structure>() { s }, vPres, dPres);
+            return dvhCurve.GetDoseAtVolume(volume);
         }
 
         /// <summary>
@@ -172,13 +143,37 @@ namespace ESAPIX.Extensions
         /// <returns></returns>
         public static DoseValue GetDoseAtVolume(this PlanningItem pi, IEnumerable<Structure> ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            var dvhs = ss.Select(s => pi.GetDVHCumulativeData(s, dPres, VolumePresentation.AbsoluteCm3, 0.1));
+            var dvh = pi.GetMultipleStructureDVH(ss, vPres, dPres);
+            return dvh.GetDoseAtVolume(volume);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pi">the planning item containing the dose and the structures</param>
+        /// <param name="ss">the structures to merge into one DVH (useful for multiple volume queries from parallel organs)</param>
+        /// <param name="vPres">the volume presentation requested</param>
+        /// <param name="dPres">the dose presentation requested</param>
+        /// <param name="binWidth">the bin width to use when sampling the DVH</param>
+        /// <returns></returns>
+        public static DVHPoint[] GetMultipleStructureDVH(this PlanningItem pi, IEnumerable<Structure> ss, VolumePresentation vPres, DoseValuePresentation dPres, double binWidth = 0.1)
+        {
+            IEnumerable<DVHPoint[]> dvhs;
+            if (pi is PlanSum && dPres == DoseValuePresentation.Relative)
+            {
+                //Can't really do this, need a special operation
+                dvhs = ss.Select(s => (pi as PlanSum).GetRelativeDVHCumulativeData(s, VolumePresentation.AbsoluteCm3, binWidth));
+            }
+            else
+            {
+                dvhs = ss.Select(s => pi.GetDVHCumulativeData(s, dPres, VolumePresentation.AbsoluteCm3, binWidth).CurveData);
+            }
             var mergedDVH = dvhs.MergeDVHs();
-            if(vPres == VolumePresentation.Relative)
+            if (vPres == VolumePresentation.Relative)
             {
                 mergedDVH = mergedDVH.ConvertToRelativeVolume();
             }
-            return mergedDVH.GetDoseAtVolume(volume);    
+            return mergedDVH;
         }
 
         /// <summary>
@@ -196,13 +191,13 @@ namespace ESAPIX.Extensions
             {
                 var plan = i as PlanSetup;
                 var dvh = plan.GetDefaultDVHCumulativeData(s, dPres, vPres);
-                return dvh.CurveData.GetColdspot(volume);
+                return dvh.CurveData.GetComplimentDose(volume);
             }
             else
             {
                 var plan = i as PlanSum;
                 var dvh = plan.GetDefaultDVHCumulativeData(s, dPres, vPres);
-                return dvh.CurveData.GetColdspot(volume);
+                return dvh.CurveData.GetComplimentDose(volume);
             }
         }
 
@@ -216,11 +211,9 @@ namespace ESAPIX.Extensions
         /// <returns>the volume at the requested presentation</returns>
         public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
         {
-            var dpres = dv.GetPresentation();
-            return pi
-                .GetDVHCumulativeData(s, dpres, vPres, 0.1)
-                .CurveData
-                .GetVolumeAtDose(dv);
+            var dPres = dv.GetPresentation();
+            var dvhCurve = pi.GetMultipleStructureDVH(new List<Structure>() { s }, vPres, dPres);
+            return dvhCurve.GetVolumeAtDose(dv);
         }
 
         /// <summary>

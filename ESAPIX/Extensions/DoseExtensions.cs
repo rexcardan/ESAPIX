@@ -158,5 +158,21 @@ namespace ESAPIX.Extensions
         }
         #endregion
 
+        #region
+        public static DoseValue Divide(this DoseValue numerator, DoseValue denominator)
+        {
+            var sameUnit = denominator.GetDose(numerator.Unit);
+            var mathOp = numerator.Dose / sameUnit;
+            return new DoseValue(mathOp, numerator.Unit);
+        }
+
+        public static DoseValue Multiply(this DoseValue val, DoseValue val2)
+        {
+            var sameUnit = val2.GetDose(val.Unit);
+            var mathOp = val.Dose * sameUnit;
+            return new DoseValue(mathOp, val.Unit);
+        }
+        #endregion
+
     }
 }
