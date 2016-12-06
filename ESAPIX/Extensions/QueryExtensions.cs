@@ -14,11 +14,11 @@ namespace ESAPIX.Extensions
     /// </summary>
     public static class QueryExtensions
     {
-        public static double RunQuery(this MayoQuery query, PlanningItem pi, Structure s)
+        public static double RunQuery(this MayoQuery query, PlanningItem pi, IEnumerable<Structure> ss)
         {
             var dPres = query.GetDosePresentation();
             var vPres = query.GetVolumePresentation();
-            var dvh = pi.GetMultipleStructureDVH(new List<Structure>() { s }, vPres, dPres);
+            var dvh = pi.GetComplexDVH(ss, vPres, dPres);
 
             switch (query.QueryType)
             {
@@ -163,7 +163,7 @@ namespace ESAPIX.Extensions
 
         private static double QueryDoseCompliment(DVHPoint[] dvh, MayoQuery query)
         {
-            var dose = dvh.GetComplimentDose(query.QueryValue);
+            var dose = dvh.GetDoseCompliment(query.QueryValue);
             var doseUnit = query.GetDoseUnit();
             return dose.GetDose(doseUnit);
         }

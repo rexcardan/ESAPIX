@@ -113,7 +113,7 @@ namespace ESAPIX.Extensions
         /// <param name="dvh">the dvhPoint array that is queried</param>
         /// <param name="volume">the volume in the same units as the DVH curve</param>
         /// <returns>the cold spot dose at the specified volume</returns>
-        public static DoseValue GetComplimentDose(this DVHPoint[] dvh, double volume)
+        public static DoseValue GetDoseCompliment(this DVHPoint[] dvh, double volume)
         {
             var maxVol = dvh.Max(d => d.Volume);
             var volOfInterest = maxVol - volume;
