@@ -197,7 +197,8 @@ namespace ESAPIX.Extensions
             {
                 for (int i = 0; i < dvh.Length; i++)
                 {
-                    dvh[i] = new DVHPoint(dvh[i].DoseValue.Divide(scalingPoint) * 100, dvh[i].Volume, dvh[i].VolumeUnit);
+                    var dv = new DoseValue(dvh[i].DoseValue.Divide(scalingPoint).Dose * 100, DoseValue.DoseUnit.Percent);
+                    dvh[i] = new DVHPoint(dv, dvh[i].Volume, dvh[i].VolumeUnit);
                 }
                 return dvh;
             }
