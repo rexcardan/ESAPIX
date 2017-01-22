@@ -3,6 +3,8 @@ ESAPIX
 
 ESAPIX is an open source extension library for the Varian Eclipse Scripting API that contains extra methods, and bootstrapping frameworks to quickly develop applications for research and clinical use. It has no affiliation with Varian Medical Systems. It provides implementations for multithreading, asynchronous calls, debugging plugins, dependency injection, and view model "auto finding" through the Prism 6 library 
 
+To dive deeper, check out [more examples and API documentation](https://rexcardan.github.io/ESAPIX/).
+
 ----------
 
 Getting Started
