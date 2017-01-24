@@ -267,6 +267,34 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
+        /// Returns the compliment volume of the input structure at a given input dose
+        /// </summary>
+        /// <param name="pi">the current planning item</param>
+        /// <param name="s">the structure to query</param>
+        /// <param name="dv">the dose value to query</param>
+        /// <param name="vPres">the volume presentation to return</param>
+        /// <returns>the volume at the requested presentation</returns>
+        public static double GetComplimentVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
+        {
+            var dPres = dv.GetPresentation();
+            var dvhCurve = pi.GetComplexDVH(new List<Structure>() { s }, vPres, dPres);
+            return dvhCurve.GetComplimentVolumeAtDose(dv);
+        }
+
+        /// <summary>
+        /// Returns the sum of the compliment volumes across the input structures at a given input dose
+        /// </summary>
+        /// <param name="pi">the current planning item</param>
+        /// <param name="ss">the structures to query</param>
+        /// <param name="dv">the dose value to query</param>
+        /// <param name="vPres">the volume presentation to return</param>
+        /// <returns>the volume at the requested presentation</returns>
+        public static double GetComplimentVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv, VolumePresentation vPres)
+        {
+            return ss.Sum(s => pi.GetComplimentVolumeAtDose(s, dv, vPres));
+        }
+
+        /// <summary>
         /// Returns the sum of the volumes across the input structures at a given input dose
         /// </summary>
         /// <param name="pi">the current planning item</param>

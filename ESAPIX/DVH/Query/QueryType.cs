@@ -8,12 +8,12 @@ namespace ESAPIX.DVH.Query
 {
     public enum QueryType
     {
-        VOLUME,
+        VOLUME_AT_DOSE,
         COMPLIMENT_VOLUME,
-        DOSE,
+        DOSE_AT_VOLUME,
         DOSE_COMPLIMENT,
-        MEAN,
-        MIN,
-        MAX
+        MEAN_DOSE,
+        MIN_DOSE,
+        MAX_DOSE
     }
 }

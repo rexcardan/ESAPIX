@@ -23,22 +23,22 @@ namespace ESAPIX.DVH.Constraints
             //Check structure exists
             valid = valid && pi.GetStructureSet() != null;
             if (!valid) { message = $"No structure set in {pi.Id}"; }
-            return new ConstraintResult(this, valid, message);
+            return new ConstraintResult(this, ResultType.NOT_APPLICABLE, message);
         }
 
         public ConstraintResult Constrain(PlanningItem pi)
         {
             string msg = string.Empty;
             var structure = pi.GetStructure(StructureName, Regex);
-            bool? passed = false;
+            ResultType passed = ResultType.ACTION_LEVEL_1;
             if (structure != null)
             {
-                passed = true;
+                passed = ResultType.PASSED;
                 msg = $"{pi.Id} contains structure {StructureName}";
 
                 if (structure.Volume < 0.0001)
                 {
-                    passed = false;
+                    passed = ResultType.ACTION_LEVEL_1;
                     msg = $"{StructureName} is empty";
                 }
             }

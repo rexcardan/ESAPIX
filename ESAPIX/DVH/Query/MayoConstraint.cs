@@ -24,7 +24,7 @@ namespace ESAPIX.DVH.Query
             if (split.Length != 3) { throw new ArgumentException("Mayo constraints much be 3 parts separated by whitespace : {MayoQuery} {Discriminator} {ConstraintValue}"); }
             var mq = MayoQuery.Read(split[0]);
             var discrimator = DiscriminatorConverter.ReadDiscrimator(split[1]);
-            var constraintValue = double.Parse(split[3]);
+            var constraintValue = double.Parse(split[2]);
             return new MayoConstraint()
             {
                 Query = mq,

@@ -14,7 +14,7 @@ namespace ESAPIX.DVH.Constraints
     {
         public MinDoseAtVolConstraint()
         {
-            PassingFunc = new Func<DoseValue, bool>((doseAtVol => { return doseAtVol.GreaterThanOrEqualTo(ConstraintDose); }));
+            PassingFunc = new Func<DoseValue, ResultType>((doseAtVol => { return doseAtVol.GreaterThanOrEqualTo(ConstraintDose)? ResultType.PASSED : GetFailedResultType(); }));
         }
 
         public override string ToString()
@@ -24,7 +24,7 @@ namespace ESAPIX.DVH.Constraints
             var volUnit = VolumeType == VolumePresentation.AbsoluteCm3 ? "cc" : "%";
             var doseUnit = ConstraintDose.UnitAsString;
             var dose = ConstraintDose.ValueAsString;
-            return $"D{vol}{volUnit}[{doseUnit}]>={dose}";
+            return $"D{vol}{volUnit}[{doseUnit}] >= {dose}";
         }
     }
 }

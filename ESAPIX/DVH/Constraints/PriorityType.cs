@@ -16,5 +16,11 @@ namespace ESAPIX.DVH.Constraints
         GOAL,
         [Description("Optional")]
         OPTIONAL,
+        [Description("Report")]
+        REPORT,
+        [Description("Priority 1")]
+        PRIORITY_1,
+        [Description("Priority 2")]
+        PRIORITY_2,
     }
 }

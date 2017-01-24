@@ -10,19 +10,22 @@ using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.DVH.Constraints
 {
+    /// <summary>
+    /// Encapsulates the requirement of a minimum mean dose to a structure
+    /// </summary>
     public class MinMeanDoseConstraint : DoseStructureConstraint
     {
         public override ConstraintResult Constrain(PlanningItem pi)
         {
             var msg = string.Empty;
-            bool? passed = false;
+            ResultType passed = GetFailedResultType();
 
             var dvhs = GetStructures(pi).Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(), VolumePresentation.AbsoluteCm3, 0.01));
             var meanValue = dvhs.Average(d => d.MeanDose.GetDose(ConstraintDose.Unit));
             var mean = new DoseValue(meanValue, ConstraintDose.Unit);
 
             var value = $"{ mean.GetDose(ConstraintDose.Unit).ToString("F2") } { ConstraintDose.UnitAsString}";
-            passed = mean.GreaterThanOrEqualTo(ConstraintDose);
+            passed = mean.GreaterThanOrEqualTo(ConstraintDose)? ResultType.PASSED : GetFailedResultType();
             msg = $"Mean dose to {string.Join("/", StructureNames)} is {value}.";
 
             return new ConstraintResult(this, passed, msg,value);
@@ -33,7 +36,7 @@ namespace ESAPIX.DVH.Constraints
             //Mayo format
             var doseUnit = ConstraintDose.UnitAsString;
             var dose = ConstraintDose.ValueAsString;
-            return $"Mean[{doseUnit}]>={dose}";
+            return $"Mean[{doseUnit}] >= {dose}";
         }
     }
 }

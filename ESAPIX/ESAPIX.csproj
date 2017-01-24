@@ -124,15 +124,21 @@
     </Compile>
     <Compile Include="AppKit\XScriptBase.cs" />
     <Compile Include="AppKit\XScriptMultithreadBase.cs" />
+    <Compile Include="DVH\Constraints\ComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="DVH\Constraints\ComplimentVolumeAtDoseConstraint.cs" />
     <Compile Include="DVH\Constraints\ConstraintResult.cs" />
     <Compile Include="DVH\Constraints\DoseAtVolumeConstraint.cs" />
     <Compile Include="DVH\Constraints\DoseStructureConstraint.cs" />
     <Compile Include="DVH\Constraints\IConstraint.cs" />
     <Compile Include="DVH\Constraints\IPriorityConstraint.cs" />
+    <Compile Include="DVH\Constraints\MaxComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="DVH\Constraints\MaxComplimentVolumeAtDose.cs" />
     <Compile Include="DVH\Constraints\MaxDoseAtVolConstraint.cs" />
     <Compile Include="DVH\Constraints\MaxDoseConstraint.cs" />
     <Compile Include="DVH\Constraints\MaxMeanDoseConstraint.cs" />
     <Compile Include="DVH\Constraints\MaxVolAtDoseConstraint.cs" />
+    <Compile Include="DVH\Constraints\MinComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="DVH\Constraints\MinComplimentVolumeAtDose.cs" />
     <Compile Include="DVH\Constraints\MinDoseAtVolConstraint.cs" />
     <Compile Include="DVH\Constraints\MinDoseConstraint.cs" />
     <Compile Include="DVH\Constraints\MinMeanDoseConstraint.cs" />
@@ -140,9 +146,12 @@
     <Compile Include="DVH\Constraints\NFractionConstraint.cs" />
     <Compile Include="DVH\Constraints\OrConstraint.cs" />
     <Compile Include="DVH\Constraints\PriorityType.cs" />
+    <Compile Include="DVH\Constraints\ResultType.cs" />
     <Compile Include="DVH\Constraints\StructureNameConstraint.cs" />
     <Compile Include="DVH\Constraints\VolumeAtDoseConstraint.cs" />
     <Compile Include="DVH\DiscriminatorConverter.cs" />
+    <Compile Include="DVH\MayoConstraintConverter.cs" />
+    <Compile Include="DVH\PriorityConverter.cs" />
     <Compile Include="Extensions\QueryExtensions.cs" />
     <Compile Include="DVH\Query\Discriminator.cs" />
     <Compile Include="DVH\Query\MayoConstraint.cs" />

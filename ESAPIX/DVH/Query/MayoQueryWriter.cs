@@ -22,12 +22,12 @@ namespace ESAPIX.DVH.Query
             switch (queryType)
             {
                 case QueryType.COMPLIMENT_VOLUME: return "CV";
-                case QueryType.DOSE: return "D";
+                case QueryType.DOSE_AT_VOLUME: return "D";
                 case QueryType.DOSE_COMPLIMENT: return "DC";
-                case QueryType.MAX: return "MAX";
-                case QueryType.MEAN: return "MEAN";
-                case QueryType.MIN: return "MIN";
-                case QueryType.VOLUME: return "V";
+                case QueryType.MAX_DOSE: return "MAX";
+                case QueryType.MEAN_DOSE: return "MEAN";
+                case QueryType.MIN_DOSE: return "MIN";
+                case QueryType.VOLUME_AT_DOSE: return "V";
                 default: throw new ArgumentException("Unknown type!");
             }
         }

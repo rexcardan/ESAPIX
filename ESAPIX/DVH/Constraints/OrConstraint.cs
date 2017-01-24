@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
 using VMS.TPS.Common.Model.API;
+using ESAPIX.DVH.Constraints;
+using static ESAPIX.DVH.Constraints.ResultType;
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -33,16 +35,16 @@ namespace ESAPIX.DVH.Constraints
             if (C1 == null || C2 == null)
             {
                 message = "There are not enough constraints for OR operator!";
-                return new ConstraintResult(this, canConstrain, message, null);
+                return new ConstraintResult(this, NOT_APPLICABLE, message, null);
             }
             var c1 = C1.CanConstrain(pi);
             var c2 = C2.CanConstrain(pi);
-            canConstrain = (c1.IsSuccess.HasValue && c1.IsSuccess.Value) && (c2.IsSuccess.HasValue && c2.IsSuccess.Value);
+            canConstrain = (c1.IsSuccess && c1.IsSuccess);
             if (!canConstrain)
             {
-                message = (c1.IsSuccess.HasValue && c1.IsSuccess.Value) ? c2.Message : c1.Message;
+                message = (c1.IsSuccess && c1.IsSuccess) ? c2.Message : c1.Message;
             }
-            return new ConstraintResult(this, canConstrain, message, $"{c1.Value}/{c2.Value}");
+            return new ConstraintResult(this, canConstrain ? PASSED : NOT_APPLICABLE, message, $"{c1.Value}/{c2.Value}");
         }
 
         public ConstraintResult Constrain(PlanningItem pi)
@@ -50,11 +52,16 @@ namespace ESAPIX.DVH.Constraints
             var c1passed = C1.Constrain(pi);
             var c2passed = C2.Constrain(pi);
 
-            var passed = (c1passed.IsSuccess.HasValue && c1passed.IsSuccess.Value) ||
-                (c2passed.IsSuccess.HasValue && c2passed.IsSuccess.Value);
+            var passed = (c1passed.IsSuccess && c1passed.IsSuccess) ||
+                (c2passed.IsSuccess && c2passed.IsSuccess);
 
             var msg = $"{(passed ? "One or both constraints passed" : "Neither constraint passed")} \n{c1passed.Message} \n{c2passed.Message}";
-            return new ConstraintResult(this, passed, msg, $"{c1passed.Value}/{c2passed.Value}");
+            return new ConstraintResult(this, passed ? PASSED : GetFailedResultType(), msg, $"{c1passed.Value}/{c2passed.Value}");
+        }
+
+        public ResultType GetFailedResultType()
+        {
+            return PriorityConverter.GetFailedResult(Priority);
         }
     }
 }

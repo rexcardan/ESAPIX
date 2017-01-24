@@ -22,13 +22,13 @@ namespace ESAPIX.Extensions
 
             switch (query.QueryType)
             {
-                case QueryType.DOSE: return QueryDose(dvh, query);
+                case QueryType.DOSE_AT_VOLUME: return QueryDose(dvh, query);
                 case QueryType.DOSE_COMPLIMENT: return QueryDoseCompliment(dvh, query);
-                case QueryType.VOLUME: return QueryVolume(dvh, query);
+                case QueryType.VOLUME_AT_DOSE: return QueryVolume(dvh, query);
                 case QueryType.COMPLIMENT_VOLUME: return QueryComplimentVolume(dvh, query);
-                case QueryType.MAX: return QueryMaxDose(dvh, query);
-                case QueryType.MEAN: return QueryMeanDose(dvh, query);
-                case QueryType.MIN: return QueryMinDose(dvh, query);
+                case QueryType.MAX_DOSE: return QueryMaxDose(dvh, query);
+                case QueryType.MEAN_DOSE: return QueryMeanDose(dvh, query);
+                case QueryType.MIN_DOSE: return QueryMinDose(dvh, query);
                 default: throw new ArgumentException("Unknown query type!");
             }
         }
@@ -42,7 +42,7 @@ namespace ESAPIX.Extensions
         {
             //If volume query return query unit to dose unit
             if (query.QueryType == QueryType.COMPLIMENT_VOLUME ||
-                query.QueryType == QueryType.VOLUME)
+                query.QueryType == QueryType.VOLUME_AT_DOSE)
             {
                 switch (query.QueryUnits)
                 {
@@ -74,7 +74,7 @@ namespace ESAPIX.Extensions
         {
             //If volume query return query unit to dose unit
             if (query.QueryType == QueryType.COMPLIMENT_VOLUME ||
-                query.QueryType == QueryType.VOLUME)
+                query.QueryType == QueryType.VOLUME_AT_DOSE)
             {
                 switch (query.QueryUnits)
                 {
@@ -106,7 +106,7 @@ namespace ESAPIX.Extensions
         {
             //If volume query return units desired to volume unit
             if (query.QueryType == QueryType.COMPLIMENT_VOLUME ||
-                query.QueryType == QueryType.VOLUME)
+                query.QueryType == QueryType.VOLUME_AT_DOSE)
             {
                 switch (query.UnitsDesired)
                 {
@@ -115,8 +115,8 @@ namespace ESAPIX.Extensions
                     default: throw new ArgumentException("Unknown query type");
                 }
             }
-            else if (query.QueryType == QueryType.MAX || query.QueryType == QueryType.MIN ||
-                query.QueryType == QueryType.MEAN)
+            else if (query.QueryType == QueryType.MAX_DOSE || query.QueryType == QueryType.MIN_DOSE ||
+                query.QueryType == QueryType.MEAN_DOSE)
             {
                 //This is not a volume query, units don't matter. Return default relative
                 return VolumePresentation.Relative;

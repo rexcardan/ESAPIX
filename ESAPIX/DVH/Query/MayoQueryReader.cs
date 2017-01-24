@@ -54,13 +54,13 @@ namespace ESAPIX.DVH.Query
             switch (match.Value)
             {
                 case "DC": return QueryType.DOSE_COMPLIMENT;
-                case "V": return QueryType.VOLUME;
-                case "D": return QueryType.DOSE;
+                case "V": return QueryType.VOLUME_AT_DOSE;
+                case "D": return QueryType.DOSE_AT_VOLUME;
                 case "CV": return QueryType.COMPLIMENT_VOLUME;
-                case "Min": return QueryType.MIN;
-                case "Max": return QueryType.MAX;
-                case "Mean": return QueryType.MEAN;
-                default: return QueryType.VOLUME;
+                case "Min": return QueryType.MIN_DOSE;
+                case "Max": return QueryType.MAX_DOSE;
+                case "Mean": return QueryType.MEAN_DOSE;
+                default: return QueryType.VOLUME_AT_DOSE;
             }
         }
 

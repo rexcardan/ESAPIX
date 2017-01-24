@@ -11,19 +11,31 @@ namespace ESAPIX.DVH.Constraints
     /// </summary>
     public class ConstraintResult
     {
-        public ConstraintResult(IConstraint constraint, bool? isConstraintMet, string message, string value = "")
+        public ConstraintResult(IConstraint constraint, ResultType resultType, string message, string value = "")
         {
             this.Constraint = constraint;
-            this.IsSuccess = isConstraintMet;
+            this.IsSuccess = resultType == ResultType.PASSED;
+            this.ResultType = resultType;
+            this.IsApplicable = resultType != ResultType.NOT_APPLICABLE;
             this.Message = message;
             this.Value = value;
         }
         public IConstraint Constraint { get; set; }
 
         /// <summary>
-        /// Signifies if constraint passed. A null value means the test was not applicable or could not be performed.
+        /// Signifies if constraint passed. 
         /// </summary>
-        public bool? IsSuccess { get; set; }
+        public bool IsSuccess { get; set; }
+
+        /// <summary>
+        /// Signifies if constraint was applicable to current plan. 
+        /// </summary>
+        public bool IsApplicable { get; set; }
+
+        /// <summary>
+        /// The result value including action level for the constraint
+        /// </summary>
+        public ResultType ResultType { get; set; }
 
         /// <summary>
         /// The message indicating why a test failed

@@ -47,17 +47,17 @@ namespace ESAPIX.DVH.Constraints
             var message = string.Empty;
             //Check for null plan
             var valid = pi != null;
-            if (!valid) { return new ConstraintResult(this, false, "Plan is null"); }
+            if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, "Plan is null"); }
 
             //Check structure exists
             valid = pi.ContainsStructure(StructureName);
-            if (!valid) { return new ConstraintResult(this, false, $"{StructureName} doesn't exist in {pi.Id}"); }
+            if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, $"{StructureName} doesn't exist in {pi.Id}"); }
 
             //Check dose is calculated
             valid = pi.Dose != null;
-            if (!valid) { return new ConstraintResult(this, false, $"There is no dose calculated for {pi.Id}"); }
+            if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, $"There is no dose calculated for {pi.Id}"); }
 
-            return new ConstraintResult(this, true, string.Empty);
+            return new ConstraintResult(this, ResultType.PASSED, string.Empty);
         }
 
         /// <summary>
@@ -89,6 +89,16 @@ namespace ESAPIX.DVH.Constraints
         public IEnumerable<Structure> GetStructures(PlanningItem pi)
         {
             return StructureNames.Select(s => pi.GetStructure(s));
+        }
+
+        public ResultType GetFailedResultType()
+        {
+            switch (Priority)
+            {
+                case PriorityType.MAJOR_DEVIATION:
+                case PriorityType.PRIORITY_1: return ResultType.ACTION_LEVEL_3;
+                default: return ResultType.ACTION_LEVEL_1;
+            }
         }
     }
 }

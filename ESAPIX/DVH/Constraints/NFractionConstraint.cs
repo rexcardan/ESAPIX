@@ -25,7 +25,7 @@ namespace ESAPIX.DVH.Constraints
                 if ((pi as PlanSetup).UniqueFractionation.NumberOfFractions == null)
                 {
                     message = "No fractionation present!";
-                    return new ConstraintResult(this, false, message);
+                    return new ConstraintResult(this, ResultType.NOT_APPLICABLE, message);
                 }
             }
             else
@@ -38,10 +38,10 @@ namespace ESAPIX.DVH.Constraints
                 if (!canConstrain)
                 {
                     message = "No fractionation present in one or more plans in the sum!";
-                    return new ConstraintResult(this, false, message);
+                    return new ConstraintResult(this, ResultType.NOT_APPLICABLE, message);
                 }
             }
-            return new ConstraintResult(this, true, message);
+            return new ConstraintResult(this, ResultType.PASSED, message);
         }
 
         public ConstraintResult Constrain(PlanningItem pi)
@@ -74,7 +74,17 @@ namespace ESAPIX.DVH.Constraints
             }
             var passedMsg = $"Plan contains exactly {NumOfFractions} fractions";
             var failedMsg = $"Plan has {actualFractions} fractions instead of {NumOfFractions} fractions";
-            return new ConstraintResult(this, passed, passed ? passedMsg : failedMsg, actualFractions.ToString());
+            return new ConstraintResult(this, passed? ResultType.PASSED : GetFailedResultType(), passed ? passedMsg : failedMsg, actualFractions.ToString());
+        }
+
+        public ResultType GetFailedResultType()
+        {
+            switch (Priority)
+            {
+                case PriorityType.MAJOR_DEVIATION:
+                case PriorityType.PRIORITY_1: return ResultType.ACTION_LEVEL_3;
+                default: return ResultType.ACTION_LEVEL_1;
+            }
         }
     }
 }

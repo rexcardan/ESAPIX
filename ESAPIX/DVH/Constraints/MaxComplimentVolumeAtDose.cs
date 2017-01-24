@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ESAPIX.Interfaces;
-using ESAPIX.Extensions;
-using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.DVH.Constraints
 {
-    public class MaxDoseAtVolConstraint : DoseAtVolumeConstraint
+    public class MaxComplimentVolumeAtDose : ComplimentVolumeAtDoseConstraint
     {
-        public MaxDoseAtVolConstraint()
+        public MaxComplimentVolumeAtDose()
         {
-            PassingFunc = new Func<DoseValue, ResultType>((doseAtVol => { return doseAtVol.LessThanOrEqualTo(ConstraintDose)? ResultType.PASSED : GetFailedResultType(); }));
+            PassingFunc = new Func<double, ResultType>((vol => { return vol <= Volume ? ResultType.PASSED : GetFailedResultType(); }));
         }
 
         public override string ToString()
@@ -24,9 +21,7 @@ namespace ESAPIX.DVH.Constraints
             var volUnit = VolumeType == VolumePresentation.AbsoluteCm3 ? "cc" : "%";
             var doseUnit = ConstraintDose.UnitAsString;
             var dose = ConstraintDose.ValueAsString;
-            return $"D{vol}{volUnit}[{doseUnit}] <= {dose}";
+            return $"CV{dose}{doseUnit}[{volUnit}] <= {vol}";
         }
-
-        public override string Name { get { return ToString(); } }
     }
 }

@@ -15,13 +15,13 @@ namespace ESAPIX.DVH.Constraints
         public override ConstraintResult Constrain(PlanningItem pi)
         {
             var msg = string.Empty;
-            bool? passed = false;
+            ResultType passed = GetFailedResultType();
 
             var dvhs = GetStructures(pi).Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(), VolumePresentation.AbsoluteCm3, 0.01));
             var max = dvhs.Max(d => d.MaxDose);
 
             var value = $"{ max.GetDose(ConstraintDose.Unit).ToString("F2") } { ConstraintDose.UnitAsString}";
-            passed = max.LessThanOrEqualTo(ConstraintDose);
+            passed = max.LessThanOrEqualTo(ConstraintDose)? ResultType.PASSED : GetFailedResultType();
             msg = $"Maximum dose to {string.Join("/", StructureNames)} is {value}.";
 
             return new ConstraintResult(this, passed, msg,value);
@@ -32,7 +32,7 @@ namespace ESAPIX.DVH.Constraints
             //Mayo format
             var doseUnit = ConstraintDose.UnitAsString;
             var dose = ConstraintDose.ValueAsString;
-            return $"Max[{doseUnit}]<={dose}";
+            return $"Max[{doseUnit}] <= {dose}";
         }
     }
 }
