@@ -18,14 +18,15 @@ namespace ESAPIX.AppKit.Splash
         /// Provides a quick method for the constructor of the ScriptBootstrapper, or AppBootstrapper classes which take a Func of return type window
         /// </summary>
         /// <returns>the splash screen to show</returns>
-        public static Window GetSplash()
+        public static Window GetSplash(Assembly titleAssembly = null)
         {
-                var calling = Assembly.GetExecutingAssembly();
-                var name = calling.GetName().Name;
-                var version = calling.GetName().Version;
-                var label = string.Format("{0} {1}", name, version);
-                var s = new SplashScreen(label);
-                return s;
+            if (titleAssembly == null) { titleAssembly = Assembly.GetCallingAssembly(); }
+            var calling = titleAssembly;
+            var name = calling.GetName().Name;
+            var version = calling.GetName().Version;
+            var label = string.Format("{0} {1}", name, version);
+            var s = new SplashScreen(label);
+            return s;
         }
     }
 }
