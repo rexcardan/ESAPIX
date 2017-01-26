@@ -63,5 +63,10 @@ namespace ESAPIX.DVH.Constraints
         {
             return PriorityConverter.GetFailedResult(Priority);
         }
+
+        public override string ToString()
+        {
+            return $"{C1.ToString()} [OR] {C2.ToString()}";
+        }
     }
 }

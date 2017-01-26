@@ -20,7 +20,7 @@ namespace ESAPIX.Extensions
         /// <returns>the volume in the same units as the DVH point array</returns>
         public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
         {
-            var curve = dvh.Select(d => new { Dose = d.DoseValue.Dose, Volume = d.Volume, VolumeUnit = d.VolumeUnit });
+            var curve = dvh.Select(d => new { Dose = d.DoseValue.GetDose(dv.Unit), Volume = d.Volume, VolumeUnit = d.VolumeUnit });
             var maxDose = curve.Max(d => d.Dose);
             var minDose = curve.Min(d => d.Dose);
 
