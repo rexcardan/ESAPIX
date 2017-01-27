@@ -44,7 +44,7 @@ namespace ESAPIX.DVH.Constraints
             {
                 message = (c1.IsSuccess && c1.IsSuccess) ? c2.Message : c1.Message;
             }
-            return new ConstraintResult(this, canConstrain ? PASSED : NOT_APPLICABLE, message, $"{c1.Value}/{c2.Value}");
+            return new ConstraintResult(this, canConstrain ? PASSED : NOT_APPLICABLE, message, canConstrain ? $"{c1.Value}/{c2.Value}" : null);
         }
 
         public ConstraintResult Constrain(PlanningItem pi)

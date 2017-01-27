@@ -50,9 +50,13 @@ namespace ESAPIX.DVH.Constraints
             if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, "Plan is null"); }
 
             //Check structure exists
-            valid = pi.ContainsStructure(StructureName);
-            if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, $"{StructureName} doesn't exist in {pi.Id}"); }
-
+            var structures = StructureName.Split('&');
+            foreach(var s in structures)
+            {
+                valid = pi.ContainsStructure(s);
+                if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, $"{s} doesn't exist in {pi.Id}"); }
+            }
+           
             //Check dose is calculated
             valid = pi.Dose != null;
             if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, $"There is no dose calculated for {pi.Id}"); }
