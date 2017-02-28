@@ -1,11 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿using ESAPIX.Helpers;
+using ESAPIX.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ESAPIX.AppKit.Data
 {
@@ -14,20 +19,34 @@ namespace ESAPIX.AppKit.Data
     /// to ensure the files have not been tampered with. User LoadSecure for that functionality
     /// </summary>
     /// <typeparam name="T">the type of objects to be stored</typeparam>
-    public class DataStore<T>
+    public class DataStore<T> where T: ISecureStorable
     {
         string _dbPath = string.Empty;
-        private readonly string DEFAULT_EXT = ".json";
+        private string _fileExtension;
+        private Func<T, string> _fileNameingMethod;
+        private JsonSerializerSettings _settings;
 
-        public DataStore(string storePath = "")
+        public DataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "")
         {
+            _fileExtension = fileExtension;
+            _fileNameingMethod = fileNamingMethod;
+
             if (string.IsNullOrEmpty(storePath))
             {
                 var basePath = StorageHelper.GetBasePath();
-                storePath = Path.Combine(basePath, $"{default(T).GetType().Name}s");
+                storePath = Path.Combine(basePath, $"{typeof(T).Name}s");
             }
             InitializeDatabase(storePath);
+
+            _settings = new JsonSerializerSettings()
+            {  
+                Binder = new StorageBinder<T>(),
+                TypeNameHandling = TypeNameHandling.Objects,
+                TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
+            };
         }
+
+        public string DataPath { get { return _dbPath; } }
 
         /// <summary>
         /// Creates a new json database if one does not exist
@@ -53,21 +72,16 @@ namespace ESAPIX.AppKit.Data
         /// Saves a protocol in the protocol directory
         /// </summary>
         /// <returns>bool indicating success</returns>
-        public bool Save(string name, T storageObject)
+        public bool Save(T storageObject)
         {
             var json = JsonConvert.SerializeObject(storageObject);
             var hashWrapper = new SecureStorage<T>() { Storage = storageObject, Hash = GetHashString(json) };
 
-            json = JsonConvert.SerializeObject(hashWrapper, Formatting.Indented, new JsonSerializerSettings()
-            {
-                TypeNameHandling = TypeNameHandling.Objects,
-                TypeNameAssemblyFormat = System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple
-            });
-            var savePath = GetSavePath(name);
+            json = JsonConvert.SerializeObject(hashWrapper, Formatting.Indented, _settings);
+            var savePath = GetSavePath(storageObject);
             File.WriteAllText(savePath, json);
             return true;
         }
-
 
         /// <summary>
         /// Loads all storage objects in the directory
@@ -75,9 +89,10 @@ namespace ESAPIX.AppKit.Data
         /// <returns>bool indicating success</returns>
         public IEnumerable<T> LoadAll()
         {
-            foreach (var f in Directory.GetFiles(_dbPath).Where(f => Path.GetExtension(f) == DEFAULT_EXT))
+            foreach (var f in Directory.GetFiles(_dbPath).Where(f => Path.GetExtension(f) == _fileExtension))
             {
-                yield return ReadSecure(f).Storage;
+                var read = ReadSecure(f);
+                if (read != null) { yield return read.Storage; }
             }
         }
 
@@ -85,12 +100,20 @@ namespace ESAPIX.AppKit.Data
         /// Loads all secure storage objects in the directory
         /// </summary>
         /// <returns>bool indicating success</returns>
-        public IEnumerable<SecureStorage<T>> LoadAllSecure()
+        public List<SecureStorage<T>> LoadAllSecure()
         {
-            foreach (var f in Directory.GetFiles(_dbPath).Where(f => Path.GetExtension(f) == DEFAULT_EXT))
+            List<SecureStorage<T>> list = new List<SecureStorage<T>>();
+
+            var fileCount = Directory.GetFiles(_dbPath).ToArray();
+            var withExt = fileCount.Where(f => Path.GetExtension(f) == _fileExtension);
+
+            foreach (var f in withExt)
             {
-                yield return ReadSecure(f);
+                var read = ReadSecure(f);
+                if (read != null) { list.Add(read); }
+                else { break; }
             }
+            return list;
         }
 
         /// <summary>
@@ -99,7 +122,7 @@ namespace ESAPIX.AppKit.Data
         /// <returns>bool indicating success</returns>
         public bool DeleteAll()
         {
-            foreach (var f in Directory.GetFiles(_dbPath).Where(f => Path.GetExtension(f) == DEFAULT_EXT))
+            foreach (var f in Directory.GetFiles(_dbPath).Where(f => Path.GetExtension(f) == _fileExtension))
             {
                 try
                 {
@@ -113,38 +136,29 @@ namespace ESAPIX.AppKit.Data
             return true;
         }
 
-        /// <summary>
-        /// Loads a secure storage object by name
-        /// </summary>
-        /// <param name="name">the name of the object (the key)</param>
-        /// <returns>the secure storage object</returns>
-        public SecureStorage<T> LoadSecure(string name)
+        public void Delete(T toDelete)
         {
-            var path = GetSavePath(name);
-            return ReadSecure(path);
+            var savePath = GetSavePath(toDelete);
+            if (File.Exists(savePath))
+            {
+                File.Delete(savePath);
+            }
         }
 
         /// <summary>
-        /// Loads a storage object by name
+        /// Reads an object from a file and determines if it has been tampered with since initial save
         /// </summary>
-        /// <param name="name">the name of the object (the key)</param>
-        /// <returns>the storage object</returns>
-        public T Load(string name)
-        {
-            var secure = LoadSecure(name);
-            return secure.Storage;
-        }
-
+        /// <param name="path">the path where the object is stored</param>
+        /// <returns></returns>
         private SecureStorage<T> ReadSecure(string path)
         {
+            var json = "";
             try
             {
                 if (File.Exists(path))
                 {
-                    var hashWrapper = JsonConvert.DeserializeObject<SecureStorage<T>>(File.ReadAllText(path), new JsonSerializerSettings()
-                    {
-                        TypeNameHandling = TypeNameHandling.Objects
-                    });
+                    json = File.ReadAllText(path);
+                    var hashWrapper = JsonConvert.DeserializeObject<SecureStorage<T>>(json, _settings);
                     hashWrapper.IsTampered = !CheckIntegrity(hashWrapper);
                     return hashWrapper;
                 }
@@ -152,6 +166,7 @@ namespace ESAPIX.AppKit.Data
             }
             catch (Exception e)
             {
+                MessageBox.Show($"{e.Message} \n {e.InnerException} \n {json}");
                 return null;
             }
         }
@@ -161,10 +176,11 @@ namespace ESAPIX.AppKit.Data
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public string GetSavePath(string name)
+        public string GetSavePath(T objectToSave)
         {
-            var protPath = Path.Combine(_dbPath, $"{name}{DEFAULT_EXT}");
-            return protPath;
+            var filePath = FileHelper.RemoveIllegalCharacters($"{_fileNameingMethod(objectToSave)}{_fileExtension}");
+            var savePath = Path.Combine(_dbPath, filePath);
+            return savePath;
         }
 
         /// <summary>

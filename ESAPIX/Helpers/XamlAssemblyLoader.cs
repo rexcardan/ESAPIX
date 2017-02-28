@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using VMS.TPS.Common.Model.API;
 using System.Windows;
+using System.Runtime.Serialization.Formatters;
+using System.Runtime.Serialization;
 
 namespace ESAPIX.Helpers
 {
@@ -20,6 +22,7 @@ namespace ESAPIX.Helpers
         /// </summary>
         public static void LoadAssemblies()
         {
+            var formatter = FormatterAssemblyStyle.Full;
             i.InvokeCommandAction action = new i.InvokeCommandAction();
             action.CommandName = "Loaded";
             var window = new Window();
