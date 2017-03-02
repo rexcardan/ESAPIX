@@ -54,12 +54,12 @@ namespace ESAPIX.DVH.Constraints
             foreach(var s in structures)
             {
                 valid = pi.ContainsStructure(s);
-                if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, $"{s} doesn't exist in {pi.Id}"); }
+                if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE_MISSING_STRUCTURE, $"{s} isn't contoured in {pi.Id}"); }
             }
            
             //Check dose is calculated
             valid = pi.Dose != null;
-            if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE, $"There is no dose calculated for {pi.Id}"); }
+            if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE_MISSING_DOSE, $"There is no dose calculated for {pi.Id}"); }
 
             return new ConstraintResult(this, ResultType.PASSED, string.Empty);
         }

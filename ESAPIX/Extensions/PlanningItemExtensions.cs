@@ -77,27 +77,41 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        /// Returns true if the planning item references a structure set with the input structure id. Also allows a regex
+        /// Returns true if the planning item references a structure set with the input structure id AND the structure is contoured. Also allows a regex
         /// expression to match to structure id.
         /// </summary>
         /// <param name="plan">the planning item</param>
         /// <param name="structId">the structure id to match</param>
         /// <param name="regex">the optional regex expression to match against a structure id</param>
-        /// <returns></returns>
+        /// <returns>Returns true if the planning item references a structure set with the input structure id AND the structure is contoured.</returns>
         public static bool ContainsStructure(this PlanningItem plan, string structId, string regex = null)
         {
             Structure s;
             return plan.ContainsStructure(structId, regex, out s);
         }
 
+        /// <summary>
+        /// Returns true if the planning item references a structure set with the input structure id AND the structure is contoured. Also allows a regex
+        /// expression to match to structure id.
+        /// </summary>
+        /// <param name="plan">the planning item</param>
+        /// <param name="structId">the structure id to match</param>
+        /// <param name="regex">the optional regex expression to match against a structure id</param>
+        /// <param name="s">returns the structure back for querying (if it exists and is contoured)</param>
+        /// <returns>Returns true if the planning item references a structure set with the input structure id AND the structure is contoured.</returns>
         private static bool ContainsStructure(this PlanningItem plan, string structId, string regex, out Structure s)
         {
+            s = null;
             foreach (var struc in plan.GetStructures())
             {
                 bool regexMatched = (!string.IsNullOrEmpty(regex)) && Regex.IsMatch(struc.Id, regex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                if (((0 == string.Compare(structId, struc.Id, true)) || regexMatched)) { s = struc; return true; }//This means a match (if true)!
+                if (((0 == string.Compare(structId, struc.Id, true)) || regexMatched)) { s = struc;  }//This means a match (if true)!
+                if (s != null)
+                {
+                    //Structure found - but may not be contoured - let's check
+                    if (s.Volume > 0) { return true; } //Good to go
+                }
             }
-            s = null;
             return false; //None found
         }
 

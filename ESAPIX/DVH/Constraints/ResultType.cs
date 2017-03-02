@@ -22,6 +22,12 @@ namespace ESAPIX.DVH.Constraints
         ACTION_LEVEL_3,
 
         [Description("N/A")]
-        NOT_APPLICABLE
+        NOT_APPLICABLE,
+
+        [Description("N/A - MISSING STRUCTURE")]
+        NOT_APPLICABLE_MISSING_STRUCTURE,
+
+        [Description("N/A - MISSING DOSE")]
+        NOT_APPLICABLE_MISSING_DOSE,
     }
 }
