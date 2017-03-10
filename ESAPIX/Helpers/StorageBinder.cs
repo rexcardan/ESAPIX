@@ -19,11 +19,15 @@ namespace ESAPIX.Helpers
         /// <returns></returns>
         public override Type BindToType(string assemblyName, string typeName)
         {
-            if (typeName.StartsWith("ESAPIX.AppKit.Data.SecureStorage"))
-                return typeof(SecureStorage<T>);
-            else
+            try { return base.BindToType(assemblyName, typeName); }
+            catch(Exception e)
             {
-                return base.BindToType(assemblyName, typeName);
+                if (typeName.StartsWith("ESAPIX.AppKit.Data.SecureStorage"))
+                    return typeof(SecureStorage<T>);
+                else
+                {
+                    return base.BindToType(assemblyName, typeName);
+                }
             }
         }
     }
