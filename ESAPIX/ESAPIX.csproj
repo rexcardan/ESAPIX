@@ -44,7 +44,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
@@ -178,7 +178,6 @@
     <Compile Include="Extensions\StructureExtensions.cs" />
     <Compile Include="Extensions\VVectorExtensions.cs" />
     <Compile Include="Helpers\FileHelper.cs" />
-    <Compile Include="Helpers\StorageBinder.cs" />
     <Compile Include="Helpers\MagicStrings.cs" />
     <Compile Include="Helpers\MathHelper.cs" />
     <Compile Include="AppKit\ScriptComThread.cs" />

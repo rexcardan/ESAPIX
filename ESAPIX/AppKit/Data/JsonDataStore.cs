@@ -17,8 +17,7 @@ namespace ESAPIX.AppKit.Data
         {
             _settings = new JsonSerializerSettings()
             {
-                Binder = new StorageBinder<T>(),
-                TypeNameHandling = TypeNameHandling.All,
+                TypeNameHandling = TypeNameHandling.Objects,
                 TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
             };
         }
