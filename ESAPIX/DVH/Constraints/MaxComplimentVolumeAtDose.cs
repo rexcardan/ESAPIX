@@ -17,7 +17,7 @@ namespace ESAPIX.DVH.Constraints
         public override string ToString()
         {
             //Mayo format
-            var vol = Volume.ToString("N1").Replace(",", "");
+            var vol = Volume.ToString().Replace(",", "");
             var volUnit = VolumeType == VolumePresentation.AbsoluteCm3 ? "cc" : "%";
             var doseUnit = ConstraintDose.UnitAsString;
             var dose = ConstraintDose.ValueAsString;

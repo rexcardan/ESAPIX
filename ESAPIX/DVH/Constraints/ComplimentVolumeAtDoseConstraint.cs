@@ -45,9 +45,9 @@ namespace ESAPIX.DVH.Constraints
             passed = PassingFunc(volAtDose);
 
             var stringUnit = VolumeType == VolumePresentation.AbsoluteCm3 ? "CC" : "%";
-            var val = $"{volAtDose.ToString("F2")} {stringUnit}";
+            var val = $"{volAtDose.ToString()} {stringUnit}";
 
-            msg = $"Compliment volume of {StructureName} at {ConstraintDose.Dose.ToString("F3")} {ConstraintDose.UnitAsString} was {val}.";
+            msg = $"Compliment volume of {StructureName} at {ConstraintDose.Dose.ToString()} {ConstraintDose.UnitAsString} was {val}.";
             return new ConstraintResult(this, passed, msg, val);
         }
     }

@@ -41,7 +41,7 @@ namespace ESAPIX.DVH.Query
         {
             var query = MayoQueryWriter.Write(Query);
             var discriminator = DiscriminatorConverter.WriteDiscrimator(this.Discriminator);
-            var constraintValue = this.ConstraintValue.ToString("F2");
+            var constraintValue = this.ConstraintValue.ToString();
             return $"{query} {discriminator} {constraintValue}";
         }
     }

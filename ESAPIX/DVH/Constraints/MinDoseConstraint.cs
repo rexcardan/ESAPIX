@@ -20,7 +20,7 @@ namespace ESAPIX.DVH.Constraints
             var dvhs = GetStructures(pi).Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(), VolumePresentation.AbsoluteCm3, 0.01));
             var min = dvhs.Min(d => d.MinDose);
 
-            var value = $"{ min.GetDose(ConstraintDose.Unit).ToString("F2") } { ConstraintDose.UnitAsString}";
+            var value = $"{ min.GetDose(ConstraintDose.Unit).ToString() } { ConstraintDose.UnitAsString}";
             passed = min.GreaterThanOrEqualTo(ConstraintDose)? ResultType.PASSED : GetFailedResultType();
             msg = $"Minimum dose to {string.Join("/", StructureNames)} is {value}.";
 

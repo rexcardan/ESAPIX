@@ -20,7 +20,7 @@ namespace ESAPIX.DVH.Constraints
             var dvhs = GetStructures(pi).Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(), VolumePresentation.AbsoluteCm3, 0.01));
             var max = dvhs.Max(d => d.MaxDose);
 
-            var value = $"{ max.GetDose(ConstraintDose.Unit).ToString("F2") } { ConstraintDose.UnitAsString}";
+            var value = $"{ max.GetDose(ConstraintDose.Unit).ToString() } { ConstraintDose.UnitAsString}";
             passed = max.LessThanOrEqualTo(ConstraintDose)? ResultType.PASSED : GetFailedResultType();
             msg = $"Maximum dose to {string.Join("/", StructureNames)} is {value}.";
 

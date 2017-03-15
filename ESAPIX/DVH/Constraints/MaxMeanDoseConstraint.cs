@@ -23,7 +23,7 @@ namespace ESAPIX.DVH.Constraints
             var meanValue = dvhs.Average(d => d.MeanDose.GetDose(ConstraintDose.Unit));
             var mean = new DoseValue(meanValue, ConstraintDose.Unit);
 
-            var value = $"{ mean.GetDose(ConstraintDose.Unit).ToString("F2") } { ConstraintDose.UnitAsString}";
+            var value = $"{ mean.GetDose(ConstraintDose.Unit).ToString() } { ConstraintDose.UnitAsString}";
             passed = mean.LessThanOrEqualTo(ConstraintDose) ? ResultType.PASSED : GetFailedResultType();
             msg = $"Mean dose to {string.Join("/", StructureNames)} is {value}.";
 
