@@ -1,6 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using X = ESAPIX.Facade.XContext;
 
@@ -22,10 +22,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.Diagnosis>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.Diagnoses).Select(s => new ESAPIX.Facade.API.Diagnosis(s));
+                    var asEnum = (IEnumerable)_client.Diagnoses;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.Diagnosis();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public System.String Intent
@@ -48,10 +64,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.PlanSum>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.PlanSums).Select(s => new ESAPIX.Facade.API.PlanSum(s));
+                    var asEnum = (IEnumerable)_client.PlanSums;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.PlanSum();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public System.Nullable<System.DateTime> StartDateTime
@@ -77,10 +109,10 @@ namespace ESAPIX.Facade.API
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var test = _client.PlanSetups.GetEnumerator();
-                    Console.WriteLine(test);
+                    var asEnum = (IEnumerable)_client.PlanSetups;
+                    enumerator = asEnum.GetEnumerator();
                 });
-                do
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                 {
                     var facade = new ESAPIX.Facade.API.PlanSetup();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
@@ -92,31 +124,60 @@ namespace ESAPIX.Facade.API
                         }
                     });
                     if (facade._client != null)
-                    {
-                        yield return facade;
-                    }
+                    { yield return facade; }
                 }
-                while (enumerator.MoveNext());
             }
         }
         public IEnumerable<ESAPIX.Facade.API.ExternalPlanSetup> ExternalPlanSetups
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.ExternalPlanSetup>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.ExternalPlanSetups).Select(s => new ESAPIX.Facade.API.ExternalPlanSetup(s));
+                    var asEnum = (IEnumerable)_client.ExternalPlanSetups;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.ExternalPlanSetup();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.BrachyPlanSetup> BrachyPlanSetups
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.BrachyPlanSetup>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.BrachyPlanSetups).Select(s => new ESAPIX.Facade.API.BrachyPlanSetup(s));
+                    var asEnum = (IEnumerable)_client.BrachyPlanSetups;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.BrachyPlanSetup();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public void WriteXml(System.Xml.XmlWriter writer)

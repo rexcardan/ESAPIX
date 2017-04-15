@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using X = ESAPIX.Facade.XContext;
 
@@ -45,30 +46,78 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.Block>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.Blocks).Select(s => new ESAPIX.Facade.API.Block(s));
+                    var asEnum = (IEnumerable)_client.Blocks;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.Block();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.Bolus> Boluses
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.Bolus>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.Boluses).Select(s => new ESAPIX.Facade.API.Bolus(s));
+                    var asEnum = (IEnumerable)_client.Boluses;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.Bolus();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.BeamCalculationLog> CalculationLogs
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.BeamCalculationLog>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.CalculationLogs).Select(s => new ESAPIX.Facade.API.BeamCalculationLog(s));
+                    var asEnum = (IEnumerable)_client.CalculationLogs;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.BeamCalculationLog();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public ESAPIX.Facade.API.Compensator Compensator
@@ -131,10 +180,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.FieldReferencePoint>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.FieldReferencePoints).Select(s => new ESAPIX.Facade.API.FieldReferencePoint(s));
+                    var asEnum = (IEnumerable)_client.FieldReferencePoints;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.FieldReferencePoint();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public ESAPIX.Facade.Types.GantryDirection GantryDirection
@@ -269,10 +334,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.Tray>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.Trays).Select(s => new ESAPIX.Facade.API.Tray(s));
+                    var asEnum = (IEnumerable)_client.Trays;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.Tray();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public ESAPIX.Facade.API.ExternalBeamTreatmentUnit TreatmentUnit
@@ -287,10 +368,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.Wedge>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.Wedges).Select(s => new ESAPIX.Facade.API.Wedge(s));
+                    var asEnum = (IEnumerable)_client.Wedges;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.Wedge();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public System.Double WeightFactor

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using X = ESAPIX.Facade.XContext;
 
@@ -29,10 +30,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.Isodose>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.Isodoses).Select(s => new ESAPIX.Facade.API.Isodose(s));
+                    var asEnum = (IEnumerable)_client.Isodoses;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.Isodose();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public ESAPIX.Facade.Types.VVector Origin

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using X = ESAPIX.Facade.XContext;
 
@@ -14,10 +15,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.ControlPointParameters>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.ControlPoints).Select(s => new ESAPIX.Facade.API.ControlPointParameters(s));
+                    var asEnum = (IEnumerable)_client.ControlPoints;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.ControlPointParameters();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public ESAPIX.Facade.Types.GantryDirection GantryDirection

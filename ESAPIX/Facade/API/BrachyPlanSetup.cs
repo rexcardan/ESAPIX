@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using X = ESAPIX.Facade.XContext;
 
@@ -21,10 +22,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.Catheter>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.Catheters).Select(s => new ESAPIX.Facade.API.Catheter(s));
+                    var asEnum = (IEnumerable)_client.Catheters;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.Catheter();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public System.Nullable<System.Int32> NumberOfPdrPulses
@@ -47,20 +64,52 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.SeedCollection>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.SeedCollections).Select(s => new ESAPIX.Facade.API.SeedCollection(s));
+                    var asEnum = (IEnumerable)_client.SeedCollections;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.SeedCollection();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.BrachySolidApplicator> SolidApplicators
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.BrachySolidApplicator>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.SolidApplicators).Select(s => new ESAPIX.Facade.API.BrachySolidApplicator(s));
+                    var asEnum = (IEnumerable)_client.SolidApplicators;
+                    enumerator = asEnum.GetEnumerator();
                 });
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                {
+                    var facade = new ESAPIX.Facade.API.BrachySolidApplicator();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    { yield return facade; }
+                }
             }
         }
         public System.Nullable<System.DateTime> TreatmentDateTime
