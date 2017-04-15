@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class OptimizationSetup : ESAPIX.Facade.API.SerializableObject
     {
-        public OptimizationSetup() { }
+        public OptimizationSetup() { _client = new ExpandoObject(); }
         public OptimizationSetup(dynamic client) { _client = client; }
         public IEnumerable<ESAPIX.Facade.API.OptimizationObjective> Objectives
         {
@@ -66,8 +67,13 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.UseJawTracking; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.UseJawTracking; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.UseJawTracking = value; }
             }
         }
         public void WriteXml(System.Xml.XmlWriter writer)

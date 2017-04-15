@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
@@ -9,71 +10,111 @@ namespace ESAPIX.Facade.API
     public class ScriptContext
     {
         internal dynamic _client;
-        public ScriptContext() { }
+        public ScriptContext() { _client = new ExpandoObject(); }
         public ScriptContext(dynamic client) { _client = client; }
         public ScriptContext(System.Object context, System.Object user, System.String appName) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructScriptContext(context, user, appName)); }
         public ESAPIX.Facade.API.User CurrentUser
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.CurrentUser; }
                 var local = this;
-                return new ESAPIX.Facade.API.User(local._client.CurrentUser);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.User>((sc) => { return new ESAPIX.Facade.API.User(local._client.CurrentUser); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.CurrentUser = value; }
             }
         }
         public ESAPIX.Facade.API.Course Course
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Course; }
                 var local = this;
-                return new ESAPIX.Facade.API.Course(local._client.Course);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Course>((sc) => { return new ESAPIX.Facade.API.Course(local._client.Course); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Course = value; }
             }
         }
         public ESAPIX.Facade.API.Image Image
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Image; }
                 var local = this;
-                return new ESAPIX.Facade.API.Image(local._client.Image);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Image>((sc) => { return new ESAPIX.Facade.API.Image(local._client.Image); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Image = value; }
             }
         }
         public ESAPIX.Facade.API.StructureSet StructureSet
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.StructureSet; }
                 var local = this;
-                return new ESAPIX.Facade.API.StructureSet(local._client.StructureSet);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.StructureSet>((sc) => { return new ESAPIX.Facade.API.StructureSet(local._client.StructureSet); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.StructureSet = value; }
             }
         }
         public ESAPIX.Facade.API.Patient Patient
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Patient; }
                 var local = this;
-                return new ESAPIX.Facade.API.Patient(local._client.Patient);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Patient>((sc) => { return new ESAPIX.Facade.API.Patient(local._client.Patient); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Patient = value; }
             }
         }
         public ESAPIX.Facade.API.PlanSetup PlanSetup
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.PlanSetup; }
                 var local = this;
-                return new ESAPIX.Facade.API.PlanSetup(local._client.PlanSetup);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.PlanSetup>((sc) => { return new ESAPIX.Facade.API.PlanSetup(local._client.PlanSetup); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.PlanSetup = value; }
             }
         }
         public ESAPIX.Facade.API.ExternalPlanSetup ExternalPlanSetup
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.ExternalPlanSetup; }
                 var local = this;
-                return new ESAPIX.Facade.API.ExternalPlanSetup(local._client.ExternalPlanSetup);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.ExternalPlanSetup>((sc) => { return new ESAPIX.Facade.API.ExternalPlanSetup(local._client.ExternalPlanSetup); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.ExternalPlanSetup = value; }
             }
         }
         public ESAPIX.Facade.API.BrachyPlanSetup BrachyPlanSetup
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.BrachyPlanSetup; }
                 var local = this;
-                return new ESAPIX.Facade.API.BrachyPlanSetup(local._client.BrachyPlanSetup);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.BrachyPlanSetup>((sc) => { return new ESAPIX.Facade.API.BrachyPlanSetup(local._client.BrachyPlanSetup); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.BrachyPlanSetup = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.PlanSetup> PlansInScope
@@ -184,16 +225,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.ApplicationName; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.ApplicationName; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.ApplicationName = value; }
             }
         }
         public System.String VersionInfo
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.VersionInfo; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.VersionInfo; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.VersionInfo = value; }
             }
         }
     }

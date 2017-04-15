@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class OptimizerResult : ESAPIX.Facade.API.CalculationResult
     {
-        public OptimizerResult() { }
+        public OptimizerResult() { _client = new ExpandoObject(); }
         public OptimizerResult(dynamic client) { _client = client; }
         public IEnumerable<ESAPIX.Facade.API.OptimizerDVH> StructureDVHs
         {
@@ -66,16 +67,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.TotalObjectiveFunctionValue; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.TotalObjectiveFunctionValue; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.TotalObjectiveFunctionValue = value; }
             }
         }
         public System.Int32 NumberOfIMRTOptimizerIterations
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.NumberOfIMRTOptimizerIterations; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.NumberOfIMRTOptimizerIterations; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.NumberOfIMRTOptimizerIterations = value; }
             }
         }
     }

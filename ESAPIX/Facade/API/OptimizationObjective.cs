@@ -2,28 +2,39 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class OptimizationObjective : ESAPIX.Facade.API.SerializableObject
     {
-        public OptimizationObjective() { }
+        public OptimizationObjective() { _client = new ExpandoObject(); }
         public OptimizationObjective(dynamic client) { _client = client; }
         public ESAPIX.Facade.API.Structure Structure
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Structure; }
                 var local = this;
-                return new ESAPIX.Facade.API.Structure(local._client.Structure);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Structure>((sc) => { return new ESAPIX.Facade.API.Structure(local._client.Structure); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Structure = value; }
             }
         }
         public System.String StructureId
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.StructureId; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.StructureId; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.StructureId = value; }
             }
         }
         public void WriteXml(System.Xml.XmlWriter writer)

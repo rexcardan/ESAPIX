@@ -2,20 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class Application : ESAPIX.Facade.API.SerializableObject
     {
-        public Application() { }
+        public Application() { _client = new ExpandoObject(); }
         public Application(dynamic client) { _client = client; }
         public ESAPIX.Facade.API.User CurrentUser
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.CurrentUser; }
                 var local = this;
-                return new ESAPIX.Facade.API.User(local._client.CurrentUser);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.User>((sc) => { return new ESAPIX.Facade.API.User(local._client.CurrentUser); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.CurrentUser = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.PatientSummary> PatientSummaries

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
@@ -9,7 +10,7 @@ namespace ESAPIX.Facade.API
     public class SerializableObject
     {
         internal dynamic _client;
-        public SerializableObject() { }
+        public SerializableObject() { _client = new ExpandoObject(); }
         public SerializableObject(dynamic client) { _client = client; }
         public System.Xml.Schema.XmlSchema GetSchema()
         {

@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class StructureSet : ESAPIX.Facade.API.ApiDataObject
     {
-        public StructureSet() { }
+        public StructureSet() { _client = new ExpandoObject(); }
         public StructureSet(dynamic client) { _client = client; }
         public IEnumerable<ESAPIX.Facade.API.Structure> Structures
         {
@@ -40,16 +41,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Image; }
                 var local = this;
-                return new ESAPIX.Facade.API.Image(local._client.Image);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Image>((sc) => { return new ESAPIX.Facade.API.Image(local._client.Image); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Image = value; }
             }
         }
         public System.String UID
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.UID; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.UID; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.UID = value; }
             }
         }
         public void WriteXml(System.Xml.XmlWriter writer)

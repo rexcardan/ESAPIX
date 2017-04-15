@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
@@ -15,48 +16,78 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Item; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Item; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Item = value; }
             }
         }
         public System.Double LengthSquared
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.LengthSquared; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.LengthSquared; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.LengthSquared = value; }
             }
         }
         public System.Double Length
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Length; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Length; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Length = value; }
             }
         }
         public System.Double x
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.x; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.x; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.x = value; }
             }
         }
         public System.Double y
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.y; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.y; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.y = value; }
             }
         }
         public System.Double z
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.z; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.z; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.z = value; }
             }
         }
         public static System.Double Distance(ESAPIX.Facade.Types.VVector left, ESAPIX.Facade.Types.VVector right)

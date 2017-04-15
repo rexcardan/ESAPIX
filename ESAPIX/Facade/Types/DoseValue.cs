@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
@@ -16,40 +17,65 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Dose; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Dose; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Dose = value; }
             }
         }
         public ESAPIX.Facade.Types.DoseValue.DoseUnit Unit
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Unit; }
                 var local = this;
-                return (ESAPIX.Facade.Types.DoseValue.DoseUnit)local._client.Unit;
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue.DoseUnit>((sc) => { return (ESAPIX.Facade.Types.DoseValue.DoseUnit)local._client.Unit; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Unit = value; }
             }
         }
         public System.String UnitAsString
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.UnitAsString; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.UnitAsString; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.UnitAsString = value; }
             }
         }
         public System.String ValueAsString
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.ValueAsString; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.ValueAsString; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.ValueAsString = value; }
             }
         }
         public System.Int32 Decimals
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Decimals; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.Decimals; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Decimals = value; }
             }
         }
         public System.String ToString()

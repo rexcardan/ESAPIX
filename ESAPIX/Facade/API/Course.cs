@@ -2,20 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class Course : ESAPIX.Facade.API.ApiDataObject
     {
-        public Course() { }
+        public Course() { _client = new ExpandoObject(); }
         public Course(dynamic client) { _client = client; }
         public System.Nullable<System.DateTime> CompletedDateTime
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.CompletedDateTime; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.CompletedDateTime; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.CompletedDateTime = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.Diagnosis> Diagnoses
@@ -48,16 +54,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Intent; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Intent; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Intent = value; }
             }
         }
         public ESAPIX.Facade.API.Patient Patient
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Patient; }
                 var local = this;
-                return new ESAPIX.Facade.API.Patient(local._client.Patient);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Patient>((sc) => { return new ESAPIX.Facade.API.Patient(local._client.Patient); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Patient = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.PlanSum> PlanSums
@@ -90,16 +106,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.StartDateTime; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.StartDateTime; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.StartDateTime = value; }
             }
         }
         public System.String Id
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Id; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Id; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Id = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.PlanSetup> PlanSetups

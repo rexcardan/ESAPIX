@@ -2,20 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class ExternalPlanSetup : ESAPIX.Facade.API.PlanSetup
     {
-        public ExternalPlanSetup() { }
+        public ExternalPlanSetup() { _client = new ExpandoObject(); }
         public ExternalPlanSetup(dynamic client) { _client = client; }
         public ESAPIX.Facade.API.EvaluationDose DoseAsEvaluationDose
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.DoseAsEvaluationDose; }
                 var local = this;
-                return new ESAPIX.Facade.API.EvaluationDose(local._client.DoseAsEvaluationDose);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.EvaluationDose>((sc) => { return new ESAPIX.Facade.API.EvaluationDose(local._client.DoseAsEvaluationDose); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.DoseAsEvaluationDose = value; }
             }
         }
         public ESAPIX.Facade.API.CalculationResult CalculateDoseWithPresetValues(System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, ESAPIX.Facade.Types.MetersetValue>> presetValues)

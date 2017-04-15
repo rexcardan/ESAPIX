@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
@@ -9,7 +10,7 @@ namespace ESAPIX.Facade.API
     public class BeamParameters
     {
         internal dynamic _client;
-        public BeamParameters() { }
+        public BeamParameters() { _client = new ExpandoObject(); }
         public BeamParameters(dynamic client) { _client = client; }
         public IEnumerable<ESAPIX.Facade.API.ControlPointParameters> ControlPoints
         {
@@ -41,24 +42,39 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.GantryDirection; }
                 var local = this;
-                return (ESAPIX.Facade.Types.GantryDirection)local._client.GantryDirection;
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.GantryDirection>((sc) => { return (ESAPIX.Facade.Types.GantryDirection)local._client.GantryDirection; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.GantryDirection = value; }
             }
         }
         public ESAPIX.Facade.Types.VVector Isocenter
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Isocenter; }
                 var local = this;
-                return new ESAPIX.Facade.Types.VVector(local._client.Isocenter);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.VVector>((sc) => { return new ESAPIX.Facade.Types.VVector(local._client.Isocenter); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Isocenter = value; }
             }
         }
         public System.Double WeightFactor
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.WeightFactor; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.WeightFactor; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.WeightFactor = value; }
             }
         }
         public void SetAllLeafPositions(System.Single[,] leafPositions)

@@ -2,84 +2,130 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class Structure : ESAPIX.Facade.API.ApiDataObject
     {
-        public Structure() { }
+        public Structure() { _client = new ExpandoObject(); }
         public Structure(dynamic client) { _client = client; }
         public ESAPIX.Facade.Types.VVector CenterPoint
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.CenterPoint; }
                 var local = this;
-                return new ESAPIX.Facade.Types.VVector(local._client.CenterPoint);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.VVector>((sc) => { return new ESAPIX.Facade.Types.VVector(local._client.CenterPoint); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.CenterPoint = value; }
             }
         }
         public System.Windows.Media.Color Color
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Color; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>((sc) => { return local._client.Color; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Color = value; }
             }
         }
         public System.String DicomType
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.DicomType; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.DicomType; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.DicomType = value; }
             }
         }
         public System.Boolean HasSegment
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.HasSegment; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.HasSegment; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.HasSegment = value; }
             }
         }
         public System.Boolean IsEmpty
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.IsEmpty; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.IsEmpty; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.IsEmpty = value; }
             }
         }
         public System.Boolean IsHighResolution
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.IsHighResolution; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.IsHighResolution; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.IsHighResolution = value; }
             }
         }
         public System.Windows.Media.Media3D.MeshGeometry3D MeshGeometry
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.MeshGeometry; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Media3D.MeshGeometry3D>((sc) => { return local._client.MeshGeometry; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.MeshGeometry = value; }
             }
         }
         public System.Int32 ROINumber
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.ROINumber; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.ROINumber; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.ROINumber = value; }
             }
         }
         public ESAPIX.Facade.API.SegmentVolume SegmentVolume
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.SegmentVolume; }
                 var local = this;
-                return new ESAPIX.Facade.API.SegmentVolume(local._client.SegmentVolume);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.SegmentVolume>((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.SegmentVolume); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.SegmentVolume = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.Types.StructureCodeInfo> StructureCodeInfos
@@ -112,16 +158,26 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Volume; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Volume; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Volume = value; }
             }
         }
         public System.String Id
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Id; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Id; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Id = value; }
             }
         }
         public void WriteXml(System.Xml.XmlWriter writer)

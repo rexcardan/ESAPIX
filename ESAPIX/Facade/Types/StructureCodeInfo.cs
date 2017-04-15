@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
@@ -15,16 +16,26 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.CodingScheme; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.CodingScheme; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.CodingScheme = value; }
             }
         }
         public System.String Code
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Code; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Code; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Code = value; }
             }
         }
         public System.String ToString()

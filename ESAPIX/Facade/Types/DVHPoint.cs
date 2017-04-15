@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
@@ -15,24 +16,39 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.DoseValue; }
                 var local = this;
-                return new ESAPIX.Facade.Types.DoseValue(local._client.DoseValue);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { return new ESAPIX.Facade.Types.DoseValue(local._client.DoseValue); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.DoseValue = value; }
             }
         }
         public System.Double Volume
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Volume; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Volume; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Volume = value; }
             }
         }
         public System.String VolumeUnit
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.VolumeUnit; }
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.VolumeUnit; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.VolumeUnit = value; }
             }
         }
         public System.Xml.Schema.XmlSchema GetSchema()

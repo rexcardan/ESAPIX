@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
@@ -15,32 +16,52 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.X1; }
                 var local = this;
-                return local._client.X1;
+                return X.Instance.CurrentContext.GetValue<T>((sc) => { return local._client.X1; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.X1 = value; }
             }
         }
         public T Y1
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Y1; }
                 var local = this;
-                return local._client.Y1;
+                return X.Instance.CurrentContext.GetValue<T>((sc) => { return local._client.Y1; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Y1 = value; }
             }
         }
         public T X2
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.X2; }
                 var local = this;
-                return local._client.X2;
+                return X.Instance.CurrentContext.GetValue<T>((sc) => { return local._client.X2; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.X2 = value; }
             }
         }
         public T Y2
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Y2; }
                 var local = this;
-                return local._client.Y2;
+                return X.Instance.CurrentContext.GetValue<T>((sc) => { return local._client.Y2; });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Y2 = value; }
             }
         }
         public System.String ToString()

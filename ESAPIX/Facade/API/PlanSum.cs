@@ -2,20 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
     public class PlanSum : ESAPIX.Facade.API.PlanningItem
     {
-        public PlanSum() { }
+        public PlanSum() { _client = new ExpandoObject(); }
         public PlanSum(dynamic client) { _client = client; }
         public ESAPIX.Facade.API.Course Course
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.Course; }
                 var local = this;
-                return new ESAPIX.Facade.API.Course(local._client.Course);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Course>((sc) => { return new ESAPIX.Facade.API.Course(local._client.Course); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.Course = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.PlanSumComponent> PlanSumComponents
@@ -48,8 +54,13 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject) { return _client.StructureSet; }
                 var local = this;
-                return new ESAPIX.Facade.API.StructureSet(local._client.StructureSet);
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.StructureSet>((sc) => { return new ESAPIX.Facade.API.StructureSet(local._client.StructureSet); });
+            }
+            set
+            {
+                if (_client is ExpandoObject) { _client.StructureSet = value; }
             }
         }
         public IEnumerable<ESAPIX.Facade.API.PlanSetup> PlanSetups
