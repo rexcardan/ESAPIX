@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VMS.TPS.Common.Model.API;
+using ESAPIX.Facade.API;
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -74,7 +74,7 @@ namespace ESAPIX.DVH.Constraints
             }
             var passedMsg = $"Plan contains exactly {NumOfFractions} fractions";
             var failedMsg = $"Plan has {actualFractions} fractions instead of {NumOfFractions} fractions";
-            return new ConstraintResult(this, passed? ResultType.PASSED : GetFailedResultType(), passed ? passedMsg : failedMsg, actualFractions.ToString());
+            return new ConstraintResult(this, passed ? ResultType.PASSED : GetFailedResultType(), passed ? passedMsg : failedMsg, actualFractions.ToString());
         }
 
         public ResultType GetFailedResultType()

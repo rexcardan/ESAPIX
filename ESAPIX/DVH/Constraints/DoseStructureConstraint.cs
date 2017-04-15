@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
 using ESAPIX.Extensions;
-using VMS.TPS.Common.Model.Types;
-using VMS.TPS.Common.Model.API;
+using ESAPIX.Facade.Types;
+using ESAPIX.Facade.API;
 using Newtonsoft.Json;
 
 namespace ESAPIX.DVH.Constraints
@@ -51,12 +51,12 @@ namespace ESAPIX.DVH.Constraints
 
             //Check structure exists
             var structures = StructureName.Split('&');
-            foreach(var s in structures)
+            foreach (var s in structures)
             {
                 valid = pi.ContainsStructure(s);
                 if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE_MISSING_STRUCTURE, $"{s} isn't contoured in {pi.Id}"); }
             }
-           
+
             //Check dose is calculated
             valid = pi.Dose != null;
             if (!valid) { return new ConstraintResult(this, ResultType.NOT_APPLICABLE_MISSING_DOSE, $"There is no dose calculated for {pi.Id}"); }

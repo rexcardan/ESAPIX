@@ -1,4 +1,5 @@
-﻿using ESAPIX.Helpers;
+﻿using ESAPIX.Facade.API;
+using ESAPIX.Helpers;
 using ESAPIX.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.AppKit
 {
@@ -25,7 +25,7 @@ namespace ESAPIX.AppKit
 
         public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get { return _ctx?.BrachyPlansInScope; } }
 
-        public Course Course { get { return _ctx?.Course;  } }
+        public Course Course { get { return _ctx?.Course; } }
 
         public User CurrentUser { get { return _ctx?.CurrentUser; } }
 

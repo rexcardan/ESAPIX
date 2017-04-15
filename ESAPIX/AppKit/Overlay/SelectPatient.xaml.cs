@@ -17,7 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using ESAPIX.Interfaces;
-using VMS.TPS.Common.Model.API;
+using ESAPIX.Facade.API;
 
 namespace ESAPIX.AppKit.Overlay
 {

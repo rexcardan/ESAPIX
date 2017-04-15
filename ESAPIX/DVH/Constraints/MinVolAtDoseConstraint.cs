@@ -1,5 +1,5 @@
 ﻿using System;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.DVH.Constraints
 {

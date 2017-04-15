@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using VMS.TPS.Common.Model.API;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.API;
+using ESAPIX.Facade.Types;
 using static ESAPIX.Helpers.MathHelper;
 
 namespace ESAPIX.Extensions

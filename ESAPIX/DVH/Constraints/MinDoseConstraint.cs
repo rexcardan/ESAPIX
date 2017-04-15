@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
 using ESAPIX.Extensions;
-using VMS.TPS.Common.Model.API;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.API;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -21,10 +21,10 @@ namespace ESAPIX.DVH.Constraints
             var min = dvhs.Min(d => d.MinDose);
 
             var value = $"{ min.GetDose(ConstraintDose.Unit).ToString() } { ConstraintDose.UnitAsString}";
-            passed = min.GreaterThanOrEqualTo(ConstraintDose)? ResultType.PASSED : GetFailedResultType();
+            passed = min.GreaterThanOrEqualTo(ConstraintDose) ? ResultType.PASSED : GetFailedResultType();
             msg = $"Minimum dose to {string.Join("/", StructureNames)} is {value}.";
 
-            return new ConstraintResult(this, passed, msg,value);
+            return new ConstraintResult(this, passed, msg, value);
         }
 
         public override string ToString()

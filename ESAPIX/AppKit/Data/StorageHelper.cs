@@ -18,13 +18,13 @@ namespace ESAPIX.AppKit.Data
         public static string GetBasePath(string storagePath = "")
         {
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            path = Path.Combine(path, string.IsNullOrEmpty(storagePath)?defaultStoragePath:storagePath);
+            path = Path.Combine(path, string.IsNullOrEmpty(storagePath) ? defaultStoragePath : storagePath);
             return path;
         }
 
         public static void CreateBasePathIfNotExists(string path)
         {
-            path = string.IsNullOrEmpty(path)?GetBasePath(): Path.GetDirectoryName(path);
+            path = string.IsNullOrEmpty(path) ? GetBasePath() : Path.GetDirectoryName(path);
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.Extensions
 {

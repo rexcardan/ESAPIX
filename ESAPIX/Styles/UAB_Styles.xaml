@@ -174,49 +174,49 @@
     <SolidColorBrush x:Key="SolidBorderBrush" Color="#888"/>
     <SolidColorBrush x:Key="LightBorderBrush" Color="#AAA"/>
     <SolidColorBrush x:Key="LightColorBrush" Color="#DDD"/>
-    
+
     <RadialGradientBrush x:Key="UAB_WINDOW_BACK" RadiusY="0.863" RadiusX="0.863">
         <GradientStop Color="Black" Offset="1"/>
         <GradientStop Color="White"/>
     </RadialGradientBrush>
     <SolidColorBrush x:Key="UAB_LGREY_SOLID" Color="#CFC7C7C7"/>
     <Style x:Key="UAB_ItemStyle" TargetType="{x:Type ListViewItem}">
-    	<Setter Property="Template">
-    		<Setter.Value>
-    			<ControlTemplate TargetType="{x:Type ListViewItem}">
-    				<Grid x:Name="grid">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListViewItem}">
+                    <Grid x:Name="grid">
                         <!-- Content Presenter is where the text content etc is placed by the control -->
                         <!-- The bindings are useful so that the control can be parameterized without editing the template -->
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
                         <VisualStateManager.VisualStateGroups>
-    						<VisualStateGroup x:Name="CommonStates">
-    							<VisualState x:Name="MouseOver"/>
-    							<VisualState x:Name="Disabled"/>
-    						</VisualStateGroup>
-    						<VisualStateGroup x:Name="SelectionStates">
-    							<VisualState x:Name="Selected"/>
-    							<VisualState x:Name="SelectedUnfocused"/>
-    						</VisualStateGroup>
-    						<VisualStateGroup x:Name="FocusStates">
-    							<VisualState x:Name="Focused"/>
-    						</VisualStateGroup>
-    						<VisualStateGroup x:Name="ValidationStates">
-    							<VisualState x:Name="InvalidFocused"/>
-    							<VisualState x:Name="InvalidUnfocused"/>
-    						</VisualStateGroup>
-    					</VisualStateManager.VisualStateGroups>
-    				</Grid>
-    				<ControlTemplate.Triggers>
-    					<Trigger Property="Selector.IsSelected" Value="False">
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Disabled"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Selected"/>
+                                <VisualState x:Name="SelectedUnfocused"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ValidationStates">
+                                <VisualState x:Name="InvalidFocused"/>
+                                <VisualState x:Name="InvalidUnfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Selector.IsSelected" Value="False">
                             <Setter Property="Background" TargetName="grid" Value="{DynamicResource UAB_LGREY_BACK}"/>
-    					</Trigger>
-    					<Trigger Property="Selector.IsSelected" Value="True">
+                        </Trigger>
+                        <Trigger Property="Selector.IsSelected" Value="True">
                             <Setter Property="Background" TargetName="grid" Value="{DynamicResource UAB_BUTTON_BACK}"/>
-    					</Trigger>
-    				</ControlTemplate.Triggers>
-    			</ControlTemplate>
-    		</Setter.Value>
-    	</Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
     <SolidColorBrush x:Key="ListBackground" Color="#FFDADADA"/>
 

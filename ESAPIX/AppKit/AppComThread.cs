@@ -33,7 +33,7 @@ namespace ESAPIX.AppKit
                     thread.Start();
                     mre.WaitOne();
                 }
-            }        
+            }
         }
 
         public void BeginInvoke(Delegate dlg, params Object[] args)

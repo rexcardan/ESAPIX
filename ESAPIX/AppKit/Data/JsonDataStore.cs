@@ -25,7 +25,7 @@ namespace ESAPIX.AppKit.Data
         public override SecureStorage<T> Deserialize(string serial)
         {
             AppDomain.CurrentDomain.AssemblyResolve += ESAPI_APPDOMAIN_HANDLER;
-            var converted =  JsonConvert.DeserializeObject<SecureStorage<T>>(serial, _settings);
+            var converted = JsonConvert.DeserializeObject<SecureStorage<T>>(serial, _settings);
             AppDomain.CurrentDomain.AssemblyResolve -= ESAPI_APPDOMAIN_HANDLER;
             return converted;
         }
@@ -39,7 +39,7 @@ namespace ESAPIX.AppKit.Data
         /// <returns></returns>
         private System.Reflection.Assembly ESAPI_APPDOMAIN_HANDLER(object sender, ResolveEventArgs args)
         {
-            if(args.Name == typeof(T).Assembly.GetName().Name)
+            if (args.Name == typeof(T).Assembly.GetName().Name)
             {
                 return typeof(T).Assembly;
             }

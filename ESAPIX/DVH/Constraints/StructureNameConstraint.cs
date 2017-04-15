@@ -1,5 +1,5 @@
 ﻿using ESAPIX.Extensions;
-using VMS.TPS.Common.Model.API;
+using ESAPIX.Facade.API;
 
 namespace ESAPIX.DVH.Constraints
 {

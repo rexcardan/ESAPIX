@@ -2,8 +2,8 @@
 using Newtonsoft.Json;
 using System;
 using System.Linq;
-using VMS.TPS.Common.Model.API;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.API;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.DVH.Constraints
 {

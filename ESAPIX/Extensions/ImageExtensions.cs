@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
-using VMS.TPS.Common.Model.API;
+using ESAPIX.Facade.API;
 
 namespace ESAPIX.Extensions
 {

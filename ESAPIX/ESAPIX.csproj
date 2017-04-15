@@ -57,41 +57,34 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Prism, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Prism.Core.6.2.0\lib\net45\Prism.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
     </Reference>
-    <Reference Include="Prism.Unity.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Prism.Unity.6.2.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Prism.Unity.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Unity.6.3.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Prism.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Prism.Wpf.6.2.0\lib\net45\Prism.Wpf.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Prism.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\XCheck\XCheck\packages\Prism.Wpf.6.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xaml" />
@@ -100,14 +93,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="VMS.TPS.Common.Model.API, Version=13.6.30.20230, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Varian\Vision\13.6\Bin64\VMS.TPS.Common.Model.API.dll</HintPath>
-    </Reference>
-    <Reference Include="VMS.TPS.Common.Model.Types, Version=13.6.30.20230, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Varian\Vision\13.6\Bin64\VMS.TPS.Common.Model.Types.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +162,121 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\StructureExtensions.cs" />
     <Compile Include="Extensions\VVectorExtensions.cs" />
+    <Compile Include="Facade\API\AddOn.cs" />
+    <Compile Include="Facade\API\AddOnMaterial.cs" />
+    <Compile Include="Facade\API\ApiDataObject.cs" />
+    <Compile Include="Facade\API\Application.cs" />
+    <Compile Include="Facade\API\Applicator.cs" />
+    <Compile Include="Facade\API\Beam.cs" />
+    <Compile Include="Facade\API\BeamCalculationLog.cs" />
+    <Compile Include="Facade\API\BeamDose.cs" />
+    <Compile Include="Facade\API\BeamParameters.cs" />
+    <Compile Include="Facade\API\Block.cs" />
+    <Compile Include="Facade\API\Bolus.cs" />
+    <Compile Include="Facade\API\BrachyPlanSetup.cs" />
+    <Compile Include="Facade\API\BrachySolidApplicator.cs" />
+    <Compile Include="Facade\API\BrachyTreatmentUnit.cs" />
+    <Compile Include="Facade\API\CalculationResult.cs" />
+    <Compile Include="Facade\API\Catheter.cs" />
+    <Compile Include="Facade\API\Compensator.cs" />
+    <Compile Include="Facade\API\ControlPoint.cs" />
+    <Compile Include="Facade\API\ControlPointCollection.cs" />
+    <Compile Include="Facade\API\ControlPointParameters.cs" />
+    <Compile Include="Facade\API\Course.cs" />
+    <Compile Include="Facade\API\Diagnosis.cs" />
+    <Compile Include="Facade\API\Dose.cs" />
+    <Compile Include="Facade\API\DVHData.cs" />
+    <Compile Include="Facade\API\EstimatedDVH.cs" />
+    <Compile Include="Facade\API\EvaluationDose.cs" />
+    <Compile Include="Facade\API\ExternalBeam.cs" />
+    <Compile Include="Facade\API\ExternalBeamTreatmentUnit.cs" />
+    <Compile Include="Facade\API\ExternalPlanSetup.cs" />
+    <Compile Include="Facade\API\FieldReferencePoint.cs" />
+    <Compile Include="Facade\API\Fractionation.cs" />
+    <Compile Include="Facade\API\Hospital.cs" />
+    <Compile Include="Facade\API\Image.cs" />
+    <Compile Include="Facade\API\Isodose.cs" />
+    <Compile Include="Facade\API\MLC.cs" />
+    <Compile Include="Facade\API\OptimizationEUDObjective.cs" />
+    <Compile Include="Facade\API\OptimizationIMRTBeamParameter.cs" />
+    <Compile Include="Facade\API\OptimizationMeanDoseObjective.cs" />
+    <Compile Include="Facade\API\OptimizationNormalTissueParameter.cs" />
+    <Compile Include="Facade\API\OptimizationObjective.cs" />
+    <Compile Include="Facade\API\OptimizationParameter.cs" />
+    <Compile Include="Facade\API\OptimizationPointCloudParameter.cs" />
+    <Compile Include="Facade\API\OptimizationPointObjective.cs" />
+    <Compile Include="Facade\API\OptimizationSetup.cs" />
+    <Compile Include="Facade\API\OptimizerDVH.cs" />
+    <Compile Include="Facade\API\OptimizerObjectiveValue.cs" />
+    <Compile Include="Facade\API\OptimizerResult.cs" />
+    <Compile Include="Facade\API\Patient.cs" />
+    <Compile Include="Facade\API\PatientSummary.cs" />
+    <Compile Include="Facade\API\PlanningItem.cs" />
+    <Compile Include="Facade\API\PlanningItemDose.cs" />
+    <Compile Include="Facade\API\PlanSetup.cs" />
+    <Compile Include="Facade\API\PlanSum.cs" />
+    <Compile Include="Facade\API\PlanSumComponent.cs" />
+    <Compile Include="Facade\API\RadioactiveSource.cs" />
+    <Compile Include="Facade\API\RadioactiveSourceModel.cs" />
+    <Compile Include="Facade\API\ReferencePoint.cs" />
+    <Compile Include="Facade\API\Registration.cs" />
+    <Compile Include="Facade\API\ScriptContext.cs" />
+    <Compile Include="Facade\API\SeedCollection.cs" />
+    <Compile Include="Facade\API\SegmentVolume.cs" />
+    <Compile Include="Facade\API\SerializableObject.cs" />
+    <Compile Include="Facade\API\Series.cs" />
+    <Compile Include="Facade\API\Slot.cs" />
+    <Compile Include="Facade\API\SourcePosition.cs" />
+    <Compile Include="Facade\API\Structure.cs" />
+    <Compile Include="Facade\API\StructureSet.cs" />
+    <Compile Include="Facade\API\Study.cs" />
+    <Compile Include="Facade\API\Technique.cs" />
+    <Compile Include="Facade\API\Tray.cs" />
+    <Compile Include="Facade\API\User.cs" />
+    <Compile Include="Facade\API\Wedge.cs" />
+    <Compile Include="Facade\ArrayHelper.cs" />
+    <Compile Include="Facade\StaticHelper.cs" />
+    <Compile Include="Facade\Types\AxisAlignedMargins.cs" />
+    <Compile Include="Facade\Types\BlockType.cs" />
+    <Compile Include="Facade\Types\CalculationType.cs" />
+    <Compile Include="Facade\Types\DoseProfile.cs" />
+    <Compile Include="Facade\Types\DoseValue.cs" />
+    <Compile Include="Facade\Types\DoseValuePresentation.cs" />
+    <Compile Include="Facade\Types\DosimeterUnit.cs" />
+    <Compile Include="Facade\Types\DVHEstimateType.cs" />
+    <Compile Include="Facade\Types\DVHPoint.cs" />
+    <Compile Include="Facade\Types\ExternalBeamMachineParameters.cs" />
+    <Compile Include="Facade\Types\Fluence.cs" />
+    <Compile Include="Facade\Types\GantryDirection.cs" />
+    <Compile Include="Facade\Types\ImageProfile.cs" />
+    <Compile Include="Facade\Types\LineProfile.cs" />
+    <Compile Include="Facade\Types\LMCMSSOptions.cs" />
+    <Compile Include="Facade\Types\LMCVOptions.cs" />
+    <Compile Include="Facade\Types\MetersetValue.cs" />
+    <Compile Include="Facade\Types\MLCPlanType.cs" />
+    <Compile Include="Facade\Types\OptimizationConvergenceOption.cs" />
+    <Compile Include="Facade\Types\OptimizationIntermediateDoseOption.cs" />
+    <Compile Include="Facade\Types\OptimizationObjectiveOperator.cs" />
+    <Compile Include="Facade\Types\OptimizationOption.cs" />
+    <Compile Include="Facade\Types\OptimizationOptionsBase.cs" />
+    <Compile Include="Facade\Types\OptimizationOptionsIMRT.cs" />
+    <Compile Include="Facade\Types\OptimizationOptionsVMAT.cs" />
+    <Compile Include="Facade\Types\PatientOrientation.cs" />
+    <Compile Include="Facade\Types\PlanSetupApprovalStatus.cs" />
+    <Compile Include="Facade\Types\PlanSumOperation.cs" />
+    <Compile Include="Facade\Types\PlanType.cs" />
+    <Compile Include="Facade\Types\ProfilePoint.cs" />
+    <Compile Include="Facade\Types\SegmentProfile.cs" />
+    <Compile Include="Facade\Types\SegmentProfilePoint.cs" />
+    <Compile Include="Facade\Types\SeriesModality.cs" />
+    <Compile Include="Facade\Types\SetupTechnique.cs" />
+    <Compile Include="Facade\Types\SmartLMCOptions.cs" />
+    <Compile Include="Facade\Types\StructureCodeInfo.cs" />
+    <Compile Include="Facade\Types\StructureMarginGeometry.cs" />
+    <Compile Include="Facade\Types\VolumePresentation.cs" />
+    <Compile Include="Facade\Types\VRect.cs" />
+    <Compile Include="Facade\Types\VVector.cs" />
+    <Compile Include="Facade\VMSConstructor.cs" />
     <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\MagicStrings.cs" />
     <Compile Include="Helpers\MathHelper.cs" />
@@ -190,6 +290,7 @@
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Logging\LogStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Facade\XContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

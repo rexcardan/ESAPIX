@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.Extensions
 {
@@ -61,9 +61,9 @@ namespace ESAPIX.Extensions
             {
                 return DoseValuePresentation.Relative;
             }
-            return DoseValuePresentation.Absolute; 
+            return DoseValuePresentation.Absolute;
         }
-     
+
         /// <summary>
         /// Converts the dose to the unit requested. It cannot convert from % to abs dose. Will return NaN if asked
         /// </summary>

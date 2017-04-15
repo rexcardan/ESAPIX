@@ -58,7 +58,7 @@ namespace ESAPIX.Helpers
             {
                 Process.Start("Explorer.exe", $"/e, /root, \"{path}\"");
             }
-            catch(Exception ae)
+            catch (Exception ae)
             {
                 SaveFile(path);
             }

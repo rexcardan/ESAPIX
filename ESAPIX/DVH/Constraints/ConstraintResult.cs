@@ -16,8 +16,8 @@ namespace ESAPIX.DVH.Constraints
             this.Constraint = constraint;
             this.IsSuccess = resultType == ResultType.PASSED;
             this.ResultType = resultType;
-            this.IsApplicable = resultType != ResultType.NOT_APPLICABLE 
-                && ResultType!=ResultType.NOT_APPLICABLE_MISSING_STRUCTURE
+            this.IsApplicable = resultType != ResultType.NOT_APPLICABLE
+                && ResultType != ResultType.NOT_APPLICABLE_MISSING_STRUCTURE
                  && ResultType != ResultType.NOT_APPLICABLE_MISSING_DOSE;
             this.Message = message;
             this.Value = value;

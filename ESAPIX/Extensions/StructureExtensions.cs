@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
-using VMS.TPS.Common.Model.API;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.API;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.Extensions
 {
@@ -18,7 +18,8 @@ namespace ESAPIX.Extensions
         /// <param name="image">the image containing voxels</param>
         /// <param name="sliceZ">the slice of the image</param>
         /// <returns></returns>
-        public static double[,] VoxelsOnSlice(this Structure str, Image image, int sliceZ){
+        public static double[,] VoxelsOnSlice(this Structure str, Image image, int sliceZ)
+        {
             int[,] buffer = new int[image.XSize, image.YSize];
             double[,] hu = new double[image.XSize, image.YSize];
 
@@ -30,11 +31,11 @@ namespace ESAPIX.Extensions
                 {
                     for (int y = 0; y < image.YSize; y++)
                     {
-                        var dx = (x * image.XRes * image.XDirection + image.Origin).x;
-                        var dy = (y * image.YRes * image.YDirection + image.Origin).y;
-                        var dz = (sliceZ * image.ZRes * image.ZDirection + image.Origin).z;
-                        var insideSegment = str.IsPointInsideSegment(new VVector(dx, dy, dz));
-                        hu[x, y] = insideSegment ? image.VoxelToDisplayValue(buffer[x, y]): double.NaN;
+                        //var dx = (x * image.XRes * image.XDirection + image.Origin).x;
+                        //var dy = (y * image.YRes * image.YDirection + image.Origin).y;
+                        ////var dz = (sliceZ * image.ZRes * image.ZDirection + image.Origin).z;
+                        //var insideSegment = str.IsPointInsideSegment(new VVector(dx, dy, dz));
+                        //hu[x, y] = insideSegment ? image.VoxelToDisplayValue(buffer[x, y]): double.NaN;
                     }
                 }
             }

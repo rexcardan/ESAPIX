@@ -38,7 +38,7 @@ namespace ESAPIX.AppKit
         {
             return this.Container.Resolve<T>();
         }
-    
+
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();

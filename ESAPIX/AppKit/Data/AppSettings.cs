@@ -39,7 +39,7 @@ namespace ESAPIX.AppKit.Data
                 File.WriteAllText(path, json);
                 return true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Debug.Write(e.Message);
                 return false;
@@ -50,7 +50,7 @@ namespace ESAPIX.AppKit.Data
         {
             if (Settings.ContainsKey(key))
             {
-                if(typeof(T) == typeof(string))
+                if (typeof(T) == typeof(string))
                 {
                     return (T)Settings[key];
                 }
@@ -59,7 +59,7 @@ namespace ESAPIX.AppKit.Data
                     return JsonConvert.DeserializeObject<T>(Settings[key].ToString());
                 }
             }
-            return default(T) ;
+            return default(T);
         }
 
         public void Set(string key, object value)

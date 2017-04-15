@@ -6,8 +6,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using ESAPIX.Interfaces;
-using VMS.TPS.Common.Model.API;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.API;
+using ESAPIX.Facade.Types;
 using static ESAPIX.Helpers.MathHelper;
 using ESAPIX.DVH.Query;
 
@@ -105,7 +105,7 @@ namespace ESAPIX.Extensions
             foreach (var struc in plan.GetStructures())
             {
                 bool regexMatched = (!string.IsNullOrEmpty(regex)) && Regex.IsMatch(struc.Id, regex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                if (((0 == string.Compare(structId, struc.Id, true)) || regexMatched)) { s = struc;  }//This means a match (if true)!
+                if (((0 == string.Compare(structId, struc.Id, true)) || regexMatched)) { s = struc; }//This means a match (if true)!
                 if (s != null)
                 {
                     //Structure found - but may not be contoured - let's check
@@ -327,7 +327,7 @@ namespace ESAPIX.Extensions
         {
             var query = MayoQuery.Read(mayoFormatQuery);
             return query.RunQuery(pi, ss);
-        } 
+        }
 
         public static double ExecuteQuery(this PlanningItem pi, Structure s, string mayoFormatQuery)
         {

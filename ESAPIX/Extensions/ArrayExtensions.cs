@@ -8,7 +8,7 @@ namespace ESAPIX.Extensions
 {
     public static class ArrayExtensions
     {
-        public static T[] Flatten<T>(T[,] array) 
+        public static T[] Flatten<T>(T[,] array)
         {
             List<T> list = new List<T>();
             foreach (var l in array)

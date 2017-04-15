@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
 using ESAPIX.Extensions;
-using VMS.TPS.Common.Model.API;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.API;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -14,7 +14,7 @@ namespace ESAPIX.DVH.Constraints
     {
         public MaxVolAtDoseConstraint()
         {
-            PassingFunc = new Func<double, ResultType>((vol => { return vol <= Volume? ResultType.PASSED : GetFailedResultType(); }));
+            PassingFunc = new Func<double, ResultType>((vol => { return vol <= Volume ? ResultType.PASSED : GetFailedResultType(); }));
         }
 
         public override string ToString()

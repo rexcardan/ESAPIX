@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ESAPIX.Facade.API;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Interfaces
 {
@@ -16,7 +16,7 @@ namespace ESAPIX.Interfaces
 
         BrachyPlanSetup BrachyPlanSetup { get; }
 
-        IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get;}
+        IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; }
 
         User CurrentUser { get; }
 
@@ -34,7 +34,7 @@ namespace ESAPIX.Interfaces
 
         IEnumerable<PlanSetup> PlansInScope { get; }
 
-        IEnumerable<PlanSum> PlanSumsInScope{ get; }
+        IEnumerable<PlanSum> PlanSumsInScope { get; }
 
         StructureSet StructureSet { get; }
 
