@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using X = ESAPIX.Facade.XContext;
@@ -73,10 +74,29 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.PlanSetup>>(sc =>
+                IEnumerator enumerator = null;
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return ((IEnumerable<dynamic>)_client.PlanSetups).Select(s => new ESAPIX.Facade.API.PlanSetup(s));
+                    var test = _client.PlanSetups.GetEnumerator();
+                    Console.WriteLine(test);
                 });
+                do
+                {
+                    var facade = new ESAPIX.Facade.API.PlanSetup();
+                    X.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var vms = enumerator.Current;
+                        if (vms != null)
+                        {
+                            facade._client = vms;
+                        }
+                    });
+                    if (facade._client != null)
+                    {
+                        yield return facade;
+                    }
+                }
+                while (enumerator.MoveNext());
             }
         }
         public IEnumerable<ESAPIX.Facade.API.ExternalPlanSetup> ExternalPlanSetups

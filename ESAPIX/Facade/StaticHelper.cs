@@ -1,4 +1,5 @@
-﻿using ESAPIX.Facade.API;
+﻿using ESAPIX.AppKit;
+using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,16 @@ namespace ESAPIX.Facade
         public static Func<string, string, dynamic> CreateApplicationFunc { get; set; } = new Func<string, string, dynamic>((u, p) => { return null; });
         public static Application Application_CreateApplication(string username, string password)
         {
-            return new Application(CreateApplicationFunc(username, password));
+            var thread = new AppComThread();
+            Application xapp = null;
+            thread.Invoke(() =>
+            {
+                var vms = CreateApplicationFunc(username, password);
+                xapp = new Application(vms);
+            });
+            var sac = new StandAloneContext(xapp, thread);
+            XContext.Instance.CurrentContext = sac;
+            return xapp;
         }
 
         internal static void SerializableObject_ClearSerializationHistory()

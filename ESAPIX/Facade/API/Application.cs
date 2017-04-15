@@ -1,3 +1,4 @@
+using ESAPIX.AppKit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace ESAPIX.Facade.API
             {
                 return X.Instance.CurrentContext.GetValue<IEnumerable<ESAPIX.Facade.API.PatientSummary>>(sc =>
                 {
+                    var sum = _client.PatientSummaries.Count();
                     return ((IEnumerable<dynamic>)_client.PatientSummaries).Select(s => new ESAPIX.Facade.API.PatientSummary(s));
                 });
             }
