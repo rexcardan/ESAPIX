@@ -26,22 +26,33 @@ namespace ESAPIX.Facade
             XContext.Instance.CurrentContext = sac;
             return xapp;
         }
-
-        internal static void SerializableObject_ClearSerializationHistory()
+        //MUST SET BEFORE CALLING
+        public static Action SerializableObject_ClearSerializationHistoryAction { get; set; } = new Action(() => { });
+        public static void SerializableObject_ClearSerializationHistory()
         {
-            throw new NotImplementedException();
+            XContext.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                SerializableObject_ClearSerializationHistoryAction();
+            });
         }
 
         //MUST SET BEFORE CALLING
         public static Func<dynamic> DoseValue_UndefinedDoseFunc { get; set; } = new Func<dynamic>(() => { return null; });
         public static DoseValue DoseValue_UndefinedDose()
         {
-            return new DoseValue(DoseValue_UndefinedDoseFunc());
+            return XContext.Instance.CurrentContext.GetValue<dynamic>((sc) =>
+            {
+                return DoseValue_UndefinedDoseFunc();
+            });
         }
-
-        internal static double VVector_Distance(dynamic client1, dynamic client2)
+        //MUST SET BEFORE CALLING
+        public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; } = new Func<dynamic, dynamic, double>((v1,v2) => { return double.NaN; });
+        public static double VVector_Distance(dynamic client1, dynamic client2)
         {
-            throw new NotImplementedException();
+            return XContext.Instance.CurrentContext.GetValue<double>((sc) =>
+            {
+                return VVector_DistanceFunc(client1, client2);
+            });
         }
     }
 }

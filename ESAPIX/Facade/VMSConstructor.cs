@@ -8,25 +8,36 @@ using ESAPIX.Facade.Types;
 
 namespace ESAPIX.Facade
 {
-
+    /// <summary>
+    /// This class is responsible for creating VMS types without knowing anything about VMS classes (not dependent)
+    /// </summary>
     public sealed class VMSConstructor
     {
         private static object syncRoot = new Object();
         private static volatile VMSConstructor instance;
 
+        public Func<bool, dynamic> ConstructLMCVOptionsFunc = new Func<bool, dynamic>((b) => null);
         internal dynamic ConstructLMCVOptions(bool fixedJaws)
         {
-            throw new NotImplementedException();
+            return ConstructLMCVOptionsFunc(fixedJaws);
         }
 
+        public Func<dynamic, dynamic, double[], dynamic> ConstructLineProfileFunc = new Func<dynamic, dynamic, double[], dynamic>((v1, v2, data) => null);
         internal dynamic ConstructLineProfile(VVector origin, VVector step, double[] data)
         {
-            throw new NotImplementedException();
+            return XContext.Instance.CurrentContext.GetValue(sc =>
+            {
+                return ConstructLineProfileFunc(origin._client, step._client, data);
+            });
         }
 
+        public Func<dynamic, dynamic, double[], dynamic, dynamic> ConstructDoseProfileFunc = new Func<dynamic, dynamic, double[], dynamic, dynamic>((v1, v2, data, doseUnit) => null);
         internal dynamic ConstructDoseProfile(VVector origin, VVector step, double[] data, DoseValue.DoseUnit unit)
         {
-            throw new NotImplementedException();
+            return XContext.Instance.CurrentContext.GetValue(sc =>
+            {
+                return ConstructDoseProfileFunc(origin._client, step._client, data, unit);
+            });
         }
 
         internal dynamic ConstructSegmentProfilePoint(VVector position, bool value)
