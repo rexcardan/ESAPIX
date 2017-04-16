@@ -12,8 +12,8 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public Fluence() { _client = new ExpandoObject(); }
         public Fluence(dynamic client) { _client = client; }
-        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructFluence(fluenceMatrix, xOrigin, yOrigin)); }
-        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructFluence(fluenceMatrix, xOrigin, yOrigin, mlcId)); }
+        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin); }); }
+        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin, mlcId); }); }
         public System.Int32 XSizePixel
         {
             get

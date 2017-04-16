@@ -7,11 +7,12 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public struct VRect<T>
+    public class VRect<T>
     {
         internal dynamic _client;
+        public VRect() { _client = new ExpandoObject(); }
         public VRect(dynamic client) { _client = client; }
-        public VRect(T x1, T y1, T x2, T y2) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructVRect(x1, y1, x2, y2)); }
+        public VRect(T x1, T y1, T x2, T y2) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructVRect(x1, y1, x2, y2); }); }
         public T X1
         {
             get

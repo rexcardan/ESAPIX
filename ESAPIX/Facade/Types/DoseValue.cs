@@ -7,12 +7,13 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public struct DoseValue
+    public class DoseValue
     {
         internal dynamic _client;
+        public DoseValue() { _client = new ExpandoObject(); }
         public DoseValue(dynamic client) { _client = client; }
-        public DoseValue(System.Double value, System.String unitName) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructDoseValue(value, unitName)); }
-        public DoseValue(System.Double value, ESAPIX.Facade.Types.DoseValue.DoseUnit unit) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructDoseValue(value, unit)); }
+        public DoseValue(System.Double value, System.String unitName) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unitName); }); }
+        public DoseValue(System.Double value, ESAPIX.Facade.Types.DoseValue.DoseUnit unit) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unit); }); }
         public System.Double Dose
         {
             get

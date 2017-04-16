@@ -7,11 +7,12 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public struct MetersetValue
+    public class MetersetValue
     {
         internal dynamic _client;
+        public MetersetValue() { _client = new ExpandoObject(); }
         public MetersetValue(dynamic client) { _client = client; }
-        public MetersetValue(System.Double value, ESAPIX.Facade.Types.DosimeterUnit unit) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructMetersetValue(value, unit)); }
+        public MetersetValue(System.Double value, ESAPIX.Facade.Types.DosimeterUnit unit) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructMetersetValue(value, unit); }); }
         public System.Double Value
         {
             get

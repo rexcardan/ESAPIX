@@ -46,7 +46,7 @@ namespace ESAPIX.Facade
             });
         }
         //MUST SET BEFORE CALLING
-        public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; } = new Func<dynamic, dynamic, double>((v1,v2) => { return double.NaN; });
+        public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; } = new Func<dynamic, dynamic, double>((v1, v2) => { return double.NaN; });
         public static double VVector_Distance(dynamic client1, dynamic client2)
         {
             return XContext.Instance.CurrentContext.GetValue<double>((sc) =>

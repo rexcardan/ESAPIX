@@ -12,7 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public ExternalBeamMachineParameters() { _client = new ExpandoObject(); }
         public ExternalBeamMachineParameters(dynamic client) { _client = client; }
-        public ExternalBeamMachineParameters(System.String machineId, System.String energyModeId, System.Int32 doseRate, System.String techniqueId, System.String primaryFluenceModeId) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructExternalBeamMachineParameters(machineId, energyModeId, doseRate, techniqueId, primaryFluenceModeId)); }
+        public ExternalBeamMachineParameters(System.String machineId, System.String energyModeId, System.Int32 doseRate, System.String techniqueId, System.String primaryFluenceModeId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructExternalBeamMachineParameters(machineId, energyModeId, doseRate, techniqueId, primaryFluenceModeId); }); }
         public System.String MachineId
         {
             get

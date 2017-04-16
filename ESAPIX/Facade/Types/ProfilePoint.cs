@@ -7,11 +7,12 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public struct ProfilePoint
+    public class ProfilePoint
     {
         internal dynamic _client;
+        public ProfilePoint() { _client = new ExpandoObject(); }
         public ProfilePoint(dynamic client) { _client = client; }
-        public ProfilePoint(ESAPIX.Facade.Types.VVector position, System.Double value) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructProfilePoint(position, value)); }
+        public ProfilePoint(ESAPIX.Facade.Types.VVector position, System.Double value) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructProfilePoint(position, value); }); }
         public ESAPIX.Facade.Types.VVector Position
         {
             get

@@ -7,11 +7,12 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public struct StructureCodeInfo
+    public class StructureCodeInfo
     {
         internal dynamic _client;
+        public StructureCodeInfo() { _client = new ExpandoObject(); }
         public StructureCodeInfo(dynamic client) { _client = client; }
-        public StructureCodeInfo(System.String codingScheme, System.String code) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructStructureCodeInfo(codingScheme, code)); }
+        public StructureCodeInfo(System.String codingScheme, System.String code) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructStructureCodeInfo(codingScheme, code); }); }
         public System.String CodingScheme
         {
             get

@@ -7,11 +7,12 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public struct SegmentProfilePoint
+    public class SegmentProfilePoint
     {
         internal dynamic _client;
+        public SegmentProfilePoint() { _client = new ExpandoObject(); }
         public SegmentProfilePoint(dynamic client) { _client = client; }
-        public SegmentProfilePoint(ESAPIX.Facade.Types.VVector position, System.Boolean value) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructSegmentProfilePoint(position, value)); }
+        public SegmentProfilePoint(ESAPIX.Facade.Types.VVector position, System.Boolean value) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructSegmentProfilePoint(position, value); }); }
         public ESAPIX.Facade.Types.VVector Position
         {
             get

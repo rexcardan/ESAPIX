@@ -12,7 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public SmartLMCOptions() { _client = new ExpandoObject(); }
         public SmartLMCOptions(dynamic client) { _client = client; }
-        public SmartLMCOptions(System.Boolean fixedFieldBorders, System.Boolean jawTracking) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructSmartLMCOptions(fixedFieldBorders, jawTracking)); }
+        public SmartLMCOptions(System.Boolean fixedFieldBorders, System.Boolean jawTracking) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructSmartLMCOptions(fixedFieldBorders, jawTracking); }); }
         public System.Boolean FixedFieldBorders
         {
             get

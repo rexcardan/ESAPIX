@@ -12,7 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public SegmentProfile() { _client = new ExpandoObject(); }
         public SegmentProfile(dynamic client) { _client = client; }
-        public SegmentProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Collections.BitArray data) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructSegmentProfile(origin, step, data)); }
+        public SegmentProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Collections.BitArray data) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructSegmentProfile(origin, step, data); }); }
         public ESAPIX.Facade.Types.SegmentProfilePoint Item
         {
             get

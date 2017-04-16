@@ -7,11 +7,12 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public struct DVHPoint
+    public class DVHPoint
     {
         internal dynamic _client;
+        public DVHPoint() { _client = new ExpandoObject(); }
         public DVHPoint(dynamic client) { _client = client; }
-        public DVHPoint(ESAPIX.Facade.Types.DoseValue dose, System.Double volume, System.String volumeUnit) { X.Instance.CurrentContext.Thread.Invoke(_client = VMSConstructor.Instance.ConstructDVHPoint(dose, volume, volumeUnit)); }
+        public DVHPoint(ESAPIX.Facade.Types.DoseValue dose, System.Double volume, System.String volumeUnit) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDVHPoint(dose, volume, volumeUnit); }); }
         public ESAPIX.Facade.Types.DoseValue DoseValue
         {
             get
