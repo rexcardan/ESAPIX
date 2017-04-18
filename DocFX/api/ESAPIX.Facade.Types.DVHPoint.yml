@@ -1,0 +1,693 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.DVHPoint
+  commentId: T:ESAPIX.Facade.Types.DVHPoint
+  id: DVHPoint
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.DVHPoint.#ctor
+  - ESAPIX.Facade.Types.DVHPoint.#ctor(ESAPIX.Facade.Types.DoseValue,System.Double,System.String)
+  - ESAPIX.Facade.Types.DVHPoint.#ctor(System.Object)
+  - ESAPIX.Facade.Types.DVHPoint.DoseValue
+  - ESAPIX.Facade.Types.DVHPoint.GetSchema
+  - ESAPIX.Facade.Types.DVHPoint.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.Types.DVHPoint.Volume
+  - ESAPIX.Facade.Types.DVHPoint.VolumeUnit
+  - ESAPIX.Facade.Types.DVHPoint.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: DVHPoint
+  nameWithType: DVHPoint
+  fullName: ESAPIX.Facade.Types.DVHPoint
+  type: Class
+  source:
+    id: DVHPoint
+    path: ''
+    startLine: 13517
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class DVHPoint
+    content.vb: Public Class DVHPoint
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.DVHPoint.#ctor
+  commentId: M:ESAPIX.Facade.Types.DVHPoint.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: DVHPoint()
+  nameWithType: DVHPoint.DVHPoint()
+  fullName: ESAPIX.Facade.Types.DVHPoint.DVHPoint()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13520
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DVHPoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.DVHPoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.DVHPoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: DVHPoint(Object)
+  nameWithType: DVHPoint.DVHPoint(Object)
+  fullName: ESAPIX.Facade.Types.DVHPoint.DVHPoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13521
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DVHPoint(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.DVHPoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.#ctor(ESAPIX.Facade.Types.DoseValue,System.Double,System.String)
+  commentId: M:ESAPIX.Facade.Types.DVHPoint.#ctor(ESAPIX.Facade.Types.DoseValue,System.Double,System.String)
+  id: '#ctor(ESAPIX.Facade.Types.DoseValue,System.Double,System.String)'
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: DVHPoint(DoseValue, Double, String)
+  nameWithType: DVHPoint.DVHPoint(DoseValue, Double, String)
+  fullName: ESAPIX.Facade.Types.DVHPoint.DVHPoint(ESAPIX.Facade.Types.DoseValue, System.Double, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13522
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DVHPoint(DoseValue dose, double volume, string volumeUnit)
+    parameters:
+    - id: dose
+      type: ESAPIX.Facade.Types.DoseValue
+    - id: volume
+      type: System.Double
+    - id: volumeUnit
+      type: System.String
+    content.vb: Public Sub New(dose As DoseValue, volume As Double, volumeUnit As String)
+  overload: ESAPIX.Facade.Types.DVHPoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.DoseValue
+  commentId: P:ESAPIX.Facade.Types.DVHPoint.DoseValue
+  id: DoseValue
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: DoseValue
+  nameWithType: DVHPoint.DoseValue
+  fullName: ESAPIX.Facade.Types.DVHPoint.DoseValue
+  type: Property
+  source:
+    id: DoseValue
+    path: ''
+    startLine: 13534
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseValue DoseValue { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.DoseValue
+    content.vb: Public Property DoseValue As DoseValue
+  overload: ESAPIX.Facade.Types.DVHPoint.DoseValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.Volume
+  commentId: P:ESAPIX.Facade.Types.DVHPoint.Volume
+  id: Volume
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: DVHPoint.Volume
+  fullName: ESAPIX.Facade.Types.DVHPoint.Volume
+  type: Property
+  source:
+    id: Volume
+    path: ''
+    startLine: 13547
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double Volume { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Volume As Double
+  overload: ESAPIX.Facade.Types.DVHPoint.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.VolumeUnit
+  commentId: P:ESAPIX.Facade.Types.DVHPoint.VolumeUnit
+  id: VolumeUnit
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: VolumeUnit
+  nameWithType: DVHPoint.VolumeUnit
+  fullName: ESAPIX.Facade.Types.DVHPoint.VolumeUnit
+  type: Property
+  source:
+    id: VolumeUnit
+    path: ''
+    startLine: 13560
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string VolumeUnit { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property VolumeUnit As String
+  overload: ESAPIX.Facade.Types.DVHPoint.VolumeUnit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.GetSchema
+  commentId: M:ESAPIX.Facade.Types.DVHPoint.GetSchema
+  id: GetSchema
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: GetSchema()
+  nameWithType: DVHPoint.GetSchema()
+  fullName: ESAPIX.Facade.Types.DVHPoint.GetSchema()
+  type: Method
+  source:
+    id: GetSchema
+    path: ''
+    startLine: 13573
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Xml.Schema.XmlSchema GetSchema()
+    return:
+      type: System.Xml.Schema.XmlSchema
+    content.vb: Public Function GetSchema As Xml.Schema.XmlSchema
+  overload: ESAPIX.Facade.Types.DVHPoint.GetSchema*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.Types.DVHPoint.ReadXml(System.Xml.XmlReader)
+  id: ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: DVHPoint.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.Types.DVHPoint.ReadXml(System.Xml.XmlReader)
+  type: Method
+  source:
+    id: ReadXml
+    path: ''
+    startLine: 13580
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void ReadXml(Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+    content.vb: Public Sub ReadXml(reader As Xml.XmlReader)
+  overload: ESAPIX.Facade.Types.DVHPoint.ReadXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DVHPoint.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.Types.DVHPoint.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.Types.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: DVHPoint.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.Types.DVHPoint.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 13589
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.Types.DVHPoint.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.DVHPoint.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.#ctor
+  isExternal: false
+  name: DVHPoint
+  nameWithType: DVHPoint.DVHPoint
+  fullName: ESAPIX.Facade.Types.DVHPoint.DVHPoint
+- uid: ESAPIX.Facade.Types.DoseValue
+  commentId: T:ESAPIX.Facade.Types.DoseValue
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: ESAPIX.Facade.Types.DoseValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.Types.DVHPoint.DoseValue*
+  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.DoseValue
+  isExternal: false
+  name: DoseValue
+  nameWithType: DVHPoint.DoseValue
+  fullName: ESAPIX.Facade.Types.DVHPoint.DoseValue
+- uid: ESAPIX.Facade.Types.DVHPoint.Volume*
+  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.Volume
+  isExternal: false
+  name: Volume
+  nameWithType: DVHPoint.Volume
+  fullName: ESAPIX.Facade.Types.DVHPoint.Volume
+- uid: ESAPIX.Facade.Types.DVHPoint.VolumeUnit*
+  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.VolumeUnit
+  isExternal: false
+  name: VolumeUnit
+  nameWithType: DVHPoint.VolumeUnit
+  fullName: ESAPIX.Facade.Types.DVHPoint.VolumeUnit
+- uid: ESAPIX.Facade.Types.DVHPoint.GetSchema*
+  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.GetSchema
+  isExternal: false
+  name: GetSchema
+  nameWithType: DVHPoint.GetSchema
+  fullName: ESAPIX.Facade.Types.DVHPoint.GetSchema
+- uid: System.Xml.Schema.XmlSchema
+  isExternal: true
+  name: Xml.Schema.XmlSchema
+  nameWithType: Xml.Schema.XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: ESAPIX.Facade.Types.DVHPoint.ReadXml*
+  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.ReadXml
+  isExternal: false
+  name: ReadXml
+  nameWithType: DVHPoint.ReadXml
+  fullName: ESAPIX.Facade.Types.DVHPoint.ReadXml
+- uid: System.Xml.XmlReader
+  isExternal: true
+  name: Xml.XmlReader
+  nameWithType: Xml.XmlReader
+  fullName: System.Xml.XmlReader
+- uid: ESAPIX.Facade.Types.DVHPoint.WriteXml*
+  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: DVHPoint.WriteXml
+  fullName: ESAPIX.Facade.Types.DVHPoint.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter

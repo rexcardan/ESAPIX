@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.Data.SecureStorage`1
+  commentId: T:ESAPIX.AppKit.Data.SecureStorage`1
+  id: SecureStorage`1
+  parent: ESAPIX.AppKit.Data
+  children:
+  - ESAPIX.AppKit.Data.SecureStorage`1.Hash
+  - ESAPIX.AppKit.Data.SecureStorage`1.IsTampered
+  - ESAPIX.AppKit.Data.SecureStorage`1.Storage
+  langs:
+  - csharp
+  - vb
+  name: SecureStorage<T>
+  nameWithType: SecureStorage<T>
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>
+  type: Class
+  source:
+    id: SecureStorage
+    path: ''
+    startLine: 1046
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  summary: "\nHolds an underlying object and a hash to that object to make sure it hasn't been tampered with in the json file\n"
+  example: []
+  syntax:
+    content: public class SecureStorage<T>
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public Class SecureStorage(Of T)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: SecureStorage(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T)
+  name.vb: SecureStorage(Of T)
+- uid: ESAPIX.AppKit.Data.SecureStorage`1.Storage
+  commentId: P:ESAPIX.AppKit.Data.SecureStorage`1.Storage
+  id: Storage
+  parent: ESAPIX.AppKit.Data.SecureStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Storage
+  nameWithType: SecureStorage<T>.Storage
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>.Storage
+  type: Property
+  source:
+    id: Storage
+    path: ''
+    startLine: 1051
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  summary: "\nThe storage object\n"
+  example: []
+  syntax:
+    content: public T Storage { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Property Storage As T
+  overload: ESAPIX.AppKit.Data.SecureStorage`1.Storage*
+  nameWithType.vb: SecureStorage(Of T).Storage
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T).Storage
+- uid: ESAPIX.AppKit.Data.SecureStorage`1.Hash
+  commentId: P:ESAPIX.AppKit.Data.SecureStorage`1.Hash
+  id: Hash
+  parent: ESAPIX.AppKit.Data.SecureStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Hash
+  nameWithType: SecureStorage<T>.Hash
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>.Hash
+  type: Property
+  source:
+    id: Hash
+    path: ''
+    startLine: 1055
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  summary: "\nThe hash for the storage object\n"
+  example: []
+  syntax:
+    content: public string Hash { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Hash As String
+  overload: ESAPIX.AppKit.Data.SecureStorage`1.Hash*
+  nameWithType.vb: SecureStorage(Of T).Hash
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T).Hash
+- uid: ESAPIX.AppKit.Data.SecureStorage`1.IsTampered
+  commentId: P:ESAPIX.AppKit.Data.SecureStorage`1.IsTampered
+  id: IsTampered
+  parent: ESAPIX.AppKit.Data.SecureStorage`1
+  langs:
+  - csharp
+  - vb
+  name: IsTampered
+  nameWithType: SecureStorage<T>.IsTampered
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>.IsTampered
+  type: Property
+  source:
+    id: IsTampered
+    path: ''
+    startLine: 1059
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  summary: "\nA boolean indicating whether or not the file has been tampered with\n"
+  example: []
+  syntax:
+    content: public bool IsTampered { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsTampered As Boolean
+  overload: ESAPIX.AppKit.Data.SecureStorage`1.IsTampered*
+  nameWithType.vb: SecureStorage(Of T).IsTampered
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T).IsTampered
+references:
+- uid: ESAPIX.AppKit.Data
+  commentId: N:ESAPIX.AppKit.Data
+  isExternal: false
+  name: ESAPIX.AppKit.Data
+  nameWithType: ESAPIX.AppKit.Data
+  fullName: ESAPIX.AppKit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.AppKit.Data.SecureStorage`1.Storage*
+  commentId: Overload:ESAPIX.AppKit.Data.SecureStorage`1.Storage
+  isExternal: false
+  name: Storage
+  nameWithType: SecureStorage<T>.Storage
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>.Storage
+  nameWithType.vb: SecureStorage(Of T).Storage
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T).Storage
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ESAPIX.AppKit.Data.SecureStorage`1.Hash*
+  commentId: Overload:ESAPIX.AppKit.Data.SecureStorage`1.Hash
+  isExternal: false
+  name: Hash
+  nameWithType: SecureStorage<T>.Hash
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>.Hash
+  nameWithType.vb: SecureStorage(Of T).Hash
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T).Hash
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.AppKit.Data.SecureStorage`1.IsTampered*
+  commentId: Overload:ESAPIX.AppKit.Data.SecureStorage`1.IsTampered
+  isExternal: false
+  name: IsTampered
+  nameWithType: SecureStorage<T>.IsTampered
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>.IsTampered
+  nameWithType.vb: SecureStorage(Of T).IsTampered
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T).IsTampered
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

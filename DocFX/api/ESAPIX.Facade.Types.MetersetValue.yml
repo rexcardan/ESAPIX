@@ -1,0 +1,646 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.MetersetValue
+  commentId: T:ESAPIX.Facade.Types.MetersetValue
+  id: MetersetValue
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.MetersetValue.#ctor
+  - ESAPIX.Facade.Types.MetersetValue.#ctor(System.Double,ESAPIX.Facade.Types.DosimeterUnit)
+  - ESAPIX.Facade.Types.MetersetValue.#ctor(System.Object)
+  - ESAPIX.Facade.Types.MetersetValue.GetSchema
+  - ESAPIX.Facade.Types.MetersetValue.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.Types.MetersetValue.Unit
+  - ESAPIX.Facade.Types.MetersetValue.Value
+  - ESAPIX.Facade.Types.MetersetValue.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: MetersetValue
+  nameWithType: MetersetValue
+  fullName: ESAPIX.Facade.Types.MetersetValue
+  type: Class
+  source:
+    id: MetersetValue
+    path: ''
+    startLine: 14029
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class MetersetValue
+    content.vb: Public Class MetersetValue
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.MetersetValue.#ctor
+  commentId: M:ESAPIX.Facade.Types.MetersetValue.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: MetersetValue()
+  nameWithType: MetersetValue.MetersetValue()
+  fullName: ESAPIX.Facade.Types.MetersetValue.MetersetValue()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14032
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public MetersetValue()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.MetersetValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.MetersetValue.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.MetersetValue.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: MetersetValue(Object)
+  nameWithType: MetersetValue.MetersetValue(Object)
+  fullName: ESAPIX.Facade.Types.MetersetValue.MetersetValue(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14033
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public MetersetValue(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.MetersetValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.MetersetValue.#ctor(System.Double,ESAPIX.Facade.Types.DosimeterUnit)
+  commentId: M:ESAPIX.Facade.Types.MetersetValue.#ctor(System.Double,ESAPIX.Facade.Types.DosimeterUnit)
+  id: '#ctor(System.Double,ESAPIX.Facade.Types.DosimeterUnit)'
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: MetersetValue(Double, DosimeterUnit)
+  nameWithType: MetersetValue.MetersetValue(Double, DosimeterUnit)
+  fullName: ESAPIX.Facade.Types.MetersetValue.MetersetValue(System.Double, ESAPIX.Facade.Types.DosimeterUnit)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14034
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public MetersetValue(double value, DosimeterUnit unit)
+    parameters:
+    - id: value
+      type: System.Double
+    - id: unit
+      type: ESAPIX.Facade.Types.DosimeterUnit
+    content.vb: Public Sub New(value As Double, unit As DosimeterUnit)
+  overload: ESAPIX.Facade.Types.MetersetValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.MetersetValue.Value
+  commentId: P:ESAPIX.Facade.Types.MetersetValue.Value
+  id: Value
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MetersetValue.Value
+  fullName: ESAPIX.Facade.Types.MetersetValue.Value
+  type: Property
+  source:
+    id: Value
+    path: ''
+    startLine: 14045
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double Value { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Value As Double
+  overload: ESAPIX.Facade.Types.MetersetValue.Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.MetersetValue.Unit
+  commentId: P:ESAPIX.Facade.Types.MetersetValue.Unit
+  id: Unit
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: MetersetValue.Unit
+  fullName: ESAPIX.Facade.Types.MetersetValue.Unit
+  type: Property
+  source:
+    id: Unit
+    path: ''
+    startLine: 14058
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DosimeterUnit Unit { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.DosimeterUnit
+    content.vb: Public Property Unit As DosimeterUnit
+  overload: ESAPIX.Facade.Types.MetersetValue.Unit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.MetersetValue.GetSchema
+  commentId: M:ESAPIX.Facade.Types.MetersetValue.GetSchema
+  id: GetSchema
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: GetSchema()
+  nameWithType: MetersetValue.GetSchema()
+  fullName: ESAPIX.Facade.Types.MetersetValue.GetSchema()
+  type: Method
+  source:
+    id: GetSchema
+    path: ''
+    startLine: 14071
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Xml.Schema.XmlSchema GetSchema()
+    return:
+      type: System.Xml.Schema.XmlSchema
+    content.vb: Public Function GetSchema As Xml.Schema.XmlSchema
+  overload: ESAPIX.Facade.Types.MetersetValue.GetSchema*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.MetersetValue.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.Types.MetersetValue.ReadXml(System.Xml.XmlReader)
+  id: ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: MetersetValue.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.Types.MetersetValue.ReadXml(System.Xml.XmlReader)
+  type: Method
+  source:
+    id: ReadXml
+    path: ''
+    startLine: 14078
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void ReadXml(Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+    content.vb: Public Sub ReadXml(reader As Xml.XmlReader)
+  overload: ESAPIX.Facade.Types.MetersetValue.ReadXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.MetersetValue.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.Types.MetersetValue.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.Types.MetersetValue
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: MetersetValue.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.Types.MetersetValue.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 14087
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.Types.MetersetValue.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.MetersetValue.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.MetersetValue.#ctor
+  isExternal: false
+  name: MetersetValue
+  nameWithType: MetersetValue.MetersetValue
+  fullName: ESAPIX.Facade.Types.MetersetValue.MetersetValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.Types.DosimeterUnit
+  commentId: T:ESAPIX.Facade.Types.DosimeterUnit
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DosimeterUnit
+  nameWithType: DosimeterUnit
+  fullName: ESAPIX.Facade.Types.DosimeterUnit
+- uid: ESAPIX.Facade.Types.MetersetValue.Value*
+  commentId: Overload:ESAPIX.Facade.Types.MetersetValue.Value
+  isExternal: false
+  name: Value
+  nameWithType: MetersetValue.Value
+  fullName: ESAPIX.Facade.Types.MetersetValue.Value
+- uid: ESAPIX.Facade.Types.MetersetValue.Unit*
+  commentId: Overload:ESAPIX.Facade.Types.MetersetValue.Unit
+  isExternal: false
+  name: Unit
+  nameWithType: MetersetValue.Unit
+  fullName: ESAPIX.Facade.Types.MetersetValue.Unit
+- uid: ESAPIX.Facade.Types.MetersetValue.GetSchema*
+  commentId: Overload:ESAPIX.Facade.Types.MetersetValue.GetSchema
+  isExternal: false
+  name: GetSchema
+  nameWithType: MetersetValue.GetSchema
+  fullName: ESAPIX.Facade.Types.MetersetValue.GetSchema
+- uid: System.Xml.Schema.XmlSchema
+  isExternal: true
+  name: Xml.Schema.XmlSchema
+  nameWithType: Xml.Schema.XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: ESAPIX.Facade.Types.MetersetValue.ReadXml*
+  commentId: Overload:ESAPIX.Facade.Types.MetersetValue.ReadXml
+  isExternal: false
+  name: ReadXml
+  nameWithType: MetersetValue.ReadXml
+  fullName: ESAPIX.Facade.Types.MetersetValue.ReadXml
+- uid: System.Xml.XmlReader
+  isExternal: true
+  name: Xml.XmlReader
+  nameWithType: Xml.XmlReader
+  fullName: System.Xml.XmlReader
+- uid: ESAPIX.Facade.Types.MetersetValue.WriteXml*
+  commentId: Overload:ESAPIX.Facade.Types.MetersetValue.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: MetersetValue.WriteXml
+  fullName: ESAPIX.Facade.Types.MetersetValue.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter

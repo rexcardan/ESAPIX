@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Interfaces.IVMSThread
+  commentId: T:ESAPIX.Interfaces.IVMSThread
+  id: IVMSThread
+  parent: ESAPIX.Interfaces
+  children:
+  - ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  - ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  - ESAPIX.Interfaces.IVMSThread.ThreadId
+  langs:
+  - csharp
+  - vb
+  name: IVMSThread
+  nameWithType: IVMSThread
+  fullName: ESAPIX.Interfaces.IVMSThread
+  type: Interface
+  source:
+    id: IVMSThread
+    path: ''
+    startLine: 15418
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: 'public interface IVMSThread : IDisposable'
+    content.vb: >-
+      Public Interface IVMSThread
+          Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  commentId: M:ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  id: InvokeAsync(System.Action)
+  parent: ESAPIX.Interfaces.IVMSThread
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync(Action)
+  nameWithType: IVMSThread.InvokeAsync(Action)
+  fullName: ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  type: Method
+  source:
+    id: InvokeAsync
+    path: ''
+    startLine: 15420
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: Task InvokeAsync(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function InvokeAsync(action As Action) As Task
+  overload: ESAPIX.Interfaces.IVMSThread.InvokeAsync*
+- uid: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  commentId: M:ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  id: Invoke(System.Action)
+  parent: ESAPIX.Interfaces.IVMSThread
+  langs:
+  - csharp
+  - vb
+  name: Invoke(Action)
+  nameWithType: IVMSThread.Invoke(Action)
+  fullName: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  type: Method
+  source:
+    id: Invoke
+    path: ''
+    startLine: 15422
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: void Invoke(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+    content.vb: Sub Invoke(action As Action)
+  overload: ESAPIX.Interfaces.IVMSThread.Invoke*
+- uid: ESAPIX.Interfaces.IVMSThread.ThreadId
+  commentId: P:ESAPIX.Interfaces.IVMSThread.ThreadId
+  id: ThreadId
+  parent: ESAPIX.Interfaces.IVMSThread
+  langs:
+  - csharp
+  - vb
+  name: ThreadId
+  nameWithType: IVMSThread.ThreadId
+  fullName: ESAPIX.Interfaces.IVMSThread.ThreadId
+  type: Property
+  source:
+    id: ThreadId
+    path: ''
+    startLine: 15424
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: int ThreadId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property ThreadId As Integer
+  overload: ESAPIX.Interfaces.IVMSThread.ThreadId*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: ESAPIX.Interfaces
+  commentId: N:ESAPIX.Interfaces
+  isExternal: false
+  name: ESAPIX.Interfaces
+  nameWithType: ESAPIX.Interfaces
+  fullName: ESAPIX.Interfaces
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Interfaces.IVMSThread.InvokeAsync*
+  commentId: Overload:ESAPIX.Interfaces.IVMSThread.InvokeAsync
+  isExternal: false
+  name: InvokeAsync
+  nameWithType: IVMSThread.InvokeAsync
+  fullName: ESAPIX.Interfaces.IVMSThread.InvokeAsync
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: ESAPIX.Interfaces.IVMSThread.Invoke*
+  commentId: Overload:ESAPIX.Interfaces.IVMSThread.Invoke
+  isExternal: false
+  name: Invoke
+  nameWithType: IVMSThread.Invoke
+  fullName: ESAPIX.Interfaces.IVMSThread.Invoke
+- uid: ESAPIX.Interfaces.IVMSThread.ThreadId*
+  commentId: Overload:ESAPIX.Interfaces.IVMSThread.ThreadId
+  isExternal: false
+  name: ThreadId
+  nameWithType: IVMSThread.ThreadId
+  fullName: ESAPIX.Interfaces.IVMSThread.ThreadId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

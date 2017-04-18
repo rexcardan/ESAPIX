@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.DoseValuePresentation
+  commentId: T:ESAPIX.Facade.Types.DoseValuePresentation
+  id: DoseValuePresentation
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.DoseValuePresentation.Absolute
+  - ESAPIX.Facade.Types.DoseValuePresentation.Relative
+  langs:
+  - csharp
+  - vb
+  name: DoseValuePresentation
+  nameWithType: DoseValuePresentation
+  fullName: ESAPIX.Facade.Types.DoseValuePresentation
+  type: Enum
+  source:
+    id: DoseValuePresentation
+    path: ''
+    startLine: 13475
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public enum DoseValuePresentation
+    content.vb: Public Enum DoseValuePresentation
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: ESAPIX.Facade.Types.DoseValuePresentation.Relative
+  commentId: F:ESAPIX.Facade.Types.DoseValuePresentation.Relative
+  id: Relative
+  parent: ESAPIX.Facade.Types.DoseValuePresentation
+  langs:
+  - csharp
+  - vb
+  name: Relative
+  nameWithType: DoseValuePresentation.Relative
+  fullName: ESAPIX.Facade.Types.DoseValuePresentation.Relative
+  type: Field
+  source:
+    id: Relative
+    path: ''
+    startLine: 13477
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: Relative = 0
+    return:
+      type: ESAPIX.Facade.Types.DoseValuePresentation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.Facade.Types.DoseValuePresentation.Absolute
+  commentId: F:ESAPIX.Facade.Types.DoseValuePresentation.Absolute
+  id: Absolute
+  parent: ESAPIX.Facade.Types.DoseValuePresentation
+  langs:
+  - csharp
+  - vb
+  name: Absolute
+  nameWithType: DoseValuePresentation.Absolute
+  fullName: ESAPIX.Facade.Types.DoseValuePresentation.Absolute
+  type: Field
+  source:
+    id: Absolute
+    path: ''
+    startLine: 13478
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: Absolute = 1
+    return:
+      type: ESAPIX.Facade.Types.DoseValuePresentation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.Types.DoseValuePresentation
+  commentId: T:ESAPIX.Facade.Types.DoseValuePresentation
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DoseValuePresentation
+  nameWithType: DoseValuePresentation
+  fullName: ESAPIX.Facade.Types.DoseValuePresentation

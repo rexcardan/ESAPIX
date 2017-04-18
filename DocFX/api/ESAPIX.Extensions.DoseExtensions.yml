@@ -1,0 +1,905 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Extensions.DoseExtensions
+  commentId: T:ESAPIX.Extensions.DoseExtensions
+  id: DoseExtensions
+  parent: ESAPIX.Extensions
+  children:
+  - ESAPIX.Extensions.DoseExtensions.Divide(DoseValue,DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.GetDose(DoseValue,DoseValue.DoseUnit)
+  - ESAPIX.Extensions.DoseExtensions.GetDoseCGy(DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue,System.Double)
+  - ESAPIX.Extensions.DoseExtensions.GetPresentation(DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.GreaterThan(DoseValue,DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo(DoseValue,DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.LessThan(DoseValue,DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo(DoseValue,DoseValue)
+  - ESAPIX.Extensions.DoseExtensions.Multiply(DoseValue,DoseValue)
+  langs:
+  - csharp
+  - vb
+  name: DoseExtensions
+  nameWithType: DoseExtensions
+  fullName: ESAPIX.Extensions.DoseExtensions
+  type: Class
+  source:
+    id: DoseExtensions
+    path: ''
+    startLine: 3117
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static class DoseExtensions
+    content.vb: Public Module DoseExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue)
+  id: GetDoseGy(DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseGy(DoseValue)
+  nameWithType: DoseExtensions.GetDoseGy(DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue)
+  type: Method
+  source:
+    id: GetDoseGy
+    path: ''
+    startLine: 3124
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nForces the units to be gray. Used for quick comparison\n"
+  example: []
+  syntax:
+    content: public static double GetDoseGy(this DoseValue dv)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the dose value
+    return:
+      type: System.Double
+      description: dose in units of gray
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseGy(dv As DoseValue) As Double
+  overload: ESAPIX.Extensions.DoseExtensions.GetDoseGy*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue,System.Double)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue,System.Double)
+  id: GetDoseGy(DoseValue,System.Double)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseGy(DoseValue, Double)
+  nameWithType: DoseExtensions.GetDoseGy(DoseValue, Double)
+  fullName: ESAPIX.Extensions.DoseExtensions.GetDoseGy(DoseValue, System.Double)
+  type: Method
+  source:
+    id: GetDoseGy
+    path: ''
+    startLine: 3135
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nForces the units to be gray, and can convert from prescripting if necessary\n"
+  example: []
+  syntax:
+    content: public static double GetDoseGy(this DoseValue dv, double prescriptionDoseGy)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the dose value
+    - id: prescriptionDoseGy
+      type: System.Double
+      description: the prescription dose to use for normalizataion if necessary
+    return:
+      type: System.Double
+      description: the dose in gray
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseGy(dv As DoseValue, prescriptionDoseGy As Double) As Double
+  overload: ESAPIX.Extensions.DoseExtensions.GetDoseGy*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.GetDoseCGy(DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.GetDoseCGy(DoseValue)
+  id: GetDoseCGy(DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseCGy(DoseValue)
+  nameWithType: DoseExtensions.GetDoseCGy(DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.GetDoseCGy(DoseValue)
+  type: Method
+  source:
+    id: GetDoseCGy
+    path: ''
+    startLine: 3156
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nForces the units to be centigray. Used for quick comparison\n"
+  example: []
+  syntax:
+    content: public static double GetDoseCGy(this DoseValue dv)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the dose value
+    return:
+      type: System.Double
+      description: dose in units of centigray
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseCGy(dv As DoseValue) As Double
+  overload: ESAPIX.Extensions.DoseExtensions.GetDoseCGy*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.GetPresentation(DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.GetPresentation(DoseValue)
+  id: GetPresentation(DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetPresentation(DoseValue)
+  nameWithType: DoseExtensions.GetPresentation(DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.GetPresentation(DoseValue)
+  type: Method
+  source:
+    id: GetPresentation
+    path: ''
+    startLine: 3166
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nConverts the units of the dose into dose value presentation\n"
+  example: []
+  syntax:
+    content: public static DoseValuePresentation GetPresentation(this DoseValue dv)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the current dose value
+    return:
+      type: DoseValuePresentation
+      description: the dose value presentation corresponding to the units of the input dose
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPresentation(dv As DoseValue) As DoseValuePresentation
+  overload: ESAPIX.Extensions.DoseExtensions.GetPresentation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.GetDose(DoseValue,DoseValue.DoseUnit)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.GetDose(DoseValue,DoseValue.DoseUnit)
+  id: GetDose(DoseValue,DoseValue.DoseUnit)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDose(DoseValue, DoseValue.DoseUnit)
+  nameWithType: DoseExtensions.GetDose(DoseValue, DoseValue.DoseUnit)
+  fullName: ESAPIX.Extensions.DoseExtensions.GetDose(DoseValue, DoseValue.DoseUnit)
+  type: Method
+  source:
+    id: GetDose
+    path: ''
+    startLine: 3181
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nConverts the dose to the unit requested. It cannot convert from % to abs dose. Will return NaN if asked\n"
+  example: []
+  syntax:
+    content: public static double GetDose(this DoseValue dv, DoseValue.DoseUnit unit)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the dose value to be converted
+    - id: unit
+      type: DoseValue.DoseUnit
+      description: the unit desired for the returned dose
+    return:
+      type: System.Double
+      description: the dose in the desired units
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDose(dv As DoseValue, unit As DoseValue.DoseUnit) As Double
+  overload: ESAPIX.Extensions.DoseExtensions.GetDose*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo(DoseValue,DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo(DoseValue,DoseValue)
+  id: LessThanOrEqualTo(DoseValue,DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: LessThanOrEqualTo(DoseValue, DoseValue)
+  nameWithType: DoseExtensions.LessThanOrEqualTo(DoseValue, DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo(DoseValue, DoseValue)
+  type: Method
+  source:
+    id: LessThanOrEqualTo
+    path: ''
+    startLine: 3208
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns true if value is less than or equal to input value\n"
+  example: []
+  syntax:
+    content: public static bool LessThanOrEqualTo(this DoseValue dv, DoseValue dv2)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the first dose value
+    - id: dv2
+      type: DoseValue
+      description: the second dose value
+    return:
+      type: System.Boolean
+      description: Returns true if value is less than or equal to input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function LessThanOrEqualTo(dv As DoseValue, dv2 As DoseValue) As Boolean
+  overload: ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.LessThan(DoseValue,DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.LessThan(DoseValue,DoseValue)
+  id: LessThan(DoseValue,DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: LessThan(DoseValue, DoseValue)
+  nameWithType: DoseExtensions.LessThan(DoseValue, DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.LessThan(DoseValue, DoseValue)
+  type: Method
+  source:
+    id: LessThan
+    path: ''
+    startLine: 3219
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns true if value is less than input value\n"
+  example: []
+  syntax:
+    content: public static bool LessThan(this DoseValue dv, DoseValue dv2)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the first dose value
+    - id: dv2
+      type: DoseValue
+      description: the second dose value
+    return:
+      type: System.Boolean
+      description: Returns true if value is less than input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function LessThan(dv As DoseValue, dv2 As DoseValue) As Boolean
+  overload: ESAPIX.Extensions.DoseExtensions.LessThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.GreaterThan(DoseValue,DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.GreaterThan(DoseValue,DoseValue)
+  id: GreaterThan(DoseValue,DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: GreaterThan(DoseValue, DoseValue)
+  nameWithType: DoseExtensions.GreaterThan(DoseValue, DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.GreaterThan(DoseValue, DoseValue)
+  type: Method
+  source:
+    id: GreaterThan
+    path: ''
+    startLine: 3230
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns true if value is greater than input value\n"
+  example: []
+  syntax:
+    content: public static bool GreaterThan(this DoseValue dv, DoseValue dv2)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the first dose value
+    - id: dv2
+      type: DoseValue
+      description: the second dose value
+    return:
+      type: System.Boolean
+      description: Returns true if value is greater than input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GreaterThan(dv As DoseValue, dv2 As DoseValue) As Boolean
+  overload: ESAPIX.Extensions.DoseExtensions.GreaterThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo(DoseValue,DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo(DoseValue,DoseValue)
+  id: GreaterThanOrEqualTo(DoseValue,DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: GreaterThanOrEqualTo(DoseValue, DoseValue)
+  nameWithType: DoseExtensions.GreaterThanOrEqualTo(DoseValue, DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo(DoseValue, DoseValue)
+  type: Method
+  source:
+    id: GreaterThanOrEqualTo
+    path: ''
+    startLine: 3241
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns true if value is greater than or equal to input value\n"
+  example: []
+  syntax:
+    content: public static bool GreaterThanOrEqualTo(this DoseValue dv, DoseValue dv2)
+    parameters:
+    - id: dv
+      type: DoseValue
+      description: the first dose value
+    - id: dv2
+      type: DoseValue
+      description: the second dose value
+    return:
+      type: System.Boolean
+      description: Returns true if value is greater than or equal to input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GreaterThanOrEqualTo(dv As DoseValue, dv2 As DoseValue) As Boolean
+  overload: ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.Divide(DoseValue,DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.Divide(DoseValue,DoseValue)
+  id: Divide(DoseValue,DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: Divide(DoseValue, DoseValue)
+  nameWithType: DoseExtensions.Divide(DoseValue, DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.Divide(DoseValue, DoseValue)
+  type: Method
+  source:
+    id: Divide
+    path: ''
+    startLine: 3270
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static DoseValue Divide(this DoseValue numerator, DoseValue denominator)
+    parameters:
+    - id: numerator
+      type: DoseValue
+    - id: denominator
+      type: DoseValue
+    return:
+      type: DoseValue
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Divide(numerator As DoseValue, denominator As DoseValue) As DoseValue
+  overload: ESAPIX.Extensions.DoseExtensions.Divide*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.DoseExtensions.Multiply(DoseValue,DoseValue)
+  commentId: M:ESAPIX.Extensions.DoseExtensions.Multiply(DoseValue,DoseValue)
+  id: Multiply(DoseValue,DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DoseExtensions
+  langs:
+  - csharp
+  - vb
+  name: Multiply(DoseValue, DoseValue)
+  nameWithType: DoseExtensions.Multiply(DoseValue, DoseValue)
+  fullName: ESAPIX.Extensions.DoseExtensions.Multiply(DoseValue, DoseValue)
+  type: Method
+  source:
+    id: Multiply
+    path: ''
+    startLine: 3277
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static DoseValue Multiply(this DoseValue val, DoseValue val2)
+    parameters:
+    - id: val
+      type: DoseValue
+    - id: val2
+      type: DoseValue
+    return:
+      type: DoseValue
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Multiply(val As DoseValue, val2 As DoseValue) As DoseValue
+  overload: ESAPIX.Extensions.DoseExtensions.Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: ESAPIX.Extensions
+  commentId: N:ESAPIX.Extensions
+  isExternal: false
+  name: ESAPIX.Extensions
+  nameWithType: ESAPIX.Extensions
+  fullName: ESAPIX.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Extensions.DoseExtensions.GetDoseGy*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.GetDoseGy
+  isExternal: false
+  name: GetDoseGy
+  nameWithType: DoseExtensions.GetDoseGy
+  fullName: ESAPIX.Extensions.DoseExtensions.GetDoseGy
+- uid: DoseValue
+  isExternal: true
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: DoseValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Extensions.DoseExtensions.GetDoseCGy*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.GetDoseCGy
+  isExternal: false
+  name: GetDoseCGy
+  nameWithType: DoseExtensions.GetDoseCGy
+  fullName: ESAPIX.Extensions.DoseExtensions.GetDoseCGy
+- uid: ESAPIX.Extensions.DoseExtensions.GetPresentation*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.GetPresentation
+  isExternal: false
+  name: GetPresentation
+  nameWithType: DoseExtensions.GetPresentation
+  fullName: ESAPIX.Extensions.DoseExtensions.GetPresentation
+- uid: DoseValuePresentation
+  isExternal: true
+  name: DoseValuePresentation
+  nameWithType: DoseValuePresentation
+  fullName: DoseValuePresentation
+- uid: ESAPIX.Extensions.DoseExtensions.GetDose*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.GetDose
+  isExternal: false
+  name: GetDose
+  nameWithType: DoseExtensions.GetDose
+  fullName: ESAPIX.Extensions.DoseExtensions.GetDose
+- uid: DoseValue.DoseUnit
+  isExternal: true
+  name: DoseValue.DoseUnit
+  nameWithType: DoseValue.DoseUnit
+  fullName: DoseValue.DoseUnit
+- uid: ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo
+  isExternal: false
+  name: LessThanOrEqualTo
+  nameWithType: DoseExtensions.LessThanOrEqualTo
+  fullName: ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Extensions.DoseExtensions.LessThan*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.LessThan
+  isExternal: false
+  name: LessThan
+  nameWithType: DoseExtensions.LessThan
+  fullName: ESAPIX.Extensions.DoseExtensions.LessThan
+- uid: ESAPIX.Extensions.DoseExtensions.GreaterThan*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.GreaterThan
+  isExternal: false
+  name: GreaterThan
+  nameWithType: DoseExtensions.GreaterThan
+  fullName: ESAPIX.Extensions.DoseExtensions.GreaterThan
+- uid: ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo
+  isExternal: false
+  name: GreaterThanOrEqualTo
+  nameWithType: DoseExtensions.GreaterThanOrEqualTo
+  fullName: ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo
+- uid: ESAPIX.Extensions.DoseExtensions.Divide*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.Divide
+  isExternal: false
+  name: Divide
+  nameWithType: DoseExtensions.Divide
+  fullName: ESAPIX.Extensions.DoseExtensions.Divide
+- uid: ESAPIX.Extensions.DoseExtensions.Multiply*
+  commentId: Overload:ESAPIX.Extensions.DoseExtensions.Multiply
+  isExternal: false
+  name: Multiply
+  nameWithType: DoseExtensions.Multiply
+  fullName: ESAPIX.Extensions.DoseExtensions.Multiply

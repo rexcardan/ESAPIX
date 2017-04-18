@@ -1,0 +1,2043 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.Patient
+  commentId: T:ESAPIX.Facade.API.Patient
+  id: Patient
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.Patient.#ctor
+  - ESAPIX.Facade.API.Patient.#ctor(System.Object)
+  - ESAPIX.Facade.API.Patient.AddCourse
+  - ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  - ESAPIX.Facade.API.Patient.BeginModifications
+  - ESAPIX.Facade.API.Patient.CanAddCourse
+  - ESAPIX.Facade.API.Patient.CanAddEmptyPhantom(System.String@)
+  - ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String,System.String@)
+  - ESAPIX.Facade.API.Patient.CanModifyData
+  - ESAPIX.Facade.API.Patient.CanRemoveCourse(ESAPIX.Facade.API.Course)
+  - ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet,System.String@)
+  - ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String)
+  - ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(System.String,System.String,System.String)
+  - ESAPIX.Facade.API.Patient.Courses
+  - ESAPIX.Facade.API.Patient.CreationDateTime
+  - ESAPIX.Facade.API.Patient.DateOfBirth
+  - ESAPIX.Facade.API.Patient.FirstName
+  - ESAPIX.Facade.API.Patient.HasModifiedData
+  - ESAPIX.Facade.API.Patient.Hospital
+  - ESAPIX.Facade.API.Patient.Id2
+  - ESAPIX.Facade.API.Patient.LastName
+  - ESAPIX.Facade.API.Patient.MiddleName
+  - ESAPIX.Facade.API.Patient.PrimaryOncologistId
+  - ESAPIX.Facade.API.Patient.Registrations
+  - ESAPIX.Facade.API.Patient.RemoveCourse(ESAPIX.Facade.API.Course)
+  - ESAPIX.Facade.API.Patient.RemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet)
+  - ESAPIX.Facade.API.Patient.Sex
+  - ESAPIX.Facade.API.Patient.SSN
+  - ESAPIX.Facade.API.Patient.StructureSets
+  - ESAPIX.Facade.API.Patient.Studies
+  - ESAPIX.Facade.API.Patient.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: Patient
+  nameWithType: Patient
+  fullName: ESAPIX.Facade.API.Patient
+  type: Class
+  source:
+    id: Patient
+    path: ''
+    startLine: 10087
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: 'public class Patient : ApiDataObject'
+    content.vb: >-
+      Public Class Patient
+          Inherits ApiDataObject
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.API.SerializableObject
+  - ESAPIX.Facade.API.ApiDataObject
+  inheritedMembers:
+  - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.Name
+  - ESAPIX.Facade.API.ApiDataObject.Comment
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.ToString
+  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.SerializableObject.GetSchema
+  - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.Patient.#ctor
+  commentId: M:ESAPIX.Facade.API.Patient.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Patient()
+  nameWithType: Patient.Patient()
+  fullName: ESAPIX.Facade.API.Patient.Patient()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 10089
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Patient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Patient.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Patient(Object)
+  nameWithType: Patient.Patient(Object)
+  fullName: ESAPIX.Facade.API.Patient.Patient(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 10090
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Patient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.Courses
+  commentId: P:ESAPIX.Facade.API.Patient.Courses
+  id: Courses
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Courses
+  nameWithType: Patient.Courses
+  fullName: ESAPIX.Facade.API.Patient.Courses
+  type: Property
+  source:
+    id: Courses
+    path: ''
+    startLine: 10091
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Course> Courses { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Course}
+    content.vb: Public ReadOnly Property Courses As IEnumerable(Of Course)
+  overload: ESAPIX.Facade.API.Patient.Courses*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.Patient.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Patient.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Patient.CreationDateTime
+  fullName: ESAPIX.Facade.API.Patient.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 10117
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Patient.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.DateOfBirth
+  commentId: P:ESAPIX.Facade.API.Patient.DateOfBirth
+  id: DateOfBirth
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: DateOfBirth
+  nameWithType: Patient.DateOfBirth
+  fullName: ESAPIX.Facade.API.Patient.DateOfBirth
+  type: Property
+  source:
+    id: DateOfBirth
+    path: ''
+    startLine: 10130
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? DateOfBirth { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property DateOfBirth As Date?
+  overload: ESAPIX.Facade.API.Patient.DateOfBirth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.FirstName
+  commentId: P:ESAPIX.Facade.API.Patient.FirstName
+  id: FirstName
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: Patient.FirstName
+  fullName: ESAPIX.Facade.API.Patient.FirstName
+  type: Property
+  source:
+    id: FirstName
+    path: ''
+    startLine: 10143
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string FirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: ESAPIX.Facade.API.Patient.FirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.HasModifiedData
+  commentId: P:ESAPIX.Facade.API.Patient.HasModifiedData
+  id: HasModifiedData
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: HasModifiedData
+  nameWithType: Patient.HasModifiedData
+  fullName: ESAPIX.Facade.API.Patient.HasModifiedData
+  type: Property
+  source:
+    id: HasModifiedData
+    path: ''
+    startLine: 10156
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool HasModifiedData { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasModifiedData As Boolean
+  overload: ESAPIX.Facade.API.Patient.HasModifiedData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.Hospital
+  commentId: P:ESAPIX.Facade.API.Patient.Hospital
+  id: Hospital
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Hospital
+  nameWithType: Patient.Hospital
+  fullName: ESAPIX.Facade.API.Patient.Hospital
+  type: Property
+  source:
+    id: Hospital
+    path: ''
+    startLine: 10169
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital Hospital { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Hospital
+    content.vb: Public Property Hospital As Hospital
+  overload: ESAPIX.Facade.API.Patient.Hospital*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.Id2
+  commentId: P:ESAPIX.Facade.API.Patient.Id2
+  id: Id2
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Id2
+  nameWithType: Patient.Id2
+  fullName: ESAPIX.Facade.API.Patient.Id2
+  type: Property
+  source:
+    id: Id2
+    path: ''
+    startLine: 10182
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id2 As String
+  overload: ESAPIX.Facade.API.Patient.Id2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.LastName
+  commentId: P:ESAPIX.Facade.API.Patient.LastName
+  id: LastName
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: Patient.LastName
+  fullName: ESAPIX.Facade.API.Patient.LastName
+  type: Property
+  source:
+    id: LastName
+    path: ''
+    startLine: 10195
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: ESAPIX.Facade.API.Patient.LastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.MiddleName
+  commentId: P:ESAPIX.Facade.API.Patient.MiddleName
+  id: MiddleName
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: MiddleName
+  nameWithType: Patient.MiddleName
+  fullName: ESAPIX.Facade.API.Patient.MiddleName
+  type: Property
+  source:
+    id: MiddleName
+    path: ''
+    startLine: 10208
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string MiddleName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MiddleName As String
+  overload: ESAPIX.Facade.API.Patient.MiddleName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.PrimaryOncologistId
+  commentId: P:ESAPIX.Facade.API.Patient.PrimaryOncologistId
+  id: PrimaryOncologistId
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: PrimaryOncologistId
+  nameWithType: Patient.PrimaryOncologistId
+  fullName: ESAPIX.Facade.API.Patient.PrimaryOncologistId
+  type: Property
+  source:
+    id: PrimaryOncologistId
+    path: ''
+    startLine: 10221
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PrimaryOncologistId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PrimaryOncologistId As String
+  overload: ESAPIX.Facade.API.Patient.PrimaryOncologistId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.Registrations
+  commentId: P:ESAPIX.Facade.API.Patient.Registrations
+  id: Registrations
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Registrations
+  nameWithType: Patient.Registrations
+  fullName: ESAPIX.Facade.API.Patient.Registrations
+  type: Property
+  source:
+    id: Registrations
+    path: ''
+    startLine: 10234
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Registration> Registrations { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Registration}
+    content.vb: Public ReadOnly Property Registrations As IEnumerable(Of Registration)
+  overload: ESAPIX.Facade.API.Patient.Registrations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.Patient.Sex
+  commentId: P:ESAPIX.Facade.API.Patient.Sex
+  id: Sex
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Sex
+  nameWithType: Patient.Sex
+  fullName: ESAPIX.Facade.API.Patient.Sex
+  type: Property
+  source:
+    id: Sex
+    path: ''
+    startLine: 10260
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Sex { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Sex As String
+  overload: ESAPIX.Facade.API.Patient.Sex*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.SSN
+  commentId: P:ESAPIX.Facade.API.Patient.SSN
+  id: SSN
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: SSN
+  nameWithType: Patient.SSN
+  fullName: ESAPIX.Facade.API.Patient.SSN
+  type: Property
+  source:
+    id: SSN
+    path: ''
+    startLine: 10273
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string SSN { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SSN As String
+  overload: ESAPIX.Facade.API.Patient.SSN*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.StructureSets
+  commentId: P:ESAPIX.Facade.API.Patient.StructureSets
+  id: StructureSets
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: StructureSets
+  nameWithType: Patient.StructureSets
+  fullName: ESAPIX.Facade.API.Patient.StructureSets
+  type: Property
+  source:
+    id: StructureSets
+    path: ''
+    startLine: 10286
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<StructureSet> StructureSets { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.StructureSet}
+    content.vb: Public ReadOnly Property StructureSets As IEnumerable(Of StructureSet)
+  overload: ESAPIX.Facade.API.Patient.StructureSets*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.Patient.Studies
+  commentId: P:ESAPIX.Facade.API.Patient.Studies
+  id: Studies
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: Studies
+  nameWithType: Patient.Studies
+  fullName: ESAPIX.Facade.API.Patient.Studies
+  type: Property
+  source:
+    id: Studies
+    path: ''
+    startLine: 10312
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Study> Studies { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Study}
+    content.vb: Public ReadOnly Property Studies As IEnumerable(Of Study)
+  overload: ESAPIX.Facade.API.Patient.Studies*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.Patient.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.Patient.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: Patient.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.Patient.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 10338
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.API.Patient.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.AddCourse
+  commentId: M:ESAPIX.Facade.API.Patient.AddCourse
+  id: AddCourse
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: AddCourse()
+  nameWithType: Patient.AddCourse()
+  fullName: ESAPIX.Facade.API.Patient.AddCourse()
+  type: Method
+  source:
+    id: AddCourse
+    path: ''
+    startLine: 10347
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Course AddCourse()
+    return:
+      type: ESAPIX.Facade.API.Course
+    content.vb: Public Function AddCourse As Course
+  overload: ESAPIX.Facade.API.Patient.AddCourse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  commentId: M:ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  id: AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: AddEmptyPhantom(String, PatientOrientation, Int32, Int32, Double, Double, Int32, Double)
+  nameWithType: Patient.AddEmptyPhantom(String, PatientOrientation, Int32, Int32, Double, Double, Int32, Double)
+  fullName: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String, ESAPIX.Facade.Types.PatientOrientation, System.Int32, System.Int32, System.Double, System.Double, System.Int32, System.Double)
+  type: Method
+  source:
+    id: AddEmptyPhantom
+    path: ''
+    startLine: 10354
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public StructureSet AddEmptyPhantom(string imageId, PatientOrientation orientation, int xSizePixel, int ySizePixel, double widthMM, double heightMM, int nrOfPlanes, double planeSepMM)
+    parameters:
+    - id: imageId
+      type: System.String
+    - id: orientation
+      type: ESAPIX.Facade.Types.PatientOrientation
+    - id: xSizePixel
+      type: System.Int32
+    - id: ySizePixel
+      type: System.Int32
+    - id: widthMM
+      type: System.Double
+    - id: heightMM
+      type: System.Double
+    - id: nrOfPlanes
+      type: System.Int32
+    - id: planeSepMM
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Function AddEmptyPhantom(imageId As String, orientation As PatientOrientation, xSizePixel As Integer, ySizePixel As Integer, widthMM As Double, heightMM As Double, nrOfPlanes As Integer, planeSepMM As Double) As StructureSet
+  overload: ESAPIX.Facade.API.Patient.AddEmptyPhantom*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.BeginModifications
+  commentId: M:ESAPIX.Facade.API.Patient.BeginModifications
+  id: BeginModifications
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: BeginModifications()
+  nameWithType: Patient.BeginModifications()
+  fullName: ESAPIX.Facade.API.Patient.BeginModifications()
+  type: Method
+  source:
+    id: BeginModifications
+    path: ''
+    startLine: 10361
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void BeginModifications()
+    content.vb: Public Sub BeginModifications
+  overload: ESAPIX.Facade.API.Patient.BeginModifications*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.CanAddCourse
+  commentId: M:ESAPIX.Facade.API.Patient.CanAddCourse
+  id: CanAddCourse
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CanAddCourse()
+  nameWithType: Patient.CanAddCourse()
+  fullName: ESAPIX.Facade.API.Patient.CanAddCourse()
+  type: Method
+  source:
+    id: CanAddCourse
+    path: ''
+    startLine: 10370
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool CanAddCourse()
+    return:
+      type: System.Boolean
+    content.vb: Public Function CanAddCourse As Boolean
+  overload: ESAPIX.Facade.API.Patient.CanAddCourse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom(System.String@)
+  commentId: M:ESAPIX.Facade.API.Patient.CanAddEmptyPhantom(System.String@)
+  id: CanAddEmptyPhantom(System.String@)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CanAddEmptyPhantom(out String)
+  nameWithType: Patient.CanAddEmptyPhantom(out String)
+  fullName: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom(out System.String)
+  type: Method
+  source:
+    id: CanAddEmptyPhantom
+    path: ''
+    startLine: 10377
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool CanAddEmptyPhantom(out string errorMessage)
+    parameters:
+    - id: errorMessage
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function CanAddEmptyPhantom(ByRef errorMessage As String) As Boolean
+  overload: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom*
+  nameWithType.vb: Patient.CanAddEmptyPhantom(ByRef String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom(ByRef System.String)
+  name.vb: CanAddEmptyPhantom(ByRef String)
+- uid: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String,System.String@)
+  commentId: M:ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String,System.String@)
+  id: CanCopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String,System.String@)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CanCopyImageFromOtherPatient(Study, String, String, String, out String)
+  nameWithType: Patient.CanCopyImageFromOtherPatient(Study, String, String, String, out String)
+  fullName: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient(ESAPIX.Facade.API.Study, System.String, System.String, System.String, out System.String)
+  type: Method
+  source:
+    id: CanCopyImageFromOtherPatient
+    path: ''
+    startLine: 10386
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool CanCopyImageFromOtherPatient(Study targetStudy, string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId, out string errorMessage)
+    parameters:
+    - id: targetStudy
+      type: ESAPIX.Facade.API.Study
+    - id: otherPatientId
+      type: System.String
+    - id: otherPatientStudyId
+      type: System.String
+    - id: otherPatient3DImageId
+      type: System.String
+    - id: errorMessage
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function CanCopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String, ByRef errorMessage As String) As Boolean
+  overload: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient*
+  nameWithType.vb: Patient.CanCopyImageFromOtherPatient(Study, String, String, String, ByRef String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient(ESAPIX.Facade.API.Study, System.String, System.String, System.String, ByRef System.String)
+  name.vb: CanCopyImageFromOtherPatient(Study, String, String, String, ByRef String)
+- uid: ESAPIX.Facade.API.Patient.CanModifyData
+  commentId: M:ESAPIX.Facade.API.Patient.CanModifyData
+  id: CanModifyData
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CanModifyData()
+  nameWithType: Patient.CanModifyData()
+  fullName: ESAPIX.Facade.API.Patient.CanModifyData()
+  type: Method
+  source:
+    id: CanModifyData
+    path: ''
+    startLine: 10395
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool CanModifyData()
+    return:
+      type: System.Boolean
+    content.vb: Public Function CanModifyData As Boolean
+  overload: ESAPIX.Facade.API.Patient.CanModifyData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.CanRemoveCourse(ESAPIX.Facade.API.Course)
+  commentId: M:ESAPIX.Facade.API.Patient.CanRemoveCourse(ESAPIX.Facade.API.Course)
+  id: CanRemoveCourse(ESAPIX.Facade.API.Course)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CanRemoveCourse(Course)
+  nameWithType: Patient.CanRemoveCourse(Course)
+  fullName: ESAPIX.Facade.API.Patient.CanRemoveCourse(ESAPIX.Facade.API.Course)
+  type: Method
+  source:
+    id: CanRemoveCourse
+    path: ''
+    startLine: 10402
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool CanRemoveCourse(Course course)
+    parameters:
+    - id: course
+      type: ESAPIX.Facade.API.Course
+    return:
+      type: System.Boolean
+    content.vb: Public Function CanRemoveCourse(course As Course) As Boolean
+  overload: ESAPIX.Facade.API.Patient.CanRemoveCourse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet,System.String@)
+  commentId: M:ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet,System.String@)
+  id: CanRemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet,System.String@)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CanRemoveEmptyPhantom(StructureSet, out String)
+  nameWithType: Patient.CanRemoveEmptyPhantom(StructureSet, out String)
+  fullName: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet, out System.String)
+  type: Method
+  source:
+    id: CanRemoveEmptyPhantom
+    path: ''
+    startLine: 10409
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool CanRemoveEmptyPhantom(StructureSet structureset, out string errorMessage)
+    parameters:
+    - id: structureset
+      type: ESAPIX.Facade.API.StructureSet
+    - id: errorMessage
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function CanRemoveEmptyPhantom(structureset As StructureSet, ByRef errorMessage As String) As Boolean
+  overload: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom*
+  nameWithType.vb: Patient.CanRemoveEmptyPhantom(StructureSet, ByRef String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet, ByRef System.String)
+  name.vb: CanRemoveEmptyPhantom(StructureSet, ByRef String)
+- uid: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(System.String,System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(System.String,System.String,System.String)
+  id: CopyImageFromOtherPatient(System.String,System.String,System.String)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CopyImageFromOtherPatient(String, String, String)
+  nameWithType: Patient.CopyImageFromOtherPatient(String, String, String)
+  fullName: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: CopyImageFromOtherPatient
+    path: ''
+    startLine: 10418
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public StructureSet CopyImageFromOtherPatient(string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId)
+    parameters:
+    - id: otherPatientId
+      type: System.String
+    - id: otherPatientStudyId
+      type: System.String
+    - id: otherPatient3DImageId
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Function CopyImageFromOtherPatient(otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
+  overload: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String)
+  id: CopyImageFromOtherPatient(ESAPIX.Facade.API.Study,System.String,System.String,System.String)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: CopyImageFromOtherPatient(Study, String, String, String)
+  nameWithType: Patient.CopyImageFromOtherPatient(Study, String, String, String)
+  fullName: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient(ESAPIX.Facade.API.Study, System.String, System.String, System.String)
+  type: Method
+  source:
+    id: CopyImageFromOtherPatient
+    path: ''
+    startLine: 10425
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public StructureSet CopyImageFromOtherPatient(Study targetStudy, string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId)
+    parameters:
+    - id: targetStudy
+      type: ESAPIX.Facade.API.Study
+    - id: otherPatientId
+      type: System.String
+    - id: otherPatientStudyId
+      type: System.String
+    - id: otherPatient3DImageId
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Function CopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
+  overload: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.RemoveCourse(ESAPIX.Facade.API.Course)
+  commentId: M:ESAPIX.Facade.API.Patient.RemoveCourse(ESAPIX.Facade.API.Course)
+  id: RemoveCourse(ESAPIX.Facade.API.Course)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: RemoveCourse(Course)
+  nameWithType: Patient.RemoveCourse(Course)
+  fullName: ESAPIX.Facade.API.Patient.RemoveCourse(ESAPIX.Facade.API.Course)
+  type: Method
+  source:
+    id: RemoveCourse
+    path: ''
+    startLine: 10432
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void RemoveCourse(Course course)
+    parameters:
+    - id: course
+      type: ESAPIX.Facade.API.Course
+    content.vb: Public Sub RemoveCourse(course As Course)
+  overload: ESAPIX.Facade.API.Patient.RemoveCourse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Patient.RemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet)
+  commentId: M:ESAPIX.Facade.API.Patient.RemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet)
+  id: RemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet)
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: RemoveEmptyPhantom(StructureSet)
+  nameWithType: Patient.RemoveEmptyPhantom(StructureSet)
+  fullName: ESAPIX.Facade.API.Patient.RemoveEmptyPhantom(ESAPIX.Facade.API.StructureSet)
+  type: Method
+  source:
+    id: RemoveEmptyPhantom
+    path: ''
+    startLine: 10441
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void RemoveEmptyPhantom(StructureSet structureset)
+    parameters:
+    - id: structureset
+      type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Sub RemoveEmptyPhantom(structureset As StructureSet)
+  overload: ESAPIX.Facade.API.Patient.RemoveEmptyPhantom*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.API.SerializableObject
+  commentId: T:ESAPIX.Facade.API.SerializableObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SerializableObject
+  nameWithType: SerializableObject
+  fullName: ESAPIX.Facade.API.SerializableObject
+- uid: ESAPIX.Facade.API.ApiDataObject
+  commentId: T:ESAPIX.Facade.API.ApiDataObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ApiDataObject
+  nameWithType: ApiDataObject
+  fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+- uid: ESAPIX.Facade.API.ApiDataObject.ToString
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: ToString()
+  nameWithType: ApiDataObject.ToString()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
+    name: ToString
+    nameWithType: ApiDataObject.ToString
+    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
+    name: ToString
+    nameWithType: ApiDataObject.ToString
+    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ApiDataObject.Equals(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+    name: Equals
+    nameWithType: ApiDataObject.Equals
+    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+    name: Equals
+    nameWithType: ApiDataObject.Equals
+    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: GetHashCode()
+  nameWithType: ApiDataObject.GetHashCode()
+  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+    name: GetHashCode
+    nameWithType: ApiDataObject.GetHashCode
+    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+    name: GetHashCode
+    nameWithType: ApiDataObject.GetHashCode
+    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+  commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: GetSchema()
+  nameWithType: SerializableObject.GetSchema()
+  fullName: ESAPIX.Facade.API.SerializableObject.GetSchema()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: SerializableObject.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: ClearSerializationHistory()
+  nameWithType: SerializableObject.ClearSerializationHistory()
+  fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.Patient.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Patient.#ctor
+  isExternal: false
+  name: Patient
+  nameWithType: Patient.Patient
+  fullName: ESAPIX.Facade.API.Patient.Patient
+- uid: ESAPIX.Facade.API.Patient.Courses*
+  commentId: Overload:ESAPIX.Facade.API.Patient.Courses
+  isExternal: false
+  name: Courses
+  nameWithType: Patient.Courses
+  fullName: ESAPIX.Facade.API.Patient.Courses
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Course}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Course}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Course>
+  nameWithType: IEnumerable<Course>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Course>
+  nameWithType.vb: IEnumerable(Of Course)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Course)
+  name.vb: IEnumerable(Of Course)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.Course
+    name: Course
+    nameWithType: Course
+    fullName: ESAPIX.Facade.API.Course
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.Course
+    name: Course
+    nameWithType: Course
+    fullName: ESAPIX.Facade.API.Course
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Facade.API.Patient.CreationDateTime*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CreationDateTime
+  isExternal: false
+  name: CreationDateTime
+  nameWithType: Patient.CreationDateTime
+  fullName: ESAPIX.Facade.API.Patient.CreationDateTime
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.Patient.DateOfBirth*
+  commentId: Overload:ESAPIX.Facade.API.Patient.DateOfBirth
+  isExternal: false
+  name: DateOfBirth
+  nameWithType: Patient.DateOfBirth
+  fullName: ESAPIX.Facade.API.Patient.DateOfBirth
+- uid: ESAPIX.Facade.API.Patient.FirstName*
+  commentId: Overload:ESAPIX.Facade.API.Patient.FirstName
+  isExternal: false
+  name: FirstName
+  nameWithType: Patient.FirstName
+  fullName: ESAPIX.Facade.API.Patient.FirstName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.API.Patient.HasModifiedData*
+  commentId: Overload:ESAPIX.Facade.API.Patient.HasModifiedData
+  isExternal: false
+  name: HasModifiedData
+  nameWithType: Patient.HasModifiedData
+  fullName: ESAPIX.Facade.API.Patient.HasModifiedData
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Facade.API.Patient.Hospital*
+  commentId: Overload:ESAPIX.Facade.API.Patient.Hospital
+  isExternal: false
+  name: Hospital
+  nameWithType: Patient.Hospital
+  fullName: ESAPIX.Facade.API.Patient.Hospital
+- uid: ESAPIX.Facade.API.Hospital
+  commentId: T:ESAPIX.Facade.API.Hospital
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Hospital
+  nameWithType: Hospital
+  fullName: ESAPIX.Facade.API.Hospital
+- uid: ESAPIX.Facade.API.Patient.Id2*
+  commentId: Overload:ESAPIX.Facade.API.Patient.Id2
+  isExternal: false
+  name: Id2
+  nameWithType: Patient.Id2
+  fullName: ESAPIX.Facade.API.Patient.Id2
+- uid: ESAPIX.Facade.API.Patient.LastName*
+  commentId: Overload:ESAPIX.Facade.API.Patient.LastName
+  isExternal: false
+  name: LastName
+  nameWithType: Patient.LastName
+  fullName: ESAPIX.Facade.API.Patient.LastName
+- uid: ESAPIX.Facade.API.Patient.MiddleName*
+  commentId: Overload:ESAPIX.Facade.API.Patient.MiddleName
+  isExternal: false
+  name: MiddleName
+  nameWithType: Patient.MiddleName
+  fullName: ESAPIX.Facade.API.Patient.MiddleName
+- uid: ESAPIX.Facade.API.Patient.PrimaryOncologistId*
+  commentId: Overload:ESAPIX.Facade.API.Patient.PrimaryOncologistId
+  isExternal: false
+  name: PrimaryOncologistId
+  nameWithType: Patient.PrimaryOncologistId
+  fullName: ESAPIX.Facade.API.Patient.PrimaryOncologistId
+- uid: ESAPIX.Facade.API.Patient.Registrations*
+  commentId: Overload:ESAPIX.Facade.API.Patient.Registrations
+  isExternal: false
+  name: Registrations
+  nameWithType: Patient.Registrations
+  fullName: ESAPIX.Facade.API.Patient.Registrations
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Registration}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Registration}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Registration>
+  nameWithType: IEnumerable<Registration>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Registration>
+  nameWithType.vb: IEnumerable(Of Registration)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Registration)
+  name.vb: IEnumerable(Of Registration)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.Registration
+    name: Registration
+    nameWithType: Registration
+    fullName: ESAPIX.Facade.API.Registration
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.Registration
+    name: Registration
+    nameWithType: Registration
+    fullName: ESAPIX.Facade.API.Registration
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.Patient.Sex*
+  commentId: Overload:ESAPIX.Facade.API.Patient.Sex
+  isExternal: false
+  name: Sex
+  nameWithType: Patient.Sex
+  fullName: ESAPIX.Facade.API.Patient.Sex
+- uid: ESAPIX.Facade.API.Patient.SSN*
+  commentId: Overload:ESAPIX.Facade.API.Patient.SSN
+  isExternal: false
+  name: SSN
+  nameWithType: Patient.SSN
+  fullName: ESAPIX.Facade.API.Patient.SSN
+- uid: ESAPIX.Facade.API.Patient.StructureSets*
+  commentId: Overload:ESAPIX.Facade.API.Patient.StructureSets
+  isExternal: false
+  name: StructureSets
+  nameWithType: Patient.StructureSets
+  fullName: ESAPIX.Facade.API.Patient.StructureSets
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.StructureSet}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.StructureSet}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<StructureSet>
+  nameWithType: IEnumerable<StructureSet>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.StructureSet>
+  nameWithType.vb: IEnumerable(Of StructureSet)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.StructureSet)
+  name.vb: IEnumerable(Of StructureSet)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.StructureSet
+    name: StructureSet
+    nameWithType: StructureSet
+    fullName: ESAPIX.Facade.API.StructureSet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.StructureSet
+    name: StructureSet
+    nameWithType: StructureSet
+    fullName: ESAPIX.Facade.API.StructureSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.Patient.Studies*
+  commentId: Overload:ESAPIX.Facade.API.Patient.Studies
+  isExternal: false
+  name: Studies
+  nameWithType: Patient.Studies
+  fullName: ESAPIX.Facade.API.Patient.Studies
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Study}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Study}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Study>
+  nameWithType: IEnumerable<Study>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Study>
+  nameWithType.vb: IEnumerable(Of Study)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Study)
+  name.vb: IEnumerable(Of Study)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.Study
+    name: Study
+    nameWithType: Study
+    fullName: ESAPIX.Facade.API.Study
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.Study
+    name: Study
+    nameWithType: Study
+    fullName: ESAPIX.Facade.API.Study
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.Patient.WriteXml*
+  commentId: Overload:ESAPIX.Facade.API.Patient.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: Patient.WriteXml
+  fullName: ESAPIX.Facade.API.Patient.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter
+- uid: ESAPIX.Facade.API.Patient.AddCourse*
+  commentId: Overload:ESAPIX.Facade.API.Patient.AddCourse
+  isExternal: false
+  name: AddCourse
+  nameWithType: Patient.AddCourse
+  fullName: ESAPIX.Facade.API.Patient.AddCourse
+- uid: ESAPIX.Facade.API.Course
+  commentId: T:ESAPIX.Facade.API.Course
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Course
+  nameWithType: Course
+  fullName: ESAPIX.Facade.API.Course
+- uid: ESAPIX.Facade.API.Patient.AddEmptyPhantom*
+  commentId: Overload:ESAPIX.Facade.API.Patient.AddEmptyPhantom
+  isExternal: false
+  name: AddEmptyPhantom
+  nameWithType: Patient.AddEmptyPhantom
+  fullName: ESAPIX.Facade.API.Patient.AddEmptyPhantom
+- uid: ESAPIX.Facade.Types.PatientOrientation
+  commentId: T:ESAPIX.Facade.Types.PatientOrientation
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: PatientOrientation
+  nameWithType: PatientOrientation
+  fullName: ESAPIX.Facade.Types.PatientOrientation
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.API.StructureSet
+  commentId: T:ESAPIX.Facade.API.StructureSet
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: StructureSet
+  nameWithType: StructureSet
+  fullName: ESAPIX.Facade.API.StructureSet
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.API.Patient.BeginModifications*
+  commentId: Overload:ESAPIX.Facade.API.Patient.BeginModifications
+  isExternal: false
+  name: BeginModifications
+  nameWithType: Patient.BeginModifications
+  fullName: ESAPIX.Facade.API.Patient.BeginModifications
+- uid: ESAPIX.Facade.API.Patient.CanAddCourse*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CanAddCourse
+  isExternal: false
+  name: CanAddCourse
+  nameWithType: Patient.CanAddCourse
+  fullName: ESAPIX.Facade.API.Patient.CanAddCourse
+- uid: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CanAddEmptyPhantom
+  isExternal: false
+  name: CanAddEmptyPhantom
+  nameWithType: Patient.CanAddEmptyPhantom
+  fullName: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom
+- uid: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient
+  isExternal: false
+  name: CanCopyImageFromOtherPatient
+  nameWithType: Patient.CanCopyImageFromOtherPatient
+  fullName: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient
+- uid: ESAPIX.Facade.API.Study
+  commentId: T:ESAPIX.Facade.API.Study
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Study
+  nameWithType: Study
+  fullName: ESAPIX.Facade.API.Study
+- uid: ESAPIX.Facade.API.Patient.CanModifyData*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CanModifyData
+  isExternal: false
+  name: CanModifyData
+  nameWithType: Patient.CanModifyData
+  fullName: ESAPIX.Facade.API.Patient.CanModifyData
+- uid: ESAPIX.Facade.API.Patient.CanRemoveCourse*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CanRemoveCourse
+  isExternal: false
+  name: CanRemoveCourse
+  nameWithType: Patient.CanRemoveCourse
+  fullName: ESAPIX.Facade.API.Patient.CanRemoveCourse
+- uid: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom
+  isExternal: false
+  name: CanRemoveEmptyPhantom
+  nameWithType: Patient.CanRemoveEmptyPhantom
+  fullName: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom
+- uid: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient*
+  commentId: Overload:ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient
+  isExternal: false
+  name: CopyImageFromOtherPatient
+  nameWithType: Patient.CopyImageFromOtherPatient
+  fullName: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient
+- uid: ESAPIX.Facade.API.Patient.RemoveCourse*
+  commentId: Overload:ESAPIX.Facade.API.Patient.RemoveCourse
+  isExternal: false
+  name: RemoveCourse
+  nameWithType: Patient.RemoveCourse
+  fullName: ESAPIX.Facade.API.Patient.RemoveCourse
+- uid: ESAPIX.Facade.API.Patient.RemoveEmptyPhantom*
+  commentId: Overload:ESAPIX.Facade.API.Patient.RemoveEmptyPhantom
+  isExternal: false
+  name: RemoveEmptyPhantom
+  nameWithType: Patient.RemoveEmptyPhantom
+  fullName: ESAPIX.Facade.API.Patient.RemoveEmptyPhantom

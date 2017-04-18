@@ -1,0 +1,669 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  commentId: T:ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  id: OptimizationMeanDoseObjective
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor
+  - ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose
+  - ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority
+  - ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: OptimizationMeanDoseObjective
+  nameWithType: OptimizationMeanDoseObjective
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  type: Class
+  source:
+    id: OptimizationMeanDoseObjective
+    path: ''
+    startLine: 9374
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: 'public class OptimizationMeanDoseObjective : OptimizationObjective'
+    content.vb: >-
+      Public Class OptimizationMeanDoseObjective
+          Inherits OptimizationObjective
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.API.SerializableObject
+  - ESAPIX.Facade.API.OptimizationObjective
+  inheritedMembers:
+  - ESAPIX.Facade.API.OptimizationObjective.Structure
+  - ESAPIX.Facade.API.OptimizationObjective.StructureId
+  - ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
+  - ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+  - ESAPIX.Facade.API.SerializableObject.GetSchema
+  - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationMeanDoseObjective()
+  nameWithType: OptimizationMeanDoseObjective.OptimizationMeanDoseObjective()
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.OptimizationMeanDoseObjective()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9376
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationMeanDoseObjective()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationMeanDoseObjective(Object)
+  nameWithType: OptimizationMeanDoseObjective.OptimizationMeanDoseObjective(Object)
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.OptimizationMeanDoseObjective(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9377
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationMeanDoseObjective(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose
+  commentId: P:ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: OptimizationMeanDoseObjective.Dose
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 9378
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DoseValue Dose { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.DoseValue
+    content.vb: Public Property Dose As DoseValue
+  overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationMeanDoseObjective.Priority
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 9391
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: OptimizationMeanDoseObjective.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 9404
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.API.SerializableObject
+  commentId: T:ESAPIX.Facade.API.SerializableObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SerializableObject
+  nameWithType: SerializableObject
+  fullName: ESAPIX.Facade.API.SerializableObject
+- uid: ESAPIX.Facade.API.OptimizationObjective
+  commentId: T:ESAPIX.Facade.API.OptimizationObjective
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationObjective
+  nameWithType: OptimizationObjective
+  fullName: ESAPIX.Facade.API.OptimizationObjective
+- uid: ESAPIX.Facade.API.OptimizationObjective.Structure
+  commentId: P:ESAPIX.Facade.API.OptimizationObjective.Structure
+  parent: ESAPIX.Facade.API.OptimizationObjective
+  isExternal: false
+  name: Structure
+  nameWithType: OptimizationObjective.Structure
+  fullName: ESAPIX.Facade.API.OptimizationObjective.Structure
+- uid: ESAPIX.Facade.API.OptimizationObjective.StructureId
+  commentId: P:ESAPIX.Facade.API.OptimizationObjective.StructureId
+  parent: ESAPIX.Facade.API.OptimizationObjective
+  isExternal: false
+  name: StructureId
+  nameWithType: OptimizationObjective.StructureId
+  fullName: ESAPIX.Facade.API.OptimizationObjective.StructureId
+- uid: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
+  parent: ESAPIX.Facade.API.OptimizationObjective
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: OptimizationObjective.Equals(Object)
+  fullName: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
+    name: Equals
+    nameWithType: OptimizationObjective.Equals
+    fullName: ESAPIX.Facade.API.OptimizationObjective.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
+    name: Equals
+    nameWithType: OptimizationObjective.Equals
+    fullName: ESAPIX.Facade.API.OptimizationObjective.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+  commentId: M:ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+  parent: ESAPIX.Facade.API.OptimizationObjective
+  isExternal: false
+  name: GetHashCode()
+  nameWithType: OptimizationObjective.GetHashCode()
+  fullName: ESAPIX.Facade.API.OptimizationObjective.GetHashCode()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+    name: GetHashCode
+    nameWithType: OptimizationObjective.GetHashCode
+    fullName: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+    name: GetHashCode
+    nameWithType: OptimizationObjective.GetHashCode
+    fullName: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+  commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: GetSchema()
+  nameWithType: SerializableObject.GetSchema()
+  fullName: ESAPIX.Facade.API.SerializableObject.GetSchema()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: SerializableObject.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: ClearSerializationHistory()
+  nameWithType: SerializableObject.ClearSerializationHistory()
+  fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor
+  isExternal: false
+  name: OptimizationMeanDoseObjective
+  nameWithType: OptimizationMeanDoseObjective.OptimizationMeanDoseObjective
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.OptimizationMeanDoseObjective
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose
+  isExternal: false
+  name: Dose
+  nameWithType: OptimizationMeanDoseObjective.Dose
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose
+- uid: ESAPIX.Facade.Types.DoseValue
+  commentId: T:ESAPIX.Facade.Types.DoseValue
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: ESAPIX.Facade.Types.DoseValue
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority
+  isExternal: false
+  name: Priority
+  nameWithType: OptimizationMeanDoseObjective.Priority
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: OptimizationMeanDoseObjective.WriteXml
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter

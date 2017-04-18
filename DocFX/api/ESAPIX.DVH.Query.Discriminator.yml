@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.Query.Discriminator
+  commentId: T:ESAPIX.DVH.Query.Discriminator
+  id: Discriminator
+  parent: ESAPIX.DVH.Query
+  children:
+  - ESAPIX.DVH.Query.Discriminator.EQUAL
+  - ESAPIX.DVH.Query.Discriminator.GREATER_THAN
+  - ESAPIX.DVH.Query.Discriminator.GREATHER_THAN_OR_EQUAL
+  - ESAPIX.DVH.Query.Discriminator.LESS_THAN
+  - ESAPIX.DVH.Query.Discriminator.LESS_THAN_OR_EQUAL
+  langs:
+  - csharp
+  - vb
+  name: Discriminator
+  nameWithType: Discriminator
+  fullName: ESAPIX.DVH.Query.Discriminator
+  type: Enum
+  source:
+    id: Discriminator
+    path: ''
+    startLine: 2797
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: public enum Discriminator
+    content.vb: Public Enum Discriminator
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: ESAPIX.DVH.Query.Discriminator.LESS_THAN
+  commentId: F:ESAPIX.DVH.Query.Discriminator.LESS_THAN
+  id: LESS_THAN
+  parent: ESAPIX.DVH.Query.Discriminator
+  langs:
+  - csharp
+  - vb
+  name: LESS_THAN
+  nameWithType: Discriminator.LESS_THAN
+  fullName: ESAPIX.DVH.Query.Discriminator.LESS_THAN
+  type: Field
+  source:
+    id: LESS_THAN
+    path: ''
+    startLine: 2799
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: LESS_THAN = 0
+    return:
+      type: ESAPIX.DVH.Query.Discriminator
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Query.Discriminator.LESS_THAN_OR_EQUAL
+  commentId: F:ESAPIX.DVH.Query.Discriminator.LESS_THAN_OR_EQUAL
+  id: LESS_THAN_OR_EQUAL
+  parent: ESAPIX.DVH.Query.Discriminator
+  langs:
+  - csharp
+  - vb
+  name: LESS_THAN_OR_EQUAL
+  nameWithType: Discriminator.LESS_THAN_OR_EQUAL
+  fullName: ESAPIX.DVH.Query.Discriminator.LESS_THAN_OR_EQUAL
+  type: Field
+  source:
+    id: LESS_THAN_OR_EQUAL
+    path: ''
+    startLine: 2800
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: LESS_THAN_OR_EQUAL = 1
+    return:
+      type: ESAPIX.DVH.Query.Discriminator
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Query.Discriminator.GREATER_THAN
+  commentId: F:ESAPIX.DVH.Query.Discriminator.GREATER_THAN
+  id: GREATER_THAN
+  parent: ESAPIX.DVH.Query.Discriminator
+  langs:
+  - csharp
+  - vb
+  name: GREATER_THAN
+  nameWithType: Discriminator.GREATER_THAN
+  fullName: ESAPIX.DVH.Query.Discriminator.GREATER_THAN
+  type: Field
+  source:
+    id: GREATER_THAN
+    path: ''
+    startLine: 2801
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: GREATER_THAN = 2
+    return:
+      type: ESAPIX.DVH.Query.Discriminator
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Query.Discriminator.GREATHER_THAN_OR_EQUAL
+  commentId: F:ESAPIX.DVH.Query.Discriminator.GREATHER_THAN_OR_EQUAL
+  id: GREATHER_THAN_OR_EQUAL
+  parent: ESAPIX.DVH.Query.Discriminator
+  langs:
+  - csharp
+  - vb
+  name: GREATHER_THAN_OR_EQUAL
+  nameWithType: Discriminator.GREATHER_THAN_OR_EQUAL
+  fullName: ESAPIX.DVH.Query.Discriminator.GREATHER_THAN_OR_EQUAL
+  type: Field
+  source:
+    id: GREATHER_THAN_OR_EQUAL
+    path: ''
+    startLine: 2802
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: GREATHER_THAN_OR_EQUAL = 3
+    return:
+      type: ESAPIX.DVH.Query.Discriminator
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Query.Discriminator.EQUAL
+  commentId: F:ESAPIX.DVH.Query.Discriminator.EQUAL
+  id: EQUAL
+  parent: ESAPIX.DVH.Query.Discriminator
+  langs:
+  - csharp
+  - vb
+  name: EQUAL
+  nameWithType: Discriminator.EQUAL
+  fullName: ESAPIX.DVH.Query.Discriminator.EQUAL
+  type: Field
+  source:
+    id: EQUAL
+    path: ''
+    startLine: 2803
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: EQUAL = 4
+    return:
+      type: ESAPIX.DVH.Query.Discriminator
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: ESAPIX.DVH.Query
+  commentId: N:ESAPIX.DVH.Query
+  isExternal: false
+  name: ESAPIX.DVH.Query
+  nameWithType: ESAPIX.DVH.Query
+  fullName: ESAPIX.DVH.Query
+- uid: ESAPIX.DVH.Query.Discriminator
+  commentId: T:ESAPIX.DVH.Query.Discriminator
+  parent: ESAPIX.DVH.Query
+  isExternal: false
+  name: Discriminator
+  nameWithType: Discriminator
+  fullName: ESAPIX.DVH.Query.Discriminator

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.BlockType
+  commentId: T:ESAPIX.Facade.Types.BlockType
+  id: BlockType
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.BlockType.APERTURE
+  - ESAPIX.Facade.Types.BlockType.SHIELDING
+  langs:
+  - csharp
+  - vb
+  name: BlockType
+  nameWithType: BlockType
+  fullName: ESAPIX.Facade.Types.BlockType
+  type: Enum
+  source:
+    id: BlockType
+    path: ''
+    startLine: 13257
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public enum BlockType
+    content.vb: Public Enum BlockType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: ESAPIX.Facade.Types.BlockType.APERTURE
+  commentId: F:ESAPIX.Facade.Types.BlockType.APERTURE
+  id: APERTURE
+  parent: ESAPIX.Facade.Types.BlockType
+  langs:
+  - csharp
+  - vb
+  name: APERTURE
+  nameWithType: BlockType.APERTURE
+  fullName: ESAPIX.Facade.Types.BlockType.APERTURE
+  type: Field
+  source:
+    id: APERTURE
+    path: ''
+    startLine: 13259
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: APERTURE = 0
+    return:
+      type: ESAPIX.Facade.Types.BlockType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.Facade.Types.BlockType.SHIELDING
+  commentId: F:ESAPIX.Facade.Types.BlockType.SHIELDING
+  id: SHIELDING
+  parent: ESAPIX.Facade.Types.BlockType
+  langs:
+  - csharp
+  - vb
+  name: SHIELDING
+  nameWithType: BlockType.SHIELDING
+  fullName: ESAPIX.Facade.Types.BlockType.SHIELDING
+  type: Field
+  source:
+    id: SHIELDING
+    path: ''
+    startLine: 13260
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: SHIELDING = 1
+    return:
+      type: ESAPIX.Facade.Types.BlockType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.Types.BlockType
+  commentId: T:ESAPIX.Facade.Types.BlockType
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: BlockType
+  nameWithType: BlockType
+  fullName: ESAPIX.Facade.Types.BlockType

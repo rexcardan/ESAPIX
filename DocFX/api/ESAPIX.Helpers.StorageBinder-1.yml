@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Helpers.StorageBinder`1
+  commentId: T:ESAPIX.Helpers.StorageBinder`1
+  id: StorageBinder`1
+  parent: ESAPIX.Helpers
+  children:
+  - ESAPIX.Helpers.StorageBinder`1.BindToType(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: StorageBinder<T>
+  nameWithType: StorageBinder<T>
+  fullName: ESAPIX.Helpers.StorageBinder<T>
+  type: Class
+  source:
+    id: StorageBinder
+    path: ''
+    startLine: 15272
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  syntax:
+    content: 'public class StorageBinder<T> : DefaultSerializationBinder'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class StorageBinder(Of T)
+          Inherits DefaultSerializationBinder
+  inheritance:
+  - System.Object
+  nameWithType.vb: StorageBinder(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: ESAPIX.Helpers.StorageBinder(Of T)
+  name.vb: StorageBinder(Of T)
+- uid: ESAPIX.Helpers.StorageBinder`1.BindToType(System.String,System.String)
+  commentId: M:ESAPIX.Helpers.StorageBinder`1.BindToType(System.String,System.String)
+  id: BindToType(System.String,System.String)
+  parent: ESAPIX.Helpers.StorageBinder`1
+  langs:
+  - csharp
+  - vb
+  name: BindToType(String, String)
+  nameWithType: StorageBinder<T>.BindToType(String, String)
+  fullName: ESAPIX.Helpers.StorageBinder<T>.BindToType(System.String, System.String)
+  type: Method
+  source:
+    id: BindToType
+    path: ''
+    startLine: 15281
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  summary: "\nThis is a hack to get the storage service to work with wrapped content. Currently a bug in JSON.net\nrelying on assembles to be in current app domain.\n"
+  example: []
+  syntax:
+    content: public override Type BindToType(string assemblyName, string typeName)
+    parameters:
+    - id: assemblyName
+      type: System.String
+      description: ''
+    - id: typeName
+      type: System.String
+      description: ''
+    return:
+      type: System.Type
+      description: ''
+    content.vb: Public Overrides Function BindToType(assemblyName As String, typeName As String) As Type
+  overload: ESAPIX.Helpers.StorageBinder`1.BindToType*
+  nameWithType.vb: StorageBinder(Of T).BindToType(String, String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: ESAPIX.Helpers.StorageBinder(Of T).BindToType(System.String, System.String)
+references:
+- uid: ESAPIX.Helpers
+  commentId: N:ESAPIX.Helpers
+  isExternal: false
+  name: ESAPIX.Helpers
+  nameWithType: ESAPIX.Helpers
+  fullName: ESAPIX.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Helpers.StorageBinder`1.BindToType*
+  commentId: Overload:ESAPIX.Helpers.StorageBinder`1.BindToType
+  isExternal: false
+  name: BindToType
+  nameWithType: StorageBinder<T>.BindToType
+  fullName: ESAPIX.Helpers.StorageBinder<T>.BindToType
+  nameWithType.vb: StorageBinder(Of T).BindToType
+  fullName.vb: ESAPIX.Helpers.StorageBinder(Of T).BindToType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type

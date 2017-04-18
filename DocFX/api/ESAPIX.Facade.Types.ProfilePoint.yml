@@ -1,0 +1,524 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.ProfilePoint
+  commentId: T:ESAPIX.Facade.Types.ProfilePoint
+  id: ProfilePoint
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.ProfilePoint.#ctor
+  - ESAPIX.Facade.Types.ProfilePoint.#ctor(ESAPIX.Facade.Types.VVector,System.Double)
+  - ESAPIX.Facade.Types.ProfilePoint.#ctor(System.Object)
+  - ESAPIX.Facade.Types.ProfilePoint.Position
+  - ESAPIX.Facade.Types.ProfilePoint.Value
+  langs:
+  - csharp
+  - vb
+  name: ProfilePoint
+  nameWithType: ProfilePoint
+  fullName: ESAPIX.Facade.Types.ProfilePoint
+  type: Class
+  source:
+    id: ProfilePoint
+    path: ''
+    startLine: 14476
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class ProfilePoint
+    content.vb: Public Class ProfilePoint
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.ProfilePoint.#ctor
+  commentId: M:ESAPIX.Facade.Types.ProfilePoint.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.ProfilePoint
+  langs:
+  - csharp
+  - vb
+  name: ProfilePoint()
+  nameWithType: ProfilePoint.ProfilePoint()
+  fullName: ESAPIX.Facade.Types.ProfilePoint.ProfilePoint()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14479
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public ProfilePoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.ProfilePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ProfilePoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.ProfilePoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.ProfilePoint
+  langs:
+  - csharp
+  - vb
+  name: ProfilePoint(Object)
+  nameWithType: ProfilePoint.ProfilePoint(Object)
+  fullName: ESAPIX.Facade.Types.ProfilePoint.ProfilePoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14480
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public ProfilePoint(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.ProfilePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ProfilePoint.#ctor(ESAPIX.Facade.Types.VVector,System.Double)
+  commentId: M:ESAPIX.Facade.Types.ProfilePoint.#ctor(ESAPIX.Facade.Types.VVector,System.Double)
+  id: '#ctor(ESAPIX.Facade.Types.VVector,System.Double)'
+  parent: ESAPIX.Facade.Types.ProfilePoint
+  langs:
+  - csharp
+  - vb
+  name: ProfilePoint(VVector, Double)
+  nameWithType: ProfilePoint.ProfilePoint(VVector, Double)
+  fullName: ESAPIX.Facade.Types.ProfilePoint.ProfilePoint(ESAPIX.Facade.Types.VVector, System.Double)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14481
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public ProfilePoint(VVector position, double value)
+    parameters:
+    - id: position
+      type: ESAPIX.Facade.Types.VVector
+    - id: value
+      type: System.Double
+    content.vb: Public Sub New(position As VVector, value As Double)
+  overload: ESAPIX.Facade.Types.ProfilePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ProfilePoint.Position
+  commentId: P:ESAPIX.Facade.Types.ProfilePoint.Position
+  id: Position
+  parent: ESAPIX.Facade.Types.ProfilePoint
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: ProfilePoint.Position
+  fullName: ESAPIX.Facade.Types.ProfilePoint.Position
+  type: Property
+  source:
+    id: Position
+    path: ''
+    startLine: 14492
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public VVector Position { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.VVector
+    content.vb: Public Property Position As VVector
+  overload: ESAPIX.Facade.Types.ProfilePoint.Position*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ProfilePoint.Value
+  commentId: P:ESAPIX.Facade.Types.ProfilePoint.Value
+  id: Value
+  parent: ESAPIX.Facade.Types.ProfilePoint
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ProfilePoint.Value
+  fullName: ESAPIX.Facade.Types.ProfilePoint.Value
+  type: Property
+  source:
+    id: Value
+    path: ''
+    startLine: 14505
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double Value { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Value As Double
+  overload: ESAPIX.Facade.Types.ProfilePoint.Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.ProfilePoint.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.ProfilePoint.#ctor
+  isExternal: false
+  name: ProfilePoint
+  nameWithType: ProfilePoint.ProfilePoint
+  fullName: ESAPIX.Facade.Types.ProfilePoint.ProfilePoint
+- uid: ESAPIX.Facade.Types.VVector
+  commentId: T:ESAPIX.Facade.Types.VVector
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: VVector
+  nameWithType: VVector
+  fullName: ESAPIX.Facade.Types.VVector
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.Types.ProfilePoint.Position*
+  commentId: Overload:ESAPIX.Facade.Types.ProfilePoint.Position
+  isExternal: false
+  name: Position
+  nameWithType: ProfilePoint.Position
+  fullName: ESAPIX.Facade.Types.ProfilePoint.Position
+- uid: ESAPIX.Facade.Types.ProfilePoint.Value*
+  commentId: Overload:ESAPIX.Facade.Types.ProfilePoint.Value
+  isExternal: false
+  name: Value
+  nameWithType: ProfilePoint.Value
+  fullName: ESAPIX.Facade.Types.ProfilePoint.Value

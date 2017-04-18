@@ -1,0 +1,702 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.ScriptComThread
+  commentId: T:ESAPIX.AppKit.ScriptComThread
+  id: ScriptComThread
+  parent: ESAPIX.AppKit
+  children:
+  - ESAPIX.AppKit.ScriptComThread.#ctor(Dispatcher)
+  - ESAPIX.AppKit.ScriptComThread.Dispose
+  - ESAPIX.AppKit.ScriptComThread.Invoke(System.Action)
+  - ESAPIX.AppKit.ScriptComThread.InvokeAsync(System.Action)
+  - ESAPIX.AppKit.ScriptComThread.ThreadId
+  langs:
+  - csharp
+  - vb
+  name: ScriptComThread
+  nameWithType: ScriptComThread
+  fullName: ESAPIX.AppKit.ScriptComThread
+  type: Class
+  source:
+    id: ScriptComThread
+    path: ''
+    startLine: 355
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: 'public class ScriptComThread : IVMSThread, IDisposable'
+    content.vb: >-
+      Public Class ScriptComThread
+          Implements IVMSThread, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - ESAPIX.Interfaces.IVMSThread
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.AppKit.ScriptComThread.#ctor(Dispatcher)
+  commentId: M:ESAPIX.AppKit.ScriptComThread.#ctor(Dispatcher)
+  id: '#ctor(Dispatcher)'
+  parent: ESAPIX.AppKit.ScriptComThread
+  langs:
+  - csharp
+  - vb
+  name: ScriptComThread(Dispatcher)
+  nameWithType: ScriptComThread.ScriptComThread(Dispatcher)
+  fullName: ESAPIX.AppKit.ScriptComThread.ScriptComThread(Dispatcher)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 359
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public ScriptComThread(Dispatcher disp)
+    parameters:
+    - id: disp
+      type: Dispatcher
+    content.vb: Public Sub New(disp As Dispatcher)
+  overload: ESAPIX.AppKit.ScriptComThread.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.AppKit.ScriptComThread.ThreadId
+  commentId: P:ESAPIX.AppKit.ScriptComThread.ThreadId
+  id: ThreadId
+  parent: ESAPIX.AppKit.ScriptComThread
+  langs:
+  - csharp
+  - vb
+  name: ThreadId
+  nameWithType: ScriptComThread.ThreadId
+  fullName: ESAPIX.AppKit.ScriptComThread.ThreadId
+  type: Property
+  source:
+    id: ThreadId
+    path: ''
+    startLine: 364
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public int ThreadId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ThreadId As Integer
+  overload: ESAPIX.AppKit.ScriptComThread.ThreadId*
+  implements:
+  - ESAPIX.Interfaces.IVMSThread.ThreadId
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.ScriptComThread.Dispose
+  commentId: M:ESAPIX.AppKit.ScriptComThread.Dispose
+  id: Dispose
+  parent: ESAPIX.AppKit.ScriptComThread
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ScriptComThread.Dispose()
+  fullName: ESAPIX.AppKit.ScriptComThread.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: ''
+    startLine: 372
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: ESAPIX.AppKit.ScriptComThread.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.AppKit.ScriptComThread.Invoke(System.Action)
+  commentId: M:ESAPIX.AppKit.ScriptComThread.Invoke(System.Action)
+  id: Invoke(System.Action)
+  parent: ESAPIX.AppKit.ScriptComThread
+  langs:
+  - csharp
+  - vb
+  name: Invoke(Action)
+  nameWithType: ScriptComThread.Invoke(Action)
+  fullName: ESAPIX.AppKit.ScriptComThread.Invoke(System.Action)
+  type: Method
+  source:
+    id: Invoke
+    path: ''
+    startLine: 377
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public void Invoke(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+    content.vb: Public Sub Invoke(action As Action)
+  overload: ESAPIX.AppKit.ScriptComThread.Invoke*
+  implements:
+  - ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.AppKit.ScriptComThread.InvokeAsync(System.Action)
+  commentId: M:ESAPIX.AppKit.ScriptComThread.InvokeAsync(System.Action)
+  id: InvokeAsync(System.Action)
+  parent: ESAPIX.AppKit.ScriptComThread
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync(Action)
+  nameWithType: ScriptComThread.InvokeAsync(Action)
+  fullName: ESAPIX.AppKit.ScriptComThread.InvokeAsync(System.Action)
+  type: Method
+  source:
+    id: InvokeAsync
+    path: ''
+    startLine: 382
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public Task InvokeAsync(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function InvokeAsync(action As Action) As Task
+  overload: ESAPIX.AppKit.ScriptComThread.InvokeAsync*
+  implements:
+  - ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Interfaces.IVMSThread
+  commentId: T:ESAPIX.Interfaces.IVMSThread
+  parent: ESAPIX.Interfaces
+  isExternal: false
+  name: IVMSThread
+  nameWithType: IVMSThread
+  fullName: ESAPIX.Interfaces.IVMSThread
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Interfaces
+  commentId: N:ESAPIX.Interfaces
+  isExternal: false
+  name: ESAPIX.Interfaces
+  nameWithType: ESAPIX.Interfaces
+  fullName: ESAPIX.Interfaces
+- uid: ESAPIX.AppKit.ScriptComThread.#ctor*
+  commentId: Overload:ESAPIX.AppKit.ScriptComThread.#ctor
+  isExternal: false
+  name: ScriptComThread
+  nameWithType: ScriptComThread.ScriptComThread
+  fullName: ESAPIX.AppKit.ScriptComThread.ScriptComThread
+- uid: Dispatcher
+  commentId: '!:Dispatcher'
+  isExternal: true
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: Dispatcher
+- uid: ESAPIX.AppKit.ScriptComThread.ThreadId*
+  commentId: Overload:ESAPIX.AppKit.ScriptComThread.ThreadId
+  isExternal: false
+  name: ThreadId
+  nameWithType: ScriptComThread.ThreadId
+  fullName: ESAPIX.AppKit.ScriptComThread.ThreadId
+- uid: ESAPIX.Interfaces.IVMSThread.ThreadId
+  commentId: P:ESAPIX.Interfaces.IVMSThread.ThreadId
+  parent: ESAPIX.Interfaces.IVMSThread
+  isExternal: false
+  name: ThreadId
+  nameWithType: IVMSThread.ThreadId
+  fullName: ESAPIX.Interfaces.IVMSThread.ThreadId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.AppKit.ScriptComThread.Dispose*
+  commentId: Overload:ESAPIX.AppKit.ScriptComThread.Dispose
+  isExternal: false
+  name: Dispose
+  nameWithType: ScriptComThread.Dispose
+  fullName: ESAPIX.AppKit.ScriptComThread.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.ScriptComThread.Invoke*
+  commentId: Overload:ESAPIX.AppKit.ScriptComThread.Invoke
+  isExternal: false
+  name: Invoke
+  nameWithType: ScriptComThread.Invoke
+  fullName: ESAPIX.AppKit.ScriptComThread.Invoke
+- uid: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  commentId: M:ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  parent: ESAPIX.Interfaces.IVMSThread
+  isExternal: true
+  name: Invoke(Action)
+  nameWithType: IVMSThread.Invoke(Action)
+  fullName: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+  spec.csharp:
+  - uid: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+    name: Invoke
+    nameWithType: IVMSThread.Invoke
+    fullName: ESAPIX.Interfaces.IVMSThread.Invoke
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
+    name: Invoke
+    nameWithType: IVMSThread.Invoke
+    fullName: ESAPIX.Interfaces.IVMSThread.Invoke
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: ESAPIX.AppKit.ScriptComThread.InvokeAsync*
+  commentId: Overload:ESAPIX.AppKit.ScriptComThread.InvokeAsync
+  isExternal: false
+  name: InvokeAsync
+  nameWithType: ScriptComThread.InvokeAsync
+  fullName: ESAPIX.AppKit.ScriptComThread.InvokeAsync
+- uid: ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  commentId: M:ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  parent: ESAPIX.Interfaces.IVMSThread
+  isExternal: true
+  name: InvokeAsync(Action)
+  nameWithType: IVMSThread.InvokeAsync(Action)
+  fullName: ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+  spec.csharp:
+  - uid: ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+    name: InvokeAsync
+    nameWithType: IVMSThread.InvokeAsync
+    fullName: ESAPIX.Interfaces.IVMSThread.InvokeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
+    name: InvokeAsync
+    nameWithType: IVMSThread.InvokeAsync
+    fullName: ESAPIX.Interfaces.IVMSThread.InvokeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

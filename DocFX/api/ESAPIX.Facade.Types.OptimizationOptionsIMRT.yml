@@ -1,0 +1,697 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  commentId: T:ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  id: OptimizationOptionsIMRT
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,ESAPIX.Facade.Types.OptimizationIntermediateDoseOption,System.String)
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.Int32,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Object)
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations
+  - ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+  langs:
+  - csharp
+  - vb
+  name: OptimizationOptionsIMRT
+  nameWithType: OptimizationOptionsIMRT
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  type: Class
+  source:
+    id: OptimizationOptionsIMRT
+    path: ''
+    startLine: 14229
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: 'public class OptimizationOptionsIMRT : OptimizationOptionsBase'
+    content.vb: >-
+      Public Class OptimizationOptionsIMRT
+          Inherits OptimizationOptionsBase
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.Types.OptimizationOptionsBase
+  inheritedMembers:
+  - ESAPIX.Facade.Types.OptimizationOptionsBase.MLC
+  - ESAPIX.Facade.Types.OptimizationOptionsBase.StartOption
+  - ESAPIX.Facade.Types.OptimizationOptionsBase.IntermediateDoseOption
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor
+  commentId: M:ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: OptimizationOptionsIMRT()
+  nameWithType: OptimizationOptionsIMRT.OptimizationOptionsIMRT()
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.OptimizationOptionsIMRT()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14231
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public OptimizationOptionsIMRT()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: OptimizationOptionsIMRT(Object)
+  nameWithType: OptimizationOptionsIMRT.OptimizationOptionsIMRT(Object)
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.OptimizationOptionsIMRT(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14232
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public OptimizationOptionsIMRT(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.Int32,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)
+  commentId: M:ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.Int32,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)
+  id: '#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.Int32,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)'
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: OptimizationOptionsIMRT(Int32, OptimizationOption, Int32, OptimizationConvergenceOption, String)
+  nameWithType: OptimizationOptionsIMRT.OptimizationOptionsIMRT(Int32, OptimizationOption, Int32, OptimizationConvergenceOption, String)
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.OptimizationOptionsIMRT(System.Int32, ESAPIX.Facade.Types.OptimizationOption, System.Int32, ESAPIX.Facade.Types.OptimizationConvergenceOption, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14233
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public OptimizationOptionsIMRT(int maxIterations, OptimizationOption initialState, int numberOfStepsBeforeIntermediateDose, OptimizationConvergenceOption convergenceOption, string mlcId)
+    parameters:
+    - id: maxIterations
+      type: System.Int32
+    - id: initialState
+      type: ESAPIX.Facade.Types.OptimizationOption
+    - id: numberOfStepsBeforeIntermediateDose
+      type: System.Int32
+    - id: convergenceOption
+      type: ESAPIX.Facade.Types.OptimizationConvergenceOption
+    - id: mlcId
+      type: System.String
+    content.vb: Public Sub New(maxIterations As Integer, initialState As OptimizationOption, numberOfStepsBeforeIntermediateDose As Integer, convergenceOption As OptimizationConvergenceOption, mlcId As String)
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,ESAPIX.Facade.Types.OptimizationIntermediateDoseOption,System.String)
+  commentId: M:ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,ESAPIX.Facade.Types.OptimizationIntermediateDoseOption,System.String)
+  id: '#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,ESAPIX.Facade.Types.OptimizationIntermediateDoseOption,System.String)'
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: OptimizationOptionsIMRT(Int32, OptimizationOption, OptimizationConvergenceOption, OptimizationIntermediateDoseOption, String)
+  nameWithType: OptimizationOptionsIMRT.OptimizationOptionsIMRT(Int32, OptimizationOption, OptimizationConvergenceOption, OptimizationIntermediateDoseOption, String)
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.OptimizationOptionsIMRT(System.Int32, ESAPIX.Facade.Types.OptimizationOption, ESAPIX.Facade.Types.OptimizationConvergenceOption, ESAPIX.Facade.Types.OptimizationIntermediateDoseOption, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14247
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public OptimizationOptionsIMRT(int maxIterations, OptimizationOption initialState, OptimizationConvergenceOption convergenceOption, OptimizationIntermediateDoseOption intermediateDoseOption, string mlcId)
+    parameters:
+    - id: maxIterations
+      type: System.Int32
+    - id: initialState
+      type: ESAPIX.Facade.Types.OptimizationOption
+    - id: convergenceOption
+      type: ESAPIX.Facade.Types.OptimizationConvergenceOption
+    - id: intermediateDoseOption
+      type: ESAPIX.Facade.Types.OptimizationIntermediateDoseOption
+    - id: mlcId
+      type: System.String
+    content.vb: Public Sub New(maxIterations As Integer, initialState As OptimizationOption, convergenceOption As OptimizationConvergenceOption, intermediateDoseOption As OptimizationIntermediateDoseOption, mlcId As String)
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)
+  commentId: M:ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)
+  id: '#ctor(System.Int32,ESAPIX.Facade.Types.OptimizationOption,ESAPIX.Facade.Types.OptimizationConvergenceOption,System.String)'
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: OptimizationOptionsIMRT(Int32, OptimizationOption, OptimizationConvergenceOption, String)
+  nameWithType: OptimizationOptionsIMRT.OptimizationOptionsIMRT(Int32, OptimizationOption, OptimizationConvergenceOption, String)
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.OptimizationOptionsIMRT(System.Int32, ESAPIX.Facade.Types.OptimizationOption, ESAPIX.Facade.Types.OptimizationConvergenceOption, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14261
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public OptimizationOptionsIMRT(int maxIterations, OptimizationOption initialState, OptimizationConvergenceOption convergenceOption, string mlcId)
+    parameters:
+    - id: maxIterations
+      type: System.Int32
+    - id: initialState
+      type: ESAPIX.Facade.Types.OptimizationOption
+    - id: convergenceOption
+      type: ESAPIX.Facade.Types.OptimizationConvergenceOption
+    - id: mlcId
+      type: System.String
+    content.vb: Public Sub New(maxIterations As Integer, initialState As OptimizationOption, convergenceOption As OptimizationConvergenceOption, mlcId As String)
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
+  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
+  id: ConvergenceOption
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: ConvergenceOption
+  nameWithType: OptimizationOptionsIMRT.ConvergenceOption
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
+  type: Property
+  source:
+    id: ConvergenceOption
+    path: ''
+    startLine: 14274
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public OptimizationConvergenceOption ConvergenceOption { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.OptimizationConvergenceOption
+    content.vb: Public Property ConvergenceOption As OptimizationConvergenceOption
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+  id: NumberOfStepsBeforeIntermediateDose
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: NumberOfStepsBeforeIntermediateDose
+  nameWithType: OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+  type: Property
+  source:
+    id: NumberOfStepsBeforeIntermediateDose
+    path: ''
+    startLine: 14287
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public int NumberOfStepsBeforeIntermediateDose { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfStepsBeforeIntermediateDose As Integer
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations
+  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations
+  id: MaximumNumberOfIterations
+  parent: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  langs:
+  - csharp
+  - vb
+  name: MaximumNumberOfIterations
+  nameWithType: OptimizationOptionsIMRT.MaximumNumberOfIterations
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations
+  type: Property
+  source:
+    id: MaximumNumberOfIterations
+    path: ''
+    startLine: 14300
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public int MaximumNumberOfIterations { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaximumNumberOfIterations As Integer
+  overload: ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.Types.OptimizationOptionsBase
+  commentId: T:ESAPIX.Facade.Types.OptimizationOptionsBase
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: OptimizationOptionsBase
+  nameWithType: OptimizationOptionsBase
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsBase
+- uid: ESAPIX.Facade.Types.OptimizationOptionsBase.MLC
+  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsBase.MLC
+  parent: ESAPIX.Facade.Types.OptimizationOptionsBase
+  isExternal: false
+  name: MLC
+  nameWithType: OptimizationOptionsBase.MLC
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsBase.MLC
+- uid: ESAPIX.Facade.Types.OptimizationOptionsBase.StartOption
+  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsBase.StartOption
+  parent: ESAPIX.Facade.Types.OptimizationOptionsBase
+  isExternal: false
+  name: StartOption
+  nameWithType: OptimizationOptionsBase.StartOption
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsBase.StartOption
+- uid: ESAPIX.Facade.Types.OptimizationOptionsBase.IntermediateDoseOption
+  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsBase.IntermediateDoseOption
+  parent: ESAPIX.Facade.Types.OptimizationOptionsBase
+  isExternal: false
+  name: IntermediateDoseOption
+  nameWithType: OptimizationOptionsBase.IntermediateDoseOption
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsBase.IntermediateDoseOption
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsIMRT.#ctor
+  isExternal: false
+  name: OptimizationOptionsIMRT
+  nameWithType: OptimizationOptionsIMRT.OptimizationOptionsIMRT
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.OptimizationOptionsIMRT
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.Facade.Types.OptimizationOption
+  commentId: T:ESAPIX.Facade.Types.OptimizationOption
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: OptimizationOption
+  nameWithType: OptimizationOption
+  fullName: ESAPIX.Facade.Types.OptimizationOption
+- uid: ESAPIX.Facade.Types.OptimizationConvergenceOption
+  commentId: T:ESAPIX.Facade.Types.OptimizationConvergenceOption
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: OptimizationConvergenceOption
+  nameWithType: OptimizationConvergenceOption
+  fullName: ESAPIX.Facade.Types.OptimizationConvergenceOption
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.Types.OptimizationIntermediateDoseOption
+  commentId: T:ESAPIX.Facade.Types.OptimizationIntermediateDoseOption
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: OptimizationIntermediateDoseOption
+  nameWithType: OptimizationIntermediateDoseOption
+  fullName: ESAPIX.Facade.Types.OptimizationIntermediateDoseOption
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption*
+  commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
+  isExternal: false
+  name: ConvergenceOption
+  nameWithType: OptimizationOptionsIMRT.ConvergenceOption
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose*
+  commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+  isExternal: false
+  name: NumberOfStepsBeforeIntermediateDose
+  nameWithType: OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.NumberOfStepsBeforeIntermediateDose
+- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations*
+  commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations
+  isExternal: false
+  name: MaximumNumberOfIterations
+  nameWithType: OptimizationOptionsIMRT.MaximumNumberOfIterations
+  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations

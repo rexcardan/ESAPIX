@@ -1,0 +1,801 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint
+  commentId: T:ESAPIX.DVH.Constraints.NFractionConstraint
+  id: NFractionConstraint
+  parent: ESAPIX.DVH.Constraints
+  children:
+  - ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain(PlanningItem)
+  - ESAPIX.DVH.Constraints.NFractionConstraint.Constrain(PlanningItem)
+  - ESAPIX.DVH.Constraints.NFractionConstraint.FullName
+  - ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType
+  - ESAPIX.DVH.Constraints.NFractionConstraint.Name
+  - ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions
+  - ESAPIX.DVH.Constraints.NFractionConstraint.Priority
+  langs:
+  - csharp
+  - vb
+  name: NFractionConstraint
+  nameWithType: NFractionConstraint
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint
+  type: Class
+  source:
+    id: NFractionConstraint
+    path: ''
+    startLine: 2476
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: 'public class NFractionConstraint : IPriorityConstraint, IConstraint'
+    content.vb: >-
+      Public Class NFractionConstraint
+          Implements IPriorityConstraint, IConstraint
+  inheritance:
+  - System.Object
+  implements:
+  - ESAPIX.DVH.Constraints.IPriorityConstraint
+  - ESAPIX.DVH.Constraints.IConstraint
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions
+  commentId: P:ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions
+  id: NumOfFractions
+  parent: ESAPIX.DVH.Constraints.NFractionConstraint
+  langs:
+  - csharp
+  - vb
+  name: NumOfFractions
+  nameWithType: NFractionConstraint.NumOfFractions
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions
+  type: Property
+  source:
+    id: NumOfFractions
+    path: ''
+    startLine: 2478
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public int NumOfFractions { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumOfFractions As Integer
+  overload: ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.FullName
+  commentId: P:ESAPIX.DVH.Constraints.NFractionConstraint.FullName
+  id: FullName
+  parent: ESAPIX.DVH.Constraints.NFractionConstraint
+  langs:
+  - csharp
+  - vb
+  name: FullName
+  nameWithType: NFractionConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.FullName
+  type: Property
+  source:
+    id: FullName
+    path: ''
+    startLine: 2480
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public string FullName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property FullName As String
+  overload: ESAPIX.DVH.Constraints.NFractionConstraint.FullName*
+  implements:
+  - ESAPIX.DVH.Constraints.IConstraint.FullName
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.Name
+  commentId: P:ESAPIX.DVH.Constraints.NFractionConstraint.Name
+  id: Name
+  parent: ESAPIX.DVH.Constraints.NFractionConstraint
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: NFractionConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 2482
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: ESAPIX.DVH.Constraints.NFractionConstraint.Name*
+  implements:
+  - ESAPIX.DVH.Constraints.IConstraint.Name
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.Priority
+  commentId: P:ESAPIX.DVH.Constraints.NFractionConstraint.Priority
+  id: Priority
+  parent: ESAPIX.DVH.Constraints.NFractionConstraint
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: NFractionConstraint.Priority
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 2484
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public PriorityType Priority { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+    content.vb: Public Property Priority As PriorityType
+  overload: ESAPIX.DVH.Constraints.NFractionConstraint.Priority*
+  implements:
+  - ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain(PlanningItem)
+  id: CanConstrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.NFractionConstraint
+  langs:
+  - csharp
+  - vb
+  name: CanConstrain(PlanningItem)
+  nameWithType: NFractionConstraint.CanConstrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain(PlanningItem)
+  type: Method
+  source:
+    id: CanConstrain
+    path: ''
+    startLine: 2486
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public ConstraintResult CanConstrain(PlanningItem pi)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    return:
+      type: ESAPIX.DVH.Constraints.ConstraintResult
+    content.vb: Public Function CanConstrain(pi As PlanningItem) As ConstraintResult
+  overload: ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain*
+  implements:
+  - ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.Constrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.NFractionConstraint.Constrain(PlanningItem)
+  id: Constrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.NFractionConstraint
+  langs:
+  - csharp
+  - vb
+  name: Constrain(PlanningItem)
+  nameWithType: NFractionConstraint.Constrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.Constrain(PlanningItem)
+  type: Method
+  source:
+    id: Constrain
+    path: ''
+    startLine: 2513
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public ConstraintResult Constrain(PlanningItem pi)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    return:
+      type: ESAPIX.DVH.Constraints.ConstraintResult
+    content.vb: Public Function Constrain(pi As PlanningItem) As ConstraintResult
+  overload: ESAPIX.DVH.Constraints.NFractionConstraint.Constrain*
+  implements:
+  - ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType
+  commentId: M:ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType
+  id: GetFailedResultType
+  parent: ESAPIX.DVH.Constraints.NFractionConstraint
+  langs:
+  - csharp
+  - vb
+  name: GetFailedResultType()
+  nameWithType: NFractionConstraint.GetFailedResultType()
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType()
+  type: Method
+  source:
+    id: GetFailedResultType
+    path: ''
+    startLine: 2546
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public ResultType GetFailedResultType()
+    return:
+      type: ESAPIX.DVH.Constraints.ResultType
+    content.vb: Public Function GetFailedResultType As ResultType
+  overload: ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType*
+  implements:
+  - ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.DVH.Constraints
+  commentId: N:ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ESAPIX.DVH.Constraints
+  nameWithType: ESAPIX.DVH.Constraints
+  fullName: ESAPIX.DVH.Constraints
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint
+  commentId: T:ESAPIX.DVH.Constraints.IPriorityConstraint
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: IPriorityConstraint
+  nameWithType: IPriorityConstraint
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint
+- uid: ESAPIX.DVH.Constraints.IConstraint
+  commentId: T:ESAPIX.DVH.Constraints.IConstraint
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: IConstraint
+  nameWithType: IConstraint
+  fullName: ESAPIX.DVH.Constraints.IConstraint
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions*
+  commentId: Overload:ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions
+  isExternal: false
+  name: NumOfFractions
+  nameWithType: NFractionConstraint.NumOfFractions
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.NumOfFractions
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.FullName*
+  commentId: Overload:ESAPIX.DVH.Constraints.NFractionConstraint.FullName
+  isExternal: false
+  name: FullName
+  nameWithType: NFractionConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.FullName
+- uid: ESAPIX.DVH.Constraints.IConstraint.FullName
+  commentId: P:ESAPIX.DVH.Constraints.IConstraint.FullName
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: false
+  name: FullName
+  nameWithType: IConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.IConstraint.FullName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.Name*
+  commentId: Overload:ESAPIX.DVH.Constraints.NFractionConstraint.Name
+  isExternal: false
+  name: Name
+  nameWithType: NFractionConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.Name
+- uid: ESAPIX.DVH.Constraints.IConstraint.Name
+  commentId: P:ESAPIX.DVH.Constraints.IConstraint.Name
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: false
+  name: Name
+  nameWithType: IConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Name
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.Priority*
+  commentId: Overload:ESAPIX.DVH.Constraints.NFractionConstraint.Priority
+  isExternal: false
+  name: Priority
+  nameWithType: NFractionConstraint.Priority
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.Priority
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  commentId: P:ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  parent: ESAPIX.DVH.Constraints.IPriorityConstraint
+  isExternal: false
+  name: Priority
+  nameWithType: IPriorityConstraint.Priority
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+- uid: ESAPIX.DVH.Constraints.PriorityType
+  commentId: T:ESAPIX.DVH.Constraints.PriorityType
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: PriorityType
+  nameWithType: PriorityType
+  fullName: ESAPIX.DVH.Constraints.PriorityType
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain*
+  commentId: Overload:ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain
+  isExternal: false
+  name: CanConstrain
+  nameWithType: NFractionConstraint.CanConstrain
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.CanConstrain
+- uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: true
+  name: CanConstrain(PlanningItem)
+  nameWithType: IConstraint.CanConstrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  spec.csharp:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+    name: CanConstrain
+    nameWithType: IConstraint.CanConstrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+    name: CanConstrain
+    nameWithType: IConstraint.CanConstrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PlanningItem
+  isExternal: true
+  name: PlanningItem
+  nameWithType: PlanningItem
+  fullName: PlanningItem
+- uid: ESAPIX.DVH.Constraints.ConstraintResult
+  commentId: T:ESAPIX.DVH.Constraints.ConstraintResult
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ConstraintResult
+  nameWithType: ConstraintResult
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.Constrain*
+  commentId: Overload:ESAPIX.DVH.Constraints.NFractionConstraint.Constrain
+  isExternal: false
+  name: Constrain
+  nameWithType: NFractionConstraint.Constrain
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.Constrain
+- uid: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: true
+  name: Constrain(PlanningItem)
+  nameWithType: IConstraint.Constrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  spec.csharp:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+    name: Constrain
+    nameWithType: IConstraint.Constrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+    name: Constrain
+    nameWithType: IConstraint.Constrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType*
+  commentId: Overload:ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType
+  isExternal: false
+  name: GetFailedResultType
+  nameWithType: NFractionConstraint.GetFailedResultType
+  fullName: ESAPIX.DVH.Constraints.NFractionConstraint.GetFailedResultType
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  commentId: M:ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  parent: ESAPIX.DVH.Constraints.IPriorityConstraint
+  isExternal: false
+  name: GetFailedResultType()
+  nameWithType: IPriorityConstraint.GetFailedResultType()
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType()
+  spec.csharp:
+  - uid: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+    name: GetFailedResultType
+    nameWithType: IPriorityConstraint.GetFailedResultType
+    fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+    name: GetFailedResultType
+    nameWithType: IPriorityConstraint.GetFailedResultType
+    fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.DVH.Constraints.ResultType
+  commentId: T:ESAPIX.DVH.Constraints.ResultType
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ResultType
+  nameWithType: ResultType
+  fullName: ESAPIX.DVH.Constraints.ResultType

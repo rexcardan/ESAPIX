@@ -1,0 +1,202 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.Constraints.IConstraint
+  commentId: T:ESAPIX.DVH.Constraints.IConstraint
+  id: IConstraint
+  parent: ESAPIX.DVH.Constraints
+  children:
+  - ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  - ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  - ESAPIX.DVH.Constraints.IConstraint.FullName
+  - ESAPIX.DVH.Constraints.IConstraint.Name
+  langs:
+  - csharp
+  - vb
+  name: IConstraint
+  nameWithType: IConstraint
+  fullName: ESAPIX.DVH.Constraints.IConstraint
+  type: Interface
+  source:
+    id: IConstraint
+    path: ''
+    startLine: 2038
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public interface IConstraint
+    content.vb: Public Interface IConstraint
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: ESAPIX.DVH.Constraints.IConstraint.Name
+  commentId: P:ESAPIX.DVH.Constraints.IConstraint.Name
+  id: Name
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 2040
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: ESAPIX.DVH.Constraints.IConstraint.Name*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: ESAPIX.DVH.Constraints.IConstraint.FullName
+  commentId: P:ESAPIX.DVH.Constraints.IConstraint.FullName
+  id: FullName
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  langs:
+  - csharp
+  - vb
+  name: FullName
+  nameWithType: IConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.IConstraint.FullName
+  type: Property
+  source:
+    id: FullName
+    path: ''
+    startLine: 2041
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: string FullName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property FullName As String
+  overload: ESAPIX.DVH.Constraints.IConstraint.FullName*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  id: Constrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  langs:
+  - csharp
+  - vb
+  name: Constrain(PlanningItem)
+  nameWithType: IConstraint.Constrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  type: Method
+  source:
+    id: Constrain
+    path: ''
+    startLine: 2043
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: ConstraintResult Constrain(PlanningItem pi)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    return:
+      type: ESAPIX.DVH.Constraints.ConstraintResult
+    content.vb: Function Constrain(pi As PlanningItem) As ConstraintResult
+  overload: ESAPIX.DVH.Constraints.IConstraint.Constrain*
+- uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  id: CanConstrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  langs:
+  - csharp
+  - vb
+  name: CanConstrain(PlanningItem)
+  nameWithType: IConstraint.CanConstrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  type: Method
+  source:
+    id: CanConstrain
+    path: ''
+    startLine: 2044
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: ConstraintResult CanConstrain(PlanningItem pi)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    return:
+      type: ESAPIX.DVH.Constraints.ConstraintResult
+    content.vb: Function CanConstrain(pi As PlanningItem) As ConstraintResult
+  overload: ESAPIX.DVH.Constraints.IConstraint.CanConstrain*
+references:
+- uid: ESAPIX.DVH.Constraints
+  commentId: N:ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ESAPIX.DVH.Constraints
+  nameWithType: ESAPIX.DVH.Constraints
+  fullName: ESAPIX.DVH.Constraints
+- uid: ESAPIX.DVH.Constraints.IConstraint.Name*
+  commentId: Overload:ESAPIX.DVH.Constraints.IConstraint.Name
+  isExternal: false
+  name: Name
+  nameWithType: IConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.DVH.Constraints.IConstraint.FullName*
+  commentId: Overload:ESAPIX.DVH.Constraints.IConstraint.FullName
+  isExternal: false
+  name: FullName
+  nameWithType: IConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.IConstraint.FullName
+- uid: ESAPIX.DVH.Constraints.IConstraint.Constrain*
+  commentId: Overload:ESAPIX.DVH.Constraints.IConstraint.Constrain
+  isExternal: false
+  name: Constrain
+  nameWithType: IConstraint.Constrain
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain
+- uid: PlanningItem
+  isExternal: true
+  name: PlanningItem
+  nameWithType: PlanningItem
+  fullName: PlanningItem
+- uid: ESAPIX.DVH.Constraints.ConstraintResult
+  commentId: T:ESAPIX.DVH.Constraints.ConstraintResult
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ConstraintResult
+  nameWithType: ConstraintResult
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult
+- uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain*
+  commentId: Overload:ESAPIX.DVH.Constraints.IConstraint.CanConstrain
+  isExternal: false
+  name: CanConstrain
+  nameWithType: IConstraint.CanConstrain
+  fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain

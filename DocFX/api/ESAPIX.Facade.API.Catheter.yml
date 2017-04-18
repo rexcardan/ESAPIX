@@ -1,0 +1,1115 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.Catheter
+  commentId: T:ESAPIX.Facade.API.Catheter
+  id: Catheter
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.Catheter.#ctor
+  - ESAPIX.Facade.API.Catheter.#ctor(System.Object)
+  - ESAPIX.Facade.API.Catheter.ApplicatorLength
+  - ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID
+  - ESAPIX.Facade.API.Catheter.ChannelNumber
+  - ESAPIX.Facade.API.Catheter.Color
+  - ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip(ESAPIX.Facade.API.SourcePosition)
+  - ESAPIX.Facade.API.Catheter.GetTotalDwellTime
+  - ESAPIX.Facade.API.Catheter.Shape
+  - ESAPIX.Facade.API.Catheter.SourcePositions
+  - ESAPIX.Facade.API.Catheter.StepSize
+  - ESAPIX.Facade.API.Catheter.TreatmentUnit
+  - ESAPIX.Facade.API.Catheter.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: Catheter
+  nameWithType: Catheter
+  fullName: ESAPIX.Facade.API.Catheter
+  type: Class
+  source:
+    id: Catheter
+    path: ''
+    startLine: 6640
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: 'public class Catheter : ApiDataObject'
+    content.vb: >-
+      Public Class Catheter
+          Inherits ApiDataObject
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.API.SerializableObject
+  - ESAPIX.Facade.API.ApiDataObject
+  inheritedMembers:
+  - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.Name
+  - ESAPIX.Facade.API.ApiDataObject.Comment
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.ToString
+  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.SerializableObject.GetSchema
+  - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.Catheter.#ctor
+  commentId: M:ESAPIX.Facade.API.Catheter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: Catheter()
+  nameWithType: Catheter.Catheter()
+  fullName: ESAPIX.Facade.API.Catheter.Catheter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 6642
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Catheter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Catheter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Catheter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: Catheter(Object)
+  nameWithType: Catheter.Catheter(Object)
+  fullName: ESAPIX.Facade.API.Catheter.Catheter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 6643
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Catheter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Catheter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.ApplicatorLength
+  commentId: P:ESAPIX.Facade.API.Catheter.ApplicatorLength
+  id: ApplicatorLength
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorLength
+  nameWithType: Catheter.ApplicatorLength
+  fullName: ESAPIX.Facade.API.Catheter.ApplicatorLength
+  type: Property
+  source:
+    id: ApplicatorLength
+    path: ''
+    startLine: 6644
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ApplicatorLength { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ApplicatorLength As Double
+  overload: ESAPIX.Facade.API.Catheter.ApplicatorLength*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID
+  commentId: P:ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID
+  id: BrachySolidApplicatorPartID
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicatorPartID
+  nameWithType: Catheter.BrachySolidApplicatorPartID
+  fullName: ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID
+  type: Property
+  source:
+    id: BrachySolidApplicatorPartID
+    path: ''
+    startLine: 6657
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int BrachySolidApplicatorPartID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property BrachySolidApplicatorPartID As Integer
+  overload: ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.ChannelNumber
+  commentId: P:ESAPIX.Facade.API.Catheter.ChannelNumber
+  id: ChannelNumber
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: ChannelNumber
+  nameWithType: Catheter.ChannelNumber
+  fullName: ESAPIX.Facade.API.Catheter.ChannelNumber
+  type: Property
+  source:
+    id: ChannelNumber
+    path: ''
+    startLine: 6670
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int ChannelNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ChannelNumber As Integer
+  overload: ESAPIX.Facade.API.Catheter.ChannelNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.Color
+  commentId: P:ESAPIX.Facade.API.Catheter.Color
+  id: Color
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Catheter.Color
+  fullName: ESAPIX.Facade.API.Catheter.Color
+  type: Property
+  source:
+    id: Color
+    path: ''
+    startLine: 6683
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Color Color { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property Color As Windows.Media.Color
+  overload: ESAPIX.Facade.API.Catheter.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.Shape
+  commentId: P:ESAPIX.Facade.API.Catheter.Shape
+  id: Shape
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: Shape
+  nameWithType: Catheter.Shape
+  fullName: ESAPIX.Facade.API.Catheter.Shape
+  type: Property
+  source:
+    id: Shape
+    path: ''
+    startLine: 6696
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public VVector[] Shape { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.VVector[]
+    content.vb: Public Property Shape As VVector()
+  overload: ESAPIX.Facade.API.Catheter.Shape*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.SourcePositions
+  commentId: P:ESAPIX.Facade.API.Catheter.SourcePositions
+  id: SourcePositions
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: SourcePositions
+  nameWithType: Catheter.SourcePositions
+  fullName: ESAPIX.Facade.API.Catheter.SourcePositions
+  type: Property
+  source:
+    id: SourcePositions
+    path: ''
+    startLine: 6709
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<SourcePosition> SourcePositions { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.SourcePosition}
+    content.vb: Public ReadOnly Property SourcePositions As IEnumerable(Of SourcePosition)
+  overload: ESAPIX.Facade.API.Catheter.SourcePositions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.Catheter.StepSize
+  commentId: P:ESAPIX.Facade.API.Catheter.StepSize
+  id: StepSize
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: StepSize
+  nameWithType: Catheter.StepSize
+  fullName: ESAPIX.Facade.API.Catheter.StepSize
+  type: Property
+  source:
+    id: StepSize
+    path: ''
+    startLine: 6735
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StepSize { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StepSize As Double
+  overload: ESAPIX.Facade.API.Catheter.StepSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.TreatmentUnit
+  commentId: P:ESAPIX.Facade.API.Catheter.TreatmentUnit
+  id: TreatmentUnit
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: TreatmentUnit
+  nameWithType: Catheter.TreatmentUnit
+  fullName: ESAPIX.Facade.API.Catheter.TreatmentUnit
+  type: Property
+  source:
+    id: TreatmentUnit
+    path: ''
+    startLine: 6748
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyTreatmentUnit TreatmentUnit { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.BrachyTreatmentUnit
+    content.vb: Public Property TreatmentUnit As BrachyTreatmentUnit
+  overload: ESAPIX.Facade.API.Catheter.TreatmentUnit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.Catheter.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: Catheter.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.Catheter.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 6761
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.API.Catheter.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip(ESAPIX.Facade.API.SourcePosition)
+  commentId: M:ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip(ESAPIX.Facade.API.SourcePosition)
+  id: GetSourcePosCenterDistanceFromTip(ESAPIX.Facade.API.SourcePosition)
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: GetSourcePosCenterDistanceFromTip(SourcePosition)
+  nameWithType: Catheter.GetSourcePosCenterDistanceFromTip(SourcePosition)
+  fullName: ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip(ESAPIX.Facade.API.SourcePosition)
+  type: Method
+  source:
+    id: GetSourcePosCenterDistanceFromTip
+    path: ''
+    startLine: 6770
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GetSourcePosCenterDistanceFromTip(SourcePosition sourcePosition)
+    parameters:
+    - id: sourcePosition
+      type: ESAPIX.Facade.API.SourcePosition
+    return:
+      type: System.Double
+    content.vb: Public Function GetSourcePosCenterDistanceFromTip(sourcePosition As SourcePosition) As Double
+  overload: ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Catheter.GetTotalDwellTime
+  commentId: M:ESAPIX.Facade.API.Catheter.GetTotalDwellTime
+  id: GetTotalDwellTime
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: GetTotalDwellTime()
+  nameWithType: Catheter.GetTotalDwellTime()
+  fullName: ESAPIX.Facade.API.Catheter.GetTotalDwellTime()
+  type: Method
+  source:
+    id: GetTotalDwellTime
+    path: ''
+    startLine: 6777
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GetTotalDwellTime()
+    return:
+      type: System.Double
+    content.vb: Public Function GetTotalDwellTime As Double
+  overload: ESAPIX.Facade.API.Catheter.GetTotalDwellTime*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.API.SerializableObject
+  commentId: T:ESAPIX.Facade.API.SerializableObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SerializableObject
+  nameWithType: SerializableObject
+  fullName: ESAPIX.Facade.API.SerializableObject
+- uid: ESAPIX.Facade.API.ApiDataObject
+  commentId: T:ESAPIX.Facade.API.ApiDataObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ApiDataObject
+  nameWithType: ApiDataObject
+  fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+- uid: ESAPIX.Facade.API.ApiDataObject.ToString
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: ToString()
+  nameWithType: ApiDataObject.ToString()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
+    name: ToString
+    nameWithType: ApiDataObject.ToString
+    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
+    name: ToString
+    nameWithType: ApiDataObject.ToString
+    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ApiDataObject.Equals(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+    name: Equals
+    nameWithType: ApiDataObject.Equals
+    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+    name: Equals
+    nameWithType: ApiDataObject.Equals
+    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: GetHashCode()
+  nameWithType: ApiDataObject.GetHashCode()
+  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+    name: GetHashCode
+    nameWithType: ApiDataObject.GetHashCode
+    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+    name: GetHashCode
+    nameWithType: ApiDataObject.GetHashCode
+    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+  commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: GetSchema()
+  nameWithType: SerializableObject.GetSchema()
+  fullName: ESAPIX.Facade.API.SerializableObject.GetSchema()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: SerializableObject.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: ClearSerializationHistory()
+  nameWithType: SerializableObject.ClearSerializationHistory()
+  fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.Catheter.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.#ctor
+  isExternal: false
+  name: Catheter
+  nameWithType: Catheter.Catheter
+  fullName: ESAPIX.Facade.API.Catheter.Catheter
+- uid: ESAPIX.Facade.API.Catheter.ApplicatorLength*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.ApplicatorLength
+  isExternal: false
+  name: ApplicatorLength
+  nameWithType: Catheter.ApplicatorLength
+  fullName: ESAPIX.Facade.API.Catheter.ApplicatorLength
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID
+  isExternal: false
+  name: BrachySolidApplicatorPartID
+  nameWithType: Catheter.BrachySolidApplicatorPartID
+  fullName: ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.Facade.API.Catheter.ChannelNumber*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.ChannelNumber
+  isExternal: false
+  name: ChannelNumber
+  nameWithType: Catheter.ChannelNumber
+  fullName: ESAPIX.Facade.API.Catheter.ChannelNumber
+- uid: ESAPIX.Facade.API.Catheter.Color*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.Color
+  isExternal: false
+  name: Color
+  nameWithType: Catheter.Color
+  fullName: ESAPIX.Facade.API.Catheter.Color
+- uid: System.Windows.Media.Color
+  isExternal: true
+  name: Windows.Media.Color
+  nameWithType: Windows.Media.Color
+  fullName: System.Windows.Media.Color
+- uid: ESAPIX.Facade.API.Catheter.Shape*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.Shape
+  isExternal: false
+  name: Shape
+  nameWithType: Catheter.Shape
+  fullName: ESAPIX.Facade.API.Catheter.Shape
+- uid: ESAPIX.Facade.Types.VVector[]
+  name: VVector[]
+  nameWithType: VVector[]
+  fullName: ESAPIX.Facade.Types.VVector[]
+  nameWithType.vb: VVector()
+  fullName.vb: ESAPIX.Facade.Types.VVector()
+  name.vb: VVector()
+  spec.csharp:
+  - uid: ESAPIX.Facade.Types.VVector
+    name: VVector
+    nameWithType: VVector
+    fullName: ESAPIX.Facade.Types.VVector
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: ESAPIX.Facade.Types.VVector
+    name: VVector
+    nameWithType: VVector
+    fullName: ESAPIX.Facade.Types.VVector
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: ESAPIX.Facade.API.Catheter.SourcePositions*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.SourcePositions
+  isExternal: false
+  name: SourcePositions
+  nameWithType: Catheter.SourcePositions
+  fullName: ESAPIX.Facade.API.Catheter.SourcePositions
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.SourcePosition}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.SourcePosition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<SourcePosition>
+  nameWithType: IEnumerable<SourcePosition>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.SourcePosition>
+  nameWithType.vb: IEnumerable(Of SourcePosition)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.SourcePosition)
+  name.vb: IEnumerable(Of SourcePosition)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.SourcePosition
+    name: SourcePosition
+    nameWithType: SourcePosition
+    fullName: ESAPIX.Facade.API.SourcePosition
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.SourcePosition
+    name: SourcePosition
+    nameWithType: SourcePosition
+    fullName: ESAPIX.Facade.API.SourcePosition
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Facade.API.Catheter.StepSize*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.StepSize
+  isExternal: false
+  name: StepSize
+  nameWithType: Catheter.StepSize
+  fullName: ESAPIX.Facade.API.Catheter.StepSize
+- uid: ESAPIX.Facade.API.Catheter.TreatmentUnit*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.TreatmentUnit
+  isExternal: false
+  name: TreatmentUnit
+  nameWithType: Catheter.TreatmentUnit
+  fullName: ESAPIX.Facade.API.Catheter.TreatmentUnit
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit
+  commentId: T:ESAPIX.Facade.API.BrachyTreatmentUnit
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: BrachyTreatmentUnit
+  nameWithType: BrachyTreatmentUnit
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit
+- uid: ESAPIX.Facade.API.Catheter.WriteXml*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: Catheter.WriteXml
+  fullName: ESAPIX.Facade.API.Catheter.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter
+- uid: ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip
+  isExternal: false
+  name: GetSourcePosCenterDistanceFromTip
+  nameWithType: Catheter.GetSourcePosCenterDistanceFromTip
+  fullName: ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip
+- uid: ESAPIX.Facade.API.SourcePosition
+  commentId: T:ESAPIX.Facade.API.SourcePosition
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SourcePosition
+  nameWithType: SourcePosition
+  fullName: ESAPIX.Facade.API.SourcePosition
+- uid: ESAPIX.Facade.API.Catheter.GetTotalDwellTime*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.GetTotalDwellTime
+  isExternal: false
+  name: GetTotalDwellTime
+  nameWithType: Catheter.GetTotalDwellTime
+  fullName: ESAPIX.Facade.API.Catheter.GetTotalDwellTime

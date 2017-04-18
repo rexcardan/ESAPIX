@@ -1,0 +1,644 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  commentId: T:ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  id: ExternalBeamMachineParameters
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor(System.Object)
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor(System.String,System.String,System.Int32,System.String,System.String)
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId
+  - ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId
+  langs:
+  - csharp
+  - vb
+  name: ExternalBeamMachineParameters
+  nameWithType: ExternalBeamMachineParameters
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  type: Class
+  source:
+    id: ExternalBeamMachineParameters
+    path: ''
+    startLine: 13609
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class ExternalBeamMachineParameters
+    content.vb: Public Class ExternalBeamMachineParameters
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor
+  commentId: M:ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: ExternalBeamMachineParameters()
+  nameWithType: ExternalBeamMachineParameters.ExternalBeamMachineParameters()
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.ExternalBeamMachineParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13612
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public ExternalBeamMachineParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: ExternalBeamMachineParameters(Object)
+  nameWithType: ExternalBeamMachineParameters.ExternalBeamMachineParameters(Object)
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.ExternalBeamMachineParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13613
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public ExternalBeamMachineParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor(System.String,System.String,System.Int32,System.String,System.String)
+  commentId: M:ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor(System.String,System.String,System.Int32,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.Int32,System.String,System.String)'
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: ExternalBeamMachineParameters(String, String, Int32, String, String)
+  nameWithType: ExternalBeamMachineParameters.ExternalBeamMachineParameters(String, String, Int32, String, String)
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.ExternalBeamMachineParameters(System.String, System.String, System.Int32, System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13614
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public ExternalBeamMachineParameters(string machineId, string energyModeId, int doseRate, string techniqueId, string primaryFluenceModeId)
+    parameters:
+    - id: machineId
+      type: System.String
+    - id: energyModeId
+      type: System.String
+    - id: doseRate
+      type: System.Int32
+    - id: techniqueId
+      type: System.String
+    - id: primaryFluenceModeId
+      type: System.String
+    content.vb: Public Sub New(machineId As String, energyModeId As String, doseRate As Integer, techniqueId As String, primaryFluenceModeId As String)
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId
+  commentId: P:ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId
+  id: MachineId
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: MachineId
+  nameWithType: ExternalBeamMachineParameters.MachineId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId
+  type: Property
+  source:
+    id: MachineId
+    path: ''
+    startLine: 13628
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string MachineId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MachineId As String
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
+  commentId: P:ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
+  id: EnergyModeId
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: EnergyModeId
+  nameWithType: ExternalBeamMachineParameters.EnergyModeId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
+  type: Property
+  source:
+    id: EnergyModeId
+    path: ''
+    startLine: 13641
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string EnergyModeId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EnergyModeId As String
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate
+  commentId: P:ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate
+  id: DoseRate
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: DoseRate
+  nameWithType: ExternalBeamMachineParameters.DoseRate
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate
+  type: Property
+  source:
+    id: DoseRate
+    path: ''
+    startLine: 13654
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public int DoseRate { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DoseRate As Integer
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId
+  commentId: P:ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId
+  id: PrimaryFluenceModeId
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: PrimaryFluenceModeId
+  nameWithType: ExternalBeamMachineParameters.PrimaryFluenceModeId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId
+  type: Property
+  source:
+    id: PrimaryFluenceModeId
+    path: ''
+    startLine: 13667
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string PrimaryFluenceModeId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PrimaryFluenceModeId As String
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId
+  commentId: P:ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId
+  id: TechniqueId
+  parent: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+  langs:
+  - csharp
+  - vb
+  name: TechniqueId
+  nameWithType: ExternalBeamMachineParameters.TechniqueId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId
+  type: Property
+  source:
+    id: TechniqueId
+    path: ''
+    startLine: 13680
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string TechniqueId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TechniqueId As String
+  overload: ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.#ctor
+  isExternal: false
+  name: ExternalBeamMachineParameters
+  nameWithType: ExternalBeamMachineParameters.ExternalBeamMachineParameters
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.ExternalBeamMachineParameters
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId*
+  commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId
+  isExternal: false
+  name: MachineId
+  nameWithType: ExternalBeamMachineParameters.MachineId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId*
+  commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
+  isExternal: false
+  name: EnergyModeId
+  nameWithType: ExternalBeamMachineParameters.EnergyModeId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate*
+  commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate
+  isExternal: false
+  name: DoseRate
+  nameWithType: ExternalBeamMachineParameters.DoseRate
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.DoseRate
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId*
+  commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId
+  isExternal: false
+  name: PrimaryFluenceModeId
+  nameWithType: ExternalBeamMachineParameters.PrimaryFluenceModeId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.PrimaryFluenceModeId
+- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId*
+  commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId
+  isExternal: false
+  name: TechniqueId
+  nameWithType: ExternalBeamMachineParameters.TechniqueId
+  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.TechniqueId

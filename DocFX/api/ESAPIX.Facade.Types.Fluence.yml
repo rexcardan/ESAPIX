@@ -1,0 +1,825 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.Fluence
+  commentId: T:ESAPIX.Facade.Types.Fluence
+  id: Fluence
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.Fluence.#ctor
+  - ESAPIX.Facade.Types.Fluence.#ctor(System.Object)
+  - ESAPIX.Facade.Types.Fluence.#ctor(System.Single[0:,0:],System.Double,System.Double)
+  - ESAPIX.Facade.Types.Fluence.#ctor(System.Single[0:,0:],System.Double,System.Double,System.String)
+  - ESAPIX.Facade.Types.Fluence.GetPixels
+  - ESAPIX.Facade.Types.Fluence.MLCId
+  - ESAPIX.Facade.Types.Fluence.XOrigin
+  - ESAPIX.Facade.Types.Fluence.XSizeMM
+  - ESAPIX.Facade.Types.Fluence.XSizePixel
+  - ESAPIX.Facade.Types.Fluence.YOrigin
+  - ESAPIX.Facade.Types.Fluence.YSizeMM
+  - ESAPIX.Facade.Types.Fluence.YSizePixel
+  langs:
+  - csharp
+  - vb
+  name: Fluence
+  nameWithType: Fluence
+  fullName: ESAPIX.Facade.Types.Fluence
+  type: Class
+  source:
+    id: Fluence
+    path: ''
+    startLine: 13704
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class Fluence
+    content.vb: Public Class Fluence
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.Fluence.#ctor
+  commentId: M:ESAPIX.Facade.Types.Fluence.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: Fluence()
+  nameWithType: Fluence.Fluence()
+  fullName: ESAPIX.Facade.Types.Fluence.Fluence()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13707
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Fluence()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.Fluence.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.Fluence.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: Fluence(Object)
+  nameWithType: Fluence.Fluence(Object)
+  fullName: ESAPIX.Facade.Types.Fluence.Fluence(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13708
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Fluence(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.Fluence.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.#ctor(System.Single[0:,0:],System.Double,System.Double)
+  commentId: M:ESAPIX.Facade.Types.Fluence.#ctor(System.Single[0:,0:],System.Double,System.Double)
+  id: '#ctor(System.Single[0:,0:],System.Double,System.Double)'
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: Fluence(Single[,], Double, Double)
+  nameWithType: Fluence.Fluence(Single[,], Double, Double)
+  fullName: ESAPIX.Facade.Types.Fluence.Fluence(System.Single[,], System.Double, System.Double)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13709
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Fluence(float[, ] fluenceMatrix, double xOrigin, double yOrigin)
+    parameters:
+    - id: fluenceMatrix
+      type: System.Single[,]
+    - id: xOrigin
+      type: System.Double
+    - id: yOrigin
+      type: System.Double
+    content.vb: Public Sub New(fluenceMatrix As Single(,), xOrigin As Double, yOrigin As Double)
+  overload: ESAPIX.Facade.Types.Fluence.#ctor*
+  nameWithType.vb: Fluence.Fluence(Single(,), Double, Double)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.Types.Fluence.Fluence(System.Single(,), System.Double, System.Double)
+  name.vb: Fluence(Single(,), Double, Double)
+- uid: ESAPIX.Facade.Types.Fluence.#ctor(System.Single[0:,0:],System.Double,System.Double,System.String)
+  commentId: M:ESAPIX.Facade.Types.Fluence.#ctor(System.Single[0:,0:],System.Double,System.Double,System.String)
+  id: '#ctor(System.Single[0:,0:],System.Double,System.Double,System.String)'
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: Fluence(Single[,], Double, Double, String)
+  nameWithType: Fluence.Fluence(Single[,], Double, Double, String)
+  fullName: ESAPIX.Facade.Types.Fluence.Fluence(System.Single[,], System.Double, System.Double, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13721
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Fluence(float[, ] fluenceMatrix, double xOrigin, double yOrigin, string mlcId)
+    parameters:
+    - id: fluenceMatrix
+      type: System.Single[,]
+    - id: xOrigin
+      type: System.Double
+    - id: yOrigin
+      type: System.Double
+    - id: mlcId
+      type: System.String
+    content.vb: Public Sub New(fluenceMatrix As Single(,), xOrigin As Double, yOrigin As Double, mlcId As String)
+  overload: ESAPIX.Facade.Types.Fluence.#ctor*
+  nameWithType.vb: Fluence.Fluence(Single(,), Double, Double, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.Types.Fluence.Fluence(System.Single(,), System.Double, System.Double, System.String)
+  name.vb: Fluence(Single(,), Double, Double, String)
+- uid: ESAPIX.Facade.Types.Fluence.XSizePixel
+  commentId: P:ESAPIX.Facade.Types.Fluence.XSizePixel
+  id: XSizePixel
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: XSizePixel
+  nameWithType: Fluence.XSizePixel
+  fullName: ESAPIX.Facade.Types.Fluence.XSizePixel
+  type: Property
+  source:
+    id: XSizePixel
+    path: ''
+    startLine: 13734
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public int XSizePixel { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property XSizePixel As Integer
+  overload: ESAPIX.Facade.Types.Fluence.XSizePixel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.YSizePixel
+  commentId: P:ESAPIX.Facade.Types.Fluence.YSizePixel
+  id: YSizePixel
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: YSizePixel
+  nameWithType: Fluence.YSizePixel
+  fullName: ESAPIX.Facade.Types.Fluence.YSizePixel
+  type: Property
+  source:
+    id: YSizePixel
+    path: ''
+    startLine: 13747
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public int YSizePixel { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property YSizePixel As Integer
+  overload: ESAPIX.Facade.Types.Fluence.YSizePixel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.XSizeMM
+  commentId: P:ESAPIX.Facade.Types.Fluence.XSizeMM
+  id: XSizeMM
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: XSizeMM
+  nameWithType: Fluence.XSizeMM
+  fullName: ESAPIX.Facade.Types.Fluence.XSizeMM
+  type: Property
+  source:
+    id: XSizeMM
+    path: ''
+    startLine: 13760
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double XSizeMM { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property XSizeMM As Double
+  overload: ESAPIX.Facade.Types.Fluence.XSizeMM*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.YSizeMM
+  commentId: P:ESAPIX.Facade.Types.Fluence.YSizeMM
+  id: YSizeMM
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: YSizeMM
+  nameWithType: Fluence.YSizeMM
+  fullName: ESAPIX.Facade.Types.Fluence.YSizeMM
+  type: Property
+  source:
+    id: YSizeMM
+    path: ''
+    startLine: 13773
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double YSizeMM { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property YSizeMM As Double
+  overload: ESAPIX.Facade.Types.Fluence.YSizeMM*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.XOrigin
+  commentId: P:ESAPIX.Facade.Types.Fluence.XOrigin
+  id: XOrigin
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: XOrigin
+  nameWithType: Fluence.XOrigin
+  fullName: ESAPIX.Facade.Types.Fluence.XOrigin
+  type: Property
+  source:
+    id: XOrigin
+    path: ''
+    startLine: 13786
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double XOrigin { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property XOrigin As Double
+  overload: ESAPIX.Facade.Types.Fluence.XOrigin*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.YOrigin
+  commentId: P:ESAPIX.Facade.Types.Fluence.YOrigin
+  id: YOrigin
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: YOrigin
+  nameWithType: Fluence.YOrigin
+  fullName: ESAPIX.Facade.Types.Fluence.YOrigin
+  type: Property
+  source:
+    id: YOrigin
+    path: ''
+    startLine: 13799
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double YOrigin { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property YOrigin As Double
+  overload: ESAPIX.Facade.Types.Fluence.YOrigin*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.MLCId
+  commentId: P:ESAPIX.Facade.Types.Fluence.MLCId
+  id: MLCId
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: MLCId
+  nameWithType: Fluence.MLCId
+  fullName: ESAPIX.Facade.Types.Fluence.MLCId
+  type: Property
+  source:
+    id: MLCId
+    path: ''
+    startLine: 13812
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string MLCId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MLCId As String
+  overload: ESAPIX.Facade.Types.Fluence.MLCId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.Fluence.GetPixels
+  commentId: M:ESAPIX.Facade.Types.Fluence.GetPixels
+  id: GetPixels
+  parent: ESAPIX.Facade.Types.Fluence
+  langs:
+  - csharp
+  - vb
+  name: GetPixels()
+  nameWithType: Fluence.GetPixels()
+  fullName: ESAPIX.Facade.Types.Fluence.GetPixels()
+  type: Method
+  source:
+    id: GetPixels
+    path: ''
+    startLine: 13825
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public float[, ] GetPixels()
+    return:
+      type: System.Single[,]
+    content.vb: Public Function GetPixels As Single(,)
+  overload: ESAPIX.Facade.Types.Fluence.GetPixels*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.Fluence.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.#ctor
+  isExternal: false
+  name: Fluence
+  nameWithType: Fluence.Fluence
+  fullName: ESAPIX.Facade.Types.Fluence.Fluence
+- uid: System.Single[,]
+  name: Single[,]
+  nameWithType: Single[,]
+  fullName: System.Single[,]
+  nameWithType.vb: Single(,)
+  fullName.vb: System.Single(,)
+  name.vb: Single(,)
+  spec.csharp:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '[,]'
+    nameWithType: '[,]'
+    fullName: '[,]'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: (,)
+    nameWithType: (,)
+    fullName: (,)
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.Types.Fluence.XSizePixel*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.XSizePixel
+  isExternal: false
+  name: XSizePixel
+  nameWithType: Fluence.XSizePixel
+  fullName: ESAPIX.Facade.Types.Fluence.XSizePixel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.Facade.Types.Fluence.YSizePixel*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.YSizePixel
+  isExternal: false
+  name: YSizePixel
+  nameWithType: Fluence.YSizePixel
+  fullName: ESAPIX.Facade.Types.Fluence.YSizePixel
+- uid: ESAPIX.Facade.Types.Fluence.XSizeMM*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.XSizeMM
+  isExternal: false
+  name: XSizeMM
+  nameWithType: Fluence.XSizeMM
+  fullName: ESAPIX.Facade.Types.Fluence.XSizeMM
+- uid: ESAPIX.Facade.Types.Fluence.YSizeMM*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.YSizeMM
+  isExternal: false
+  name: YSizeMM
+  nameWithType: Fluence.YSizeMM
+  fullName: ESAPIX.Facade.Types.Fluence.YSizeMM
+- uid: ESAPIX.Facade.Types.Fluence.XOrigin*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.XOrigin
+  isExternal: false
+  name: XOrigin
+  nameWithType: Fluence.XOrigin
+  fullName: ESAPIX.Facade.Types.Fluence.XOrigin
+- uid: ESAPIX.Facade.Types.Fluence.YOrigin*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.YOrigin
+  isExternal: false
+  name: YOrigin
+  nameWithType: Fluence.YOrigin
+  fullName: ESAPIX.Facade.Types.Fluence.YOrigin
+- uid: ESAPIX.Facade.Types.Fluence.MLCId*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.MLCId
+  isExternal: false
+  name: MLCId
+  nameWithType: Fluence.MLCId
+  fullName: ESAPIX.Facade.Types.Fluence.MLCId
+- uid: ESAPIX.Facade.Types.Fluence.GetPixels*
+  commentId: Overload:ESAPIX.Facade.Types.Fluence.GetPixels
+  isExternal: false
+  name: GetPixels
+  nameWithType: Fluence.GetPixels
+  fullName: ESAPIX.Facade.Types.Fluence.GetPixels

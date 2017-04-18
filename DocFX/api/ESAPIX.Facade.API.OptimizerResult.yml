@@ -1,0 +1,715 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.OptimizerResult
+  commentId: T:ESAPIX.Facade.API.OptimizerResult
+  id: OptimizerResult
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.OptimizerResult.#ctor
+  - ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  - ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  - ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  - ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult
+  nameWithType: OptimizerResult
+  fullName: ESAPIX.Facade.API.OptimizerResult
+  type: Class
+  source:
+    id: OptimizerResult
+    path: ''
+    startLine: 9994
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: 'public class OptimizerResult : CalculationResult'
+    content.vb: >-
+      Public Class OptimizerResult
+          Inherits CalculationResult
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.API.CalculationResult
+  inheritedMembers:
+  - ESAPIX.Facade.API.CalculationResult.Success
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult()
+  nameWithType: OptimizerResult.OptimizerResult()
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9996
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult(Object)
+  nameWithType: OptimizerResult.OptimizerResult(Object)
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9997
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  id: StructureDVHs
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureDVHs
+  nameWithType: OptimizerResult.StructureDVHs
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  type: Property
+  source:
+    id: StructureDVHs
+    path: ''
+    startLine: 9998
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerDVH> StructureDVHs { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+    content.vb: Public ReadOnly Property StructureDVHs As IEnumerable(Of OptimizerDVH)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  id: StructureObjectiveValues
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureObjectiveValues
+  nameWithType: OptimizerResult.StructureObjectiveValues
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  type: Property
+  source:
+    id: StructureObjectiveValues
+    path: ''
+    startLine: 10024
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+    content.vb: Public ReadOnly Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  id: TotalObjectiveFunctionValue
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: TotalObjectiveFunctionValue
+  nameWithType: OptimizerResult.TotalObjectiveFunctionValue
+  fullName: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  type: Property
+  source:
+    id: TotalObjectiveFunctionValue
+    path: ''
+    startLine: 10050
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TotalObjectiveFunctionValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TotalObjectiveFunctionValue As Double
+  overload: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  id: NumberOfIMRTOptimizerIterations
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: NumberOfIMRTOptimizerIterations
+  nameWithType: OptimizerResult.NumberOfIMRTOptimizerIterations
+  fullName: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  type: Property
+  source:
+    id: NumberOfIMRTOptimizerIterations
+    path: ''
+    startLine: 10063
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int NumberOfIMRTOptimizerIterations { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
+  overload: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.API.CalculationResult
+  commentId: T:ESAPIX.Facade.API.CalculationResult
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: CalculationResult
+  nameWithType: CalculationResult
+  fullName: ESAPIX.Facade.API.CalculationResult
+- uid: ESAPIX.Facade.API.CalculationResult.Success
+  commentId: P:ESAPIX.Facade.API.CalculationResult.Success
+  parent: ESAPIX.Facade.API.CalculationResult
+  isExternal: false
+  name: Success
+  nameWithType: CalculationResult.Success
+  fullName: ESAPIX.Facade.API.CalculationResult.Success
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.#ctor
+  isExternal: false
+  name: OptimizerResult
+  nameWithType: OptimizerResult.OptimizerResult
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  isExternal: false
+  name: StructureDVHs
+  nameWithType: OptimizerResult.StructureDVHs
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<OptimizerDVH>
+  nameWithType: IEnumerable<OptimizerDVH>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.OptimizerDVH>
+  nameWithType.vb: IEnumerable(Of OptimizerDVH)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.OptimizerDVH)
+  name.vb: IEnumerable(Of OptimizerDVH)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.OptimizerDVH
+    name: OptimizerDVH
+    nameWithType: OptimizerDVH
+    fullName: ESAPIX.Facade.API.OptimizerDVH
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.OptimizerDVH
+    name: OptimizerDVH
+    nameWithType: OptimizerDVH
+    fullName: ESAPIX.Facade.API.OptimizerDVH
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  isExternal: false
+  name: StructureObjectiveValues
+  nameWithType: OptimizerResult.StructureObjectiveValues
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<OptimizerObjectiveValue>
+  nameWithType: IEnumerable<OptimizerObjectiveValue>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.OptimizerObjectiveValue>
+  nameWithType.vb: IEnumerable(Of OptimizerObjectiveValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.OptimizerObjectiveValue)
+  name.vb: IEnumerable(Of OptimizerObjectiveValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.OptimizerObjectiveValue
+    name: OptimizerObjectiveValue
+    nameWithType: OptimizerObjectiveValue
+    fullName: ESAPIX.Facade.API.OptimizerObjectiveValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.OptimizerObjectiveValue
+    name: OptimizerObjectiveValue
+    nameWithType: OptimizerObjectiveValue
+    fullName: ESAPIX.Facade.API.OptimizerObjectiveValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  isExternal: false
+  name: TotalObjectiveFunctionValue
+  nameWithType: OptimizerResult.TotalObjectiveFunctionValue
+  fullName: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  isExternal: false
+  name: NumberOfIMRTOptimizerIterations
+  nameWithType: OptimizerResult.NumberOfIMRTOptimizerIterations
+  fullName: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

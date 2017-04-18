@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.StandAloneContext.PatientChangedHandler
+  commentId: T:ESAPIX.AppKit.StandAloneContext.PatientChangedHandler
+  id: StandAloneContext.PatientChangedHandler
+  parent: ESAPIX.AppKit
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: StandAloneContext.PatientChangedHandler
+  nameWithType: StandAloneContext.PatientChangedHandler
+  fullName: ESAPIX.AppKit.StandAloneContext.PatientChangedHandler
+  type: Delegate
+  source:
+    id: PatientChangedHandler
+    path: ''
+    startLine: 555
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public delegate void PatientChangedHandler(Patient newPatient);
+    parameters:
+    - id: newPatient
+      type: Patient
+    content.vb: Public Delegate Sub PatientChangedHandler(newPatient As Patient)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: Patient
+  isExternal: true
+  name: Patient
+  nameWithType: Patient
+  fullName: Patient

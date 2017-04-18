@@ -1,0 +1,226 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint
+  commentId: T:ESAPIX.DVH.Constraints.IPriorityConstraint
+  id: IPriorityConstraint
+  parent: ESAPIX.DVH.Constraints
+  children:
+  - ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  - ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  langs:
+  - csharp
+  - vb
+  name: IPriorityConstraint
+  nameWithType: IPriorityConstraint
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint
+  type: Interface
+  source:
+    id: IPriorityConstraint
+    path: ''
+    startLine: 2057
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: 'public interface IPriorityConstraint : IConstraint'
+    content.vb: >-
+      Public Interface IPriorityConstraint
+          Inherits IConstraint
+  inheritedMembers:
+  - ESAPIX.DVH.Constraints.IConstraint.Name
+  - ESAPIX.DVH.Constraints.IConstraint.FullName
+  - ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  - ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  commentId: P:ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  id: Priority
+  parent: ESAPIX.DVH.Constraints.IPriorityConstraint
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: IPriorityConstraint.Priority
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 2059
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: PriorityType Priority { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+    content.vb: Property Priority As PriorityType
+  overload: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority*
+  modifiers.csharp:
+  - get
+  - set
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  commentId: M:ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  id: GetFailedResultType
+  parent: ESAPIX.DVH.Constraints.IPriorityConstraint
+  langs:
+  - csharp
+  - vb
+  name: GetFailedResultType()
+  nameWithType: IPriorityConstraint.GetFailedResultType()
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType()
+  type: Method
+  source:
+    id: GetFailedResultType
+    path: ''
+    startLine: 2065
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nThe result type associated with this priority level\n"
+  example: []
+  syntax:
+    content: ResultType GetFailedResultType()
+    return:
+      type: ESAPIX.DVH.Constraints.ResultType
+      description: ''
+    content.vb: Function GetFailedResultType As ResultType
+  overload: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType*
+references:
+- uid: ESAPIX.DVH.Constraints
+  commentId: N:ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ESAPIX.DVH.Constraints
+  nameWithType: ESAPIX.DVH.Constraints
+  fullName: ESAPIX.DVH.Constraints
+- uid: ESAPIX.DVH.Constraints.IConstraint.Name
+  commentId: P:ESAPIX.DVH.Constraints.IConstraint.Name
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: false
+  name: Name
+  nameWithType: IConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Name
+- uid: ESAPIX.DVH.Constraints.IConstraint.FullName
+  commentId: P:ESAPIX.DVH.Constraints.IConstraint.FullName
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: false
+  name: FullName
+  nameWithType: IConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.IConstraint.FullName
+- uid: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: true
+  name: Constrain(PlanningItem)
+  nameWithType: IConstraint.Constrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+  spec.csharp:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+    name: Constrain
+    nameWithType: IConstraint.Constrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
+    name: Constrain
+    nameWithType: IConstraint.Constrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.Constrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  commentId: M:ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  parent: ESAPIX.DVH.Constraints.IConstraint
+  isExternal: true
+  name: CanConstrain(PlanningItem)
+  nameWithType: IConstraint.CanConstrain(PlanningItem)
+  fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+  spec.csharp:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+    name: CanConstrain
+    nameWithType: IConstraint.CanConstrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
+    name: CanConstrain
+    nameWithType: IConstraint.CanConstrain
+    fullName: ESAPIX.DVH.Constraints.IConstraint.CanConstrain
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PlanningItem
+    name: PlanningItem
+    nameWithType: PlanningItem
+    fullName: PlanningItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.DVH.Constraints.IConstraint
+  commentId: T:ESAPIX.DVH.Constraints.IConstraint
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: IConstraint
+  nameWithType: IConstraint
+  fullName: ESAPIX.DVH.Constraints.IConstraint
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority*
+  commentId: Overload:ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+  isExternal: false
+  name: Priority
+  nameWithType: IPriorityConstraint.Priority
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+- uid: ESAPIX.DVH.Constraints.PriorityType
+  commentId: T:ESAPIX.DVH.Constraints.PriorityType
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: PriorityType
+  nameWithType: PriorityType
+  fullName: ESAPIX.DVH.Constraints.PriorityType
+- uid: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType*
+  commentId: Overload:ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+  isExternal: false
+  name: GetFailedResultType
+  nameWithType: IPriorityConstraint.GetFailedResultType
+  fullName: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
+- uid: ESAPIX.DVH.Constraints.ResultType
+  commentId: T:ESAPIX.DVH.Constraints.ResultType
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ResultType
+  nameWithType: ResultType
+  fullName: ESAPIX.DVH.Constraints.ResultType

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.VolumePresentation
+  commentId: T:ESAPIX.Facade.Types.VolumePresentation
+  id: VolumePresentation
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.VolumePresentation.AbsoluteCm3
+  - ESAPIX.Facade.Types.VolumePresentation.Relative
+  langs:
+  - csharp
+  - vb
+  name: VolumePresentation
+  nameWithType: VolumePresentation
+  fullName: ESAPIX.Facade.Types.VolumePresentation
+  type: Enum
+  source:
+    id: VolumePresentation
+    path: ''
+    startLine: 14871
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public enum VolumePresentation
+    content.vb: Public Enum VolumePresentation
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: ESAPIX.Facade.Types.VolumePresentation.Relative
+  commentId: F:ESAPIX.Facade.Types.VolumePresentation.Relative
+  id: Relative
+  parent: ESAPIX.Facade.Types.VolumePresentation
+  langs:
+  - csharp
+  - vb
+  name: Relative
+  nameWithType: VolumePresentation.Relative
+  fullName: ESAPIX.Facade.Types.VolumePresentation.Relative
+  type: Field
+  source:
+    id: Relative
+    path: ''
+    startLine: 14873
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: Relative = 0
+    return:
+      type: ESAPIX.Facade.Types.VolumePresentation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.Facade.Types.VolumePresentation.AbsoluteCm3
+  commentId: F:ESAPIX.Facade.Types.VolumePresentation.AbsoluteCm3
+  id: AbsoluteCm3
+  parent: ESAPIX.Facade.Types.VolumePresentation
+  langs:
+  - csharp
+  - vb
+  name: AbsoluteCm3
+  nameWithType: VolumePresentation.AbsoluteCm3
+  fullName: ESAPIX.Facade.Types.VolumePresentation.AbsoluteCm3
+  type: Field
+  source:
+    id: AbsoluteCm3
+    path: ''
+    startLine: 14874
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: AbsoluteCm3 = 1
+    return:
+      type: ESAPIX.Facade.Types.VolumePresentation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.Types.VolumePresentation
+  commentId: T:ESAPIX.Facade.Types.VolumePresentation
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: VolumePresentation
+  nameWithType: VolumePresentation
+  fullName: ESAPIX.Facade.Types.VolumePresentation

@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.Splash.SplashScreen
+  commentId: T:ESAPIX.AppKit.Splash.SplashScreen
+  id: SplashScreen
+  parent: ESAPIX.AppKit.Splash
+  children:
+  - ESAPIX.AppKit.Splash.SplashScreen.#ctor(System.String)
+  - ESAPIX.AppKit.Splash.SplashScreen.Animate
+  langs:
+  - csharp
+  - vb
+  name: SplashScreen
+  nameWithType: SplashScreen
+  fullName: ESAPIX.AppKit.Splash.SplashScreen
+  type: Class
+  source:
+    id: SplashScreen
+    path: ''
+    startLine: 1347
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Splash
+  summary: "\nInteraction logic for MainWindow.xaml\n"
+  example: []
+  syntax:
+    content: 'public class SplashScreen : Window'
+    content.vb: >-
+      Public Class SplashScreen
+          Inherits Window
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.AppKit.Splash.SplashScreen.#ctor(System.String)
+  commentId: M:ESAPIX.AppKit.Splash.SplashScreen.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: ESAPIX.AppKit.Splash.SplashScreen
+  langs:
+  - csharp
+  - vb
+  name: SplashScreen(String)
+  nameWithType: SplashScreen.SplashScreen(String)
+  fullName: ESAPIX.AppKit.Splash.SplashScreen.SplashScreen(System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1352
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Splash
+  syntax:
+    content: public SplashScreen(string softLabel = "")
+    parameters:
+    - id: softLabel
+      type: System.String
+    content.vb: Public Sub New(softLabel As String = "")
+  overload: ESAPIX.AppKit.Splash.SplashScreen.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.AppKit.Splash.SplashScreen.Animate
+  commentId: M:ESAPIX.AppKit.Splash.SplashScreen.Animate
+  id: Animate
+  parent: ESAPIX.AppKit.Splash.SplashScreen
+  langs:
+  - csharp
+  - vb
+  name: Animate()
+  nameWithType: SplashScreen.Animate()
+  fullName: ESAPIX.AppKit.Splash.SplashScreen.Animate()
+  type: Method
+  source:
+    id: Animate
+    path: ''
+    startLine: 1359
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Splash
+  syntax:
+    content: public void Animate()
+    content.vb: Public Sub Animate
+  overload: ESAPIX.AppKit.Splash.SplashScreen.Animate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.AppKit.Splash
+  commentId: N:ESAPIX.AppKit.Splash
+  isExternal: false
+  name: ESAPIX.AppKit.Splash
+  nameWithType: ESAPIX.AppKit.Splash
+  fullName: ESAPIX.AppKit.Splash
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.AppKit.Splash.SplashScreen.#ctor*
+  commentId: Overload:ESAPIX.AppKit.Splash.SplashScreen.#ctor
+  isExternal: false
+  name: SplashScreen
+  nameWithType: SplashScreen.SplashScreen
+  fullName: ESAPIX.AppKit.Splash.SplashScreen.SplashScreen
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.AppKit.Splash.SplashScreen.Animate*
+  commentId: Overload:ESAPIX.AppKit.Splash.SplashScreen.Animate
+  isExternal: false
+  name: Animate
+  nameWithType: SplashScreen.Animate
+  fullName: ESAPIX.AppKit.Splash.SplashScreen.Animate

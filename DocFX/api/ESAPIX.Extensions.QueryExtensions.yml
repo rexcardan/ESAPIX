@@ -1,0 +1,658 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Extensions.QueryExtensions
+  commentId: T:ESAPIX.Extensions.QueryExtensions
+  id: QueryExtensions
+  parent: ESAPIX.Extensions
+  children:
+  - ESAPIX.Extensions.QueryExtensions.GetDosePresentation(MayoQuery)
+  - ESAPIX.Extensions.QueryExtensions.GetDoseUnit(MayoQuery)
+  - ESAPIX.Extensions.QueryExtensions.GetVolumePresentation(MayoQuery)
+  - ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
+  langs:
+  - csharp
+  - vb
+  name: QueryExtensions
+  nameWithType: QueryExtensions
+  fullName: ESAPIX.Extensions.QueryExtensions
+  type: Class
+  source:
+    id: QueryExtensions
+    path: ''
+    startLine: 4015
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nThis helps execute Mayo syntax queries against planning items\n"
+  example: []
+  syntax:
+    content: public static class QueryExtensions
+    content.vb: Public Module QueryExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
+  commentId: M:ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
+  id: RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.QueryExtensions
+  langs:
+  - csharp
+  - vb
+  name: RunQuery(MayoQuery, PlanningItem, IEnumerable<Structure>)
+  nameWithType: QueryExtensions.RunQuery(MayoQuery, PlanningItem, IEnumerable<Structure>)
+  fullName: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery, PlanningItem, System.Collections.Generic.IEnumerable<Structure>)
+  type: Method
+  source:
+    id: RunQuery
+    path: ''
+    startLine: 4017
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static double RunQuery(this MayoQuery query, PlanningItem pi, IEnumerable<Structure> ss)
+    parameters:
+    - id: query
+      type: MayoQuery
+    - id: pi
+      type: PlanningItem
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+    return:
+      type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RunQuery(query As MayoQuery, pi As PlanningItem, ss As IEnumerable(Of  Structure)) As Double
+  overload: ESAPIX.Extensions.QueryExtensions.RunQuery*
+  nameWithType.vb: QueryExtensions.RunQuery(MayoQuery, PlanningItem, IEnumerable(Of Structure))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery, PlanningItem, System.Collections.Generic.IEnumerable(Of Structure))
+  name.vb: RunQuery(MayoQuery, PlanningItem, IEnumerable(Of Structure))
+- uid: ESAPIX.Extensions.QueryExtensions.GetDosePresentation(MayoQuery)
+  commentId: M:ESAPIX.Extensions.QueryExtensions.GetDosePresentation(MayoQuery)
+  id: GetDosePresentation(MayoQuery)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.QueryExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDosePresentation(MayoQuery)
+  nameWithType: QueryExtensions.GetDosePresentation(MayoQuery)
+  fullName: ESAPIX.Extensions.QueryExtensions.GetDosePresentation(MayoQuery)
+  type: Method
+  source:
+    id: GetDosePresentation
+    path: ''
+    startLine: 4041
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the dose value presentation for this query, helps in acquiring the correct dvh\n"
+  example: []
+  syntax:
+    content: public static DoseValuePresentation GetDosePresentation(this MayoQuery query)
+    parameters:
+    - id: query
+      type: MayoQuery
+      description: the mayo query
+    return:
+      type: DoseValuePresentation
+      description: the dose value presentation of the query
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDosePresentation(query As MayoQuery) As DoseValuePresentation
+  overload: ESAPIX.Extensions.QueryExtensions.GetDosePresentation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.QueryExtensions.GetDoseUnit(MayoQuery)
+  commentId: M:ESAPIX.Extensions.QueryExtensions.GetDoseUnit(MayoQuery)
+  id: GetDoseUnit(MayoQuery)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.QueryExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseUnit(MayoQuery)
+  nameWithType: QueryExtensions.GetDoseUnit(MayoQuery)
+  fullName: ESAPIX.Extensions.QueryExtensions.GetDoseUnit(MayoQuery)
+  type: Method
+  source:
+    id: GetDoseUnit
+    path: ''
+    startLine: 4073
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the dose value presentation for this query, helps in acquiring the correct dvh\n"
+  example: []
+  syntax:
+    content: public static DoseValue.DoseUnit GetDoseUnit(this MayoQuery query)
+    parameters:
+    - id: query
+      type: MayoQuery
+      description: the mayo query
+    return:
+      type: DoseValue.DoseUnit
+      description: the dose value presentation of the query
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseUnit(query As MayoQuery) As DoseValue.DoseUnit
+  overload: ESAPIX.Extensions.QueryExtensions.GetDoseUnit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.QueryExtensions.GetVolumePresentation(MayoQuery)
+  commentId: M:ESAPIX.Extensions.QueryExtensions.GetVolumePresentation(MayoQuery)
+  id: GetVolumePresentation(MayoQuery)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.QueryExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetVolumePresentation(MayoQuery)
+  nameWithType: QueryExtensions.GetVolumePresentation(MayoQuery)
+  fullName: ESAPIX.Extensions.QueryExtensions.GetVolumePresentation(MayoQuery)
+  type: Method
+  source:
+    id: GetVolumePresentation
+    path: ''
+    startLine: 4105
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the volume presentation for this query, helps in acquiring the correct dvh\n"
+  example: []
+  syntax:
+    content: public static VolumePresentation GetVolumePresentation(this MayoQuery query)
+    parameters:
+    - id: query
+      type: MayoQuery
+      description: the mayo query
+    return:
+      type: VolumePresentation
+      description: the volume presentation of the query
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumePresentation(query As MayoQuery) As VolumePresentation
+  overload: ESAPIX.Extensions.QueryExtensions.GetVolumePresentation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: ESAPIX.Extensions
+  commentId: N:ESAPIX.Extensions
+  isExternal: false
+  name: ESAPIX.Extensions
+  nameWithType: ESAPIX.Extensions
+  fullName: ESAPIX.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Extensions.QueryExtensions.RunQuery*
+  commentId: Overload:ESAPIX.Extensions.QueryExtensions.RunQuery
+  isExternal: false
+  name: RunQuery
+  nameWithType: QueryExtensions.RunQuery
+  fullName: ESAPIX.Extensions.QueryExtensions.RunQuery
+- uid: MayoQuery
+  isExternal: true
+  name: MayoQuery
+  nameWithType: MayoQuery
+  fullName: MayoQuery
+- uid: PlanningItem
+  isExternal: true
+  name: PlanningItem
+  nameWithType: PlanningItem
+  fullName: PlanningItem
+- uid: System.Collections.Generic.IEnumerable{Structure}
+  commentId: T:System.Collections.Generic.IEnumerable{Structure}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Structure>
+  nameWithType: IEnumerable<Structure>
+  fullName: System.Collections.Generic.IEnumerable<Structure>
+  nameWithType.vb: IEnumerable(Of Structure)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Structure)
+  name.vb: IEnumerable(Of Structure)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Extensions.QueryExtensions.GetDosePresentation*
+  commentId: Overload:ESAPIX.Extensions.QueryExtensions.GetDosePresentation
+  isExternal: false
+  name: GetDosePresentation
+  nameWithType: QueryExtensions.GetDosePresentation
+  fullName: ESAPIX.Extensions.QueryExtensions.GetDosePresentation
+- uid: DoseValuePresentation
+  isExternal: true
+  name: DoseValuePresentation
+  nameWithType: DoseValuePresentation
+  fullName: DoseValuePresentation
+- uid: ESAPIX.Extensions.QueryExtensions.GetDoseUnit*
+  commentId: Overload:ESAPIX.Extensions.QueryExtensions.GetDoseUnit
+  isExternal: false
+  name: GetDoseUnit
+  nameWithType: QueryExtensions.GetDoseUnit
+  fullName: ESAPIX.Extensions.QueryExtensions.GetDoseUnit
+- uid: DoseValue.DoseUnit
+  isExternal: true
+  name: DoseValue.DoseUnit
+  nameWithType: DoseValue.DoseUnit
+  fullName: DoseValue.DoseUnit
+- uid: ESAPIX.Extensions.QueryExtensions.GetVolumePresentation*
+  commentId: Overload:ESAPIX.Extensions.QueryExtensions.GetVolumePresentation
+  isExternal: false
+  name: GetVolumePresentation
+  nameWithType: QueryExtensions.GetVolumePresentation
+  fullName: ESAPIX.Extensions.QueryExtensions.GetVolumePresentation
+- uid: VolumePresentation
+  isExternal: true
+  name: VolumePresentation
+  nameWithType: VolumePresentation
+  fullName: VolumePresentation

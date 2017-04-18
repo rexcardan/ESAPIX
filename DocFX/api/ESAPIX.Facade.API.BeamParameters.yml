@@ -1,0 +1,851 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.BeamParameters
+  commentId: T:ESAPIX.Facade.API.BeamParameters
+  id: BeamParameters
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.BeamParameters.#ctor
+  - ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  - ESAPIX.Facade.API.BeamParameters.ControlPoints
+  - ESAPIX.Facade.API.BeamParameters.GantryDirection
+  - ESAPIX.Facade.API.BeamParameters.Isocenter
+  - ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  - ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect{System.Double})
+  - ESAPIX.Facade.API.BeamParameters.WeightFactor
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters
+  nameWithType: BeamParameters
+  fullName: ESAPIX.Facade.API.BeamParameters
+  type: Class
+  source:
+    id: BeamParameters
+    path: ''
+    startLine: 5761
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public class BeamParameters
+    content.vb: Public Class BeamParameters
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters()
+  nameWithType: BeamParameters.BeamParameters()
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 5764
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters(Object)
+  nameWithType: BeamParameters.BeamParameters(Object)
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 5765
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  commentId: P:ESAPIX.Facade.API.BeamParameters.ControlPoints
+  id: ControlPoints
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPoints
+  nameWithType: BeamParameters.ControlPoints
+  fullName: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  type: Property
+  source:
+    id: ControlPoints
+    path: ''
+    startLine: 5766
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<ControlPointParameters> ControlPoints { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
+    content.vb: Public ReadOnly Property ControlPoints As IEnumerable(Of ControlPointParameters)
+  overload: ESAPIX.Facade.API.BeamParameters.ControlPoints*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  commentId: P:ESAPIX.Facade.API.BeamParameters.GantryDirection
+  id: GantryDirection
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryDirection
+  nameWithType: BeamParameters.GantryDirection
+  fullName: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  type: Property
+  source:
+    id: GantryDirection
+    path: ''
+    startLine: 5792
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public GantryDirection GantryDirection { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.GantryDirection
+    content.vb: Public Property GantryDirection As GantryDirection
+  overload: ESAPIX.Facade.API.BeamParameters.GantryDirection*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.Isocenter
+  commentId: P:ESAPIX.Facade.API.BeamParameters.Isocenter
+  id: Isocenter
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: Isocenter
+  nameWithType: BeamParameters.Isocenter
+  fullName: ESAPIX.Facade.API.BeamParameters.Isocenter
+  type: Property
+  source:
+    id: Isocenter
+    path: ''
+    startLine: 5805
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public VVector Isocenter { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.VVector
+    content.vb: Public Property Isocenter As VVector
+  overload: ESAPIX.Facade.API.BeamParameters.Isocenter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  commentId: P:ESAPIX.Facade.API.BeamParameters.WeightFactor
+  id: WeightFactor
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: WeightFactor
+  nameWithType: BeamParameters.WeightFactor
+  fullName: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  type: Property
+  source:
+    id: WeightFactor
+    path: ''
+    startLine: 5818
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double WeightFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property WeightFactor As Double
+  overload: ESAPIX.Facade.API.BeamParameters.WeightFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  id: SetAllLeafPositions(System.Single[0:,0:])
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetAllLeafPositions(Single[,])
+  nameWithType: BeamParameters.SetAllLeafPositions(Single[,])
+  fullName: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[,])
+  type: Method
+  source:
+    id: SetAllLeafPositions
+    path: ''
+    startLine: 5831
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetAllLeafPositions(float[, ] leafPositions)
+    parameters:
+    - id: leafPositions
+      type: System.Single[,]
+    content.vb: Public Sub SetAllLeafPositions(leafPositions As Single(,))
+  overload: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions*
+  nameWithType.vb: BeamParameters.SetAllLeafPositions(Single(,))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single(,))
+  name.vb: SetAllLeafPositions(Single(,))
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect{System.Double})
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect{System.Double})
+  id: SetJawPositions(ESAPIX.Facade.Types.VRect{System.Double})
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetJawPositions(VRect<Double>)
+  nameWithType: BeamParameters.SetJawPositions(VRect<Double>)
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect<System.Double>)
+  type: Method
+  source:
+    id: SetJawPositions
+    path: ''
+    startLine: 5840
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetJawPositions(VRect<double> positions)
+    parameters:
+    - id: positions
+      type: ESAPIX.Facade.Types.VRect{System.Double}
+    content.vb: Public Sub SetJawPositions(positions As VRect(Of Double))
+  overload: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
+  nameWithType.vb: BeamParameters.SetJawPositions(VRect(Of Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect(Of System.Double))
+  name.vb: SetJawPositions(VRect(Of Double))
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.#ctor
+  isExternal: false
+  name: BeamParameters
+  nameWithType: BeamParameters.BeamParameters
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters
+- uid: ESAPIX.Facade.API.BeamParameters.ControlPoints*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.ControlPoints
+  isExternal: false
+  name: ControlPoints
+  nameWithType: BeamParameters.ControlPoints
+  fullName: ESAPIX.Facade.API.BeamParameters.ControlPoints
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ControlPointParameters>
+  nameWithType: IEnumerable<ControlPointParameters>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.ControlPointParameters>
+  nameWithType.vb: IEnumerable(Of ControlPointParameters)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.ControlPointParameters)
+  name.vb: IEnumerable(Of ControlPointParameters)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.ControlPointParameters
+    name: ControlPointParameters
+    nameWithType: ControlPointParameters
+    fullName: ESAPIX.Facade.API.ControlPointParameters
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.ControlPointParameters
+    name: ControlPointParameters
+    nameWithType: ControlPointParameters
+    fullName: ESAPIX.Facade.API.ControlPointParameters
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Facade.API.BeamParameters.GantryDirection*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.GantryDirection
+  isExternal: false
+  name: GantryDirection
+  nameWithType: BeamParameters.GantryDirection
+  fullName: ESAPIX.Facade.API.BeamParameters.GantryDirection
+- uid: ESAPIX.Facade.Types.GantryDirection
+  commentId: T:ESAPIX.Facade.Types.GantryDirection
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: GantryDirection
+  nameWithType: GantryDirection
+  fullName: ESAPIX.Facade.Types.GantryDirection
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.API.BeamParameters.Isocenter*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.Isocenter
+  isExternal: false
+  name: Isocenter
+  nameWithType: BeamParameters.Isocenter
+  fullName: ESAPIX.Facade.API.BeamParameters.Isocenter
+- uid: ESAPIX.Facade.Types.VVector
+  commentId: T:ESAPIX.Facade.Types.VVector
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: VVector
+  nameWithType: VVector
+  fullName: ESAPIX.Facade.Types.VVector
+- uid: ESAPIX.Facade.API.BeamParameters.WeightFactor*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.WeightFactor
+  isExternal: false
+  name: WeightFactor
+  nameWithType: BeamParameters.WeightFactor
+  fullName: ESAPIX.Facade.API.BeamParameters.WeightFactor
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions
+  isExternal: false
+  name: SetAllLeafPositions
+  nameWithType: BeamParameters.SetAllLeafPositions
+  fullName: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions
+- uid: System.Single[,]
+  name: Single[,]
+  nameWithType: Single[,]
+  fullName: System.Single[,]
+  nameWithType.vb: Single(,)
+  fullName.vb: System.Single(,)
+  name.vb: Single(,)
+  spec.csharp:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '[,]'
+    nameWithType: '[,]'
+    fullName: '[,]'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: (,)
+    nameWithType: (,)
+    fullName: (,)
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.SetJawPositions
+  isExternal: false
+  name: SetJawPositions
+  nameWithType: BeamParameters.SetJawPositions
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions
+- uid: ESAPIX.Facade.Types.VRect{System.Double}
+  commentId: T:ESAPIX.Facade.Types.VRect{System.Double}
+  parent: ESAPIX.Facade.Types
+  definition: ESAPIX.Facade.Types.VRect`1
+  name: VRect<Double>
+  nameWithType: VRect<Double>
+  fullName: ESAPIX.Facade.Types.VRect<System.Double>
+  nameWithType.vb: VRect(Of Double)
+  fullName.vb: ESAPIX.Facade.Types.VRect(Of System.Double)
+  name.vb: VRect(Of Double)
+  spec.csharp:
+  - uid: ESAPIX.Facade.Types.VRect`1
+    name: VRect
+    nameWithType: VRect
+    fullName: ESAPIX.Facade.Types.VRect
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.Facade.Types.VRect`1
+    name: VRect
+    nameWithType: VRect
+    fullName: ESAPIX.Facade.Types.VRect
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.Types.VRect`1
+  commentId: T:ESAPIX.Facade.Types.VRect`1
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: VRect<T>
+  nameWithType: VRect<T>
+  fullName: ESAPIX.Facade.Types.VRect<T>
+  nameWithType.vb: VRect(Of T)
+  fullName.vb: ESAPIX.Facade.Types.VRect(Of T)
+  name.vb: VRect(Of T)
+  spec.csharp:
+  - uid: ESAPIX.Facade.Types.VRect`1
+    name: VRect
+    nameWithType: VRect
+    fullName: ESAPIX.Facade.Types.VRect
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.Facade.Types.VRect`1
+    name: VRect
+    nameWithType: VRect
+    fullName: ESAPIX.Facade.Types.VRect
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

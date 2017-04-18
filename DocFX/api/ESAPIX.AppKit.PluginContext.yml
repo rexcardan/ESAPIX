@@ -1,0 +1,1924 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.PluginContext
+  commentId: T:ESAPIX.AppKit.PluginContext
+  id: PluginContext
+  parent: ESAPIX.AppKit
+  children:
+  - ESAPIX.AppKit.PluginContext.#ctor(ScriptContext,Window)
+  - ESAPIX.AppKit.PluginContext.ApplicationName
+  - ESAPIX.AppKit.PluginContext.BrachyPlanSetup
+  - ESAPIX.AppKit.PluginContext.BrachyPlansInScope
+  - ESAPIX.AppKit.PluginContext.Course
+  - ESAPIX.AppKit.PluginContext.CurrentUser
+  - ESAPIX.AppKit.PluginContext.ExternalPlanSetup
+  - ESAPIX.AppKit.PluginContext.ExternalPlansInScope
+  - ESAPIX.AppKit.PluginContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  - ESAPIX.AppKit.PluginContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  - ESAPIX.AppKit.PluginContext.Image
+  - ESAPIX.AppKit.PluginContext.Patient
+  - ESAPIX.AppKit.PluginContext.PlanSetup
+  - ESAPIX.AppKit.PluginContext.PlansInScope
+  - ESAPIX.AppKit.PluginContext.PlanSumsInScope
+  - ESAPIX.AppKit.PluginContext.StructureSet
+  - ESAPIX.AppKit.PluginContext.Thread
+  langs:
+  - csharp
+  - vb
+  name: PluginContext
+  nameWithType: PluginContext
+  fullName: ESAPIX.AppKit.PluginContext
+  type: Class
+  source:
+    id: PluginContext
+    path: ''
+    startLine: 223
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  summary: "\nA simple wrapper around the script context to make it compliant with a common interface IScriptContext\n"
+  example: []
+  syntax:
+    content: 'public class PluginContext : IScriptContext'
+    content.vb: >-
+      Public Class PluginContext
+          Implements IScriptContext
+  inheritance:
+  - System.Object
+  implements:
+  - ESAPIX.Interfaces.IScriptContext
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.AppKit.PluginContext.#ctor(ScriptContext,Window)
+  commentId: M:ESAPIX.AppKit.PluginContext.#ctor(ScriptContext,Window)
+  id: '#ctor(ScriptContext,Window)'
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: PluginContext(ScriptContext, Window)
+  nameWithType: PluginContext.PluginContext(ScriptContext, Window)
+  fullName: ESAPIX.AppKit.PluginContext.PluginContext(ScriptContext, Window)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 227
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public PluginContext(ScriptContext ctx, Window w)
+    parameters:
+    - id: ctx
+      type: ScriptContext
+    - id: w
+      type: Window
+    content.vb: Public Sub New(ctx As ScriptContext, w As Window)
+  overload: ESAPIX.AppKit.PluginContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.AppKit.PluginContext.ApplicationName
+  commentId: P:ESAPIX.AppKit.PluginContext.ApplicationName
+  id: ApplicationName
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: ApplicationName
+  nameWithType: PluginContext.ApplicationName
+  fullName: ESAPIX.AppKit.PluginContext.ApplicationName
+  type: Property
+  source:
+    id: ApplicationName
+    path: ''
+    startLine: 229
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public string ApplicationName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ApplicationName As String
+  overload: ESAPIX.AppKit.PluginContext.ApplicationName*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.ApplicationName
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.BrachyPlanSetup
+  commentId: P:ESAPIX.AppKit.PluginContext.BrachyPlanSetup
+  id: BrachyPlanSetup
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup
+  nameWithType: PluginContext.BrachyPlanSetup
+  fullName: ESAPIX.AppKit.PluginContext.BrachyPlanSetup
+  type: Property
+  source:
+    id: BrachyPlanSetup
+    path: ''
+    startLine: 231
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public BrachyPlanSetup BrachyPlanSetup { get; }
+    parameters: []
+    return:
+      type: BrachyPlanSetup
+    content.vb: Public ReadOnly Property BrachyPlanSetup As BrachyPlanSetup
+  overload: ESAPIX.AppKit.PluginContext.BrachyPlanSetup*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.BrachyPlansInScope
+  commentId: P:ESAPIX.AppKit.PluginContext.BrachyPlansInScope
+  id: BrachyPlansInScope
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlansInScope
+  nameWithType: PluginContext.BrachyPlansInScope
+  fullName: ESAPIX.AppKit.PluginContext.BrachyPlansInScope
+  type: Property
+  source:
+    id: BrachyPlansInScope
+    path: ''
+    startLine: 233
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{BrachyPlanSetup}
+    content.vb: Public ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
+  overload: ESAPIX.AppKit.PluginContext.BrachyPlansInScope*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.Course
+  commentId: P:ESAPIX.AppKit.PluginContext.Course
+  id: Course
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: Course
+  nameWithType: PluginContext.Course
+  fullName: ESAPIX.AppKit.PluginContext.Course
+  type: Property
+  source:
+    id: Course
+    path: ''
+    startLine: 235
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public Course Course { get; }
+    parameters: []
+    return:
+      type: Course
+    content.vb: Public ReadOnly Property Course As Course
+  overload: ESAPIX.AppKit.PluginContext.Course*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.Course
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.CurrentUser
+  commentId: P:ESAPIX.AppKit.PluginContext.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: PluginContext.CurrentUser
+  fullName: ESAPIX.AppKit.PluginContext.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 237
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public User CurrentUser { get; }
+    parameters: []
+    return:
+      type: User
+    content.vb: Public ReadOnly Property CurrentUser As User
+  overload: ESAPIX.AppKit.PluginContext.CurrentUser*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.CurrentUser
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.ExternalPlanSetup
+  commentId: P:ESAPIX.AppKit.PluginContext.ExternalPlanSetup
+  id: ExternalPlanSetup
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: ExternalPlanSetup
+  nameWithType: PluginContext.ExternalPlanSetup
+  fullName: ESAPIX.AppKit.PluginContext.ExternalPlanSetup
+  type: Property
+  source:
+    id: ExternalPlanSetup
+    path: ''
+    startLine: 239
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public ExternalPlanSetup ExternalPlanSetup { get; }
+    parameters: []
+    return:
+      type: ExternalPlanSetup
+    content.vb: Public ReadOnly Property ExternalPlanSetup As ExternalPlanSetup
+  overload: ESAPIX.AppKit.PluginContext.ExternalPlanSetup*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.ExternalPlansInScope
+  commentId: P:ESAPIX.AppKit.PluginContext.ExternalPlansInScope
+  id: ExternalPlansInScope
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: ExternalPlansInScope
+  nameWithType: PluginContext.ExternalPlansInScope
+  fullName: ESAPIX.AppKit.PluginContext.ExternalPlansInScope
+  type: Property
+  source:
+    id: ExternalPlansInScope
+    path: ''
+    startLine: 241
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ExternalPlanSetup}
+    content.vb: Public ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
+  overload: ESAPIX.AppKit.PluginContext.ExternalPlansInScope*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.Image
+  commentId: P:ESAPIX.AppKit.PluginContext.Image
+  id: Image
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: Image
+  nameWithType: PluginContext.Image
+  fullName: ESAPIX.AppKit.PluginContext.Image
+  type: Property
+  source:
+    id: Image
+    path: ''
+    startLine: 243
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public Image Image { get; }
+    parameters: []
+    return:
+      type: Image
+    content.vb: Public ReadOnly Property Image As Image
+  overload: ESAPIX.AppKit.PluginContext.Image*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.Image
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.Patient
+  commentId: P:ESAPIX.AppKit.PluginContext.Patient
+  id: Patient
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: Patient
+  nameWithType: PluginContext.Patient
+  fullName: ESAPIX.AppKit.PluginContext.Patient
+  type: Property
+  source:
+    id: Patient
+    path: ''
+    startLine: 245
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public Patient Patient { get; }
+    parameters: []
+    return:
+      type: Patient
+    content.vb: Public ReadOnly Property Patient As Patient
+  overload: ESAPIX.AppKit.PluginContext.Patient*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.Patient
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.PlanSetup
+  commentId: P:ESAPIX.AppKit.PluginContext.PlanSetup
+  id: PlanSetup
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: PlanSetup
+  nameWithType: PluginContext.PlanSetup
+  fullName: ESAPIX.AppKit.PluginContext.PlanSetup
+  type: Property
+  source:
+    id: PlanSetup
+    path: ''
+    startLine: 247
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public PlanSetup PlanSetup { get; }
+    parameters: []
+    return:
+      type: PlanSetup
+    content.vb: Public ReadOnly Property PlanSetup As PlanSetup
+  overload: ESAPIX.AppKit.PluginContext.PlanSetup*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.PlanSetup
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.PlansInScope
+  commentId: P:ESAPIX.AppKit.PluginContext.PlansInScope
+  id: PlansInScope
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: PlansInScope
+  nameWithType: PluginContext.PlansInScope
+  fullName: ESAPIX.AppKit.PluginContext.PlansInScope
+  type: Property
+  source:
+    id: PlansInScope
+    path: ''
+    startLine: 249
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public IEnumerable<PlanSetup> PlansInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{PlanSetup}
+    content.vb: Public ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
+  overload: ESAPIX.AppKit.PluginContext.PlansInScope*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.PlansInScope
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.PlanSumsInScope
+  commentId: P:ESAPIX.AppKit.PluginContext.PlanSumsInScope
+  id: PlanSumsInScope
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: PlanSumsInScope
+  nameWithType: PluginContext.PlanSumsInScope
+  fullName: ESAPIX.AppKit.PluginContext.PlanSumsInScope
+  type: Property
+  source:
+    id: PlanSumsInScope
+    path: ''
+    startLine: 251
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public IEnumerable<PlanSum> PlanSumsInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{PlanSum}
+    content.vb: Public ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
+  overload: ESAPIX.AppKit.PluginContext.PlanSumsInScope*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.PlanSumsInScope
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.StructureSet
+  commentId: P:ESAPIX.AppKit.PluginContext.StructureSet
+  id: StructureSet
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: StructureSet
+  nameWithType: PluginContext.StructureSet
+  fullName: ESAPIX.AppKit.PluginContext.StructureSet
+  type: Property
+  source:
+    id: StructureSet
+    path: ''
+    startLine: 253
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public StructureSet StructureSet { get; }
+    parameters: []
+    return:
+      type: StructureSet
+    content.vb: Public ReadOnly Property StructureSet As StructureSet
+  overload: ESAPIX.AppKit.PluginContext.StructureSet*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.StructureSet
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.Thread
+  commentId: P:ESAPIX.AppKit.PluginContext.Thread
+  id: Thread
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: Thread
+  nameWithType: PluginContext.Thread
+  fullName: ESAPIX.AppKit.PluginContext.Thread
+  type: Property
+  source:
+    id: Thread
+    path: ''
+    startLine: 255
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public IVMSThread Thread { get; }
+    parameters: []
+    return:
+      type: ESAPIX.Interfaces.IVMSThread
+    content.vb: Public ReadOnly Property Thread As IVMSThread
+  overload: ESAPIX.AppKit.PluginContext.Thread*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.Thread
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.AppKit.PluginContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  commentId: M:ESAPIX.AppKit.PluginContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  id: GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetValueAsync<T>(Func<IScriptContext, T>)
+  nameWithType: PluginContext.GetValueAsync<T>(Func<IScriptContext, T>)
+  fullName: ESAPIX.AppKit.PluginContext.GetValueAsync<T>(System.Func<ESAPIX.Interfaces.IScriptContext, T>)
+  type: Method
+  source:
+    id: GetValueAsync
+    path: ''
+    startLine: 257
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
+    parameters:
+    - id: toExecute
+      type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
+  overload: ESAPIX.AppKit.PluginContext.GetValueAsync*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,{T}})
+  nameWithType.vb: PluginContext.GetValueAsync(Of T)(Func(Of IScriptContext, T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.PluginContext.GetValueAsync(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
+  name.vb: GetValueAsync(Of T)(Func(Of IScriptContext, T))
+- uid: ESAPIX.AppKit.PluginContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  commentId: M:ESAPIX.AppKit.PluginContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  id: GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  parent: ESAPIX.AppKit.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetValue<T>(Func<IScriptContext, T>)
+  nameWithType: PluginContext.GetValue<T>(Func<IScriptContext, T>)
+  fullName: ESAPIX.AppKit.PluginContext.GetValue<T>(System.Func<ESAPIX.Interfaces.IScriptContext, T>)
+  type: Method
+  source:
+    id: GetValue
+    path: ''
+    startLine: 267
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public T GetValue<T>(Func<IScriptContext, T> toExecute)
+    parameters:
+    - id: toExecute
+      type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetValue(Of T)(toExecute As Func(Of IScriptContext, T)) As T
+  overload: ESAPIX.AppKit.PluginContext.GetValue*
+  implements:
+  - ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,{T}})
+  nameWithType.vb: PluginContext.GetValue(Of T)(Func(Of IScriptContext, T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.PluginContext.GetValue(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
+  name.vb: GetValue(Of T)(Func(Of IScriptContext, T))
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Interfaces.IScriptContext
+  commentId: T:ESAPIX.Interfaces.IScriptContext
+  parent: ESAPIX.Interfaces
+  isExternal: false
+  name: IScriptContext
+  nameWithType: IScriptContext
+  fullName: ESAPIX.Interfaces.IScriptContext
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Interfaces
+  commentId: N:ESAPIX.Interfaces
+  isExternal: false
+  name: ESAPIX.Interfaces
+  nameWithType: ESAPIX.Interfaces
+  fullName: ESAPIX.Interfaces
+- uid: ESAPIX.AppKit.PluginContext.#ctor*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.#ctor
+  isExternal: false
+  name: PluginContext
+  nameWithType: PluginContext.PluginContext
+  fullName: ESAPIX.AppKit.PluginContext.PluginContext
+- uid: ScriptContext
+  isExternal: true
+  name: ScriptContext
+  nameWithType: ScriptContext
+  fullName: ScriptContext
+- uid: Window
+  isExternal: true
+  name: Window
+  nameWithType: Window
+  fullName: Window
+- uid: ESAPIX.AppKit.PluginContext.ApplicationName*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.ApplicationName
+  isExternal: false
+  name: ApplicationName
+  nameWithType: PluginContext.ApplicationName
+  fullName: ESAPIX.AppKit.PluginContext.ApplicationName
+- uid: ESAPIX.Interfaces.IScriptContext.ApplicationName
+  commentId: P:ESAPIX.Interfaces.IScriptContext.ApplicationName
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: ApplicationName
+  nameWithType: IScriptContext.ApplicationName
+  fullName: ESAPIX.Interfaces.IScriptContext.ApplicationName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.AppKit.PluginContext.BrachyPlanSetup*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.BrachyPlanSetup
+  isExternal: false
+  name: BrachyPlanSetup
+  nameWithType: PluginContext.BrachyPlanSetup
+  fullName: ESAPIX.AppKit.PluginContext.BrachyPlanSetup
+- uid: ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup
+  commentId: P:ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: BrachyPlanSetup
+  nameWithType: IScriptContext.BrachyPlanSetup
+  fullName: ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup
+- uid: BrachyPlanSetup
+  isExternal: true
+  name: BrachyPlanSetup
+  nameWithType: BrachyPlanSetup
+  fullName: BrachyPlanSetup
+- uid: ESAPIX.AppKit.PluginContext.BrachyPlansInScope*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.BrachyPlansInScope
+  isExternal: false
+  name: BrachyPlansInScope
+  nameWithType: PluginContext.BrachyPlansInScope
+  fullName: ESAPIX.AppKit.PluginContext.BrachyPlansInScope
+- uid: ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope
+  commentId: P:ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: BrachyPlansInScope
+  nameWithType: IScriptContext.BrachyPlansInScope
+  fullName: ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope
+- uid: System.Collections.Generic.IEnumerable{BrachyPlanSetup}
+  commentId: T:System.Collections.Generic.IEnumerable{BrachyPlanSetup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<BrachyPlanSetup>
+  nameWithType: IEnumerable<BrachyPlanSetup>
+  fullName: System.Collections.Generic.IEnumerable<BrachyPlanSetup>
+  nameWithType.vb: IEnumerable(Of BrachyPlanSetup)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of BrachyPlanSetup)
+  name.vb: IEnumerable(Of BrachyPlanSetup)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: BrachyPlanSetup
+    name: BrachyPlanSetup
+    nameWithType: BrachyPlanSetup
+    fullName: BrachyPlanSetup
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: BrachyPlanSetup
+    name: BrachyPlanSetup
+    nameWithType: BrachyPlanSetup
+    fullName: BrachyPlanSetup
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.AppKit.PluginContext.Course*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.Course
+  isExternal: false
+  name: Course
+  nameWithType: PluginContext.Course
+  fullName: ESAPIX.AppKit.PluginContext.Course
+- uid: ESAPIX.Interfaces.IScriptContext.Course
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Course
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: Course
+  nameWithType: IScriptContext.Course
+  fullName: ESAPIX.Interfaces.IScriptContext.Course
+- uid: Course
+  isExternal: true
+  name: Course
+  nameWithType: Course
+  fullName: Course
+- uid: ESAPIX.AppKit.PluginContext.CurrentUser*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.CurrentUser
+  isExternal: false
+  name: CurrentUser
+  nameWithType: PluginContext.CurrentUser
+  fullName: ESAPIX.AppKit.PluginContext.CurrentUser
+- uid: ESAPIX.Interfaces.IScriptContext.CurrentUser
+  commentId: P:ESAPIX.Interfaces.IScriptContext.CurrentUser
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: CurrentUser
+  nameWithType: IScriptContext.CurrentUser
+  fullName: ESAPIX.Interfaces.IScriptContext.CurrentUser
+- uid: User
+  isExternal: true
+  name: User
+  nameWithType: User
+  fullName: User
+- uid: ESAPIX.AppKit.PluginContext.ExternalPlanSetup*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.ExternalPlanSetup
+  isExternal: false
+  name: ExternalPlanSetup
+  nameWithType: PluginContext.ExternalPlanSetup
+  fullName: ESAPIX.AppKit.PluginContext.ExternalPlanSetup
+- uid: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup
+  commentId: P:ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: ExternalPlanSetup
+  nameWithType: IScriptContext.ExternalPlanSetup
+  fullName: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup
+- uid: ExternalPlanSetup
+  isExternal: true
+  name: ExternalPlanSetup
+  nameWithType: ExternalPlanSetup
+  fullName: ExternalPlanSetup
+- uid: ESAPIX.AppKit.PluginContext.ExternalPlansInScope*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.ExternalPlansInScope
+  isExternal: false
+  name: ExternalPlansInScope
+  nameWithType: PluginContext.ExternalPlansInScope
+  fullName: ESAPIX.AppKit.PluginContext.ExternalPlansInScope
+- uid: ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope
+  commentId: P:ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: ExternalPlansInScope
+  nameWithType: IScriptContext.ExternalPlansInScope
+  fullName: ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope
+- uid: System.Collections.Generic.IEnumerable{ExternalPlanSetup}
+  commentId: T:System.Collections.Generic.IEnumerable{ExternalPlanSetup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ExternalPlanSetup>
+  nameWithType: IEnumerable<ExternalPlanSetup>
+  fullName: System.Collections.Generic.IEnumerable<ExternalPlanSetup>
+  nameWithType.vb: IEnumerable(Of ExternalPlanSetup)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ExternalPlanSetup)
+  name.vb: IEnumerable(Of ExternalPlanSetup)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ExternalPlanSetup
+    name: ExternalPlanSetup
+    nameWithType: ExternalPlanSetup
+    fullName: ExternalPlanSetup
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ExternalPlanSetup
+    name: ExternalPlanSetup
+    nameWithType: ExternalPlanSetup
+    fullName: ExternalPlanSetup
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.PluginContext.Image*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.Image
+  isExternal: false
+  name: Image
+  nameWithType: PluginContext.Image
+  fullName: ESAPIX.AppKit.PluginContext.Image
+- uid: ESAPIX.Interfaces.IScriptContext.Image
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Image
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: Image
+  nameWithType: IScriptContext.Image
+  fullName: ESAPIX.Interfaces.IScriptContext.Image
+- uid: Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: ESAPIX.AppKit.PluginContext.Patient*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.Patient
+  isExternal: false
+  name: Patient
+  nameWithType: PluginContext.Patient
+  fullName: ESAPIX.AppKit.PluginContext.Patient
+- uid: ESAPIX.Interfaces.IScriptContext.Patient
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Patient
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: Patient
+  nameWithType: IScriptContext.Patient
+  fullName: ESAPIX.Interfaces.IScriptContext.Patient
+- uid: Patient
+  isExternal: true
+  name: Patient
+  nameWithType: Patient
+  fullName: Patient
+- uid: ESAPIX.AppKit.PluginContext.PlanSetup*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.PlanSetup
+  isExternal: false
+  name: PlanSetup
+  nameWithType: PluginContext.PlanSetup
+  fullName: ESAPIX.AppKit.PluginContext.PlanSetup
+- uid: ESAPIX.Interfaces.IScriptContext.PlanSetup
+  commentId: P:ESAPIX.Interfaces.IScriptContext.PlanSetup
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: PlanSetup
+  nameWithType: IScriptContext.PlanSetup
+  fullName: ESAPIX.Interfaces.IScriptContext.PlanSetup
+- uid: PlanSetup
+  isExternal: true
+  name: PlanSetup
+  nameWithType: PlanSetup
+  fullName: PlanSetup
+- uid: ESAPIX.AppKit.PluginContext.PlansInScope*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.PlansInScope
+  isExternal: false
+  name: PlansInScope
+  nameWithType: PluginContext.PlansInScope
+  fullName: ESAPIX.AppKit.PluginContext.PlansInScope
+- uid: ESAPIX.Interfaces.IScriptContext.PlansInScope
+  commentId: P:ESAPIX.Interfaces.IScriptContext.PlansInScope
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: PlansInScope
+  nameWithType: IScriptContext.PlansInScope
+  fullName: ESAPIX.Interfaces.IScriptContext.PlansInScope
+- uid: System.Collections.Generic.IEnumerable{PlanSetup}
+  commentId: T:System.Collections.Generic.IEnumerable{PlanSetup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<PlanSetup>
+  nameWithType: IEnumerable<PlanSetup>
+  fullName: System.Collections.Generic.IEnumerable<PlanSetup>
+  nameWithType.vb: IEnumerable(Of PlanSetup)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of PlanSetup)
+  name.vb: IEnumerable(Of PlanSetup)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PlanSetup
+    name: PlanSetup
+    nameWithType: PlanSetup
+    fullName: PlanSetup
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PlanSetup
+    name: PlanSetup
+    nameWithType: PlanSetup
+    fullName: PlanSetup
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.PluginContext.PlanSumsInScope*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.PlanSumsInScope
+  isExternal: false
+  name: PlanSumsInScope
+  nameWithType: PluginContext.PlanSumsInScope
+  fullName: ESAPIX.AppKit.PluginContext.PlanSumsInScope
+- uid: ESAPIX.Interfaces.IScriptContext.PlanSumsInScope
+  commentId: P:ESAPIX.Interfaces.IScriptContext.PlanSumsInScope
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: PlanSumsInScope
+  nameWithType: IScriptContext.PlanSumsInScope
+  fullName: ESAPIX.Interfaces.IScriptContext.PlanSumsInScope
+- uid: System.Collections.Generic.IEnumerable{PlanSum}
+  commentId: T:System.Collections.Generic.IEnumerable{PlanSum}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<PlanSum>
+  nameWithType: IEnumerable<PlanSum>
+  fullName: System.Collections.Generic.IEnumerable<PlanSum>
+  nameWithType.vb: IEnumerable(Of PlanSum)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of PlanSum)
+  name.vb: IEnumerable(Of PlanSum)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PlanSum
+    name: PlanSum
+    nameWithType: PlanSum
+    fullName: PlanSum
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PlanSum
+    name: PlanSum
+    nameWithType: PlanSum
+    fullName: PlanSum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.PluginContext.StructureSet*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.StructureSet
+  isExternal: false
+  name: StructureSet
+  nameWithType: PluginContext.StructureSet
+  fullName: ESAPIX.AppKit.PluginContext.StructureSet
+- uid: ESAPIX.Interfaces.IScriptContext.StructureSet
+  commentId: P:ESAPIX.Interfaces.IScriptContext.StructureSet
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: StructureSet
+  nameWithType: IScriptContext.StructureSet
+  fullName: ESAPIX.Interfaces.IScriptContext.StructureSet
+- uid: StructureSet
+  isExternal: true
+  name: StructureSet
+  nameWithType: StructureSet
+  fullName: StructureSet
+- uid: ESAPIX.AppKit.PluginContext.Thread*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.Thread
+  isExternal: false
+  name: Thread
+  nameWithType: PluginContext.Thread
+  fullName: ESAPIX.AppKit.PluginContext.Thread
+- uid: ESAPIX.Interfaces.IScriptContext.Thread
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Thread
+  parent: ESAPIX.Interfaces.IScriptContext
+  isExternal: false
+  name: Thread
+  nameWithType: IScriptContext.Thread
+  fullName: ESAPIX.Interfaces.IScriptContext.Thread
+- uid: ESAPIX.Interfaces.IVMSThread
+  commentId: T:ESAPIX.Interfaces.IVMSThread
+  parent: ESAPIX.Interfaces
+  isExternal: false
+  name: IVMSThread
+  nameWithType: IVMSThread
+  fullName: ESAPIX.Interfaces.IVMSThread
+- uid: ESAPIX.AppKit.PluginContext.GetValueAsync*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.GetValueAsync
+  isExternal: false
+  name: GetValueAsync
+  nameWithType: PluginContext.GetValueAsync
+  fullName: ESAPIX.AppKit.PluginContext.GetValueAsync
+- uid: ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,{T}})
+  commentId: M:ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  parent: ESAPIX.Interfaces.IScriptContext
+  definition: ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  name: GetValueAsync<T>(Func<IScriptContext, T>)
+  nameWithType: IScriptContext.GetValueAsync<T>(Func<IScriptContext, T>)
+  fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync<T>(System.Func<ESAPIX.Interfaces.IScriptContext, T>)
+  nameWithType.vb: IScriptContext.GetValueAsync(Of T)(Func(Of IScriptContext, T))
+  fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValueAsync(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
+  name.vb: GetValueAsync(Of T)(Func(Of IScriptContext, T))
+  spec.csharp:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValueAsync<T>
+    nameWithType: IScriptContext.GetValueAsync<T>
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValueAsync(Of T)
+    nameWithType: IScriptContext.GetValueAsync(Of T)
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
+  commentId: T:System.Func{ESAPIX.Interfaces.IScriptContext,``0}
+  parent: System
+  definition: System.Func`2
+  name: Func<IScriptContext, T>
+  nameWithType: Func<IScriptContext, T>
+  fullName: System.Func<ESAPIX.Interfaces.IScriptContext, T>
+  nameWithType.vb: Func(Of IScriptContext, T)
+  fullName.vb: System.Func(Of ESAPIX.Interfaces.IScriptContext, T)
+  name.vb: Func(Of IScriptContext, T)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  commentId: M:ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  isExternal: true
+  name: GetValueAsync<T>(Func<IScriptContext, T>)
+  nameWithType: IScriptContext.GetValueAsync<T>(Func<IScriptContext, T>)
+  fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync<T>(System.Func<ESAPIX.Interfaces.IScriptContext, T>)
+  nameWithType.vb: IScriptContext.GetValueAsync(Of T)(Func(Of IScriptContext, T))
+  fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValueAsync(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
+  name.vb: GetValueAsync(Of T)(Func(Of IScriptContext, T))
+  spec.csharp:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValueAsync<T>
+    nameWithType: IScriptContext.GetValueAsync<T>
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValueAsync(Of T)
+    nameWithType: IScriptContext.GetValueAsync(Of T)
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: ESAPIX.AppKit.PluginContext.GetValue*
+  commentId: Overload:ESAPIX.AppKit.PluginContext.GetValue
+  isExternal: false
+  name: GetValue
+  nameWithType: PluginContext.GetValue
+  fullName: ESAPIX.AppKit.PluginContext.GetValue
+- uid: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,{T}})
+  commentId: M:ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  parent: ESAPIX.Interfaces.IScriptContext
+  definition: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  name: GetValue<T>(Func<IScriptContext, T>)
+  nameWithType: IScriptContext.GetValue<T>(Func<IScriptContext, T>)
+  fullName: ESAPIX.Interfaces.IScriptContext.GetValue<T>(System.Func<ESAPIX.Interfaces.IScriptContext, T>)
+  nameWithType.vb: IScriptContext.GetValue(Of T)(Func(Of IScriptContext, T))
+  fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValue(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
+  name.vb: GetValue(Of T)(Func(Of IScriptContext, T))
+  spec.csharp:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValue<T>
+    nameWithType: IScriptContext.GetValue<T>
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValue<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValue(Of T)
+    nameWithType: IScriptContext.GetValue(Of T)
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValue(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  commentId: M:ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+  isExternal: true
+  name: GetValue<T>(Func<IScriptContext, T>)
+  nameWithType: IScriptContext.GetValue<T>(Func<IScriptContext, T>)
+  fullName: ESAPIX.Interfaces.IScriptContext.GetValue<T>(System.Func<ESAPIX.Interfaces.IScriptContext, T>)
+  nameWithType.vb: IScriptContext.GetValue(Of T)(Func(Of IScriptContext, T))
+  fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValue(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
+  name.vb: GetValue(Of T)(Func(Of IScriptContext, T))
+  spec.csharp:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValue<T>
+    nameWithType: IScriptContext.GetValue<T>
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValue<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
+    name: GetValue(Of T)
+    nameWithType: IScriptContext.GetValue(Of T)
+    fullName: ESAPIX.Interfaces.IScriptContext.GetValue(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Interfaces.IScriptContext
+    name: IScriptContext
+    nameWithType: IScriptContext
+    fullName: ESAPIX.Interfaces.IScriptContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T

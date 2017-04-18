@@ -1,0 +1,1244 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.ScriptContext
+  commentId: T:ESAPIX.Facade.API.ScriptContext
+  id: ScriptContext
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.ScriptContext.#ctor
+  - ESAPIX.Facade.API.ScriptContext.#ctor(System.Object)
+  - ESAPIX.Facade.API.ScriptContext.#ctor(System.Object,System.Object,System.String)
+  - ESAPIX.Facade.API.ScriptContext.ApplicationName
+  - ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup
+  - ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope
+  - ESAPIX.Facade.API.ScriptContext.Course
+  - ESAPIX.Facade.API.ScriptContext.CurrentUser
+  - ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup
+  - ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope
+  - ESAPIX.Facade.API.ScriptContext.Image
+  - ESAPIX.Facade.API.ScriptContext.Patient
+  - ESAPIX.Facade.API.ScriptContext.PlanSetup
+  - ESAPIX.Facade.API.ScriptContext.PlansInScope
+  - ESAPIX.Facade.API.ScriptContext.PlanSumsInScope
+  - ESAPIX.Facade.API.ScriptContext.StructureSet
+  - ESAPIX.Facade.API.ScriptContext.VersionInfo
+  langs:
+  - csharp
+  - vb
+  name: ScriptContext
+  nameWithType: ScriptContext
+  fullName: ESAPIX.Facade.API.ScriptContext
+  type: Class
+  source:
+    id: ScriptContext
+    path: ''
+    startLine: 11838
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public class ScriptContext
+    content.vb: Public Class ScriptContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.ScriptContext.#ctor
+  commentId: M:ESAPIX.Facade.API.ScriptContext.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: ScriptContext()
+  nameWithType: ScriptContext.ScriptContext()
+  fullName: ESAPIX.Facade.API.ScriptContext.ScriptContext()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 11841
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ScriptContext()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ScriptContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ScriptContext.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: ScriptContext(Object)
+  nameWithType: ScriptContext.ScriptContext(Object)
+  fullName: ESAPIX.Facade.API.ScriptContext.ScriptContext(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 11842
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ScriptContext(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ScriptContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.#ctor(System.Object,System.Object,System.String)
+  commentId: M:ESAPIX.Facade.API.ScriptContext.#ctor(System.Object,System.Object,System.String)
+  id: '#ctor(System.Object,System.Object,System.String)'
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: ScriptContext(Object, Object, String)
+  nameWithType: ScriptContext.ScriptContext(Object, Object, String)
+  fullName: ESAPIX.Facade.API.ScriptContext.ScriptContext(System.Object, System.Object, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 11843
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ScriptContext(object context, object user, string appName)
+    parameters:
+    - id: context
+      type: System.Object
+    - id: user
+      type: System.Object
+    - id: appName
+      type: System.String
+    content.vb: Public Sub New(context As Object, user As Object, appName As String)
+  overload: ESAPIX.Facade.API.ScriptContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.CurrentUser
+  commentId: P:ESAPIX.Facade.API.ScriptContext.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: ScriptContext.CurrentUser
+  fullName: ESAPIX.Facade.API.ScriptContext.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 11855
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public User CurrentUser { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.User
+    content.vb: Public Property CurrentUser As User
+  overload: ESAPIX.Facade.API.ScriptContext.CurrentUser*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.Course
+  commentId: P:ESAPIX.Facade.API.ScriptContext.Course
+  id: Course
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: Course
+  nameWithType: ScriptContext.Course
+  fullName: ESAPIX.Facade.API.ScriptContext.Course
+  type: Property
+  source:
+    id: Course
+    path: ''
+    startLine: 11868
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Course Course { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Course
+    content.vb: Public Property Course As Course
+  overload: ESAPIX.Facade.API.ScriptContext.Course*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.Image
+  commentId: P:ESAPIX.Facade.API.ScriptContext.Image
+  id: Image
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: Image
+  nameWithType: ScriptContext.Image
+  fullName: ESAPIX.Facade.API.ScriptContext.Image
+  type: Property
+  source:
+    id: Image
+    path: ''
+    startLine: 11881
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Image Image { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Image
+    content.vb: Public Property Image As Image
+  overload: ESAPIX.Facade.API.ScriptContext.Image*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.StructureSet
+  commentId: P:ESAPIX.Facade.API.ScriptContext.StructureSet
+  id: StructureSet
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: StructureSet
+  nameWithType: ScriptContext.StructureSet
+  fullName: ESAPIX.Facade.API.ScriptContext.StructureSet
+  type: Property
+  source:
+    id: StructureSet
+    path: ''
+    startLine: 11894
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public StructureSet StructureSet { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Property StructureSet As StructureSet
+  overload: ESAPIX.Facade.API.ScriptContext.StructureSet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.Patient
+  commentId: P:ESAPIX.Facade.API.ScriptContext.Patient
+  id: Patient
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: Patient
+  nameWithType: ScriptContext.Patient
+  fullName: ESAPIX.Facade.API.ScriptContext.Patient
+  type: Property
+  source:
+    id: Patient
+    path: ''
+    startLine: 11907
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient Patient { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Property Patient As Patient
+  overload: ESAPIX.Facade.API.ScriptContext.Patient*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.PlanSetup
+  commentId: P:ESAPIX.Facade.API.ScriptContext.PlanSetup
+  id: PlanSetup
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: PlanSetup
+  nameWithType: ScriptContext.PlanSetup
+  fullName: ESAPIX.Facade.API.ScriptContext.PlanSetup
+  type: Property
+  source:
+    id: PlanSetup
+    path: ''
+    startLine: 11920
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanSetup PlanSetup { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.PlanSetup
+    content.vb: Public Property PlanSetup As PlanSetup
+  overload: ESAPIX.Facade.API.ScriptContext.PlanSetup*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup
+  commentId: P:ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup
+  id: ExternalPlanSetup
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: ExternalPlanSetup
+  nameWithType: ScriptContext.ExternalPlanSetup
+  fullName: ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup
+  type: Property
+  source:
+    id: ExternalPlanSetup
+    path: ''
+    startLine: 11933
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ExternalPlanSetup ExternalPlanSetup { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ExternalPlanSetup
+    content.vb: Public Property ExternalPlanSetup As ExternalPlanSetup
+  overload: ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup
+  commentId: P:ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup
+  id: BrachyPlanSetup
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup
+  nameWithType: ScriptContext.BrachyPlanSetup
+  fullName: ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup
+  type: Property
+  source:
+    id: BrachyPlanSetup
+    path: ''
+    startLine: 11946
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup BrachyPlanSetup { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.BrachyPlanSetup
+    content.vb: Public Property BrachyPlanSetup As BrachyPlanSetup
+  overload: ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.PlansInScope
+  commentId: P:ESAPIX.Facade.API.ScriptContext.PlansInScope
+  id: PlansInScope
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: PlansInScope
+  nameWithType: ScriptContext.PlansInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.PlansInScope
+  type: Property
+  source:
+    id: PlansInScope
+    path: ''
+    startLine: 11959
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<PlanSetup> PlansInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSetup}
+    content.vb: Public ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
+  overload: ESAPIX.Facade.API.ScriptContext.PlansInScope*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope
+  commentId: P:ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope
+  id: ExternalPlansInScope
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: ExternalPlansInScope
+  nameWithType: ScriptContext.ExternalPlansInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope
+  type: Property
+  source:
+    id: ExternalPlansInScope
+    path: ''
+    startLine: 11985
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
+    content.vb: Public ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
+  overload: ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope
+  commentId: P:ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope
+  id: BrachyPlansInScope
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlansInScope
+  nameWithType: ScriptContext.BrachyPlansInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope
+  type: Property
+  source:
+    id: BrachyPlansInScope
+    path: ''
+    startLine: 12011
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
+    content.vb: Public ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
+  overload: ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ScriptContext.PlanSumsInScope
+  commentId: P:ESAPIX.Facade.API.ScriptContext.PlanSumsInScope
+  id: PlanSumsInScope
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: PlanSumsInScope
+  nameWithType: ScriptContext.PlanSumsInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.PlanSumsInScope
+  type: Property
+  source:
+    id: PlanSumsInScope
+    path: ''
+    startLine: 12037
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<PlanSum> PlanSumsInScope { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSum}
+    content.vb: Public ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
+  overload: ESAPIX.Facade.API.ScriptContext.PlanSumsInScope*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ScriptContext.ApplicationName
+  commentId: P:ESAPIX.Facade.API.ScriptContext.ApplicationName
+  id: ApplicationName
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: ApplicationName
+  nameWithType: ScriptContext.ApplicationName
+  fullName: ESAPIX.Facade.API.ScriptContext.ApplicationName
+  type: Property
+  source:
+    id: ApplicationName
+    path: ''
+    startLine: 12063
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicationName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicationName As String
+  overload: ESAPIX.Facade.API.ScriptContext.ApplicationName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ScriptContext.VersionInfo
+  commentId: P:ESAPIX.Facade.API.ScriptContext.VersionInfo
+  id: VersionInfo
+  parent: ESAPIX.Facade.API.ScriptContext
+  langs:
+  - csharp
+  - vb
+  name: VersionInfo
+  nameWithType: ScriptContext.VersionInfo
+  fullName: ESAPIX.Facade.API.ScriptContext.VersionInfo
+  type: Property
+  source:
+    id: VersionInfo
+    path: ''
+    startLine: 12076
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string VersionInfo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property VersionInfo As String
+  overload: ESAPIX.Facade.API.ScriptContext.VersionInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.ScriptContext.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.#ctor
+  isExternal: false
+  name: ScriptContext
+  nameWithType: ScriptContext.ScriptContext
+  fullName: ESAPIX.Facade.API.ScriptContext.ScriptContext
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.API.ScriptContext.CurrentUser*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.CurrentUser
+  isExternal: false
+  name: CurrentUser
+  nameWithType: ScriptContext.CurrentUser
+  fullName: ESAPIX.Facade.API.ScriptContext.CurrentUser
+- uid: ESAPIX.Facade.API.User
+  commentId: T:ESAPIX.Facade.API.User
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: ESAPIX.Facade.API.User
+- uid: ESAPIX.Facade.API.ScriptContext.Course*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.Course
+  isExternal: false
+  name: Course
+  nameWithType: ScriptContext.Course
+  fullName: ESAPIX.Facade.API.ScriptContext.Course
+- uid: ESAPIX.Facade.API.Course
+  commentId: T:ESAPIX.Facade.API.Course
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Course
+  nameWithType: Course
+  fullName: ESAPIX.Facade.API.Course
+- uid: ESAPIX.Facade.API.ScriptContext.Image*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.Image
+  isExternal: false
+  name: Image
+  nameWithType: ScriptContext.Image
+  fullName: ESAPIX.Facade.API.ScriptContext.Image
+- uid: ESAPIX.Facade.API.Image
+  commentId: T:ESAPIX.Facade.API.Image
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Image
+  nameWithType: Image
+  fullName: ESAPIX.Facade.API.Image
+- uid: ESAPIX.Facade.API.ScriptContext.StructureSet*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.StructureSet
+  isExternal: false
+  name: StructureSet
+  nameWithType: ScriptContext.StructureSet
+  fullName: ESAPIX.Facade.API.ScriptContext.StructureSet
+- uid: ESAPIX.Facade.API.StructureSet
+  commentId: T:ESAPIX.Facade.API.StructureSet
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: StructureSet
+  nameWithType: StructureSet
+  fullName: ESAPIX.Facade.API.StructureSet
+- uid: ESAPIX.Facade.API.ScriptContext.Patient*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.Patient
+  isExternal: false
+  name: Patient
+  nameWithType: ScriptContext.Patient
+  fullName: ESAPIX.Facade.API.ScriptContext.Patient
+- uid: ESAPIX.Facade.API.Patient
+  commentId: T:ESAPIX.Facade.API.Patient
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Patient
+  nameWithType: Patient
+  fullName: ESAPIX.Facade.API.Patient
+- uid: ESAPIX.Facade.API.ScriptContext.PlanSetup*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.PlanSetup
+  isExternal: false
+  name: PlanSetup
+  nameWithType: ScriptContext.PlanSetup
+  fullName: ESAPIX.Facade.API.ScriptContext.PlanSetup
+- uid: ESAPIX.Facade.API.PlanSetup
+  commentId: T:ESAPIX.Facade.API.PlanSetup
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: PlanSetup
+  nameWithType: PlanSetup
+  fullName: ESAPIX.Facade.API.PlanSetup
+- uid: ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup
+  isExternal: false
+  name: ExternalPlanSetup
+  nameWithType: ScriptContext.ExternalPlanSetup
+  fullName: ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup
+- uid: ESAPIX.Facade.API.ExternalPlanSetup
+  commentId: T:ESAPIX.Facade.API.ExternalPlanSetup
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ExternalPlanSetup
+  nameWithType: ExternalPlanSetup
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup
+- uid: ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup
+  isExternal: false
+  name: BrachyPlanSetup
+  nameWithType: ScriptContext.BrachyPlanSetup
+  fullName: ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup
+- uid: ESAPIX.Facade.API.BrachyPlanSetup
+  commentId: T:ESAPIX.Facade.API.BrachyPlanSetup
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: BrachyPlanSetup
+  nameWithType: BrachyPlanSetup
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup
+- uid: ESAPIX.Facade.API.ScriptContext.PlansInScope*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.PlansInScope
+  isExternal: false
+  name: PlansInScope
+  nameWithType: ScriptContext.PlansInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.PlansInScope
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSetup}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSetup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<PlanSetup>
+  nameWithType: IEnumerable<PlanSetup>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.PlanSetup>
+  nameWithType.vb: IEnumerable(Of PlanSetup)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.PlanSetup)
+  name.vb: IEnumerable(Of PlanSetup)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.PlanSetup
+    name: PlanSetup
+    nameWithType: PlanSetup
+    fullName: ESAPIX.Facade.API.PlanSetup
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.PlanSetup
+    name: PlanSetup
+    nameWithType: PlanSetup
+    fullName: ESAPIX.Facade.API.PlanSetup
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope
+  isExternal: false
+  name: ExternalPlansInScope
+  nameWithType: ScriptContext.ExternalPlansInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ExternalPlanSetup>
+  nameWithType: IEnumerable<ExternalPlanSetup>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.ExternalPlanSetup>
+  nameWithType.vb: IEnumerable(Of ExternalPlanSetup)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.ExternalPlanSetup)
+  name.vb: IEnumerable(Of ExternalPlanSetup)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.ExternalPlanSetup
+    name: ExternalPlanSetup
+    nameWithType: ExternalPlanSetup
+    fullName: ESAPIX.Facade.API.ExternalPlanSetup
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.ExternalPlanSetup
+    name: ExternalPlanSetup
+    nameWithType: ExternalPlanSetup
+    fullName: ESAPIX.Facade.API.ExternalPlanSetup
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope
+  isExternal: false
+  name: BrachyPlansInScope
+  nameWithType: ScriptContext.BrachyPlansInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<BrachyPlanSetup>
+  nameWithType: IEnumerable<BrachyPlanSetup>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.BrachyPlanSetup>
+  nameWithType.vb: IEnumerable(Of BrachyPlanSetup)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.BrachyPlanSetup)
+  name.vb: IEnumerable(Of BrachyPlanSetup)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.BrachyPlanSetup
+    name: BrachyPlanSetup
+    nameWithType: BrachyPlanSetup
+    fullName: ESAPIX.Facade.API.BrachyPlanSetup
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.BrachyPlanSetup
+    name: BrachyPlanSetup
+    nameWithType: BrachyPlanSetup
+    fullName: ESAPIX.Facade.API.BrachyPlanSetup
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ScriptContext.PlanSumsInScope*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.PlanSumsInScope
+  isExternal: false
+  name: PlanSumsInScope
+  nameWithType: ScriptContext.PlanSumsInScope
+  fullName: ESAPIX.Facade.API.ScriptContext.PlanSumsInScope
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSum}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSum}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<PlanSum>
+  nameWithType: IEnumerable<PlanSum>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.PlanSum>
+  nameWithType.vb: IEnumerable(Of PlanSum)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.PlanSum)
+  name.vb: IEnumerable(Of PlanSum)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.PlanSum
+    name: PlanSum
+    nameWithType: PlanSum
+    fullName: ESAPIX.Facade.API.PlanSum
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.PlanSum
+    name: PlanSum
+    nameWithType: PlanSum
+    fullName: ESAPIX.Facade.API.PlanSum
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ScriptContext.ApplicationName*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.ApplicationName
+  isExternal: false
+  name: ApplicationName
+  nameWithType: ScriptContext.ApplicationName
+  fullName: ESAPIX.Facade.API.ScriptContext.ApplicationName
+- uid: ESAPIX.Facade.API.ScriptContext.VersionInfo*
+  commentId: Overload:ESAPIX.Facade.API.ScriptContext.VersionInfo
+  isExternal: false
+  name: VersionInfo
+  nameWithType: ScriptContext.VersionInfo
+  fullName: ESAPIX.Facade.API.ScriptContext.VersionInfo

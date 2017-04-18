@@ -1,0 +1,1654 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1
+  commentId: T:ESAPIX.AppKit.Data.JsonDataStore`1
+  id: JsonDataStore`1
+  parent: ESAPIX.AppKit.Data
+  children:
+  - ESAPIX.AppKit.Data.JsonDataStore`1.#ctor(System.String,System.Func{`0,System.String},System.String)
+  - ESAPIX.AppKit.Data.JsonDataStore`1.Deserialize(System.String)
+  - ESAPIX.AppKit.Data.JsonDataStore`1.Serialize(`0)
+  - ESAPIX.AppKit.Data.JsonDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  langs:
+  - csharp
+  - vb
+  name: JsonDataStore<T>
+  nameWithType: JsonDataStore<T>
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>
+  type: Class
+  source:
+    id: JsonDataStore
+    path: ''
+    startLine: 985
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: 'public class JsonDataStore<T> : AbstractStringDataStore<T>'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class JsonDataStore(Of T)
+          Inherits AbstractStringDataStore(Of T)
+  inheritance:
+  - System.Object
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  inheritedMembers:
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.DataPath
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Save({T})
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.LoadAll
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.LoadAllSecure
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.DeleteAll
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Delete({T})
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.GetSavePath({T})
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.GetHash(System.String)
+  - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.GetHashString(System.String)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: JsonDataStore(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T)
+  name.vb: JsonDataStore(Of T)
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1.#ctor(System.String,System.Func{`0,System.String},System.String)
+  commentId: M:ESAPIX.AppKit.Data.JsonDataStore`1.#ctor(System.String,System.Func{`0,System.String},System.String)
+  id: '#ctor(System.String,System.Func{`0,System.String},System.String)'
+  parent: ESAPIX.AppKit.Data.JsonDataStore`1
+  langs:
+  - csharp
+  - vb
+  name: JsonDataStore(String, Func<T, String>, String)
+  nameWithType: JsonDataStore<T>.JsonDataStore(String, Func<T, String>, String)
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>.JsonDataStore(System.String, System.Func<T, System.String>, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 989
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public JsonDataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "")
+    parameters:
+    - id: fileExtension
+      type: System.String
+    - id: fileNamingMethod
+      type: System.Func{{T},System.String}
+    - id: storePath
+      type: System.String
+    content.vb: Public Sub New(fileExtension As String, fileNamingMethod As Func(Of T, String), storePath As String = "")
+  overload: ESAPIX.AppKit.Data.JsonDataStore`1.#ctor*
+  nameWithType.vb: JsonDataStore(Of T).JsonDataStore(String, Func(Of T, String), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T).JsonDataStore(System.String, System.Func(Of T, System.String), System.String)
+  name.vb: JsonDataStore(String, Func(Of T, String), String)
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1.Deserialize(System.String)
+  commentId: M:ESAPIX.AppKit.Data.JsonDataStore`1.Deserialize(System.String)
+  id: Deserialize(System.String)
+  parent: ESAPIX.AppKit.Data.JsonDataStore`1
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(String)
+  nameWithType: JsonDataStore<T>.Deserialize(String)
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>.Deserialize(System.String)
+  type: Method
+  source:
+    id: Deserialize
+    path: ''
+    startLine: 998
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public override SecureStorage<T> Deserialize(string serial)
+    parameters:
+    - id: serial
+      type: System.String
+    return:
+      type: ESAPIX.AppKit.Data.SecureStorage{{T}}
+    content.vb: Public Overrides Function Deserialize(serial As String) As SecureStorage(Of T)
+  overridden: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Deserialize(System.String)
+  overload: ESAPIX.AppKit.Data.JsonDataStore`1.Deserialize*
+  nameWithType.vb: JsonDataStore(Of T).Deserialize(String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T).Deserialize(System.String)
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  commentId: M:ESAPIX.AppKit.Data.JsonDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  id: Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  parent: ESAPIX.AppKit.Data.JsonDataStore`1
+  langs:
+  - csharp
+  - vb
+  name: Serialize(SecureStorage<T>)
+  nameWithType: JsonDataStore<T>.Serialize(SecureStorage<T>)
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>.Serialize(ESAPIX.AppKit.Data.SecureStorage<T>)
+  type: Method
+  source:
+    id: Serialize
+    path: ''
+    startLine: 1022
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public override string Serialize(SecureStorage<T> toSerialize)
+    parameters:
+    - id: toSerialize
+      type: ESAPIX.AppKit.Data.SecureStorage{{T}}
+    return:
+      type: System.String
+    content.vb: Public Overrides Function Serialize(toSerialize As SecureStorage(Of T)) As String
+  overridden: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Serialize(ESAPIX.AppKit.Data.SecureStorage{{T}})
+  overload: ESAPIX.AppKit.Data.JsonDataStore`1.Serialize*
+  nameWithType.vb: JsonDataStore(Of T).Serialize(SecureStorage(Of T))
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T).Serialize(ESAPIX.AppKit.Data.SecureStorage(Of T))
+  name.vb: Serialize(SecureStorage(Of T))
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1.Serialize(`0)
+  commentId: M:ESAPIX.AppKit.Data.JsonDataStore`1.Serialize(`0)
+  id: Serialize(`0)
+  parent: ESAPIX.AppKit.Data.JsonDataStore`1
+  langs:
+  - csharp
+  - vb
+  name: Serialize(T)
+  nameWithType: JsonDataStore<T>.Serialize(T)
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>.Serialize(T)
+  type: Method
+  source:
+    id: Serialize
+    path: ''
+    startLine: 1027
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public override string Serialize(T toSerialize)
+    parameters:
+    - id: toSerialize
+      type: '{T}'
+    return:
+      type: System.String
+    content.vb: Public Overrides Function Serialize(toSerialize As T) As String
+  overridden: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Serialize({T})
+  overload: ESAPIX.AppKit.Data.JsonDataStore`1.Serialize*
+  nameWithType.vb: JsonDataStore(Of T).Serialize(T)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T).Serialize(T)
+references:
+- uid: ESAPIX.AppKit.Data
+  commentId: N:ESAPIX.AppKit.Data
+  isExternal: false
+  name: ESAPIX.AppKit.Data
+  nameWithType: ESAPIX.AppKit.Data
+  fullName: ESAPIX.AppKit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  commentId: T:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}
+  parent: ESAPIX.AppKit.Data
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1
+  name: AbstractStringDataStore<T>
+  nameWithType: AbstractStringDataStore<T>
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>
+  nameWithType.vb: AbstractStringDataStore(Of T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T)
+  name.vb: AbstractStringDataStore(Of T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1
+    name: AbstractStringDataStore
+    nameWithType: AbstractStringDataStore
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1
+    name: AbstractStringDataStore
+    nameWithType: AbstractStringDataStore
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.DataPath
+  commentId: P:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.DataPath
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
+  name: DataPath
+  nameWithType: AbstractStringDataStore<T>.DataPath
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DataPath
+  nameWithType.vb: AbstractStringDataStore(Of T).DataPath
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DataPath
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Save({T})
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.Save(`0)
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
+  name: Save(T)
+  nameWithType: AbstractStringDataStore<T>.Save(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Save(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).Save(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Save(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
+    name: Save
+    nameWithType: AbstractStringDataStore<T>.Save
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
+    name: Save
+    nameWithType: AbstractStringDataStore(Of T).Save
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.LoadAll
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.LoadAll
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll
+  name: LoadAll()
+  nameWithType: AbstractStringDataStore<T>.LoadAll()
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAll()
+  nameWithType.vb: AbstractStringDataStore(Of T).LoadAll()
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAll()
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll
+    name: LoadAll
+    nameWithType: AbstractStringDataStore<T>.LoadAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll
+    name: LoadAll
+    nameWithType: AbstractStringDataStore(Of T).LoadAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.LoadAllSecure
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.LoadAllSecure
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
+  name: LoadAllSecure()
+  nameWithType: AbstractStringDataStore<T>.LoadAllSecure()
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAllSecure()
+  nameWithType.vb: AbstractStringDataStore(Of T).LoadAllSecure()
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAllSecure()
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
+    name: LoadAllSecure
+    nameWithType: AbstractStringDataStore<T>.LoadAllSecure
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAllSecure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
+    name: LoadAllSecure
+    nameWithType: AbstractStringDataStore(Of T).LoadAllSecure
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAllSecure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.DeleteAll
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.DeleteAll
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll
+  name: DeleteAll()
+  nameWithType: AbstractStringDataStore<T>.DeleteAll()
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DeleteAll()
+  nameWithType.vb: AbstractStringDataStore(Of T).DeleteAll()
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DeleteAll()
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll
+    name: DeleteAll
+    nameWithType: AbstractStringDataStore<T>.DeleteAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DeleteAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll
+    name: DeleteAll
+    nameWithType: AbstractStringDataStore(Of T).DeleteAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DeleteAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Delete({T})
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.Delete(`0)
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete(`0)
+  name: Delete(T)
+  nameWithType: AbstractStringDataStore<T>.Delete(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Delete(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).Delete(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Delete(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete(`0)
+    name: Delete
+    nameWithType: AbstractStringDataStore<T>.Delete
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete(`0)
+    name: Delete
+    nameWithType: AbstractStringDataStore(Of T).Delete
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.GetSavePath({T})
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.GetSavePath(`0)
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath(`0)
+  name: GetSavePath(T)
+  nameWithType: AbstractStringDataStore<T>.GetSavePath(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetSavePath(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).GetSavePath(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetSavePath(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath(`0)
+    name: GetSavePath
+    nameWithType: AbstractStringDataStore<T>.GetSavePath
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetSavePath
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath(`0)
+    name: GetSavePath
+    nameWithType: AbstractStringDataStore(Of T).GetSavePath
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetSavePath
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.GetHash(System.String)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.GetHash(System.String)
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash(System.String)
+  name: GetHash(String)
+  nameWithType: AbstractStringDataStore<T>.GetHash(String)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHash(System.String)
+  nameWithType.vb: AbstractStringDataStore(Of T).GetHash(String)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHash(System.String)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash(System.String)
+    name: GetHash
+    nameWithType: AbstractStringDataStore<T>.GetHash
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHash
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash(System.String)
+    name: GetHash
+    nameWithType: AbstractStringDataStore(Of T).GetHash
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHash
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.GetHashString(System.String)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.GetHashString(System.String)
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString(System.String)
+  name: GetHashString(String)
+  nameWithType: AbstractStringDataStore<T>.GetHashString(String)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHashString(System.String)
+  nameWithType.vb: AbstractStringDataStore(Of T).GetHashString(String)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHashString(System.String)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString(System.String)
+    name: GetHashString
+    nameWithType: AbstractStringDataStore<T>.GetHashString
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHashString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString(System.String)
+    name: GetHashString
+    nameWithType: AbstractStringDataStore(Of T).GetHashString
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHashString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1
+  commentId: T:ESAPIX.AppKit.Data.AbstractStringDataStore`1
+  isExternal: false
+  name: AbstractStringDataStore<T>
+  nameWithType: AbstractStringDataStore<T>
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>
+  nameWithType.vb: AbstractStringDataStore(Of T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T)
+  name.vb: AbstractStringDataStore(Of T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1
+    name: AbstractStringDataStore
+    nameWithType: AbstractStringDataStore
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1
+    name: AbstractStringDataStore
+    nameWithType: AbstractStringDataStore
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
+  commentId: P:ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
+  isExternal: false
+  name: DataPath
+  nameWithType: AbstractStringDataStore<T>.DataPath
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DataPath
+  nameWithType.vb: AbstractStringDataStore(Of T).DataPath
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DataPath
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
+  isExternal: false
+  name: Save(T)
+  nameWithType: AbstractStringDataStore<T>.Save(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Save(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).Save(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Save(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
+    name: Save
+    nameWithType: AbstractStringDataStore<T>.Save
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
+    name: Save
+    nameWithType: AbstractStringDataStore(Of T).Save
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll
+  isExternal: false
+  name: LoadAll()
+  nameWithType: AbstractStringDataStore<T>.LoadAll()
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAll()
+  nameWithType.vb: AbstractStringDataStore(Of T).LoadAll()
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAll()
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll
+    name: LoadAll
+    nameWithType: AbstractStringDataStore<T>.LoadAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll
+    name: LoadAll
+    nameWithType: AbstractStringDataStore(Of T).LoadAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
+  isExternal: false
+  name: LoadAllSecure()
+  nameWithType: AbstractStringDataStore<T>.LoadAllSecure()
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAllSecure()
+  nameWithType.vb: AbstractStringDataStore(Of T).LoadAllSecure()
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAllSecure()
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
+    name: LoadAllSecure
+    nameWithType: AbstractStringDataStore<T>.LoadAllSecure
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAllSecure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
+    name: LoadAllSecure
+    nameWithType: AbstractStringDataStore(Of T).LoadAllSecure
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAllSecure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll
+  isExternal: false
+  name: DeleteAll()
+  nameWithType: AbstractStringDataStore<T>.DeleteAll()
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DeleteAll()
+  nameWithType.vb: AbstractStringDataStore(Of T).DeleteAll()
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DeleteAll()
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll
+    name: DeleteAll
+    nameWithType: AbstractStringDataStore<T>.DeleteAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DeleteAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll
+    name: DeleteAll
+    nameWithType: AbstractStringDataStore(Of T).DeleteAll
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DeleteAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete(`0)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete(`0)
+  isExternal: false
+  name: Delete(T)
+  nameWithType: AbstractStringDataStore<T>.Delete(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Delete(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).Delete(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Delete(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete(`0)
+    name: Delete
+    nameWithType: AbstractStringDataStore<T>.Delete
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete(`0)
+    name: Delete
+    nameWithType: AbstractStringDataStore(Of T).Delete
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath(`0)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath(`0)
+  isExternal: false
+  name: GetSavePath(T)
+  nameWithType: AbstractStringDataStore<T>.GetSavePath(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetSavePath(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).GetSavePath(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetSavePath(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath(`0)
+    name: GetSavePath
+    nameWithType: AbstractStringDataStore<T>.GetSavePath
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetSavePath
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath(`0)
+    name: GetSavePath
+    nameWithType: AbstractStringDataStore(Of T).GetSavePath
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetSavePath
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash(System.String)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash(System.String)
+  isExternal: true
+  name: GetHash(String)
+  nameWithType: AbstractStringDataStore<T>.GetHash(String)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHash(System.String)
+  nameWithType.vb: AbstractStringDataStore(Of T).GetHash(String)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHash(System.String)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash(System.String)
+    name: GetHash
+    nameWithType: AbstractStringDataStore<T>.GetHash
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHash
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash(System.String)
+    name: GetHash
+    nameWithType: AbstractStringDataStore(Of T).GetHash
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHash
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString(System.String)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString(System.String)
+  isExternal: true
+  name: GetHashString(String)
+  nameWithType: AbstractStringDataStore<T>.GetHashString(String)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHashString(System.String)
+  nameWithType.vb: AbstractStringDataStore(Of T).GetHashString(String)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHashString(System.String)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString(System.String)
+    name: GetHashString
+    nameWithType: AbstractStringDataStore<T>.GetHashString
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.GetHashString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString(System.String)
+    name: GetHashString
+    nameWithType: AbstractStringDataStore(Of T).GetHashString
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).GetHashString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1.#ctor*
+  commentId: Overload:ESAPIX.AppKit.Data.JsonDataStore`1.#ctor
+  isExternal: false
+  name: JsonDataStore
+  nameWithType: JsonDataStore<T>.JsonDataStore
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>.JsonDataStore
+  nameWithType.vb: JsonDataStore(Of T).JsonDataStore
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T).JsonDataStore
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Func{{T},System.String}
+  commentId: T:System.Func{`0,System.String}
+  parent: System
+  definition: System.Func`2
+  name: Func<T, String>
+  nameWithType: Func<T, String>
+  fullName: System.Func<T, System.String>
+  nameWithType.vb: Func(Of T, String)
+  fullName.vb: System.Func(Of T, System.String)
+  name.vb: Func(Of T, String)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Deserialize(System.String)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.Deserialize(System.String)
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize(System.String)
+  name: Deserialize(String)
+  nameWithType: AbstractStringDataStore<T>.Deserialize(String)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Deserialize(System.String)
+  nameWithType.vb: AbstractStringDataStore(Of T).Deserialize(String)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Deserialize(System.String)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize(System.String)
+    name: Deserialize
+    nameWithType: AbstractStringDataStore<T>.Deserialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize(System.String)
+    name: Deserialize
+    nameWithType: AbstractStringDataStore(Of T).Deserialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1.Deserialize*
+  commentId: Overload:ESAPIX.AppKit.Data.JsonDataStore`1.Deserialize
+  isExternal: false
+  name: Deserialize
+  nameWithType: JsonDataStore<T>.Deserialize
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>.Deserialize
+  nameWithType.vb: JsonDataStore(Of T).Deserialize
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T).Deserialize
+- uid: ESAPIX.AppKit.Data.SecureStorage{{T}}
+  commentId: T:ESAPIX.AppKit.Data.SecureStorage{`0}
+  parent: ESAPIX.AppKit.Data
+  definition: ESAPIX.AppKit.Data.SecureStorage`1
+  name: SecureStorage<T>
+  nameWithType: SecureStorage<T>
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>
+  nameWithType.vb: SecureStorage(Of T)
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T)
+  name.vb: SecureStorage(Of T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize(System.String)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize(System.String)
+  isExternal: true
+  name: Deserialize(String)
+  nameWithType: AbstractStringDataStore<T>.Deserialize(String)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Deserialize(System.String)
+  nameWithType.vb: AbstractStringDataStore(Of T).Deserialize(String)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Deserialize(System.String)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize(System.String)
+    name: Deserialize
+    nameWithType: AbstractStringDataStore<T>.Deserialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize(System.String)
+    name: Deserialize
+    nameWithType: AbstractStringDataStore(Of T).Deserialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.SecureStorage`1
+  commentId: T:ESAPIX.AppKit.Data.SecureStorage`1
+  isExternal: false
+  name: SecureStorage<T>
+  nameWithType: SecureStorage<T>
+  fullName: ESAPIX.AppKit.Data.SecureStorage<T>
+  nameWithType.vb: SecureStorage(Of T)
+  fullName.vb: ESAPIX.AppKit.Data.SecureStorage(Of T)
+  name.vb: SecureStorage(Of T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Serialize(ESAPIX.AppKit.Data.SecureStorage{{T}})
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  name: Serialize(SecureStorage<T>)
+  nameWithType: AbstractStringDataStore<T>.Serialize(SecureStorage<T>)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize(ESAPIX.AppKit.Data.SecureStorage<T>)
+  nameWithType.vb: AbstractStringDataStore(Of T).Serialize(SecureStorage(Of T))
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize(ESAPIX.AppKit.Data.SecureStorage(Of T))
+  name.vb: Serialize(SecureStorage(Of T))
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+    name: Serialize
+    nameWithType: AbstractStringDataStore<T>.Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+    name: Serialize
+    nameWithType: AbstractStringDataStore(Of T).Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.JsonDataStore`1.Serialize*
+  commentId: Overload:ESAPIX.AppKit.Data.JsonDataStore`1.Serialize
+  isExternal: false
+  name: Serialize
+  nameWithType: JsonDataStore<T>.Serialize
+  fullName: ESAPIX.AppKit.Data.JsonDataStore<T>.Serialize
+  nameWithType.vb: JsonDataStore(Of T).Serialize
+  fullName.vb: ESAPIX.AppKit.Data.JsonDataStore(Of T).Serialize
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+  isExternal: false
+  name: Serialize(SecureStorage<T>)
+  nameWithType: AbstractStringDataStore<T>.Serialize(SecureStorage<T>)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize(ESAPIX.AppKit.Data.SecureStorage<T>)
+  nameWithType.vb: AbstractStringDataStore(Of T).Serialize(SecureStorage(Of T))
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize(ESAPIX.AppKit.Data.SecureStorage(Of T))
+  name.vb: Serialize(SecureStorage(Of T))
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+    name: Serialize
+    nameWithType: AbstractStringDataStore<T>.Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(ESAPIX.AppKit.Data.SecureStorage{`0})
+    name: Serialize
+    nameWithType: AbstractStringDataStore(Of T).Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.AppKit.Data.SecureStorage`1
+    name: SecureStorage
+    nameWithType: SecureStorage
+    fullName: ESAPIX.AppKit.Data.SecureStorage
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Serialize({T})
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore{`0}.Serialize(`0)
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
+  definition: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
+  name: Serialize(T)
+  nameWithType: AbstractStringDataStore<T>.Serialize(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).Serialize(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
+    name: Serialize
+    nameWithType: AbstractStringDataStore<T>.Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
+    name: Serialize
+    nameWithType: AbstractStringDataStore(Of T).Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
+  commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
+  isExternal: false
+  name: Serialize(T)
+  nameWithType: AbstractStringDataStore<T>.Serialize(T)
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize(T)
+  nameWithType.vb: AbstractStringDataStore(Of T).Serialize(T)
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize(T)
+  spec.csharp:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
+    name: Serialize
+    nameWithType: AbstractStringDataStore<T>.Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
+    name: Serialize
+    nameWithType: AbstractStringDataStore(Of T).Serialize
+    fullName: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T

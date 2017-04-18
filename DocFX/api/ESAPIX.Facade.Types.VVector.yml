@@ -1,0 +1,791 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.VVector
+  commentId: T:ESAPIX.Facade.Types.VVector
+  id: VVector
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.VVector.#ctor
+  - ESAPIX.Facade.Types.VVector.#ctor(System.Double,System.Double,System.Double)
+  - ESAPIX.Facade.Types.VVector.#ctor(System.Object)
+  - ESAPIX.Facade.Types.VVector.Distance(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector)
+  - ESAPIX.Facade.Types.VVector.Item
+  - ESAPIX.Facade.Types.VVector.Length
+  - ESAPIX.Facade.Types.VVector.LengthSquared
+  - ESAPIX.Facade.Types.VVector.ScalarProduct(ESAPIX.Facade.Types.VVector)
+  - ESAPIX.Facade.Types.VVector.ScaleToUnitLength
+  - ESAPIX.Facade.Types.VVector.x
+  - ESAPIX.Facade.Types.VVector.y
+  - ESAPIX.Facade.Types.VVector.z
+  langs:
+  - csharp
+  - vb
+  name: VVector
+  nameWithType: VVector
+  fullName: ESAPIX.Facade.Types.VVector
+  type: Class
+  source:
+    id: VVector
+    path: ''
+    startLine: 14995
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class VVector
+    content.vb: Public Class VVector
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.VVector.#ctor
+  commentId: M:ESAPIX.Facade.Types.VVector.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: VVector()
+  nameWithType: VVector.VVector()
+  fullName: ESAPIX.Facade.Types.VVector.VVector()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14998
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public VVector()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.VVector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.VVector.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: VVector(Object)
+  nameWithType: VVector.VVector(Object)
+  fullName: ESAPIX.Facade.Types.VVector.VVector(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14999
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public VVector(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.VVector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.#ctor(System.Double,System.Double,System.Double)
+  commentId: M:ESAPIX.Facade.Types.VVector.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: VVector(Double, Double, Double)
+  nameWithType: VVector.VVector(Double, Double, Double)
+  fullName: ESAPIX.Facade.Types.VVector.VVector(System.Double, System.Double, System.Double)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 15000
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public VVector(double xi, double yi, double zi)
+    parameters:
+    - id: xi
+      type: System.Double
+    - id: yi
+      type: System.Double
+    - id: zi
+      type: System.Double
+    content.vb: Public Sub New(xi As Double, yi As Double, zi As Double)
+  overload: ESAPIX.Facade.Types.VVector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.Item
+  commentId: P:ESAPIX.Facade.Types.VVector.Item
+  id: Item
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: VVector.Item
+  fullName: ESAPIX.Facade.Types.VVector.Item
+  type: Property
+  source:
+    id: Item
+    path: ''
+    startLine: 15012
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double Item { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Item As Double
+  overload: ESAPIX.Facade.Types.VVector.Item*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.LengthSquared
+  commentId: P:ESAPIX.Facade.Types.VVector.LengthSquared
+  id: LengthSquared
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: LengthSquared
+  nameWithType: VVector.LengthSquared
+  fullName: ESAPIX.Facade.Types.VVector.LengthSquared
+  type: Property
+  source:
+    id: LengthSquared
+    path: ''
+    startLine: 15025
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double LengthSquared { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property LengthSquared As Double
+  overload: ESAPIX.Facade.Types.VVector.LengthSquared*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.Length
+  commentId: P:ESAPIX.Facade.Types.VVector.Length
+  id: Length
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: VVector.Length
+  fullName: ESAPIX.Facade.Types.VVector.Length
+  type: Property
+  source:
+    id: Length
+    path: ''
+    startLine: 15038
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double Length { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Length As Double
+  overload: ESAPIX.Facade.Types.VVector.Length*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.x
+  commentId: P:ESAPIX.Facade.Types.VVector.x
+  id: x
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: x
+  nameWithType: VVector.x
+  fullName: ESAPIX.Facade.Types.VVector.x
+  type: Property
+  source:
+    id: x
+    path: ''
+    startLine: 15051
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double x { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property x As Double
+  overload: ESAPIX.Facade.Types.VVector.x*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.y
+  commentId: P:ESAPIX.Facade.Types.VVector.y
+  id: y
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: y
+  nameWithType: VVector.y
+  fullName: ESAPIX.Facade.Types.VVector.y
+  type: Property
+  source:
+    id: y
+    path: ''
+    startLine: 15064
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double y { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property y As Double
+  overload: ESAPIX.Facade.Types.VVector.y*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.z
+  commentId: P:ESAPIX.Facade.Types.VVector.z
+  id: z
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: z
+  nameWithType: VVector.z
+  fullName: ESAPIX.Facade.Types.VVector.z
+  type: Property
+  source:
+    id: z
+    path: ''
+    startLine: 15077
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double z { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property z As Double
+  overload: ESAPIX.Facade.Types.VVector.z*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.Distance(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.Types.VVector.Distance(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector)
+  id: Distance(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector)
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: Distance(VVector, VVector)
+  nameWithType: VVector.Distance(VVector, VVector)
+  fullName: ESAPIX.Facade.Types.VVector.Distance(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector)
+  type: Method
+  source:
+    id: Distance
+    path: ''
+    startLine: 15090
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public static double Distance(VVector left, VVector right)
+    parameters:
+    - id: left
+      type: ESAPIX.Facade.Types.VVector
+    - id: right
+      type: ESAPIX.Facade.Types.VVector
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Distance(left As VVector, right As VVector) As Double
+  overload: ESAPIX.Facade.Types.VVector.Distance*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.Types.VVector.ScaleToUnitLength
+  commentId: M:ESAPIX.Facade.Types.VVector.ScaleToUnitLength
+  id: ScaleToUnitLength
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: ScaleToUnitLength()
+  nameWithType: VVector.ScaleToUnitLength()
+  fullName: ESAPIX.Facade.Types.VVector.ScaleToUnitLength()
+  type: Method
+  source:
+    id: ScaleToUnitLength
+    path: ''
+    startLine: 15094
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void ScaleToUnitLength()
+    content.vb: Public Sub ScaleToUnitLength
+  overload: ESAPIX.Facade.Types.VVector.ScaleToUnitLength*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.VVector.ScalarProduct(ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.Types.VVector.ScalarProduct(ESAPIX.Facade.Types.VVector)
+  id: ScalarProduct(ESAPIX.Facade.Types.VVector)
+  parent: ESAPIX.Facade.Types.VVector
+  langs:
+  - csharp
+  - vb
+  name: ScalarProduct(VVector)
+  nameWithType: VVector.ScalarProduct(VVector)
+  fullName: ESAPIX.Facade.Types.VVector.ScalarProduct(ESAPIX.Facade.Types.VVector)
+  type: Method
+  source:
+    id: ScalarProduct
+    path: ''
+    startLine: 15103
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double ScalarProduct(VVector left)
+    parameters:
+    - id: left
+      type: ESAPIX.Facade.Types.VVector
+    return:
+      type: System.Double
+    content.vb: Public Function ScalarProduct(left As VVector) As Double
+  overload: ESAPIX.Facade.Types.VVector.ScalarProduct*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.VVector.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.#ctor
+  isExternal: false
+  name: VVector
+  nameWithType: VVector.VVector
+  fullName: ESAPIX.Facade.Types.VVector.VVector
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.Types.VVector.Item*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.Item
+  isExternal: false
+  name: Item
+  nameWithType: VVector.Item
+  fullName: ESAPIX.Facade.Types.VVector.Item
+- uid: ESAPIX.Facade.Types.VVector.LengthSquared*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.LengthSquared
+  isExternal: false
+  name: LengthSquared
+  nameWithType: VVector.LengthSquared
+  fullName: ESAPIX.Facade.Types.VVector.LengthSquared
+- uid: ESAPIX.Facade.Types.VVector.Length*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.Length
+  isExternal: false
+  name: Length
+  nameWithType: VVector.Length
+  fullName: ESAPIX.Facade.Types.VVector.Length
+- uid: ESAPIX.Facade.Types.VVector.x*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.x
+  isExternal: false
+  name: x
+  nameWithType: VVector.x
+  fullName: ESAPIX.Facade.Types.VVector.x
+- uid: ESAPIX.Facade.Types.VVector.y*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.y
+  isExternal: false
+  name: y
+  nameWithType: VVector.y
+  fullName: ESAPIX.Facade.Types.VVector.y
+- uid: ESAPIX.Facade.Types.VVector.z*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.z
+  isExternal: false
+  name: z
+  nameWithType: VVector.z
+  fullName: ESAPIX.Facade.Types.VVector.z
+- uid: ESAPIX.Facade.Types.VVector.Distance*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.Distance
+  isExternal: false
+  name: Distance
+  nameWithType: VVector.Distance
+  fullName: ESAPIX.Facade.Types.VVector.Distance
+- uid: ESAPIX.Facade.Types.VVector
+  commentId: T:ESAPIX.Facade.Types.VVector
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: VVector
+  nameWithType: VVector
+  fullName: ESAPIX.Facade.Types.VVector
+- uid: ESAPIX.Facade.Types.VVector.ScaleToUnitLength*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.ScaleToUnitLength
+  isExternal: false
+  name: ScaleToUnitLength
+  nameWithType: VVector.ScaleToUnitLength
+  fullName: ESAPIX.Facade.Types.VVector.ScaleToUnitLength
+- uid: ESAPIX.Facade.Types.VVector.ScalarProduct*
+  commentId: Overload:ESAPIX.Facade.Types.VVector.ScalarProduct
+  isExternal: false
+  name: ScalarProduct
+  nameWithType: VVector.ScalarProduct
+  fullName: ESAPIX.Facade.Types.VVector.ScalarProduct

@@ -1,0 +1,570 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.Query.MayoConstraint
+  commentId: T:ESAPIX.DVH.Query.MayoConstraint
+  id: MayoConstraint
+  parent: ESAPIX.DVH.Query
+  children:
+  - ESAPIX.DVH.Query.MayoConstraint.ConstraintValue
+  - ESAPIX.DVH.Query.MayoConstraint.Discriminator
+  - ESAPIX.DVH.Query.MayoConstraint.Query
+  - ESAPIX.DVH.Query.MayoConstraint.Read(System.String)
+  - ESAPIX.DVH.Query.MayoConstraint.Write
+  langs:
+  - csharp
+  - vb
+  name: MayoConstraint
+  nameWithType: MayoConstraint
+  fullName: ESAPIX.DVH.Query.MayoConstraint
+  type: Class
+  source:
+    id: MayoConstraint
+    path: ''
+    startLine: 2815
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: public class MayoConstraint
+    content.vb: Public Class MayoConstraint
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.DVH.Query.MayoConstraint.Query
+  commentId: P:ESAPIX.DVH.Query.MayoConstraint.Query
+  id: Query
+  parent: ESAPIX.DVH.Query.MayoConstraint
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: MayoConstraint.Query
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Query
+  type: Property
+  source:
+    id: Query
+    path: ''
+    startLine: 2817
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: public MayoQuery Query { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.DVH.Query.MayoQuery
+    content.vb: Public Property Query As MayoQuery
+  overload: ESAPIX.DVH.Query.MayoConstraint.Query*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Query.MayoConstraint.Discriminator
+  commentId: P:ESAPIX.DVH.Query.MayoConstraint.Discriminator
+  id: Discriminator
+  parent: ESAPIX.DVH.Query.MayoConstraint
+  langs:
+  - csharp
+  - vb
+  name: Discriminator
+  nameWithType: MayoConstraint.Discriminator
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Discriminator
+  type: Property
+  source:
+    id: Discriminator
+    path: ''
+    startLine: 2818
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: public Discriminator Discriminator { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.DVH.Query.Discriminator
+    content.vb: Public Property Discriminator As Discriminator
+  overload: ESAPIX.DVH.Query.MayoConstraint.Discriminator*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Query.MayoConstraint.ConstraintValue
+  commentId: P:ESAPIX.DVH.Query.MayoConstraint.ConstraintValue
+  id: ConstraintValue
+  parent: ESAPIX.DVH.Query.MayoConstraint
+  langs:
+  - csharp
+  - vb
+  name: ConstraintValue
+  nameWithType: MayoConstraint.ConstraintValue
+  fullName: ESAPIX.DVH.Query.MayoConstraint.ConstraintValue
+  type: Property
+  source:
+    id: ConstraintValue
+    path: ''
+    startLine: 2819
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: public double ConstraintValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ConstraintValue As Double
+  overload: ESAPIX.DVH.Query.MayoConstraint.ConstraintValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Query.MayoConstraint.Read(System.String)
+  commentId: M:ESAPIX.DVH.Query.MayoConstraint.Read(System.String)
+  id: Read(System.String)
+  parent: ESAPIX.DVH.Query.MayoConstraint
+  langs:
+  - csharp
+  - vb
+  name: Read(String)
+  nameWithType: MayoConstraint.Read(String)
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Read(System.String)
+  type: Method
+  source:
+    id: Read
+    path: ''
+    startLine: 2826
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  summary: "\nReads a constraint of the form {MayoQuery} {Discriminator} {ConstraintValue}\n"
+  example: []
+  syntax:
+    content: public static MayoConstraint Read(string constraint)
+    parameters:
+    - id: constraint
+      type: System.String
+      description: ''
+    return:
+      type: ESAPIX.DVH.Query.MayoConstraint
+      description: ''
+    content.vb: Public Shared Function Read(constraint As String) As MayoConstraint
+  overload: ESAPIX.DVH.Query.MayoConstraint.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.DVH.Query.MayoConstraint.Write
+  commentId: M:ESAPIX.DVH.Query.MayoConstraint.Write
+  id: Write
+  parent: ESAPIX.DVH.Query.MayoConstraint
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  nameWithType: MayoConstraint.Write()
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Write()
+  type: Method
+  source:
+    id: Write
+    path: ''
+    startLine: 2845
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  summary: "\nWrites a constraint of the form {MayoQuery} {Discriminator} {ConstraintValue}\n"
+  example: []
+  syntax:
+    content: public string Write()
+    return:
+      type: System.String
+      description: a string of the constraint
+    content.vb: Public Function Write As String
+  overload: ESAPIX.DVH.Query.MayoConstraint.Write*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.DVH.Query
+  commentId: N:ESAPIX.DVH.Query
+  isExternal: false
+  name: ESAPIX.DVH.Query
+  nameWithType: ESAPIX.DVH.Query
+  fullName: ESAPIX.DVH.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.DVH.Query.MayoConstraint.Query*
+  commentId: Overload:ESAPIX.DVH.Query.MayoConstraint.Query
+  isExternal: false
+  name: Query
+  nameWithType: MayoConstraint.Query
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Query
+- uid: ESAPIX.DVH.Query.MayoQuery
+  commentId: T:ESAPIX.DVH.Query.MayoQuery
+  parent: ESAPIX.DVH.Query
+  isExternal: false
+  name: MayoQuery
+  nameWithType: MayoQuery
+  fullName: ESAPIX.DVH.Query.MayoQuery
+- uid: ESAPIX.DVH.Query.MayoConstraint.Discriminator*
+  commentId: Overload:ESAPIX.DVH.Query.MayoConstraint.Discriminator
+  isExternal: false
+  name: Discriminator
+  nameWithType: MayoConstraint.Discriminator
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Discriminator
+- uid: ESAPIX.DVH.Query.Discriminator
+  commentId: T:ESAPIX.DVH.Query.Discriminator
+  parent: ESAPIX.DVH.Query
+  isExternal: false
+  name: Discriminator
+  nameWithType: Discriminator
+  fullName: ESAPIX.DVH.Query.Discriminator
+- uid: ESAPIX.DVH.Query.MayoConstraint.ConstraintValue*
+  commentId: Overload:ESAPIX.DVH.Query.MayoConstraint.ConstraintValue
+  isExternal: false
+  name: ConstraintValue
+  nameWithType: MayoConstraint.ConstraintValue
+  fullName: ESAPIX.DVH.Query.MayoConstraint.ConstraintValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.DVH.Query.MayoConstraint.Read*
+  commentId: Overload:ESAPIX.DVH.Query.MayoConstraint.Read
+  isExternal: false
+  name: Read
+  nameWithType: MayoConstraint.Read
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Read
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.DVH.Query.MayoConstraint
+  commentId: T:ESAPIX.DVH.Query.MayoConstraint
+  parent: ESAPIX.DVH.Query
+  isExternal: false
+  name: MayoConstraint
+  nameWithType: MayoConstraint
+  fullName: ESAPIX.DVH.Query.MayoConstraint
+- uid: ESAPIX.DVH.Query.MayoConstraint.Write*
+  commentId: Overload:ESAPIX.DVH.Query.MayoConstraint.Write
+  isExternal: false
+  name: Write
+  nameWithType: MayoConstraint.Write
+  fullName: ESAPIX.DVH.Query.MayoConstraint.Write

@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Interfaces.ISecureStorable
+  commentId: T:ESAPIX.Interfaces.ISecureStorable
+  id: ISecureStorable
+  parent: ESAPIX.Interfaces
+  children:
+  - ESAPIX.Interfaces.ISecureStorable.Hash
+  langs:
+  - csharp
+  - vb
+  name: ISecureStorable
+  nameWithType: ISecureStorable
+  fullName: ESAPIX.Interfaces.ISecureStorable
+  type: Interface
+  source:
+    id: ISecureStorable
+    path: ''
+    startLine: 15404
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: public interface ISecureStorable
+    content.vb: Public Interface ISecureStorable
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: ESAPIX.Interfaces.ISecureStorable.Hash
+  commentId: P:ESAPIX.Interfaces.ISecureStorable.Hash
+  id: Hash
+  parent: ESAPIX.Interfaces.ISecureStorable
+  langs:
+  - csharp
+  - vb
+  name: Hash
+  nameWithType: ISecureStorable.Hash
+  fullName: ESAPIX.Interfaces.ISecureStorable.Hash
+  type: Property
+  source:
+    id: Hash
+    path: ''
+    startLine: 15406
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: string Hash { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property Hash As String
+  overload: ESAPIX.Interfaces.ISecureStorable.Hash*
+  modifiers.csharp:
+  - get
+  - set
+references:
+- uid: ESAPIX.Interfaces
+  commentId: N:ESAPIX.Interfaces
+  isExternal: false
+  name: ESAPIX.Interfaces
+  nameWithType: ESAPIX.Interfaces
+  fullName: ESAPIX.Interfaces
+- uid: ESAPIX.Interfaces.ISecureStorable.Hash*
+  commentId: Overload:ESAPIX.Interfaces.ISecureStorable.Hash
+  isExternal: false
+  name: Hash
+  nameWithType: ISecureStorable.Hash
+  fullName: ESAPIX.Interfaces.ISecureStorable.Hash
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

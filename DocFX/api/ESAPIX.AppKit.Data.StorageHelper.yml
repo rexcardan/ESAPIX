@@ -1,0 +1,536 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.Data.StorageHelper
+  commentId: T:ESAPIX.AppKit.Data.StorageHelper
+  id: StorageHelper
+  parent: ESAPIX.AppKit.Data
+  children:
+  - ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists(System.String)
+  - ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists
+  - ESAPIX.AppKit.Data.StorageHelper.GetBasePath(System.String)
+  - ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath(System.String)
+  - ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath
+  langs:
+  - csharp
+  - vb
+  name: StorageHelper
+  nameWithType: StorageHelper
+  fullName: ESAPIX.AppKit.Data.StorageHelper
+  type: Class
+  source:
+    id: StorageHelper
+    path: ''
+    startLine: 1073
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public class StorageHelper
+    content.vb: Public Class StorageHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.AppKit.Data.StorageHelper.GetBasePath(System.String)
+  commentId: M:ESAPIX.AppKit.Data.StorageHelper.GetBasePath(System.String)
+  id: GetBasePath(System.String)
+  parent: ESAPIX.AppKit.Data.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: GetBasePath(String)
+  nameWithType: StorageHelper.GetBasePath(String)
+  fullName: ESAPIX.AppKit.Data.StorageHelper.GetBasePath(System.String)
+  type: Method
+  source:
+    id: GetBasePath
+    path: ''
+    startLine: 1080
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public static string GetBasePath(string storagePath = "")
+    parameters:
+    - id: storagePath
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetBasePath(storagePath As String = "") As String
+  overload: ESAPIX.AppKit.Data.StorageHelper.GetBasePath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists(System.String)
+  commentId: M:ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists(System.String)
+  id: CreateBasePathIfNotExists(System.String)
+  parent: ESAPIX.AppKit.Data.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: CreateBasePathIfNotExists(String)
+  nameWithType: StorageHelper.CreateBasePathIfNotExists(String)
+  fullName: ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists(System.String)
+  type: Method
+  source:
+    id: CreateBasePathIfNotExists
+    path: ''
+    startLine: 1087
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public static void CreateBasePathIfNotExists(string path)
+    parameters:
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub CreateBasePathIfNotExists(path As String)
+  overload: ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath(System.String)
+  commentId: M:ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath(System.String)
+  id: GetSettingsPath(System.String)
+  parent: ESAPIX.AppKit.Data.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: GetSettingsPath(String)
+  nameWithType: StorageHelper.GetSettingsPath(String)
+  fullName: ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath(System.String)
+  type: Method
+  source:
+    id: GetSettingsPath
+    path: ''
+    startLine: 1096
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public static string GetSettingsPath(string settingsFileName = "")
+    parameters:
+    - id: settingsFileName
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetSettingsPath(settingsFileName As String = "") As String
+  overload: ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists
+  commentId: M:ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists
+  id: CreateTempPathIfNotExists
+  parent: ESAPIX.AppKit.Data.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: CreateTempPathIfNotExists()
+  nameWithType: StorageHelper.CreateTempPathIfNotExists()
+  fullName: ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists()
+  type: Method
+  source:
+    id: CreateTempPathIfNotExists
+    path: ''
+    startLine: 1103
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public static void CreateTempPathIfNotExists()
+    content.vb: Public Shared Sub CreateTempPathIfNotExists
+  overload: ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath
+  commentId: M:ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath
+  id: GetTempStoragePath
+  parent: ESAPIX.AppKit.Data.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: GetTempStoragePath()
+  nameWithType: StorageHelper.GetTempStoragePath()
+  fullName: ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath()
+  type: Method
+  source:
+    id: GetTempStoragePath
+    path: ''
+    startLine: 1112
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public static string GetTempStoragePath()
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetTempStoragePath As String
+  overload: ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: ESAPIX.AppKit.Data
+  commentId: N:ESAPIX.AppKit.Data
+  isExternal: false
+  name: ESAPIX.AppKit.Data
+  nameWithType: ESAPIX.AppKit.Data
+  fullName: ESAPIX.AppKit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.AppKit.Data.StorageHelper.GetBasePath*
+  commentId: Overload:ESAPIX.AppKit.Data.StorageHelper.GetBasePath
+  isExternal: false
+  name: GetBasePath
+  nameWithType: StorageHelper.GetBasePath
+  fullName: ESAPIX.AppKit.Data.StorageHelper.GetBasePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists*
+  commentId: Overload:ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists
+  isExternal: false
+  name: CreateBasePathIfNotExists
+  nameWithType: StorageHelper.CreateBasePathIfNotExists
+  fullName: ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists
+- uid: ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath*
+  commentId: Overload:ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath
+  isExternal: false
+  name: GetSettingsPath
+  nameWithType: StorageHelper.GetSettingsPath
+  fullName: ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath
+- uid: ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists*
+  commentId: Overload:ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists
+  isExternal: false
+  name: CreateTempPathIfNotExists
+  nameWithType: StorageHelper.CreateTempPathIfNotExists
+  fullName: ESAPIX.AppKit.Data.StorageHelper.CreateTempPathIfNotExists
+- uid: ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath*
+  commentId: Overload:ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath
+  isExternal: false
+  name: GetTempStoragePath
+  nameWithType: StorageHelper.GetTempStoragePath
+  fullName: ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath

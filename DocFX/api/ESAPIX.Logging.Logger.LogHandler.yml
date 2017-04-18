@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Logging.Logger.LogHandler
+  commentId: T:ESAPIX.Logging.Logger.LogHandler
+  id: Logger.LogHandler
+  parent: ESAPIX.Logging
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: Logger.LogHandler
+  nameWithType: Logger.LogHandler
+  fullName: ESAPIX.Logging.Logger.LogHandler
+  type: Delegate
+  source:
+    id: LogHandler
+    path: ''
+    startLine: 15438
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Logging
+  syntax:
+    content: public delegate void LogHandler(string toLog);
+    parameters:
+    - id: toLog
+      type: System.String
+    content.vb: Public Delegate Sub LogHandler(toLog As String)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: ESAPIX.Logging
+  commentId: N:ESAPIX.Logging
+  isExternal: false
+  name: ESAPIX.Logging
+  nameWithType: ESAPIX.Logging
+  fullName: ESAPIX.Logging
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

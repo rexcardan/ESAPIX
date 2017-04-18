@@ -1,0 +1,1266 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit
+  commentId: T:ESAPIX.Facade.API.BrachyTreatmentUnit
+  id: BrachyTreatmentUnit
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor(System.Object)
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: BrachyTreatmentUnit
+  nameWithType: BrachyTreatmentUnit
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit
+  type: Class
+  source:
+    id: BrachyTreatmentUnit
+    path: ''
+    startLine: 6372
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: 'public class BrachyTreatmentUnit : ApiDataObject'
+    content.vb: >-
+      Public Class BrachyTreatmentUnit
+          Inherits ApiDataObject
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.API.SerializableObject
+  - ESAPIX.Facade.API.ApiDataObject
+  inheritedMembers:
+  - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.Name
+  - ESAPIX.Facade.API.ApiDataObject.Comment
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.ToString
+  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.SerializableObject.GetSchema
+  - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: BrachyTreatmentUnit()
+  nameWithType: BrachyTreatmentUnit.BrachyTreatmentUnit()
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.BrachyTreatmentUnit()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 6374
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyTreatmentUnit()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: BrachyTreatmentUnit(Object)
+  nameWithType: BrachyTreatmentUnit.BrachyTreatmentUnit(Object)
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.BrachyTreatmentUnit(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 6375
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyTreatmentUnit(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
+  id: DoseRateMode
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: DoseRateMode
+  nameWithType: BrachyTreatmentUnit.DoseRateMode
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
+  type: Property
+  source:
+    id: DoseRateMode
+    path: ''
+    startLine: 6376
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string DoseRateMode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DoseRateMode As String
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
+  id: DwellTimeResolution
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: DwellTimeResolution
+  nameWithType: BrachyTreatmentUnit.DwellTimeResolution
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
+  type: Property
+  source:
+    id: DwellTimeResolution
+    path: ''
+    startLine: 6389
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DwellTimeResolution { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DwellTimeResolution As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
+  id: MachineInterface
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MachineInterface
+  nameWithType: BrachyTreatmentUnit.MachineInterface
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
+  type: Property
+  source:
+    id: MachineInterface
+    path: ''
+    startLine: 6402
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string MachineInterface { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MachineInterface As String
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
+  id: MachineModel
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MachineModel
+  nameWithType: BrachyTreatmentUnit.MachineModel
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
+  type: Property
+  source:
+    id: MachineModel
+    path: ''
+    startLine: 6415
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string MachineModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MachineModel As String
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
+  id: MaxDwellTimePerChannel
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MaxDwellTimePerChannel
+  nameWithType: BrachyTreatmentUnit.MaxDwellTimePerChannel
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
+  type: Property
+  source:
+    id: MaxDwellTimePerChannel
+    path: ''
+    startLine: 6428
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaxDwellTimePerChannel { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaxDwellTimePerChannel As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos
+  id: MaxDwellTimePerPos
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MaxDwellTimePerPos
+  nameWithType: BrachyTreatmentUnit.MaxDwellTimePerPos
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos
+  type: Property
+  source:
+    id: MaxDwellTimePerPos
+    path: ''
+    startLine: 6441
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaxDwellTimePerPos { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaxDwellTimePerPos As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment
+  id: MaxDwellTimePerTreatment
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MaxDwellTimePerTreatment
+  nameWithType: BrachyTreatmentUnit.MaxDwellTimePerTreatment
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment
+  type: Property
+  source:
+    id: MaxDwellTimePerTreatment
+    path: ''
+    startLine: 6454
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaxDwellTimePerTreatment { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaxDwellTimePerTreatment As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength
+  id: MaximumChannelLength
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MaximumChannelLength
+  nameWithType: BrachyTreatmentUnit.MaximumChannelLength
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength
+  type: Property
+  source:
+    id: MaximumChannelLength
+    path: ''
+    startLine: 6467
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaximumChannelLength { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaximumChannelLength As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+  id: MaximumDwellPositionsPerChannel
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MaximumDwellPositionsPerChannel
+  nameWithType: BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+  type: Property
+  source:
+    id: MaximumDwellPositionsPerChannel
+    path: ''
+    startLine: 6480
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int MaximumDwellPositionsPerChannel { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaximumDwellPositionsPerChannel As Integer
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize
+  id: MaximumStepSize
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MaximumStepSize
+  nameWithType: BrachyTreatmentUnit.MaximumStepSize
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize
+  type: Property
+  source:
+    id: MaximumStepSize
+    path: ''
+    startLine: 6493
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaximumStepSize { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaximumStepSize As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength
+  id: MinimumChannelLength
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MinimumChannelLength
+  nameWithType: BrachyTreatmentUnit.MinimumChannelLength
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength
+  type: Property
+  source:
+    id: MinimumChannelLength
+    path: ''
+    startLine: 6506
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MinimumChannelLength { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MinimumChannelLength As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize
+  id: MinimumStepSize
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: MinimumStepSize
+  nameWithType: BrachyTreatmentUnit.MinimumStepSize
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize
+  type: Property
+  source:
+    id: MinimumStepSize
+    path: ''
+    startLine: 6519
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MinimumStepSize { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MinimumStepSize As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels
+  id: NumberOfChannels
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: NumberOfChannels
+  nameWithType: BrachyTreatmentUnit.NumberOfChannels
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels
+  type: Property
+  source:
+    id: NumberOfChannels
+    path: ''
+    startLine: 6532
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int NumberOfChannels { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfChannels As Integer
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip
+  id: SourceCenterOffsetFromTip
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: SourceCenterOffsetFromTip
+  nameWithType: BrachyTreatmentUnit.SourceCenterOffsetFromTip
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip
+  type: Property
+  source:
+    id: SourceCenterOffsetFromTip
+    path: ''
+    startLine: 6545
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SourceCenterOffsetFromTip { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SourceCenterOffsetFromTip As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType
+  id: SourceMovementType
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: SourceMovementType
+  nameWithType: BrachyTreatmentUnit.SourceMovementType
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType
+  type: Property
+  source:
+    id: SourceMovementType
+    path: ''
+    startLine: 6558
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string SourceMovementType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceMovementType As String
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution
+  id: StepSizeResolution
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: StepSizeResolution
+  nameWithType: BrachyTreatmentUnit.StepSizeResolution
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution
+  type: Property
+  source:
+    id: StepSizeResolution
+    path: ''
+    startLine: 6571
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StepSizeResolution { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StepSizeResolution As Double
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: BrachyTreatmentUnit.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 6584
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource
+  commentId: M:ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource
+  id: GetActiveRadioactiveSource
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: GetActiveRadioactiveSource()
+  nameWithType: BrachyTreatmentUnit.GetActiveRadioactiveSource()
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource()
+  type: Method
+  source:
+    id: GetActiveRadioactiveSource
+    path: ''
+    startLine: 6593
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public RadioactiveSource GetActiveRadioactiveSource()
+    return:
+      type: ESAPIX.Facade.API.RadioactiveSource
+    content.vb: Public Function GetActiveRadioactiveSource As RadioactiveSource
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.API.SerializableObject
+  commentId: T:ESAPIX.Facade.API.SerializableObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SerializableObject
+  nameWithType: SerializableObject
+  fullName: ESAPIX.Facade.API.SerializableObject
+- uid: ESAPIX.Facade.API.ApiDataObject
+  commentId: T:ESAPIX.Facade.API.ApiDataObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ApiDataObject
+  nameWithType: ApiDataObject
+  fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+- uid: ESAPIX.Facade.API.ApiDataObject.ToString
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: ToString()
+  nameWithType: ApiDataObject.ToString()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
+    name: ToString
+    nameWithType: ApiDataObject.ToString
+    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
+    name: ToString
+    nameWithType: ApiDataObject.ToString
+    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ApiDataObject.Equals(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+    name: Equals
+    nameWithType: ApiDataObject.Equals
+    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
+    name: Equals
+    nameWithType: ApiDataObject.Equals
+    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  parent: ESAPIX.Facade.API.ApiDataObject
+  isExternal: false
+  name: GetHashCode()
+  nameWithType: ApiDataObject.GetHashCode()
+  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+    name: GetHashCode
+    nameWithType: ApiDataObject.GetHashCode
+    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+    name: GetHashCode
+    nameWithType: ApiDataObject.GetHashCode
+    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+  commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: GetSchema()
+  nameWithType: SerializableObject.GetSchema()
+  fullName: ESAPIX.Facade.API.SerializableObject.GetSchema()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: SerializableObject.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: ClearSerializationHistory()
+  nameWithType: SerializableObject.ClearSerializationHistory()
+  fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor
+  isExternal: false
+  name: BrachyTreatmentUnit
+  nameWithType: BrachyTreatmentUnit.BrachyTreatmentUnit
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.BrachyTreatmentUnit
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
+  isExternal: false
+  name: DoseRateMode
+  nameWithType: BrachyTreatmentUnit.DoseRateMode
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
+  isExternal: false
+  name: DwellTimeResolution
+  nameWithType: BrachyTreatmentUnit.DwellTimeResolution
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
+  isExternal: false
+  name: MachineInterface
+  nameWithType: BrachyTreatmentUnit.MachineInterface
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
+  isExternal: false
+  name: MachineModel
+  nameWithType: BrachyTreatmentUnit.MachineModel
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
+  isExternal: false
+  name: MaxDwellTimePerChannel
+  nameWithType: BrachyTreatmentUnit.MaxDwellTimePerChannel
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos
+  isExternal: false
+  name: MaxDwellTimePerPos
+  nameWithType: BrachyTreatmentUnit.MaxDwellTimePerPos
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment
+  isExternal: false
+  name: MaxDwellTimePerTreatment
+  nameWithType: BrachyTreatmentUnit.MaxDwellTimePerTreatment
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength
+  isExternal: false
+  name: MaximumChannelLength
+  nameWithType: BrachyTreatmentUnit.MaximumChannelLength
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+  isExternal: false
+  name: MaximumDwellPositionsPerChannel
+  nameWithType: BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize
+  isExternal: false
+  name: MaximumStepSize
+  nameWithType: BrachyTreatmentUnit.MaximumStepSize
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength
+  isExternal: false
+  name: MinimumChannelLength
+  nameWithType: BrachyTreatmentUnit.MinimumChannelLength
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize
+  isExternal: false
+  name: MinimumStepSize
+  nameWithType: BrachyTreatmentUnit.MinimumStepSize
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels
+  isExternal: false
+  name: NumberOfChannels
+  nameWithType: BrachyTreatmentUnit.NumberOfChannels
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip
+  isExternal: false
+  name: SourceCenterOffsetFromTip
+  nameWithType: BrachyTreatmentUnit.SourceCenterOffsetFromTip
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType
+  isExternal: false
+  name: SourceMovementType
+  nameWithType: BrachyTreatmentUnit.SourceMovementType
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution
+  isExternal: false
+  name: StepSizeResolution
+  nameWithType: BrachyTreatmentUnit.StepSizeResolution
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: BrachyTreatmentUnit.WriteXml
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource
+  isExternal: false
+  name: GetActiveRadioactiveSource
+  nameWithType: BrachyTreatmentUnit.GetActiveRadioactiveSource
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource
+- uid: ESAPIX.Facade.API.RadioactiveSource
+  commentId: T:ESAPIX.Facade.API.RadioactiveSource
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: RadioactiveSource
+  nameWithType: RadioactiveSource
+  fullName: ESAPIX.Facade.API.RadioactiveSource

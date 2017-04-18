@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.StandAloneContext.BrachyPlanSetupChangedHandler
+  commentId: T:ESAPIX.AppKit.StandAloneContext.BrachyPlanSetupChangedHandler
+  id: StandAloneContext.BrachyPlanSetupChangedHandler
+  parent: ESAPIX.AppKit
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: StandAloneContext.BrachyPlanSetupChangedHandler
+  nameWithType: StandAloneContext.BrachyPlanSetupChangedHandler
+  fullName: ESAPIX.AppKit.StandAloneContext.BrachyPlanSetupChangedHandler
+  type: Delegate
+  source:
+    id: BrachyPlanSetupChangedHandler
+    path: ''
+    startLine: 567
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public delegate void BrachyPlanSetupChangedHandler(BrachyPlanSetup ps);
+    parameters:
+    - id: ps
+      type: BrachyPlanSetup
+    content.vb: Public Delegate Sub BrachyPlanSetupChangedHandler(ps As BrachyPlanSetup)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: BrachyPlanSetup
+  isExternal: true
+  name: BrachyPlanSetup
+  nameWithType: BrachyPlanSetup
+  fullName: BrachyPlanSetup

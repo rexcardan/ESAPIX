@@ -1,0 +1,435 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.DiscriminatorConverter
+  commentId: T:ESAPIX.DVH.DiscriminatorConverter
+  id: DiscriminatorConverter
+  parent: ESAPIX.DVH
+  children:
+  - ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator(System.String)
+  - ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator(Discriminator)
+  langs:
+  - csharp
+  - vb
+  name: DiscriminatorConverter
+  nameWithType: DiscriminatorConverter
+  fullName: ESAPIX.DVH.DiscriminatorConverter
+  type: Class
+  source:
+    id: DiscriminatorConverter
+    path: ''
+    startLine: 1387
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH
+  syntax:
+    content: public class DiscriminatorConverter
+    content.vb: Public Class DiscriminatorConverter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator(System.String)
+  commentId: M:ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator(System.String)
+  id: ReadDiscrimator(System.String)
+  parent: ESAPIX.DVH.DiscriminatorConverter
+  langs:
+  - csharp
+  - vb
+  name: ReadDiscrimator(String)
+  nameWithType: DiscriminatorConverter.ReadDiscrimator(String)
+  fullName: ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator(System.String)
+  type: Method
+  source:
+    id: ReadDiscrimator
+    path: ''
+    startLine: 1394
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH
+  syntax:
+    content: public static Discriminator ReadDiscrimator(string discString)
+    parameters:
+    - id: discString
+      type: System.String
+    return:
+      type: Discriminator
+    content.vb: Public Shared Function ReadDiscrimator(discString As String) As Discriminator
+  overload: ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator(Discriminator)
+  commentId: M:ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator(Discriminator)
+  id: WriteDiscrimator(Discriminator)
+  parent: ESAPIX.DVH.DiscriminatorConverter
+  langs:
+  - csharp
+  - vb
+  name: WriteDiscrimator(Discriminator)
+  nameWithType: DiscriminatorConverter.WriteDiscrimator(Discriminator)
+  fullName: ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator(Discriminator)
+  type: Method
+  source:
+    id: WriteDiscrimator
+    path: ''
+    startLine: 1413
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH
+  summary: "\nWrites a discriminator to a string\n"
+  example: []
+  syntax:
+    content: public static string WriteDiscrimator(Discriminator disc)
+    parameters:
+    - id: disc
+      type: Discriminator
+      description: the constraint discriminator
+    return:
+      type: System.String
+      description: a string representation of the discriminator
+    content.vb: Public Shared Function WriteDiscrimator(disc As Discriminator) As String
+  overload: ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: ESAPIX.DVH
+  commentId: N:ESAPIX.DVH
+  isExternal: false
+  name: ESAPIX.DVH
+  nameWithType: ESAPIX.DVH
+  fullName: ESAPIX.DVH
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator*
+  commentId: Overload:ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator
+  isExternal: false
+  name: ReadDiscrimator
+  nameWithType: DiscriminatorConverter.ReadDiscrimator
+  fullName: ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Discriminator
+  isExternal: true
+  name: Discriminator
+  nameWithType: Discriminator
+  fullName: Discriminator
+- uid: ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator*
+  commentId: Overload:ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator
+  isExternal: false
+  name: WriteDiscrimator
+  nameWithType: DiscriminatorConverter.WriteDiscrimator
+  fullName: ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator

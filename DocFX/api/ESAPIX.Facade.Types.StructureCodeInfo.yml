@@ -1,0 +1,694 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.StructureCodeInfo
+  commentId: T:ESAPIX.Facade.Types.StructureCodeInfo
+  id: StructureCodeInfo
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.StructureCodeInfo.#ctor
+  - ESAPIX.Facade.Types.StructureCodeInfo.#ctor(System.Object)
+  - ESAPIX.Facade.Types.StructureCodeInfo.#ctor(System.String,System.String)
+  - ESAPIX.Facade.Types.StructureCodeInfo.Code
+  - ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme
+  - ESAPIX.Facade.Types.StructureCodeInfo.Equals(ESAPIX.Facade.Types.StructureCodeInfo)
+  - ESAPIX.Facade.Types.StructureCodeInfo.Equals(System.Object)
+  - ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode
+  - ESAPIX.Facade.Types.StructureCodeInfo.GetSchema
+  - ESAPIX.Facade.Types.StructureCodeInfo.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.Types.StructureCodeInfo.ToString
+  - ESAPIX.Facade.Types.StructureCodeInfo.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: StructureCodeInfo
+  nameWithType: StructureCodeInfo
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo
+  type: Class
+  source:
+    id: StructureCodeInfo
+    path: ''
+    startLine: 14756
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class StructureCodeInfo
+    content.vb: Public Class StructureCodeInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.#ctor
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: StructureCodeInfo()
+  nameWithType: StructureCodeInfo.StructureCodeInfo()
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.StructureCodeInfo()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14759
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public StructureCodeInfo()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: StructureCodeInfo(Object)
+  nameWithType: StructureCodeInfo.StructureCodeInfo(Object)
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.StructureCodeInfo(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14760
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public StructureCodeInfo(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.#ctor(System.String,System.String)
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: StructureCodeInfo(String, String)
+  nameWithType: StructureCodeInfo.StructureCodeInfo(String, String)
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.StructureCodeInfo(System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14761
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public StructureCodeInfo(string codingScheme, string code)
+    parameters:
+    - id: codingScheme
+      type: System.String
+    - id: code
+      type: System.String
+    content.vb: Public Sub New(codingScheme As String, code As String)
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme
+  commentId: P:ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme
+  id: CodingScheme
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: CodingScheme
+  nameWithType: StructureCodeInfo.CodingScheme
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme
+  type: Property
+  source:
+    id: CodingScheme
+    path: ''
+    startLine: 14772
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string CodingScheme { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CodingScheme As String
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.Code
+  commentId: P:ESAPIX.Facade.Types.StructureCodeInfo.Code
+  id: Code
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: StructureCodeInfo.Code
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.Code
+  type: Property
+  source:
+    id: Code
+    path: ''
+    startLine: 14785
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Code As String
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.Code*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.ToString
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.ToString
+  id: ToString
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: StructureCodeInfo.ToString()
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: ''
+    startLine: 14798
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string ToString()
+    return:
+      type: System.String
+    content.vb: Public Function ToString As String
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.ToString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.Equals(System.Object)
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: StructureCodeInfo.Equals(Object)
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.Equals(System.Object)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 14805
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(obj As Object) As Boolean
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.Equals*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode
+  id: GetHashCode
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: StructureCodeInfo.GetHashCode()
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode()
+  type: Method
+  source:
+    id: GetHashCode
+    path: ''
+    startLine: 14812
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetHashCode As Integer
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.Equals(ESAPIX.Facade.Types.StructureCodeInfo)
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.Equals(ESAPIX.Facade.Types.StructureCodeInfo)
+  id: Equals(ESAPIX.Facade.Types.StructureCodeInfo)
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: Equals(StructureCodeInfo)
+  nameWithType: StructureCodeInfo.Equals(StructureCodeInfo)
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.Equals(ESAPIX.Facade.Types.StructureCodeInfo)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 14819
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public bool Equals(StructureCodeInfo other)
+    parameters:
+    - id: other
+      type: ESAPIX.Facade.Types.StructureCodeInfo
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As StructureCodeInfo) As Boolean
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.Equals*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.GetSchema
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.GetSchema
+  id: GetSchema
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: GetSchema()
+  nameWithType: StructureCodeInfo.GetSchema()
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.GetSchema()
+  type: Method
+  source:
+    id: GetSchema
+    path: ''
+    startLine: 14826
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Xml.Schema.XmlSchema GetSchema()
+    return:
+      type: System.Xml.Schema.XmlSchema
+    content.vb: Public Function GetSchema As Xml.Schema.XmlSchema
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.GetSchema*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.ReadXml(System.Xml.XmlReader)
+  id: ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: StructureCodeInfo.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.ReadXml(System.Xml.XmlReader)
+  type: Method
+  source:
+    id: ReadXml
+    path: ''
+    startLine: 14833
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void ReadXml(Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+    content.vb: Public Sub ReadXml(reader As Xml.XmlReader)
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.ReadXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.Types.StructureCodeInfo.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.Types.StructureCodeInfo
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: StructureCodeInfo.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 14842
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.Types.StructureCodeInfo.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.#ctor
+  isExternal: false
+  name: StructureCodeInfo
+  nameWithType: StructureCodeInfo.StructureCodeInfo
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.StructureCodeInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme
+  isExternal: false
+  name: CodingScheme
+  nameWithType: StructureCodeInfo.CodingScheme
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.CodingScheme
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.Code*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.Code
+  isExternal: false
+  name: Code
+  nameWithType: StructureCodeInfo.Code
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.Code
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.ToString*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: StructureCodeInfo.ToString
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.ToString
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.Equals*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: StructureCodeInfo.Equals
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: StructureCodeInfo.GetHashCode
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.Facade.Types.StructureCodeInfo
+  commentId: T:ESAPIX.Facade.Types.StructureCodeInfo
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: StructureCodeInfo
+  nameWithType: StructureCodeInfo
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.GetSchema*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.GetSchema
+  isExternal: false
+  name: GetSchema
+  nameWithType: StructureCodeInfo.GetSchema
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.GetSchema
+- uid: System.Xml.Schema.XmlSchema
+  isExternal: true
+  name: Xml.Schema.XmlSchema
+  nameWithType: Xml.Schema.XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.ReadXml*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.ReadXml
+  isExternal: false
+  name: ReadXml
+  nameWithType: StructureCodeInfo.ReadXml
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.ReadXml
+- uid: System.Xml.XmlReader
+  isExternal: true
+  name: Xml.XmlReader
+  nameWithType: Xml.XmlReader
+  fullName: System.Xml.XmlReader
+- uid: ESAPIX.Facade.Types.StructureCodeInfo.WriteXml*
+  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: StructureCodeInfo.WriteXml
+  fullName: ESAPIX.Facade.Types.StructureCodeInfo.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter

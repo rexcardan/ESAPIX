@@ -1,0 +1,649 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.Constraints.ConstraintResult
+  commentId: T:ESAPIX.DVH.Constraints.ConstraintResult
+  id: ConstraintResult
+  parent: ESAPIX.DVH.Constraints
+  children:
+  - ESAPIX.DVH.Constraints.ConstraintResult.#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.ResultType,System.String,System.String)
+  - ESAPIX.DVH.Constraints.ConstraintResult.Constraint
+  - ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable
+  - ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess
+  - ESAPIX.DVH.Constraints.ConstraintResult.Message
+  - ESAPIX.DVH.Constraints.ConstraintResult.ResultType
+  - ESAPIX.DVH.Constraints.ConstraintResult.Value
+  langs:
+  - csharp
+  - vb
+  name: ConstraintResult
+  nameWithType: ConstraintResult
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult
+  type: Class
+  source:
+    id: ConstraintResult
+    path: ''
+    startLine: 1826
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nEncapsulates the results from an attempt to constrain a planning item\n"
+  example: []
+  syntax:
+    content: public class ConstraintResult
+    content.vb: Public Class ConstraintResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.ResultType,System.String,System.String)
+  commentId: M:ESAPIX.DVH.Constraints.ConstraintResult.#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.ResultType,System.String,System.String)
+  id: '#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.ResultType,System.String,System.String)'
+  parent: ESAPIX.DVH.Constraints.ConstraintResult
+  langs:
+  - csharp
+  - vb
+  name: ConstraintResult(IConstraint, ResultType, String, String)
+  nameWithType: ConstraintResult.ConstraintResult(IConstraint, ResultType, String, String)
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.ConstraintResult(ESAPIX.DVH.Constraints.IConstraint, ESAPIX.DVH.Constraints.ResultType, System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1828
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public ConstraintResult(IConstraint constraint, ResultType resultType, string message, string value = "")
+    parameters:
+    - id: constraint
+      type: ESAPIX.DVH.Constraints.IConstraint
+    - id: resultType
+      type: ESAPIX.DVH.Constraints.ResultType
+    - id: message
+      type: System.String
+    - id: value
+      type: System.String
+    content.vb: Public Sub New(constraint As IConstraint, resultType As ResultType, message As String, value As String = "")
+  overload: ESAPIX.DVH.Constraints.ConstraintResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.Constraint
+  commentId: P:ESAPIX.DVH.Constraints.ConstraintResult.Constraint
+  id: Constraint
+  parent: ESAPIX.DVH.Constraints.ConstraintResult
+  langs:
+  - csharp
+  - vb
+  name: Constraint
+  nameWithType: ConstraintResult.Constraint
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.Constraint
+  type: Property
+  source:
+    id: Constraint
+    path: ''
+    startLine: 1839
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public IConstraint Constraint { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.DVH.Constraints.IConstraint
+    content.vb: Public Property Constraint As IConstraint
+  overload: ESAPIX.DVH.Constraints.ConstraintResult.Constraint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess
+  commentId: P:ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess
+  id: IsSuccess
+  parent: ESAPIX.DVH.Constraints.ConstraintResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: ConstraintResult.IsSuccess
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess
+  type: Property
+  source:
+    id: IsSuccess
+    path: ''
+    startLine: 1844
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nSignifies if constraint passed. \n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsSuccess As Boolean
+  overload: ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable
+  commentId: P:ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable
+  id: IsApplicable
+  parent: ESAPIX.DVH.Constraints.ConstraintResult
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable
+  nameWithType: ConstraintResult.IsApplicable
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable
+  type: Property
+  source:
+    id: IsApplicable
+    path: ''
+    startLine: 1849
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nSignifies if constraint was applicable to current plan. \n"
+  example: []
+  syntax:
+    content: public bool IsApplicable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsApplicable As Boolean
+  overload: ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.ResultType
+  commentId: P:ESAPIX.DVH.Constraints.ConstraintResult.ResultType
+  id: ResultType
+  parent: ESAPIX.DVH.Constraints.ConstraintResult
+  langs:
+  - csharp
+  - vb
+  name: ResultType
+  nameWithType: ConstraintResult.ResultType
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.ResultType
+  type: Property
+  source:
+    id: ResultType
+    path: ''
+    startLine: 1854
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nThe result value including action level for the constraint\n"
+  example: []
+  syntax:
+    content: public ResultType ResultType { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.DVH.Constraints.ResultType
+    content.vb: Public Property ResultType As ResultType
+  overload: ESAPIX.DVH.Constraints.ConstraintResult.ResultType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.Message
+  commentId: P:ESAPIX.DVH.Constraints.ConstraintResult.Message
+  id: Message
+  parent: ESAPIX.DVH.Constraints.ConstraintResult
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: ConstraintResult.Message
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.Message
+  type: Property
+  source:
+    id: Message
+    path: ''
+    startLine: 1859
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nThe message indicating why a test failed\n"
+  example: []
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: ESAPIX.DVH.Constraints.ConstraintResult.Message*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.Value
+  commentId: P:ESAPIX.DVH.Constraints.ConstraintResult.Value
+  id: Value
+  parent: ESAPIX.DVH.Constraints.ConstraintResult
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ConstraintResult.Value
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.Value
+  type: Property
+  source:
+    id: Value
+    path: ''
+    startLine: 1864
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nThe message indicating why a test failed\n"
+  example: []
+  syntax:
+    content: public string Value { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Value As String
+  overload: ESAPIX.DVH.Constraints.ConstraintResult.Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.DVH.Constraints
+  commentId: N:ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ESAPIX.DVH.Constraints
+  nameWithType: ESAPIX.DVH.Constraints
+  fullName: ESAPIX.DVH.Constraints
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.#ctor*
+  commentId: Overload:ESAPIX.DVH.Constraints.ConstraintResult.#ctor
+  isExternal: false
+  name: ConstraintResult
+  nameWithType: ConstraintResult.ConstraintResult
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.ConstraintResult
+- uid: ESAPIX.DVH.Constraints.IConstraint
+  commentId: T:ESAPIX.DVH.Constraints.IConstraint
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: IConstraint
+  nameWithType: IConstraint
+  fullName: ESAPIX.DVH.Constraints.IConstraint
+- uid: ESAPIX.DVH.Constraints.ResultType
+  commentId: T:ESAPIX.DVH.Constraints.ResultType
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ResultType
+  nameWithType: ResultType
+  fullName: ESAPIX.DVH.Constraints.ResultType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.Constraint*
+  commentId: Overload:ESAPIX.DVH.Constraints.ConstraintResult.Constraint
+  isExternal: false
+  name: Constraint
+  nameWithType: ConstraintResult.Constraint
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.Constraint
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess*
+  commentId: Overload:ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess
+  isExternal: false
+  name: IsSuccess
+  nameWithType: ConstraintResult.IsSuccess
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable*
+  commentId: Overload:ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable
+  isExternal: false
+  name: IsApplicable
+  nameWithType: ConstraintResult.IsApplicable
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.ResultType*
+  commentId: Overload:ESAPIX.DVH.Constraints.ConstraintResult.ResultType
+  isExternal: false
+  name: ResultType
+  nameWithType: ConstraintResult.ResultType
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.ResultType
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.Message*
+  commentId: Overload:ESAPIX.DVH.Constraints.ConstraintResult.Message
+  isExternal: false
+  name: Message
+  nameWithType: ConstraintResult.Message
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.Message
+- uid: ESAPIX.DVH.Constraints.ConstraintResult.Value*
+  commentId: Overload:ESAPIX.DVH.Constraints.ConstraintResult.Value
+  isExternal: false
+  name: Value
+  nameWithType: ConstraintResult.Value
+  fullName: ESAPIX.DVH.Constraints.ConstraintResult.Value

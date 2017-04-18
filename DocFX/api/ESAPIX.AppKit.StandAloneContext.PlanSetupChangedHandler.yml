@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
+  commentId: T:ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
+  id: StandAloneContext.PlanSetupChangedHandler
+  parent: ESAPIX.AppKit
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: StandAloneContext.PlanSetupChangedHandler
+  nameWithType: StandAloneContext.PlanSetupChangedHandler
+  fullName: ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
+  type: Delegate
+  source:
+    id: PlanSetupChangedHandler
+    path: ''
+    startLine: 559
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public delegate void PlanSetupChangedHandler(PlanSetup ps);
+    parameters:
+    - id: ps
+      type: PlanSetup
+    content.vb: Public Delegate Sub PlanSetupChangedHandler(ps As PlanSetup)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: PlanSetup
+  isExternal: true
+  name: PlanSetup
+  nameWithType: PlanSetup
+  fullName: PlanSetup

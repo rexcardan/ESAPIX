@@ -1,0 +1,489 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Bootstrapper.VMSBootstrapper
+  commentId: T:ESAPIX.Bootstrapper.VMSBootstrapper
+  id: VMSBootstrapper
+  parent: ESAPIX.Bootstrapper
+  children:
+  - ESAPIX.Bootstrapper.VMSBootstrapper.#ctor
+  - ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp(System.String,System.String)
+  - ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext,Window)
+  langs:
+  - csharp
+  - vb
+  name: VMSBootstrapper
+  nameWithType: VMSBootstrapper
+  fullName: ESAPIX.Bootstrapper.VMSBootstrapper
+  type: Class
+  source:
+    id: VMSBootstrapper
+    path: ''
+    startLine: 15666
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Bootstrapper
+  syntax:
+    content: public class VMSBootstrapper
+    content.vb: Public Class VMSBootstrapper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Bootstrapper.VMSBootstrapper.#ctor
+  commentId: M:ESAPIX.Bootstrapper.VMSBootstrapper.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Bootstrapper.VMSBootstrapper
+  langs:
+  - csharp
+  - vb
+  name: VMSBootstrapper()
+  nameWithType: VMSBootstrapper.VMSBootstrapper()
+  fullName: ESAPIX.Bootstrapper.VMSBootstrapper.VMSBootstrapper()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 15668
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Bootstrapper
+  syntax:
+    content: public VMSBootstrapper()
+    content.vb: Public Sub New
+  overload: ESAPIX.Bootstrapper.VMSBootstrapper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp(System.String,System.String)
+  commentId: M:ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp(System.String,System.String)
+  id: GenerateFacadeApp(System.String,System.String)
+  parent: ESAPIX.Bootstrapper.VMSBootstrapper
+  langs:
+  - csharp
+  - vb
+  name: GenerateFacadeApp(String, String)
+  nameWithType: VMSBootstrapper.GenerateFacadeApp(String, String)
+  fullName: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp(System.String, System.String)
+  type: Method
+  source:
+    id: GenerateFacadeApp
+    path: ''
+    startLine: 15669
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Bootstrapper
+  syntax:
+    content: public Application GenerateFacadeApp(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Function GenerateFacadeApp(username As String, password As String) As Application
+  overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext,Window)
+  commentId: M:ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext,Window)
+  id: GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext,Window)
+  parent: ESAPIX.Bootstrapper.VMSBootstrapper
+  langs:
+  - csharp
+  - vb
+  name: GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext, Window)
+  nameWithType: VMSBootstrapper.GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext, Window)
+  fullName: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext, Window)
+  type: Method
+  source:
+    id: GenerateFacadeScriptContext
+    path: ''
+    startLine: 15674
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Bootstrapper
+  syntax:
+    content: public PluginContext GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext sc, Window w)
+    parameters:
+    - id: sc
+      type: VMS.TPS.Common.Model.API.ScriptContext
+    - id: w
+      type: Window
+    return:
+      type: PluginContext
+    content.vb: Public Function GenerateFacadeScriptContext(sc As VMS.TPS.Common.Model.API.ScriptContext, w As Window) As PluginContext
+  overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Bootstrapper
+  commentId: N:ESAPIX.Bootstrapper
+  isExternal: false
+  name: ESAPIX.Bootstrapper
+  nameWithType: ESAPIX.Bootstrapper
+  fullName: ESAPIX.Bootstrapper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Bootstrapper.VMSBootstrapper.#ctor*
+  commentId: Overload:ESAPIX.Bootstrapper.VMSBootstrapper.#ctor
+  isExternal: false
+  name: VMSBootstrapper
+  nameWithType: VMSBootstrapper.VMSBootstrapper
+  fullName: ESAPIX.Bootstrapper.VMSBootstrapper.VMSBootstrapper
+- uid: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp*
+  commentId: Overload:ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp
+  isExternal: false
+  name: GenerateFacadeApp
+  nameWithType: VMSBootstrapper.GenerateFacadeApp
+  fullName: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.API.Application
+  commentId: T:ESAPIX.Facade.API.Application
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Application
+  nameWithType: Application
+  fullName: ESAPIX.Facade.API.Application
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext*
+  commentId: Overload:ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext
+  isExternal: false
+  name: GenerateFacadeScriptContext
+  nameWithType: VMSBootstrapper.GenerateFacadeScriptContext
+  fullName: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext
+- uid: VMS.TPS.Common.Model.API.ScriptContext
+  commentId: '!:VMS.TPS.Common.Model.API.ScriptContext'
+  isExternal: true
+  name: VMS.TPS.Common.Model.API.ScriptContext
+  nameWithType: VMS.TPS.Common.Model.API.ScriptContext
+  fullName: VMS.TPS.Common.Model.API.ScriptContext
+- uid: Window
+  isExternal: true
+  name: Window
+  nameWithType: Window
+  fullName: Window
+- uid: PluginContext
+  commentId: '!:PluginContext'
+  isExternal: true
+  name: PluginContext
+  nameWithType: PluginContext
+  fullName: PluginContext

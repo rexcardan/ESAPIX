@@ -1,0 +1,365 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.AppBootstrapper`1
+  commentId: T:ESAPIX.AppKit.AppBootstrapper`1
+  id: AppBootstrapper`1
+  parent: ESAPIX.AppKit
+  children:
+  - ESAPIX.AppKit.AppBootstrapper`1.#ctor(System.String,System.String,System.Boolean)
+  - ESAPIX.AppKit.AppBootstrapper`1.ConfigureContainer
+  - ESAPIX.AppKit.AppBootstrapper`1.CreateShell
+  - ESAPIX.AppKit.AppBootstrapper`1.InitializeShell
+  - ESAPIX.AppKit.AppBootstrapper`1.Run(System.Func{Window})
+  langs:
+  - csharp
+  - vb
+  name: AppBootstrapper<T>
+  nameWithType: AppBootstrapper<T>
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>
+  type: Class
+  source:
+    id: AppBootstrapper
+    path: ''
+    startLine: 18
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: 'public class AppBootstrapper<T> : UnityBootstrapper where T : Window'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class AppBootstrapper(Of T As Window)
+          Inherits UnityBootstrapper
+  inheritance:
+  - System.Object
+  nameWithType.vb: AppBootstrapper(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T)
+  name.vb: AppBootstrapper(Of T)
+- uid: ESAPIX.AppKit.AppBootstrapper`1.#ctor(System.String,System.String,System.Boolean)
+  commentId: M:ESAPIX.AppKit.AppBootstrapper`1.#ctor(System.String,System.String,System.Boolean)
+  id: '#ctor(System.String,System.String,System.Boolean)'
+  parent: ESAPIX.AppKit.AppBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: AppBootstrapper(String, String, Boolean)
+  nameWithType: AppBootstrapper<T>.AppBootstrapper(String, String, Boolean)
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.AppBootstrapper(System.String, System.String, System.Boolean)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 23
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
+    parameters:
+    - id: vmsUsername
+      type: System.String
+    - id: vmsPassword
+      type: System.String
+    - id: singleThread
+      type: System.Boolean
+    content.vb: Public Sub New(vmsUsername As String, vmsPassword As String, singleThread As Boolean = False)
+  overload: ESAPIX.AppKit.AppBootstrapper`1.#ctor*
+  nameWithType.vb: AppBootstrapper(Of T).AppBootstrapper(String, String, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).AppBootstrapper(System.String, System.String, System.Boolean)
+- uid: ESAPIX.AppKit.AppBootstrapper`1.CreateShell
+  commentId: M:ESAPIX.AppKit.AppBootstrapper`1.CreateShell
+  id: CreateShell
+  parent: ESAPIX.AppKit.AppBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: CreateShell()
+  nameWithType: AppBootstrapper<T>.CreateShell()
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.CreateShell()
+  type: Method
+  source:
+    id: CreateShell
+    path: ''
+    startLine: 36
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: protected override DependencyObject CreateShell()
+    return:
+      type: DependencyObject
+    content.vb: Protected Overrides Function CreateShell As DependencyObject
+  overload: ESAPIX.AppKit.AppBootstrapper`1.CreateShell*
+  nameWithType.vb: AppBootstrapper(Of T).CreateShell()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).CreateShell()
+- uid: ESAPIX.AppKit.AppBootstrapper`1.ConfigureContainer
+  commentId: M:ESAPIX.AppKit.AppBootstrapper`1.ConfigureContainer
+  id: ConfigureContainer
+  parent: ESAPIX.AppKit.AppBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: ConfigureContainer()
+  nameWithType: AppBootstrapper<T>.ConfigureContainer()
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.ConfigureContainer()
+  type: Method
+  source:
+    id: ConfigureContainer
+    path: ''
+    startLine: 41
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: protected override void ConfigureContainer()
+    content.vb: Protected Overrides Sub ConfigureContainer
+  overload: ESAPIX.AppKit.AppBootstrapper`1.ConfigureContainer*
+  nameWithType.vb: AppBootstrapper(Of T).ConfigureContainer()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).ConfigureContainer()
+- uid: ESAPIX.AppKit.AppBootstrapper`1.InitializeShell
+  commentId: M:ESAPIX.AppKit.AppBootstrapper`1.InitializeShell
+  id: InitializeShell
+  parent: ESAPIX.AppKit.AppBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: InitializeShell()
+  nameWithType: AppBootstrapper<T>.InitializeShell()
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.InitializeShell()
+  type: Method
+  source:
+    id: InitializeShell
+    path: ''
+    startLine: 49
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: protected override void InitializeShell()
+    content.vb: Protected Overrides Sub InitializeShell
+  overload: ESAPIX.AppKit.AppBootstrapper`1.InitializeShell*
+  nameWithType.vb: AppBootstrapper(Of T).InitializeShell()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).InitializeShell()
+- uid: ESAPIX.AppKit.AppBootstrapper`1.Run(System.Func{Window})
+  commentId: M:ESAPIX.AppKit.AppBootstrapper`1.Run(System.Func{Window})
+  id: Run(System.Func{Window})
+  parent: ESAPIX.AppKit.AppBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: Run(Func<Window>)
+  nameWithType: AppBootstrapper<T>.Run(Func<Window>)
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.Run(System.Func<Window>)
+  type: Method
+  source:
+    id: Run
+    path: ''
+    startLine: 69
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public void Run(Func<Window> getSplash = null)
+    parameters:
+    - id: getSplash
+      type: System.Func{Window}
+    content.vb: Public Sub Run(getSplash As Func(Of Window) = Nothing)
+  overload: ESAPIX.AppKit.AppBootstrapper`1.Run*
+  nameWithType.vb: AppBootstrapper(Of T).Run(Func(Of Window))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).Run(System.Func(Of Window))
+  name.vb: Run(Func(Of Window))
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.AppKit.AppBootstrapper`1.#ctor*
+  commentId: Overload:ESAPIX.AppKit.AppBootstrapper`1.#ctor
+  isExternal: false
+  name: AppBootstrapper
+  nameWithType: AppBootstrapper<T>.AppBootstrapper
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.AppBootstrapper
+  nameWithType.vb: AppBootstrapper(Of T).AppBootstrapper
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).AppBootstrapper
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.AppKit.AppBootstrapper`1.CreateShell*
+  commentId: Overload:ESAPIX.AppKit.AppBootstrapper`1.CreateShell
+  isExternal: false
+  name: CreateShell
+  nameWithType: AppBootstrapper<T>.CreateShell
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.CreateShell
+  nameWithType.vb: AppBootstrapper(Of T).CreateShell
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).CreateShell
+- uid: DependencyObject
+  isExternal: true
+  name: DependencyObject
+  nameWithType: DependencyObject
+  fullName: DependencyObject
+- uid: ESAPIX.AppKit.AppBootstrapper`1.ConfigureContainer*
+  commentId: Overload:ESAPIX.AppKit.AppBootstrapper`1.ConfigureContainer
+  isExternal: false
+  name: ConfigureContainer
+  nameWithType: AppBootstrapper<T>.ConfigureContainer
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.ConfigureContainer
+  nameWithType.vb: AppBootstrapper(Of T).ConfigureContainer
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).ConfigureContainer
+- uid: ESAPIX.AppKit.AppBootstrapper`1.InitializeShell*
+  commentId: Overload:ESAPIX.AppKit.AppBootstrapper`1.InitializeShell
+  isExternal: false
+  name: InitializeShell
+  nameWithType: AppBootstrapper<T>.InitializeShell
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.InitializeShell
+  nameWithType.vb: AppBootstrapper(Of T).InitializeShell
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).InitializeShell
+- uid: ESAPIX.AppKit.AppBootstrapper`1.Run*
+  commentId: Overload:ESAPIX.AppKit.AppBootstrapper`1.Run
+  isExternal: false
+  name: Run
+  nameWithType: AppBootstrapper<T>.Run
+  fullName: ESAPIX.AppKit.AppBootstrapper<T>.Run
+  nameWithType.vb: AppBootstrapper(Of T).Run
+  fullName.vb: ESAPIX.AppKit.AppBootstrapper(Of T).Run
+- uid: System.Func{Window}
+  commentId: T:System.Func{Window}
+  parent: System
+  definition: System.Func`1
+  name: Func<Window>
+  nameWithType: Func<Window>
+  fullName: System.Func<Window>
+  nameWithType.vb: Func(Of Window)
+  fullName.vb: System.Func(Of Window)
+  name.vb: Func(Of Window)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Window
+    name: Window
+    nameWithType: Window
+    fullName: Window
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Window
+    name: Window
+    nameWithType: Window
+    fullName: Window
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )

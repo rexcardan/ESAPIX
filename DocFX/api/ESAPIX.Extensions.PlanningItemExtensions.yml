@@ -1,0 +1,1562 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Extensions.PlanningItemExtensions
+  commentId: T:ESAPIX.Extensions.PlanningItemExtensions
+  id: PlanningItemExtensions
+  parent: ESAPIX.Extensions
+  children:
+  - ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem,System.String,System.String)
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,MayoQuery)
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,System.String)
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},MayoQuery)
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.String)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,System.Collections.Generic.IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetImage(PlanningItem)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetStructure(PlanningItem,System.String,System.String)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetStructures(PlanningItem)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet(PlanningItem)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy(PlanningItem)
+  langs:
+  - csharp
+  - vb
+  name: PlanningItemExtensions
+  nameWithType: PlanningItemExtensions
+  fullName: ESAPIX.Extensions.PlanningItemExtensions
+  type: Class
+  source:
+    id: PlanningItemExtensions
+    path: ''
+    startLine: 3614
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static class PlanningItemExtensions
+    content.vb: Public Module PlanningItemExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetStructures(PlanningItem)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetStructures(PlanningItem)
+  id: GetStructures(PlanningItem)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetStructures(PlanningItem)
+  nameWithType: PlanningItemExtensions.GetStructures(PlanningItem)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetStructures(PlanningItem)
+  type: Method
+  source:
+    id: GetStructures
+    path: ''
+    startLine: 3622
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the structures from the planning item. Removes the need to cast to plan or plan sum.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Structure> GetStructures(this PlanningItem plan)
+    parameters:
+    - id: plan
+      type: PlanningItem
+      description: the planning item
+    return:
+      type: System.Collections.Generic.IEnumerable{Structure}
+      description: the referenced structure set
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetStructures(plan As PlanningItem) As IEnumerable(Of  Structure)
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetStructures*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet(PlanningItem)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet(PlanningItem)
+  id: GetStructureSet(PlanningItem)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetStructureSet(PlanningItem)
+  nameWithType: PlanningItemExtensions.GetStructureSet(PlanningItem)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet(PlanningItem)
+  type: Method
+  source:
+    id: GetStructureSet
+    path: ''
+    startLine: 3642
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the structure set from the planning item. Removes the need to cast to plan or plan sum.\n"
+  example: []
+  syntax:
+    content: public static StructureSet GetStructureSet(this PlanningItem plan)
+    parameters:
+    - id: plan
+      type: PlanningItem
+      description: the planning item
+    return:
+      type: StructureSet
+      description: the referenced structure set
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetStructureSet(plan As PlanningItem) As StructureSet
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetImage(PlanningItem)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetImage(PlanningItem)
+  id: GetImage(PlanningItem)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetImage(PlanningItem)
+  nameWithType: PlanningItemExtensions.GetImage(PlanningItem)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetImage(PlanningItem)
+  type: Method
+  source:
+    id: GetImage
+    path: ''
+    startLine: 3662
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the image from the planning item. Removes the need to cast to plan or plan sum.\n"
+  example: []
+  syntax:
+    content: public static Image GetImage(this PlanningItem plan)
+    parameters:
+    - id: plan
+      type: PlanningItem
+      description: the planning item
+    return:
+      type: Image
+      description: the referenced structure set
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetImage(plan As PlanningItem) As Image
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetImage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem,System.String,System.String)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem,System.String,System.String)
+  id: ContainsStructure(PlanningItem,System.String,System.String)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: ContainsStructure(PlanningItem, String, String)
+  nameWithType: PlanningItemExtensions.ContainsStructure(PlanningItem, String, String)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem, System.String, System.String)
+  type: Method
+  source:
+    id: ContainsStructure
+    path: ''
+    startLine: 3685
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns true if the planning item references a structure set with the input structure id AND the structure is contoured. Also allows a regex\nexpression to match to structure id.\n"
+  example: []
+  syntax:
+    content: public static bool ContainsStructure(this PlanningItem plan, string structId, string regex = null)
+    parameters:
+    - id: plan
+      type: PlanningItem
+      description: the planning item
+    - id: structId
+      type: System.String
+      description: the structure id to match
+    - id: regex
+      type: System.String
+      description: the optional regex expression to match against a structure id
+    return:
+      type: System.Boolean
+      description: Returns true if the planning item references a structure set with the input structure id AND the structure is contoured.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ContainsStructure(plan As PlanningItem, structId As String, regex As String = Nothing) As Boolean
+  overload: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetStructure(PlanningItem,System.String,System.String)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetStructure(PlanningItem,System.String,System.String)
+  id: GetStructure(PlanningItem,System.String,System.String)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetStructure(PlanningItem, String, String)
+  nameWithType: PlanningItemExtensions.GetStructure(PlanningItem, String, String)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetStructure(PlanningItem, System.String, System.String)
+  type: Method
+  source:
+    id: GetStructure
+    path: ''
+    startLine: 3719
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nGets a structure (if it exists from the structure set references by the planning item\n"
+  example: []
+  syntax:
+    content: public static Structure GetStructure(this PlanningItem plan, string structId, string regex = null)
+    parameters:
+    - id: plan
+      type: PlanningItem
+    - id: structId
+      type: System.String
+    - id: regex
+      type: System.String
+    return:
+      type: Structure
+    content.vb: "<ExtensionAttribute>\nPublic Shared Function GetStructure(plan As PlanningItem, structId As String, regex As String = Nothing) As "
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetStructure*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy(PlanningItem)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy(PlanningItem)
+  id: TotalPrescribedDoseGy(PlanningItem)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: TotalPrescribedDoseGy(PlanningItem)
+  nameWithType: PlanningItemExtensions.TotalPrescribedDoseGy(PlanningItem)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy(PlanningItem)
+  type: Method
+  source:
+    id: TotalPrescribedDoseGy
+    path: ''
+    startLine: 3726
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static double TotalPrescribedDoseGy(this PlanningItem pi)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    return:
+      type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function TotalPrescribedDoseGy(pi As PlanningItem) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  id: GetDefaultDVHCumulativeData(PlanningItem,Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultDVHCumulativeData(PlanningItem, Structure, DoseValuePresentation, VolumePresentation, Double)
+  nameWithType: PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem, Structure, DoseValuePresentation, VolumePresentation, Double)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem, Structure, DoseValuePresentation, VolumePresentation, System.Double)
+  type: Method
+  source:
+    id: GetDefaultDVHCumulativeData
+    path: ''
+    startLine: 3758
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nEnables a shorter method for doing a common task (getting the DVH from a structure). Contains default values.\n"
+  example: []
+  syntax:
+    content: public static DVHData GetDefaultDVHCumulativeData(this PlanningItem plan, Structure s, DoseValuePresentation dvp = null, VolumePresentation vp = null, double binWidth = 0.1)
+    parameters:
+    - id: plan
+      type: PlanningItem
+    - id: s
+      type: Structure
+    - id: dvp
+      type: DoseValuePresentation
+    - id: vp
+      type: VolumePresentation
+    - id: binWidth
+      type: System.Double
+    return:
+      type: DVHData
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDefaultDVHCumulativeData(plan As PlanningItem, s As  Structure, dvp As DoseValuePresentation = Nothing, vp As VolumePresentation = Nothing, binWidth As Double = 0.1) As DVHData
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,System.Collections.Generic.IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,System.Collections.Generic.IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
+  id: GetComplexDVH(PlanningItem,System.Collections.Generic.IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComplexDVH(PlanningItem, IEnumerable<Structure>, VolumePresentation, DoseValuePresentation, Double)
+  nameWithType: PlanningItemExtensions.GetComplexDVH(PlanningItem, IEnumerable<Structure>, VolumePresentation, DoseValuePresentation, Double)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem, System.Collections.Generic.IEnumerable<Structure>, VolumePresentation, DoseValuePresentation, System.Double)
+  type: Method
+  source:
+    id: GetComplexDVH
+    path: ''
+    startLine: 3774
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nThe \"complex\" dvh in this case, is 1. Allows for plan sums to have relative dose, by adding prescriptions to determine a \nguessed prescribed dose value. (It is up to the user to determine if this is appropriate). 2). Allows for multiple structures\nto be merged into a single dvh by summing volumes as each dose value\n"
+  example: []
+  syntax:
+    content: public static DVHPoint[] GetComplexDVH(this PlanningItem pi, IEnumerable<Structure> ss, VolumePresentation vPres, DoseValuePresentation dPres, double binWidth = 0.1)
+    parameters:
+    - id: pi
+      type: PlanningItem
+      description: the planning item containing the dose and the structures
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+      description: the structures to merge into one DVH (useful for multiple volume queries from parallel organs)
+    - id: vPres
+      type: VolumePresentation
+      description: the volume presentation requested
+    - id: dPres
+      type: DoseValuePresentation
+      description: the dose presentation requested
+    - id: binWidth
+      type: System.Double
+      description: the bin width to use when sampling the DVH
+    return:
+      type: DVHPoint[]
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplexDVH(pi As PlanningItem, ss As IEnumerable(Of  Structure), vPres As VolumePresentation, dPres As DoseValuePresentation, binWidth As Double = 0.1) As DVHPoint()
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH*
+  nameWithType.vb: PlanningItemExtensions.GetComplexDVH(PlanningItem, IEnumerable(Of Structure), VolumePresentation, DoseValuePresentation, Double)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem, System.Collections.Generic.IEnumerable(Of Structure), VolumePresentation, DoseValuePresentation, System.Double)
+  name.vb: GetComplexDVH(PlanningItem, IEnumerable(Of Structure), VolumePresentation, DoseValuePresentation, Double)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  id: GetDoseAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseAtVolume(PlanningItem, Structure, Double, VolumePresentation, DoseValuePresentation)
+  nameWithType: PlanningItemExtensions.GetDoseAtVolume(PlanningItem, Structure, Double, VolumePresentation, DoseValuePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem, Structure, System.Double, VolumePresentation, DoseValuePresentation)
+  type: Method
+  source:
+    id: GetDoseAtVolume
+    path: ''
+    startLine: 3805
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nFinds the dose at a certain volume input of a structure\n"
+  example: []
+  syntax:
+    content: public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    parameters:
+    - id: i
+      type: PlanningItem
+      description: the planning item
+    - id: s
+      type: Structure
+      description: the structure to analyze
+    - id: volume
+      type: System.Double
+      description: the volume to sample (units are in the vPres variable)
+    - id: vPres
+      type: VolumePresentation
+      description: the units of the input volume
+    - id: dPres
+      type: DoseValuePresentation
+      description: the dose value presentation you want returned
+    return:
+      type: DoseValue
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseAtVolume(i As PlanningItem, s As  Structure, volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  id: GetDoseAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseAtVolume(PlanningItem, IEnumerable<Structure>, Double, VolumePresentation, DoseValuePresentation)
+  nameWithType: PlanningItemExtensions.GetDoseAtVolume(PlanningItem, IEnumerable<Structure>, Double, VolumePresentation, DoseValuePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem, System.Collections.Generic.IEnumerable<Structure>, System.Double, VolumePresentation, DoseValuePresentation)
+  type: Method
+  source:
+    id: GetDoseAtVolume
+    path: ''
+    startLine: 3819
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nFinds the dose at a certain volume input of a structure\n"
+  example: []
+  syntax:
+    content: public static DoseValue GetDoseAtVolume(this PlanningItem pi, IEnumerable<Structure> ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+      description: the structure to analyze (will be merged into one dvh)
+    - id: volume
+      type: System.Double
+      description: the volume to sample (units are in the vPres variable)
+    - id: vPres
+      type: VolumePresentation
+      description: the units of the input volume
+    - id: dPres
+      type: DoseValuePresentation
+      description: the dose value presentation you want returned
+    return:
+      type: DoseValue
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseAtVolume(pi As PlanningItem, ss As IEnumerable(Of  Structure), volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume*
+  nameWithType.vb: PlanningItemExtensions.GetDoseAtVolume(PlanningItem, IEnumerable(Of Structure), Double, VolumePresentation, DoseValuePresentation)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem, System.Collections.Generic.IEnumerable(Of Structure), System.Double, VolumePresentation, DoseValuePresentation)
+  name.vb: GetDoseAtVolume(PlanningItem, IEnumerable(Of Structure), Double, VolumePresentation, DoseValuePresentation)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  id: GetDoseComplimentAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseComplimentAtVolume(PlanningItem, IEnumerable<Structure>, Double, VolumePresentation, DoseValuePresentation)
+  nameWithType: PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem, IEnumerable<Structure>, Double, VolumePresentation, DoseValuePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem, System.Collections.Generic.IEnumerable<Structure>, System.Double, VolumePresentation, DoseValuePresentation)
+  type: Method
+  source:
+    id: GetDoseComplimentAtVolume
+    path: ''
+    startLine: 3834
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturn the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the object and subtracting the input volume\n"
+  example: []
+  syntax:
+    content: public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, IEnumerable<Structure> ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    parameters:
+    - id: i
+      type: PlanningItem
+      description: the current planning item
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+      description: the input structures (will be merged into one dvh)
+    - id: volume
+      type: System.Double
+      description: the volume to query
+    - id: vPres
+      type: VolumePresentation
+      description: the volume presentation of the input volume
+    - id: dPres
+      type: DoseValuePresentation
+      description: the dose presentation to return
+    return:
+      type: DoseValue
+      description: Return the coldspot dose for a given volume.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseComplimentAtVolume(i As PlanningItem, ss As IEnumerable(Of  Structure), volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume*
+  nameWithType.vb: PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem, IEnumerable(Of Structure), Double, VolumePresentation, DoseValuePresentation)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem, System.Collections.Generic.IEnumerable(Of Structure), System.Double, VolumePresentation, DoseValuePresentation)
+  name.vb: GetDoseComplimentAtVolume(PlanningItem, IEnumerable(Of Structure), Double, VolumePresentation, DoseValuePresentation)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  id: GetDoseComplimentAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseComplimentAtVolume(PlanningItem, Structure, Double, VolumePresentation, DoseValuePresentation)
+  nameWithType: PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem, Structure, Double, VolumePresentation, DoseValuePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem, Structure, System.Double, VolumePresentation, DoseValuePresentation)
+  type: Method
+  source:
+    id: GetDoseComplimentAtVolume
+    path: ''
+    startLine: 3859
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturn the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the object and subtracting the input volume\n"
+  example: []
+  syntax:
+    content: public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    parameters:
+    - id: i
+      type: PlanningItem
+      description: the current planning item
+    - id: s
+      type: Structure
+      description: the input structure
+    - id: volume
+      type: System.Double
+      description: the volume to query
+    - id: vPres
+      type: VolumePresentation
+      description: the volume presentation of the input volume
+    - id: dPres
+      type: DoseValuePresentation
+      description: the dose presentation to return
+    return:
+      type: DoseValue
+      description: Return the coldspot dose for a given volume.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseComplimentAtVolume(i As PlanningItem, s As  Structure, volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  id: GetVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)
+  nameWithType: PlanningItemExtensions.GetVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)
+  type: Method
+  source:
+    id: GetVolumeAtDose
+    path: ''
+    startLine: 3874
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the volume of the input structure at a given input dose\n"
+  example: []
+  syntax:
+    content: public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
+    parameters:
+    - id: pi
+      type: PlanningItem
+      description: the current planning item
+    - id: s
+      type: Structure
+      description: the structure to query
+    - id: dv
+      type: DoseValue
+      description: the dose value to query
+    - id: vPres
+      type: VolumePresentation
+      description: the volume presentation to return
+    return:
+      type: System.Double
+      description: the volume at the requested presentation
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumeAtDose(pi As PlanningItem, s As  Structure, dv As DoseValue, vPres As VolumePresentation) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  id: GetComplimentVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComplimentVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)
+  nameWithType: PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)
+  type: Method
+  source:
+    id: GetComplimentVolumeAtDose
+    path: ''
+    startLine: 3889
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the compliment volume of the input structure at a given input dose\n"
+  example: []
+  syntax:
+    content: public static double GetComplimentVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
+    parameters:
+    - id: pi
+      type: PlanningItem
+      description: the current planning item
+    - id: s
+      type: Structure
+      description: the structure to query
+    - id: dv
+      type: DoseValue
+      description: the dose value to query
+    - id: vPres
+      type: VolumePresentation
+      description: the volume presentation to return
+    return:
+      type: System.Double
+      description: the volume at the requested presentation
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplimentVolumeAtDose(pi As PlanningItem, s As  Structure, dv As DoseValue, vPres As VolumePresentation) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  id: GetComplimentVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComplimentVolumeAtDose(PlanningItem, IEnumerable<Structure>, DoseValue, VolumePresentation)
+  nameWithType: PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem, IEnumerable<Structure>, DoseValue, VolumePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem, System.Collections.Generic.IEnumerable<Structure>, DoseValue, VolumePresentation)
+  type: Method
+  source:
+    id: GetComplimentVolumeAtDose
+    path: ''
+    startLine: 3904
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the sum of the compliment volumes across the input structures at a given input dose\n"
+  example: []
+  syntax:
+    content: public static double GetComplimentVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv, VolumePresentation vPres)
+    parameters:
+    - id: pi
+      type: PlanningItem
+      description: the current planning item
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+      description: the structures to query
+    - id: dv
+      type: DoseValue
+      description: the dose value to query
+    - id: vPres
+      type: VolumePresentation
+      description: the volume presentation to return
+    return:
+      type: System.Double
+      description: the volume at the requested presentation
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplimentVolumeAtDose(pi As PlanningItem, ss As IEnumerable(Of  Structure), dv As DoseValue, vPres As VolumePresentation) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose*
+  nameWithType.vb: PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem, System.Collections.Generic.IEnumerable(Of Structure), DoseValue, VolumePresentation)
+  name.vb: GetComplimentVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  id: GetVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetVolumeAtDose(PlanningItem, IEnumerable<Structure>, DoseValue, VolumePresentation)
+  nameWithType: PlanningItemExtensions.GetVolumeAtDose(PlanningItem, IEnumerable<Structure>, DoseValue, VolumePresentation)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem, System.Collections.Generic.IEnumerable<Structure>, DoseValue, VolumePresentation)
+  type: Method
+  source:
+    id: GetVolumeAtDose
+    path: ''
+    startLine: 3917
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the sum of the volumes across the input structures at a given input dose\n"
+  example: []
+  syntax:
+    content: public static double GetVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv, VolumePresentation vPres)
+    parameters:
+    - id: pi
+      type: PlanningItem
+      description: the current planning item
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+      description: the structures to query
+    - id: dv
+      type: DoseValue
+      description: the dose value to query
+    - id: vPres
+      type: VolumePresentation
+      description: the volume presentation to return
+    return:
+      type: System.Double
+      description: the volume at the requested presentation
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumeAtDose(pi As PlanningItem, ss As IEnumerable(Of  Structure), dv As DoseValue, vPres As VolumePresentation) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose*
+  nameWithType.vb: PlanningItemExtensions.GetVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem, System.Collections.Generic.IEnumerable(Of Structure), DoseValue, VolumePresentation)
+  name.vb: GetVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.String)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.String)
+  id: ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.String)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(PlanningItem, IEnumerable<Structure>, String)
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable<Structure>, String)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.Collections.Generic.IEnumerable<Structure>, System.String)
+  type: Method
+  source:
+    id: ExecuteQuery
+    path: ''
+    startLine: 3924
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, string mayoFormatQuery)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+    - id: mayoFormatQuery
+      type: System.String
+    return:
+      type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), mayoFormatQuery As String) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
+  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.Collections.Generic.IEnumerable(Of Structure), System.String)
+  name.vb: ExecuteQuery(PlanningItem, IEnumerable(Of Structure), String)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,System.String)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,System.String)
+  id: ExecuteQuery(PlanningItem,Structure,System.String)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(PlanningItem, Structure, String)
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, String)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, System.String)
+  type: Method
+  source:
+    id: ExecuteQuery
+    path: ''
+    startLine: 3930
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static double ExecuteQuery(this PlanningItem pi, Structure s, string mayoFormatQuery)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    - id: s
+      type: Structure
+    - id: mayoFormatQuery
+      type: System.String
+    return:
+      type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, mayoFormatQuery As String) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},MayoQuery)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},MayoQuery)
+  id: ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},MayoQuery)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(PlanningItem, IEnumerable<Structure>, MayoQuery)
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable<Structure>, MayoQuery)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.Collections.Generic.IEnumerable<Structure>, MayoQuery)
+  type: Method
+  source:
+    id: ExecuteQuery
+    path: ''
+    startLine: 3936
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, MayoQuery query)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    - id: ss
+      type: System.Collections.Generic.IEnumerable{Structure}
+    - id: query
+      type: MayoQuery
+    return:
+      type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), query As MayoQuery) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
+  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), MayoQuery)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.Collections.Generic.IEnumerable(Of Structure), MayoQuery)
+  name.vb: ExecuteQuery(PlanningItem, IEnumerable(Of Structure), MayoQuery)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,MayoQuery)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,MayoQuery)
+  id: ExecuteQuery(PlanningItem,Structure,MayoQuery)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(PlanningItem, Structure, MayoQuery)
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, MayoQuery)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, MayoQuery)
+  type: Method
+  source:
+    id: ExecuteQuery
+    path: ''
+    startLine: 3941
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static double ExecuteQuery(this PlanningItem pi, Structure s, MayoQuery query)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    - id: s
+      type: Structure
+    - id: query
+      type: MayoQuery
+    return:
+      type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, query As MayoQuery) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: ESAPIX.Extensions
+  commentId: N:ESAPIX.Extensions
+  isExternal: false
+  name: ESAPIX.Extensions
+  nameWithType: ESAPIX.Extensions
+  fullName: ESAPIX.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetStructures*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetStructures
+  isExternal: false
+  name: GetStructures
+  nameWithType: PlanningItemExtensions.GetStructures
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetStructures
+- uid: PlanningItem
+  isExternal: true
+  name: PlanningItem
+  nameWithType: PlanningItem
+  fullName: PlanningItem
+- uid: System.Collections.Generic.IEnumerable{Structure}
+  commentId: T:System.Collections.Generic.IEnumerable{Structure}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Structure>
+  nameWithType: IEnumerable<Structure>
+  fullName: System.Collections.Generic.IEnumerable<Structure>
+  nameWithType.vb: IEnumerable(Of Structure)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Structure)
+  name.vb: IEnumerable(Of Structure)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet
+  isExternal: false
+  name: GetStructureSet
+  nameWithType: PlanningItemExtensions.GetStructureSet
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet
+- uid: StructureSet
+  isExternal: true
+  name: StructureSet
+  nameWithType: StructureSet
+  fullName: StructureSet
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetImage*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetImage
+  isExternal: false
+  name: GetImage
+  nameWithType: PlanningItemExtensions.GetImage
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetImage
+- uid: Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure
+  isExternal: false
+  name: ContainsStructure
+  nameWithType: PlanningItemExtensions.ContainsStructure
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetStructure*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetStructure
+  isExternal: false
+  name: GetStructure
+  nameWithType: PlanningItemExtensions.GetStructure
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetStructure
+- uid: Structure
+  isExternal: true
+  name: Structure
+  nameWithType: Structure
+  fullName: Structure
+- uid: ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy
+  isExternal: false
+  name: TotalPrescribedDoseGy
+  nameWithType: PlanningItemExtensions.TotalPrescribedDoseGy
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData
+  isExternal: false
+  name: GetDefaultDVHCumulativeData
+  nameWithType: PlanningItemExtensions.GetDefaultDVHCumulativeData
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData
+- uid: DoseValuePresentation
+  isExternal: true
+  name: DoseValuePresentation
+  nameWithType: DoseValuePresentation
+  fullName: DoseValuePresentation
+- uid: VolumePresentation
+  isExternal: true
+  name: VolumePresentation
+  nameWithType: VolumePresentation
+  fullName: VolumePresentation
+- uid: DVHData
+  commentId: '!:DVHData'
+  isExternal: true
+  name: DVHData
+  nameWithType: DVHData
+  fullName: DVHData
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH
+  isExternal: false
+  name: GetComplexDVH
+  nameWithType: PlanningItemExtensions.GetComplexDVH
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH
+- uid: DVHPoint[]
+  name: DVHPoint[]
+  nameWithType: DVHPoint[]
+  fullName: DVHPoint[]
+  nameWithType.vb: DVHPoint()
+  fullName.vb: DVHPoint()
+  name.vb: DVHPoint()
+  spec.csharp:
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume
+  isExternal: false
+  name: GetDoseAtVolume
+  nameWithType: PlanningItemExtensions.GetDoseAtVolume
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume
+- uid: DoseValue
+  isExternal: true
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: DoseValue
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume
+  isExternal: false
+  name: GetDoseComplimentAtVolume
+  nameWithType: PlanningItemExtensions.GetDoseComplimentAtVolume
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose
+  isExternal: false
+  name: GetVolumeAtDose
+  nameWithType: PlanningItemExtensions.GetVolumeAtDose
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose
+  isExternal: false
+  name: GetComplimentVolumeAtDose
+  nameWithType: PlanningItemExtensions.GetComplimentVolumeAtDose
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery
+  isExternal: false
+  name: ExecuteQuery
+  nameWithType: PlanningItemExtensions.ExecuteQuery
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery
+- uid: MayoQuery
+  isExternal: true
+  name: MayoQuery
+  nameWithType: MayoQuery
+  fullName: MayoQuery

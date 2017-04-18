@@ -1,0 +1,584 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Helpers.FileHelper
+  commentId: T:ESAPIX.Helpers.FileHelper
+  id: FileHelper
+  parent: ESAPIX.Helpers
+  children:
+  - ESAPIX.Helpers.FileHelper.ChooseFile
+  - ESAPIX.Helpers.FileHelper.ChooseFolder
+  - ESAPIX.Helpers.FileHelper.LaunchFile(System.String)
+  - ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser(System.String)
+  - ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters(System.String)
+  - ESAPIX.Helpers.FileHelper.SaveFile(System.String)
+  langs:
+  - csharp
+  - vb
+  name: FileHelper
+  nameWithType: FileHelper
+  fullName: ESAPIX.Helpers.FileHelper
+  type: Class
+  source:
+    id: FileHelper
+    path: ''
+    startLine: 15126
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  syntax:
+    content: public class FileHelper
+    content.vb: Public Class FileHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Helpers.FileHelper.ChooseFile
+  commentId: M:ESAPIX.Helpers.FileHelper.ChooseFile
+  id: ChooseFile
+  parent: ESAPIX.Helpers.FileHelper
+  langs:
+  - csharp
+  - vb
+  name: ChooseFile()
+  nameWithType: FileHelper.ChooseFile()
+  fullName: ESAPIX.Helpers.FileHelper.ChooseFile()
+  type: Method
+  source:
+    id: ChooseFile
+    path: ''
+    startLine: 15132
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  summary: "\nProvides a file chooser\n"
+  example: []
+  syntax:
+    content: public static string ChooseFile()
+    return:
+      type: System.String
+      description: the path to the file chosen or null for no file selected
+    content.vb: Public Shared Function ChooseFile As String
+  overload: ESAPIX.Helpers.FileHelper.ChooseFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Helpers.FileHelper.ChooseFolder
+  commentId: M:ESAPIX.Helpers.FileHelper.ChooseFolder
+  id: ChooseFolder
+  parent: ESAPIX.Helpers.FileHelper
+  langs:
+  - csharp
+  - vb
+  name: ChooseFolder()
+  nameWithType: FileHelper.ChooseFolder()
+  fullName: ESAPIX.Helpers.FileHelper.ChooseFolder()
+  type: Method
+  source:
+    id: ChooseFolder
+    path: ''
+    startLine: 15156
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  summary: "\nProvides a file folder chooser\n"
+  example: []
+  syntax:
+    content: public static string ChooseFolder()
+    return:
+      type: System.String
+      description: the path to the folder chosen or null for no folder selected
+    content.vb: Public Shared Function ChooseFolder As String
+  overload: ESAPIX.Helpers.FileHelper.ChooseFolder*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Helpers.FileHelper.LaunchFile(System.String)
+  commentId: M:ESAPIX.Helpers.FileHelper.LaunchFile(System.String)
+  id: LaunchFile(System.String)
+  parent: ESAPIX.Helpers.FileHelper
+  langs:
+  - csharp
+  - vb
+  name: LaunchFile(String)
+  nameWithType: FileHelper.LaunchFile(String)
+  fullName: ESAPIX.Helpers.FileHelper.LaunchFile(System.String)
+  type: Method
+  source:
+    id: LaunchFile
+    path: ''
+    startLine: 15166
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  syntax:
+    content: public static void LaunchFile(string path)
+    parameters:
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LaunchFile(path As String)
+  overload: ESAPIX.Helpers.FileHelper.LaunchFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser(System.String)
+  commentId: M:ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser(System.String)
+  id: LaunchPDFInBrowser(System.String)
+  parent: ESAPIX.Helpers.FileHelper
+  langs:
+  - csharp
+  - vb
+  name: LaunchPDFInBrowser(String)
+  nameWithType: FileHelper.LaunchPDFInBrowser(String)
+  fullName: ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser(System.String)
+  type: Method
+  source:
+    id: LaunchPDFInBrowser
+    path: ''
+    startLine: 15178
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  syntax:
+    content: public static void LaunchPDFInBrowser(string pdfPath)
+    parameters:
+    - id: pdfPath
+      type: System.String
+    content.vb: Public Shared Sub LaunchPDFInBrowser(pdfPath As String)
+  overload: ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Helpers.FileHelper.SaveFile(System.String)
+  commentId: M:ESAPIX.Helpers.FileHelper.SaveFile(System.String)
+  id: SaveFile(System.String)
+  parent: ESAPIX.Helpers.FileHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveFile(String)
+  nameWithType: FileHelper.SaveFile(String)
+  fullName: ESAPIX.Helpers.FileHelper.SaveFile(System.String)
+  type: Method
+  source:
+    id: SaveFile
+    path: ''
+    startLine: 15190
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  syntax:
+    content: public static void SaveFile(string originalFilePath)
+    parameters:
+    - id: originalFilePath
+      type: System.String
+    content.vb: Public Shared Sub SaveFile(originalFilePath As String)
+  overload: ESAPIX.Helpers.FileHelper.SaveFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters(System.String)
+  commentId: M:ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters(System.String)
+  id: RemoveIllegalCharacters(System.String)
+  parent: ESAPIX.Helpers.FileHelper
+  langs:
+  - csharp
+  - vb
+  name: RemoveIllegalCharacters(String)
+  nameWithType: FileHelper.RemoveIllegalCharacters(String)
+  fullName: ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters(System.String)
+  type: Method
+  source:
+    id: RemoveIllegalCharacters
+    path: ''
+    startLine: 15215
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Helpers
+  summary: "\nRemoves all illegal characters from a file path so it can be saved\n"
+  example: []
+  syntax:
+    content: public static string RemoveIllegalCharacters(string fileName)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: the desired filename contaminated with illegal characters
+    return:
+      type: System.String
+      description: the appropriate filename decontaminated
+    content.vb: Public Shared Function RemoveIllegalCharacters(fileName As String) As String
+  overload: ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: ESAPIX.Helpers
+  commentId: N:ESAPIX.Helpers
+  isExternal: false
+  name: ESAPIX.Helpers
+  nameWithType: ESAPIX.Helpers
+  fullName: ESAPIX.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Helpers.FileHelper.ChooseFile*
+  commentId: Overload:ESAPIX.Helpers.FileHelper.ChooseFile
+  isExternal: false
+  name: ChooseFile
+  nameWithType: FileHelper.ChooseFile
+  fullName: ESAPIX.Helpers.FileHelper.ChooseFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Helpers.FileHelper.ChooseFolder*
+  commentId: Overload:ESAPIX.Helpers.FileHelper.ChooseFolder
+  isExternal: false
+  name: ChooseFolder
+  nameWithType: FileHelper.ChooseFolder
+  fullName: ESAPIX.Helpers.FileHelper.ChooseFolder
+- uid: ESAPIX.Helpers.FileHelper.LaunchFile*
+  commentId: Overload:ESAPIX.Helpers.FileHelper.LaunchFile
+  isExternal: false
+  name: LaunchFile
+  nameWithType: FileHelper.LaunchFile
+  fullName: ESAPIX.Helpers.FileHelper.LaunchFile
+- uid: ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser*
+  commentId: Overload:ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser
+  isExternal: false
+  name: LaunchPDFInBrowser
+  nameWithType: FileHelper.LaunchPDFInBrowser
+  fullName: ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser
+- uid: ESAPIX.Helpers.FileHelper.SaveFile*
+  commentId: Overload:ESAPIX.Helpers.FileHelper.SaveFile
+  isExternal: false
+  name: SaveFile
+  nameWithType: FileHelper.SaveFile
+  fullName: ESAPIX.Helpers.FileHelper.SaveFile
+- uid: ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters*
+  commentId: Overload:ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters
+  isExternal: false
+  name: RemoveIllegalCharacters
+  nameWithType: FileHelper.RemoveIllegalCharacters
+  fullName: ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters

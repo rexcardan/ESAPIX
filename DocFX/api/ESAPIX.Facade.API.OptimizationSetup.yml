@@ -1,0 +1,1274 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.API.OptimizationSetup
+  commentId: T:ESAPIX.Facade.API.OptimizationSetup
+  id: OptimizationSetup
+  parent: ESAPIX.Facade.API
+  children:
+  - ESAPIX.Facade.API.OptimizationSetup.#ctor
+  - ESAPIX.Facade.API.OptimizationSetup.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective(System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter(ESAPIX.Facade.API.Beam,System.Double,System.Double,System.Boolean)
+  - ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective(System.Double,System.Double,System.Double,System.Double,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.Objectives
+  - ESAPIX.Facade.API.OptimizationSetup.Parameters
+  - ESAPIX.Facade.API.OptimizationSetup.RemoveObjective(ESAPIX.Facade.API.OptimizationObjective)
+  - ESAPIX.Facade.API.OptimizationSetup.RemoveParameter(ESAPIX.Facade.API.OptimizationParameter)
+  - ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
+  - ESAPIX.Facade.API.OptimizationSetup.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: OptimizationSetup
+  nameWithType: OptimizationSetup
+  fullName: ESAPIX.Facade.API.OptimizationSetup
+  type: Class
+  source:
+    id: OptimizationSetup
+    path: ''
+    startLine: 9754
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: 'public class OptimizationSetup : SerializableObject'
+    content.vb: >-
+      Public Class OptimizationSetup
+          Inherits SerializableObject
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.API.SerializableObject
+  inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.GetSchema
+  - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.API.OptimizationSetup.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: OptimizationSetup()
+  nameWithType: OptimizationSetup.OptimizationSetup()
+  fullName: ESAPIX.Facade.API.OptimizationSetup.OptimizationSetup()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9756
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationSetup()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: OptimizationSetup(Object)
+  nameWithType: OptimizationSetup.OptimizationSetup(Object)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.OptimizationSetup(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9757
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationSetup(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.Objectives
+  commentId: P:ESAPIX.Facade.API.OptimizationSetup.Objectives
+  id: Objectives
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: Objectives
+  nameWithType: OptimizationSetup.Objectives
+  fullName: ESAPIX.Facade.API.OptimizationSetup.Objectives
+  type: Property
+  source:
+    id: Objectives
+    path: ''
+    startLine: 9758
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizationObjective> Objectives { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
+    content.vb: Public ReadOnly Property Objectives As IEnumerable(Of OptimizationObjective)
+  overload: ESAPIX.Facade.API.OptimizationSetup.Objectives*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizationSetup.Parameters
+  commentId: P:ESAPIX.Facade.API.OptimizationSetup.Parameters
+  id: Parameters
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: OptimizationSetup.Parameters
+  fullName: ESAPIX.Facade.API.OptimizationSetup.Parameters
+  type: Property
+  source:
+    id: Parameters
+    path: ''
+    startLine: 9784
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizationParameter> Parameters { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
+    content.vb: Public ReadOnly Property Parameters As IEnumerable(Of OptimizationParameter)
+  overload: ESAPIX.Facade.API.OptimizationSetup.Parameters*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
+  commentId: P:ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
+  id: UseJawTracking
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: UseJawTracking
+  nameWithType: OptimizationSetup.UseJawTracking
+  fullName: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
+  type: Property
+  source:
+    id: UseJawTracking
+    path: ''
+    startLine: 9810
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool UseJawTracking { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseJawTracking As Boolean
+  overload: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: OptimizationSetup.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 9823
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.API.OptimizationSetup.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective(System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective(System.Double)
+  id: AddAutomaticNormalTissueObjective(System.Double)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: AddAutomaticNormalTissueObjective(Double)
+  nameWithType: OptimizationSetup.AddAutomaticNormalTissueObjective(Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective(System.Double)
+  type: Method
+  source:
+    id: AddAutomaticNormalTissueObjective
+    path: ''
+    startLine: 9832
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter AddAutomaticNormalTissueObjective(double priority)
+    parameters:
+    - id: priority
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+    content.vb: Public Function AddAutomaticNormalTissueObjective(priority As Double) As OptimizationNormalTissueParameter
+  overload: ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter(ESAPIX.Facade.API.Beam,System.Double,System.Double,System.Boolean)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter(ESAPIX.Facade.API.Beam,System.Double,System.Double,System.Boolean)
+  id: AddBeamSpecificParameter(ESAPIX.Facade.API.Beam,System.Double,System.Double,System.Boolean)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: AddBeamSpecificParameter(Beam, Double, Double, Boolean)
+  nameWithType: OptimizationSetup.AddBeamSpecificParameter(Beam, Double, Double, Boolean)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter(ESAPIX.Facade.API.Beam, System.Double, System.Double, System.Boolean)
+  type: Method
+  source:
+    id: AddBeamSpecificParameter
+    path: ''
+    startLine: 9839
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationIMRTBeamParameter AddBeamSpecificParameter(Beam beam, double smoothX, double smoothY, bool fixedJaws)
+    parameters:
+    - id: beam
+      type: ESAPIX.Facade.API.Beam
+    - id: smoothX
+      type: System.Double
+    - id: smoothY
+      type: System.Double
+    - id: fixedJaws
+      type: System.Boolean
+    return:
+      type: ESAPIX.Facade.API.OptimizationIMRTBeamParameter
+    content.vb: Public Function AddBeamSpecificParameter(beam As Beam, smoothX As Double, smoothY As Double, fixedJaws As Boolean) As OptimizationIMRTBeamParameter
+  overload: ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  id: AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: AddEUDObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
+  nameWithType: OptimizationSetup.AddEUDObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator, ESAPIX.Facade.Types.DoseValue, System.Double, System.Double)
+  type: Method
+  source:
+    id: AddEUDObjective
+    path: ''
+    startLine: 9846
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective AddEUDObjective(Structure structure, OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double parameterA, double priority)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: objectiveOperator
+      type: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+    - id: dose
+      type: ESAPIX.Facade.Types.DoseValue
+    - id: parameterA
+      type: System.Double
+    - id: priority
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.OptimizationEUDObjective
+    content.vb: Public Function AddEUDObjective(structure As  Structure, objectiveOperator As OptimizationObjectiveOperator, dose As DoseValue, parameterA As Double, priority As Double) As OptimizationEUDObjective
+  overload: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
+  id: AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: AddMeanDoseObjective(Structure, DoseValue, Double)
+  nameWithType: OptimizationSetup.AddMeanDoseObjective(Structure, DoseValue, Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.DoseValue, System.Double)
+  type: Method
+  source:
+    id: AddMeanDoseObjective
+    path: ''
+    startLine: 9853
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationMeanDoseObjective AddMeanDoseObjective(Structure structure, DoseValue dose, double priority)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dose
+      type: ESAPIX.Facade.Types.DoseValue
+    - id: priority
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+    content.vb: Public Function AddMeanDoseObjective(structure As  Structure, dose As DoseValue, priority As Double) As OptimizationMeanDoseObjective
+  overload: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective(System.Double,System.Double,System.Double,System.Double,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective(System.Double,System.Double,System.Double,System.Double,System.Double)
+  id: AddNormalTissueObjective(System.Double,System.Double,System.Double,System.Double,System.Double)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: AddNormalTissueObjective(Double, Double, Double, Double, Double)
+  nameWithType: OptimizationSetup.AddNormalTissueObjective(Double, Double, Double, Double, Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective(System.Double, System.Double, System.Double, System.Double, System.Double)
+  type: Method
+  source:
+    id: AddNormalTissueObjective
+    path: ''
+    startLine: 9860
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter AddNormalTissueObjective(double priority, double distanceFromTargetBorderInMM, double startDosePercentage, double endDosePercentage, double fallOff)
+    parameters:
+    - id: priority
+      type: System.Double
+    - id: distanceFromTargetBorderInMM
+      type: System.Double
+    - id: startDosePercentage
+      type: System.Double
+    - id: endDosePercentage
+      type: System.Double
+    - id: fallOff
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+    content.vb: Public Function AddNormalTissueObjective(priority As Double, distanceFromTargetBorderInMM As Double, startDosePercentage As Double, endDosePercentage As Double, fallOff As Double) As OptimizationNormalTissueParameter
+  overload: ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  id: AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: AddPointObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
+  nameWithType: OptimizationSetup.AddPointObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator, ESAPIX.Facade.Types.DoseValue, System.Double, System.Double)
+  type: Method
+  source:
+    id: AddPointObjective
+    path: ''
+    startLine: 9867
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationPointObjective AddPointObjective(Structure structure, OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double volume, double priority)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: objectiveOperator
+      type: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+    - id: dose
+      type: ESAPIX.Facade.Types.DoseValue
+    - id: volume
+      type: System.Double
+    - id: priority
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.OptimizationPointObjective
+    content.vb: Public Function AddPointObjective(structure As  Structure, objectiveOperator As OptimizationObjectiveOperator, dose As DoseValue, volume As Double, priority As Double) As OptimizationPointObjective
+  overload: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.RemoveObjective(ESAPIX.Facade.API.OptimizationObjective)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.RemoveObjective(ESAPIX.Facade.API.OptimizationObjective)
+  id: RemoveObjective(ESAPIX.Facade.API.OptimizationObjective)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: RemoveObjective(OptimizationObjective)
+  nameWithType: OptimizationSetup.RemoveObjective(OptimizationObjective)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.RemoveObjective(ESAPIX.Facade.API.OptimizationObjective)
+  type: Method
+  source:
+    id: RemoveObjective
+    path: ''
+    startLine: 9874
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void RemoveObjective(OptimizationObjective objective)
+    parameters:
+    - id: objective
+      type: ESAPIX.Facade.API.OptimizationObjective
+    content.vb: Public Sub RemoveObjective(objective As OptimizationObjective)
+  overload: ESAPIX.Facade.API.OptimizationSetup.RemoveObjective*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.RemoveParameter(ESAPIX.Facade.API.OptimizationParameter)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.RemoveParameter(ESAPIX.Facade.API.OptimizationParameter)
+  id: RemoveParameter(ESAPIX.Facade.API.OptimizationParameter)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: RemoveParameter(OptimizationParameter)
+  nameWithType: OptimizationSetup.RemoveParameter(OptimizationParameter)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.RemoveParameter(ESAPIX.Facade.API.OptimizationParameter)
+  type: Method
+  source:
+    id: RemoveParameter
+    path: ''
+    startLine: 9883
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void RemoveParameter(OptimizationParameter parameter)
+    parameters:
+    - id: parameter
+      type: ESAPIX.Facade.API.OptimizationParameter
+    content.vb: Public Sub RemoveParameter(parameter As OptimizationParameter)
+  overload: ESAPIX.Facade.API.OptimizationSetup.RemoveParameter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure,System.Double)
+  id: AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure,System.Double)
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: AddStructurePointCloudParameter(Structure, Double)
+  nameWithType: OptimizationSetup.AddStructurePointCloudParameter(Structure, Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure, System.Double)
+  type: Method
+  source:
+    id: AddStructurePointCloudParameter
+    path: ''
+    startLine: 9892
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationPointCloudParameter AddStructurePointCloudParameter(Structure structure, double pointResolutionInMM)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: pointResolutionInMM
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.OptimizationPointCloudParameter
+    content.vb: Public Function AddStructurePointCloudParameter(structure As  Structure, pointResolutionInMM As Double) As OptimizationPointCloudParameter
+  overload: ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.API
+  commentId: N:ESAPIX.Facade.API
+  isExternal: false
+  name: ESAPIX.Facade.API
+  nameWithType: ESAPIX.Facade.API
+  fullName: ESAPIX.Facade.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.API.SerializableObject
+  commentId: T:ESAPIX.Facade.API.SerializableObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SerializableObject
+  nameWithType: SerializableObject
+  fullName: ESAPIX.Facade.API.SerializableObject
+- uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+  commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: GetSchema()
+  nameWithType: SerializableObject.GetSchema()
+  fullName: ESAPIX.Facade.API.SerializableObject.GetSchema()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
+    name: GetSchema
+    nameWithType: SerializableObject.GetSchema
+    fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: SerializableObject.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: SerializableObject.ReadXml
+    fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: Xml.XmlReader
+    nameWithType: Xml.XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: ClearSerializationHistory()
+  nameWithType: SerializableObject.ClearSerializationHistory()
+  fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory()
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+    name: ClearSerializationHistory
+    nameWithType: SerializableObject.ClearSerializationHistory
+    fullName: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.API.OptimizationSetup.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.#ctor
+  isExternal: false
+  name: OptimizationSetup
+  nameWithType: OptimizationSetup.OptimizationSetup
+  fullName: ESAPIX.Facade.API.OptimizationSetup.OptimizationSetup
+- uid: ESAPIX.Facade.API.OptimizationSetup.Objectives*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.Objectives
+  isExternal: false
+  name: Objectives
+  nameWithType: OptimizationSetup.Objectives
+  fullName: ESAPIX.Facade.API.OptimizationSetup.Objectives
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<OptimizationObjective>
+  nameWithType: IEnumerable<OptimizationObjective>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.OptimizationObjective>
+  nameWithType.vb: IEnumerable(Of OptimizationObjective)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.OptimizationObjective)
+  name.vb: IEnumerable(Of OptimizationObjective)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.OptimizationObjective
+    name: OptimizationObjective
+    nameWithType: OptimizationObjective
+    fullName: ESAPIX.Facade.API.OptimizationObjective
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.OptimizationObjective
+    name: OptimizationObjective
+    nameWithType: OptimizationObjective
+    fullName: ESAPIX.Facade.API.OptimizationObjective
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ESAPIX.Facade.API.OptimizationSetup.Parameters*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.Parameters
+  isExternal: false
+  name: Parameters
+  nameWithType: OptimizationSetup.Parameters
+  fullName: ESAPIX.Facade.API.OptimizationSetup.Parameters
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<OptimizationParameter>
+  nameWithType: IEnumerable<OptimizationParameter>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.OptimizationParameter>
+  nameWithType.vb: IEnumerable(Of OptimizationParameter)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.OptimizationParameter)
+  name.vb: IEnumerable(Of OptimizationParameter)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.OptimizationParameter
+    name: OptimizationParameter
+    nameWithType: OptimizationParameter
+    fullName: ESAPIX.Facade.API.OptimizationParameter
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.OptimizationParameter
+    name: OptimizationParameter
+    nameWithType: OptimizationParameter
+    fullName: ESAPIX.Facade.API.OptimizationParameter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
+  isExternal: false
+  name: UseJawTracking
+  nameWithType: OptimizationSetup.UseJawTracking
+  fullName: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Facade.API.OptimizationSetup.WriteXml*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: OptimizationSetup.WriteXml
+  fullName: ESAPIX.Facade.API.OptimizationSetup.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective
+  isExternal: false
+  name: AddAutomaticNormalTissueObjective
+  nameWithType: OptimizationSetup.AddAutomaticNormalTissueObjective
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  commentId: T:ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationNormalTissueParameter
+  nameWithType: OptimizationNormalTissueParameter
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter
+  isExternal: false
+  name: AddBeamSpecificParameter
+  nameWithType: OptimizationSetup.AddBeamSpecificParameter
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter
+- uid: ESAPIX.Facade.API.Beam
+  commentId: T:ESAPIX.Facade.API.Beam
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Beam
+  nameWithType: Beam
+  fullName: ESAPIX.Facade.API.Beam
+- uid: ESAPIX.Facade.API.OptimizationIMRTBeamParameter
+  commentId: T:ESAPIX.Facade.API.OptimizationIMRTBeamParameter
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationIMRTBeamParameter
+  nameWithType: OptimizationIMRTBeamParameter
+  fullName: ESAPIX.Facade.API.OptimizationIMRTBeamParameter
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective
+  isExternal: false
+  name: AddEUDObjective
+  nameWithType: OptimizationSetup.AddEUDObjective
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective
+- uid: ESAPIX.Facade.API.Structure
+  commentId: T:ESAPIX.Facade.API.Structure
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Structure
+  nameWithType: Structure
+  fullName: ESAPIX.Facade.API.Structure
+- uid: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+  commentId: T:ESAPIX.Facade.Types.OptimizationObjectiveOperator
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: OptimizationObjectiveOperator
+  nameWithType: OptimizationObjectiveOperator
+  fullName: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+- uid: ESAPIX.Facade.Types.DoseValue
+  commentId: T:ESAPIX.Facade.Types.DoseValue
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: ESAPIX.Facade.Types.DoseValue
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective
+  commentId: T:ESAPIX.Facade.API.OptimizationEUDObjective
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationEUDObjective
+  nameWithType: OptimizationEUDObjective
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective
+  isExternal: false
+  name: AddMeanDoseObjective
+  nameWithType: OptimizationSetup.AddMeanDoseObjective
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective
+- uid: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  commentId: T:ESAPIX.Facade.API.OptimizationMeanDoseObjective
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationMeanDoseObjective
+  nameWithType: OptimizationMeanDoseObjective
+  fullName: ESAPIX.Facade.API.OptimizationMeanDoseObjective
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective
+  isExternal: false
+  name: AddNormalTissueObjective
+  nameWithType: OptimizationSetup.AddNormalTissueObjective
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddPointObjective
+  isExternal: false
+  name: AddPointObjective
+  nameWithType: OptimizationSetup.AddPointObjective
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective
+- uid: ESAPIX.Facade.API.OptimizationPointObjective
+  commentId: T:ESAPIX.Facade.API.OptimizationPointObjective
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationPointObjective
+  nameWithType: OptimizationPointObjective
+  fullName: ESAPIX.Facade.API.OptimizationPointObjective
+- uid: ESAPIX.Facade.API.OptimizationSetup.RemoveObjective*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.RemoveObjective
+  isExternal: false
+  name: RemoveObjective
+  nameWithType: OptimizationSetup.RemoveObjective
+  fullName: ESAPIX.Facade.API.OptimizationSetup.RemoveObjective
+- uid: ESAPIX.Facade.API.OptimizationObjective
+  commentId: T:ESAPIX.Facade.API.OptimizationObjective
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationObjective
+  nameWithType: OptimizationObjective
+  fullName: ESAPIX.Facade.API.OptimizationObjective
+- uid: ESAPIX.Facade.API.OptimizationSetup.RemoveParameter*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.RemoveParameter
+  isExternal: false
+  name: RemoveParameter
+  nameWithType: OptimizationSetup.RemoveParameter
+  fullName: ESAPIX.Facade.API.OptimizationSetup.RemoveParameter
+- uid: ESAPIX.Facade.API.OptimizationParameter
+  commentId: T:ESAPIX.Facade.API.OptimizationParameter
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationParameter
+  nameWithType: OptimizationParameter
+  fullName: ESAPIX.Facade.API.OptimizationParameter
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter
+  isExternal: false
+  name: AddStructurePointCloudParameter
+  nameWithType: OptimizationSetup.AddStructurePointCloudParameter
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter
+  commentId: T:ESAPIX.Facade.API.OptimizationPointCloudParameter
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: OptimizationPointCloudParameter
+  nameWithType: OptimizationPointCloudParameter
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter

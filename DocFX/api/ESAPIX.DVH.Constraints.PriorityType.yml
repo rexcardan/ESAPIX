@@ -1,0 +1,305 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.DVH.Constraints.PriorityType
+  commentId: T:ESAPIX.DVH.Constraints.PriorityType
+  id: PriorityType
+  parent: ESAPIX.DVH.Constraints
+  children:
+  - ESAPIX.DVH.Constraints.PriorityType.ACCEPTABLE
+  - ESAPIX.DVH.Constraints.PriorityType.GOAL
+  - ESAPIX.DVH.Constraints.PriorityType.IDEAL
+  - ESAPIX.DVH.Constraints.PriorityType.MAJOR_DEVIATION
+  - ESAPIX.DVH.Constraints.PriorityType.MINOR_DEVIATION
+  - ESAPIX.DVH.Constraints.PriorityType.OPTIONAL
+  - ESAPIX.DVH.Constraints.PriorityType.PRIORITY_1
+  - ESAPIX.DVH.Constraints.PriorityType.PRIORITY_2
+  - ESAPIX.DVH.Constraints.PriorityType.REPORT
+  langs:
+  - csharp
+  - vb
+  name: PriorityType
+  nameWithType: PriorityType
+  fullName: ESAPIX.DVH.Constraints.PriorityType
+  type: Enum
+  source:
+    id: PriorityType
+    path: ''
+    startLine: 2636
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public enum PriorityType
+    content.vb: Public Enum PriorityType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: ESAPIX.DVH.Constraints.PriorityType.IDEAL
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.IDEAL
+  id: IDEAL
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: IDEAL
+  nameWithType: PriorityType.IDEAL
+  fullName: ESAPIX.DVH.Constraints.PriorityType.IDEAL
+  type: Field
+  source:
+    id: IDEAL
+    path: ''
+    startLine: 2638
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: IDEAL = 0
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.ACCEPTABLE
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.ACCEPTABLE
+  id: ACCEPTABLE
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: ACCEPTABLE
+  nameWithType: PriorityType.ACCEPTABLE
+  fullName: ESAPIX.DVH.Constraints.PriorityType.ACCEPTABLE
+  type: Field
+  source:
+    id: ACCEPTABLE
+    path: ''
+    startLine: 2640
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: ACCEPTABLE = 1
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.MINOR_DEVIATION
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.MINOR_DEVIATION
+  id: MINOR_DEVIATION
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: MINOR_DEVIATION
+  nameWithType: PriorityType.MINOR_DEVIATION
+  fullName: ESAPIX.DVH.Constraints.PriorityType.MINOR_DEVIATION
+  type: Field
+  source:
+    id: MINOR_DEVIATION
+    path: ''
+    startLine: 2642
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: MINOR_DEVIATION = 2
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.MAJOR_DEVIATION
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.MAJOR_DEVIATION
+  id: MAJOR_DEVIATION
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: MAJOR_DEVIATION
+  nameWithType: PriorityType.MAJOR_DEVIATION
+  fullName: ESAPIX.DVH.Constraints.PriorityType.MAJOR_DEVIATION
+  type: Field
+  source:
+    id: MAJOR_DEVIATION
+    path: ''
+    startLine: 2644
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: MAJOR_DEVIATION = 3
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.GOAL
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.GOAL
+  id: GOAL
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: GOAL
+  nameWithType: PriorityType.GOAL
+  fullName: ESAPIX.DVH.Constraints.PriorityType.GOAL
+  type: Field
+  source:
+    id: GOAL
+    path: ''
+    startLine: 2646
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: GOAL = 4
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.OPTIONAL
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.OPTIONAL
+  id: OPTIONAL
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: OPTIONAL
+  nameWithType: PriorityType.OPTIONAL
+  fullName: ESAPIX.DVH.Constraints.PriorityType.OPTIONAL
+  type: Field
+  source:
+    id: OPTIONAL
+    path: ''
+    startLine: 2648
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: OPTIONAL = 5
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.REPORT
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.REPORT
+  id: REPORT
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: REPORT
+  nameWithType: PriorityType.REPORT
+  fullName: ESAPIX.DVH.Constraints.PriorityType.REPORT
+  type: Field
+  source:
+    id: REPORT
+    path: ''
+    startLine: 2650
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: REPORT = 6
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.PRIORITY_1
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.PRIORITY_1
+  id: PRIORITY_1
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: PRIORITY_1
+  nameWithType: PriorityType.PRIORITY_1
+  fullName: ESAPIX.DVH.Constraints.PriorityType.PRIORITY_1
+  type: Field
+  source:
+    id: PRIORITY_1
+    path: ''
+    startLine: 2652
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: PRIORITY_1 = 7
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ESAPIX.DVH.Constraints.PriorityType.PRIORITY_2
+  commentId: F:ESAPIX.DVH.Constraints.PriorityType.PRIORITY_2
+  id: PRIORITY_2
+  parent: ESAPIX.DVH.Constraints.PriorityType
+  langs:
+  - csharp
+  - vb
+  name: PRIORITY_2
+  nameWithType: PriorityType.PRIORITY_2
+  fullName: ESAPIX.DVH.Constraints.PriorityType.PRIORITY_2
+  type: Field
+  source:
+    id: PRIORITY_2
+    path: ''
+    startLine: 2654
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: PRIORITY_2 = 8
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: ESAPIX.DVH.Constraints
+  commentId: N:ESAPIX.DVH.Constraints
+  isExternal: false
+  name: ESAPIX.DVH.Constraints
+  nameWithType: ESAPIX.DVH.Constraints
+  fullName: ESAPIX.DVH.Constraints
+- uid: ESAPIX.DVH.Constraints.PriorityType
+  commentId: T:ESAPIX.DVH.Constraints.PriorityType
+  parent: ESAPIX.DVH.Constraints
+  isExternal: false
+  name: PriorityType
+  nameWithType: PriorityType
+  fullName: ESAPIX.DVH.Constraints.PriorityType

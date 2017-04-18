@@ -1,0 +1,1086 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Extensions.DVHDataExtensions
+  commentId: T:ESAPIX.Extensions.DVHDataExtensions
+  id: DVHDataExtensions
+  parent: ESAPIX.Extensions
+  children:
+  - ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose(DVHPoint[],DoseValue)
+  - ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume(DVHPoint[])
+  - ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint[],DoseValue)
+  - ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume(DVHPoint[],System.Double)
+  - ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment(DVHPoint[],System.Double)
+  - ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose(DVHPoint[],DoseValue)
+  - ESAPIX.Extensions.DVHDataExtensions.MaxDose(DVHPoint[])
+  - ESAPIX.Extensions.DVHDataExtensions.MeanDose(DVHPoint[])
+  - ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
+  - ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
+  - ESAPIX.Extensions.DVHDataExtensions.MinDose(DVHPoint[])
+  langs:
+  - csharp
+  - vb
+  name: DVHDataExtensions
+  nameWithType: DVHDataExtensions
+  fullName: ESAPIX.Extensions.DVHDataExtensions
+  type: Class
+  source:
+    id: DVHDataExtensions
+    path: ''
+    startLine: 3300
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static class DVHDataExtensions
+    content.vb: Public Module DVHDataExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose(DVHPoint[],DoseValue)
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose(DVHPoint[],DoseValue)
+  id: GetVolumeAtDose(DVHPoint[],DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetVolumeAtDose(DVHPoint[], DoseValue)
+  nameWithType: DVHDataExtensions.GetVolumeAtDose(DVHPoint[], DoseValue)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose(DVHPoint[], DoseValue)
+  type: Method
+  source:
+    id: GetVolumeAtDose
+    path: ''
+    startLine: 3308
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nGets the volume that recieves the input dose\n"
+  example: []
+  syntax:
+    content: public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the dose volume histogram for this structure
+    - id: dv
+      type: DoseValue
+      description: the dose value to sample the curve
+    return:
+      type: System.Double
+      description: the volume in the same units as the DVH point array
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumeAtDose(dvh As DVHPoint(), dv As DoseValue) As Double
+  overload: ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose*
+  nameWithType.vb: DVHDataExtensions.GetVolumeAtDose(DVHPoint(), DoseValue)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose(DVHPoint(), DoseValue)
+  name.vb: GetVolumeAtDose(DVHPoint(), DoseValue)
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint[],DoseValue)
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint[],DoseValue)
+  id: GetComplimentVolumeAtDose(DVHPoint[],DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetComplimentVolumeAtDose(DVHPoint[], DoseValue)
+  nameWithType: DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint[], DoseValue)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint[], DoseValue)
+  type: Method
+  source:
+    id: GetComplimentVolumeAtDose
+    path: ''
+    startLine: 3337
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nGets the compliment volume (volume about a certain dose point) for the structure dvh\n"
+  example: []
+  syntax:
+    content: public static double GetComplimentVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the dose volume histogram for this structure
+    - id: dv
+      type: DoseValue
+      description: the dose value to sample the curve
+    return:
+      type: System.Double
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplimentVolumeAtDose(dvh As DVHPoint(), dv As DoseValue) As Double
+  overload: ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose*
+  nameWithType.vb: DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint(), DoseValue)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint(), DoseValue)
+  name.vb: GetComplimentVolumeAtDose(DVHPoint(), DoseValue)
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume(DVHPoint[],System.Double)
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume(DVHPoint[],System.Double)
+  id: GetDoseAtVolume(DVHPoint[],System.Double)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseAtVolume(DVHPoint[], Double)
+  nameWithType: DVHDataExtensions.GetDoseAtVolume(DVHPoint[], Double)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume(DVHPoint[], System.Double)
+  type: Method
+  source:
+    id: GetDoseAtVolume
+    path: ''
+    startLine: 3350
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nGets the dose value at the specified volume for the curve\n"
+  example: []
+  syntax:
+    content: public static DoseValue GetDoseAtVolume(this DVHPoint[] dvh, double volume)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the dvhPoint array that is queried
+    - id: volume
+      type: System.Double
+      description: the volume in the same units as the DVH curve
+    return:
+      type: DoseValue
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseAtVolume(dvh As DVHPoint(), volume As Double) As DoseValue
+  overload: ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume*
+  nameWithType.vb: DVHDataExtensions.GetDoseAtVolume(DVHPoint(), Double)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume(DVHPoint(), System.Double)
+  name.vb: GetDoseAtVolume(DVHPoint(), Double)
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment(DVHPoint[],System.Double)
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment(DVHPoint[],System.Double)
+  id: GetDoseCompliment(DVHPoint[],System.Double)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDoseCompliment(DVHPoint[], Double)
+  nameWithType: DVHDataExtensions.GetDoseCompliment(DVHPoint[], Double)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment(DVHPoint[], System.Double)
+  type: Method
+  source:
+    id: GetDoseCompliment
+    path: ''
+    startLine: 3403
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nGets the compliment dose for the specified volume (the cold spot). Calculated by taking the total volume and subtracting the input volume.\n"
+  example: []
+  syntax:
+    content: public static DoseValue GetDoseCompliment(this DVHPoint[] dvh, double volume)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the dvhPoint array that is queried
+    - id: volume
+      type: System.Double
+      description: the volume in the same units as the DVH curve
+    return:
+      type: DoseValue
+      description: the cold spot dose at the specified volume
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseCompliment(dvh As DVHPoint(), volume As Double) As DoseValue
+  overload: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment*
+  nameWithType.vb: DVHDataExtensions.GetDoseCompliment(DVHPoint(), Double)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment(DVHPoint(), System.Double)
+  name.vb: GetDoseCompliment(DVHPoint(), Double)
+- uid: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
+  id: MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: MergeDVHs(IEnumerable<DVHData>)
+  nameWithType: DVHDataExtensions.MergeDVHs(IEnumerable<DVHData>)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable<DVHData>)
+  type: Method
+  source:
+    id: MergeDVHs
+    path: ''
+    startLine: 3415
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nMerges DVHData from multiple structures into one DVH by summing the volumes at each dose value\n"
+  example: []
+  syntax:
+    content: public static DVHPoint[] MergeDVHs(this IEnumerable<DVHData> dvhs)
+    parameters:
+    - id: dvhs
+      type: System.Collections.Generic.IEnumerable{DVHData}
+      description: ''
+    return:
+      type: DVHPoint[]
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MergeDVHs(dvhs As IEnumerable(Of DVHData)) As DVHPoint()
+  overload: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs*
+  nameWithType.vb: DVHDataExtensions.MergeDVHs(IEnumerable(Of DVHData))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable(Of DVHData))
+  name.vb: MergeDVHs(IEnumerable(Of DVHData))
+- uid: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
+  id: MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: MergeDVHs(IEnumerable<DVHPoint[]>)
+  nameWithType: DVHDataExtensions.MergeDVHs(IEnumerable<DVHPoint[]>)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable<DVHPoint[]>)
+  type: Method
+  source:
+    id: MergeDVHs
+    path: ''
+    startLine: 3425
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nMerges DVHData from multiple structures into one DVH by summing the volumes at each dose value\n"
+  example: []
+  syntax:
+    content: public static DVHPoint[] MergeDVHs(this IEnumerable<DVHPoint[]> dvhs)
+    parameters:
+    - id: dvhs
+      type: System.Collections.Generic.IEnumerable{DVHPoint[]}
+      description: the multiple dvh curves to merge
+    return:
+      type: DVHPoint[]
+      description: the combined dvh from multiple structures
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MergeDVHs(dvhs As IEnumerable(Of DVHPoint())) As DVHPoint()
+  overload: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs*
+  nameWithType.vb: DVHDataExtensions.MergeDVHs(IEnumerable(Of DVHPoint()))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable(Of DVHPoint()))
+  name.vb: MergeDVHs(IEnumerable(Of DVHPoint()))
+- uid: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume(DVHPoint[])
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume(DVHPoint[])
+  id: ConvertToRelativeVolume(DVHPoint[])
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConvertToRelativeVolume(DVHPoint[])
+  nameWithType: DVHDataExtensions.ConvertToRelativeVolume(DVHPoint[])
+  fullName: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume(DVHPoint[])
+  type: Method
+  source:
+    id: ConvertToRelativeVolume
+    path: ''
+    startLine: 3457
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nIf appropriate, converts the DVH curve into relative volume points instead of absolute volume\n"
+  example: []
+  syntax:
+    content: public static DVHPoint[] ConvertToRelativeVolume(this DVHPoint[] dvh)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the input DVH
+    return:
+      type: DVHPoint[]
+      description: the dvh with relative volume points
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ConvertToRelativeVolume(dvh As DVHPoint()) As DVHPoint()
+  overload: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume*
+  nameWithType.vb: DVHDataExtensions.ConvertToRelativeVolume(DVHPoint())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume(DVHPoint())
+  name.vb: ConvertToRelativeVolume(DVHPoint())
+- uid: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose(DVHPoint[],DoseValue)
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose(DVHPoint[],DoseValue)
+  id: ConvertToRelativeDose(DVHPoint[],DoseValue)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConvertToRelativeDose(DVHPoint[], DoseValue)
+  nameWithType: DVHDataExtensions.ConvertToRelativeDose(DVHPoint[], DoseValue)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose(DVHPoint[], DoseValue)
+  type: Method
+  source:
+    id: ConvertToRelativeDose
+    path: ''
+    startLine: 3477
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nIf appropriate, converts the DVH curve into relative dose points instead of absolute dose\n"
+  example: []
+  syntax:
+    content: public static DVHPoint[] ConvertToRelativeDose(this DVHPoint[] dvh, DoseValue scalingPoint)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the input DVH
+    - id: scalingPoint
+      type: DoseValue
+      description: the dose value which represents 100%, all doses will be scaled in reference to this
+    return:
+      type: DVHPoint[]
+      description: the dvh with relative dose points
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ConvertToRelativeDose(dvh As DVHPoint(), scalingPoint As DoseValue) As DVHPoint()
+  overload: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose*
+  nameWithType.vb: DVHDataExtensions.ConvertToRelativeDose(DVHPoint(), DoseValue)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose(DVHPoint(), DoseValue)
+  name.vb: ConvertToRelativeDose(DVHPoint(), DoseValue)
+- uid: ESAPIX.Extensions.DVHDataExtensions.MaxDose(DVHPoint[])
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MaxDose(DVHPoint[])
+  id: MaxDose(DVHPoint[])
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: MaxDose(DVHPoint[])
+  nameWithType: DVHDataExtensions.MaxDose(DVHPoint[])
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MaxDose(DVHPoint[])
+  type: Method
+  source:
+    id: MaxDose
+    path: ''
+    startLine: 3499
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the max dose from the dvh curve\n"
+  example: []
+  syntax:
+    content: public static DoseValue MaxDose(this DVHPoint[] dvh)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the dvh curve
+    return:
+      type: DoseValue
+      description: the max dose in the same units as the curve
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MaxDose(dvh As DVHPoint()) As DoseValue
+  overload: ESAPIX.Extensions.DVHDataExtensions.MaxDose*
+  nameWithType.vb: DVHDataExtensions.MaxDose(DVHPoint())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MaxDose(DVHPoint())
+  name.vb: MaxDose(DVHPoint())
+- uid: ESAPIX.Extensions.DVHDataExtensions.MinDose(DVHPoint[])
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MinDose(DVHPoint[])
+  id: MinDose(DVHPoint[])
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: MinDose(DVHPoint[])
+  nameWithType: DVHDataExtensions.MinDose(DVHPoint[])
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MinDose(DVHPoint[])
+  type: Method
+  source:
+    id: MinDose
+    path: ''
+    startLine: 3515
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the min dose from the dvh curve\n"
+  example: []
+  syntax:
+    content: public static DoseValue MinDose(this DVHPoint[] dvh)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the dvh curve
+    return:
+      type: DoseValue
+      description: the minimum dose in the same units as the curve
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MinDose(dvh As DVHPoint()) As DoseValue
+  overload: ESAPIX.Extensions.DVHDataExtensions.MinDose*
+  nameWithType.vb: DVHDataExtensions.MinDose(DVHPoint())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MinDose(DVHPoint())
+  name.vb: MinDose(DVHPoint())
+- uid: ESAPIX.Extensions.DVHDataExtensions.MeanDose(DVHPoint[])
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MeanDose(DVHPoint[])
+  id: MeanDose(DVHPoint[])
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.DVHDataExtensions
+  langs:
+  - csharp
+  - vb
+  name: MeanDose(DVHPoint[])
+  nameWithType: DVHDataExtensions.MeanDose(DVHPoint[])
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MeanDose(DVHPoint[])
+  type: Method
+  source:
+    id: MeanDose
+    path: ''
+    startLine: 3531
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the mean dose from the dvh curve\n"
+  example: []
+  syntax:
+    content: public static DoseValue MeanDose(this DVHPoint[] dvh)
+    parameters:
+    - id: dvh
+      type: DVHPoint[]
+      description: the dvh curve
+    return:
+      type: DoseValue
+      description: the mean dose in the same units as the curve
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MeanDose(dvh As DVHPoint()) As DoseValue
+  overload: ESAPIX.Extensions.DVHDataExtensions.MeanDose*
+  nameWithType.vb: DVHDataExtensions.MeanDose(DVHPoint())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MeanDose(DVHPoint())
+  name.vb: MeanDose(DVHPoint())
+references:
+- uid: ESAPIX.Extensions
+  commentId: N:ESAPIX.Extensions
+  isExternal: false
+  name: ESAPIX.Extensions
+  nameWithType: ESAPIX.Extensions
+  fullName: ESAPIX.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose
+  isExternal: false
+  name: GetVolumeAtDose
+  nameWithType: DVHDataExtensions.GetVolumeAtDose
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose
+- uid: DVHPoint[]
+  name: DVHPoint[]
+  nameWithType: DVHPoint[]
+  fullName: DVHPoint[]
+  nameWithType.vb: DVHPoint()
+  fullName.vb: DVHPoint()
+  name.vb: DVHPoint()
+  spec.csharp:
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: DoseValue
+  isExternal: true
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: DoseValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose
+  isExternal: false
+  name: GetComplimentVolumeAtDose
+  nameWithType: DVHDataExtensions.GetComplimentVolumeAtDose
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume
+  isExternal: false
+  name: GetDoseAtVolume
+  nameWithType: DVHDataExtensions.GetDoseAtVolume
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume
+- uid: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment
+  isExternal: false
+  name: GetDoseCompliment
+  nameWithType: DVHDataExtensions.GetDoseCompliment
+  fullName: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment
+- uid: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.MergeDVHs
+  isExternal: false
+  name: MergeDVHs
+  nameWithType: DVHDataExtensions.MergeDVHs
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs
+- uid: System.Collections.Generic.IEnumerable{DVHData}
+  commentId: T:System.Collections.Generic.IEnumerable{DVHData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<DVHData>
+  nameWithType: IEnumerable<DVHData>
+  fullName: System.Collections.Generic.IEnumerable<DVHData>
+  nameWithType.vb: IEnumerable(Of DVHData)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of DVHData)
+  name.vb: IEnumerable(Of DVHData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DVHData
+    name: DVHData
+    nameWithType: DVHData
+    fullName: DVHData
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DVHData
+    name: DVHData
+    nameWithType: DVHData
+    fullName: DVHData
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.IEnumerable{DVHPoint[]}
+  commentId: T:System.Collections.Generic.IEnumerable{DVHPoint[]}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<DVHPoint[]>
+  nameWithType: IEnumerable<DVHPoint[]>
+  fullName: System.Collections.Generic.IEnumerable<DVHPoint[]>
+  nameWithType.vb: IEnumerable(Of DVHPoint())
+  fullName.vb: System.Collections.Generic.IEnumerable(Of DVHPoint())
+  name.vb: IEnumerable(Of DVHPoint())
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume
+  isExternal: false
+  name: ConvertToRelativeVolume
+  nameWithType: DVHDataExtensions.ConvertToRelativeVolume
+  fullName: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume
+- uid: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose
+  isExternal: false
+  name: ConvertToRelativeDose
+  nameWithType: DVHDataExtensions.ConvertToRelativeDose
+  fullName: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose
+- uid: ESAPIX.Extensions.DVHDataExtensions.MaxDose*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.MaxDose
+  isExternal: false
+  name: MaxDose
+  nameWithType: DVHDataExtensions.MaxDose
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MaxDose
+- uid: ESAPIX.Extensions.DVHDataExtensions.MinDose*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.MinDose
+  isExternal: false
+  name: MinDose
+  nameWithType: DVHDataExtensions.MinDose
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MinDose
+- uid: ESAPIX.Extensions.DVHDataExtensions.MeanDose*
+  commentId: Overload:ESAPIX.Extensions.DVHDataExtensions.MeanDose
+  isExternal: false
+  name: MeanDose
+  nameWithType: DVHDataExtensions.MeanDose
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MeanDose

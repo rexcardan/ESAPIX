@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.StandAloneContext.CourseChangedHandler
+  commentId: T:ESAPIX.AppKit.StandAloneContext.CourseChangedHandler
+  id: StandAloneContext.CourseChangedHandler
+  parent: ESAPIX.AppKit
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: StandAloneContext.CourseChangedHandler
+  nameWithType: StandAloneContext.CourseChangedHandler
+  fullName: ESAPIX.AppKit.StandAloneContext.CourseChangedHandler
+  type: Delegate
+  source:
+    id: CourseChangedHandler
+    path: ''
+    startLine: 571
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public delegate void CourseChangedHandler(Course c);
+    parameters:
+    - id: c
+      type: Course
+    content.vb: Public Delegate Sub CourseChangedHandler(c As Course)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: Course
+  isExternal: true
+  name: Course
+  nameWithType: Course
+  fullName: Course

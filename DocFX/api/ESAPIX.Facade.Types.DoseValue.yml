@@ -1,0 +1,853 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.DoseValue
+  commentId: T:ESAPIX.Facade.Types.DoseValue
+  id: DoseValue
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.DoseValue.#ctor
+  - ESAPIX.Facade.Types.DoseValue.#ctor(System.Double,ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  - ESAPIX.Facade.Types.DoseValue.#ctor(System.Double,System.String)
+  - ESAPIX.Facade.Types.DoseValue.#ctor(System.Object)
+  - ESAPIX.Facade.Types.DoseValue.Decimals
+  - ESAPIX.Facade.Types.DoseValue.Dose
+  - ESAPIX.Facade.Types.DoseValue.GetSchema
+  - ESAPIX.Facade.Types.DoseValue.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.Types.DoseValue.ToString
+  - ESAPIX.Facade.Types.DoseValue.UndefinedDose
+  - ESAPIX.Facade.Types.DoseValue.Unit
+  - ESAPIX.Facade.Types.DoseValue.UnitAsString
+  - ESAPIX.Facade.Types.DoseValue.ValueAsString
+  - ESAPIX.Facade.Types.DoseValue.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: ESAPIX.Facade.Types.DoseValue
+  type: Class
+  source:
+    id: DoseValue
+    path: ''
+    startLine: 13330
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public class DoseValue
+    content.vb: Public Class DoseValue
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.DoseValue.#ctor
+  commentId: M:ESAPIX.Facade.Types.DoseValue.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: DoseValue()
+  nameWithType: DoseValue.DoseValue()
+  fullName: ESAPIX.Facade.Types.DoseValue.DoseValue()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13333
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseValue()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.DoseValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.DoseValue.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: DoseValue(Object)
+  nameWithType: DoseValue.DoseValue(Object)
+  fullName: ESAPIX.Facade.Types.DoseValue.DoseValue(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13334
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseValue(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.DoseValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.#ctor(System.Double,System.String)
+  commentId: M:ESAPIX.Facade.Types.DoseValue.#ctor(System.Double,System.String)
+  id: '#ctor(System.Double,System.String)'
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: DoseValue(Double, String)
+  nameWithType: DoseValue.DoseValue(Double, String)
+  fullName: ESAPIX.Facade.Types.DoseValue.DoseValue(System.Double, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13335
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseValue(double value, string unitName)
+    parameters:
+    - id: value
+      type: System.Double
+    - id: unitName
+      type: System.String
+    content.vb: Public Sub New(value As Double, unitName As String)
+  overload: ESAPIX.Facade.Types.DoseValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.#ctor(System.Double,ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  commentId: M:ESAPIX.Facade.Types.DoseValue.#ctor(System.Double,ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  id: '#ctor(System.Double,ESAPIX.Facade.Types.DoseValue.DoseUnit)'
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: DoseValue(Double, DoseValue.DoseUnit)
+  nameWithType: DoseValue.DoseValue(Double, DoseValue.DoseUnit)
+  fullName: ESAPIX.Facade.Types.DoseValue.DoseValue(System.Double, ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13348
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseValue(double value, DoseValue.DoseUnit unit)
+    parameters:
+    - id: value
+      type: System.Double
+    - id: unit
+      type: ESAPIX.Facade.Types.DoseValue.DoseUnit
+    content.vb: Public Sub New(value As Double, unit As DoseValue.DoseUnit)
+  overload: ESAPIX.Facade.Types.DoseValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.Dose
+  commentId: P:ESAPIX.Facade.Types.DoseValue.Dose
+  id: Dose
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: DoseValue.Dose
+  fullName: ESAPIX.Facade.Types.DoseValue.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 13359
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public double Dose { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Dose As Double
+  overload: ESAPIX.Facade.Types.DoseValue.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.Unit
+  commentId: P:ESAPIX.Facade.Types.DoseValue.Unit
+  id: Unit
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: DoseValue.Unit
+  fullName: ESAPIX.Facade.Types.DoseValue.Unit
+  type: Property
+  source:
+    id: Unit
+    path: ''
+    startLine: 13372
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseValue.DoseUnit Unit { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.DoseValue.DoseUnit
+    content.vb: Public Property Unit As DoseValue.DoseUnit
+  overload: ESAPIX.Facade.Types.DoseValue.Unit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.UnitAsString
+  commentId: P:ESAPIX.Facade.Types.DoseValue.UnitAsString
+  id: UnitAsString
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: UnitAsString
+  nameWithType: DoseValue.UnitAsString
+  fullName: ESAPIX.Facade.Types.DoseValue.UnitAsString
+  type: Property
+  source:
+    id: UnitAsString
+    path: ''
+    startLine: 13385
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string UnitAsString { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UnitAsString As String
+  overload: ESAPIX.Facade.Types.DoseValue.UnitAsString*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.ValueAsString
+  commentId: P:ESAPIX.Facade.Types.DoseValue.ValueAsString
+  id: ValueAsString
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: ValueAsString
+  nameWithType: DoseValue.ValueAsString
+  fullName: ESAPIX.Facade.Types.DoseValue.ValueAsString
+  type: Property
+  source:
+    id: ValueAsString
+    path: ''
+    startLine: 13398
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string ValueAsString { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ValueAsString As String
+  overload: ESAPIX.Facade.Types.DoseValue.ValueAsString*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.Decimals
+  commentId: P:ESAPIX.Facade.Types.DoseValue.Decimals
+  id: Decimals
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: Decimals
+  nameWithType: DoseValue.Decimals
+  fullName: ESAPIX.Facade.Types.DoseValue.Decimals
+  type: Property
+  source:
+    id: Decimals
+    path: ''
+    startLine: 13411
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public int Decimals { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Decimals As Integer
+  overload: ESAPIX.Facade.Types.DoseValue.Decimals*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.ToString
+  commentId: M:ESAPIX.Facade.Types.DoseValue.ToString
+  id: ToString
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: DoseValue.ToString()
+  fullName: ESAPIX.Facade.Types.DoseValue.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: ''
+    startLine: 13424
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public string ToString()
+    return:
+      type: System.String
+    content.vb: Public Function ToString As String
+  overload: ESAPIX.Facade.Types.DoseValue.ToString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.UndefinedDose
+  commentId: M:ESAPIX.Facade.Types.DoseValue.UndefinedDose
+  id: UndefinedDose
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: UndefinedDose()
+  nameWithType: DoseValue.UndefinedDose()
+  fullName: ESAPIX.Facade.Types.DoseValue.UndefinedDose()
+  type: Method
+  source:
+    id: UndefinedDose
+    path: ''
+    startLine: 13431
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public static DoseValue UndefinedDose()
+    return:
+      type: ESAPIX.Facade.Types.DoseValue
+    content.vb: Public Shared Function UndefinedDose As DoseValue
+  overload: ESAPIX.Facade.Types.DoseValue.UndefinedDose*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.Types.DoseValue.GetSchema
+  commentId: M:ESAPIX.Facade.Types.DoseValue.GetSchema
+  id: GetSchema
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: GetSchema()
+  nameWithType: DoseValue.GetSchema()
+  fullName: ESAPIX.Facade.Types.DoseValue.GetSchema()
+  type: Method
+  source:
+    id: GetSchema
+    path: ''
+    startLine: 13435
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public Xml.Schema.XmlSchema GetSchema()
+    return:
+      type: System.Xml.Schema.XmlSchema
+    content.vb: Public Function GetSchema As Xml.Schema.XmlSchema
+  overload: ESAPIX.Facade.Types.DoseValue.GetSchema*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.ReadXml(System.Xml.XmlReader)
+  commentId: M:ESAPIX.Facade.Types.DoseValue.ReadXml(System.Xml.XmlReader)
+  id: ReadXml(System.Xml.XmlReader)
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: ReadXml(Xml.XmlReader)
+  nameWithType: DoseValue.ReadXml(Xml.XmlReader)
+  fullName: ESAPIX.Facade.Types.DoseValue.ReadXml(System.Xml.XmlReader)
+  type: Method
+  source:
+    id: ReadXml
+    path: ''
+    startLine: 13442
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void ReadXml(Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+    content.vb: Public Sub ReadXml(reader As Xml.XmlReader)
+  overload: ESAPIX.Facade.Types.DoseValue.ReadXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseValue.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.Types.DoseValue.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.Types.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: DoseValue.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.Types.DoseValue.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    id: WriteXml
+    path: ''
+    startLine: 13451
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public void WriteXml(Xml.XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
+  overload: ESAPIX.Facade.Types.DoseValue.WriteXml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.DoseValue.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.#ctor
+  isExternal: false
+  name: DoseValue
+  nameWithType: DoseValue.DoseValue
+  fullName: ESAPIX.Facade.Types.DoseValue.DoseValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ESAPIX.Facade.Types.DoseValue.DoseUnit
+  commentId: T:ESAPIX.Facade.Types.DoseValue.DoseUnit
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DoseValue.DoseUnit
+  nameWithType: DoseValue.DoseUnit
+  fullName: ESAPIX.Facade.Types.DoseValue.DoseUnit
+- uid: ESAPIX.Facade.Types.DoseValue.Dose*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.Dose
+  isExternal: false
+  name: Dose
+  nameWithType: DoseValue.Dose
+  fullName: ESAPIX.Facade.Types.DoseValue.Dose
+- uid: ESAPIX.Facade.Types.DoseValue.Unit*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.Unit
+  isExternal: false
+  name: Unit
+  nameWithType: DoseValue.Unit
+  fullName: ESAPIX.Facade.Types.DoseValue.Unit
+- uid: ESAPIX.Facade.Types.DoseValue.UnitAsString*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.UnitAsString
+  isExternal: false
+  name: UnitAsString
+  nameWithType: DoseValue.UnitAsString
+  fullName: ESAPIX.Facade.Types.DoseValue.UnitAsString
+- uid: ESAPIX.Facade.Types.DoseValue.ValueAsString*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.ValueAsString
+  isExternal: false
+  name: ValueAsString
+  nameWithType: DoseValue.ValueAsString
+  fullName: ESAPIX.Facade.Types.DoseValue.ValueAsString
+- uid: ESAPIX.Facade.Types.DoseValue.Decimals*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.Decimals
+  isExternal: false
+  name: Decimals
+  nameWithType: DoseValue.Decimals
+  fullName: ESAPIX.Facade.Types.DoseValue.Decimals
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ESAPIX.Facade.Types.DoseValue.ToString*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: DoseValue.ToString
+  fullName: ESAPIX.Facade.Types.DoseValue.ToString
+- uid: ESAPIX.Facade.Types.DoseValue.UndefinedDose*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.UndefinedDose
+  isExternal: false
+  name: UndefinedDose
+  nameWithType: DoseValue.UndefinedDose
+  fullName: ESAPIX.Facade.Types.DoseValue.UndefinedDose
+- uid: ESAPIX.Facade.Types.DoseValue
+  commentId: T:ESAPIX.Facade.Types.DoseValue
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: ESAPIX.Facade.Types.DoseValue
+- uid: ESAPIX.Facade.Types.DoseValue.GetSchema*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.GetSchema
+  isExternal: false
+  name: GetSchema
+  nameWithType: DoseValue.GetSchema
+  fullName: ESAPIX.Facade.Types.DoseValue.GetSchema
+- uid: System.Xml.Schema.XmlSchema
+  isExternal: true
+  name: Xml.Schema.XmlSchema
+  nameWithType: Xml.Schema.XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: ESAPIX.Facade.Types.DoseValue.ReadXml*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.ReadXml
+  isExternal: false
+  name: ReadXml
+  nameWithType: DoseValue.ReadXml
+  fullName: ESAPIX.Facade.Types.DoseValue.ReadXml
+- uid: System.Xml.XmlReader
+  isExternal: true
+  name: Xml.XmlReader
+  nameWithType: Xml.XmlReader
+  fullName: System.Xml.XmlReader
+- uid: ESAPIX.Facade.Types.DoseValue.WriteXml*
+  commentId: Overload:ESAPIX.Facade.Types.DoseValue.WriteXml
+  isExternal: false
+  name: WriteXml
+  nameWithType: DoseValue.WriteXml
+  fullName: ESAPIX.Facade.Types.DoseValue.WriteXml
+- uid: System.Xml.XmlWriter
+  isExternal: true
+  name: Xml.XmlWriter
+  nameWithType: Xml.XmlWriter
+  fullName: System.Xml.XmlWriter

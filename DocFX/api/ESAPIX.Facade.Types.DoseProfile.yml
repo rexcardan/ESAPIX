@@ -1,0 +1,544 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.Types.DoseProfile
+  commentId: T:ESAPIX.Facade.Types.DoseProfile
+  id: DoseProfile
+  parent: ESAPIX.Facade.Types
+  children:
+  - ESAPIX.Facade.Types.DoseProfile.#ctor
+  - ESAPIX.Facade.Types.DoseProfile.#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[],ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  - ESAPIX.Facade.Types.DoseProfile.#ctor(System.Object)
+  - ESAPIX.Facade.Types.DoseProfile.Unit
+  langs:
+  - csharp
+  - vb
+  name: DoseProfile
+  nameWithType: DoseProfile
+  fullName: ESAPIX.Facade.Types.DoseProfile
+  type: Class
+  source:
+    id: DoseProfile
+    path: ''
+    startLine: 13289
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: 'public class DoseProfile : LineProfile'
+    content.vb: >-
+      Public Class DoseProfile
+          Inherits LineProfile
+  inheritance:
+  - System.Object
+  - ESAPIX.Facade.Types.LineProfile
+  inheritedMembers:
+  - ESAPIX.Facade.Types.LineProfile.Item
+  - ESAPIX.Facade.Types.LineProfile.Count
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.Types.DoseProfile.#ctor
+  commentId: M:ESAPIX.Facade.Types.DoseProfile.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.Types.DoseProfile
+  langs:
+  - csharp
+  - vb
+  name: DoseProfile()
+  nameWithType: DoseProfile.DoseProfile()
+  fullName: ESAPIX.Facade.Types.DoseProfile.DoseProfile()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13291
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseProfile()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.Types.DoseProfile.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseProfile.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.Types.DoseProfile.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.Types.DoseProfile
+  langs:
+  - csharp
+  - vb
+  name: DoseProfile(Object)
+  nameWithType: DoseProfile.DoseProfile(Object)
+  fullName: ESAPIX.Facade.Types.DoseProfile.DoseProfile(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13292
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseProfile(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.Types.DoseProfile.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.Types.DoseProfile.#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[],ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  commentId: M:ESAPIX.Facade.Types.DoseProfile.#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[],ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  id: '#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[],ESAPIX.Facade.Types.DoseValue.DoseUnit)'
+  parent: ESAPIX.Facade.Types.DoseProfile
+  langs:
+  - csharp
+  - vb
+  name: DoseProfile(VVector, VVector, Double[], DoseValue.DoseUnit)
+  nameWithType: DoseProfile.DoseProfile(VVector, VVector, Double[], DoseValue.DoseUnit)
+  fullName: ESAPIX.Facade.Types.DoseProfile.DoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double[], ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 13293
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseProfile(VVector origin, VVector step, double[] data, DoseValue.DoseUnit unit)
+    parameters:
+    - id: origin
+      type: ESAPIX.Facade.Types.VVector
+    - id: step
+      type: ESAPIX.Facade.Types.VVector
+    - id: data
+      type: System.Double[]
+    - id: unit
+      type: ESAPIX.Facade.Types.DoseValue.DoseUnit
+    content.vb: Public Sub New(origin As VVector, step As VVector, data As Double(), unit As DoseValue.DoseUnit)
+  overload: ESAPIX.Facade.Types.DoseProfile.#ctor*
+  nameWithType.vb: DoseProfile.DoseProfile(VVector, VVector, Double(), DoseValue.DoseUnit)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.Types.DoseProfile.DoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double(), ESAPIX.Facade.Types.DoseValue.DoseUnit)
+  name.vb: DoseProfile(VVector, VVector, Double(), DoseValue.DoseUnit)
+- uid: ESAPIX.Facade.Types.DoseProfile.Unit
+  commentId: P:ESAPIX.Facade.Types.DoseProfile.Unit
+  id: Unit
+  parent: ESAPIX.Facade.Types.DoseProfile
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: DoseProfile.Unit
+  fullName: ESAPIX.Facade.Types.DoseProfile.Unit
+  type: Property
+  source:
+    id: Unit
+    path: ''
+    startLine: 13306
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.Types
+  syntax:
+    content: public DoseValue.DoseUnit Unit { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.Types.DoseValue.DoseUnit
+    content.vb: Public Property Unit As DoseValue.DoseUnit
+  overload: ESAPIX.Facade.Types.DoseProfile.Unit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ESAPIX.Facade.Types
+  commentId: N:ESAPIX.Facade.Types
+  isExternal: false
+  name: ESAPIX.Facade.Types
+  nameWithType: ESAPIX.Facade.Types
+  fullName: ESAPIX.Facade.Types
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ESAPIX.Facade.Types.LineProfile
+  commentId: T:ESAPIX.Facade.Types.LineProfile
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: LineProfile
+  nameWithType: LineProfile
+  fullName: ESAPIX.Facade.Types.LineProfile
+- uid: ESAPIX.Facade.Types.LineProfile.Item
+  commentId: P:ESAPIX.Facade.Types.LineProfile.Item
+  parent: ESAPIX.Facade.Types.LineProfile
+  isExternal: false
+  name: Item
+  nameWithType: LineProfile.Item
+  fullName: ESAPIX.Facade.Types.LineProfile.Item
+- uid: ESAPIX.Facade.Types.LineProfile.Count
+  commentId: P:ESAPIX.Facade.Types.LineProfile.Count
+  parent: ESAPIX.Facade.Types.LineProfile
+  isExternal: false
+  name: Count
+  nameWithType: LineProfile.Count
+  fullName: ESAPIX.Facade.Types.LineProfile.Count
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.Types.DoseProfile.#ctor*
+  commentId: Overload:ESAPIX.Facade.Types.DoseProfile.#ctor
+  isExternal: false
+  name: DoseProfile
+  nameWithType: DoseProfile.DoseProfile
+  fullName: ESAPIX.Facade.Types.DoseProfile.DoseProfile
+- uid: ESAPIX.Facade.Types.VVector
+  commentId: T:ESAPIX.Facade.Types.VVector
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: VVector
+  nameWithType: VVector
+  fullName: ESAPIX.Facade.Types.VVector
+- uid: System.Double[]
+  name: Double[]
+  nameWithType: Double[]
+  fullName: System.Double[]
+  nameWithType.vb: Double()
+  fullName.vb: System.Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: ESAPIX.Facade.Types.DoseValue.DoseUnit
+  commentId: T:ESAPIX.Facade.Types.DoseValue.DoseUnit
+  parent: ESAPIX.Facade.Types
+  isExternal: false
+  name: DoseValue.DoseUnit
+  nameWithType: DoseValue.DoseUnit
+  fullName: ESAPIX.Facade.Types.DoseValue.DoseUnit
+- uid: ESAPIX.Facade.Types.DoseProfile.Unit*
+  commentId: Overload:ESAPIX.Facade.Types.DoseProfile.Unit
+  isExternal: false
+  name: Unit
+  nameWithType: DoseProfile.Unit
+  fullName: ESAPIX.Facade.Types.DoseProfile.Unit

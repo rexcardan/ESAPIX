@@ -1,0 +1,396 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1
+  commentId: T:ESAPIX.AppKit.ScriptBootstrapper`1
+  id: ScriptBootstrapper`1
+  parent: ESAPIX.AppKit
+  children:
+  - ESAPIX.AppKit.ScriptBootstrapper`1.#ctor(ESAPIX.AppKit.PluginContext,DispatcherFrame)
+  - ESAPIX.AppKit.ScriptBootstrapper`1._vmsWindow
+  - ESAPIX.AppKit.ScriptBootstrapper`1.ConfigureContainer
+  - ESAPIX.AppKit.ScriptBootstrapper`1.CreateShell
+  - ESAPIX.AppKit.ScriptBootstrapper`1.InitializeShell
+  - ESAPIX.AppKit.ScriptBootstrapper`1.Run(System.Func{Window})
+  langs:
+  - csharp
+  - vb
+  name: ScriptBootstrapper<T>
+  nameWithType: ScriptBootstrapper<T>
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>
+  type: Class
+  source:
+    id: ScriptBootstrapper
+    path: ''
+    startLine: 295
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: 'public class ScriptBootstrapper<T> : UnityBootstrapper where T : Window'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class ScriptBootstrapper(Of T As Window)
+          Inherits UnityBootstrapper
+  inheritance:
+  - System.Object
+  nameWithType.vb: ScriptBootstrapper(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T)
+  name.vb: ScriptBootstrapper(Of T)
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1._vmsWindow
+  commentId: F:ESAPIX.AppKit.ScriptBootstrapper`1._vmsWindow
+  id: _vmsWindow
+  parent: ESAPIX.AppKit.ScriptBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: _vmsWindow
+  nameWithType: ScriptBootstrapper<T>._vmsWindow
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>._vmsWindow
+  type: Field
+  source:
+    id: _vmsWindow
+    path: ''
+    startLine: 297
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public Window _vmsWindow
+    return:
+      type: Window
+    content.vb: Public _vmsWindow As Window
+  nameWithType.vb: ScriptBootstrapper(Of T)._vmsWindow
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T)._vmsWindow
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.#ctor(ESAPIX.AppKit.PluginContext,DispatcherFrame)
+  commentId: M:ESAPIX.AppKit.ScriptBootstrapper`1.#ctor(ESAPIX.AppKit.PluginContext,DispatcherFrame)
+  id: '#ctor(ESAPIX.AppKit.PluginContext,DispatcherFrame)'
+  parent: ESAPIX.AppKit.ScriptBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: ScriptBootstrapper(PluginContext, DispatcherFrame)
+  nameWithType: ScriptBootstrapper<T>.ScriptBootstrapper(PluginContext, DispatcherFrame)
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.ScriptBootstrapper(ESAPIX.AppKit.PluginContext, DispatcherFrame)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 304
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public ScriptBootstrapper(PluginContext ctx, DispatcherFrame frame)
+    parameters:
+    - id: ctx
+      type: ESAPIX.AppKit.PluginContext
+    - id: frame
+      type: DispatcherFrame
+    content.vb: Public Sub New(ctx As PluginContext, frame As DispatcherFrame)
+  overload: ESAPIX.AppKit.ScriptBootstrapper`1.#ctor*
+  nameWithType.vb: ScriptBootstrapper(Of T).ScriptBootstrapper(PluginContext, DispatcherFrame)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).ScriptBootstrapper(ESAPIX.AppKit.PluginContext, DispatcherFrame)
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.CreateShell
+  commentId: M:ESAPIX.AppKit.ScriptBootstrapper`1.CreateShell
+  id: CreateShell
+  parent: ESAPIX.AppKit.ScriptBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: CreateShell()
+  nameWithType: ScriptBootstrapper<T>.CreateShell()
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.CreateShell()
+  type: Method
+  source:
+    id: CreateShell
+    path: ''
+    startLine: 312
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: protected override DependencyObject CreateShell()
+    return:
+      type: DependencyObject
+    content.vb: Protected Overrides Function CreateShell As DependencyObject
+  overload: ESAPIX.AppKit.ScriptBootstrapper`1.CreateShell*
+  nameWithType.vb: ScriptBootstrapper(Of T).CreateShell()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).CreateShell()
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.ConfigureContainer
+  commentId: M:ESAPIX.AppKit.ScriptBootstrapper`1.ConfigureContainer
+  id: ConfigureContainer
+  parent: ESAPIX.AppKit.ScriptBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: ConfigureContainer()
+  nameWithType: ScriptBootstrapper<T>.ConfigureContainer()
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.ConfigureContainer()
+  type: Method
+  source:
+    id: ConfigureContainer
+    path: ''
+    startLine: 317
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: protected override void ConfigureContainer()
+    content.vb: Protected Overrides Sub ConfigureContainer
+  overload: ESAPIX.AppKit.ScriptBootstrapper`1.ConfigureContainer*
+  nameWithType.vb: ScriptBootstrapper(Of T).ConfigureContainer()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).ConfigureContainer()
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.InitializeShell
+  commentId: M:ESAPIX.AppKit.ScriptBootstrapper`1.InitializeShell
+  id: InitializeShell
+  parent: ESAPIX.AppKit.ScriptBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: InitializeShell()
+  nameWithType: ScriptBootstrapper<T>.InitializeShell()
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.InitializeShell()
+  type: Method
+  source:
+    id: InitializeShell
+    path: ''
+    startLine: 325
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: protected override void InitializeShell()
+    content.vb: Protected Overrides Sub InitializeShell
+  overload: ESAPIX.AppKit.ScriptBootstrapper`1.InitializeShell*
+  nameWithType.vb: ScriptBootstrapper(Of T).InitializeShell()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).InitializeShell()
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.Run(System.Func{Window})
+  commentId: M:ESAPIX.AppKit.ScriptBootstrapper`1.Run(System.Func{Window})
+  id: Run(System.Func{Window})
+  parent: ESAPIX.AppKit.ScriptBootstrapper`1
+  langs:
+  - csharp
+  - vb
+  name: Run(Func<Window>)
+  nameWithType: ScriptBootstrapper<T>.Run(Func<Window>)
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.Run(System.Func<Window>)
+  type: Method
+  source:
+    id: Run
+    path: ''
+    startLine: 332
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public void Run(Func<Window> getSplash = null)
+    parameters:
+    - id: getSplash
+      type: System.Func{Window}
+    content.vb: Public Sub Run(getSplash As Func(Of Window) = Nothing)
+  overload: ESAPIX.AppKit.ScriptBootstrapper`1.Run*
+  nameWithType.vb: ScriptBootstrapper(Of T).Run(Func(Of Window))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).Run(System.Func(Of Window))
+  name.vb: Run(Func(Of Window))
+references:
+- uid: ESAPIX.AppKit
+  commentId: N:ESAPIX.AppKit
+  isExternal: false
+  name: ESAPIX.AppKit
+  nameWithType: ESAPIX.AppKit
+  fullName: ESAPIX.AppKit
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Window
+  isExternal: true
+  name: Window
+  nameWithType: Window
+  fullName: Window
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.#ctor*
+  commentId: Overload:ESAPIX.AppKit.ScriptBootstrapper`1.#ctor
+  isExternal: false
+  name: ScriptBootstrapper
+  nameWithType: ScriptBootstrapper<T>.ScriptBootstrapper
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.ScriptBootstrapper
+  nameWithType.vb: ScriptBootstrapper(Of T).ScriptBootstrapper
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).ScriptBootstrapper
+- uid: ESAPIX.AppKit.PluginContext
+  commentId: T:ESAPIX.AppKit.PluginContext
+  parent: ESAPIX.AppKit
+  isExternal: false
+  name: PluginContext
+  nameWithType: PluginContext
+  fullName: ESAPIX.AppKit.PluginContext
+- uid: DispatcherFrame
+  isExternal: true
+  name: DispatcherFrame
+  nameWithType: DispatcherFrame
+  fullName: DispatcherFrame
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.CreateShell*
+  commentId: Overload:ESAPIX.AppKit.ScriptBootstrapper`1.CreateShell
+  isExternal: false
+  name: CreateShell
+  nameWithType: ScriptBootstrapper<T>.CreateShell
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.CreateShell
+  nameWithType.vb: ScriptBootstrapper(Of T).CreateShell
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).CreateShell
+- uid: DependencyObject
+  isExternal: true
+  name: DependencyObject
+  nameWithType: DependencyObject
+  fullName: DependencyObject
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.ConfigureContainer*
+  commentId: Overload:ESAPIX.AppKit.ScriptBootstrapper`1.ConfigureContainer
+  isExternal: false
+  name: ConfigureContainer
+  nameWithType: ScriptBootstrapper<T>.ConfigureContainer
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.ConfigureContainer
+  nameWithType.vb: ScriptBootstrapper(Of T).ConfigureContainer
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).ConfigureContainer
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.InitializeShell*
+  commentId: Overload:ESAPIX.AppKit.ScriptBootstrapper`1.InitializeShell
+  isExternal: false
+  name: InitializeShell
+  nameWithType: ScriptBootstrapper<T>.InitializeShell
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.InitializeShell
+  nameWithType.vb: ScriptBootstrapper(Of T).InitializeShell
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).InitializeShell
+- uid: ESAPIX.AppKit.ScriptBootstrapper`1.Run*
+  commentId: Overload:ESAPIX.AppKit.ScriptBootstrapper`1.Run
+  isExternal: false
+  name: Run
+  nameWithType: ScriptBootstrapper<T>.Run
+  fullName: ESAPIX.AppKit.ScriptBootstrapper<T>.Run
+  nameWithType.vb: ScriptBootstrapper(Of T).Run
+  fullName.vb: ESAPIX.AppKit.ScriptBootstrapper(Of T).Run
+- uid: System.Func{Window}
+  commentId: T:System.Func{Window}
+  parent: System
+  definition: System.Func`1
+  name: Func<Window>
+  nameWithType: Func<Window>
+  fullName: System.Func<Window>
+  nameWithType.vb: Func(Of Window)
+  fullName.vb: System.Func(Of Window)
+  name.vb: Func(Of Window)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Window
+    name: Window
+    nameWithType: Window
+    fullName: Window
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Window
+    name: Window
+    nameWithType: Window
+    fullName: Window
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,960 @@
+### YamlMime:ManagedReference
+items:
+- uid: ESAPIX.Facade.StaticHelper
+  commentId: T:ESAPIX.Facade.StaticHelper
+  id: StaticHelper
+  parent: ESAPIX.Facade
+  children:
+  - ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String)
+  - ESAPIX.Facade.StaticHelper.CreateApplicationFunc
+  - ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
+  - ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  - ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
+  - ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  - ESAPIX.Facade.StaticHelper.VVector_Distance(System.Object,System.Object)
+  - ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  langs:
+  - csharp
+  - vb
+  name: StaticHelper
+  nameWithType: StaticHelper
+  fullName: ESAPIX.Facade.StaticHelper
+  type: Class
+  source:
+    id: StaticHelper
+    path: ''
+    startLine: 4351
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public class StaticHelper
+    content.vb: Public Class StaticHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ESAPIX.Facade.StaticHelper.CreateApplicationFunc
+  commentId: P:ESAPIX.Facade.StaticHelper.CreateApplicationFunc
+  id: CreateApplicationFunc
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: CreateApplicationFunc
+  nameWithType: StaticHelper.CreateApplicationFunc
+  fullName: ESAPIX.Facade.StaticHelper.CreateApplicationFunc
+  type: Property
+  source:
+    id: CreateApplicationFunc
+    path: ''
+    startLine: 4354
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Func<string, string, dynamic> CreateApplicationFunc { get; set; }
+    parameters: []
+    return:
+      type: System.Func{System.String,System.String,System.Object}
+    content.vb: Public Shared Property CreateApplicationFunc As Func(Of String, String, Object)
+  overload: ESAPIX.Facade.StaticHelper.CreateApplicationFunc*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String)
+  commentId: M:ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String)
+  id: Application_CreateApplication(System.String,System.String)
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: Application_CreateApplication(String, String)
+  nameWithType: StaticHelper.Application_CreateApplication(String, String)
+  fullName: ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String, System.String)
+  type: Method
+  source:
+    id: Application_CreateApplication
+    path: ''
+    startLine: 4355
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Application Application_CreateApplication(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: Application
+    content.vb: Public Shared Function Application_CreateApplication(username As String, password As String) As Application
+  overload: ESAPIX.Facade.StaticHelper.Application_CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  commentId: P:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  id: SerializableObject_ClearSerializationHistoryAction
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: SerializableObject_ClearSerializationHistoryAction
+  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  type: Property
+  source:
+    id: SerializableObject_ClearSerializationHistoryAction
+    path: ''
+    startLine: 4369
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Shared Property SerializableObject_ClearSerializationHistoryAction As Action
+  overload: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
+  commentId: M:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
+  id: SerializableObject_ClearSerializationHistory
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: SerializableObject_ClearSerializationHistory()
+  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistory()
+  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory()
+  type: Method
+  source:
+    id: SerializableObject_ClearSerializationHistory
+    path: ''
+    startLine: 4370
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static void SerializableObject_ClearSerializationHistory()
+    content.vb: Public Shared Sub SerializableObject_ClearSerializationHistory
+  overload: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  commentId: P:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  id: DoseValue_UndefinedDoseFunc
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: DoseValue_UndefinedDoseFunc
+  nameWithType: StaticHelper.DoseValue_UndefinedDoseFunc
+  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  type: Property
+  source:
+    id: DoseValue_UndefinedDoseFunc
+    path: ''
+    startLine: 4379
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Func<dynamic> DoseValue_UndefinedDoseFunc { get; set; }
+    parameters: []
+    return:
+      type: System.Func{System.Object}
+    content.vb: Public Shared Property DoseValue_UndefinedDoseFunc As Func(Of Object)
+  overload: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
+  commentId: M:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
+  id: DoseValue_UndefinedDose
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: DoseValue_UndefinedDose()
+  nameWithType: StaticHelper.DoseValue_UndefinedDose()
+  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose()
+  type: Method
+  source:
+    id: DoseValue_UndefinedDose
+    path: ''
+    startLine: 4380
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static DoseValue DoseValue_UndefinedDose()
+    return:
+      type: DoseValue
+    content.vb: Public Shared Function DoseValue_UndefinedDose As DoseValue
+  overload: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  commentId: P:ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  id: VVector_DistanceFunc
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: VVector_DistanceFunc
+  nameWithType: StaticHelper.VVector_DistanceFunc
+  fullName: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  type: Property
+  source:
+    id: VVector_DistanceFunc
+    path: ''
+    startLine: 4388
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; }
+    parameters: []
+    return:
+      type: System.Func{System.Object,System.Object,System.Double}
+    content.vb: Public Shared Property VVector_DistanceFunc As Func(Of Object, Object, Double)
+  overload: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.VVector_Distance(System.Object,System.Object)
+  commentId: M:ESAPIX.Facade.StaticHelper.VVector_Distance(System.Object,System.Object)
+  id: VVector_Distance(System.Object,System.Object)
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: VVector_Distance(Object, Object)
+  nameWithType: StaticHelper.VVector_Distance(Object, Object)
+  fullName: ESAPIX.Facade.StaticHelper.VVector_Distance(System.Object, System.Object)
+  type: Method
+  source:
+    id: VVector_Distance
+    path: ''
+    startLine: 4389
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static double VVector_Distance(dynamic client1, dynamic client2)
+    parameters:
+    - id: client1
+      type: System.Object
+    - id: client2
+      type: System.Object
+    return:
+      type: System.Double
+    content.vb: Public Shared Function VVector_Distance(client1 As Object, client2 As Object) As Double
+  overload: ESAPIX.Facade.StaticHelper.VVector_Distance*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: ESAPIX.Facade
+  commentId: N:ESAPIX.Facade
+  isExternal: false
+  name: ESAPIX.Facade
+  nameWithType: ESAPIX.Facade
+  fullName: ESAPIX.Facade
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ESAPIX.Facade.StaticHelper.CreateApplicationFunc*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.CreateApplicationFunc
+  isExternal: false
+  name: CreateApplicationFunc
+  nameWithType: StaticHelper.CreateApplicationFunc
+  fullName: ESAPIX.Facade.StaticHelper.CreateApplicationFunc
+- uid: System.Func{System.String,System.String,System.Object}
+  commentId: T:System.Func{System.String,System.String,System.Object}
+  parent: System
+  definition: System.Func`3
+  name: Func<String, String, Object>
+  nameWithType: Func<String, String, Object>
+  fullName: System.Func<System.String, System.String, System.Object>
+  nameWithType.vb: Func(Of String, String, )
+  fullName.vb: System.Func(Of System.String, System.String, )
+  name.vb: Func(Of String, String, )
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.StaticHelper.Application_CreateApplication*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.Application_CreateApplication
+  isExternal: false
+  name: Application_CreateApplication
+  nameWithType: StaticHelper.Application_CreateApplication
+  fullName: ESAPIX.Facade.StaticHelper.Application_CreateApplication
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Application
+  isExternal: true
+  name: Application
+  nameWithType: Application
+  fullName: Application
+- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  isExternal: false
+  name: SerializableObject_ClearSerializationHistoryAction
+  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
+  isExternal: false
+  name: SerializableObject_ClearSerializationHistory
+  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistory
+  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
+- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  isExternal: false
+  name: DoseValue_UndefinedDoseFunc
+  nameWithType: StaticHelper.DoseValue_UndefinedDoseFunc
+  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+- uid: System.Func{System.Object}
+  commentId: T:System.Func{System.Object}
+  parent: System
+  definition: System.Func`1
+  name: Func<Object>
+  nameWithType: Func<Object>
+  fullName: System.Func<System.Object>
+  nameWithType.vb: Func(Of )
+  fullName.vb: System.Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
+  isExternal: false
+  name: DoseValue_UndefinedDose
+  nameWithType: StaticHelper.DoseValue_UndefinedDose
+  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
+- uid: DoseValue
+  isExternal: true
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: DoseValue
+- uid: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  isExternal: false
+  name: VVector_DistanceFunc
+  nameWithType: StaticHelper.VVector_DistanceFunc
+  fullName: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+- uid: System.Func{System.Object,System.Object,System.Double}
+  commentId: T:System.Func{System.Object,System.Object,System.Double}
+  parent: System
+  definition: System.Func`3
+  name: Func<Object, Object, Double>
+  nameWithType: Func<Object, Object, Double>
+  fullName: System.Func<System.Object, System.Object, System.Double>
+  nameWithType.vb: Func(Of , , Double)
+  fullName.vb: System.Func(Of , , System.Double)
+  name.vb: Func(Of , , Double)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.StaticHelper.VVector_Distance*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.VVector_Distance
+  isExternal: false
+  name: VVector_Distance
+  nameWithType: StaticHelper.VVector_Distance
+  fullName: ESAPIX.Facade.StaticHelper.VVector_Distance
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
