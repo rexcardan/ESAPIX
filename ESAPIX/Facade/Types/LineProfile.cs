@@ -12,7 +12,18 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public LineProfile() { _client = new ExpandoObject(); }
         public LineProfile(dynamic client) { _client = client; }
-        public LineProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructLineProfile(origin, step, data); }); }
+        public LineProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructLineProfile(origin, step, data); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Origin = origin;
+                _client.Step = step;
+                _client.Data = data;
+            }
+        }
         public ESAPIX.Facade.Types.ProfilePoint Item
         {
             get

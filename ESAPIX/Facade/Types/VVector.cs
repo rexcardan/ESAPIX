@@ -12,7 +12,18 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public VVector() { _client = new ExpandoObject(); }
         public VVector(dynamic client) { _client = client; }
-        public VVector(System.Double xi, System.Double yi, System.Double zi) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructVVector(xi, yi, zi); }); }
+        public VVector(System.Double xi, System.Double yi, System.Double zi)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructVVector(xi, yi, zi); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.x = xi;
+                _client.y = yi;
+                _client.z = zi;
+            }
+        }
         public System.Double Item
         {
             get

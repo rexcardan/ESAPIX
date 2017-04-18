@@ -12,7 +12,18 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public ScriptContext() { _client = new ExpandoObject(); }
         public ScriptContext(dynamic client) { _client = client; }
-        public ScriptContext(System.Object context, System.Object user, System.String appName) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructScriptContext(context, user, appName); }); }
+        public ScriptContext(System.Object context, System.Object user, System.String appName)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructScriptContext(context, user, appName); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Context = context;
+                _client.User = user;
+                _client.AppName = appName;
+            }
+        }
         public ESAPIX.Facade.API.User CurrentUser
         {
             get

@@ -11,7 +11,19 @@ namespace ESAPIX.Facade.Types
     {
         public DoseProfile() { _client = new ExpandoObject(); }
         public DoseProfile(dynamic client) { _client = client; }
-        public DoseProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data, ESAPIX.Facade.Types.DoseValue.DoseUnit unit) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseProfile(origin, step, data, unit); }); }
+        public DoseProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data, ESAPIX.Facade.Types.DoseValue.DoseUnit unit)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseProfile(origin, step, data, unit); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Origin = origin;
+                _client.Step = step;
+                _client.Data = data;
+                _client.Unit = unit;
+            }
+        }
         public ESAPIX.Facade.Types.DoseValue.DoseUnit Unit
         {
             get

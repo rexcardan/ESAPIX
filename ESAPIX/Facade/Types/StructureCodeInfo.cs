@@ -12,7 +12,17 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public StructureCodeInfo() { _client = new ExpandoObject(); }
         public StructureCodeInfo(dynamic client) { _client = client; }
-        public StructureCodeInfo(System.String codingScheme, System.String code) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructStructureCodeInfo(codingScheme, code); }); }
+        public StructureCodeInfo(System.String codingScheme, System.String code)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructStructureCodeInfo(codingScheme, code); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.CodingScheme = codingScheme;
+                _client.Code = code;
+            }
+        }
         public System.String CodingScheme
         {
             get

@@ -11,11 +11,62 @@ namespace ESAPIX.Facade.Types
     {
         public OptimizationOptionsVMAT() { _client = new ExpandoObject(); }
         public OptimizationOptionsVMAT(dynamic client) { _client = client; }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOption startOption, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, mlcId); }); }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(intermediateDoseOption, mlcId); }); }
-        public OptimizationOptionsVMAT(System.Int32 numberOfCycles, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(numberOfCycles, mlcId); }); }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOption startOption, ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.Int32 numberOfCycles, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, intermediateDoseOption, numberOfCycles, mlcId); }); }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT options) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(options); }); }
+        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOption startOption, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.StartOption = startOption;
+                _client.MlcId = mlcId;
+            }
+        }
+        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(intermediateDoseOption, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.IntermediateDoseOption = intermediateDoseOption;
+                _client.MlcId = mlcId;
+            }
+        }
+        public OptimizationOptionsVMAT(System.Int32 numberOfCycles, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(numberOfCycles, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.NumberOfCycles = numberOfCycles;
+                _client.MlcId = mlcId;
+            }
+        }
+        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOption startOption, ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.Int32 numberOfCycles, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, intermediateDoseOption, numberOfCycles, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.StartOption = startOption;
+                _client.IntermediateDoseOption = intermediateDoseOption;
+                _client.NumberOfCycles = numberOfCycles;
+                _client.MlcId = mlcId;
+            }
+        }
+        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT options)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(options); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Options = options;
+            }
+        }
         public System.Int32 NumberOfOptimizationCycles
         {
             get

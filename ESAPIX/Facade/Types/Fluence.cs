@@ -12,8 +12,31 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public Fluence() { _client = new ExpandoObject(); }
         public Fluence(dynamic client) { _client = client; }
-        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin); }); }
-        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin, mlcId); }); }
+        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.FluenceMatrix = fluenceMatrix;
+                _client.XOrigin = xOrigin;
+                _client.YOrigin = yOrigin;
+            }
+        }
+        public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.FluenceMatrix = fluenceMatrix;
+                _client.XOrigin = xOrigin;
+                _client.YOrigin = yOrigin;
+                _client.MlcId = mlcId;
+            }
+        }
         public System.Int32 XSizePixel
         {
             get

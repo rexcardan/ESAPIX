@@ -12,7 +12,18 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public DVHPoint() { _client = new ExpandoObject(); }
         public DVHPoint(dynamic client) { _client = client; }
-        public DVHPoint(ESAPIX.Facade.Types.DoseValue dose, System.Double volume, System.String volumeUnit) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDVHPoint(dose, volume, volumeUnit); }); }
+        public DVHPoint(ESAPIX.Facade.Types.DoseValue dose, System.Double volume, System.String volumeUnit)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDVHPoint(dose, volume, volumeUnit); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Dose = dose;
+                _client.Volume = volume;
+                _client.VolumeUnit = volumeUnit;
+            }
+        }
         public ESAPIX.Facade.Types.DoseValue DoseValue
         {
             get

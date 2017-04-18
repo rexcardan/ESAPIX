@@ -12,7 +12,16 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public LMCVOptions() { _client = new ExpandoObject(); }
         public LMCVOptions(dynamic client) { _client = client; }
-        public LMCVOptions(System.Boolean fixedJaws) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructLMCVOptions(fixedJaws); }); }
+        public LMCVOptions(System.Boolean fixedJaws)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructLMCVOptions(fixedJaws); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.FixedJaws = fixedJaws;
+            }
+        }
         public System.Boolean FixedJaws
         {
             get

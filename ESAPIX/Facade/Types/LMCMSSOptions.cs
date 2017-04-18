@@ -12,7 +12,16 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public LMCMSSOptions() { _client = new ExpandoObject(); }
         public LMCMSSOptions(dynamic client) { _client = client; }
-        public LMCMSSOptions(System.Int32 numberOfIterations) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructLMCMSSOptions(numberOfIterations); }); }
+        public LMCMSSOptions(System.Int32 numberOfIterations)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructLMCMSSOptions(numberOfIterations); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.NumberOfIterations = numberOfIterations;
+            }
+        }
         public System.Int32 NumberOfIterations
         {
             get

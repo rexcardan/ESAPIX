@@ -12,7 +12,19 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public VRect() { _client = new ExpandoObject(); }
         public VRect(dynamic client) { _client = client; }
-        public VRect(T x1, T y1, T x2, T y2) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructVRect(x1, y1, x2, y2); }); }
+        public VRect(T x1, T y1, T x2, T y2)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructVRect(x1, y1, x2, y2); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.X1 = x1;
+                _client.Y1 = y1;
+                _client.X2 = x2;
+                _client.Y2 = y2;
+            }
+        }
         public T X1
         {
             get

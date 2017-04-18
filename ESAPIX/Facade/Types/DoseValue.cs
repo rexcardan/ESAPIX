@@ -12,8 +12,30 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public DoseValue() { _client = new ExpandoObject(); }
         public DoseValue(dynamic client) { _client = client; }
-        public DoseValue(System.Double value, System.String unitName) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unitName); }); }
-        public DoseValue(System.Double value, ESAPIX.Facade.Types.DoseValue.DoseUnit unit) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unit); }); }
+        public DoseValue(System.Double value, System.String unitName)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unitName); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Dose = value;
+                DoseUnit unit = DoseUnit.Unknown;
+                Enum.TryParse(unitName, out unit);
+                _client.Unit = unit;
+            }
+        }
+        public DoseValue(System.Double value, ESAPIX.Facade.Types.DoseValue.DoseUnit unit)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unit); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Dose = value;
+                _client.Unit = unit;
+            }
+        }
         public System.Double Dose
         {
             get

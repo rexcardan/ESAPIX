@@ -12,7 +12,17 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public MetersetValue() { _client = new ExpandoObject(); }
         public MetersetValue(dynamic client) { _client = client; }
-        public MetersetValue(System.Double value, ESAPIX.Facade.Types.DosimeterUnit unit) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructMetersetValue(value, unit); }); }
+        public MetersetValue(System.Double value, ESAPIX.Facade.Types.DosimeterUnit unit)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructMetersetValue(value, unit); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.Value = value;
+                _client.Unit = unit;
+            }
+        }
         public System.Double Value
         {
             get

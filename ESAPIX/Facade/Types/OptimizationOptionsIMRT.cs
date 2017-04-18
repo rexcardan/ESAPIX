@@ -11,9 +11,47 @@ namespace ESAPIX.Facade.Types
     {
         public OptimizationOptionsIMRT() { _client = new ExpandoObject(); }
         public OptimizationOptionsIMRT(dynamic client) { _client = client; }
-        public OptimizationOptionsIMRT(System.Int32 maxIterations, ESAPIX.Facade.Types.OptimizationOption initialState, System.Int32 numberOfStepsBeforeIntermediateDose, ESAPIX.Facade.Types.OptimizationConvergenceOption convergenceOption, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState, numberOfStepsBeforeIntermediateDose, convergenceOption, mlcId); }); }
-        public OptimizationOptionsIMRT(System.Int32 maxIterations, ESAPIX.Facade.Types.OptimizationOption initialState, ESAPIX.Facade.Types.OptimizationConvergenceOption convergenceOption, ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState, convergenceOption, intermediateDoseOption, mlcId); }); }
-        public OptimizationOptionsIMRT(System.Int32 maxIterations, ESAPIX.Facade.Types.OptimizationOption initialState, ESAPIX.Facade.Types.OptimizationConvergenceOption convergenceOption, System.String mlcId) { X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState, convergenceOption, mlcId); }); }
+        public OptimizationOptionsIMRT(System.Int32 maxIterations, ESAPIX.Facade.Types.OptimizationOption initialState, System.Int32 numberOfStepsBeforeIntermediateDose, ESAPIX.Facade.Types.OptimizationConvergenceOption convergenceOption, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState, numberOfStepsBeforeIntermediateDose, convergenceOption, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.MaxIterations = maxIterations;
+                _client.InitialState = initialState;
+                _client.NumberOfStepsBeforeIntermediateDose = numberOfStepsBeforeIntermediateDose;
+                _client.ConvergenceOption = convergenceOption;
+                _client.MlcId = mlcId;
+            }
+        }
+        public OptimizationOptionsIMRT(System.Int32 maxIterations, ESAPIX.Facade.Types.OptimizationOption initialState, ESAPIX.Facade.Types.OptimizationConvergenceOption convergenceOption, ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState, convergenceOption, intermediateDoseOption, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.MaxIterations = maxIterations;
+                _client.InitialState = initialState;
+                _client.ConvergenceOption = convergenceOption;
+                _client.IntermediateDoseOption = intermediateDoseOption;
+                _client.MlcId = mlcId;
+            }
+        }
+        public OptimizationOptionsIMRT(System.Int32 maxIterations, ESAPIX.Facade.Types.OptimizationOption initialState, ESAPIX.Facade.Types.OptimizationConvergenceOption convergenceOption, System.String mlcId)
+        {
+            if (X.Instance.CurrentContext != null)
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState, convergenceOption, mlcId); });
+            else
+            {
+                _client = new ExpandoObject();
+                _client.MaxIterations = maxIterations;
+                _client.InitialState = initialState;
+                _client.ConvergenceOption = convergenceOption;
+                _client.MlcId = mlcId;
+            }
+        }
         public ESAPIX.Facade.Types.OptimizationConvergenceOption ConvergenceOption
         {
             get
