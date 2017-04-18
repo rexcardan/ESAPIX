@@ -13,7 +13,7 @@ namespace ESAPIX.Bootstrapper
 {
     public class FacadeInitializer
     {
-        public void Initialize()
+        public static void Initialize()
         {
             //DO STATIC METHOD MAPS
             StaticHelper.CreateApplicationFunc = new Func<string, string, dynamic>((user, pw) =>
