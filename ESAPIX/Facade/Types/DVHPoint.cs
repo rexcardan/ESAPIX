@@ -19,7 +19,7 @@ namespace ESAPIX.Facade.Types
             else
             {
                 _client = new ExpandoObject();
-                _client.Dose = dose;
+                _client.DoseValue = dose;
                 _client.Volume = volume;
                 _client.VolumeUnit = volumeUnit;
             }

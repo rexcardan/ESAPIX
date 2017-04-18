@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VMS.TPS.Common.Model.API;
+using ESAPIX.Facade.API;
 using ESAPIX.DVH.Query;
-using VMS.TPS.Common.Model.Types;
+using ESAPIX.Facade.Types;
 
 namespace ESAPIX.Extensions.Tests
 {

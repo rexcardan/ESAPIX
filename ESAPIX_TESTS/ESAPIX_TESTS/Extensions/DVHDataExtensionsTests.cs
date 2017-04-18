@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VMS.TPS.Common.Model.Types;
-using static VMS.TPS.Common.Model.Types.DoseValue.DoseUnit;
+using ESAPIX.Facade.Types;
+using static ESAPIX.Facade.Types.DoseValue.DoseUnit;
 
 namespace ESAPIX.Extensions.Tests
 {
