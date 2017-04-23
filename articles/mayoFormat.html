@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ESAPIX Facades </title>
+    <title>Mayo Format and Querying </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="ESAPIX Facades ">
+    <meta name="title" content="Mayo Format and Querying ">
     <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -63,40 +63,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="facades.md">
-              <a href="https://github.com/rexcardan/ESAPIX/blob/master/DocFX/articles/facades.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
-              <h1 id="facades-with-esapix">Facades with ESAPIX</h1>
+            <article class="content wrap" id="_content" data-uid="mayoFormat.md">
+              <a href="https://github.com/rexcardan/ESAPIX/blob/master/DocFX/articles/mayoFormat.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="mayo-format-and-querying-dvh-metrics">Mayo Format and Querying DVH Metrics</h1>
               
-<h2 id="why-use-facades">Why Use Facades</h2>
-<p>Facades provide a layer in between you and Varian dlls. This has three main advantages:</p>
-<h3 id="offline-development">Offline development</h3>
-<p>You can quickly and easily develop with a quick reference to ESAPIX using NuGet. Take it on the road and don&#39;t worry about access to VMS systems for testing out ideas. Then, when you are ready, you can connect to the Varian architecture and run it without any code changes.</p>
-<h3 id="unit-testing">Unit Testing</h3>
-<p>You can easily develop unit tests on any VMS equivalent class using the default MSTest suite. Now you can build a robust suite of tests to make sure your application is running smooth after every build.</p>
-<pre><code class="lang-cs">        [TestMethod()]
-        public void IsValidNameTestFail()
-        {
-            //You can&#39;t do this with VMS
-            var ps = new PlanSetup();
-            //Can&#39;t set this either
-            ps.Id = &quot;P0Prostate&quot;; //Should fail
-            Assert.IsFalse(NameChecker.IsValidName(ps));
-        }
-</code></pre><blockquote><p>The above method shows testing a class <em>NameChecker</em> for the method <em>IsValidName</em> which takes a PlanSetup object as an input and presumably makes sure the name is compliant with set standards. </p>
-</blockquote>
-<h3 id="async-await-multithreading-support">Async Await Multithreading Support</h3>
-<p>You don&#39;t even have to think about threads anymore. Just grab the data and work with it however you want. ESAPIX Facades take care of all of the plumbing and threading work behind the scenes. It&#39;s like magic.</p>
-<pre><code class="lang-cs">        private async static void GetPatientAsync(Application app)
-        {
-            //Try doing this without ESAPIX (eg. crash application)
-            var pat = await Task.Run(() =&gt;
-            {
-                return app.OpenPatientById(&quot;PHYSX_C3_DLG6X&quot;);
-            });
+<h2 id="examples-needed">Examples Needed</h2>
 
-            Console.WriteLine($&quot;{pat.Id} : {pat.LastName}, {pat.FirstName}&quot;);
-        }
-</code></pre>
             </article>
           </div>
           

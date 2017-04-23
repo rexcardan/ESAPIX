@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Basic Operations </title>
+    <title>Extension Methods </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Basic Operations ">
+    <meta name="title" content="Extension Methods ">
     <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -61,24 +61,26 @@
               
               <center><img src="images/esapixLogo.jpg" alt="Logo" title="ESAPIX Logo"></center>
 
-<p>Welcome to the ESAPIX library homepage. Kick start your Eclipse Scripting with a powerful, open source library.</p>
-<h2 id="basic-operations">Basic Operations</h2>
-<h3 id="reading-and-writing">Reading and Writing</h3>
-<pre><code class="lang-csharp">var dcm = DICOMObject.Read(@&quot;MyDICOMFile.dcm&quot;);
-
-//You can also read from bytes (eg. a stream)
-var dBytes = File.ReadAllBytes(@&quot;MyDICOMFile.dcm&quot;);
-var dcm = DICOMObject.Read(dBytes);
-
-//***COOL CODE GOES HERE***
-
-//Writing is equally easy
-dcm.SaveAs(&quot;MyHackedDICOMFile.dcm&quot;);
-</code></pre><h3 id="see-also">See Also</h3>
+<p>Welcome to the ESAPIX library homepage. Kick start your Eclipse Scripting with a powerful, open source library. It provides:</p>
+<h2 id="extension-methods">Extension Methods</h2>
+<p>There are several extension methods available for VMS equivalent classes. Check out <a href="https://github.com/rexcardan/ESAPIX/tree/master/ESAPIX/Extensions">ESAPIX.Extensions</a> namespace to do stuff like this:</p>
+<pre><code class="lang-cs">            var plan = patient.Courses
+                .SelectMany(c =&gt; c.PlanSetups) //Get all plans from all courses
+                .FirstOrDefault(p =&gt; p.Id.Contains(&quot;Prostate&quot;)); //Find first that has the work prostate in it
+            var prostate = plan.StructureSet.Structures.FirstOrDefault(s =&gt; s.Id == &quot;Prostate&quot;);
+            //Cool. That was easy
+            var v50Gy = plan.ExecuteQuery(prostate, &quot;V50Gy[cc]&quot;);
+</code></pre><h2 id="facades">Facades</h2>
+<p>Facades are wrappers around the Varian classes which smooth out rough edges for unit testing and multithreaded access. Best of all, you won&#39;t even realize you are using them.
+Checkout <a class="xref" href="articles/facades.html">ESAPIX Facades</a> to learn more.</p>
+<h2 id="iscriptcontext-interface">IScriptContext Interface</h2>
+<p>IScriptContext is a technique used by ESAPIX to abstract the difference between standalone applications and plugin applications. You can build one app that runs whichever way you want, which is great for developement. One of the challenges with developing plugin applications is the need to debug it. IScriptContext is ESAPIX&#39;s solution to the problem. Watch a tutorial on how to use IScriptContext <a href="https://www.youtube.com/watch?v=6LXhqgt0jT4">here</a>.</p>
+<h2 id="robust-dvh-constraint-help">Robust DVH Constraint Help</h2>
+<p>ESAPIX has a lot of code dedicated to helping evaluate DVH metrics. You have the Mayo format (@mayoFormat.md) query at your disposal to do some complex queries quickly and evaluate the things which are most important.</p>
+<h3 id="see-also">See Also</h3>
 <ul>
-<li>@structure.md</li>
-<li>@selection.md</li>
-<li>@helpers.md</li>
+<li><a class="xref" href="articles/facades.html">ESAPIX Facades</a></li>
+<li><a class="xref" href="articles/mayoFormat.html">Mayo Format and Querying</a></li>
 </ul>
 
             </article>
