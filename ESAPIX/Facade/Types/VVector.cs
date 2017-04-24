@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public VVector() { _client = new ExpandoObject(); }
         public VVector(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public VVector(System.Double xi, System.Double yi, System.Double zi)
         {
             if (X.Instance.CurrentContext != null)
@@ -19,9 +20,9 @@ namespace ESAPIX.Facade.Types
             else
             {
                 _client = new ExpandoObject();
-                _client.x = xi;
-                _client.y = yi;
-                _client.z = zi;
+                _client.Xi = xi;
+                _client.Yi = yi;
+                _client.Zi = zi;
             }
         }
         public System.Double Item

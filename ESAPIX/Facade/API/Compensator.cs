@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Compensator() { _client = new ExpandoObject(); }
         public Compensator(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.AddOnMaterial Material
         {
             get

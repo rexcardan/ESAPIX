@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Registration() { _client = new ExpandoObject(); }
         public Registration(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Nullable<System.DateTime> CreationDateTime
         {
             get

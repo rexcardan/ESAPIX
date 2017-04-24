@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public StructureCodeInfo() { _client = new ExpandoObject(); }
         public StructureCodeInfo(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public StructureCodeInfo(System.String codingScheme, System.String code)
         {
             if (X.Instance.CurrentContext != null)

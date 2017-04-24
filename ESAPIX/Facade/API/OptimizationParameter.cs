@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public OptimizationParameter() { _client = new ExpandoObject(); }
         public OptimizationParameter(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;

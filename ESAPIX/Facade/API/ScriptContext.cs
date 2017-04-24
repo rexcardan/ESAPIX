@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public ScriptContext() { _client = new ExpandoObject(); }
         public ScriptContext(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ScriptContext(System.Object context, System.Object user, System.String appName)
         {
             if (X.Instance.CurrentContext != null)

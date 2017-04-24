@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public DVHPoint() { _client = new ExpandoObject(); }
         public DVHPoint(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public DVHPoint(ESAPIX.Facade.Types.DoseValue dose, System.Double volume, System.String volumeUnit)
         {
             if (X.Instance.CurrentContext != null)
@@ -19,7 +20,7 @@ namespace ESAPIX.Facade.Types
             else
             {
                 _client = new ExpandoObject();
-                _client.DoseValue = dose;
+                _client.Dose = dose;
                 _client.Volume = volume;
                 _client.VolumeUnit = volumeUnit;
             }

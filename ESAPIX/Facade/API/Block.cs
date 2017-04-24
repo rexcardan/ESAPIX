@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Block() { _client = new ExpandoObject(); }
         public Block(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.AddOnMaterial AddOnMaterial
         {
             get

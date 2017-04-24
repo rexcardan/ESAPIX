@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public BrachyPlanSetup() { _client = new ExpandoObject(); }
         public BrachyPlanSetup(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String ApplicationSetupType
         {
             get

@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Bolus() { _client = new ExpandoObject(); }
         public Bolus(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String Id
         {
             get

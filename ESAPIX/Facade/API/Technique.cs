@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Technique() { _client = new ExpandoObject(); }
         public Technique(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;

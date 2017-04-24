@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public MLC() { _client = new ExpandoObject(); }
         public MLC(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String ManufacturerName
         {
             get

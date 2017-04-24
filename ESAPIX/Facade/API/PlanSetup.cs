@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public PlanSetup() { _client = new ExpandoObject(); }
         public PlanSetup(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.PlanSetupApprovalStatus ApprovalStatus
         {
             get

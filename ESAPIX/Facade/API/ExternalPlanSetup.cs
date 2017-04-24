@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public ExternalPlanSetup() { _client = new ExpandoObject(); }
         public ExternalPlanSetup(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.EvaluationDose DoseAsEvaluationDose
         {
             get

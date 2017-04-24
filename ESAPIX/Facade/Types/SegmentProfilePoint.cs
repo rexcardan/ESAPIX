@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public SegmentProfilePoint() { _client = new ExpandoObject(); }
         public SegmentProfilePoint(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public SegmentProfilePoint(ESAPIX.Facade.Types.VVector position, System.Boolean value)
         {
             if (X.Instance.CurrentContext != null)

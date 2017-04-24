@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Slot() { _client = new ExpandoObject(); }
         public Slot(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Int32 Number
         {
             get

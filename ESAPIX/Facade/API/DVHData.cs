@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public DVHData() { _client = new ExpandoObject(); }
         public DVHData(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double Coverage
         {
             get

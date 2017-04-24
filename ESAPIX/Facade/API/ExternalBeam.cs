@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public ExternalBeam() { _client = new ExpandoObject(); }
         public ExternalBeam(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double SourceAxisDistance
         {
             get

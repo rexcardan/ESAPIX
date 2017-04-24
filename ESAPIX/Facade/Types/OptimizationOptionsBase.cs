@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public OptimizationOptionsBase() { _client = new ExpandoObject(); }
         public OptimizationOptionsBase(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String MLC
         {
             get

@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public BeamParameters() { _client = new ExpandoObject(); }
         public BeamParameters(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public IEnumerable<ESAPIX.Facade.API.ControlPointParameters> ControlPoints
         {
             get

@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public RadioactiveSourceModel() { _client = new ExpandoObject(); }
         public RadioactiveSourceModel(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.VVector ActiveSize
         {
             get

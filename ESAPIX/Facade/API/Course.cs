@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Course() { _client = new ExpandoObject(); }
         public Course(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Nullable<System.DateTime> CompletedDateTime
         {
             get

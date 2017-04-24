@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public BrachyTreatmentUnit() { _client = new ExpandoObject(); }
         public BrachyTreatmentUnit(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String DoseRateMode
         {
             get

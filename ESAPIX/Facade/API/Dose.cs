@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Dose() { _client = new ExpandoObject(); }
         public Dose(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.DoseValue DoseMax3D
         {
             get

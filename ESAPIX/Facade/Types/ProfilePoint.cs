@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public ProfilePoint() { _client = new ExpandoObject(); }
         public ProfilePoint(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ProfilePoint(ESAPIX.Facade.Types.VVector position, System.Double value)
         {
             if (X.Instance.CurrentContext != null)

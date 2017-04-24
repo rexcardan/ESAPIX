@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public SerializableObject() { _client = new ExpandoObject(); }
         public SerializableObject(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Xml.Schema.XmlSchema GetSchema()
         {
             var local = this;

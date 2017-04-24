@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public DoseValue() { _client = new ExpandoObject(); }
         public DoseValue(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public DoseValue(System.Double value, System.String unitName)
         {
             if (X.Instance.CurrentContext != null)
@@ -19,10 +20,8 @@ namespace ESAPIX.Facade.Types
             else
             {
                 _client = new ExpandoObject();
-                _client.Dose = value;
-                DoseUnit unit = DoseUnit.Unknown;
-                Enum.TryParse(unitName, out unit);
-                _client.Unit = unit;
+                _client.Value = value;
+                _client.UnitName = unitName;
             }
         }
         public DoseValue(System.Double value, ESAPIX.Facade.Types.DoseValue.DoseUnit unit)
@@ -32,7 +31,7 @@ namespace ESAPIX.Facade.Types
             else
             {
                 _client = new ExpandoObject();
-                _client.Dose = value;
+                _client.Value = value;
                 _client.Unit = unit;
             }
         }

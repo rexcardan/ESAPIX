@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Hospital() { _client = new ExpandoObject(); }
         public Hospital(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Nullable<System.DateTime> CreationDateTime
         {
             get

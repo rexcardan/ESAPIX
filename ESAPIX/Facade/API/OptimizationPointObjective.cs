@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public OptimizationPointObjective() { _client = new ExpandoObject(); }
         public OptimizationPointObjective(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.DoseValue Dose
         {
             get

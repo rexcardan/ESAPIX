@@ -23,14 +23,7 @@ namespace ESAPIX.AppKit
 
         public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
         {
-            if (singleThread)
-            {
-                _ctx = StandAloneContext.CreateSingleThread(vmsUsername, vmsPassword);
-            }
-            else
-            {
-                _ctx = StandAloneContext.Create(vmsUsername, vmsPassword);
-            }
+            _ctx = StandAloneContext.Create(vmsUsername, vmsPassword);
             _ea = new EventAggregator();
         }
 

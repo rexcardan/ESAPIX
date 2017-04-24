@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Diagnosis() { _client = new ExpandoObject(); }
         public Diagnosis(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String ClinicalDescription
         {
             get

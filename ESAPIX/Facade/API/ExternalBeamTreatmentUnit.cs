@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public ExternalBeamTreatmentUnit() { _client = new ExpandoObject(); }
         public ExternalBeamTreatmentUnit(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String MachineModel
         {
             get

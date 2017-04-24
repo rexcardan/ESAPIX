@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Catheter() { _client = new ExpandoObject(); }
         public Catheter(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double ApplicatorLength
         {
             get

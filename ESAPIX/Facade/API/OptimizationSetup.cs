@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public OptimizationSetup() { _client = new ExpandoObject(); }
         public OptimizationSetup(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public IEnumerable<ESAPIX.Facade.API.OptimizationObjective> Objectives
         {
             get

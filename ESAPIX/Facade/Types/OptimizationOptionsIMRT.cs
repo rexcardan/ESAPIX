@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.Types
     {
         public OptimizationOptionsIMRT() { _client = new ExpandoObject(); }
         public OptimizationOptionsIMRT(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public OptimizationOptionsIMRT(System.Int32 maxIterations, ESAPIX.Facade.Types.OptimizationOption initialState, System.Int32 numberOfStepsBeforeIntermediateDose, ESAPIX.Facade.Types.OptimizationConvergenceOption convergenceOption, System.String mlcId)
         {
             if (X.Instance.CurrentContext != null)

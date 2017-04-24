@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public ApiDataObject() { _client = new ExpandoObject(); }
         public ApiDataObject(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String Id
         {
             get

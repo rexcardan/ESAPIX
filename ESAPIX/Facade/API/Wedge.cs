@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Wedge() { _client = new ExpandoObject(); }
         public Wedge(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double Direction
         {
             get

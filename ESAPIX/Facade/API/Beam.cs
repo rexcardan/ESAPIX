@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Beam() { _client = new ExpandoObject(); }
         public Beam(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.Applicator Applicator
         {
             get

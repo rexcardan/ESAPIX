@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Image() { _client = new ExpandoObject(); }
         public Image(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String ContrastBolusAgentIngredientName
         {
             get

@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public AxisAlignedMargins() { _client = new ExpandoObject(); }
         public AxisAlignedMargins(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.StructureMarginGeometry Geometry { get { return (ESAPIX.Facade.Types.StructureMarginGeometry)_client.Geometry; } }
         public System.Double X1 { get { return _client.X1; } }
         public System.Double Y1 { get { return _client.Y1; } }

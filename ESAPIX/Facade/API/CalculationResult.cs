@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public CalculationResult() { _client = new ExpandoObject(); }
         public CalculationResult(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Boolean Success
         {
             get

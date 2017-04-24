@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public ControlPointParameters() { _client = new ExpandoObject(); }
         public ControlPointParameters(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double CollimatorAngle
         {
             get

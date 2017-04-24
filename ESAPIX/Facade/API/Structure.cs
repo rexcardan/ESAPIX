@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Structure() { _client = new ExpandoObject(); }
         public Structure(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.VVector CenterPoint
         {
             get

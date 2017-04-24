@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public VRect() { _client = new ExpandoObject(); }
         public VRect(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public VRect(T x1, T y1, T x2, T y2)
         {
             if (X.Instance.CurrentContext != null)

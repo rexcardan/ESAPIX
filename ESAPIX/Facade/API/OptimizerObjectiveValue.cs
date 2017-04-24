@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public OptimizerObjectiveValue() { _client = new ExpandoObject(); }
         public OptimizerObjectiveValue(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.Structure Structure
         {
             get

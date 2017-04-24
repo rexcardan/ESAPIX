@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public OptimizationPointCloudParameter() { _client = new ExpandoObject(); }
         public OptimizationPointCloudParameter(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double PointResolutionInMM
         {
             get

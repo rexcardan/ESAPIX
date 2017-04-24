@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.API
         internal dynamic _client;
         public OptimizerDVH() { _client = new ExpandoObject(); }
         public OptimizerDVH(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.DVHPoint[] CurveData
         {
             get

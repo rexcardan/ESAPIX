@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public RadioactiveSource() { _client = new ExpandoObject(); }
         public RadioactiveSource(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Nullable<System.DateTime> CalibrationDate
         {
             get

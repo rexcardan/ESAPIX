@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Series() { _client = new ExpandoObject(); }
         public Series(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String FOR
         {
             get

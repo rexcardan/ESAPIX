@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.Types
     {
         public OptimizationOptionsVMAT() { _client = new ExpandoObject(); }
         public OptimizationOptionsVMAT(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOption startOption, System.String mlcId)
         {
             if (X.Instance.CurrentContext != null)

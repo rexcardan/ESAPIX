@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public ControlPointCollection() { _client = new ExpandoObject(); }
         public ControlPointCollection(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.ControlPoint Item
         {
             get

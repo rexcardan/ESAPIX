@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public PlanningItemDose() { _client = new ExpandoObject(); }
         public PlanningItemDose(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;

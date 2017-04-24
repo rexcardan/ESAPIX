@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public Fluence() { _client = new ExpandoObject(); }
         public Fluence(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public Fluence(System.Single[,] fluenceMatrix, System.Double xOrigin, System.Double yOrigin)
         {
             if (X.Instance.CurrentContext != null)

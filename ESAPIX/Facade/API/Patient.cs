@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public Patient() { _client = new ExpandoObject(); }
         public Patient(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public IEnumerable<ESAPIX.Facade.API.Course> Courses
         {
             get

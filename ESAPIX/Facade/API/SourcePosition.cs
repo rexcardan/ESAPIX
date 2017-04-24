@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public SourcePosition() { _client = new ExpandoObject(); }
         public SourcePosition(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double DwellTime
         {
             get

@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public PlanSum() { _client = new ExpandoObject(); }
         public PlanSum(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.Course Course
         {
             get

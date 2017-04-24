@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.Types
     {
         public DoseProfile() { _client = new ExpandoObject(); }
         public DoseProfile(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public DoseProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data, ESAPIX.Facade.Types.DoseValue.DoseUnit unit)
         {
             if (X.Instance.CurrentContext != null)

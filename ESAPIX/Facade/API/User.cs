@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public User() { _client = new ExpandoObject(); }
         public User(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.String Language
         {
             get

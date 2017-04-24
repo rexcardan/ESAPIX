@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public EstimatedDVH() { _client = new ExpandoObject(); }
         public EstimatedDVH(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.Types.DVHPoint[] CurveData
         {
             get

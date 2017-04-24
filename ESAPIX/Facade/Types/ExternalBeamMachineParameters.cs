@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public ExternalBeamMachineParameters() { _client = new ExpandoObject(); }
         public ExternalBeamMachineParameters(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ExternalBeamMachineParameters(System.String machineId, System.String energyModeId, System.Int32 doseRate, System.String techniqueId, System.String primaryFluenceModeId)
         {
             if (X.Instance.CurrentContext != null)

@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public MetersetValue() { _client = new ExpandoObject(); }
         public MetersetValue(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public MetersetValue(System.Double value, ESAPIX.Facade.Types.DosimeterUnit unit)
         {
             if (X.Instance.CurrentContext != null)

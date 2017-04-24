@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public OptimizationNormalTissueParameter() { _client = new ExpandoObject(); }
         public OptimizationNormalTissueParameter(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double DistanceFromTargetBorderInMM
         {
             get

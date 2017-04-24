@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public OptimizationIMRTBeamParameter() { _client = new ExpandoObject(); }
         public OptimizationIMRTBeamParameter(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ESAPIX.Facade.API.Beam Beam
         {
             get

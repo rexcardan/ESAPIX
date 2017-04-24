@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.Types
     {
         public ImageProfile() { _client = new ExpandoObject(); }
         public ImageProfile(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public ImageProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data, System.String unit)
         {
             if (X.Instance.CurrentContext != null)

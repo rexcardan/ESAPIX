@@ -53,33 +53,37 @@ namespace ESAPIX.AppKit
         {
             var thread = new AppComThread(false);
             Application app = null;
-            thread.Invoke(() =>
-            {
-                app = Application.CreateApplication(username, password);
-            });
+            app = Application.CreateApplication(username, password);
             return new StandAloneContext(app, thread);
         }
 
         public bool SetPatient(string id)
         {
-            Thread.Invoke(() =>
-            {
-                _patient = _app.OpenPatientById(id);
-                //Notify
+            _patient = _app.OpenPatientById(id);
+            var found = _patient.IsLive;
+            if (found)
                 OnPatientChanged(_patient);
-            });
-            return _patient != null;
+            else
+            {
+                OnPatientChanged(null);
+            }
+            return found;
         }
 
         public async Task<bool> SetPatientAsync(string id)
         {
-            await Thread.InvokeAsync(() =>
+            _patient = await Task.Run(() =>
             {
-                _patient = _app.OpenPatientById(id);
-                //Notify
-                OnPatientChanged(_patient);
+                return _app.OpenPatientById(id);
             });
-            return _patient != null;
+            var found = _patient.IsLive;
+            if (found)
+                OnPatientChanged(_patient);
+            else
+            {
+                OnPatientChanged(null);
+            }
+            return found;
         }
 
         public bool SetCourse(Course course)
@@ -120,19 +124,13 @@ namespace ESAPIX.AppKit
 
         public void ClosePatient()
         {
-            Thread.Invoke(() =>
-            {
-                _app.ClosePatient();
-                OnPatientChanged(null);
-            });
+            _app.ClosePatient();
+            OnPatientChanged(null);
         }
 
         public void Dispose()
         {
-            Thread.Invoke(() =>
-            {
-                _app.Dispose();
-            });
+            _app.Dispose();
         }
 
         public Course Course { get { return _course; } }

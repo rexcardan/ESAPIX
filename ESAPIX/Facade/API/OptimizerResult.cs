@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public OptimizerResult() { _client = new ExpandoObject(); }
         public OptimizerResult(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public IEnumerable<ESAPIX.Facade.API.OptimizerDVH> StructureDVHs
         {
             get

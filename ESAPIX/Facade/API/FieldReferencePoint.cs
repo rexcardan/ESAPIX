@@ -11,6 +11,7 @@ namespace ESAPIX.Facade.API
     {
         public FieldReferencePoint() { _client = new ExpandoObject(); }
         public FieldReferencePoint(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public System.Double EffectiveDepth
         {
             get

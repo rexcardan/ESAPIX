@@ -12,6 +12,7 @@ namespace ESAPIX.Facade.Types
         internal dynamic _client;
         public LMCMSSOptions() { _client = new ExpandoObject(); }
         public LMCMSSOptions(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
         public LMCMSSOptions(System.Int32 numberOfIterations)
         {
             if (X.Instance.CurrentContext != null)
