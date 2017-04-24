@@ -58,9 +58,9 @@ namespace ESAPIX.AppKit.Overlay
                 Action asyncA = new Action(async () =>
                 {
                     //Call VMS
-                    await _app.Thread.InvokeAsync(() =>
+                    await Task.Run(() =>
                     {
-                        var course = _app.Patient?.Courses.FirstOrDefault(c => c.Id == _selCourse);
+                        var course = _app.Patient.Courses.FirstOrDefault(c => c.Id == _selCourse);
                         _app.SetCourse(course);
                         UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName, _app.Patient.FirstName, "Loading plans...."));
                         plans = course != null ? course.PlanSetups.Select(ps => ps.Id).ToList() : new List<string>();
@@ -113,23 +113,23 @@ namespace ESAPIX.AppKit.Overlay
             {
                 await _app.Thread.InvokeAsync(() =>
                 {
-                    if (_app.Patient != null) { _app.ClosePatient(); }
+                    if (_app.Patient != null && _app.Patient.IsLive)
+                    {
+                        _app.ClosePatient();
+                    }
                     if (_app.SetPatient(PatientId))
                     {
-                        if (_app.Patient != null)
+                        var courses = _app.Patient.Courses.Select(c => c.Id).ToList();
+                        _disp.Invoke(new Action(() =>
                         {
-                            var courses = _app.Patient.Courses.Select(c => c.Id).ToList();
-                            _disp.Invoke(new Action(() =>
-                            {
-                                Courses.Clear();
-                                courses.ForEach(Courses.Add);
-                            }));
-                            UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName, _app.Patient.FirstName, _app.Patient.Id));
-                            SelectedCourse = Courses.FirstOrDefault();
-                            OnPropertyChanged("Courses");
-                            OnPropertyChanged("SelectedCourse");
-                            OnPropertyChanged("Status");
-                        }
+                            Courses.Clear();
+                            courses.ForEach(Courses.Add);
+                        }));
+                        UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName, _app.Patient.FirstName, _app.Patient.Id));
+                        SelectedCourse = Courses.FirstOrDefault();
+                        OnPropertyChanged("Courses");
+                        OnPropertyChanged("SelectedCourse");
+                        OnPropertyChanged("Status");
                     }
                     else
                     {

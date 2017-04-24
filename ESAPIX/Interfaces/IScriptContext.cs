@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ESAPIX.AppKit.StandAloneContext;
 
 namespace ESAPIX.Interfaces
 {
@@ -58,5 +59,14 @@ namespace ESAPIX.Interfaces
         /// <param name="toExecute">the function that assigns the value</param>
         /// <returns>a task of the value requested</returns>
         Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute);
+
+        #region EVENTS
+        //These are only used in Standalone Context, but are here so casting does not have to be performed to check
+        event PatientChangedHandler PatientChanged;
+        event PlanSetupChangedHandler PlanSetupChanged;
+        event ExternalPlanSetupChangedHandler ExternalPlanSetupChanged;
+        event PlanSetupChangedHandler BrachyPlanSetupChanged;
+        event CourseChangedHandler CourseChanged;
+        #endregion
     }
 }

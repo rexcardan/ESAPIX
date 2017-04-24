@@ -66,5 +66,14 @@ namespace ESAPIX.AppKit
             });
             return result;
         }
+
+        #region NOT USED
+        //These will never get called
+        public event StandAloneContext.PatientChangedHandler PatientChanged;
+        public event StandAloneContext.PlanSetupChangedHandler PlanSetupChanged;
+        public event StandAloneContext.ExternalPlanSetupChangedHandler ExternalPlanSetupChanged;
+        public event StandAloneContext.PlanSetupChangedHandler BrachyPlanSetupChanged;
+        public event StandAloneContext.CourseChangedHandler CourseChanged;
+        #endregion
     }
 }

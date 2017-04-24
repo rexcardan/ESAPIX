@@ -125,7 +125,6 @@ namespace ESAPIX.AppKit
         public void ClosePatient()
         {
             _app.ClosePatient();
-            OnPatientChanged(null);
         }
 
         public void Dispose()
