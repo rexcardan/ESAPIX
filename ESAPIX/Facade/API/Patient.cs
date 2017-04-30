@@ -33,9 +33,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Courses")
-                        ? _client.Courses
-                        : default(IEnumerable<Course>);
+                    if ((_client as ExpandoObject).HasProperty("Courses"))
+                        foreach (var item in _client.Courses) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -213,9 +213,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Registrations")
-                        ? _client.Registrations
-                        : default(IEnumerable<Registration>);
+                    if ((_client as ExpandoObject).HasProperty("Registrations"))
+                        foreach (var item in _client.Registrations) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -276,9 +276,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("StructureSets")
-                        ? _client.StructureSets
-                        : default(IEnumerable<StructureSet>);
+                    if ((_client as ExpandoObject).HasProperty("StructureSets"))
+                        foreach (var item in _client.StructureSets) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -309,9 +309,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Studies")
-                        ? _client.Studies
-                        : default(IEnumerable<Study>);
+                    if ((_client as ExpandoObject).HasProperty("Studies"))
+                        foreach (var item in _client.Studies) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

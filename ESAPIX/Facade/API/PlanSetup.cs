@@ -52,9 +52,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Beams")
-                        ? _client.Beams
-                        : default(IEnumerable<Beam>);
+                    if ((_client as ExpandoObject).HasProperty("Beams"))
+                        foreach (var item in _client.Beams) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -121,9 +121,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("DVHEstimates")
-                        ? _client.DVHEstimates
-                        : default(IEnumerable<EstimatedDVH>);
+                    if ((_client as ExpandoObject).HasProperty("DVHEstimates"))
+                        foreach (var item in _client.DVHEstimates) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

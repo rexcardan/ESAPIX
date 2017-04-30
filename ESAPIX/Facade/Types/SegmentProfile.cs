@@ -88,9 +88,9 @@ namespace ESAPIX.Facade.Types
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("EdgeCoordinates")
-                        ? _client.EdgeCoordinates
-                        : default(List<VVector>);
+                    if ((_client as ExpandoObject).HasProperty("EdgeCoordinates"))
+                        return _client.EdgeCoordinates.ToList();
+                    else return null;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

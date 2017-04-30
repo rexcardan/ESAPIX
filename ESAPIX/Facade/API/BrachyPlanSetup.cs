@@ -50,9 +50,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Catheters")
-                        ? _client.Catheters
-                        : default(IEnumerable<Catheter>);
+                    if ((_client as ExpandoObject).HasProperty("Catheters"))
+                        foreach (var item in _client.Catheters) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -117,9 +117,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("SeedCollections")
-                        ? _client.SeedCollections
-                        : default(IEnumerable<SeedCollection>);
+                    if ((_client as ExpandoObject).HasProperty("SeedCollections"))
+                        foreach (var item in _client.SeedCollections) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -150,9 +150,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("SolidApplicators")
-                        ? _client.SolidApplicators
-                        : default(IEnumerable<BrachySolidApplicator>);
+                    if ((_client as ExpandoObject).HasProperty("SolidApplicators"))
+                        foreach (var item in _client.SolidApplicators) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

@@ -32,9 +32,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Objectives")
-                        ? _client.Objectives
-                        : default(IEnumerable<OptimizationObjective>);
+                    if ((_client as ExpandoObject).HasProperty("Objectives"))
+                        foreach (var item in _client.Objectives) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -65,9 +65,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Parameters")
-                        ? _client.Parameters
-                        : default(IEnumerable<OptimizationParameter>);
+                    if ((_client as ExpandoObject).HasProperty("Parameters"))
+                        foreach (var item in _client.Parameters) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

@@ -46,6 +46,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    if ((_client as ExpandoObject).HasProperty("MessageLines"))
+                        foreach (var item in _client.MessageLines) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

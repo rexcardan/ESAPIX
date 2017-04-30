@@ -32,9 +32,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("StructureDVHs")
-                        ? _client.StructureDVHs
-                        : default(IEnumerable<OptimizerDVH>);
+                    if ((_client as ExpandoObject).HasProperty("StructureDVHs"))
+                        foreach (var item in _client.StructureDVHs) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -65,9 +65,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("StructureObjectiveValues")
-                        ? _client.StructureObjectiveValues
-                        : default(IEnumerable<OptimizerObjectiveValue>);
+                    if ((_client as ExpandoObject).HasProperty("StructureObjectiveValues"))
+                        foreach (var item in _client.StructureObjectiveValues) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

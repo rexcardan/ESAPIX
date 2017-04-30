@@ -74,9 +74,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Isodoses")
-                        ? _client.Isodoses
-                        : default(IEnumerable<Isodose>);
+                    if ((_client as ExpandoObject).HasProperty("Isodoses"))
+                        foreach (var item in _client.Isodoses) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

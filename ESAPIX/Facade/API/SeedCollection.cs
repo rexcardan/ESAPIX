@@ -52,9 +52,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("SourcePositions")
-                        ? _client.SourcePositions
-                        : default(IEnumerable<SourcePosition>);
+                    if ((_client as ExpandoObject).HasProperty("SourcePositions"))
+                        foreach (var item in _client.SourcePositions) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {

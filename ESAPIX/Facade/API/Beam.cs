@@ -99,9 +99,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Blocks")
-                        ? _client.Blocks
-                        : default(IEnumerable<Block>);
+                    if ((_client as ExpandoObject).HasProperty("Blocks"))
+                        foreach (var item in _client.Blocks) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -132,9 +132,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Boluses")
-                        ? _client.Boluses
-                        : default(IEnumerable<Bolus>);
+                    if ((_client as ExpandoObject).HasProperty("Boluses"))
+                        foreach (var item in _client.Boluses) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -165,9 +165,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("CalculationLogs")
-                        ? _client.CalculationLogs
-                        : default(IEnumerable<BeamCalculationLog>);
+                    if ((_client as ExpandoObject).HasProperty("CalculationLogs"))
+                        foreach (var item in _client.CalculationLogs) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -328,9 +328,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("FieldReferencePoints")
-                        ? _client.FieldReferencePoints
-                        : default(IEnumerable<FieldReferencePoint>);
+                    if ((_client as ExpandoObject).HasProperty("FieldReferencePoints"))
+                        foreach (var item in _client.FieldReferencePoints) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -653,9 +653,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Trays")
-                        ? _client.Trays
-                        : default(IEnumerable<Tray>);
+                    if ((_client as ExpandoObject).HasProperty("Trays"))
+                        foreach (var item in _client.Trays) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -707,9 +707,9 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    yield return (_client as ExpandoObject).HasProperty("Wedges")
-                        ? _client.Wedges
-                        : default(IEnumerable<Wedge>);
+                    if ((_client as ExpandoObject).HasProperty("Wedges"))
+                        foreach (var item in _client.Wedges) yield return item;
+                    else yield break;
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
