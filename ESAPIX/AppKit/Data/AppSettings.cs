@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
+
+#endregion
 
 namespace ESAPIX.AppKit.Data
 {
@@ -42,7 +46,7 @@ namespace ESAPIX.AppKit.Data
         {
             if (Settings.ContainsKey(key))
                 if (typeof(T) == typeof(string))
-                    return (T)Settings[key];
+                    return (T) Settings[key];
                 else
                     return JsonConvert.DeserializeObject<T>(Settings[key].ToString());
             return default(T);

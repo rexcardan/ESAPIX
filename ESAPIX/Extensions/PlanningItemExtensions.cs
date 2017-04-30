@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using ESAPIX.DVH.Query;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
+
+#endregion
 
 namespace ESAPIX.Extensions
 {
@@ -206,7 +210,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseAtVolume(new[] { s }, volume, vPres, dPres);
+            return i.GetDoseAtVolume(new[] {s}, volume, vPres, dPres);
         }
 
         /// <summary>
@@ -265,7 +269,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseComplimentAtVolume(new[] { s }, volume, vPres, dPres);
+            return i.GetDoseComplimentAtVolume(new[] {s}, volume, vPres, dPres);
         }
 
         #endregion
@@ -283,7 +287,7 @@ namespace ESAPIX.Extensions
         public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
         {
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
             return dvhCurve.GetVolumeAtDose(dv);
         }
 
@@ -299,7 +303,7 @@ namespace ESAPIX.Extensions
             VolumePresentation vPres)
         {
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
             return dvhCurve.GetComplimentVolumeAtDose(dv);
         }
 
@@ -344,7 +348,7 @@ namespace ESAPIX.Extensions
         public static double ExecuteQuery(this PlanningItem pi, Structure s, string mayoFormatQuery)
         {
             var query = MayoQuery.Read(mayoFormatQuery);
-            return query.RunQuery(pi, new[] { s });
+            return query.RunQuery(pi, new[] {s});
         }
 
         public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, MayoQuery query)
@@ -354,7 +358,7 @@ namespace ESAPIX.Extensions
 
         public static double ExecuteQuery(this PlanningItem pi, Structure s, MayoQuery query)
         {
-            return query.RunQuery(pi, new[] { s });
+            return query.RunQuery(pi, new[] {s});
         }
 
         #endregion

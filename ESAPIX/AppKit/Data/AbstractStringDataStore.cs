@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,6 +8,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using ESAPIX.Helpers;
+
+#endregion
 
 namespace ESAPIX.AppKit.Data
 {
@@ -80,7 +84,7 @@ namespace ESAPIX.AppKit.Data
         public bool Save(T storageObject)
         {
             var serial = Serialize(storageObject);
-            var hashWrapper = new SecureStorage<T> { Storage = storageObject, Hash = GetHashString(serial) };
+            var hashWrapper = new SecureStorage<T> {Storage = storageObject, Hash = GetHashString(serial)};
 
             serial = Serialize(hashWrapper);
             var savePath = GetSavePath(storageObject);

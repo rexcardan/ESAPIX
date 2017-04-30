@@ -1,77 +1,96 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationPointObjective : ESAPIX.Facade.API.OptimizationObjective
+    public class OptimizationPointObjective : OptimizationObjective
     {
-        public OptimizationPointObjective() { _client = new ExpandoObject(); }
-        public OptimizationPointObjective(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public ESAPIX.Facade.Types.DoseValue Dose
+        public OptimizationPointObjective()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public OptimizationPointObjective(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public Types.DoseValue Dose
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Dose; }
+                if (_client is ExpandoObject) return _client.Dose;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { if (DefaultHelper.IsDefault(local._client.Dose)) { return default(ESAPIX.Facade.Types.DoseValue); } else { return new ESAPIX.Facade.Types.DoseValue(local._client.Dose); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Dose)) return default(Types.DoseValue);
+                    return new Types.DoseValue(local._client.Dose);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Dose = value; }
+                if (_client is ExpandoObject) _client.Dose = value;
             }
         }
-        public ESAPIX.Facade.Types.OptimizationObjectiveOperator Operator
+
+        public Types.OptimizationObjectiveOperator Operator
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Operator; }
+                if (_client is ExpandoObject) return _client.Operator;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.OptimizationObjectiveOperator>((sc) => { return (ESAPIX.Facade.Types.OptimizationObjectiveOperator)local._client.Operator; });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    return (Types.OptimizationObjectiveOperator) local._client.Operator;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Operator = value; }
+                if (_client is ExpandoObject) _client.Operator = value;
             }
         }
-        public System.Double Priority
+
+        public double Priority
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Priority; }
+                if (_client is ExpandoObject) return _client.Priority;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Priority; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Priority; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Priority = value; }
+                if (_client is ExpandoObject) _client.Priority = value;
             }
         }
-        public System.Double Volume
+
+        public double Volume
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Volume; }
+                if (_client is ExpandoObject) return _client.Volume;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Volume; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Volume; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Volume = value; }
+                if (_client is ExpandoObject) _client.Volume = value;
             }
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

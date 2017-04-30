@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using ESAPIX.Facade.Types;
+
+#endregion
 
 namespace ESAPIX.Extensions
 {

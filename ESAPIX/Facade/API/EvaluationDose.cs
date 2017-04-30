@@ -1,34 +1,39 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class EvaluationDose : ESAPIX.Facade.API.Dose
+    public class EvaluationDose : Dose
     {
-        public EvaluationDose() { _client = new ExpandoObject(); }
-        public EvaluationDose(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public EvaluationDose()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public EvaluationDose(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
-        public void SetVoxels(System.Int32 planeIndex, System.Int32[,] values)
+
+        public void SetVoxels(int planeIndex, int[,] values)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.SetVoxels(planeIndex, values);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetVoxels(planeIndex, values); });
         }
     }
 }

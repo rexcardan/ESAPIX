@@ -1,109 +1,121 @@
-using System;
-using System.Collections.Generic;
+#region
+
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class Application : ESAPIX.Facade.API.SerializableObject
+    public class Application : SerializableObject
     {
-        public Application() { _client = new ExpandoObject(); }
-        public Application(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public ESAPIX.Facade.API.User CurrentUser
+        public Application()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public Application(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public User CurrentUser
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.CurrentUser; }
+                if (_client is ExpandoObject) return _client.CurrentUser;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.User>((sc) => { if (DefaultHelper.IsDefault(local._client.CurrentUser)) { return default(ESAPIX.Facade.API.User); } else { return new ESAPIX.Facade.API.User(local._client.CurrentUser); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.CurrentUser)) return default(User);
+                    return new User(local._client.CurrentUser);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.CurrentUser = value; }
+                if (_client is ExpandoObject) _client.CurrentUser = value;
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.PatientSummary> PatientSummaries
+
+        public IEnumerable<PatientSummary> PatientSummaries
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.PatientSummaries;
+                    var asEnum = (IEnumerable) _client.PatientSummaries;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.PatientSummary();
+                    var facade = new PatientSummary();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public static ESAPIX.Facade.API.Application CreateApplication(System.String username, System.String password)
+
+        public static Application CreateApplication(string username, string password)
         {
             return StaticHelper.Application_CreateApplication(username, password);
         }
-        public ESAPIX.Facade.API.Patient OpenPatient(ESAPIX.Facade.API.PatientSummary patientSummary)
+
+        public Patient OpenPatient(PatientSummary patientSummary)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.Patient(local._client.OpenPatient(patientSummary._client)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Patient(local._client.OpenPatient(patientSummary._client));
+            });
             return retVal;
-
         }
-        public ESAPIX.Facade.API.Patient OpenPatientById(System.String id)
+
+        public Patient OpenPatientById(string id)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.Patient(local._client.OpenPatientById(id)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Patient(local._client.OpenPatientById(id));
+            });
             return retVal;
-
         }
+
         public void ClosePatient()
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.ClosePatient();
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ClosePatient(); });
         }
+
         public void SaveModifications()
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.SaveModifications();
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SaveModifications(); });
         }
+
         public void Dispose()
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.Dispose();
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.Dispose(); });
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

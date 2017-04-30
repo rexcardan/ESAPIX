@@ -1,17 +1,21 @@
+#region
+
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESAPIX.Interfaces;
 
+#endregion
+
 namespace ESAPIX.AppKit
 {
     public class AppComThread : IVMSThread
     {
-        private SynchronizationContext ctx;
         private readonly ManualResetEvent mre;
 
         private readonly Thread thread;
+        private SynchronizationContext ctx;
 
         public AppComThread(bool useNewThread = true)
         {

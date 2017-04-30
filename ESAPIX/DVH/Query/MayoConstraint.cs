@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using ESAPIX.Extensions;
+
+#endregion
 
 namespace ESAPIX.DVH.Query
 {

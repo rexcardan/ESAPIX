@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
+
+#endregion
 
 namespace ESAPIX.Extensions
 {

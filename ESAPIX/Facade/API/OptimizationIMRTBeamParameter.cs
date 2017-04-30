@@ -1,103 +1,121 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationIMRTBeamParameter : ESAPIX.Facade.API.OptimizationParameter
+    public class OptimizationIMRTBeamParameter : OptimizationParameter
     {
-        public OptimizationIMRTBeamParameter() { _client = new ExpandoObject(); }
-        public OptimizationIMRTBeamParameter(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public ESAPIX.Facade.API.Beam Beam
+        public OptimizationIMRTBeamParameter()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public OptimizationIMRTBeamParameter(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public Beam Beam
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Beam; }
+                if (_client is ExpandoObject) return _client.Beam;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Beam>((sc) => { if (DefaultHelper.IsDefault(local._client.Beam)) { return default(ESAPIX.Facade.API.Beam); } else { return new ESAPIX.Facade.API.Beam(local._client.Beam); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Beam)) return default(Beam);
+                    return new Beam(local._client.Beam);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Beam = value; }
+                if (_client is ExpandoObject) _client.Beam = value;
             }
         }
-        public System.String BeamId
+
+        public string BeamId
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.BeamId; }
+                if (_client is ExpandoObject) return _client.BeamId;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.BeamId; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.BeamId; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.BeamId = value; }
+                if (_client is ExpandoObject) _client.BeamId = value;
             }
         }
-        public System.Boolean Excluded
+
+        public bool Excluded
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Excluded; }
+                if (_client is ExpandoObject) return _client.Excluded;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.Excluded; });
+                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.Excluded; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Excluded = value; }
+                if (_client is ExpandoObject) _client.Excluded = value;
             }
         }
-        public System.Boolean FixedJaws
+
+        public bool FixedJaws
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.FixedJaws; }
+                if (_client is ExpandoObject) return _client.FixedJaws;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.FixedJaws; });
+                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.FixedJaws; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.FixedJaws = value; }
+                if (_client is ExpandoObject) _client.FixedJaws = value;
             }
         }
-        public System.Double SmoothX
+
+        public double SmoothX
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SmoothX; }
+                if (_client is ExpandoObject) return _client.SmoothX;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.SmoothX; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SmoothX; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SmoothX = value; }
+                if (_client is ExpandoObject) _client.SmoothX = value;
             }
         }
-        public System.Double SmoothY
+
+        public double SmoothY
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SmoothY; }
+                if (_client is ExpandoObject) return _client.SmoothY;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.SmoothY; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SmoothY; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SmoothY = value; }
+                if (_client is ExpandoObject) _client.SmoothY = value;
             }
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

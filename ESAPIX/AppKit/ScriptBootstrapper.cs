@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
@@ -7,6 +9,8 @@ using ESAPIX.Interfaces;
 using Microsoft.Practices.Unity;
 using Prism.Events;
 using Prism.Unity;
+
+#endregion
 
 namespace ESAPIX.AppKit
 {
@@ -43,7 +47,7 @@ namespace ESAPIX.AppKit
 
         protected override void InitializeShell()
         {
-            var shell = (Window)Shell;
+            var shell = (Window) Shell;
             shell.ShowDialog();
             _frame.Continue = false;
         }

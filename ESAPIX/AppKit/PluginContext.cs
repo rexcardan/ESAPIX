@@ -1,9 +1,13 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
+
+#endregion
 
 namespace ESAPIX.AppKit
 {

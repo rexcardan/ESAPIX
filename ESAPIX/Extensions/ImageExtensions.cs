@@ -1,4 +1,8 @@
-﻿using ESAPIX.Facade.API;
+﻿#region
+
+using ESAPIX.Facade.API;
+
+#endregion
 
 namespace ESAPIX.Extensions
 {
@@ -16,8 +20,8 @@ namespace ESAPIX.Extensions
             var hu = new double[image.XSize, image.YSize];
             image.GetVoxels(sliceZ, buffer);
             for (var i = 0; i < buffer.GetLength(0); i++)
-                for (var j = 0; i < buffer.GetLength(1); j++)
-                    hu[i, j] = image.VoxelToDisplayValue(buffer[i, j]);
+            for (var j = 0; i < buffer.GetLength(1); j++)
+                hu[i, j] = image.VoxelToDisplayValue(buffer[i, j]);
             return hu;
         }
     }

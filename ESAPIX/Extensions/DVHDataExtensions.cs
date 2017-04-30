@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
 using ESAPIX.Helpers;
 using static ESAPIX.Helpers.MathHelper;
+
+#endregion
 
 namespace ESAPIX.Extensions
 {
@@ -18,7 +22,7 @@ namespace ESAPIX.Extensions
         /// <returns>the volume in the same units as the DVH point array</returns>
         public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
         {
-            var curve = dvh.Select(d => new { Dose = d.DoseValue.GetDose(dv.Unit), d.Volume, d.VolumeUnit });
+            var curve = dvh.Select(d => new {Dose = d.DoseValue.GetDose(dv.Unit), d.Volume, d.VolumeUnit});
             var maxDose = curve.Max(d => d.Dose);
             var minDose = curve.Min(d => d.Dose);
 
@@ -180,9 +184,7 @@ namespace ESAPIX.Extensions
         public static DVHPoint[] ConvertToRelativeDose(this DVHPoint[] dvh, DoseValue scalingPoint)
         {
             if (dvh.Any() && dvh.First().DoseValue.Unit == DoseValue.DoseUnit.Percent)
-            {
                 return dvh; //Already in relative format
-            }
             for (var i = 0; i < dvh.Length; i++)
             {
                 var dv = new DoseValue(dvh[i].DoseValue.Divide(scalingPoint).Dose * 100, DoseValue.DoseUnit.Percent);

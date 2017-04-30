@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using ESAPIX.AppKit;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
+
+#endregion
 
 namespace ESAPIX.Facade
 {

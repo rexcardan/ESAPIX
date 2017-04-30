@@ -1,645 +1,747 @@
+#region
+
 using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class Beam : ESAPIX.Facade.API.ApiDataObject
+    public class Beam : ApiDataObject
     {
-        public Beam() { _client = new ExpandoObject(); }
-        public Beam(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public ESAPIX.Facade.API.Applicator Applicator
+        public Beam()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public Beam(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public Applicator Applicator
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Applicator; }
+                if (_client is ExpandoObject) return _client.Applicator;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Applicator>((sc) => { if (DefaultHelper.IsDefault(local._client.Applicator)) { return default(ESAPIX.Facade.API.Applicator); } else { return new ESAPIX.Facade.API.Applicator(local._client.Applicator); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Applicator)) return default(Applicator);
+                    return new Applicator(local._client.Applicator);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Applicator = value; }
+                if (_client is ExpandoObject) _client.Applicator = value;
             }
         }
-        public System.Double ArcLength
+
+        public double ArcLength
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ArcLength; }
+                if (_client is ExpandoObject) return _client.ArcLength;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.ArcLength; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.ArcLength; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ArcLength = value; }
+                if (_client is ExpandoObject) _client.ArcLength = value;
             }
         }
-        public System.Double AverageSSD
+
+        public double AverageSSD
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.AverageSSD; }
+                if (_client is ExpandoObject) return _client.AverageSSD;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.AverageSSD; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.AverageSSD; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.AverageSSD = value; }
+                if (_client is ExpandoObject) _client.AverageSSD = value;
             }
         }
-        public System.Int32 BeamNumber
+
+        public int BeamNumber
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.BeamNumber; }
+                if (_client is ExpandoObject) return _client.BeamNumber;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.BeamNumber; });
+                return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.BeamNumber; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.BeamNumber = value; }
+                if (_client is ExpandoObject) _client.BeamNumber = value;
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.Block> Blocks
+
+        public IEnumerable<Block> Blocks
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.Blocks;
+                    var asEnum = (IEnumerable) _client.Blocks;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.Block();
+                    var facade = new Block();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.Bolus> Boluses
+
+        public IEnumerable<Bolus> Boluses
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.Boluses;
+                    var asEnum = (IEnumerable) _client.Boluses;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.Bolus();
+                    var facade = new Bolus();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.BeamCalculationLog> CalculationLogs
+
+        public IEnumerable<BeamCalculationLog> CalculationLogs
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.CalculationLogs;
+                    var asEnum = (IEnumerable) _client.CalculationLogs;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.BeamCalculationLog();
+                    var facade = new BeamCalculationLog();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public ESAPIX.Facade.API.Compensator Compensator
+
+        public Compensator Compensator
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Compensator; }
+                if (_client is ExpandoObject) return _client.Compensator;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Compensator>((sc) => { if (DefaultHelper.IsDefault(local._client.Compensator)) { return default(ESAPIX.Facade.API.Compensator); } else { return new ESAPIX.Facade.API.Compensator(local._client.Compensator); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Compensator)) return default(Compensator);
+                    return new Compensator(local._client.Compensator);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Compensator = value; }
+                if (_client is ExpandoObject) _client.Compensator = value;
             }
         }
-        public ESAPIX.Facade.API.ControlPointCollection ControlPoints
+
+        public ControlPointCollection ControlPoints
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ControlPoints; }
+                if (_client is ExpandoObject) return _client.ControlPoints;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.ControlPointCollection>((sc) => { if (DefaultHelper.IsDefault(local._client.ControlPoints)) { return default(ESAPIX.Facade.API.ControlPointCollection); } else { return new ESAPIX.Facade.API.ControlPointCollection(local._client.ControlPoints); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.ControlPoints)) return default(ControlPointCollection);
+                    return new ControlPointCollection(local._client.ControlPoints);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ControlPoints = value; }
+                if (_client is ExpandoObject) _client.ControlPoints = value;
             }
         }
-        public System.Nullable<System.DateTime> CreationDateTime
+
+        public DateTime? CreationDateTime
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.CreationDateTime; }
+                if (_client is ExpandoObject) return _client.CreationDateTime;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.CreationDateTime; });
+                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.CreationDateTime = value; }
+                if (_client is ExpandoObject) _client.CreationDateTime = value;
             }
         }
-        public ESAPIX.Facade.API.BeamDose Dose
+
+        public BeamDose Dose
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Dose; }
+                if (_client is ExpandoObject) return _client.Dose;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.BeamDose>((sc) => { if (DefaultHelper.IsDefault(local._client.Dose)) { return default(ESAPIX.Facade.API.BeamDose); } else { return new ESAPIX.Facade.API.BeamDose(local._client.Dose); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Dose)) return default(BeamDose);
+                    return new BeamDose(local._client.Dose);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Dose = value; }
+                if (_client is ExpandoObject) _client.Dose = value;
             }
         }
-        public System.Int32 DoseRate
+
+        public int DoseRate
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.DoseRate; }
+                if (_client is ExpandoObject) return _client.DoseRate;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.DoseRate; });
+                return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.DoseRate; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.DoseRate = value; }
+                if (_client is ExpandoObject) _client.DoseRate = value;
             }
         }
-        public System.Double DosimetricLeafGap
+
+        public double DosimetricLeafGap
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.DosimetricLeafGap; }
+                if (_client is ExpandoObject) return _client.DosimetricLeafGap;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.DosimetricLeafGap; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.DosimetricLeafGap; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.DosimetricLeafGap = value; }
+                if (_client is ExpandoObject) _client.DosimetricLeafGap = value;
             }
         }
-        public System.String EnergyModeDisplayName
+
+        public string EnergyModeDisplayName
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.EnergyModeDisplayName; }
+                if (_client is ExpandoObject) return _client.EnergyModeDisplayName;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.EnergyModeDisplayName; });
+                return X.Instance.CurrentContext.GetValue<string>(sc =>
+                {
+                    return local._client.EnergyModeDisplayName;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.EnergyModeDisplayName = value; }
+                if (_client is ExpandoObject) _client.EnergyModeDisplayName = value;
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.FieldReferencePoint> FieldReferencePoints
+
+        public IEnumerable<FieldReferencePoint> FieldReferencePoints
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.FieldReferencePoints;
+                    var asEnum = (IEnumerable) _client.FieldReferencePoints;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.FieldReferencePoint();
+                    var facade = new FieldReferencePoint();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public ESAPIX.Facade.Types.GantryDirection GantryDirection
+
+        public Types.GantryDirection GantryDirection
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.GantryDirection; }
+                if (_client is ExpandoObject) return _client.GantryDirection;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.GantryDirection>((sc) => { return (ESAPIX.Facade.Types.GantryDirection)local._client.GantryDirection; });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    return (Types.GantryDirection) local._client.GantryDirection;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.GantryDirection = value; }
+                if (_client is ExpandoObject) _client.GantryDirection = value;
             }
         }
-        public ESAPIX.Facade.Types.VVector IsocenterPosition
+
+        public Types.VVector IsocenterPosition
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.IsocenterPosition; }
+                if (_client is ExpandoObject) return _client.IsocenterPosition;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.VVector>((sc) => { if (DefaultHelper.IsDefault(local._client.IsocenterPosition)) { return default(ESAPIX.Facade.Types.VVector); } else { return new ESAPIX.Facade.Types.VVector(local._client.IsocenterPosition); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.IsocenterPosition)) return default(Types.VVector);
+                    return new Types.VVector(local._client.IsocenterPosition);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.IsocenterPosition = value; }
+                if (_client is ExpandoObject) _client.IsocenterPosition = value;
             }
         }
-        public System.Boolean IsSetupField
+
+        public bool IsSetupField
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.IsSetupField; }
+                if (_client is ExpandoObject) return _client.IsSetupField;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.IsSetupField; });
+                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsSetupField; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.IsSetupField = value; }
+                if (_client is ExpandoObject) _client.IsSetupField = value;
             }
         }
-        public System.Double MetersetPerGy
+
+        public double MetersetPerGy
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MetersetPerGy; }
+                if (_client is ExpandoObject) return _client.MetersetPerGy;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MetersetPerGy; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MetersetPerGy; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MetersetPerGy = value; }
+                if (_client is ExpandoObject) _client.MetersetPerGy = value;
             }
         }
-        public ESAPIX.Facade.API.MLC MLC
+
+        public MLC MLC
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MLC; }
+                if (_client is ExpandoObject) return _client.MLC;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.MLC>((sc) => { if (DefaultHelper.IsDefault(local._client.MLC)) { return default(ESAPIX.Facade.API.MLC); } else { return new ESAPIX.Facade.API.MLC(local._client.MLC); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.MLC)) return default(MLC);
+                    return new MLC(local._client.MLC);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MLC = value; }
+                if (_client is ExpandoObject) _client.MLC = value;
             }
         }
-        public ESAPIX.Facade.Types.MLCPlanType MLCPlanType
+
+        public Types.MLCPlanType MLCPlanType
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MLCPlanType; }
+                if (_client is ExpandoObject) return _client.MLCPlanType;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.MLCPlanType>((sc) => { return (ESAPIX.Facade.Types.MLCPlanType)local._client.MLCPlanType; });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    return (Types.MLCPlanType) local._client.MLCPlanType;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MLCPlanType = value; }
+                if (_client is ExpandoObject) _client.MLCPlanType = value;
             }
         }
-        public System.Double MLCTransmissionFactor
+
+        public double MLCTransmissionFactor
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MLCTransmissionFactor; }
+                if (_client is ExpandoObject) return _client.MLCTransmissionFactor;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MLCTransmissionFactor; });
+                return X.Instance.CurrentContext.GetValue<double>(sc =>
+                {
+                    return local._client.MLCTransmissionFactor;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MLCTransmissionFactor = value; }
+                if (_client is ExpandoObject) _client.MLCTransmissionFactor = value;
             }
         }
-        public System.Double NormalizationFactor
+
+        public double NormalizationFactor
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.NormalizationFactor; }
+                if (_client is ExpandoObject) return _client.NormalizationFactor;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.NormalizationFactor; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.NormalizationFactor; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.NormalizationFactor = value; }
+                if (_client is ExpandoObject) _client.NormalizationFactor = value;
             }
         }
-        public System.String NormalizationMethod
+
+        public string NormalizationMethod
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.NormalizationMethod; }
+                if (_client is ExpandoObject) return _client.NormalizationMethod;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.NormalizationMethod; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.NormalizationMethod; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.NormalizationMethod = value; }
+                if (_client is ExpandoObject) _client.NormalizationMethod = value;
             }
         }
-        public System.Double PlannedSSD
+
+        public double PlannedSSD
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.PlannedSSD; }
+                if (_client is ExpandoObject) return _client.PlannedSSD;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.PlannedSSD; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.PlannedSSD; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.PlannedSSD = value; }
+                if (_client is ExpandoObject) _client.PlannedSSD = value;
             }
         }
-        public ESAPIX.Facade.API.Image ReferenceImage
+
+        public Image ReferenceImage
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ReferenceImage; }
+                if (_client is ExpandoObject) return _client.ReferenceImage;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Image>((sc) => { if (DefaultHelper.IsDefault(local._client.ReferenceImage)) { return default(ESAPIX.Facade.API.Image); } else { return new ESAPIX.Facade.API.Image(local._client.ReferenceImage); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.ReferenceImage)) return default(Image);
+                    return new Image(local._client.ReferenceImage);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ReferenceImage = value; }
+                if (_client is ExpandoObject) _client.ReferenceImage = value;
             }
         }
-        public ESAPIX.Facade.Types.SetupTechnique SetupTechnique
+
+        public Types.SetupTechnique SetupTechnique
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SetupTechnique; }
+                if (_client is ExpandoObject) return _client.SetupTechnique;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.SetupTechnique>((sc) => { return (ESAPIX.Facade.Types.SetupTechnique)local._client.SetupTechnique; });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    return (Types.SetupTechnique) local._client.SetupTechnique;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SetupTechnique = value; }
+                if (_client is ExpandoObject) _client.SetupTechnique = value;
             }
         }
-        public System.Double SSD
+
+        public double SSD
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SSD; }
+                if (_client is ExpandoObject) return _client.SSD;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.SSD; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SSD; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SSD = value; }
+                if (_client is ExpandoObject) _client.SSD = value;
             }
         }
-        public System.Double SSDAtStopAngle
+
+        public double SSDAtStopAngle
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SSDAtStopAngle; }
+                if (_client is ExpandoObject) return _client.SSDAtStopAngle;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.SSDAtStopAngle; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SSDAtStopAngle; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SSDAtStopAngle = value; }
+                if (_client is ExpandoObject) _client.SSDAtStopAngle = value;
             }
         }
-        public ESAPIX.Facade.API.Technique Technique
+
+        public Technique Technique
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Technique; }
+                if (_client is ExpandoObject) return _client.Technique;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Technique>((sc) => { if (DefaultHelper.IsDefault(local._client.Technique)) { return default(ESAPIX.Facade.API.Technique); } else { return new ESAPIX.Facade.API.Technique(local._client.Technique); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Technique)) return default(Technique);
+                    return new Technique(local._client.Technique);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Technique = value; }
+                if (_client is ExpandoObject) _client.Technique = value;
             }
         }
-        public System.String ToleranceTableLabel
+
+        public string ToleranceTableLabel
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ToleranceTableLabel; }
+                if (_client is ExpandoObject) return _client.ToleranceTableLabel;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.ToleranceTableLabel; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ToleranceTableLabel; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ToleranceTableLabel = value; }
+                if (_client is ExpandoObject) _client.ToleranceTableLabel = value;
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.Tray> Trays
+
+        public IEnumerable<Tray> Trays
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.Trays;
+                    var asEnum = (IEnumerable) _client.Trays;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.Tray();
+                    var facade = new Tray();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public ESAPIX.Facade.API.ExternalBeamTreatmentUnit TreatmentUnit
+
+        public ExternalBeamTreatmentUnit TreatmentUnit
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.TreatmentUnit; }
+                if (_client is ExpandoObject) return _client.TreatmentUnit;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.ExternalBeamTreatmentUnit>((sc) => { if (DefaultHelper.IsDefault(local._client.TreatmentUnit)) { return default(ESAPIX.Facade.API.ExternalBeamTreatmentUnit); } else { return new ESAPIX.Facade.API.ExternalBeamTreatmentUnit(local._client.TreatmentUnit); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.TreatmentUnit)) return default(ExternalBeamTreatmentUnit);
+                    return new ExternalBeamTreatmentUnit(local._client.TreatmentUnit);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.TreatmentUnit = value; }
+                if (_client is ExpandoObject) _client.TreatmentUnit = value;
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.Wedge> Wedges
+
+        public IEnumerable<Wedge> Wedges
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.Wedges;
+                    var asEnum = (IEnumerable) _client.Wedges;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.Wedge();
+                    var facade = new Wedge();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public System.Double WeightFactor
+
+        public double WeightFactor
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.WeightFactor; }
+                if (_client is ExpandoObject) return _client.WeightFactor;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.WeightFactor; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.WeightFactor; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.WeightFactor = value; }
+                if (_client is ExpandoObject) _client.WeightFactor = value;
             }
         }
-        public System.String Id
+
+        public string Id
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Id; }
+                if (_client is ExpandoObject) return _client.Id;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Id; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Id = value; }
+                if (_client is ExpandoObject) _client.Id = value;
             }
         }
-        public ESAPIX.Facade.Types.MetersetValue Meterset
+
+        public Types.MetersetValue Meterset
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Meterset; }
+                if (_client is ExpandoObject) return _client.Meterset;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.MetersetValue>((sc) => { if (DefaultHelper.IsDefault(local._client.Meterset)) { return default(ESAPIX.Facade.Types.MetersetValue); } else { return new ESAPIX.Facade.Types.MetersetValue(local._client.Meterset); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Meterset)) return default(Types.MetersetValue);
+                    return new Types.MetersetValue(local._client.Meterset);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Meterset = value; }
+                if (_client is ExpandoObject) _client.Meterset = value;
             }
         }
-        public ESAPIX.Facade.API.ExternalBeam ExternalBeam
+
+        public ExternalBeam ExternalBeam
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ExternalBeam; }
+                if (_client is ExpandoObject) return _client.ExternalBeam;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.ExternalBeam>((sc) => { if (DefaultHelper.IsDefault(local._client.ExternalBeam)) { return default(ESAPIX.Facade.API.ExternalBeam); } else { return new ESAPIX.Facade.API.ExternalBeam(local._client.ExternalBeam); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.ExternalBeam)) return default(ExternalBeam);
+                    return new ExternalBeam(local._client.ExternalBeam);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ExternalBeam = value; }
+                if (_client is ExpandoObject) _client.ExternalBeam = value;
             }
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
-        public void ApplyParameters(ESAPIX.Facade.API.BeamParameters beamParams)
+
+        public void ApplyParameters(BeamParameters beamParams)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.ApplyParameters(beamParams._client);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ApplyParameters(beamParams._client); });
         }
-        public System.Boolean CanSetOptimalFluence(ESAPIX.Facade.Types.Fluence fluence, out System.String message)
+
+        public bool CanSetOptimalFluence(Types.Fluence fluence, out string message)
         {
-            var message_OUT = default(System.String);
+            var message_OUT = default(string);
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.CanSetOptimalFluence(fluence._client, out message_OUT); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return local._client.CanSetOptimalFluence(fluence._client, out message_OUT);
+            });
             message = message_OUT;
             return retVal;
-
         }
-        public ESAPIX.Facade.API.BeamParameters GetEditableParameters()
+
+        public BeamParameters GetEditableParameters()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.BeamParameters(local._client.GetEditableParameters()); });
-            return retVal;
-
-        }
-        public ESAPIX.Facade.Types.Fluence GetOptimalFluence()
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.Types.Fluence(local._client.GetOptimalFluence()); });
-            return retVal;
-
-        }
-        public ESAPIX.Facade.Types.VVector GetSourceLocation(System.Double gantryAngle)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.Types.VVector(local._client.GetSourceLocation(gantryAngle)); });
-            return retVal;
-
-        }
-        public void SetOptimalFluence(ESAPIX.Facade.Types.Fluence fluence)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                local._client.SetOptimalFluence(fluence._client);
+                return new BeamParameters(local._client.GetEditableParameters());
             });
+            return retVal;
+        }
 
+        public Types.Fluence GetOptimalFluence()
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Types.Fluence(local._client.GetOptimalFluence());
+            });
+            return retVal;
+        }
+
+        public Types.VVector GetSourceLocation(double gantryAngle)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Types.VVector(local._client.GetSourceLocation(gantryAngle));
+            });
+            return retVal;
+        }
+
+        public void SetOptimalFluence(Types.Fluence fluence)
+        {
+            var local = this;
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetOptimalFluence(fluence._client); });
         }
     }
 }

@@ -1,5 +1,9 @@
-﻿using ESAPIX.Facade.API;
+﻿#region
+
+using ESAPIX.Facade.API;
 using static ESAPIX.DVH.Constraints.ResultType;
+
+#endregion
 
 namespace ESAPIX.DVH.Constraints
 {

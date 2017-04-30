@@ -1,4 +1,8 @@
-﻿using ESAPIX.DVH.Constraints;
+﻿#region
+
+using ESAPIX.DVH.Constraints;
+
+#endregion
 
 namespace ESAPIX.DVH
 {

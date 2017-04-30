@@ -1,4 +1,8 @@
-﻿using ESAPIX.Facade.Types;
+﻿#region
+
+using ESAPIX.Facade.Types;
+
+#endregion
 
 namespace ESAPIX.Facade
 {

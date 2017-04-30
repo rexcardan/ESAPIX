@@ -1,5 +1,9 @@
-﻿using System.Reflection;
+﻿#region
+
+using System.Reflection;
 using System.Windows;
+
+#endregion
 
 namespace ESAPIX.AppKit.Splash
 {

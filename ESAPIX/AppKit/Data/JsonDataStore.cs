@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters;
 using Newtonsoft.Json;
+
+#endregion
 
 namespace ESAPIX.AppKit.Data
 {

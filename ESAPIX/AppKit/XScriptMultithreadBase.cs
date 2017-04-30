@@ -1,6 +1,10 @@
-﻿using System.Windows;
+﻿#region
+
+using System.Windows;
 using System.Windows.Threading;
 using ESAPIX.Facade.API;
+
+#endregion
 
 namespace ESAPIX.AppKit
 {

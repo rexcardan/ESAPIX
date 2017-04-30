@@ -1,7 +1,11 @@
-﻿using ESAPIX.DVH.Constraints;
+﻿#region
+
+using ESAPIX.DVH.Constraints;
 using ESAPIX.DVH.Query;
 using ESAPIX.Facade.Types;
 using static ESAPIX.Facade.Types.DoseValue;
+
+#endregion
 
 namespace ESAPIX.DVH
 {
@@ -69,7 +73,7 @@ namespace ESAPIX.DVH
             var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
             var dose = mc.ConstraintValue;
             var dv = new DoseValue(dose, doseUnit);
-            c = new MaxDoseConstraint { ConstraintDose = dv, StructureName = structureName, Priority = priority };
+            c = new MaxDoseConstraint {ConstraintDose = dv, StructureName = structureName, Priority = priority};
         }
 
         private static void BuildMinDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority,
@@ -78,7 +82,7 @@ namespace ESAPIX.DVH
             var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
             var dose = mc.ConstraintValue;
             var dv = new DoseValue(dose, doseUnit);
-            c = new MinDoseConstraint { ConstraintDose = dv, StructureName = structureName, Priority = priority };
+            c = new MinDoseConstraint {ConstraintDose = dv, StructureName = structureName, Priority = priority};
         }
 
         private static void BuildDoseAtVolumeConstraint(MayoConstraint mc, string structureName, PriorityType priority,

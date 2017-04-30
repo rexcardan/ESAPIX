@@ -1,142 +1,178 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class DVHData : ESAPIX.Facade.API.SerializableObject
+    public class DVHData : SerializableObject
     {
-        public DVHData() { _client = new ExpandoObject(); }
-        public DVHData(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public System.Double Coverage
+        public DVHData()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public DVHData(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public double Coverage
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Coverage; }
+                if (_client is ExpandoObject) return _client.Coverage;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Coverage; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Coverage; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Coverage = value; }
+                if (_client is ExpandoObject) _client.Coverage = value;
             }
         }
-        public ESAPIX.Facade.Types.DVHPoint[] CurveData
+
+        public Types.DVHPoint[] CurveData
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.CurveData; }
+                if (_client is ExpandoObject) return _client.CurveData;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DVHPoint[]>((sc) => { return ArrayHelper.GenerateDVHPointArray(local._client.CurveData); });
+                return X.Instance.CurrentContext.GetValue<Types.DVHPoint[]>(sc =>
+                {
+                    return ArrayHelper.GenerateDVHPointArray(local._client.CurveData);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.CurveData = value; }
+                if (_client is ExpandoObject) _client.CurveData = value;
             }
         }
-        public ESAPIX.Facade.Types.DoseValue MaxDose
+
+        public Types.DoseValue MaxDose
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MaxDose; }
+                if (_client is ExpandoObject) return _client.MaxDose;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { if (DefaultHelper.IsDefault(local._client.MaxDose)) { return default(ESAPIX.Facade.Types.DoseValue); } else { return new ESAPIX.Facade.Types.DoseValue(local._client.MaxDose); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.MaxDose)) return default(Types.DoseValue);
+                    return new Types.DoseValue(local._client.MaxDose);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MaxDose = value; }
+                if (_client is ExpandoObject) _client.MaxDose = value;
             }
         }
-        public ESAPIX.Facade.Types.DoseValue MeanDose
+
+        public Types.DoseValue MeanDose
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MeanDose; }
+                if (_client is ExpandoObject) return _client.MeanDose;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { if (DefaultHelper.IsDefault(local._client.MeanDose)) { return default(ESAPIX.Facade.Types.DoseValue); } else { return new ESAPIX.Facade.Types.DoseValue(local._client.MeanDose); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.MeanDose)) return default(Types.DoseValue);
+                    return new Types.DoseValue(local._client.MeanDose);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MeanDose = value; }
+                if (_client is ExpandoObject) _client.MeanDose = value;
             }
         }
-        public ESAPIX.Facade.Types.DoseValue MedianDose
+
+        public Types.DoseValue MedianDose
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MedianDose; }
+                if (_client is ExpandoObject) return _client.MedianDose;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { if (DefaultHelper.IsDefault(local._client.MedianDose)) { return default(ESAPIX.Facade.Types.DoseValue); } else { return new ESAPIX.Facade.Types.DoseValue(local._client.MedianDose); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.MedianDose)) return default(Types.DoseValue);
+                    return new Types.DoseValue(local._client.MedianDose);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MedianDose = value; }
+                if (_client is ExpandoObject) _client.MedianDose = value;
             }
         }
-        public ESAPIX.Facade.Types.DoseValue MinDose
+
+        public Types.DoseValue MinDose
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MinDose; }
+                if (_client is ExpandoObject) return _client.MinDose;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { if (DefaultHelper.IsDefault(local._client.MinDose)) { return default(ESAPIX.Facade.Types.DoseValue); } else { return new ESAPIX.Facade.Types.DoseValue(local._client.MinDose); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.MinDose)) return default(Types.DoseValue);
+                    return new Types.DoseValue(local._client.MinDose);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MinDose = value; }
+                if (_client is ExpandoObject) _client.MinDose = value;
             }
         }
-        public System.Double SamplingCoverage
+
+        public double SamplingCoverage
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SamplingCoverage; }
+                if (_client is ExpandoObject) return _client.SamplingCoverage;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.SamplingCoverage; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SamplingCoverage; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SamplingCoverage = value; }
+                if (_client is ExpandoObject) _client.SamplingCoverage = value;
             }
         }
-        public System.Double StdDev
+
+        public double StdDev
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.StdDev; }
+                if (_client is ExpandoObject) return _client.StdDev;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.StdDev; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.StdDev; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.StdDev = value; }
+                if (_client is ExpandoObject) _client.StdDev = value;
             }
         }
-        public System.Double Volume
+
+        public double Volume
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Volume; }
+                if (_client is ExpandoObject) return _client.Volume;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Volume; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Volume; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Volume = value; }
+                if (_client is ExpandoObject) _client.Volume = value;
             }
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

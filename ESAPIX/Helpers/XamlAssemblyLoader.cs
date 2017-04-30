@@ -1,9 +1,13 @@
-﻿using System.Runtime.Serialization.Formatters;
+﻿#region
+
+using System.Runtime.Serialization.Formatters;
 using System.Windows;
 using Prism.Interactivity;
 using Prism.Mvvm;
 using i = System.Windows.Interactivity;
 using x = Microsoft.Expression.Interactivity;
+
+#endregion
 
 namespace ESAPIX.Helpers
 {

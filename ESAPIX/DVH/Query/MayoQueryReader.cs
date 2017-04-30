@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Text.RegularExpressions;
+
+#endregion
 
 namespace ESAPIX.DVH.Query
 {

@@ -1,4 +1,8 @@
-﻿using ESAPIX.Facade.API;
+﻿#region
+
+using ESAPIX.Facade.API;
+
+#endregion
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -26,7 +30,7 @@ namespace ESAPIX.DVH.Constraints
             else
             {
                 var canConstrain = true;
-                foreach (var ps in ((PlanSum)pi).PlanSetups)
+                foreach (var ps in ((PlanSum) pi).PlanSetups)
                     canConstrain = canConstrain && ps.UniqueFractionation.NumberOfFractions != null;
                 if (!canConstrain)
                 {
@@ -46,15 +50,15 @@ namespace ESAPIX.DVH.Constraints
                 var ps = pi as PlanSetup;
                 if (ps.UniqueFractionation.NumberOfFractions != null)
                 {
-                    actualFractions = (int)ps.UniqueFractionation.NumberOfFractions;
+                    actualFractions = (int) ps.UniqueFractionation.NumberOfFractions;
                     if (actualFractions == NumOfFractions)
                         passed = true;
                 }
             }
             else if (pi is PlanSum)
             {
-                foreach (var ps in ((PlanSum)pi).PlanSetups)
-                    actualFractions += (int)ps.UniqueFractionation.NumberOfFractions;
+                foreach (var ps in ((PlanSum) pi).PlanSetups)
+                    actualFractions += (int) ps.UniqueFractionation.NumberOfFractions;
                 if (actualFractions == NumOfFractions)
                     passed = true;
             }

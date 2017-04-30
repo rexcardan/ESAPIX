@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Windows;
 using System.Windows.Media.Animation;
+
+#endregion
 
 namespace ESAPIX.AppKit.Splash
 {

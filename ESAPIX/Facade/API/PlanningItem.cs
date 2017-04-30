@@ -1,71 +1,95 @@
+#region
+
 using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class PlanningItem : ESAPIX.Facade.API.ApiDataObject
+    public class PlanningItem : ApiDataObject
     {
-        public PlanningItem() { _client = new ExpandoObject(); }
-        public PlanningItem(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public System.Nullable<System.DateTime> CreationDateTime
+        public PlanningItem()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public PlanningItem(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public DateTime? CreationDateTime
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.CreationDateTime; }
+                if (_client is ExpandoObject) return _client.CreationDateTime;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.CreationDateTime; });
+                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.CreationDateTime = value; }
+                if (_client is ExpandoObject) _client.CreationDateTime = value;
             }
         }
-        public ESAPIX.Facade.API.PlanningItemDose Dose
+
+        public PlanningItemDose Dose
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Dose; }
+                if (_client is ExpandoObject) return _client.Dose;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.PlanningItemDose>((sc) => { if (DefaultHelper.IsDefault(local._client.Dose)) { return default(ESAPIX.Facade.API.PlanningItemDose); } else { return new ESAPIX.Facade.API.PlanningItemDose(local._client.Dose); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Dose)) return default(PlanningItemDose);
+                    return new PlanningItemDose(local._client.Dose);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Dose = value; }
+                if (_client is ExpandoObject) _client.Dose = value;
             }
         }
-        public ESAPIX.Facade.Types.DoseValuePresentation DoseValuePresentation
+
+        public Types.DoseValuePresentation DoseValuePresentation
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.DoseValuePresentation; }
+                if (_client is ExpandoObject) return _client.DoseValuePresentation;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValuePresentation>((sc) => { return (ESAPIX.Facade.Types.DoseValuePresentation)local._client.DoseValuePresentation; });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    return (Types.DoseValuePresentation) local._client.DoseValuePresentation;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.DoseValuePresentation = value; }
+                if (_client is ExpandoObject) _client.DoseValuePresentation = value;
             }
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
-        public ESAPIX.Facade.API.DVHData GetDVHCumulativeData(ESAPIX.Facade.API.Structure structure, ESAPIX.Facade.Types.DoseValuePresentation dosePresentation, ESAPIX.Facade.Types.VolumePresentation volumePresentation, System.Double binWidth)
+
+        public DVHData GetDVHCumulativeData(Structure structure, Types.DoseValuePresentation dosePresentation,
+            Types.VolumePresentation volumePresentation, double binWidth)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.DVHData(local._client.GetDVHCumulativeData(structure._client, (ESAPIX.Facade.Types.DoseValuePresentation)dosePresentation, (ESAPIX.Facade.Types.VolumePresentation)volumePresentation, binWidth)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new DVHData(local._client.GetDVHCumulativeData(structure._client, dosePresentation,
+                    volumePresentation, binWidth));
+            });
             return retVal;
-
         }
     }
 }

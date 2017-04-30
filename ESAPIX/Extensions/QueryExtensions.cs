@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using ESAPIX.DVH.Query;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
+
+#endregion
 
 namespace ESAPIX.Extensions
 {

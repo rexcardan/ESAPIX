@@ -1,5 +1,9 @@
-﻿using System.IO;
+﻿#region
+
+using System.IO;
 using System.Reflection;
+
+#endregion
 
 namespace ESAPIX.AppKit.Data
 {

@@ -1,22 +1,35 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
+
+#endregion
 
 namespace ESAPIX.Facade.Types
 {
     public class LineProfile
     {
         internal dynamic _client;
-        public LineProfile() { _client = new ExpandoObject(); }
-        public LineProfile(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public LineProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data)
+
+        public LineProfile()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public LineProfile(dynamic client)
+        {
+            _client = client;
+        }
+
+        public LineProfile(VVector origin, VVector step, double[] data)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructLineProfile(origin, step, data); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructLineProfile(origin, step, data);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
@@ -25,30 +38,41 @@ namespace ESAPIX.Facade.Types
                 _client.Data = data;
             }
         }
-        public ESAPIX.Facade.Types.ProfilePoint Item
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public ProfilePoint this[int index]
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Item; }
+                if (_client is ExpandoObject) return _client[index];
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.ProfilePoint>((sc) => { if (DefaultHelper.IsDefault(local._client.Item)) { return default(ESAPIX.Facade.Types.ProfilePoint); } else { return new ESAPIX.Facade.Types.ProfilePoint(local._client.Item); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client[index])) return default(ProfilePoint);
+                    return new ProfilePoint(local._client[index]);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Item = value; }
+                if (_client is ExpandoObject) _client[index] = value;
             }
         }
-        public System.Int32 Count
+
+        public int Count
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Count; }
+                if (_client is ExpandoObject) return _client.Count;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.Count; });
+                return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.Count; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Count = value; }
+                if (_client is ExpandoObject) _client.Count = value;
             }
         }
     }

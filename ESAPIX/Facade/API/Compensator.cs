@@ -1,64 +1,87 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.API
 {
-    public class Compensator : ESAPIX.Facade.API.ApiDataObject
+    public class Compensator : ApiDataObject
     {
-        public Compensator() { _client = new ExpandoObject(); }
-        public Compensator(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public ESAPIX.Facade.API.AddOnMaterial Material
+        public Compensator()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public Compensator(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public AddOnMaterial Material
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Material; }
+                if (_client is ExpandoObject) return _client.Material;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.AddOnMaterial>((sc) => { if (DefaultHelper.IsDefault(local._client.Material)) { return default(ESAPIX.Facade.API.AddOnMaterial); } else { return new ESAPIX.Facade.API.AddOnMaterial(local._client.Material); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Material)) return default(AddOnMaterial);
+                    return new AddOnMaterial(local._client.Material);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Material = value; }
+                if (_client is ExpandoObject) _client.Material = value;
             }
         }
-        public ESAPIX.Facade.API.Slot Slot
+
+        public Slot Slot
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Slot; }
+                if (_client is ExpandoObject) return _client.Slot;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Slot>((sc) => { if (DefaultHelper.IsDefault(local._client.Slot)) { return default(ESAPIX.Facade.API.Slot); } else { return new ESAPIX.Facade.API.Slot(local._client.Slot); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Slot)) return default(Slot);
+                    return new Slot(local._client.Slot);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Slot = value; }
+                if (_client is ExpandoObject) _client.Slot = value;
             }
         }
-        public ESAPIX.Facade.API.Tray Tray
+
+        public Tray Tray
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Tray; }
+                if (_client is ExpandoObject) return _client.Tray;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Tray>((sc) => { if (DefaultHelper.IsDefault(local._client.Tray)) { return default(ESAPIX.Facade.API.Tray); } else { return new ESAPIX.Facade.API.Tray(local._client.Tray); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Tray)) return default(Tray);
+                    return new Tray(local._client.Tray);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Tray = value; }
+                if (_client is ExpandoObject) _client.Tray = value;
             }
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

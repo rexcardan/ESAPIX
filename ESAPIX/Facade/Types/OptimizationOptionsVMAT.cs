@@ -1,21 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
+#endregion
+
 namespace ESAPIX.Facade.Types
 {
-    public class OptimizationOptionsVMAT : ESAPIX.Facade.Types.OptimizationOptionsBase
+    public class OptimizationOptionsVMAT : OptimizationOptionsBase
     {
-        public OptimizationOptionsVMAT() { _client = new ExpandoObject(); }
-        public OptimizationOptionsVMAT(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOption startOption, System.String mlcId)
+        public OptimizationOptionsVMAT()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public OptimizationOptionsVMAT(dynamic client)
+        {
+            _client = client;
+        }
+
+        public OptimizationOptionsVMAT(OptimizationOption startOption, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, mlcId); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, mlcId);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
@@ -23,10 +35,16 @@ namespace ESAPIX.Facade.Types
                 _client.MlcId = mlcId;
             }
         }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.String mlcId)
+
+        public OptimizationOptionsVMAT(OptimizationIntermediateDoseOption intermediateDoseOption, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(intermediateDoseOption, mlcId); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructOptimizationOptionsVMAT(intermediateDoseOption, mlcId);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
@@ -34,10 +52,16 @@ namespace ESAPIX.Facade.Types
                 _client.MlcId = mlcId;
             }
         }
-        public OptimizationOptionsVMAT(System.Int32 numberOfCycles, System.String mlcId)
+
+        public OptimizationOptionsVMAT(int numberOfCycles, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(numberOfCycles, mlcId); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructOptimizationOptionsVMAT(numberOfCycles, mlcId);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
@@ -45,10 +69,18 @@ namespace ESAPIX.Facade.Types
                 _client.MlcId = mlcId;
             }
         }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOption startOption, ESAPIX.Facade.Types.OptimizationIntermediateDoseOption intermediateDoseOption, System.Int32 numberOfCycles, System.String mlcId)
+
+        public OptimizationOptionsVMAT(OptimizationOption startOption,
+            OptimizationIntermediateDoseOption intermediateDoseOption, int numberOfCycles, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, intermediateDoseOption, numberOfCycles, mlcId); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, intermediateDoseOption,
+                        numberOfCycles, mlcId);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
@@ -58,27 +90,42 @@ namespace ESAPIX.Facade.Types
                 _client.MlcId = mlcId;
             }
         }
-        public OptimizationOptionsVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT options)
+
+        public OptimizationOptionsVMAT(OptimizationOptionsVMAT options)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructOptimizationOptionsVMAT(options); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructOptimizationOptionsVMAT(options);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
                 _client.Options = options;
             }
         }
-        public System.Int32 NumberOfOptimizationCycles
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public int NumberOfOptimizationCycles
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.NumberOfOptimizationCycles; }
+                if (_client is ExpandoObject) return _client.NumberOfOptimizationCycles;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.NumberOfOptimizationCycles; });
+                return X.Instance.CurrentContext.GetValue<int>(sc =>
+                {
+                    return local._client.NumberOfOptimizationCycles;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.NumberOfOptimizationCycles = value; }
+                if (_client is ExpandoObject) _client.NumberOfOptimizationCycles = value;
             }
         }
     }

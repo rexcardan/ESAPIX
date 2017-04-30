@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Threading.Tasks;
+
+#endregion
 
 namespace ESAPIX.Interfaces
 {

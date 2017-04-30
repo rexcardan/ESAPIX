@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ESAPIX.Extensions;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
 using Newtonsoft.Json;
+
+#endregion
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -41,7 +45,7 @@ namespace ESAPIX.DVH.Constraints
         ///     Splits structure names separated by & character
         /// </summary>
         [JsonIgnore]
-        public string[] StructureNames => StructureName.Split(new[] { "&" }, StringSplitOptions.RemoveEmptyEntries);
+        public string[] StructureNames => StructureName.Split(new[] {"&"}, StringSplitOptions.RemoveEmptyEntries);
 
         public virtual string Name => ToString();
         public string FullName => $"{StructureName} {Name}";

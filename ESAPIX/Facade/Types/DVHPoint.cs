@@ -1,22 +1,35 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
+#region
+
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
+
+#endregion
 
 namespace ESAPIX.Facade.Types
 {
     public class DVHPoint
     {
         internal dynamic _client;
-        public DVHPoint() { _client = new ExpandoObject(); }
-        public DVHPoint(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public DVHPoint(ESAPIX.Facade.Types.DoseValue dose, System.Double volume, System.String volumeUnit)
+
+        public DVHPoint()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public DVHPoint(dynamic client)
+        {
+            _client = client;
+        }
+
+        public DVHPoint(DoseValue dose, double volume, string volumeUnit)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDVHPoint(dose, volume, volumeUnit); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructDVHPoint(dose, volume, volumeUnit);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
@@ -25,69 +38,75 @@ namespace ESAPIX.Facade.Types
                 _client.VolumeUnit = volumeUnit;
             }
         }
-        public ESAPIX.Facade.Types.DoseValue DoseValue
+
+        public bool IsLive
+        {
+            get { return !DefaultHelper.IsDefault(_client); }
+        }
+
+        public DoseValue DoseValue
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.DoseValue; }
+                if (_client is ExpandoObject) return _client.DoseValue;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { if (DefaultHelper.IsDefault(local._client.DoseValue)) { return default(ESAPIX.Facade.Types.DoseValue); } else { return new ESAPIX.Facade.Types.DoseValue(local._client.DoseValue); } });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.DoseValue)) return default(DoseValue);
+                    return new DoseValue(local._client.DoseValue);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.DoseValue = value; }
+                if (_client is ExpandoObject) _client.DoseValue = value;
             }
         }
-        public System.Double Volume
+
+        public double Volume
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Volume; }
+                if (_client is ExpandoObject) return _client.Volume;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Volume; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Volume; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Volume = value; }
+                if (_client is ExpandoObject) _client.Volume = value;
             }
         }
-        public System.String VolumeUnit
+
+        public string VolumeUnit
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.VolumeUnit; }
+                if (_client is ExpandoObject) return _client.VolumeUnit;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.VolumeUnit; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.VolumeUnit; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.VolumeUnit = value; }
+                if (_client is ExpandoObject) _client.VolumeUnit = value;
             }
         }
+
         public System.Xml.Schema.XmlSchema GetSchema()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetSchema(); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetSchema(); });
             return retVal;
-
         }
+
         public void ReadXml(System.Xml.XmlReader reader)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.ReadXml(reader);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ReadXml(reader); });
         }
+
         public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

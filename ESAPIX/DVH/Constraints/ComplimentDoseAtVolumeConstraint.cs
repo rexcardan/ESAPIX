@@ -1,9 +1,13 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Linq;
 using ESAPIX.Extensions;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
 using Newtonsoft.Json;
+
+#endregion
 
 namespace ESAPIX.DVH.Constraints
 {

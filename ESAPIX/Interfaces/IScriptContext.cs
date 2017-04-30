@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ESAPIX.Facade.API;
 using static ESAPIX.AppKit.StandAloneContext;
+
+#endregion
 
 namespace ESAPIX.Interfaces
 {

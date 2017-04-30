@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections;
 using ESAPIX.Facade.Types;
+
+#endregion
 
 namespace ESAPIX.Facade
 

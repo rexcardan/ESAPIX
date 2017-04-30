@@ -1,5 +1,9 @@
-﻿using System.Windows;
+﻿#region
+
+using System.Windows;
 using ESAPIX.Facade.API;
+
+#endregion
 
 namespace ESAPIX.AppKit
 {
