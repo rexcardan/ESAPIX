@@ -98,6 +98,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("Blocks")
+                        ? _client.Blocks
+                        : default(IEnumerable<Block>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -117,12 +121,20 @@ namespace ESAPIX.Facade.API
                         yield return facade;
                 }
             }
+            set
+            {
+                if (_client is ExpandoObject) _client.Blocks = value;
+            }
         }
 
         public IEnumerable<Bolus> Boluses
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("Boluses")
+                        ? _client.Boluses
+                        : default(IEnumerable<Bolus>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -142,12 +154,20 @@ namespace ESAPIX.Facade.API
                         yield return facade;
                 }
             }
+            set
+            {
+                if (_client is ExpandoObject) _client.Boluses = value;
+            }
         }
 
         public IEnumerable<BeamCalculationLog> CalculationLogs
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("CalculationLogs")
+                        ? _client.CalculationLogs
+                        : default(IEnumerable<BeamCalculationLog>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -166,6 +186,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.CalculationLogs = value;
             }
         }
 
@@ -303,6 +327,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("FieldReferencePoints")
+                        ? _client.FieldReferencePoints
+                        : default(IEnumerable<FieldReferencePoint>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -321,6 +349,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.FieldReferencePoints = value;
             }
         }
 
@@ -620,6 +652,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("Trays")
+                        ? _client.Trays
+                        : default(IEnumerable<Tray>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -638,6 +674,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.Trays = value;
             }
         }
 
@@ -666,6 +706,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("Wedges")
+                        ? _client.Wedges
+                        : default(IEnumerable<Wedge>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -684,6 +728,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.Wedges = value;
             }
         }
 

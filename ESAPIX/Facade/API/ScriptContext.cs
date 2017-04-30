@@ -209,6 +209,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("PlansInScope")
+                        ? _client.PlansInScope
+                        : default(IEnumerable<PlanSetup>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -228,12 +232,20 @@ namespace ESAPIX.Facade.API
                         yield return facade;
                 }
             }
+            set
+            {
+                if (_client is ExpandoObject) _client.PlansInScope = value;
+            }
         }
 
         public IEnumerable<ExternalPlanSetup> ExternalPlansInScope
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("ExternalPlansInScope")
+                        ? _client.ExternalPlansInScope
+                        : default(IEnumerable<ExternalPlanSetup>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -253,12 +265,20 @@ namespace ESAPIX.Facade.API
                         yield return facade;
                 }
             }
+            set
+            {
+                if (_client is ExpandoObject) _client.ExternalPlansInScope = value;
+            }
         }
 
         public IEnumerable<BrachyPlanSetup> BrachyPlansInScope
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("BrachyPlansInScope")
+                        ? _client.BrachyPlansInScope
+                        : default(IEnumerable<BrachyPlanSetup>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -278,12 +298,20 @@ namespace ESAPIX.Facade.API
                         yield return facade;
                 }
             }
+            set
+            {
+                if (_client is ExpandoObject) _client.BrachyPlansInScope = value;
+            }
         }
 
         public IEnumerable<PlanSum> PlanSumsInScope
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("PlanSumsInScope")
+                        ? _client.PlanSumsInScope
+                        : default(IEnumerable<PlanSum>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -302,6 +330,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.PlanSumsInScope = value;
             }
         }
 

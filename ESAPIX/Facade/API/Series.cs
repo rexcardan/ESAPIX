@@ -46,6 +46,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("Images")
+                        ? _client.Images
+                        : default(IEnumerable<Image>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -64,6 +68,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.Images = value;
             }
         }
 

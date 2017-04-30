@@ -49,6 +49,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("Catheters")
+                        ? _client.Catheters
+                        : default(IEnumerable<Catheter>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -67,6 +71,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.Catheters = value;
             }
         }
 
@@ -108,6 +116,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("SeedCollections")
+                        ? _client.SeedCollections
+                        : default(IEnumerable<SeedCollection>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -127,12 +139,20 @@ namespace ESAPIX.Facade.API
                         yield return facade;
                 }
             }
+            set
+            {
+                if (_client is ExpandoObject) _client.SeedCollections = value;
+            }
         }
 
         public IEnumerable<BrachySolidApplicator> SolidApplicators
         {
             get
             {
+                if (_client is ExpandoObject)
+                    yield return (_client as ExpandoObject).HasProperty("SolidApplicators")
+                        ? _client.SolidApplicators
+                        : default(IEnumerable<BrachySolidApplicator>);
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
@@ -151,6 +171,10 @@ namespace ESAPIX.Facade.API
                     if (facade._client != null)
                         yield return facade;
                 }
+            }
+            set
+            {
+                if (_client is ExpandoObject) _client.SolidApplicators = value;
             }
         }
 

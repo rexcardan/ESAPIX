@@ -65,6 +65,10 @@ namespace ESAPIX.Facade.API
                         yield return facade;
                 }
             }
+            set
+            {
+                if (_client is ExpandoObject) _client.MessageLines = value;
+            }
         }
 
         public void WriteXml(System.Xml.XmlWriter writer)
