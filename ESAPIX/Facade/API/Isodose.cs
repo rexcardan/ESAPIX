@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Color;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Color")
+                        ? _client.Color
+                        : default(System.Windows.Media.Color);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>(sc =>
                 {
@@ -45,7 +49,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Level;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Level") ? _client.Level : default(Types.DoseValue);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -63,7 +68,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MeshGeometry;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MeshGeometry")
+                        ? _client.MeshGeometry
+                        : default(System.Windows.Media.Media3D.MeshGeometry3D);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Media3D.MeshGeometry3D>(sc =>
                 {

@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DistanceFromTargetBorderInMM;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("DistanceFromTargetBorderInMM")
+                        ? _client.DistanceFromTargetBorderInMM
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc =>
                 {
@@ -45,7 +49,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.EndDosePercentage;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("EndDosePercentage")
+                        ? _client.EndDosePercentage
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.EndDosePercentage; });
             }
@@ -59,7 +66,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.FallOff;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("FallOff") ? _client.FallOff : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.FallOff; });
             }
@@ -73,7 +81,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.IsAutomatic;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("IsAutomatic") ? _client.IsAutomatic : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsAutomatic; });
             }
@@ -87,7 +96,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Priority;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Priority") ? _client.Priority : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Priority; });
             }
@@ -101,7 +111,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StartDosePercentage;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("StartDosePercentage")
+                        ? _client.StartDosePercentage
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.StartDosePercentage; });
             }

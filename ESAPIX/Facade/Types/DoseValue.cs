@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -72,7 +73,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Dose;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Dose") ? _client.Dose : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Dose; });
             }
@@ -86,7 +88,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Unit;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Unit") ? _client.Unit : default(DoseUnit);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc => { return (DoseUnit) local._client.Unit; });
             }
@@ -100,7 +103,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.UnitAsString;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("UnitAsString")
+                        ? _client.UnitAsString
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UnitAsString; });
             }
@@ -114,7 +120,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ValueAsString;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ValueAsString")
+                        ? _client.ValueAsString
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ValueAsString; });
             }
@@ -128,7 +137,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Decimals;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Decimals") ? _client.Decimals : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.Decimals; });
             }

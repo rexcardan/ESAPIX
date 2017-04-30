@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -30,7 +31,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ApplicatorLength;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ApplicatorLength")
+                        ? _client.ApplicatorLength
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.ApplicatorLength; });
             }
@@ -44,7 +48,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.BrachySolidApplicatorPartID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("BrachySolidApplicatorPartID")
+                        ? _client.BrachySolidApplicatorPartID
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc =>
                 {
@@ -61,7 +68,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ChannelNumber;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ChannelNumber")
+                        ? _client.ChannelNumber
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.ChannelNumber; });
             }
@@ -75,7 +85,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Color;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Color")
+                        ? _client.Color
+                        : default(System.Windows.Media.Color);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>(sc =>
                 {
@@ -92,7 +105,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Shape;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Shape") ? _client.Shape : default(Types.VVector[]);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<Types.VVector[]>(sc =>
                 {
@@ -134,7 +148,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StepSize;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("StepSize") ? _client.StepSize : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.StepSize; });
             }
@@ -148,7 +163,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentUnit;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TreatmentUnit")
+                        ? _client.TreatmentUnit
+                        : default(BrachyTreatmentUnit);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {

@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -30,7 +31,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Color;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Color")
+                        ? _client.Color
+                        : default(System.Windows.Media.Color);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>(sc =>
                 {

@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Beam;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Beam") ? _client.Beam : default(Beam);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -46,7 +48,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.BeamId;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("BeamId") ? _client.BeamId : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.BeamId; });
             }
@@ -60,7 +63,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Excluded;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Excluded") ? _client.Excluded : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.Excluded; });
             }
@@ -74,7 +78,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.FixedJaws;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("FixedJaws") ? _client.FixedJaws : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.FixedJaws; });
             }
@@ -88,7 +93,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SmoothX;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SmoothX") ? _client.SmoothX : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SmoothX; });
             }
@@ -102,7 +108,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SmoothY;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SmoothY") ? _client.SmoothY : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SmoothY; });
             }

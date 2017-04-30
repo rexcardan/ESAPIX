@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -57,7 +58,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.GantryDirection;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("GantryDirection")
+                        ? _client.GantryDirection
+                        : default(Types.GantryDirection);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -74,7 +78,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Isocenter;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Isocenter")
+                        ? _client.Isocenter
+                        : default(Types.VVector);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -92,7 +99,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.WeightFactor;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("WeightFactor")
+                        ? _client.WeightFactor
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.WeightFactor; });
             }

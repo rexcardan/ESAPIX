@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -31,7 +32,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ApplicationSetupType;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ApplicationSetupType")
+                        ? _client.ApplicationSetupType
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ApplicationSetupType; });
             }
@@ -70,7 +74,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfPdrPulses;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("NumberOfPdrPulses")
+                        ? _client.NumberOfPdrPulses
+                        : default(int?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int?>(sc => { return local._client.NumberOfPdrPulses; });
             }
@@ -84,7 +91,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PdrPulseInterval;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PdrPulseInterval")
+                        ? _client.PdrPulseInterval
+                        : default(double?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double?>(sc => { return local._client.PdrPulseInterval; });
             }
@@ -148,7 +158,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentDateTime;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TreatmentDateTime")
+                        ? _client.TreatmentDateTime
+                        : default(DateTime?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.TreatmentDateTime; });
             }
@@ -162,7 +175,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentTechnique;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TreatmentTechnique")
+                        ? _client.TreatmentTechnique
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.TreatmentTechnique; });
             }

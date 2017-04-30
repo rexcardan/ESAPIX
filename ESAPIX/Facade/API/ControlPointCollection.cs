@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client[index];
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("this[int index]")
+                        ? _client[index]
+                        : default(ControlPoint);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -46,7 +50,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Count;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Count") ? _client.Count : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.Count; });
             }

@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -30,7 +31,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Success;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Success") ? _client.Success : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.Success; });
             }

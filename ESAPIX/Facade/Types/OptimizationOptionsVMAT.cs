@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -116,7 +117,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfOptimizationCycles;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("NumberOfOptimizationCycles")
+                        ? _client.NumberOfOptimizationCycles
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc =>
                 {

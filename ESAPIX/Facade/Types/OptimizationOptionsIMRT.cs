@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -95,7 +96,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ConvergenceOption;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ConvergenceOption")
+                        ? _client.ConvergenceOption
+                        : default(OptimizationConvergenceOption);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -112,7 +116,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfStepsBeforeIntermediateDose;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("NumberOfStepsBeforeIntermediateDose")
+                        ? _client.NumberOfStepsBeforeIntermediateDose
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc =>
                 {
@@ -129,7 +136,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaximumNumberOfIterations;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MaximumNumberOfIterations")
+                        ? _client.MaximumNumberOfIterations
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(
                     sc => { return local._client.MaximumNumberOfIterations; });

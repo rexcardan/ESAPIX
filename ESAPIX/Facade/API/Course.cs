@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -31,7 +32,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CompletedDateTime;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CompletedDateTime")
+                        ? _client.CompletedDateTime
+                        : default(DateTime?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CompletedDateTime; });
             }
@@ -70,7 +74,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Intent;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Intent") ? _client.Intent : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Intent; });
             }
@@ -84,7 +89,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Patient;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Patient") ? _client.Patient : default(Patient);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -127,7 +133,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StartDateTime;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("StartDateTime")
+                        ? _client.StartDateTime
+                        : default(DateTime?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.StartDateTime; });
             }
@@ -141,7 +150,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Id;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Id") ? _client.Id : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
             }

@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -30,7 +31,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Course;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Course") ? _client.Course : default(Course);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -73,7 +75,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StructureSet;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("StructureSet")
+                        ? _client.StructureSet
+                        : default(StructureSet);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {

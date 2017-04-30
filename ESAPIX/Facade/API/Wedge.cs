@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Direction;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Direction") ? _client.Direction : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Direction; });
             }
@@ -42,7 +44,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.WedgeAngle;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("WedgeAngle") ? _client.WedgeAngle : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.WedgeAngle; });
             }

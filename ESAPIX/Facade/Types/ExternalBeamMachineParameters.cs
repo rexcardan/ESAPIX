@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -52,7 +53,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineId;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MachineId") ? _client.MachineId : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineId; });
             }
@@ -66,7 +68,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.EnergyModeId;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("EnergyModeId")
+                        ? _client.EnergyModeId
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.EnergyModeId; });
             }
@@ -80,7 +85,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DoseRate;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("DoseRate") ? _client.DoseRate : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.DoseRate; });
             }
@@ -94,7 +100,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PrimaryFluenceModeId;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PrimaryFluenceModeId")
+                        ? _client.PrimaryFluenceModeId
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PrimaryFluenceModeId; });
             }
@@ -108,7 +117,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TechniqueId;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TechniqueId")
+                        ? _client.TechniqueId
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.TechniqueId; });
             }

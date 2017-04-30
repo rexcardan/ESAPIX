@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DwellTime;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("DwellTime") ? _client.DwellTime : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.DwellTime; });
             }
@@ -42,7 +44,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.RadioactiveSource;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("RadioactiveSource")
+                        ? _client.RadioactiveSource
+                        : default(RadioactiveSource);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -60,7 +65,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Transform;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Transform") ? _client.Transform : default(double[,]);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double[,]>(sc => { return local._client.Transform; });
             }
@@ -74,7 +80,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Translation;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Translation")
+                        ? _client.Translation
+                        : default(Types.VVector);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {

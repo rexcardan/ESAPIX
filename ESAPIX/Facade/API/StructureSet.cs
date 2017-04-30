@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -55,7 +56,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Image;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Image") ? _client.Image : default(Image);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -73,7 +75,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.UID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("UID") ? _client.UID : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UID; });
             }

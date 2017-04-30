@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Dose;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Dose") ? _client.Dose : default(Types.DoseValue);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -46,7 +48,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Operator;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Operator")
+                        ? _client.Operator
+                        : default(Types.OptimizationObjectiveOperator);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -63,7 +68,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ParameterA;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ParameterA") ? _client.ParameterA : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.ParameterA; });
             }
@@ -77,7 +83,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Priority;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Priority") ? _client.Priority : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Priority; });
             }

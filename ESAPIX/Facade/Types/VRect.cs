@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -49,7 +50,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.X1;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("X1") ? _client.X1 : default(T);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<T>(sc => { return local._client.X1; });
             }
@@ -63,7 +65,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Y1;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Y1") ? _client.Y1 : default(T);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<T>(sc => { return local._client.Y1; });
             }
@@ -77,7 +80,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.X2;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("X2") ? _client.X2 : default(T);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<T>(sc => { return local._client.X2; });
             }
@@ -91,7 +95,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Y2;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Y2") ? _client.Y2 : default(T);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<T>(sc => { return local._client.Y2; });
             }

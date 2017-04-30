@@ -2,6 +2,7 @@
 
 using System;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -29,7 +30,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CreationDateTime;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CreationDateTime")
+                        ? _client.CreationDateTime
+                        : default(DateTime?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
             }

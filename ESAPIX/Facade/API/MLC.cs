@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ManufacturerName;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ManufacturerName")
+                        ? _client.ManufacturerName
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ManufacturerName; });
             }
@@ -42,7 +46,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MinDoseDynamicLeafGap;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MinDoseDynamicLeafGap")
+                        ? _client.MinDoseDynamicLeafGap
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc =>
                 {
@@ -59,7 +66,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Model;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Model") ? _client.Model : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Model; });
             }
@@ -73,7 +81,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SerialNumber;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SerialNumber")
+                        ? _client.SerialNumber
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SerialNumber; });
             }

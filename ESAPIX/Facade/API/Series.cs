@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -30,7 +31,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.FOR;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("FOR") ? _client.FOR : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.FOR; });
             }
@@ -69,7 +71,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ImagingDeviceId;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ImagingDeviceId")
+                        ? _client.ImagingDeviceId
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ImagingDeviceId; });
             }
@@ -83,7 +88,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ImagingDeviceManufacturer;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ImagingDeviceManufacturer")
+                        ? _client.ImagingDeviceManufacturer
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc =>
                 {
@@ -100,7 +108,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ImagingDeviceModel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ImagingDeviceModel")
+                        ? _client.ImagingDeviceModel
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ImagingDeviceModel; });
             }
@@ -114,7 +125,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ImagingDeviceSerialNo;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ImagingDeviceSerialNo")
+                        ? _client.ImagingDeviceSerialNo
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc =>
                 {
@@ -131,7 +145,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Modality;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Modality")
+                        ? _client.Modality
+                        : default(Types.SeriesModality);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -148,7 +165,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Study;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Study") ? _client.Study : default(Study);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -166,7 +184,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.UID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("UID") ? _client.UID : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UID; });
             }

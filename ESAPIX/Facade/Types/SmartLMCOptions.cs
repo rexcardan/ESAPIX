@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -47,7 +48,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.FixedFieldBorders;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("FixedFieldBorders")
+                        ? _client.FixedFieldBorders
+                        : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.FixedFieldBorders; });
             }
@@ -61,7 +65,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.JawTracking;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("JawTracking") ? _client.JawTracking : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.JawTracking; });
             }

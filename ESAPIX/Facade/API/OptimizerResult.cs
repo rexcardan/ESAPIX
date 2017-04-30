@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -80,7 +81,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TotalObjectiveFunctionValue;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TotalObjectiveFunctionValue")
+                        ? _client.TotalObjectiveFunctionValue
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc =>
                 {
@@ -97,7 +101,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfIMRTOptimizerIterations;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("NumberOfIMRTOptimizerIterations")
+                        ? _client.NumberOfIMRTOptimizerIterations
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc =>
                 {

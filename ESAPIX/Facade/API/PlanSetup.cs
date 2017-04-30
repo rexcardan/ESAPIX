@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -30,7 +31,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ApprovalStatus;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ApprovalStatus")
+                        ? _client.ApprovalStatus
+                        : default(Types.PlanSetupApprovalStatus);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -72,7 +76,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Course;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Course") ? _client.Course : default(Course);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -90,7 +95,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CreationUserName;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CreationUserName")
+                        ? _client.CreationUserName
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.CreationUserName; });
             }
@@ -129,7 +137,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ElectronCalculationModel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ElectronCalculationModel")
+                        ? _client.ElectronCalculationModel
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc =>
                 {
@@ -146,7 +157,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ElectronCalculationOptions;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ElectronCalculationOptions")
+                        ? _client.ElectronCalculationOptions
+                        : default(Dictionary<string, string>);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<Dictionary<string, string>>(sc =>
                 {
@@ -163,7 +177,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.IsDoseValid;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("IsDoseValid") ? _client.IsDoseValid : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsDoseValid; });
             }
@@ -177,7 +192,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.IsTreated;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("IsTreated") ? _client.IsTreated : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsTreated; });
             }
@@ -191,7 +207,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.OptimizationSetup;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("OptimizationSetup")
+                        ? _client.OptimizationSetup
+                        : default(OptimizationSetup);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -209,7 +228,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PhotonCalculationModel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PhotonCalculationModel")
+                        ? _client.PhotonCalculationModel
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(
                     sc => { return local._client.PhotonCalculationModel; });
@@ -224,7 +246,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PhotonCalculationOptions;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PhotonCalculationOptions")
+                        ? _client.PhotonCalculationOptions
+                        : default(Dictionary<string, string>);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<Dictionary<string, string>>(sc =>
                 {
@@ -241,7 +266,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanIntent;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PlanIntent") ? _client.PlanIntent : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PlanIntent; });
             }
@@ -255,7 +281,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanningApprovalDate;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PlanningApprovalDate")
+                        ? _client.PlanningApprovalDate
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PlanningApprovalDate; });
             }
@@ -269,7 +298,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanningApprover;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PlanningApprover")
+                        ? _client.PlanningApprover
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PlanningApprover; });
             }
@@ -283,7 +315,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanNormalizationMethod;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PlanNormalizationMethod")
+                        ? _client.PlanNormalizationMethod
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc =>
                 {
@@ -300,7 +335,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanNormalizationPoint;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PlanNormalizationPoint")
+                        ? _client.PlanNormalizationPoint
+                        : default(Types.VVector);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -318,7 +356,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanType;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PlanType")
+                        ? _client.PlanType
+                        : default(Types.PlanType);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc => { return (Types.PlanType) local._client.PlanType; });
             }
@@ -332,7 +373,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PrescribedPercentage;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PrescribedPercentage")
+                        ? _client.PrescribedPercentage
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.PrescribedPercentage; });
             }
@@ -346,7 +390,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PrimaryReferencePoint;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PrimaryReferencePoint")
+                        ? _client.PrimaryReferencePoint
+                        : default(ReferencePoint);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -364,7 +411,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ProtocolID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ProtocolID") ? _client.ProtocolID : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ProtocolID; });
             }
@@ -378,7 +426,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ProtocolPhaseID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ProtocolPhaseID")
+                        ? _client.ProtocolPhaseID
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ProtocolPhaseID; });
             }
@@ -392,7 +443,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ProtonCalculationModel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ProtonCalculationModel")
+                        ? _client.ProtonCalculationModel
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(
                     sc => { return local._client.ProtonCalculationModel; });
@@ -407,7 +461,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ProtonCalculationOptions;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ProtonCalculationOptions")
+                        ? _client.ProtonCalculationOptions
+                        : default(Dictionary<string, string>);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<Dictionary<string, string>>(sc =>
                 {
@@ -424,7 +481,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Series;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Series") ? _client.Series : default(Series);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -442,7 +500,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SeriesUID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SeriesUID") ? _client.SeriesUID : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SeriesUID; });
             }
@@ -456,7 +515,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StructureSet;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("StructureSet")
+                        ? _client.StructureSet
+                        : default(StructureSet);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -474,7 +536,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TargetVolumeID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TargetVolumeID")
+                        ? _client.TargetVolumeID
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.TargetVolumeID; });
             }
@@ -488,7 +553,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TotalPrescribedDose;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TotalPrescribedDose")
+                        ? _client.TotalPrescribedDose
+                        : default(Types.DoseValue);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -506,7 +574,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentApprovalDate;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TreatmentApprovalDate")
+                        ? _client.TreatmentApprovalDate
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc =>
                 {
@@ -523,7 +594,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentApprover;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TreatmentApprover")
+                        ? _client.TreatmentApprover
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.TreatmentApprover; });
             }
@@ -537,7 +611,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentOrientation;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("TreatmentOrientation")
+                        ? _client.TreatmentOrientation
+                        : default(Types.PatientOrientation);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -554,7 +631,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.UID;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("UID") ? _client.UID : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UID; });
             }
@@ -568,7 +646,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.UniqueFractionation;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("UniqueFractionation")
+                        ? _client.UniqueFractionation
+                        : default(Fractionation);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -586,7 +667,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.VerifiedPlan;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("VerifiedPlan")
+                        ? _client.VerifiedPlan
+                        : default(PlanSetup);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -604,7 +688,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Id;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Id") ? _client.Id : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
             }
@@ -618,7 +703,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanNormalizationValue;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PlanNormalizationValue")
+                        ? _client.PlanNormalizationValue
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(
                     sc => { return local._client.PlanNormalizationValue; });

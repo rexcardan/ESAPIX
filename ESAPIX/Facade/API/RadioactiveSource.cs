@@ -2,6 +2,7 @@
 
 using System;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -29,7 +30,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CalibrationDate;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CalibrationDate")
+                        ? _client.CalibrationDate
+                        : default(DateTime?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CalibrationDate; });
             }
@@ -43,7 +47,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NominalActivity;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("NominalActivity")
+                        ? _client.NominalActivity
+                        : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.NominalActivity; });
             }
@@ -57,7 +64,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.RadioactiveSourceModel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("RadioactiveSourceModel")
+                        ? _client.RadioactiveSourceModel
+                        : default(RadioactiveSourceModel);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -76,7 +86,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SerialNumber;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SerialNumber")
+                        ? _client.SerialNumber
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SerialNumber; });
             }
@@ -90,7 +103,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Strength;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Strength") ? _client.Strength : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Strength; });
             }

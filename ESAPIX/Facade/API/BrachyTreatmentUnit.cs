@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DoseRateMode;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("DoseRateMode")
+                        ? _client.DoseRateMode
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.DoseRateMode; });
             }
@@ -42,7 +46,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DwellTimeResolution;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("DwellTimeResolution")
+                        ? _client.DwellTimeResolution
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.DwellTimeResolution; });
             }
@@ -56,7 +63,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineInterface;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MachineInterface")
+                        ? _client.MachineInterface
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineInterface; });
             }
@@ -70,7 +80,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineModel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MachineModel")
+                        ? _client.MachineModel
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModel; });
             }
@@ -84,7 +97,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaxDwellTimePerChannel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MaxDwellTimePerChannel")
+                        ? _client.MaxDwellTimePerChannel
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(
                     sc => { return local._client.MaxDwellTimePerChannel; });
@@ -99,7 +115,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaxDwellTimePerPos;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MaxDwellTimePerPos")
+                        ? _client.MaxDwellTimePerPos
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MaxDwellTimePerPos; });
             }
@@ -113,7 +132,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaxDwellTimePerTreatment;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MaxDwellTimePerTreatment")
+                        ? _client.MaxDwellTimePerTreatment
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc =>
                 {
@@ -130,7 +152,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaximumChannelLength;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MaximumChannelLength")
+                        ? _client.MaximumChannelLength
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MaximumChannelLength; });
             }
@@ -144,7 +169,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaximumDwellPositionsPerChannel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MaximumDwellPositionsPerChannel")
+                        ? _client.MaximumDwellPositionsPerChannel
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc =>
                 {
@@ -161,7 +189,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaximumStepSize;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MaximumStepSize")
+                        ? _client.MaximumStepSize
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MaximumStepSize; });
             }
@@ -175,7 +206,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MinimumChannelLength;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MinimumChannelLength")
+                        ? _client.MinimumChannelLength
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MinimumChannelLength; });
             }
@@ -189,7 +223,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MinimumStepSize;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MinimumStepSize")
+                        ? _client.MinimumStepSize
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MinimumStepSize; });
             }
@@ -203,7 +240,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfChannels;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("NumberOfChannels")
+                        ? _client.NumberOfChannels
+                        : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.NumberOfChannels; });
             }
@@ -217,7 +257,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SourceCenterOffsetFromTip;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SourceCenterOffsetFromTip")
+                        ? _client.SourceCenterOffsetFromTip
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc =>
                 {
@@ -234,7 +277,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SourceMovementType;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SourceMovementType")
+                        ? _client.SourceMovementType
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SourceMovementType; });
             }
@@ -248,7 +294,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StepSizeResolution;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("StepSizeResolution")
+                        ? _client.StepSizeResolution
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.StepSizeResolution; });
             }

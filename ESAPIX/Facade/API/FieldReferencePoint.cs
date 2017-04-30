@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.EffectiveDepth;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("EffectiveDepth")
+                        ? _client.EffectiveDepth
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.EffectiveDepth; });
             }
@@ -42,7 +46,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.FieldDose;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("FieldDose")
+                        ? _client.FieldDose
+                        : default(Types.DoseValue);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -60,7 +67,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.IsFieldDoseNominal;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("IsFieldDoseNominal")
+                        ? _client.IsFieldDoseNominal
+                        : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsFieldDoseNominal; });
             }
@@ -74,7 +84,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.IsPrimaryReferencePoint;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("IsPrimaryReferencePoint")
+                        ? _client.IsPrimaryReferencePoint
+                        : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc =>
                 {
@@ -91,7 +104,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ReferencePoint;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ReferencePoint")
+                        ? _client.ReferencePoint
+                        : default(ReferencePoint);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -109,7 +125,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.RefPointLocation;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("RefPointLocation")
+                        ? _client.RefPointLocation
+                        : default(Types.VVector);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -127,7 +146,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SSD;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SSD") ? _client.SSD : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SSD; });
             }

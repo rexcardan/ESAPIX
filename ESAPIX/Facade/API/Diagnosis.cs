@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ClinicalDescription;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ClinicalDescription")
+                        ? _client.ClinicalDescription
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ClinicalDescription; });
             }
@@ -42,7 +46,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Code;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Code") ? _client.Code : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Code; });
             }
@@ -56,7 +61,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CodeTable;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CodeTable") ? _client.CodeTable : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.CodeTable; });
             }

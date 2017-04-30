@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -47,7 +48,10 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CodingScheme;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CodingScheme")
+                        ? _client.CodingScheme
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.CodingScheme; });
             }
@@ -61,7 +65,8 @@ namespace ESAPIX.Facade.Types
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Code;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Code") ? _client.Code : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Code; });
             }

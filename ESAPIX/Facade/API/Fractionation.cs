@@ -2,6 +2,7 @@
 
 using System;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -29,7 +30,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CreationDateTime;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CreationDateTime")
+                        ? _client.CreationDateTime
+                        : default(DateTime?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
             }
@@ -43,7 +47,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DosePerFractionInPrimaryRefPoint;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("DosePerFractionInPrimaryRefPoint")
+                        ? _client.DosePerFractionInPrimaryRefPoint
+                        : default(Types.DoseValue);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -62,7 +69,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfFractions;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("NumberOfFractions")
+                        ? _client.NumberOfFractions
+                        : default(int?);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int?>(sc => { return local._client.NumberOfFractions; });
             }
@@ -76,7 +86,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PrescribedDosePerFraction;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("PrescribedDosePerFraction")
+                        ? _client.PrescribedDosePerFraction
+                        : default(Types.DoseValue);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {

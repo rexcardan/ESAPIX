@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -31,7 +32,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CenterPoint;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("CenterPoint")
+                        ? _client.CenterPoint
+                        : default(Types.VVector);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -49,7 +53,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Color;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Color")
+                        ? _client.Color
+                        : default(System.Windows.Media.Color);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>(sc =>
                 {
@@ -66,7 +73,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DicomType;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("DicomType") ? _client.DicomType : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.DicomType; });
             }
@@ -80,7 +88,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.HasSegment;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("HasSegment") ? _client.HasSegment : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.HasSegment; });
             }
@@ -94,7 +103,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.IsEmpty;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("IsEmpty") ? _client.IsEmpty : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsEmpty; });
             }
@@ -108,7 +118,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.IsHighResolution;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("IsHighResolution")
+                        ? _client.IsHighResolution
+                        : default(bool);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsHighResolution; });
             }
@@ -122,7 +135,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MeshGeometry;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MeshGeometry")
+                        ? _client.MeshGeometry
+                        : default(System.Windows.Media.Media3D.MeshGeometry3D);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<System.Windows.Media.Media3D.MeshGeometry3D>(sc =>
                 {
@@ -139,7 +155,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ROINumber;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("ROINumber") ? _client.ROINumber : default(int);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.ROINumber; });
             }
@@ -153,7 +170,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SegmentVolume;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SegmentVolume")
+                        ? _client.SegmentVolume
+                        : default(SegmentVolume);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue(sc =>
                 {
@@ -196,7 +216,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Volume;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Volume") ? _client.Volume : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Volume; });
             }
@@ -210,7 +231,8 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Id;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("Id") ? _client.Id : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
             }

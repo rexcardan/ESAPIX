@@ -1,6 +1,7 @@
 #region
 
 using System.Dynamic;
+using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +29,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SourceAxisDistance;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("SourceAxisDistance")
+                        ? _client.SourceAxisDistance
+                        : default(double);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SourceAxisDistance; });
             }
@@ -42,7 +46,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineModel;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MachineModel")
+                        ? _client.MachineModel
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModel; });
             }
@@ -56,7 +63,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineModelName;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MachineModelName")
+                        ? _client.MachineModelName
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModelName; });
             }
@@ -70,7 +80,10 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineScaleDisplayName;
+                if (_client is ExpandoObject)
+                    return (_client as ExpandoObject).HasProperty("MachineScaleDisplayName")
+                        ? _client.MachineScaleDisplayName
+                        : default(string);
                 var local = this;
                 return X.Instance.CurrentContext.GetValue<string>(sc =>
                 {
