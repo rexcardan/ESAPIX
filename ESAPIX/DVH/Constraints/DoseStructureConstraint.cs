@@ -23,7 +23,7 @@ namespace ESAPIX.DVH.Constraints
         [JsonIgnore]
         public DoseValue ConstraintDose
         {
-            get => new DoseValue(Dose, Unit);
+            get { return new DoseValue(Dose, Unit); }
             set
             {
                 Dose = value.Dose;

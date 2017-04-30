@@ -46,7 +46,7 @@ namespace ESAPIX.AppKit.Overlay
 
         public string SelectedCourse
         {
-            get => _selCourse;
+            get { return _selCourse; }
             set
             {
                 _selCourse = value;
@@ -81,7 +81,7 @@ namespace ESAPIX.AppKit.Overlay
 
         public string SelectedPlanItem
         {
-            get => _selectedPlanItem;
+            get { return _selectedPlanItem; }
             set
             {
                 _selectedPlanItem = value;
