@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ESAPIX.Interfaces;
+﻿using System.Linq;
 using ESAPIX.Extensions;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
@@ -15,12 +10,14 @@ namespace ESAPIX.DVH.Constraints
         public override ConstraintResult Constrain(PlanningItem pi)
         {
             var msg = string.Empty;
-            ResultType passed = GetFailedResultType();
+            var passed = GetFailedResultType();
 
-            var dvhs = GetStructures(pi).Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(), VolumePresentation.AbsoluteCm3, 0.01));
+            var dvhs = GetStructures(pi)
+                .Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(),
+                    VolumePresentation.AbsoluteCm3, 0.01));
             var min = dvhs.Min(d => d.MinDose);
 
-            var value = $"{ min.GetDose(ConstraintDose.Unit).ToString("F3") } { ConstraintDose.UnitAsString}";
+            var value = $"{min.GetDose(ConstraintDose.Unit).ToString("F3")} {ConstraintDose.UnitAsString}";
             passed = min.GreaterThanOrEqualTo(ConstraintDose) ? ResultType.PASSED : GetFailedResultType();
             msg = $"Minimum dose to {string.Join("/", StructureNames)} is {value}.";
 

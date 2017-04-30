@@ -1,350 +1,400 @@
-using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
+using System.Windows.Media;
+using System.Windows.Media.Media3D;
+using System.Xml;
+using ESAPIX.Facade.Types;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class Structure : ESAPIX.Facade.API.ApiDataObject
+    public class Structure : ApiDataObject
     {
-        public Structure() { _client = new ExpandoObject(); }
-        public Structure(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public ESAPIX.Facade.Types.VVector CenterPoint
+        public Structure()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public Structure(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public VVector CenterPoint
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.CenterPoint; }
+                if (_client is ExpandoObject) return _client.CenterPoint;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.VVector>((sc) => { return new ESAPIX.Facade.Types.VVector(local._client.CenterPoint); });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.CenterPoint)) return default(VVector);
+                    return new VVector(local._client.CenterPoint);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.CenterPoint = value; }
+                if (_client is ExpandoObject) _client.CenterPoint = value;
             }
         }
-        public System.Windows.Media.Color Color
+
+        public Color Color
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Color; }
+                if (_client is ExpandoObject) return _client.Color;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>((sc) => { return local._client.Color; });
+                return X.Instance.CurrentContext.GetValue<Color>(sc => { return local._client.Color; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Color = value; }
+                if (_client is ExpandoObject) _client.Color = value;
             }
         }
-        public System.String DicomType
+
+        public string DicomType
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.DicomType; }
+                if (_client is ExpandoObject) return _client.DicomType;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.DicomType; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.DicomType; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.DicomType = value; }
+                if (_client is ExpandoObject) _client.DicomType = value;
             }
         }
-        public System.Boolean HasSegment
+
+        public bool HasSegment
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.HasSegment; }
+                if (_client is ExpandoObject) return _client.HasSegment;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.HasSegment; });
+                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.HasSegment; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.HasSegment = value; }
+                if (_client is ExpandoObject) _client.HasSegment = value;
             }
         }
-        public System.Boolean IsEmpty
+
+        public bool IsEmpty
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.IsEmpty; }
+                if (_client is ExpandoObject) return _client.IsEmpty;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.IsEmpty; });
+                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsEmpty; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.IsEmpty = value; }
+                if (_client is ExpandoObject) _client.IsEmpty = value;
             }
         }
-        public System.Boolean IsHighResolution
+
+        public bool IsHighResolution
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.IsHighResolution; }
+                if (_client is ExpandoObject) return _client.IsHighResolution;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.IsHighResolution; });
+                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsHighResolution; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.IsHighResolution = value; }
+                if (_client is ExpandoObject) _client.IsHighResolution = value;
             }
         }
-        public System.Windows.Media.Media3D.MeshGeometry3D MeshGeometry
+
+        public MeshGeometry3D MeshGeometry
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MeshGeometry; }
+                if (_client is ExpandoObject) return _client.MeshGeometry;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Windows.Media.Media3D.MeshGeometry3D>((sc) => { return local._client.MeshGeometry; });
+                return X.Instance.CurrentContext.GetValue<MeshGeometry3D>(sc => { return local._client.MeshGeometry; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MeshGeometry = value; }
+                if (_client is ExpandoObject) _client.MeshGeometry = value;
             }
         }
-        public System.Int32 ROINumber
+
+        public int ROINumber
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ROINumber; }
+                if (_client is ExpandoObject) return _client.ROINumber;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.ROINumber; });
+                return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.ROINumber; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ROINumber = value; }
+                if (_client is ExpandoObject) _client.ROINumber = value;
             }
         }
-        public ESAPIX.Facade.API.SegmentVolume SegmentVolume
+
+        public SegmentVolume SegmentVolume
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SegmentVolume; }
+                if (_client is ExpandoObject) return _client.SegmentVolume;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.SegmentVolume>((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.SegmentVolume); });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.SegmentVolume)) return default(SegmentVolume);
+                    return new SegmentVolume(local._client.SegmentVolume);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SegmentVolume = value; }
+                if (_client is ExpandoObject) _client.SegmentVolume = value;
             }
         }
-        public IEnumerable<ESAPIX.Facade.Types.StructureCodeInfo> StructureCodeInfos
+
+        public IEnumerable<StructureCodeInfo> StructureCodeInfos
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.StructureCodeInfos;
+                    var asEnum = (IEnumerable) _client.StructureCodeInfos;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.Types.StructureCodeInfo();
+                    var facade = new StructureCodeInfo();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public System.Double Volume
+
+        public double Volume
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Volume; }
+                if (_client is ExpandoObject) return _client.Volume;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Volume; });
+                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Volume; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Volume = value; }
+                if (_client is ExpandoObject) _client.Volume = value;
             }
         }
-        public System.String Id
+
+        public string Id
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Id; }
+                if (_client is ExpandoObject) return _client.Id;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Id; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Id = value; }
+                if (_client is ExpandoObject) _client.Id = value;
             }
         }
-        public void WriteXml(System.Xml.XmlWriter writer)
+
+        public void WriteXml(XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
-        public void AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[] contour, System.Int32 z)
+
+        public void AddContourOnImagePlane(VVector[] contour, int z)
         {
             var local = this;
             X.Instance.CurrentContext.Thread.Invoke(() =>
             {
                 local._client.AddContourOnImagePlane(contour.Select(n => n._client).ToArray(), z);
             });
-
         }
-        public ESAPIX.Facade.API.SegmentVolume And(ESAPIX.Facade.API.SegmentVolume other)
+
+        public SegmentVolume And(SegmentVolume other)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.And(other._client)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new SegmentVolume(local._client.And(other._client));
+            });
             return retVal;
-
         }
-        public ESAPIX.Facade.API.SegmentVolume AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins margins)
+
+        public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.AsymmetricMargin(margins._client)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new SegmentVolume(local._client.AsymmetricMargin(margins._client));
+            });
             return retVal;
-
         }
-        public System.Boolean CanConvertToHighResolution()
+
+        public bool CanConvertToHighResolution()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.CanConvertToHighResolution(); });
+            var retVal =
+                X.Instance.CurrentContext.GetValue(sc => { return local._client.CanConvertToHighResolution(); });
             return retVal;
-
         }
-        public System.Boolean CanSetAssignedHU(out System.String errorMessage)
+
+        public bool CanSetAssignedHU(out string errorMessage)
         {
-            var errorMessage_OUT = default(System.String);
+            var errorMessage_OUT = default(string);
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.CanSetAssignedHU(out errorMessage_OUT); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return local._client.CanSetAssignedHU(out errorMessage_OUT);
+            });
             errorMessage = errorMessage_OUT;
             return retVal;
-
         }
-        public void ClearAllContoursOnImagePlane(System.Int32 z)
+
+        public void ClearAllContoursOnImagePlane(int z)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.ClearAllContoursOnImagePlane(z);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ClearAllContoursOnImagePlane(z); });
         }
+
         public void ConvertToHighResolution()
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.ConvertToHighResolution();
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ConvertToHighResolution(); });
         }
-        public System.Boolean GetAssignedHU(out System.Double huValue)
+
+        public bool GetAssignedHU(out double huValue)
         {
-            var huValue_OUT = default(System.Double);
+            var huValue_OUT = default(double);
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetAssignedHU(out huValue_OUT); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return local._client.GetAssignedHU(out huValue_OUT);
+            });
             huValue = huValue_OUT;
             return retVal;
-
         }
-        public ESAPIX.Facade.Types.VVector[][] GetContoursOnImagePlane(System.Int32 z)
+
+        public VVector[][] GetContoursOnImagePlane(int z)
         {
             var stubResult = _client.GetContoursOnImagePlane(z);
             int firstDim = stubResult.GetLength(0);
-            var facade = new ESAPIX.Facade.Types.VVector[firstDim][];
-            for (int i = 0; i < firstDim; i++)
-                facade[i] = ((IEnumerable<dynamic>)stubResult[0]).Select(s => new ESAPIX.Facade.Types.VVector(s._client)).ToArray();
+            var facade = new VVector[firstDim][];
+            for (var i = 0; i < firstDim; i++)
+                facade[i] = ((IEnumerable<dynamic>) stubResult[0]).Select(s => new VVector(s._client)).ToArray();
             return facade;
         }
-        public System.Int32 GetNumberOfSeparateParts()
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetNumberOfSeparateParts(); });
-            return retVal;
 
-        }
-        public ESAPIX.Facade.Types.SegmentProfile GetSegmentProfile(ESAPIX.Facade.Types.VVector start, ESAPIX.Facade.Types.VVector stop, System.Collections.BitArray preallocatedBuffer)
+        public int GetNumberOfSeparateParts()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.Types.SegmentProfile(local._client.GetSegmentProfile(start._client, stop._client, preallocatedBuffer)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetNumberOfSeparateParts(); });
             return retVal;
-
         }
-        public System.Boolean IsPointInsideSegment(ESAPIX.Facade.Types.VVector point)
+
+        public SegmentProfile GetSegmentProfile(VVector start, VVector stop, BitArray preallocatedBuffer)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.IsPointInsideSegment(point._client); });
-            return retVal;
-
-        }
-        public ESAPIX.Facade.API.SegmentVolume Margin(System.Double marginInMM)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.Margin(marginInMM)); });
-            return retVal;
-
-        }
-        public ESAPIX.Facade.API.SegmentVolume Not()
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.Not()); });
-            return retVal;
-
-        }
-        public ESAPIX.Facade.API.SegmentVolume Or(ESAPIX.Facade.API.SegmentVolume other)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.Or(other._client)); });
-            return retVal;
-
-        }
-        public System.Boolean ResetAssignedHU()
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.ResetAssignedHU(); });
-            return retVal;
-
-        }
-        public void SetAssignedHU(System.Double huValue)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                local._client.SetAssignedHU(huValue);
+                return new SegmentProfile(
+                    local._client.GetSegmentProfile(start._client, stop._client, preallocatedBuffer));
             });
-
+            return retVal;
         }
-        public ESAPIX.Facade.API.SegmentVolume Sub(ESAPIX.Facade.API.SegmentVolume other)
+
+        public bool IsPointInsideSegment(VVector point)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.Sub(other._client)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return local._client.IsPointInsideSegment(point._client);
+            });
             return retVal;
-
         }
-        public void SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[] contour, System.Int32 z)
+
+        public SegmentVolume Margin(double marginInMM)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new SegmentVolume(local._client.Margin(marginInMM));
+            });
+            return retVal;
+        }
+
+        public SegmentVolume Not()
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return new SegmentVolume(local._client.Not()); });
+            return retVal;
+        }
+
+        public SegmentVolume Or(SegmentVolume other)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new SegmentVolume(local._client.Or(other._client));
+            });
+            return retVal;
+        }
+
+        public bool ResetAssignedHU()
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.ResetAssignedHU(); });
+            return retVal;
+        }
+
+        public void SetAssignedHU(double huValue)
+        {
+            var local = this;
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetAssignedHU(huValue); });
+        }
+
+        public SegmentVolume Sub(SegmentVolume other)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new SegmentVolume(local._client.Sub(other._client));
+            });
+            return retVal;
+        }
+
+        public void SubtractContourOnImagePlane(VVector[] contour, int z)
         {
             var local = this;
             X.Instance.CurrentContext.Thread.Invoke(() =>
             {
                 local._client.SubtractContourOnImagePlane(contour.Select(n => n._client).ToArray(), z);
             });
-
         }
-        public ESAPIX.Facade.API.SegmentVolume Xor(ESAPIX.Facade.API.SegmentVolume other)
+
+        public SegmentVolume Xor(SegmentVolume other)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.SegmentVolume(local._client.Xor(other._client)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new SegmentVolume(local._client.Xor(other._client));
+            });
             return retVal;
-
         }
     }
 }

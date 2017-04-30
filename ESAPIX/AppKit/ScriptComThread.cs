@@ -1,29 +1,20 @@
-﻿using ESAPIX.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using ESAPIX.Interfaces;
 
 namespace ESAPIX.AppKit
 {
     public class ScriptComThread : IVMSThread
     {
-        Dispatcher _disp;
+        private readonly Dispatcher _disp;
 
         public ScriptComThread(Dispatcher disp)
         {
             _disp = disp;
         }
 
-        public int ThreadId
-        {
-            get
-            {
-                return _disp.Thread.ManagedThreadId;
-            }
-        }
+        public int ThreadId => _disp.Thread.ManagedThreadId;
 
         public void Dispose()
         {

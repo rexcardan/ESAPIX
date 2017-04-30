@@ -4,33 +4,33 @@ using ESAPIX.Facade.API;
 namespace ESAPIX.DVH.Constraints
 {
     /// <summary>
-    /// Checks to make sure the structure name is present in the planning item structure set, and structure is not empty
+    ///     Checks to make sure the structure name is present in the planning item structure set, and structure is not empty
     /// </summary>
     public class StructureNameConstraint : IConstraint
     {
         public string Regex { get; set; }
         public string StructureName { get; set; }
-        public string Name { get { return $"{StructureName} required"; } }
-        public string FullName { get { return Name; } }
+        public string Name => $"{StructureName} required";
+        public string FullName => Name;
 
         public ConstraintResult CanConstrain(PlanningItem pi)
         {
             var message = string.Empty;
             //Check for null plan
             var valid = pi != null;
-            if (!valid) { message = "Plan is null"; }
+            if (!valid) message = "Plan is null";
 
             //Check structure exists
             valid = valid && pi.GetStructureSet() != null;
-            if (!valid) { message = $"No structure set in {pi.Id}"; }
+            if (!valid) message = $"No structure set in {pi.Id}";
             return new ConstraintResult(this, ResultType.NOT_APPLICABLE, message);
         }
 
         public ConstraintResult Constrain(PlanningItem pi)
         {
-            string msg = string.Empty;
+            var msg = string.Empty;
             var structure = pi.GetStructure(StructureName, Regex);
-            ResultType passed = ResultType.ACTION_LEVEL_1;
+            var passed = ResultType.ACTION_LEVEL_1;
             if (structure != null)
             {
                 passed = ResultType.PASSED;

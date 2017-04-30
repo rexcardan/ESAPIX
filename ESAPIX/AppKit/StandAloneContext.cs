@@ -1,24 +1,18 @@
-﻿using ESAPIX.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Facade.API;
+using ESAPIX.Interfaces;
 
 namespace ESAPIX.AppKit
 {
     /// <summary>
-    /// Wraps a VMS application in a way that replicates the ScriptContext class. Can be used for debugging or building two sided apps
+    ///     Wraps a VMS application in a way that replicates the ScriptContext class. Can be used for debugging or building two
+    ///     sided apps
     /// </summary>
     public class StandAloneContext : IScriptContext, IDisposable
     {
-        private Application _app;
-        private Course _course;
-        private Patient _patient;
-        private PlanSetup _planSetup;
-        private BrachyPlanSetup _brachyPlanSetup;
-        private ExternalPlanSetup _exPlanSetup;
+        private readonly Application _app;
 
         public StandAloneContext(Application app, IVMSThread thread)
         {
@@ -26,8 +20,41 @@ namespace ESAPIX.AppKit
             Thread = thread ?? new AppComThread(false); //Same thread
         }
 
+        public void Dispose()
+        {
+            _app.Dispose();
+        }
+
+        public Course Course { get; private set; }
+
+        public User CurrentUser => _app?.CurrentUser;
+
+        public Image Image => PlanSetup?.StructureSet.Image;
+
+        public Patient Patient { get; private set; }
+
+        public PlanSetup PlanSetup { get; private set; }
+
+        public IEnumerable<PlanSetup> PlansInScope => Course?.PlanSetups;
+
+        public IEnumerable<PlanSum> PlanSumsInScope => Course?.PlanSums;
+
+        public StructureSet StructureSet => PlanSetup?.StructureSet;
+
+        public IVMSThread Thread { get; }
+
+        public string ApplicationName { get; set; } = "VMS Application";
+
+        public BrachyPlanSetup BrachyPlanSetup { get; private set; }
+
+        public IEnumerable<BrachyPlanSetup> BrachyPlansInScope => Course?.BrachyPlanSetups;
+
+        public ExternalPlanSetup ExternalPlanSetup { get; private set; }
+
+        public IEnumerable<ExternalPlanSetup> ExternalPlansInScope => Course?.ExternalPlanSetups;
+
         /// <summary>
-        /// Creates a new application context and binds it to a new thread
+        ///     Creates a new application context and binds it to a new thread
         /// </summary>
         /// <param name="username">VMS username</param>
         /// <param name="password">VMS password</param>
@@ -36,15 +63,12 @@ namespace ESAPIX.AppKit
         {
             var thread = new AppComThread();
             Application app = null;
-            thread.Invoke(() =>
-            {
-                app = Application.CreateApplication(username, password);
-            });
+            thread.Invoke(() => { app = Application.CreateApplication(username, password); });
             return new StandAloneContext(app, thread);
         }
 
         /// <summary>
-        /// Creates a new application context and binds it to a new thread
+        ///     Creates a new application context and binds it to a new thread
         /// </summary>
         /// <param name="username">VMS username</param>
         /// <param name="password">VMS password</param>
@@ -59,67 +83,60 @@ namespace ESAPIX.AppKit
 
         public bool SetPatient(string id)
         {
-            _patient = _app.OpenPatientById(id);
-            var found = _patient.IsLive;
+            Patient = _app.OpenPatientById(id);
+            var found = Patient.IsLive;
             if (found)
-                OnPatientChanged(_patient);
+                OnPatientChanged(Patient);
             else
-            {
                 OnPatientChanged(null);
-            }
             return found;
         }
 
         public async Task<bool> SetPatientAsync(string id)
         {
-            _patient = await Task.Run(() =>
-            {
-                return _app.OpenPatientById(id);
-            });
-            var found = _patient.IsLive;
+            Patient = await Task.Run(() => { return _app.OpenPatientById(id); });
+            var found = Patient.IsLive;
             if (found)
-                OnPatientChanged(_patient);
+                OnPatientChanged(Patient);
             else
-            {
                 OnPatientChanged(null);
-            }
             return found;
         }
 
         public bool SetCourse(Course course)
         {
-            _course = course;
+            Course = course;
             //Notify
             OnCourseChanged(course);
-            return _course != null;
+            return Course != null;
         }
 
         public bool SetPlanSetup(PlanSetup plan)
         {
-            _planSetup = plan;
+            PlanSetup = plan;
             //Notify
             OnPlanSetupChanged(plan);
-            return _planSetup != null;
+            return PlanSetup != null;
         }
 
         public bool SetExternalPlanSetup(ExternalPlanSetup ex)
         {
-            _planSetup = ex;
-            _exPlanSetup = ex;
+            PlanSetup = ex;
+            ExternalPlanSetup = ex;
             //Notify
             OnExternalPlanSetupChanged(ex);
             OnPlanSetupChanged(ex);
-            return _exPlanSetup != null;
+            return ExternalPlanSetup != null;
         }
 
         public bool SetBrachyPlanSetup(BrachyPlanSetup bs)
         {
-            _planSetup = bs;
-            _brachyPlanSetup = bs;
+            PlanSetup = bs;
+            BrachyPlanSetup = bs;
             //Notify
             OnBrachyPlanSetupChanged(bs);
             OnPlanSetupChanged(bs);
-            return _brachyPlanSetup != null;
+            return BrachyPlanSetup != null;
         }
 
         public void ClosePatient()
@@ -127,80 +144,67 @@ namespace ESAPIX.AppKit
             _app.ClosePatient();
         }
 
-        public void Dispose()
+        #region CONTEXT CHANGED EVENTS
+
+        public delegate void PatientChangedHandler(Patient newPatient);
+
+        public event PatientChangedHandler PatientChanged;
+
+        public void OnPatientChanged(Patient p)
         {
-            _app.Dispose();
+            PatientChanged?.Invoke(p);
         }
 
-        public Course Course { get { return _course; } }
-
-        public User CurrentUser { get { return _app?.CurrentUser; } }
-
-        public Image Image { get { return _planSetup?.StructureSet.Image; } }
-
-        public Patient Patient { get { return _patient; } }
-
-        public PlanSetup PlanSetup { get { return _planSetup; } }
-
-        public IEnumerable<PlanSetup> PlansInScope { get { return _course?.PlanSetups; } }
-
-        public IEnumerable<PlanSum> PlanSumsInScope { get { return _course?.PlanSums; } }
-
-        public StructureSet StructureSet { get { return _planSetup?.StructureSet; } }
-
-        public IVMSThread Thread { get; private set; }
-
-        public string ApplicationName { get; set; } = "VMS Application";
-
-        public BrachyPlanSetup BrachyPlanSetup { get { return _brachyPlanSetup; } }
-
-        public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get { return _course?.BrachyPlanSetups; } }
-
-        public ExternalPlanSetup ExternalPlanSetup { get { return _exPlanSetup; } }
-
-        public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get { return _course?.ExternalPlanSetups; } }
-
-        #region CONTEXT CHANGED EVENTS
-        public delegate void PatientChangedHandler(Patient newPatient);
-        public event PatientChangedHandler PatientChanged;
-        public void OnPatientChanged(Patient p) => PatientChanged?.Invoke(p);
-
         public delegate void PlanSetupChangedHandler(PlanSetup ps);
+
         public event PlanSetupChangedHandler PlanSetupChanged;
-        public void OnPlanSetupChanged(PlanSetup ps) => PlanSetupChanged?.Invoke(ps);
+
+        public void OnPlanSetupChanged(PlanSetup ps)
+        {
+            PlanSetupChanged?.Invoke(ps);
+        }
 
         public delegate void ExternalPlanSetupChangedHandler(ExternalPlanSetup ps);
+
         public event ExternalPlanSetupChangedHandler ExternalPlanSetupChanged;
-        public void OnExternalPlanSetupChanged(ExternalPlanSetup ps) => ExternalPlanSetupChanged?.Invoke(ps);
+
+        public void OnExternalPlanSetupChanged(ExternalPlanSetup ps)
+        {
+            ExternalPlanSetupChanged?.Invoke(ps);
+        }
 
         public delegate void BrachyPlanSetupChangedHandler(BrachyPlanSetup ps);
+
         public event PlanSetupChangedHandler BrachyPlanSetupChanged;
-        public void OnBrachyPlanSetupChanged(BrachyPlanSetup ps) => BrachyPlanSetupChanged?.Invoke(ps);
+
+        public void OnBrachyPlanSetupChanged(BrachyPlanSetup ps)
+        {
+            BrachyPlanSetupChanged?.Invoke(ps);
+        }
 
         public delegate void CourseChangedHandler(Course c);
+
         public event CourseChangedHandler CourseChanged;
-        public void OnCourseChanged(Course c) => CourseChanged?.Invoke(c);
+
+        public void OnCourseChanged(Course c)
+        {
+            CourseChanged?.Invoke(c);
+        }
 
         public async Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
         {
-            T result = default(T);
-            await Thread.InvokeAsync(() =>
-            {
-                result = toExecute(this);
-            });
+            var result = default(T);
+            await Thread.InvokeAsync(() => { result = toExecute(this); });
             return result;
         }
 
         public T GetValue<T>(Func<IScriptContext, T> toExecute)
         {
-            T result = default(T);
-            Thread.Invoke(() =>
-            {
-                result = toExecute(this);
-            });
+            var result = default(T);
+            Thread.Invoke(() => { result = toExecute(this); });
             return result;
         }
-        #endregion
 
+        #endregion
     }
 }

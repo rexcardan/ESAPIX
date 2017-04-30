@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ESAPIX.Facade.API;
+﻿using ESAPIX.Facade.API;
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -11,9 +6,9 @@ namespace ESAPIX.DVH.Constraints
     {
         public int NumOfFractions { get; set; }
 
-        public string FullName { get { return Name; } }
+        public string FullName => Name;
 
-        public string Name { get { return $"{NumOfFractions} Fractions Required"; } }
+        public string Name => $"{NumOfFractions} Fractions Required";
 
         public PriorityType Priority { get; set; }
 
@@ -31,10 +26,8 @@ namespace ESAPIX.DVH.Constraints
             else
             {
                 var canConstrain = true;
-                foreach (var ps in ((PlanSum)pi).PlanSetups)
-                {
+                foreach (var ps in ((PlanSum) pi).PlanSetups)
                     canConstrain = canConstrain && ps.UniqueFractionation.NumberOfFractions != null;
-                }
                 if (!canConstrain)
                 {
                     message = "No fractionation present in one or more plans in the sum!";
@@ -53,28 +46,22 @@ namespace ESAPIX.DVH.Constraints
                 var ps = pi as PlanSetup;
                 if (ps.UniqueFractionation.NumberOfFractions != null)
                 {
-                    actualFractions = (int)ps.UniqueFractionation.NumberOfFractions;
+                    actualFractions = (int) ps.UniqueFractionation.NumberOfFractions;
                     if (actualFractions == NumOfFractions)
-                    {
                         passed = true;
-                    }
                 }
             }
             else if (pi is PlanSum)
             {
-
-                foreach (var ps in ((PlanSum)pi).PlanSetups)
-                {
-                    actualFractions += (int)ps.UniqueFractionation.NumberOfFractions;
-                }
+                foreach (var ps in ((PlanSum) pi).PlanSetups)
+                    actualFractions += (int) ps.UniqueFractionation.NumberOfFractions;
                 if (actualFractions == NumOfFractions)
-                {
                     passed = true;
-                }
             }
             var passedMsg = $"Plan contains exactly {NumOfFractions} fractions";
             var failedMsg = $"Plan has {actualFractions} fractions instead of {NumOfFractions} fractions";
-            return new ConstraintResult(this, passed ? ResultType.PASSED : GetFailedResultType(), passed ? passedMsg : failedMsg, actualFractions.ToString());
+            return new ConstraintResult(this, passed ? ResultType.PASSED : GetFailedResultType(),
+                passed ? passedMsg : failedMsg, actualFractions.ToString());
         }
 
         public ResultType GetFailedResultType()

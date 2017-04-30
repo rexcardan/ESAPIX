@@ -1,21 +1,24 @@
-
-using ESAPIX.Interfaces;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Threading;
+using ESAPIX.Interfaces;
 
 namespace ESAPIX.AppKit
 {
     public class AppComThread : IVMSThread
     {
+        private SynchronizationContext ctx;
+        private readonly ManualResetEvent mre;
+
+        private readonly Thread thread;
+
         public AppComThread(bool useNewThread = true)
         {
             if (!useNewThread)
             {
-                this.thread = Thread.CurrentThread;
-                this.ctx = SynchronizationContext.Current;
+                thread = Thread.CurrentThread;
+                ctx = SynchronizationContext.Current;
             }
             else
             {
@@ -36,12 +39,6 @@ namespace ESAPIX.AppKit
             }
         }
 
-        public void BeginInvoke(Delegate dlg, params Object[] args)
-        {
-            if (ctx == null) throw new ObjectDisposedException("VmsComThread");
-            ctx.Post((_) => dlg.DynamicInvoke(args), null);
-        }
-
         public async Task InvokeAsync(Action action)
         {
             await Task.Run(() =>
@@ -57,39 +54,36 @@ namespace ESAPIX.AppKit
             Invoke(del);
         }
 
-        public object Invoke(Delegate dlg, params Object[] args)
+        public void Dispose()
+        {
+            if (ctx != null)
+            {
+                ctx.Send(_ => Application.ExitThread(), null);
+                ctx = null;
+            }
+        }
+
+        public int ThreadId => thread.ManagedThreadId;
+
+        public void BeginInvoke(Delegate dlg, params object[] args)
+        {
+            if (ctx == null) throw new ObjectDisposedException("VmsComThread");
+            ctx.Post(_ => dlg.DynamicInvoke(args), null);
+        }
+
+        public object Invoke(Delegate dlg, params object[] args)
         {
             if (ctx == null) throw new ObjectDisposedException("VmsComThread");
             object result = null;
-            ctx.Send((_) => result = dlg.DynamicInvoke(null), null);
+            ctx.Send(_ => result = dlg.DynamicInvoke(null), null);
             return result;
         }
+
         protected virtual void Initialize(object sender, EventArgs e)
         {
             ctx = SynchronizationContext.Current;
             mre.Set();
             Application.Idle -= Initialize;
-        }
-
-        public void Dispose()
-        {
-            if (ctx != null)
-            {
-                ctx.Send((_) => Application.ExitThread(), null);
-                ctx = null;
-            }
-        }
-
-        private Thread thread;
-        private SynchronizationContext ctx;
-        private ManualResetEvent mre;
-
-        public int ThreadId
-        {
-            get
-            {
-                return thread.ManagedThreadId;
-            }
         }
     }
 }

@@ -1,23 +1,21 @@
-﻿using ESAPIX.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+using ESAPIX.Helpers;
 
 namespace ESAPIX.AppKit.Data
 {
     /// <summary>
-    /// This class helps store objects as files with string content (json, xml)
+    ///     This class helps store objects as files with string content (json, xml)
     /// </summary>
     public abstract class AbstractStringDataStore<T>
     {
-        string _dbPath = string.Empty;
-        private string _fileExtension;
-        private Func<T, string> _fileNameingMethod;
+        private readonly string _fileExtension;
+        private readonly Func<T, string> _fileNameingMethod;
 
         public AbstractStringDataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "")
         {
@@ -32,31 +30,31 @@ namespace ESAPIX.AppKit.Data
             InitializeDatabase(storePath);
         }
 
+        public string DataPath { get; private set; } = string.Empty;
+
         /// <summary>
-        /// Serialize the object to push to storage
+        ///     Serialize the object to push to storage
         /// </summary>
         /// <param name="toSerialize"></param>
         /// <returns></returns>
         public abstract string Serialize(T toSerialize);
 
         /// <summary>
-        /// Serialize the object to push to storage
+        ///     Serialize the object to push to storage
         /// </summary>
         /// <param name="toSerialize"></param>
         /// <returns></returns>
         public abstract string Serialize(SecureStorage<T> toSerialize);
 
         /// <summary>
-        /// Deserialize the object to a secure storage object
+        ///     Deserialize the object to a secure storage object
         /// </summary>
         /// <param name="serial"></param>
         /// <returns></returns>
         public abstract SecureStorage<T> Deserialize(string serial);
 
-        public string DataPath { get { return _dbPath; } }
-
         /// <summary>
-        /// Creates a new json database if one does not exist
+        ///     Creates a new json database if one does not exist
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -65,24 +63,24 @@ namespace ESAPIX.AppKit.Data
             try
             {
                 if (!Directory.Exists(path))
-                {
                     Directory.CreateDirectory(path);
-                }
-                _dbPath = path;
+                DataPath = path;
                 return true;
             }
-            catch (Exception e) { return false; }
-
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         /// <summary>
-        /// Saves a protocol in the protocol directory
+        ///     Saves a protocol in the protocol directory
         /// </summary>
         /// <returns>bool indicating success</returns>
         public bool Save(T storageObject)
         {
             var serial = Serialize(storageObject);
-            var hashWrapper = new SecureStorage<T>() { Storage = storageObject, Hash = GetHashString(serial) };
+            var hashWrapper = new SecureStorage<T> {Storage = storageObject, Hash = GetHashString(serial)};
 
             serial = Serialize(hashWrapper);
             var savePath = GetSavePath(storageObject);
@@ -91,46 +89,45 @@ namespace ESAPIX.AppKit.Data
         }
 
         /// <summary>
-        /// Loads all storage objects in the directory
+        ///     Loads all storage objects in the directory
         /// </summary>
         /// <returns>bool indicating success</returns>
         public IEnumerable<T> LoadAll()
         {
-            foreach (var f in Directory.GetFiles(_dbPath).Where(f => Path.GetExtension(f) == _fileExtension))
+            foreach (var f in Directory.GetFiles(DataPath).Where(f => Path.GetExtension(f) == _fileExtension))
             {
                 var read = ReadSecure(f);
-                if (read != null) { yield return read.Storage; }
+                if (read != null) yield return read.Storage;
             }
         }
 
         /// <summary>
-        /// Loads all secure storage objects in the directory
+        ///     Loads all secure storage objects in the directory
         /// </summary>
         /// <returns>bool indicating success</returns>
         public List<SecureStorage<T>> LoadAllSecure()
         {
-            List<SecureStorage<T>> list = new List<SecureStorage<T>>();
+            var list = new List<SecureStorage<T>>();
 
-            var fileCount = Directory.GetFiles(_dbPath).ToArray();
+            var fileCount = Directory.GetFiles(DataPath).ToArray();
             var withExt = fileCount.Where(f => Path.GetExtension(f) == _fileExtension);
 
             foreach (var f in withExt)
             {
                 var read = ReadSecure(f);
-                if (read != null) { list.Add(read); }
-                else { break; }
+                if (read != null) list.Add(read);
+                else break;
             }
             return list;
         }
 
         /// <summary>
-        /// Deletes all storage objects in the directory
+        ///     Deletes all storage objects in the directory
         /// </summary>
         /// <returns>bool indicating success</returns>
         public bool DeleteAll()
         {
-            foreach (var f in Directory.GetFiles(_dbPath).Where(f => Path.GetExtension(f) == _fileExtension))
-            {
+            foreach (var f in Directory.GetFiles(DataPath).Where(f => Path.GetExtension(f) == _fileExtension))
                 try
                 {
                     File.Delete(f);
@@ -139,7 +136,6 @@ namespace ESAPIX.AppKit.Data
                 {
                     return false;
                 }
-            }
             return true;
         }
 
@@ -147,13 +143,11 @@ namespace ESAPIX.AppKit.Data
         {
             var savePath = GetSavePath(toDelete);
             if (File.Exists(savePath))
-            {
                 File.Delete(savePath);
-            }
         }
 
         /// <summary>
-        /// Reads an object from a file and determines if it has been tampered with since initial save
+        ///     Reads an object from a file and determines if it has been tampered with since initial save
         /// </summary>
         /// <param name="path">the path where the object is stored</param>
         /// <returns></returns>
@@ -180,19 +174,19 @@ namespace ESAPIX.AppKit.Data
 
 
         /// <summary>
-        /// Returns the file path of the json document describing the storage object
+        ///     Returns the file path of the json document describing the storage object
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
         public string GetSavePath(T objectToSave)
         {
             var filePath = FileHelper.RemoveIllegalCharacters($"{_fileNameingMethod(objectToSave)}{_fileExtension}");
-            var savePath = Path.Combine(_dbPath, filePath);
+            var savePath = Path.Combine(DataPath, filePath);
             return savePath;
         }
 
         /// <summary>
-        /// Checks to see whether the  storage object has been modified
+        ///     Checks to see whether the  storage object has been modified
         /// </summary>
         /// <param name="protocol"></param>
         /// <returns>return true if has NOT been tampered with</returns>
@@ -208,25 +202,25 @@ namespace ESAPIX.AppKit.Data
 
 
         /// <summary>
-        /// Creates a hash of the current storage object. Will know if it has been tampered with
+        ///     Creates a hash of the current storage object. Will know if it has been tampered with
         /// </summary>
         /// <param name="inputString"></param>
         /// <returns></returns>
         public static byte[] GetHash(string inputString)
         {
-            HashAlgorithm algorithm = MD5.Create();  //or use SHA1.Create();
+            HashAlgorithm algorithm = MD5.Create(); //or use SHA1.Create();
             return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
         }
 
         /// <summary>
-        /// Creates a hash of the current  storage object. Will know if it has been tampered with
+        ///     Creates a hash of the current  storage object. Will know if it has been tampered with
         /// </summary>
         /// <param name="inputString"></param>
         /// <returns></returns>
         public static string GetHashString(string inputString)
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (byte b in GetHash(inputString))
+            var sb = new StringBuilder();
+            foreach (var b in GetHash(inputString))
                 sb.Append(b.ToString("X2"));
 
             return sb.ToString();

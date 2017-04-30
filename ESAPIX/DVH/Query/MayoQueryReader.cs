@@ -1,26 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ESAPIX.DVH.Query
 {
     /// <summary>
-    /// Class with methods to read a DVH query in "Mayo Format" (https://www.ncbi.nlm.nih.gov/pubmed/26825250)
+    ///     Class with methods to read a DVH query in "Mayo Format" (https://www.ncbi.nlm.nih.gov/pubmed/26825250)
     /// </summary>
     public class MayoQueryReader
     {
         /// <summary>
-        /// Reads a full Mayo query string and converts it to a MayoQuery object
+        ///     Reads a full Mayo query string and converts it to a MayoQuery object
         /// </summary>
         /// <param name="query">the query string</param>
         /// <returns>the MayoQuery condensed object for programmatic use</returns>
         public static MayoQuery Read(string query)
         {
-            if (!IsValid(query)) { throw new ArgumentException($"Not a valid Mayo format => {query}"); }
-            return new MayoQuery()
+            if (!IsValid(query)) throw new ArgumentException($"Not a valid Mayo format => {query}");
+            return new MayoQuery
             {
                 QueryType = ReadQueryType(query),
                 QueryUnits = ReadQueryUnits(query),
@@ -30,14 +26,14 @@ namespace ESAPIX.DVH.Query
         }
 
         /// <summary>
-        /// Reads only the numerical value in the query (if one exists)
+        ///     Reads only the numerical value in the query (if one exists)
         /// </summary>
         /// <param name="query">the full string of the query</param>
         /// <returns>the numerical queried value, the x in Dxcc[Gy]</returns>
         public static double ReadQueryValue(string query)
         {
             var match = Regex.Match(query, MayoRegex.QueryValue);
-            if (!match.Success) { return double.NaN; }
+            if (!match.Success) return double.NaN;
             return double.Parse(match.Value);
         }
 
@@ -50,7 +46,7 @@ namespace ESAPIX.DVH.Query
         public static QueryType ReadQueryType(string query)
         {
             var match = Regex.Match(query, MayoRegex.QueryType);
-            if (!match.Success) { throw new ArgumentException($"Not a valid query type {query}!"); }
+            if (!match.Success) throw new ArgumentException($"Not a valid query type {query}!");
             switch (match.Value)
             {
                 case "DC": return QueryType.DOSE_COMPLIMENT;
@@ -68,14 +64,14 @@ namespace ESAPIX.DVH.Query
         {
             var filtered = Regex.Replace(query, MayoRegex.UnitsDesired, string.Empty);
             var match = Regex.Match(filtered, MayoRegex.QueryUnits, RegexOptions.IgnoreCase);
-            if (!match.Success) { return Units.NA; }
+            if (!match.Success) return Units.NA;
             return ConvertStringToUnit(match.Value);
         }
 
         public static Units ReadUnitsDesired(string query)
         {
             var match = Regex.Match(query, MayoRegex.UnitsDesired, RegexOptions.IgnoreCase);
-            if (!match.Success) { throw new ArgumentException($"Not valid units -> {query}!"); }
+            if (!match.Success) throw new ArgumentException($"Not valid units -> {query}!");
             return ConvertStringToUnit(match.Value.Replace("[", "").Replace("]", ""));
         }
 

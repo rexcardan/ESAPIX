@@ -1,107 +1,122 @@
-using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.Dynamic;
+using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class StructureSet : ESAPIX.Facade.API.ApiDataObject
+    public class StructureSet : ApiDataObject
     {
-        public StructureSet() { _client = new ExpandoObject(); }
-        public StructureSet(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public IEnumerable<ESAPIX.Facade.API.Structure> Structures
+        public StructureSet()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public StructureSet(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public IEnumerable<Structure> Structures
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.Structures;
+                    var asEnum = (IEnumerable) _client.Structures;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.Structure();
+                    var facade = new Structure();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public ESAPIX.Facade.API.Image Image
+
+        public Image Image
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Image; }
+                if (_client is ExpandoObject) return _client.Image;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Image>((sc) => { return new ESAPIX.Facade.API.Image(local._client.Image); });
+                return X.Instance.CurrentContext.GetValue(sc =>
+                {
+                    if (DefaultHelper.IsDefault(local._client.Image)) return default(Image);
+                    return new Image(local._client.Image);
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Image = value; }
+                if (_client is ExpandoObject) _client.Image = value;
             }
         }
-        public System.String UID
+
+        public string UID
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.UID; }
+                if (_client is ExpandoObject) return _client.UID;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.UID; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UID; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.UID = value; }
+                if (_client is ExpandoObject) _client.UID = value;
             }
         }
-        public void WriteXml(System.Xml.XmlWriter writer)
+
+        public void WriteXml(XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+        }
+
+        public Structure AddStructure(string dicomType, string id)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                local._client.WriteXml(writer);
+                return new Structure(local._client.AddStructure(dicomType, id));
             });
-
-        }
-        public ESAPIX.Facade.API.Structure AddStructure(System.String dicomType, System.String id)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.Structure(local._client.AddStructure(dicomType, id)); });
             return retVal;
-
         }
-        public System.Boolean CanAddStructure(System.String dicomType, System.String id)
+
+        public bool CanAddStructure(string dicomType, string id)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.CanAddStructure(dicomType, id); });
-            return retVal;
-
-        }
-        public System.Boolean CanRemoveStructure(ESAPIX.Facade.API.Structure structure)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.CanRemoveStructure(structure._client); });
-            return retVal;
-
-        }
-        public void RemoveStructure(ESAPIX.Facade.API.Structure structure)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                local._client.RemoveStructure(structure._client);
+                return local._client.CanAddStructure(dicomType, id);
             });
+            return retVal;
+        }
 
+        public bool CanRemoveStructure(Structure structure)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return local._client.CanRemoveStructure(structure._client);
+            });
+            return retVal;
+        }
+
+        public void RemoveStructure(Structure structure)
+        {
+            var local = this;
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.RemoveStructure(structure._client); });
         }
     }
 }

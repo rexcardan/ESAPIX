@@ -1,25 +1,27 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 using System.Dynamic;
+using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class AddOnMaterial : ESAPIX.Facade.API.ApiDataObject
+    public class AddOnMaterial : ApiDataObject
     {
-        public AddOnMaterial() { _client = new ExpandoObject(); }
-        public AddOnMaterial(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public void WriteXml(System.Xml.XmlWriter writer)
+        public AddOnMaterial()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public AddOnMaterial(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public void WriteXml(XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

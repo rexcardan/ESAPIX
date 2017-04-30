@@ -1,31 +1,31 @@
-﻿using ESAPIX.Extensions;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ESAPIX.Extensions;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
+using Newtonsoft.Json;
 
 namespace ESAPIX.DVH.Constraints
-{    /// <summary>
-     /// Encapsulates the compliment volume (cold spot) of a structure. Volume compliment is the volume which recieves equal or 
-     /// LESS than the constraint dose. This is equivalent to STRUCTURE volume - VolumeAtDose(). Represents the amount of tissue spared
-     /// </summary>
+{
+    /// <summary>
+    ///     Encapsulates the compliment volume (cold spot) of a structure. Volume compliment is the volume which recieves equal
+    ///     or
+    ///     LESS than the constraint dose. This is equivalent to STRUCTURE volume - VolumeAtDose(). Represents the amount of
+    ///     tissue spared
+    /// </summary>
     public abstract class ComplimentVolumeAtDoseConstraint : DoseStructureConstraint
     {
         public double Volume { get; set; }
         public VolumePresentation VolumeType { get; set; }
 
         /// <summary>
-        /// The function that determines if the constraint fails (greater or less than constraint volume)
+        ///     The function that determines if the constraint fails (greater or less than constraint volume)
         /// </summary>
         [JsonIgnore]
         public virtual Func<double, ResultType> PassingFunc { get; set; }
 
         /// <summary>
-        /// Gets the dose at a volume for all structures in this constraint by merging their dvhs
+        ///     Gets the dose at a volume for all structures in this constraint by merging their dvhs
         /// </summary>
         /// <param name="pi">the planning item containing the dose to be queried</param>
         /// <returns>the dose value at the volume of this constraint</returns>
@@ -39,7 +39,7 @@ namespace ESAPIX.DVH.Constraints
         public override ConstraintResult Constrain(PlanningItem pi)
         {
             var msg = string.Empty;
-            ResultType passed = GetFailedResultType();
+            var passed = GetFailedResultType();
 
             var volAtDose = GetComplimentVolumeAtDose(pi);
             passed = PassingFunc(volAtDose);
@@ -47,7 +47,8 @@ namespace ESAPIX.DVH.Constraints
             var stringUnit = VolumeType == VolumePresentation.AbsoluteCm3 ? "CC" : "%";
             var val = $"{volAtDose.ToString("F3")} {stringUnit}";
 
-            msg = $"Compliment volume of {StructureName} at {ConstraintDose.Dose.ToString()} {ConstraintDose.UnitAsString} was {val}.";
+            msg =
+                $"Compliment volume of {StructureName} at {ConstraintDose.Dose} {ConstraintDose.UnitAsString} was {val}.";
             return new ConstraintResult(this, passed, msg, val);
         }
     }

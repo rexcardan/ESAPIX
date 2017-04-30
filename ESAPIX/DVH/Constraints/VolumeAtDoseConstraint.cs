@@ -1,9 +1,9 @@
-﻿using ESAPIX.Extensions;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Linq;
+using ESAPIX.Extensions;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
+using Newtonsoft.Json;
 
 namespace ESAPIX.DVH.Constraints
 {
@@ -13,13 +13,13 @@ namespace ESAPIX.DVH.Constraints
         public VolumePresentation VolumeType { get; set; }
 
         /// <summary>
-        /// The function that determines if the constraint fails (greater or less than constraint volume)
+        ///     The function that determines if the constraint fails (greater or less than constraint volume)
         /// </summary>
         [JsonIgnore]
         public virtual Func<double, ResultType> PassingFunc { get; set; }
 
         /// <summary>
-        /// Gets the dose at a volume for all structures in this constraint by merging their dvhs
+        ///     Gets the dose at a volume for all structures in this constraint by merging their dvhs
         /// </summary>
         /// <param name="pi">the planning item containing the dose to be queried</param>
         /// <returns>the dose value at the volume of this constraint</returns>
@@ -33,7 +33,7 @@ namespace ESAPIX.DVH.Constraints
         public override ConstraintResult Constrain(PlanningItem pi)
         {
             var msg = string.Empty;
-            ResultType passed = GetFailedResultType();
+            var passed = GetFailedResultType();
 
             var volAtDose = GetVolumeAtDose(pi);
             passed = PassingFunc(volAtDose);
@@ -41,7 +41,7 @@ namespace ESAPIX.DVH.Constraints
             var stringUnit = VolumeType == VolumePresentation.AbsoluteCm3 ? "CC" : "%";
             var val = $"{volAtDose.ToString("F3")} {stringUnit}";
 
-            msg = $"Volume of {StructureName} at {ConstraintDose.Dose.ToString()} {ConstraintDose.UnitAsString} was {val}.";
+            msg = $"Volume of {StructureName} at {ConstraintDose.Dose} {ConstraintDose.UnitAsString} was {val}.";
             return new ConstraintResult(this, passed, msg, val);
         }
     }

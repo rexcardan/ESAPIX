@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ESAPIX.DVH.Query
 {
@@ -11,9 +7,9 @@ namespace ESAPIX.DVH.Query
         public static string Write(MayoQuery query)
         {
             var type = GetTypeString(query.QueryType);
-            string qUnits = GetUnitString(query.QueryUnits);
-            string qValue = query.QueryValue.ToString();
-            string dUnits = GetUnitString(query.UnitsDesired);
+            var qUnits = GetUnitString(query.QueryUnits);
+            var qValue = query.QueryValue.ToString();
+            var dUnits = GetUnitString(query.UnitsDesired);
             return $"{type}{qValue}{qUnits}[{dUnits}]";
         }
 

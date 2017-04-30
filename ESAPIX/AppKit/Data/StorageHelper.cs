@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ESAPIX.AppKit.Data
 {
     public class StorageHelper
     {
-        private static string defaultStoragePath = @"ESAPI_Storage\";
-        private static string defaultSettingsFileName = "settings.json";
-        private static string tempStorage = @"Temp";
+        private static readonly string defaultStoragePath = @"ESAPI_Storage\";
+        private static readonly string defaultSettingsFileName = "settings.json";
+        private static readonly string tempStorage = @"Temp";
 
 
         public static string GetBasePath(string storagePath = "")
@@ -26,14 +21,13 @@ namespace ESAPIX.AppKit.Data
         {
             path = string.IsNullOrEmpty(path) ? GetBasePath() : Path.GetDirectoryName(path);
             if (!Directory.Exists(path))
-            {
                 Directory.CreateDirectory(path);
-            }
         }
 
         public static string GetSettingsPath(string settingsFileName = "")
         {
-            var filePath = Path.Combine(GetBasePath(), string.IsNullOrEmpty(settingsFileName) ? defaultSettingsFileName : settingsFileName);
+            var filePath = Path.Combine(GetBasePath(),
+                string.IsNullOrEmpty(settingsFileName) ? defaultSettingsFileName : settingsFileName);
             return filePath;
         }
 
@@ -42,9 +36,7 @@ namespace ESAPIX.AppKit.Data
         {
             var tempPath = GetTempStoragePath();
             if (!Directory.Exists(tempPath))
-            {
                 Directory.CreateDirectory(tempPath);
-            }
         }
 
         public static string GetTempStoragePath()
@@ -52,6 +44,5 @@ namespace ESAPIX.AppKit.Data
             var tempPath = Path.Combine(GetBasePath(), tempStorage);
             return tempPath;
         }
-
     }
 }

@@ -1,21 +1,18 @@
-﻿using ESAPIX.Helpers;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Reflection;
 using System.Runtime.Serialization.Formatters;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ESAPIX.AppKit.Data
 {
     public class JsonDataStore<T> : AbstractStringDataStore<T>
     {
-        private JsonSerializerSettings _settings;
+        private readonly JsonSerializerSettings _settings;
 
-        public JsonDataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "") : base(fileExtension, fileNamingMethod, storePath)
+        public JsonDataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "") : base(
+            fileExtension, fileNamingMethod, storePath)
         {
-            _settings = new JsonSerializerSettings()
+            _settings = new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.Objects,
                 TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
@@ -31,18 +28,16 @@ namespace ESAPIX.AppKit.Data
         }
 
         /// <summary>
-        /// This is a hack to help resolve issues when loading plugin scripts. Occaisionally, an assembly might
-        /// not be loaded in the current AppDomain
+        ///     This is a hack to help resolve issues when loading plugin scripts. Occaisionally, an assembly might
+        ///     not be loaded in the current AppDomain
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
         /// <returns></returns>
-        private System.Reflection.Assembly ESAPI_APPDOMAIN_HANDLER(object sender, ResolveEventArgs args)
+        private Assembly ESAPI_APPDOMAIN_HANDLER(object sender, ResolveEventArgs args)
         {
             if (args.Name == typeof(T).Assembly.GetName().Name)
-            {
                 return typeof(T).Assembly;
-            }
             return null;
         }
 

@@ -1,9 +1,4 @@
 ﻿using ESAPIX.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ESAPIX.Facade.Types;
 
 namespace ESAPIX.DVH.Constraints
@@ -12,8 +7,13 @@ namespace ESAPIX.DVH.Constraints
     {
         public MaxComplimentDoseAtVolumeConstraint()
         {
-            PassingFunc = new Func<DoseValue, ResultType>((doseAtVol => { return doseAtVol.LessThanOrEqualTo(ConstraintDose) ? ResultType.PASSED : GetFailedResultType(); }));
+            PassingFunc = doseAtVol =>
+            {
+                return doseAtVol.LessThanOrEqualTo(ConstraintDose) ? ResultType.PASSED : GetFailedResultType();
+            };
         }
+
+        public override string Name => ToString();
 
         public override string ToString()
         {
@@ -24,7 +24,5 @@ namespace ESAPIX.DVH.Constraints
             var dose = ConstraintDose.ValueAsString;
             return $"DC{vol}{volUnit}[{doseUnit}] <= {dose}";
         }
-
-        public override string Name { get { return ToString(); } }
     }
 }

@@ -1,11 +1,9 @@
-﻿using ESAPIX.DVH.Query;
-using ESAPIX.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
+using ESAPIX.Helpers;
 using static ESAPIX.Helpers.MathHelper;
 
 namespace ESAPIX.Extensions
@@ -13,36 +11,32 @@ namespace ESAPIX.Extensions
     public static class DVHDataExtensions
     {
         /// <summary>
-        /// Gets the volume that recieves the input dose
+        ///     Gets the volume that recieves the input dose
         /// </summary>
         /// <param name="dvh">the dose volume histogram for this structure</param>
         /// <param name="dv">the dose value to sample the curve</param>
         /// <returns>the volume in the same units as the DVH point array</returns>
         public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
         {
-            var curve = dvh.Select(d => new { Dose = d.DoseValue.GetDose(dv.Unit), Volume = d.Volume, VolumeUnit = d.VolumeUnit });
+            var curve = dvh.Select(d => new {Dose = d.DoseValue.GetDose(dv.Unit), d.Volume, d.VolumeUnit});
             var maxDose = curve.Max(d => d.Dose);
             var minDose = curve.Min(d => d.Dose);
 
             //If the max dose is less than the queried dose, then there is no volume at the queried dose (out of range)
             //If the min dose is greater than the queried dose, then 100% of the volume is at the queried dose
             if (maxDose < dv.Dose || dv.Dose < minDose)
-            {
                 return maxDose < dv.Dose ? 0 : dvh.Max(d => d.Volume);
-            }
-            else
-            {
-                //If it makes it this far, we will have to interpolate
-                var higherPoint = curve.First(p => p.Dose > dv.Dose);
-                var lowerPoint = curve.Last(p => p.Dose <= dv.Dose);
+            //If it makes it this far, we will have to interpolate
+            var higherPoint = curve.First(p => p.Dose > dv.Dose);
+            var lowerPoint = curve.Last(p => p.Dose <= dv.Dose);
 
-                var volumeAtPoint = Interpolate(higherPoint.Dose, lowerPoint.Dose, higherPoint.Volume, lowerPoint.Volume, dv.Dose);
-                return volumeAtPoint;
-            }
+            var volumeAtPoint = Interpolate(higherPoint.Dose, lowerPoint.Dose, higherPoint.Volume, lowerPoint.Volume,
+                dv.Dose);
+            return volumeAtPoint;
         }
 
         /// <summary>
-        /// Gets the compliment volume (volume about a certain dose point) for the structure dvh
+        ///     Gets the compliment volume (volume about a certain dose point) for the structure dvh
         /// </summary>
         /// <param name="dvh">the dose volume histogram for this structure</param>
         /// <param name="dv">the dose value to sample the curve</param>
@@ -55,7 +49,7 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        /// Gets the dose value at the specified volume for the curve
+        ///     Gets the dose value at the specified volume for the curve
         /// </summary>
         /// <param name="dvh">the dvhPoint array that is queried</param>
         /// <param name="volume">the volume in the same units as the DVH curve</param>
@@ -66,19 +60,15 @@ namespace ESAPIX.Extensions
             var maxVol = dvh.Max(d => d.Volume);
 
             //Check for max point dose scenario
-            if (volume <= minVol) { return dvh.MaxDose(); }
+            if (volume <= minVol) return dvh.MaxDose();
 
             //Check dose to total volume scenario (min dose)
             if (volume == maxVol)
-            {
                 return dvh.MinDose();
-            }
 
             //Overvolume scenario, undefined
             if (volume > maxVol)
-            {
                 return DoseValue.UndefinedDose();
-            }
 
             //Convert to list so we can grab indices
             var dvhList = dvh.ToList();
@@ -87,28 +77,29 @@ namespace ESAPIX.Extensions
             //If its really close, let's use it instead of interpolating
             var minVolumeDiff = dvhList.Min(d => Math.Abs(d.Volume - volume));
             var closestPoint = dvhList.First(d => Math.Abs(d.Volume - volume) == minVolumeDiff);
-            if (minVolumeDiff < 0.001) { return closestPoint.DoseValue; }
+            if (minVolumeDiff < 0.001) return closestPoint.DoseValue;
 
-            else
+            //Interpolate
+            var index1 = dvhList.IndexOf(closestPoint);
+            var index2 = closestPoint.Volume < volume ? index1 - 1 : index1 + 1;
+
+            if (index1 >= 0 && index2 < dvh.Count())
             {
-                //Interpolate
-                var index1 = dvhList.IndexOf(closestPoint);
-                var index2 = closestPoint.Volume < volume ? index1 - 1 : index1 + 1;
-
-                if (index1 >= 0 && index2 < dvh.Count())
-                {
-                    var point1 = dvhList[index1];
-                    var point2 = dvhList[index2];
-                    var doseAtPoint = Interpolate(point1.Volume, point2.Volume, point1.DoseValue.Dose, point2.DoseValue.Dose, volume);
-                    return new DoseValue(doseAtPoint, point1.DoseValue.Unit);
-                }
-                return new DoseValue(double.NaN, closestPoint.DoseValue.Unit);
-                throw new Exception(string.Format("Interpolation failed. Index was : {0}, DVH Point Count : {1}, Volume was {2}, ClosestVol was {3}", index1, dvh.Count(), volume, minVolumeDiff));
+                var point1 = dvhList[index1];
+                var point2 = dvhList[index2];
+                var doseAtPoint = Interpolate(point1.Volume, point2.Volume, point1.DoseValue.Dose,
+                    point2.DoseValue.Dose, volume);
+                return new DoseValue(doseAtPoint, point1.DoseValue.Unit);
             }
+            return new DoseValue(double.NaN, closestPoint.DoseValue.Unit);
+            throw new Exception(string.Format(
+                "Interpolation failed. Index was : {0}, DVH Point Count : {1}, Volume was {2}, ClosestVol was {3}",
+                index1, dvh.Count(), volume, minVolumeDiff));
         }
 
         /// <summary>
-        /// Gets the compliment dose for the specified volume (the cold spot). Calculated by taking the total volume and subtracting the input volume.
+        ///     Gets the compliment dose for the specified volume (the cold spot). Calculated by taking the total volume and
+        ///     subtracting the input volume.
         /// </summary>
         /// <param name="dvh">the dvhPoint array that is queried</param>
         /// <param name="volume">the volume in the same units as the DVH curve</param>
@@ -121,7 +112,7 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        /// Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
+        ///     Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
         /// </summary>
         /// <param name="dvhs"></param>
         /// <returns></returns>
@@ -131,7 +122,7 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        /// Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
+        ///     Merges DVHData from multiple structures into one DVH by summing the volumes at each dose value
         /// </summary>
         /// <param name="dvhs">the multiple dvh curves to merge</param>
         /// <returns>the combined dvh from multiple structures</returns>
@@ -146,24 +137,26 @@ namespace ESAPIX.Extensions
             var volUnit = dvhs.First().First().VolumeUnit;
             var doseUnit = dvhs.First().First().DoseValue.Unit;
 
-            if (dvhs.Any(d => d.First().DoseValue.Unit != doseUnit)) { throw new ArgumentException("Cannot merge relative DVHs. All DVHs must have the same dose units"); }
-            if (dvhs.Any(d => d.First().VolumeUnit != volUnit)) { throw new ArgumentException("Cannot merge relative DVHs. All DVHs must have the same volume units"); }
-            if (volUnit == MagicStrings.VolumeUnits.PERCENT) { throw new ArgumentException("Cannot merge relative DVHs. Must be in absolute volume format"); }
+            if (dvhs.Any(d => d.First().DoseValue.Unit != doseUnit))
+                throw new ArgumentException("Cannot merge relative DVHs. All DVHs must have the same dose units");
+            if (dvhs.Any(d => d.First().VolumeUnit != volUnit))
+                throw new ArgumentException("Cannot merge relative DVHs. All DVHs must have the same volume units");
+            if (volUnit == MagicStrings.VolumeUnits.PERCENT)
+                throw new ArgumentException("Cannot merge relative DVHs. Must be in absolute volume format");
 
             //Everything looks good, let's do it
             foreach (var dvh in dvhs)
-            {
-                for (int i = 0; i < dvh.Length; i++)
+                for (var i = 0; i < dvh.Length; i++)
                 {
                     var current = dvh[i];
-                    mergedDVH[i] = new DVHPoint(current.DoseValue, current.Volume + mergedDVH[i].Volume, current.VolumeUnit);
+                    mergedDVH[i] = new DVHPoint(current.DoseValue, current.Volume + mergedDVH[i].Volume,
+                        current.VolumeUnit);
                 }
-            }
             return mergedDVH;
         }
 
         /// <summary>
-        /// If appropriate, converts the DVH curve into relative volume points instead of absolute volume
+        ///     If appropriate, converts the DVH curve into relative volume points instead of absolute volume
         /// </summary>
         /// <param name="dvh">the input DVH</param>
         /// <returns>the dvh with relative volume points</returns>
@@ -172,17 +165,14 @@ namespace ESAPIX.Extensions
             var maxVol = dvh.Max(d => d.Volume);
 
             if (dvh.Any() && dvh.First().VolumeUnit != MagicStrings.VolumeUnits.PERCENT)
-            {
-                for (int i = 0; i < dvh.Length; i++)
-                {
-                    dvh[i] = new DVHPoint(dvh[i].DoseValue, 100 * dvh[i].Volume / maxVol, MagicStrings.VolumeUnits.PERCENT);
-                }
-            }
+                for (var i = 0; i < dvh.Length; i++)
+                    dvh[i] = new DVHPoint(dvh[i].DoseValue, 100 * dvh[i].Volume / maxVol,
+                        MagicStrings.VolumeUnits.PERCENT);
             return dvh;
         }
 
         /// <summary>
-        /// If appropriate, converts the DVH curve into relative dose points instead of absolute dose
+        ///     If appropriate, converts the DVH curve into relative dose points instead of absolute dose
         /// </summary>
         /// <param name="dvh">the input DVH</param>
         /// <param name="scalingPoint">the dose value which represents 100%, all doses will be scaled in reference to this</param>
@@ -193,19 +183,16 @@ namespace ESAPIX.Extensions
             {
                 return dvh; //Already in relative format
             }
-            else
+            for (var i = 0; i < dvh.Length; i++)
             {
-                for (int i = 0; i < dvh.Length; i++)
-                {
-                    var dv = new DoseValue(dvh[i].DoseValue.Divide(scalingPoint).Dose * 100, DoseValue.DoseUnit.Percent);
-                    dvh[i] = new DVHPoint(dv, dvh[i].Volume, dvh[i].VolumeUnit);
-                }
-                return dvh;
+                var dv = new DoseValue(dvh[i].DoseValue.Divide(scalingPoint).Dose * 100, DoseValue.DoseUnit.Percent);
+                dvh[i] = new DVHPoint(dv, dvh[i].Volume, dvh[i].VolumeUnit);
             }
+            return dvh;
         }
 
         /// <summary>
-        /// Returns the max dose from the dvh curve
+        ///     Returns the max dose from the dvh curve
         /// </summary>
         /// <param name="dvh">the dvh curve</param>
         /// <returns>the max dose in the same units as the curve</returns>
@@ -221,7 +208,7 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        /// Returns the min dose from the dvh curve
+        ///     Returns the min dose from the dvh curve
         /// </summary>
         /// <param name="dvh">the dvh curve</param>
         /// <returns>the minimum dose in the same units as the curve</returns>
@@ -237,7 +224,7 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        /// Returns the mean dose from the dvh curve
+        ///     Returns the mean dose from the dvh curve
         /// </summary>
         /// <param name="dvh">the dvh curve</param>
         /// <returns>the mean dose in the same units as the curve</returns>
@@ -251,6 +238,5 @@ namespace ESAPIX.Extensions
             }
             return DoseValue.UndefinedDose();
         }
-
     }
 }

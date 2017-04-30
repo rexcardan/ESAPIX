@@ -1,91 +1,108 @@
 using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 using System.Dynamic;
+using System.Xml;
+using ESAPIX.Facade.Types;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class Registration : ESAPIX.Facade.API.ApiDataObject
+    public class Registration : ApiDataObject
     {
-        public Registration() { _client = new ExpandoObject(); }
-        public Registration(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public System.Nullable<System.DateTime> CreationDateTime
+        public Registration()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public Registration(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public DateTime? CreationDateTime
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.CreationDateTime; }
+                if (_client is ExpandoObject) return _client.CreationDateTime;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.CreationDateTime; });
+                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.CreationDateTime = value; }
+                if (_client is ExpandoObject) _client.CreationDateTime = value;
             }
         }
-        public System.String RegisteredFOR
+
+        public string RegisteredFOR
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.RegisteredFOR; }
+                if (_client is ExpandoObject) return _client.RegisteredFOR;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.RegisteredFOR; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.RegisteredFOR; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.RegisteredFOR = value; }
+                if (_client is ExpandoObject) _client.RegisteredFOR = value;
             }
         }
-        public System.String SourceFOR
+
+        public string SourceFOR
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SourceFOR; }
+                if (_client is ExpandoObject) return _client.SourceFOR;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.SourceFOR; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SourceFOR; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SourceFOR = value; }
+                if (_client is ExpandoObject) _client.SourceFOR = value;
             }
         }
-        public System.Double[,] TransformationMatrix
+
+        public double[,] TransformationMatrix
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.TransformationMatrix; }
+                if (_client is ExpandoObject) return _client.TransformationMatrix;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double[,]>((sc) => { return local._client.TransformationMatrix; });
+                return X.Instance.CurrentContext.GetValue<double[,]>(sc =>
+                {
+                    return local._client.TransformationMatrix;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.TransformationMatrix = value; }
+                if (_client is ExpandoObject) _client.TransformationMatrix = value;
             }
         }
-        public void WriteXml(System.Xml.XmlWriter writer)
+
+        public void WriteXml(XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+        }
+
+        public VVector InverseTransformPoint(VVector pt)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                local._client.WriteXml(writer);
+                return new VVector(local._client.InverseTransformPoint(pt._client));
             });
-
+            return retVal;
         }
-        public ESAPIX.Facade.Types.VVector InverseTransformPoint(ESAPIX.Facade.Types.VVector pt)
+
+        public VVector TransformPoint(VVector pt)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.Types.VVector(local._client.InverseTransformPoint(pt._client)); });
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new VVector(local._client.TransformPoint(pt._client));
+            });
             return retVal;
-
-        }
-        public ESAPIX.Facade.Types.VVector TransformPoint(ESAPIX.Facade.Types.VVector pt)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.Types.VVector(local._client.TransformPoint(pt._client)); });
-            return retVal;
-
         }
     }
 }

@@ -1,17 +1,12 @@
 ﻿using ESAPIX.DVH.Constraints;
 using ESAPIX.DVH.Query;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ESAPIX.Facade.Types;
 using static ESAPIX.Facade.Types.DoseValue;
 
 namespace ESAPIX.DVH
 {
     /// <summary>
-    /// Converts a Mayo constraint type to a DVH Constraint class
+    ///     Converts a Mayo constraint type to a DVH Constraint class
     /// </summary>
     public static class MayoConstraintConverter
     {
@@ -45,189 +40,6 @@ namespace ESAPIX.DVH
             return c;
         }
 
-        #region BUILDERS
-        private static void BuildMaxDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority, out IConstraint c)
-        {
-
-            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
-            var dose = mc.ConstraintValue;
-            var dv = new DoseValue(dose, doseUnit);
-            c = new MaxDoseConstraint() { ConstraintDose = dv, StructureName = structureName, Priority = priority };
-        }
-
-        private static void BuildMinDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority, out IConstraint c)
-        {
-            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
-            var dose = mc.ConstraintValue;
-            var dv = new DoseValue(dose, doseUnit);
-            c = new MinDoseConstraint() { ConstraintDose = dv, StructureName = structureName, Priority = priority };
-        }
-
-        private static void BuildDoseAtVolumeConstraint(MayoConstraint mc, string structureName, PriorityType priority, out IConstraint c)
-        {
-            var volume = mc.Query.QueryValue;
-            var volumeUnit = GetVolumeUnits(mc.Query.QueryUnits);
-            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
-            var dose = mc.ConstraintValue;
-            var dv = new DoseValue(dose, doseUnit);
-            switch (mc.Discriminator)
-            {
-                case Discriminator.EQUAL:
-                case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
-                    c = new MinDoseAtVolConstraint()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                case Discriminator.LESS_THAN:
-                case Discriminator.LESS_THAN_OR_EQUAL:
-                    c = new MaxDoseAtVolConstraint()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                default: c = null; break;
-            }
-        }
-
-        private static void BuildMeanDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority, out IConstraint c)
-        {
-            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
-            var dose = mc.ConstraintValue;
-            var dv = new DoseValue(dose, doseUnit);
-            switch (mc.Discriminator)
-            {
-                case Discriminator.EQUAL:
-                case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
-                    c = new MinMeanDoseConstraint() { ConstraintDose = dv, StructureName = structureName, Priority = priority };
-                    break;
-                case Discriminator.LESS_THAN:
-                case Discriminator.LESS_THAN_OR_EQUAL:
-                    c = new MaxMeanDoseConstraint() { ConstraintDose = dv, StructureName = structureName, Priority = priority };
-                    break;
-                default: c = null; break;
-            }
-        }
-
-        private static void BuildComplimentVolumeConstraint(MayoConstraint mc, string structureName, PriorityType priority, out IConstraint c)
-        {
-            var dose = mc.Query.QueryValue;
-            var doseUnit = GetDoseUnits(mc.Query.QueryUnits);
-            var volumeUnit = GetVolumeUnits(mc.Query.UnitsDesired);
-            var volume = mc.ConstraintValue;
-            var dv = new DoseValue(dose, doseUnit);
-            switch (mc.Discriminator)
-            {
-                case Discriminator.EQUAL:
-                case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
-                    c = new MinComplimentVolumeAtDose()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                case Discriminator.LESS_THAN:
-                case Discriminator.LESS_THAN_OR_EQUAL:
-                    c = new MaxComplimentVolumeAtDose()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                default: c = null; break;
-            }
-        }
-
-        private static void BuildDoseComplimentConstraint(MayoConstraint mc, string structureName, PriorityType priority, out IConstraint c)
-        {
-            var volume = mc.Query.QueryValue;
-            var volumeUnit = GetVolumeUnits(mc.Query.QueryUnits);
-            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
-            var dose = mc.ConstraintValue;
-            var dv = new DoseValue(dose, doseUnit);
-            switch (mc.Discriminator)
-            {
-                case Discriminator.EQUAL:
-                case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
-                    c = new MinComplimentDoseAtVolumeConstraint()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                case Discriminator.LESS_THAN:
-                case Discriminator.LESS_THAN_OR_EQUAL:
-                    c = new MaxComplimentDoseAtVolumeConstraint()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                default: c = null; break;
-            }
-        }
-
-        private static void BuildVolumeAtDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority, out IConstraint c)
-        {
-            var dose = mc.Query.QueryValue;
-            var doseUnit = GetDoseUnits(mc.Query.QueryUnits);
-            var volumeUnit = GetVolumeUnits(mc.Query.UnitsDesired);
-            var volume = mc.ConstraintValue;
-            var dv = new DoseValue(dose, doseUnit);
-            switch (mc.Discriminator)
-            {
-                case Discriminator.EQUAL:
-                case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
-                    c = new MinVolAtDoseConstraint()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                case Discriminator.LESS_THAN:
-                case Discriminator.LESS_THAN_OR_EQUAL:
-                    c = new MaxVolAtDoseConstraint()
-                    {
-                        ConstraintDose = dv,
-                        Priority = priority,
-                        StructureName = structureName,
-                        Volume = volume,
-                        VolumeType = volumeUnit
-                    };
-                    break;
-                default: c = null; break;
-            }
-        }
-        #endregion
-
         private static VolumePresentation GetVolumeUnits(Units mayoUnit)
         {
             switch (mayoUnit)
@@ -248,5 +60,216 @@ namespace ESAPIX.DVH
                 default: return DoseUnit.Unknown;
             }
         }
+
+        #region BUILDERS
+
+        private static void BuildMaxDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority,
+            out IConstraint c)
+        {
+            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
+            var dose = mc.ConstraintValue;
+            var dv = new DoseValue(dose, doseUnit);
+            c = new MaxDoseConstraint {ConstraintDose = dv, StructureName = structureName, Priority = priority};
+        }
+
+        private static void BuildMinDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority,
+            out IConstraint c)
+        {
+            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
+            var dose = mc.ConstraintValue;
+            var dv = new DoseValue(dose, doseUnit);
+            c = new MinDoseConstraint {ConstraintDose = dv, StructureName = structureName, Priority = priority};
+        }
+
+        private static void BuildDoseAtVolumeConstraint(MayoConstraint mc, string structureName, PriorityType priority,
+            out IConstraint c)
+        {
+            var volume = mc.Query.QueryValue;
+            var volumeUnit = GetVolumeUnits(mc.Query.QueryUnits);
+            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
+            var dose = mc.ConstraintValue;
+            var dv = new DoseValue(dose, doseUnit);
+            switch (mc.Discriminator)
+            {
+                case Discriminator.EQUAL:
+                case Discriminator.GREATER_THAN:
+                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                    c = new MinDoseAtVolConstraint
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                case Discriminator.LESS_THAN:
+                case Discriminator.LESS_THAN_OR_EQUAL:
+                    c = new MaxDoseAtVolConstraint
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                default:
+                    c = null;
+                    break;
+            }
+        }
+
+        private static void BuildMeanDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority,
+            out IConstraint c)
+        {
+            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
+            var dose = mc.ConstraintValue;
+            var dv = new DoseValue(dose, doseUnit);
+            switch (mc.Discriminator)
+            {
+                case Discriminator.EQUAL:
+                case Discriminator.GREATER_THAN:
+                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                    c = new MinMeanDoseConstraint
+                    {
+                        ConstraintDose = dv,
+                        StructureName = structureName,
+                        Priority = priority
+                    };
+                    break;
+                case Discriminator.LESS_THAN:
+                case Discriminator.LESS_THAN_OR_EQUAL:
+                    c = new MaxMeanDoseConstraint
+                    {
+                        ConstraintDose = dv,
+                        StructureName = structureName,
+                        Priority = priority
+                    };
+                    break;
+                default:
+                    c = null;
+                    break;
+            }
+        }
+
+        private static void BuildComplimentVolumeConstraint(MayoConstraint mc, string structureName,
+            PriorityType priority, out IConstraint c)
+        {
+            var dose = mc.Query.QueryValue;
+            var doseUnit = GetDoseUnits(mc.Query.QueryUnits);
+            var volumeUnit = GetVolumeUnits(mc.Query.UnitsDesired);
+            var volume = mc.ConstraintValue;
+            var dv = new DoseValue(dose, doseUnit);
+            switch (mc.Discriminator)
+            {
+                case Discriminator.EQUAL:
+                case Discriminator.GREATER_THAN:
+                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                    c = new MinComplimentVolumeAtDose
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                case Discriminator.LESS_THAN:
+                case Discriminator.LESS_THAN_OR_EQUAL:
+                    c = new MaxComplimentVolumeAtDose
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                default:
+                    c = null;
+                    break;
+            }
+        }
+
+        private static void BuildDoseComplimentConstraint(MayoConstraint mc, string structureName,
+            PriorityType priority, out IConstraint c)
+        {
+            var volume = mc.Query.QueryValue;
+            var volumeUnit = GetVolumeUnits(mc.Query.QueryUnits);
+            var doseUnit = GetDoseUnits(mc.Query.UnitsDesired);
+            var dose = mc.ConstraintValue;
+            var dv = new DoseValue(dose, doseUnit);
+            switch (mc.Discriminator)
+            {
+                case Discriminator.EQUAL:
+                case Discriminator.GREATER_THAN:
+                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                    c = new MinComplimentDoseAtVolumeConstraint
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                case Discriminator.LESS_THAN:
+                case Discriminator.LESS_THAN_OR_EQUAL:
+                    c = new MaxComplimentDoseAtVolumeConstraint
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                default:
+                    c = null;
+                    break;
+            }
+        }
+
+        private static void BuildVolumeAtDoseConstraint(MayoConstraint mc, string structureName, PriorityType priority,
+            out IConstraint c)
+        {
+            var dose = mc.Query.QueryValue;
+            var doseUnit = GetDoseUnits(mc.Query.QueryUnits);
+            var volumeUnit = GetVolumeUnits(mc.Query.UnitsDesired);
+            var volume = mc.ConstraintValue;
+            var dv = new DoseValue(dose, doseUnit);
+            switch (mc.Discriminator)
+            {
+                case Discriminator.EQUAL:
+                case Discriminator.GREATER_THAN:
+                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                    c = new MinVolAtDoseConstraint
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                case Discriminator.LESS_THAN:
+                case Discriminator.LESS_THAN_OR_EQUAL:
+                    c = new MaxVolAtDoseConstraint
+                    {
+                        ConstraintDose = dv,
+                        Priority = priority,
+                        StructureName = structureName,
+                        Volume = volume,
+                        VolumeType = volumeUnit
+                    };
+                    break;
+                default:
+                    c = null;
+                    break;
+            }
+        }
+
+        #endregion
     }
 }

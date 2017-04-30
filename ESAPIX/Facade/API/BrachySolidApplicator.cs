@@ -1,181 +1,194 @@
-using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.Dynamic;
+using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class BrachySolidApplicator : ESAPIX.Facade.API.ApiDataObject
+    public class BrachySolidApplicator : ApiDataObject
     {
-        public BrachySolidApplicator() { _client = new ExpandoObject(); }
-        public BrachySolidApplicator(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public System.String ApplicatorSetName
+        public BrachySolidApplicator()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public BrachySolidApplicator(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public string ApplicatorSetName
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ApplicatorSetName; }
+                if (_client is ExpandoObject) return _client.ApplicatorSetName;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.ApplicatorSetName; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ApplicatorSetName; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ApplicatorSetName = value; }
+                if (_client is ExpandoObject) _client.ApplicatorSetName = value;
             }
         }
-        public System.String ApplicatorSetType
+
+        public string ApplicatorSetType
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.ApplicatorSetType; }
+                if (_client is ExpandoObject) return _client.ApplicatorSetType;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.ApplicatorSetType; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ApplicatorSetType; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.ApplicatorSetType = value; }
+                if (_client is ExpandoObject) _client.ApplicatorSetType = value;
             }
         }
-        public System.String Category
+
+        public string Category
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Category; }
+                if (_client is ExpandoObject) return _client.Category;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Category; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Category; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Category = value; }
+                if (_client is ExpandoObject) _client.Category = value;
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.Catheter> Catheters
+
+        public IEnumerable<Catheter> Catheters
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.Catheters;
+                    var asEnum = (IEnumerable) _client.Catheters;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.Catheter();
+                    var facade = new Catheter();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public System.String Note
+
+        public string Note
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Note; }
+                if (_client is ExpandoObject) return _client.Note;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Note; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Note; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Note = value; }
+                if (_client is ExpandoObject) _client.Note = value;
             }
         }
-        public System.String PartName
+
+        public string PartName
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.PartName; }
+                if (_client is ExpandoObject) return _client.PartName;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.PartName; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PartName; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.PartName = value; }
+                if (_client is ExpandoObject) _client.PartName = value;
             }
         }
-        public System.String PartNumber
+
+        public string PartNumber
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.PartNumber; }
+                if (_client is ExpandoObject) return _client.PartNumber;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.PartNumber; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PartNumber; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.PartNumber = value; }
+                if (_client is ExpandoObject) _client.PartNumber = value;
             }
         }
-        public System.String Summary
+
+        public string Summary
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Summary; }
+                if (_client is ExpandoObject) return _client.Summary;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Summary; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Summary; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Summary = value; }
+                if (_client is ExpandoObject) _client.Summary = value;
             }
         }
-        public System.String UID
+
+        public string UID
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.UID; }
+                if (_client is ExpandoObject) return _client.UID;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.UID; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UID; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.UID = value; }
+                if (_client is ExpandoObject) _client.UID = value;
             }
         }
-        public System.String Vendor
+
+        public string Vendor
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Vendor; }
+                if (_client is ExpandoObject) return _client.Vendor;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Vendor; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Vendor; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Vendor = value; }
+                if (_client is ExpandoObject) _client.Vendor = value;
             }
         }
-        public System.String Version
+
+        public string Version
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Version; }
+                if (_client is ExpandoObject) return _client.Version;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Version; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Version; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Version = value; }
+                if (_client is ExpandoObject) _client.Version = value;
             }
         }
-        public void WriteXml(System.Xml.XmlWriter writer)
+
+        public void WriteXml(XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

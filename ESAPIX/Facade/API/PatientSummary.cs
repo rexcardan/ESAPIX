@@ -1,142 +1,154 @@
 using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 using System.Dynamic;
+using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class PatientSummary : ESAPIX.Facade.API.SerializableObject
+    public class PatientSummary : SerializableObject
     {
-        public PatientSummary() { _client = new ExpandoObject(); }
-        public PatientSummary(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public System.Nullable<System.DateTime> CreationDateTime
+        public PatientSummary()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public PatientSummary(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public DateTime? CreationDateTime
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.CreationDateTime; }
+                if (_client is ExpandoObject) return _client.CreationDateTime;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.CreationDateTime; });
+                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.CreationDateTime = value; }
+                if (_client is ExpandoObject) _client.CreationDateTime = value;
             }
         }
-        public System.Nullable<System.DateTime> DateOfBirth
+
+        public DateTime? DateOfBirth
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.DateOfBirth; }
+                if (_client is ExpandoObject) return _client.DateOfBirth;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.DateOfBirth; });
+                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.DateOfBirth; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.DateOfBirth = value; }
+                if (_client is ExpandoObject) _client.DateOfBirth = value;
             }
         }
-        public System.String FirstName
+
+        public string FirstName
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.FirstName; }
+                if (_client is ExpandoObject) return _client.FirstName;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.FirstName; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.FirstName; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.FirstName = value; }
+                if (_client is ExpandoObject) _client.FirstName = value;
             }
         }
-        public System.String Id
+
+        public string Id
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Id; }
+                if (_client is ExpandoObject) return _client.Id;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Id; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Id = value; }
+                if (_client is ExpandoObject) _client.Id = value;
             }
         }
-        public System.String Id2
+
+        public string Id2
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Id2; }
+                if (_client is ExpandoObject) return _client.Id2;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Id2; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id2; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Id2 = value; }
+                if (_client is ExpandoObject) _client.Id2 = value;
             }
         }
-        public System.String LastName
+
+        public string LastName
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.LastName; }
+                if (_client is ExpandoObject) return _client.LastName;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.LastName; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.LastName; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.LastName = value; }
+                if (_client is ExpandoObject) _client.LastName = value;
             }
         }
-        public System.String MiddleName
+
+        public string MiddleName
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.MiddleName; }
+                if (_client is ExpandoObject) return _client.MiddleName;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.MiddleName; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MiddleName; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.MiddleName = value; }
+                if (_client is ExpandoObject) _client.MiddleName = value;
             }
         }
-        public System.String Sex
+
+        public string Sex
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Sex; }
+                if (_client is ExpandoObject) return _client.Sex;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Sex; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Sex; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Sex = value; }
+                if (_client is ExpandoObject) _client.Sex = value;
             }
         }
-        public System.String SSN
+
+        public string SSN
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.SSN; }
+                if (_client is ExpandoObject) return _client.SSN;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.SSN; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SSN; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.SSN = value; }
+                if (_client is ExpandoObject) _client.SSN = value;
             }
         }
-        public void WriteXml(System.Xml.XmlWriter writer)
+
+        public void WriteXml(XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.WriteXml(writer);
-            });
-
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

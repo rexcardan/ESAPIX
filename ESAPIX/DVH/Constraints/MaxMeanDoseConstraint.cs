@@ -1,29 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using ESAPIX.Extensions;
 using ESAPIX.Facade.API;
 using ESAPIX.Facade.Types;
 
 namespace ESAPIX.DVH.Constraints
 
-{    /// <summary>
-     /// Encapsulates the requirement of a maximum mean dose to a structure
-     /// </summary>
+{
+    /// <summary>
+    ///     Encapsulates the requirement of a maximum mean dose to a structure
+    /// </summary>
     public class MaxMeanDoseConstraint : DoseStructureConstraint
     {
         public override ConstraintResult Constrain(PlanningItem pi)
         {
             var msg = string.Empty;
-            ResultType passed = GetFailedResultType();
+            var passed = GetFailedResultType();
 
-            var dvhs = GetStructures(pi).Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(), VolumePresentation.AbsoluteCm3, 0.01));
+            var dvhs = GetStructures(pi)
+                .Select(s => pi.GetDVHCumulativeData(s, ConstraintDose.GetPresentation(),
+                    VolumePresentation.AbsoluteCm3, 0.01));
             var meanValue = dvhs.Average(d => d.MeanDose.GetDose(ConstraintDose.Unit));
             var mean = new DoseValue(meanValue, ConstraintDose.Unit);
 
-            var value = $"{ mean.GetDose(ConstraintDose.Unit).ToString("F3") } { ConstraintDose.UnitAsString}";
+            var value = $"{mean.GetDose(ConstraintDose.Unit).ToString("F3")} {ConstraintDose.UnitAsString}";
             passed = mean.LessThanOrEqualTo(ConstraintDose) ? ResultType.PASSED : GetFailedResultType();
             msg = $"Mean dose to {string.Join("/", StructureNames)} is {value}.";
 

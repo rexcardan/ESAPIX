@@ -1,21 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
-    public class ImageProfile : ESAPIX.Facade.Types.LineProfile
+    public class ImageProfile : LineProfile
     {
-        public ImageProfile() { _client = new ExpandoObject(); }
-        public ImageProfile(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public ImageProfile(ESAPIX.Facade.Types.VVector origin, ESAPIX.Facade.Types.VVector step, System.Double[] data, System.String unit)
+        public ImageProfile()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public ImageProfile(dynamic client)
+        {
+            _client = client;
+        }
+
+        public ImageProfile(VVector origin, VVector step, double[] data, string unit)
         {
             if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructImageProfile(origin, step, data, unit); });
+            {
+                X.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client = VMSConstructor.ConstructImageProfile(origin, step, data, unit);
+                });
+            }
             else
             {
                 _client = new ExpandoObject();
@@ -25,17 +33,20 @@ namespace ESAPIX.Facade.Types
                 _client.Unit = unit;
             }
         }
-        public System.String Unit
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public string Unit
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.Unit; }
+                if (_client is ExpandoObject) return _client.Unit;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Unit; });
+                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Unit; });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.Unit = value; }
+                if (_client is ExpandoObject) _client.Unit = value;
             }
         }
     }

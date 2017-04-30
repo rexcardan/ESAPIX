@@ -1,18 +1,15 @@
-﻿using ESAPIX.DVH.Query;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using ESAPIX.DVH.Query;
 
 namespace ESAPIX.DVH
 {
     public class DiscriminatorConverter
     {
         /// <summary>
-        /// Reads a discriminator from a string
+        ///     Reads a discriminator from a string
         /// </summary>
-        /// <param name="discString">the string discriminator (eg <, <=, etc)</param>
+        /// <param name="discString">
+        ///     the string discriminator (eg <, <=, etc)</param>
         /// <returns></returns>
         public static Discriminator ReadDiscrimator(string discString)
         {
@@ -29,7 +26,7 @@ namespace ESAPIX.DVH
 
 
         /// <summary>
-        /// Writes a discriminator to a string
+        ///     Writes a discriminator to a string
         /// </summary>
         /// <param name="disc">the constraint discriminator</param>
         /// <returns>a string representation of the discriminator</returns>

@@ -1,13 +1,8 @@
-﻿using ESAPIX.Helpers;
-using ESAPIX.Logging;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ESAPIX.AppKit.Data
 {
@@ -23,10 +18,7 @@ namespace ESAPIX.AppKit.Data
                 var read = File.ReadAllText(path);
                 return JsonConvert.DeserializeObject<AppSettings>(read);
             }
-            else
-            {
-                return new AppSettings();
-            }
+            return new AppSettings();
         }
 
         public bool Save(string settingsPath = "")
@@ -49,26 +41,18 @@ namespace ESAPIX.AppKit.Data
         public T Get<T>(string key)
         {
             if (Settings.ContainsKey(key))
-            {
                 if (typeof(T) == typeof(string))
-                {
-                    return (T)Settings[key];
-                }
+                    return (T) Settings[key];
                 else
-                {
                     return JsonConvert.DeserializeObject<T>(Settings[key].ToString());
-                }
-            }
             return default(T);
         }
 
         public void Set(string key, object value)
         {
             if (Settings.ContainsKey(key))
-            {
                 Settings[key] = value;
-            }
-            else { Settings.Add(key, value); }
+            else Settings.Add(key, value);
         }
     }
 }

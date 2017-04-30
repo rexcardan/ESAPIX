@@ -1,93 +1,105 @@
-using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class OptimizerResult : ESAPIX.Facade.API.CalculationResult
+    public class OptimizerResult : CalculationResult
     {
-        public OptimizerResult() { _client = new ExpandoObject(); }
-        public OptimizerResult(dynamic client) { _client = client; }
-        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
-        public IEnumerable<ESAPIX.Facade.API.OptimizerDVH> StructureDVHs
+        public OptimizerResult()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public OptimizerResult(dynamic client)
+        {
+            _client = client;
+        }
+
+        public bool IsLive => !DefaultHelper.IsDefault(_client);
+
+        public IEnumerable<OptimizerDVH> StructureDVHs
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.StructureDVHs;
+                    var asEnum = (IEnumerable) _client.StructureDVHs;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.OptimizerDVH();
+                    var facade = new OptimizerDVH();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public IEnumerable<ESAPIX.Facade.API.OptimizerObjectiveValue> StructureObjectiveValues
+
+        public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable)_client.StructureObjectiveValues;
+                    var asEnum = (IEnumerable) _client.StructureObjectiveValues;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                 {
-                    var facade = new ESAPIX.Facade.API.OptimizerObjectiveValue();
+                    var facade = new OptimizerObjectiveValue();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
-                        {
                             facade._client = vms;
-                        }
                     });
                     if (facade._client != null)
-                    { yield return facade; }
+                        yield return facade;
                 }
             }
         }
-        public System.Double TotalObjectiveFunctionValue
+
+        public double TotalObjectiveFunctionValue
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.TotalObjectiveFunctionValue; }
+                if (_client is ExpandoObject) return _client.TotalObjectiveFunctionValue;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.TotalObjectiveFunctionValue; });
+                return X.Instance.CurrentContext.GetValue<double>(sc =>
+                {
+                    return local._client.TotalObjectiveFunctionValue;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.TotalObjectiveFunctionValue = value; }
+                if (_client is ExpandoObject) _client.TotalObjectiveFunctionValue = value;
             }
         }
-        public System.Int32 NumberOfIMRTOptimizerIterations
+
+        public int NumberOfIMRTOptimizerIterations
         {
             get
             {
-                if (_client is ExpandoObject) { return _client.NumberOfIMRTOptimizerIterations; }
+                if (_client is ExpandoObject) return _client.NumberOfIMRTOptimizerIterations;
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.NumberOfIMRTOptimizerIterations; });
+                return X.Instance.CurrentContext.GetValue<int>(sc =>
+                {
+                    return local._client.NumberOfIMRTOptimizerIterations;
+                });
             }
             set
             {
-                if (_client is ExpandoObject) { _client.NumberOfIMRTOptimizerIterations = value; }
+                if (_client is ExpandoObject) _client.NumberOfIMRTOptimizerIterations = value;
             }
         }
     }
