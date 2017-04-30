@@ -1,271 +1,240 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class BrachyTreatmentUnit : ApiDataObject
+    public class BrachyTreatmentUnit : ESAPIX.Facade.API.ApiDataObject
     {
-        public BrachyTreatmentUnit()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public BrachyTreatmentUnit(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public string DoseRateMode
+        public BrachyTreatmentUnit() { _client = new ExpandoObject(); }
+        public BrachyTreatmentUnit(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public System.String DoseRateMode
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DoseRateMode;
+                if (_client is ExpandoObject) { return _client.DoseRateMode; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.DoseRateMode; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.DoseRateMode; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.DoseRateMode = value;
+                if (_client is ExpandoObject) { _client.DoseRateMode = value; }
             }
         }
-
-        public double DwellTimeResolution
+        public System.Double DwellTimeResolution
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DwellTimeResolution;
+                if (_client is ExpandoObject) { return _client.DwellTimeResolution; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.DwellTimeResolution; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.DwellTimeResolution; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.DwellTimeResolution = value;
+                if (_client is ExpandoObject) { _client.DwellTimeResolution = value; }
             }
         }
-
-        public string MachineInterface
+        public System.String MachineInterface
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineInterface;
+                if (_client is ExpandoObject) { return _client.MachineInterface; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineInterface; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.MachineInterface; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MachineInterface = value;
+                if (_client is ExpandoObject) { _client.MachineInterface = value; }
             }
         }
-
-        public string MachineModel
+        public System.String MachineModel
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineModel;
+                if (_client is ExpandoObject) { return _client.MachineModel; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModel; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.MachineModel; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MachineModel = value;
+                if (_client is ExpandoObject) { _client.MachineModel = value; }
             }
         }
-
-        public double MaxDwellTimePerChannel
+        public System.Double MaxDwellTimePerChannel
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaxDwellTimePerChannel;
+                if (_client is ExpandoObject) { return _client.MaxDwellTimePerChannel; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(
-                    sc => { return local._client.MaxDwellTimePerChannel; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MaxDwellTimePerChannel; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MaxDwellTimePerChannel = value;
+                if (_client is ExpandoObject) { _client.MaxDwellTimePerChannel = value; }
             }
         }
-
-        public double MaxDwellTimePerPos
+        public System.Double MaxDwellTimePerPos
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaxDwellTimePerPos;
+                if (_client is ExpandoObject) { return _client.MaxDwellTimePerPos; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MaxDwellTimePerPos; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MaxDwellTimePerPos; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MaxDwellTimePerPos = value;
+                if (_client is ExpandoObject) { _client.MaxDwellTimePerPos = value; }
             }
         }
-
-        public double MaxDwellTimePerTreatment
+        public System.Double MaxDwellTimePerTreatment
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaxDwellTimePerTreatment;
+                if (_client is ExpandoObject) { return _client.MaxDwellTimePerTreatment; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc =>
-                {
-                    return local._client.MaxDwellTimePerTreatment;
-                });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MaxDwellTimePerTreatment; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MaxDwellTimePerTreatment = value;
+                if (_client is ExpandoObject) { _client.MaxDwellTimePerTreatment = value; }
             }
         }
-
-        public double MaximumChannelLength
+        public System.Double MaximumChannelLength
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaximumChannelLength;
+                if (_client is ExpandoObject) { return _client.MaximumChannelLength; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MaximumChannelLength; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MaximumChannelLength; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MaximumChannelLength = value;
+                if (_client is ExpandoObject) { _client.MaximumChannelLength = value; }
             }
         }
-
-        public int MaximumDwellPositionsPerChannel
+        public System.Int32 MaximumDwellPositionsPerChannel
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaximumDwellPositionsPerChannel;
+                if (_client is ExpandoObject) { return _client.MaximumDwellPositionsPerChannel; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<int>(sc =>
-                {
-                    return local._client.MaximumDwellPositionsPerChannel;
-                });
+                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.MaximumDwellPositionsPerChannel; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MaximumDwellPositionsPerChannel = value;
+                if (_client is ExpandoObject) { _client.MaximumDwellPositionsPerChannel = value; }
             }
         }
-
-        public double MaximumStepSize
+        public System.Double MaximumStepSize
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaximumStepSize;
+                if (_client is ExpandoObject) { return _client.MaximumStepSize; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MaximumStepSize; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MaximumStepSize; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MaximumStepSize = value;
+                if (_client is ExpandoObject) { _client.MaximumStepSize = value; }
             }
         }
-
-        public double MinimumChannelLength
+        public System.Double MinimumChannelLength
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MinimumChannelLength;
+                if (_client is ExpandoObject) { return _client.MinimumChannelLength; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MinimumChannelLength; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MinimumChannelLength; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MinimumChannelLength = value;
+                if (_client is ExpandoObject) { _client.MinimumChannelLength = value; }
             }
         }
-
-        public double MinimumStepSize
+        public System.Double MinimumStepSize
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MinimumStepSize;
+                if (_client is ExpandoObject) { return _client.MinimumStepSize; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MinimumStepSize; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MinimumStepSize; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MinimumStepSize = value;
+                if (_client is ExpandoObject) { _client.MinimumStepSize = value; }
             }
         }
-
-        public int NumberOfChannels
+        public System.Int32 NumberOfChannels
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfChannels;
+                if (_client is ExpandoObject) { return _client.NumberOfChannels; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.NumberOfChannels; });
+                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.NumberOfChannels; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.NumberOfChannels = value;
+                if (_client is ExpandoObject) { _client.NumberOfChannels = value; }
             }
         }
-
-        public double SourceCenterOffsetFromTip
+        public System.Double SourceCenterOffsetFromTip
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SourceCenterOffsetFromTip;
+                if (_client is ExpandoObject) { return _client.SourceCenterOffsetFromTip; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc =>
-                {
-                    return local._client.SourceCenterOffsetFromTip;
-                });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.SourceCenterOffsetFromTip; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.SourceCenterOffsetFromTip = value;
+                if (_client is ExpandoObject) { _client.SourceCenterOffsetFromTip = value; }
             }
         }
-
-        public string SourceMovementType
+        public System.String SourceMovementType
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SourceMovementType;
+                if (_client is ExpandoObject) { return _client.SourceMovementType; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SourceMovementType; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.SourceMovementType; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.SourceMovementType = value;
+                if (_client is ExpandoObject) { _client.SourceMovementType = value; }
             }
         }
-
-        public double StepSizeResolution
+        public System.Double StepSizeResolution
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StepSizeResolution;
+                if (_client is ExpandoObject) { return _client.StepSizeResolution; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.StepSizeResolution; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.StepSizeResolution; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.StepSizeResolution = value;
+                if (_client is ExpandoObject) { _client.StepSizeResolution = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
-        }
-
-        public RadioactiveSource GetActiveRadioactiveSource()
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            X.Instance.CurrentContext.Thread.Invoke(() =>
             {
-                return new RadioactiveSource(local._client.GetActiveRadioactiveSource());
+                local._client.WriteXml(writer);
             });
+
+        }
+        public ESAPIX.Facade.API.RadioactiveSource GetActiveRadioactiveSource()
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.RadioactiveSource(local._client.GetActiveRadioactiveSource()); });
             return retVal;
+
         }
     }
 }

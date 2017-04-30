@@ -1,41 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
-using System.Xml.Schema;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
 {
     public class DoseValue
     {
-        public enum DoseUnit
-        {
-            Unknown,
-            Gy,
-            cGy,
-            Percent
-        }
-
         internal dynamic _client;
-
-        public DoseValue()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public DoseValue(dynamic client)
-        {
-            _client = client;
-        }
-
-        public DoseValue(double value, string unitName)
+        public DoseValue() { _client = new ExpandoObject(); }
+        public DoseValue(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public DoseValue(System.Double value, System.String unitName)
         {
             if (X.Instance.CurrentContext != null)
-            {
-                X.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client = VMSConstructor.ConstructDoseValue(value, unitName);
-                });
-            }
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unitName); });
             else
             {
                 _client = new ExpandoObject();
@@ -43,16 +24,10 @@ namespace ESAPIX.Facade.Types
                 _client.UnitName = unitName;
             }
         }
-
-        public DoseValue(double value, DoseUnit unit)
+        public DoseValue(System.Double value, ESAPIX.Facade.Types.DoseValue.DoseUnit unit)
         {
             if (X.Instance.CurrentContext != null)
-            {
-                X.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client = VMSConstructor.ConstructDoseValue(value, unit);
-                });
-            }
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructDoseValue(value, unit); });
             else
             {
                 _client = new ExpandoObject();
@@ -60,108 +35,113 @@ namespace ESAPIX.Facade.Types
                 _client.Unit = unit;
             }
         }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public double Dose
+        public System.Double Dose
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Dose;
+                if (_client is ExpandoObject) { return _client.Dose; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Dose; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Dose; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Dose = value;
+                if (_client is ExpandoObject) { _client.Dose = value; }
             }
         }
-
-        public DoseUnit Unit
+        public ESAPIX.Facade.Types.DoseValue.DoseUnit Unit
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Unit;
+                if (_client is ExpandoObject) { return _client.Unit; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc => { return (DoseUnit) local._client.Unit; });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue.DoseUnit>((sc) => { return (ESAPIX.Facade.Types.DoseValue.DoseUnit)local._client.Unit; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Unit = value;
+                if (_client is ExpandoObject) { _client.Unit = value; }
             }
         }
-
-        public string UnitAsString
+        public System.String UnitAsString
         {
             get
             {
-                if (_client is ExpandoObject) return _client.UnitAsString;
+                if (_client is ExpandoObject) { return _client.UnitAsString; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UnitAsString; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.UnitAsString; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.UnitAsString = value;
+                if (_client is ExpandoObject) { _client.UnitAsString = value; }
             }
         }
-
-        public string ValueAsString
+        public System.String ValueAsString
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ValueAsString;
+                if (_client is ExpandoObject) { return _client.ValueAsString; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ValueAsString; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.ValueAsString; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.ValueAsString = value;
+                if (_client is ExpandoObject) { _client.ValueAsString = value; }
             }
         }
-
-        public int Decimals
+        public System.Int32 Decimals
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Decimals;
+                if (_client is ExpandoObject) { return _client.Decimals; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.Decimals; });
+                return X.Instance.CurrentContext.GetValue<System.Int32>((sc) => { return local._client.Decimals; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Decimals = value;
+                if (_client is ExpandoObject) { _client.Decimals = value; }
             }
         }
-
-        public string ToString()
+        public System.String ToString()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.ToString(); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.ToString(); });
             return retVal;
-        }
 
-        public static DoseValue UndefinedDose()
+        }
+        public static ESAPIX.Facade.Types.DoseValue UndefinedDose()
         {
             return StaticHelper.DoseValue_UndefinedDose();
         }
-
-        public XmlSchema GetSchema()
+        public System.Xml.Schema.XmlSchema GetSchema()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetSchema(); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetSchema(); });
             return retVal;
-        }
 
-        public void ReadXml(XmlReader reader)
+        }
+        public void ReadXml(System.Xml.XmlReader reader)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ReadXml(reader); });
-        }
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.ReadXml(reader);
+            });
 
-        public void WriteXml(XmlWriter writer)
+        }
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
+        }
+        public enum DoseUnit
+        {
+            Unknown,
+            Gy,
+            cGy,
+            Percent
         }
     }
 }

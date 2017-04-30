@@ -1,175 +1,168 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class BrachyPlanSetup : PlanSetup
+    public class BrachyPlanSetup : ESAPIX.Facade.API.PlanSetup
     {
-        public BrachyPlanSetup()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public BrachyPlanSetup(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public string ApplicationSetupType
+        public BrachyPlanSetup() { _client = new ExpandoObject(); }
+        public BrachyPlanSetup(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public System.String ApplicationSetupType
         {
             get
             {
-                if (_client is ExpandoObject) return _client.ApplicationSetupType;
+                if (_client is ExpandoObject) { return _client.ApplicationSetupType; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ApplicationSetupType; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.ApplicationSetupType; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.ApplicationSetupType = value;
+                if (_client is ExpandoObject) { _client.ApplicationSetupType = value; }
             }
         }
-
-        public IEnumerable<Catheter> Catheters
+        public IEnumerable<ESAPIX.Facade.API.Catheter> Catheters
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable) _client.Catheters;
+                    var asEnum = (IEnumerable)_client.Catheters;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                 {
-                    var facade = new Catheter();
+                    var facade = new ESAPIX.Facade.API.Catheter();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
+                        {
                             facade._client = vms;
+                        }
                     });
                     if (facade._client != null)
-                        yield return facade;
+                    { yield return facade; }
                 }
             }
         }
-
-        public int? NumberOfPdrPulses
+        public System.Nullable<System.Int32> NumberOfPdrPulses
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NumberOfPdrPulses;
+                if (_client is ExpandoObject) { return _client.NumberOfPdrPulses; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<int?>(sc => { return local._client.NumberOfPdrPulses; });
+                return X.Instance.CurrentContext.GetValue<System.Nullable<System.Int32>>((sc) => { return local._client.NumberOfPdrPulses; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.NumberOfPdrPulses = value;
+                if (_client is ExpandoObject) { _client.NumberOfPdrPulses = value; }
             }
         }
-
-        public double? PdrPulseInterval
+        public System.Nullable<System.Double> PdrPulseInterval
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PdrPulseInterval;
+                if (_client is ExpandoObject) { return _client.PdrPulseInterval; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double?>(sc => { return local._client.PdrPulseInterval; });
+                return X.Instance.CurrentContext.GetValue<System.Nullable<System.Double>>((sc) => { return local._client.PdrPulseInterval; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.PdrPulseInterval = value;
+                if (_client is ExpandoObject) { _client.PdrPulseInterval = value; }
             }
         }
-
-        public IEnumerable<SeedCollection> SeedCollections
+        public IEnumerable<ESAPIX.Facade.API.SeedCollection> SeedCollections
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable) _client.SeedCollections;
+                    var asEnum = (IEnumerable)_client.SeedCollections;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                 {
-                    var facade = new SeedCollection();
+                    var facade = new ESAPIX.Facade.API.SeedCollection();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
+                        {
                             facade._client = vms;
+                        }
                     });
                     if (facade._client != null)
-                        yield return facade;
+                    { yield return facade; }
                 }
             }
         }
-
-        public IEnumerable<BrachySolidApplicator> SolidApplicators
+        public IEnumerable<ESAPIX.Facade.API.BrachySolidApplicator> SolidApplicators
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable) _client.SolidApplicators;
+                    var asEnum = (IEnumerable)_client.SolidApplicators;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                 {
-                    var facade = new BrachySolidApplicator();
+                    var facade = new ESAPIX.Facade.API.BrachySolidApplicator();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
+                        {
                             facade._client = vms;
+                        }
                     });
                     if (facade._client != null)
-                        yield return facade;
+                    { yield return facade; }
                 }
             }
         }
-
-        public DateTime? TreatmentDateTime
+        public System.Nullable<System.DateTime> TreatmentDateTime
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentDateTime;
+                if (_client is ExpandoObject) { return _client.TreatmentDateTime; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.TreatmentDateTime; });
+                return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.TreatmentDateTime; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.TreatmentDateTime = value;
+                if (_client is ExpandoObject) { _client.TreatmentDateTime = value; }
             }
         }
-
-        public string TreatmentTechnique
+        public System.String TreatmentTechnique
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TreatmentTechnique;
+                if (_client is ExpandoObject) { return _client.TreatmentTechnique; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.TreatmentTechnique; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.TreatmentTechnique; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.TreatmentTechnique = value;
+                if (_client is ExpandoObject) { _client.TreatmentTechnique = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
     }
 }

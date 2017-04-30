@@ -1,73 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationObjective : SerializableObject
+    public class OptimizationObjective : ESAPIX.Facade.API.SerializableObject
     {
-        public OptimizationObjective()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public OptimizationObjective(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public Structure Structure
+        public OptimizationObjective() { _client = new ExpandoObject(); }
+        public OptimizationObjective(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public ESAPIX.Facade.API.Structure Structure
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Structure;
+                if (_client is ExpandoObject) { return _client.Structure; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Structure)) return default(Structure);
-                    return new Structure(local._client.Structure);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Structure>((sc) => { if (DefaultHelper.IsDefault(local._client.Structure)) { return default(ESAPIX.Facade.API.Structure); } else { return new ESAPIX.Facade.API.Structure(local._client.Structure); } });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Structure = value;
+                if (_client is ExpandoObject) { _client.Structure = value; }
             }
         }
-
-        public string StructureId
+        public System.String StructureId
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StructureId;
+                if (_client is ExpandoObject) { return _client.StructureId; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.StructureId; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.StructureId; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.StructureId = value;
+                if (_client is ExpandoObject) { _client.StructureId = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
-
-        public bool Equals(object obj)
+        public System.Boolean Equals(System.Object obj)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.Equals(obj); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.Equals(obj); });
             return retVal;
+
         }
-
-        public int GetHashCode()
+        public System.Int32 GetHashCode()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetHashCode(); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetHashCode(); });
             return retVal;
+
         }
     }
 }

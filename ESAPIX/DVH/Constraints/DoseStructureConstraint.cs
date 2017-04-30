@@ -41,7 +41,7 @@ namespace ESAPIX.DVH.Constraints
         ///     Splits structure names separated by & character
         /// </summary>
         [JsonIgnore]
-        public string[] StructureNames => StructureName.Split(new[] {"&"}, StringSplitOptions.RemoveEmptyEntries);
+        public string[] StructureNames => StructureName.Split(new[] { "&" }, StringSplitOptions.RemoveEmptyEntries);
 
         public virtual string Name => ToString();
         public string FullName => $"{StructureName} {Name}";

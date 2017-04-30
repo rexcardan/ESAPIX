@@ -1,92 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
-using ESAPIX.Facade.Types;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class SourcePosition : ApiDataObject
+    public class SourcePosition : ESAPIX.Facade.API.ApiDataObject
     {
-        public SourcePosition()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public SourcePosition(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public double DwellTime
+        public SourcePosition() { _client = new ExpandoObject(); }
+        public SourcePosition(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public System.Double DwellTime
         {
             get
             {
-                if (_client is ExpandoObject) return _client.DwellTime;
+                if (_client is ExpandoObject) { return _client.DwellTime; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.DwellTime; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.DwellTime; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.DwellTime = value;
+                if (_client is ExpandoObject) { _client.DwellTime = value; }
             }
         }
-
-        public RadioactiveSource RadioactiveSource
+        public ESAPIX.Facade.API.RadioactiveSource RadioactiveSource
         {
             get
             {
-                if (_client is ExpandoObject) return _client.RadioactiveSource;
+                if (_client is ExpandoObject) { return _client.RadioactiveSource; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.RadioactiveSource)) return default(RadioactiveSource);
-                    return new RadioactiveSource(local._client.RadioactiveSource);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.RadioactiveSource>((sc) => { if (DefaultHelper.IsDefault(local._client.RadioactiveSource)) { return default(ESAPIX.Facade.API.RadioactiveSource); } else { return new ESAPIX.Facade.API.RadioactiveSource(local._client.RadioactiveSource); } });
             }
             set
             {
-                if (_client is ExpandoObject) _client.RadioactiveSource = value;
+                if (_client is ExpandoObject) { _client.RadioactiveSource = value; }
             }
         }
-
-        public double[,] Transform
+        public System.Double[,] Transform
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Transform;
+                if (_client is ExpandoObject) { return _client.Transform; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double[,]>(sc => { return local._client.Transform; });
+                return X.Instance.CurrentContext.GetValue<System.Double[,]>((sc) => { return local._client.Transform; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Transform = value;
+                if (_client is ExpandoObject) { _client.Transform = value; }
             }
         }
-
-        public VVector Translation
+        public ESAPIX.Facade.Types.VVector Translation
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Translation;
+                if (_client is ExpandoObject) { return _client.Translation; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Translation)) return default(VVector);
-                    return new VVector(local._client.Translation);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.VVector>((sc) => { if (DefaultHelper.IsDefault(local._client.Translation)) { return default(ESAPIX.Facade.Types.VVector); } else { return new ESAPIX.Facade.Types.VVector(local._client.Translation); } });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Translation = value;
+                if (_client is ExpandoObject) { _client.Translation = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
     }
 }

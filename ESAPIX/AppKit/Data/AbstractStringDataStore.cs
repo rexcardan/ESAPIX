@@ -80,7 +80,7 @@ namespace ESAPIX.AppKit.Data
         public bool Save(T storageObject)
         {
             var serial = Serialize(storageObject);
-            var hashWrapper = new SecureStorage<T> {Storage = storageObject, Hash = GetHashString(serial)};
+            var hashWrapper = new SecureStorage<T> { Storage = storageObject, Hash = GetHashString(serial) };
 
             serial = Serialize(hashWrapper);
             var savePath = GetSavePath(storageObject);

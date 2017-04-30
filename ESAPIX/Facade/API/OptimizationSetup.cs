@@ -1,188 +1,157 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
-using ESAPIX.Facade.Types;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationSetup : SerializableObject
+    public class OptimizationSetup : ESAPIX.Facade.API.SerializableObject
     {
-        public OptimizationSetup()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public OptimizationSetup(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public IEnumerable<OptimizationObjective> Objectives
+        public OptimizationSetup() { _client = new ExpandoObject(); }
+        public OptimizationSetup(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public IEnumerable<ESAPIX.Facade.API.OptimizationObjective> Objectives
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable) _client.Objectives;
+                    var asEnum = (IEnumerable)_client.Objectives;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                 {
-                    var facade = new OptimizationObjective();
+                    var facade = new ESAPIX.Facade.API.OptimizationObjective();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
+                        {
                             facade._client = vms;
+                        }
                     });
                     if (facade._client != null)
-                        yield return facade;
+                    { yield return facade; }
                 }
             }
         }
-
-        public IEnumerable<OptimizationParameter> Parameters
+        public IEnumerable<ESAPIX.Facade.API.OptimizationParameter> Parameters
         {
             get
             {
                 IEnumerator enumerator = null;
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    var asEnum = (IEnumerable) _client.Parameters;
+                    var asEnum = (IEnumerable)_client.Parameters;
                     enumerator = asEnum.GetEnumerator();
                 });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                while (X.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                 {
-                    var facade = new OptimizationParameter();
+                    var facade = new ESAPIX.Facade.API.OptimizationParameter();
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var vms = enumerator.Current;
                         if (vms != null)
+                        {
                             facade._client = vms;
+                        }
                     });
                     if (facade._client != null)
-                        yield return facade;
+                    { yield return facade; }
                 }
             }
         }
-
-        public bool UseJawTracking
+        public System.Boolean UseJawTracking
         {
             get
             {
-                if (_client is ExpandoObject) return _client.UseJawTracking;
+                if (_client is ExpandoObject) { return _client.UseJawTracking; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.UseJawTracking; });
+                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.UseJawTracking; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.UseJawTracking = value;
+                if (_client is ExpandoObject) { _client.UseJawTracking = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
-        }
-
-        public OptimizationNormalTissueParameter AddAutomaticNormalTissueObjective(double priority)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            X.Instance.CurrentContext.Thread.Invoke(() =>
             {
-                return new OptimizationNormalTissueParameter(
-                    local._client.AddAutomaticNormalTissueObjective(priority));
+                local._client.WriteXml(writer);
             });
-            return retVal;
-        }
 
-        public OptimizationIMRTBeamParameter AddBeamSpecificParameter(Beam beam, double smoothX, double smoothY,
-            bool fixedJaws)
+        }
+        public ESAPIX.Facade.API.OptimizationNormalTissueParameter AddAutomaticNormalTissueObjective(System.Double priority)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.OptimizationNormalTissueParameter(local._client.AddAutomaticNormalTissueObjective(priority)); });
+            return retVal;
+
+        }
+        public ESAPIX.Facade.API.OptimizationIMRTBeamParameter AddBeamSpecificParameter(ESAPIX.Facade.API.Beam beam, System.Double smoothX, System.Double smoothY, System.Boolean fixedJaws)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.OptimizationIMRTBeamParameter(local._client.AddBeamSpecificParameter(beam._client, smoothX, smoothY, fixedJaws)); });
+            return retVal;
+
+        }
+        public ESAPIX.Facade.API.OptimizationEUDObjective AddEUDObjective(ESAPIX.Facade.API.Structure structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator objectiveOperator, ESAPIX.Facade.Types.DoseValue dose, System.Double parameterA, System.Double priority)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.OptimizationEUDObjective(local._client.AddEUDObjective(structure._client, (ESAPIX.Facade.Types.OptimizationObjectiveOperator)objectiveOperator, dose._client, parameterA, priority)); });
+            return retVal;
+
+        }
+        public ESAPIX.Facade.API.OptimizationMeanDoseObjective AddMeanDoseObjective(ESAPIX.Facade.API.Structure structure, ESAPIX.Facade.Types.DoseValue dose, System.Double priority)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.OptimizationMeanDoseObjective(local._client.AddMeanDoseObjective(structure._client, dose._client, priority)); });
+            return retVal;
+
+        }
+        public ESAPIX.Facade.API.OptimizationNormalTissueParameter AddNormalTissueObjective(System.Double priority, System.Double distanceFromTargetBorderInMM, System.Double startDosePercentage, System.Double endDosePercentage, System.Double fallOff)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.OptimizationNormalTissueParameter(local._client.AddNormalTissueObjective(priority, distanceFromTargetBorderInMM, startDosePercentage, endDosePercentage, fallOff)); });
+            return retVal;
+
+        }
+        public ESAPIX.Facade.API.OptimizationPointObjective AddPointObjective(ESAPIX.Facade.API.Structure structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator objectiveOperator, ESAPIX.Facade.Types.DoseValue dose, System.Double volume, System.Double priority)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.OptimizationPointObjective(local._client.AddPointObjective(structure._client, (ESAPIX.Facade.Types.OptimizationObjectiveOperator)objectiveOperator, dose._client, volume, priority)); });
+            return retVal;
+
+        }
+        public void RemoveObjective(ESAPIX.Facade.API.OptimizationObjective objective)
+        {
+            var local = this;
+            X.Instance.CurrentContext.Thread.Invoke(() =>
             {
-                return new OptimizationIMRTBeamParameter(
-                    local._client.AddBeamSpecificParameter(beam._client, smoothX, smoothY, fixedJaws));
+                local._client.RemoveObjective(objective._client);
             });
-            return retVal;
-        }
 
-        public OptimizationEUDObjective AddEUDObjective(Structure structure,
-            OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double parameterA, double priority)
+        }
+        public void RemoveParameter(ESAPIX.Facade.API.OptimizationParameter parameter)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            X.Instance.CurrentContext.Thread.Invoke(() =>
             {
-                return new OptimizationEUDObjective(local._client.AddEUDObjective(structure._client,
-                    objectiveOperator, dose._client, parameterA, priority));
+                local._client.RemoveParameter(parameter._client);
             });
+
+        }
+        public ESAPIX.Facade.API.OptimizationPointCloudParameter AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure structure, System.Double pointResolutionInMM)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return new ESAPIX.Facade.API.OptimizationPointCloudParameter(local._client.AddStructurePointCloudParameter(structure._client, pointResolutionInMM)); });
             return retVal;
-        }
 
-        public OptimizationMeanDoseObjective AddMeanDoseObjective(Structure structure, DoseValue dose, double priority)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new OptimizationMeanDoseObjective(
-                    local._client.AddMeanDoseObjective(structure._client, dose._client, priority));
-            });
-            return retVal;
-        }
-
-        public OptimizationNormalTissueParameter AddNormalTissueObjective(double priority,
-            double distanceFromTargetBorderInMM, double startDosePercentage, double endDosePercentage, double fallOff)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new OptimizationNormalTissueParameter(local._client.AddNormalTissueObjective(priority,
-                    distanceFromTargetBorderInMM, startDosePercentage, endDosePercentage, fallOff));
-            });
-            return retVal;
-        }
-
-        public OptimizationPointObjective AddPointObjective(Structure structure,
-            OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double volume, double priority)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new OptimizationPointObjective(local._client.AddPointObjective(structure._client,
-                    objectiveOperator, dose._client, volume, priority));
-            });
-            return retVal;
-        }
-
-        public void RemoveObjective(OptimizationObjective objective)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.RemoveObjective(objective._client); });
-        }
-
-        public void RemoveParameter(OptimizationParameter parameter)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.RemoveParameter(parameter._client); });
-        }
-
-        public OptimizationPointCloudParameter AddStructurePointCloudParameter(Structure structure,
-            double pointResolutionInMM)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new OptimizationPointCloudParameter(
-                    local._client.AddStructurePointCloudParameter(structure._client, pointResolutionInMM));
-            });
-            return retVal;
         }
     }
 }

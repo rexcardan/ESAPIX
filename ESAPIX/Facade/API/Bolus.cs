@@ -1,69 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class Bolus : SerializableObject
+    public class Bolus : ESAPIX.Facade.API.SerializableObject
     {
-        public Bolus()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public Bolus(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public string Id
+        public Bolus() { _client = new ExpandoObject(); }
+        public Bolus(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public System.String Id
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Id;
+                if (_client is ExpandoObject) { return _client.Id; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Id; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Id = value;
+                if (_client is ExpandoObject) { _client.Id = value; }
             }
         }
-
-        public double MaterialCTValue
+        public System.Double MaterialCTValue
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MaterialCTValue;
+                if (_client is ExpandoObject) { return _client.MaterialCTValue; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MaterialCTValue; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.MaterialCTValue; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MaterialCTValue = value;
+                if (_client is ExpandoObject) { _client.MaterialCTValue = value; }
             }
         }
-
-        public string Name
+        public System.String Name
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Name;
+                if (_client is ExpandoObject) { return _client.Name; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Name; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Name; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Name = value;
+                if (_client is ExpandoObject) { _client.Name = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
     }
 }

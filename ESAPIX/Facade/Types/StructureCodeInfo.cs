@@ -1,6 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
-using System.Xml.Schema;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.Types
@@ -8,26 +10,13 @@ namespace ESAPIX.Facade.Types
     public class StructureCodeInfo
     {
         internal dynamic _client;
-
-        public StructureCodeInfo()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public StructureCodeInfo(dynamic client)
-        {
-            _client = client;
-        }
-
-        public StructureCodeInfo(string codingScheme, string code)
+        public StructureCodeInfo() { _client = new ExpandoObject(); }
+        public StructureCodeInfo(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public StructureCodeInfo(System.String codingScheme, System.String code)
         {
             if (X.Instance.CurrentContext != null)
-            {
-                X.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client = VMSConstructor.ConstructStructureCodeInfo(codingScheme, code);
-                });
-            }
+                X.Instance.CurrentContext.Thread.Invoke(() => { _client = VMSConstructor.ConstructStructureCodeInfo(codingScheme, code); });
             else
             {
                 _client = new ExpandoObject();
@@ -35,82 +24,84 @@ namespace ESAPIX.Facade.Types
                 _client.Code = code;
             }
         }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public string CodingScheme
+        public System.String CodingScheme
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CodingScheme;
+                if (_client is ExpandoObject) { return _client.CodingScheme; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.CodingScheme; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.CodingScheme; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.CodingScheme = value;
+                if (_client is ExpandoObject) { _client.CodingScheme = value; }
             }
         }
-
-        public string Code
+        public System.String Code
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Code;
+                if (_client is ExpandoObject) { return _client.Code; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Code; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.Code; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Code = value;
+                if (_client is ExpandoObject) { _client.Code = value; }
             }
         }
-
-        public string ToString()
+        public System.String ToString()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.ToString(); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.ToString(); });
             return retVal;
-        }
 
-        public bool Equals(object obj)
+        }
+        public System.Boolean Equals(System.Object obj)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.Equals(obj); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.Equals(obj); });
             return retVal;
-        }
 
-        public int GetHashCode()
+        }
+        public System.Int32 GetHashCode()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetHashCode(); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetHashCode(); });
             return retVal;
-        }
 
-        public bool Equals(StructureCodeInfo other)
+        }
+        public System.Boolean Equals(ESAPIX.Facade.Types.StructureCodeInfo other)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.Equals(other._client); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.Equals(other._client); });
             return retVal;
-        }
 
-        public XmlSchema GetSchema()
+        }
+        public System.Xml.Schema.XmlSchema GetSchema()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetSchema(); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetSchema(); });
             return retVal;
-        }
 
-        public void ReadXml(XmlReader reader)
+        }
+        public void ReadXml(System.Xml.XmlReader reader)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ReadXml(reader); });
-        }
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.ReadXml(reader);
+            });
 
-        public void WriteXml(XmlWriter writer)
+        }
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
     }
 }

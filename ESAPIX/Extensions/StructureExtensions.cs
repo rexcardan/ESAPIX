@@ -22,14 +22,14 @@ namespace ESAPIX.Extensions
             {
                 image.GetVoxels(sliceZ, buffer);
                 for (var x = 0; x < image.XSize; x++)
-                for (var y = 0; y < image.YSize; y++)
-                {
-                    //var dx = (x * image.XRes * image.XDirection + image.Origin).x;
-                    //var dy = (y * image.YRes * image.YDirection + image.Origin).y;
-                    ////var dz = (sliceZ * image.ZRes * image.ZDirection + image.Origin).z;
-                    //var insideSegment = str.IsPointInsideSegment(new VVector(dx, dy, dz));
-                    //hu[x, y] = insideSegment ? image.VoxelToDisplayValue(buffer[x, y]): double.NaN;
-                }
+                    for (var y = 0; y < image.YSize; y++)
+                    {
+                        //var dx = (x * image.XRes * image.XDirection + image.Origin).x;
+                        //var dy = (y * image.YRes * image.YDirection + image.Origin).y;
+                        ////var dz = (sliceZ * image.ZRes * image.ZDirection + image.Origin).z;
+                        //var insideSegment = str.IsPointInsideSegment(new VVector(dx, dy, dz));
+                        //hu[x, y] = insideSegment ? image.VoxelToDisplayValue(buffer[x, y]): double.NaN;
+                    }
             }
             return hu;
         }

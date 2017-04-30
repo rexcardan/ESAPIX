@@ -1,6 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
-using System.Xml.Schema;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
@@ -8,38 +10,34 @@ namespace ESAPIX.Facade.API
     public class SerializableObject
     {
         internal dynamic _client;
-
-        public SerializableObject()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public SerializableObject(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public XmlSchema GetSchema()
+        public SerializableObject() { _client = new ExpandoObject(); }
+        public SerializableObject(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public System.Xml.Schema.XmlSchema GetSchema()
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetSchema(); });
+            var retVal = X.Instance.CurrentContext.GetValue((sc) => { return local._client.GetSchema(); });
             return retVal;
-        }
 
-        public void ReadXml(XmlReader reader)
+        }
+        public void ReadXml(System.Xml.XmlReader reader)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ReadXml(reader); });
-        }
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.ReadXml(reader);
+            });
 
-        public void WriteXml(XmlWriter writer)
+        }
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
-        }
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
 
+        }
         public static void ClearSerializationHistory()
         {
             StaticHelper.SerializableObject_ClearSerializationHistory();

@@ -1,103 +1,90 @@
 using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class RadioactiveSource : ApiDataObject
+    public class RadioactiveSource : ESAPIX.Facade.API.ApiDataObject
     {
-        public RadioactiveSource()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public RadioactiveSource(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public DateTime? CalibrationDate
+        public RadioactiveSource() { _client = new ExpandoObject(); }
+        public RadioactiveSource(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public System.Nullable<System.DateTime> CalibrationDate
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CalibrationDate;
+                if (_client is ExpandoObject) { return _client.CalibrationDate; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CalibrationDate; });
+                return X.Instance.CurrentContext.GetValue<System.Nullable<System.DateTime>>((sc) => { return local._client.CalibrationDate; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.CalibrationDate = value;
+                if (_client is ExpandoObject) { _client.CalibrationDate = value; }
             }
         }
-
-        public bool NominalActivity
+        public System.Boolean NominalActivity
         {
             get
             {
-                if (_client is ExpandoObject) return _client.NominalActivity;
+                if (_client is ExpandoObject) { return _client.NominalActivity; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.NominalActivity; });
+                return X.Instance.CurrentContext.GetValue<System.Boolean>((sc) => { return local._client.NominalActivity; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.NominalActivity = value;
+                if (_client is ExpandoObject) { _client.NominalActivity = value; }
             }
         }
-
-        public RadioactiveSourceModel RadioactiveSourceModel
+        public ESAPIX.Facade.API.RadioactiveSourceModel RadioactiveSourceModel
         {
             get
             {
-                if (_client is ExpandoObject) return _client.RadioactiveSourceModel;
+                if (_client is ExpandoObject) { return _client.RadioactiveSourceModel; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.RadioactiveSourceModel))
-                        return default(RadioactiveSourceModel);
-                    return new RadioactiveSourceModel(local._client.RadioactiveSourceModel);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.RadioactiveSourceModel>((sc) => { if (DefaultHelper.IsDefault(local._client.RadioactiveSourceModel)) { return default(ESAPIX.Facade.API.RadioactiveSourceModel); } else { return new ESAPIX.Facade.API.RadioactiveSourceModel(local._client.RadioactiveSourceModel); } });
             }
             set
             {
-                if (_client is ExpandoObject) _client.RadioactiveSourceModel = value;
+                if (_client is ExpandoObject) { _client.RadioactiveSourceModel = value; }
             }
         }
-
-        public string SerialNumber
+        public System.String SerialNumber
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SerialNumber;
+                if (_client is ExpandoObject) { return _client.SerialNumber; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SerialNumber; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.SerialNumber; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.SerialNumber = value;
+                if (_client is ExpandoObject) { _client.SerialNumber = value; }
             }
         }
-
-        public double Strength
+        public System.Double Strength
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Strength;
+                if (_client is ExpandoObject) { return _client.Strength; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Strength; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.Strength; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Strength = value;
+                if (_client is ExpandoObject) { _client.Strength = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
     }
 }

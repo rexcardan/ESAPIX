@@ -36,7 +36,7 @@ namespace ESAPIX.AppKit
 
         protected override void InitializeShell()
         {
-            var shell = (Window) Shell;
+            var shell = (Window)Shell;
             shell.Closed += (send, args) =>
             {
                 //Dispose ESAPI and shutdown app
@@ -71,12 +71,12 @@ namespace ESAPIX.AppKit
             var shell = sender as Window;
             if (shell != null)
             {
-                var currentContent = (UIElement) shell.Content;
+                var currentContent = (UIElement)shell.Content;
                 var stackPanel = new DockPanel();
                 stackPanel.VerticalAlignment = VerticalAlignment.Stretch;
                 shell.Content = stackPanel;
                 var selectPat = new SelectPatient(_ctx);
-                var selectPatContent = (FrameworkElement) selectPat.Content;
+                var selectPatContent = (FrameworkElement)selectPat.Content;
                 selectPatContent.DataContext = selectPat;
                 selectPat.Content = null;
                 stackPanel.Children.Add(selectPatContent);

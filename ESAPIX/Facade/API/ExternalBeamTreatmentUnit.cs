@@ -1,86 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class ExternalBeamTreatmentUnit : ApiDataObject
+    public class ExternalBeamTreatmentUnit : ESAPIX.Facade.API.ApiDataObject
     {
-        public ExternalBeamTreatmentUnit()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public ExternalBeamTreatmentUnit(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public string MachineModel
+        public ExternalBeamTreatmentUnit() { _client = new ExpandoObject(); }
+        public ExternalBeamTreatmentUnit(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public System.String MachineModel
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineModel;
+                if (_client is ExpandoObject) { return _client.MachineModel; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModel; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.MachineModel; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MachineModel = value;
+                if (_client is ExpandoObject) { _client.MachineModel = value; }
             }
         }
-
-        public string MachineModelName
+        public System.String MachineModelName
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineModelName;
+                if (_client is ExpandoObject) { return _client.MachineModelName; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModelName; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.MachineModelName; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MachineModelName = value;
+                if (_client is ExpandoObject) { _client.MachineModelName = value; }
             }
         }
-
-        public string MachineScaleDisplayName
+        public System.String MachineScaleDisplayName
         {
             get
             {
-                if (_client is ExpandoObject) return _client.MachineScaleDisplayName;
+                if (_client is ExpandoObject) { return _client.MachineScaleDisplayName; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc =>
-                {
-                    return local._client.MachineScaleDisplayName;
-                });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.MachineScaleDisplayName; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.MachineScaleDisplayName = value;
+                if (_client is ExpandoObject) { _client.MachineScaleDisplayName = value; }
             }
         }
-
-        public double SourceAxisDistance
+        public System.Double SourceAxisDistance
         {
             get
             {
-                if (_client is ExpandoObject) return _client.SourceAxisDistance;
+                if (_client is ExpandoObject) { return _client.SourceAxisDistance; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SourceAxisDistance; });
+                return X.Instance.CurrentContext.GetValue<System.Double>((sc) => { return local._client.SourceAxisDistance; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.SourceAxisDistance = value;
+                if (_client is ExpandoObject) { _client.SourceAxisDistance = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
     }
 }

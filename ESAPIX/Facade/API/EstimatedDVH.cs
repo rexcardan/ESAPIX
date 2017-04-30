@@ -1,141 +1,116 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
-using System.Xml;
-using ESAPIX.Facade.Types;
 using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class EstimatedDVH : ApiDataObject
+    public class EstimatedDVH : ESAPIX.Facade.API.ApiDataObject
     {
-        public EstimatedDVH()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public EstimatedDVH(dynamic client)
-        {
-            _client = client;
-        }
-
-        public bool IsLive => !DefaultHelper.IsDefault(_client);
-
-        public DVHPoint[] CurveData
+        public EstimatedDVH() { _client = new ExpandoObject(); }
+        public EstimatedDVH(dynamic client) { _client = client; }
+        public bool IsLive { get { return !DefaultHelper.IsDefault(_client); } }
+        public ESAPIX.Facade.Types.DVHPoint[] CurveData
         {
             get
             {
-                if (_client is ExpandoObject) return _client.CurveData;
+                if (_client is ExpandoObject) { return _client.CurveData; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<DVHPoint[]>(sc =>
-                {
-                    return ArrayHelper.GenerateDVHPointArray(local._client.CurveData);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DVHPoint[]>((sc) => { return ArrayHelper.GenerateDVHPointArray(local._client.CurveData); });
             }
             set
             {
-                if (_client is ExpandoObject) _client.CurveData = value;
+                if (_client is ExpandoObject) { _client.CurveData = value; }
             }
         }
-
-        public PlanSetup PlanSetup
+        public ESAPIX.Facade.API.PlanSetup PlanSetup
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanSetup;
+                if (_client is ExpandoObject) { return _client.PlanSetup; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.PlanSetup)) return default(PlanSetup);
-                    return new PlanSetup(local._client.PlanSetup);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.PlanSetup>((sc) => { if (DefaultHelper.IsDefault(local._client.PlanSetup)) { return default(ESAPIX.Facade.API.PlanSetup); } else { return new ESAPIX.Facade.API.PlanSetup(local._client.PlanSetup); } });
             }
             set
             {
-                if (_client is ExpandoObject) _client.PlanSetup = value;
+                if (_client is ExpandoObject) { _client.PlanSetup = value; }
             }
         }
-
-        public string PlanSetupId
+        public System.String PlanSetupId
         {
             get
             {
-                if (_client is ExpandoObject) return _client.PlanSetupId;
+                if (_client is ExpandoObject) { return _client.PlanSetupId; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PlanSetupId; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.PlanSetupId; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.PlanSetupId = value;
+                if (_client is ExpandoObject) { _client.PlanSetupId = value; }
             }
         }
-
-        public Structure Structure
+        public ESAPIX.Facade.API.Structure Structure
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Structure;
+                if (_client is ExpandoObject) { return _client.Structure; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Structure)) return default(Structure);
-                    return new Structure(local._client.Structure);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.API.Structure>((sc) => { if (DefaultHelper.IsDefault(local._client.Structure)) { return default(ESAPIX.Facade.API.Structure); } else { return new ESAPIX.Facade.API.Structure(local._client.Structure); } });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Structure = value;
+                if (_client is ExpandoObject) { _client.Structure = value; }
             }
         }
-
-        public string StructureId
+        public System.String StructureId
         {
             get
             {
-                if (_client is ExpandoObject) return _client.StructureId;
+                if (_client is ExpandoObject) { return _client.StructureId; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.StructureId; });
+                return X.Instance.CurrentContext.GetValue<System.String>((sc) => { return local._client.StructureId; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.StructureId = value;
+                if (_client is ExpandoObject) { _client.StructureId = value; }
             }
         }
-
-        public DoseValue TargetDoseLevel
+        public ESAPIX.Facade.Types.DoseValue TargetDoseLevel
         {
             get
             {
-                if (_client is ExpandoObject) return _client.TargetDoseLevel;
+                if (_client is ExpandoObject) { return _client.TargetDoseLevel; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.TargetDoseLevel)) return default(DoseValue);
-                    return new DoseValue(local._client.TargetDoseLevel);
-                });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DoseValue>((sc) => { if (DefaultHelper.IsDefault(local._client.TargetDoseLevel)) { return default(ESAPIX.Facade.Types.DoseValue); } else { return new ESAPIX.Facade.Types.DoseValue(local._client.TargetDoseLevel); } });
             }
             set
             {
-                if (_client is ExpandoObject) _client.TargetDoseLevel = value;
+                if (_client is ExpandoObject) { _client.TargetDoseLevel = value; }
             }
         }
-
-        public DVHEstimateType Type
+        public ESAPIX.Facade.Types.DVHEstimateType Type
         {
             get
             {
-                if (_client is ExpandoObject) return _client.Type;
+                if (_client is ExpandoObject) { return _client.Type; }
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc => { return (DVHEstimateType) local._client.Type; });
+                return X.Instance.CurrentContext.GetValue<ESAPIX.Facade.Types.DVHEstimateType>((sc) => { return (ESAPIX.Facade.Types.DVHEstimateType)local._client.Type; });
             }
             set
             {
-                if (_client is ExpandoObject) _client.Type = value;
+                if (_client is ExpandoObject) { _client.Type = value; }
             }
         }
-
-        public void WriteXml(XmlWriter writer)
+        public void WriteXml(System.Xml.XmlWriter writer)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.WriteXml(writer);
+            });
+
         }
     }
 }
