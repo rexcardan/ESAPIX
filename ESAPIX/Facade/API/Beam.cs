@@ -99,26 +99,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("Blocks"))
                         foreach (var item in _client.Blocks) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.Blocks;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new Block();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.Blocks;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new Block();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -132,26 +137,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("Boluses"))
                         foreach (var item in _client.Boluses) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.Boluses;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new Bolus();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.Boluses;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new Bolus();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -165,26 +175,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("CalculationLogs"))
                         foreach (var item in _client.CalculationLogs) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.CalculationLogs;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new BeamCalculationLog();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.CalculationLogs;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new BeamCalculationLog();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -328,26 +343,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("FieldReferencePoints"))
                         foreach (var item in _client.FieldReferencePoints) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.FieldReferencePoints;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new FieldReferencePoint();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.FieldReferencePoints;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new FieldReferencePoint();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -653,26 +673,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("Trays"))
                         foreach (var item in _client.Trays) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.Trays;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new Tray();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.Trays;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new Tray();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -707,26 +732,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("Wedges"))
                         foreach (var item in _client.Wedges) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.Wedges;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new Wedge();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.Wedges;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new Wedge();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set

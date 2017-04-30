@@ -210,26 +210,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("PlansInScope"))
                         foreach (var item in _client.PlansInScope) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.PlansInScope;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new PlanSetup();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.PlansInScope;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new PlanSetup();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -243,26 +248,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("ExternalPlansInScope"))
                         foreach (var item in _client.ExternalPlansInScope) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.ExternalPlansInScope;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new ExternalPlanSetup();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.ExternalPlansInScope;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ExternalPlanSetup();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -276,26 +286,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("BrachyPlansInScope"))
                         foreach (var item in _client.BrachyPlansInScope) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.BrachyPlansInScope;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new BrachyPlanSetup();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.BrachyPlansInScope;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new BrachyPlanSetup();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
@@ -309,26 +324,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("PlanSumsInScope"))
                         foreach (var item in _client.PlanSumsInScope) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.PlanSumsInScope;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new PlanSum();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.PlanSumsInScope;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new PlanSum();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set

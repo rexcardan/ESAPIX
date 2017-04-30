@@ -74,26 +74,31 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
+                {
                     if ((_client as ExpandoObject).HasProperty("Isodoses"))
                         foreach (var item in _client.Isodoses) yield return item;
                     else yield break;
-                IEnumerator enumerator = null;
-                X.Instance.CurrentContext.Thread.Invoke(() =>
+                }
+                else
                 {
-                    var asEnum = (IEnumerable) _client.Isodoses;
-                    enumerator = asEnum.GetEnumerator();
-                });
-                while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
-                {
-                    var facade = new Isodose();
+                    IEnumerator enumerator = null;
                     X.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        var vms = enumerator.Current;
-                        if (vms != null)
-                            facade._client = vms;
+                        var asEnum = (IEnumerable) _client.Isodoses;
+                        enumerator = asEnum.GetEnumerator();
                     });
-                    if (facade._client != null)
-                        yield return facade;
+                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new Isodose();
+                        X.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                                facade._client = vms;
+                        });
+                        if (facade._client != null)
+                            yield return facade;
+                    }
                 }
             }
             set
