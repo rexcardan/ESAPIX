@@ -17,7 +17,7 @@ To dive deeper, check out [more examples and API documentation](https://rexcarda
 	* ViewModels
 5. **Right click** the *Views* folder and select **Add >> Window**. Call it *MainView*.
 6. Copy and paste this into the XAML file, but replace YOURPROJECTNAME with your project name
-```cs
+```xml
 <Window x:Class="YOURPROJECTNAME.Views.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
