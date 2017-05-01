@@ -12,7 +12,7 @@ namespace ESAPIX.Facade
         {
             var array = new VVector[obj.Length];
             for (var i = 0; i < array.Length; i++)
-                array[0] = new VVector(obj[0]);
+                array[i] = new VVector(obj[i]);
             return array;
         }
 
@@ -20,7 +20,7 @@ namespace ESAPIX.Facade
         {
             var array = new DVHPoint[obj.Length];
             for (var i = 0; i < array.Length; i++)
-                array[0] = new DVHPoint(obj[0]);
+                array[i] = new DVHPoint(obj[i]);
             return array;
         }
     }
