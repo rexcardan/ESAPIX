@@ -10,7 +10,7 @@ namespace ESAPIX.Facade
     {
         public static bool IsDefault(dynamic input)
         {
-            if (Object.ReferenceEquals(null, input)
+            if (Object.ReferenceEquals(null, input))
                 return true;
             return false;
         }
