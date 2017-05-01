@@ -42,3 +42,14 @@ You don't even have to think about threads anymore. Just grab the data and work 
             Console.WriteLine($"{pat.Id} : {pat.LastName}, {pat.FirstName}");
         }
 ```
+
+### Serialization to JSON Objects
+Sometimes you might want to test out things away from the Aria database. Wouldn't it be great if you could save the state of objects and restore them offline? Here is how you do it in ESAPIX. We will be using the included Json.NET library to do the serialization and deserialization. ESAPIX has preconfigured settings for serialiazation and deserialization (make sure you use them or it won't work!).
+
+```cs
+//Put it into a string
+var json = JsonConvert.SerializeObject(planSetup, FacadeSerializer.SerializeSettings);
+
+//Bring it back
+var planSetup = JsonConvert.DeserializeObject<PlanSetup>(json, FacadeSerializer.DeserializeSettings);
+```
