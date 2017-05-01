@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PlanningItemExtensions
    ">
-    <meta name="generator" content="docfx 2.15.5.0">
+    <meta name="generator" content="docfx 2.16.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -119,7 +119,8 @@
               
               
               <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem,System.String,System.String)">ContainsStructure(PlanningItem, String, String)</h4>
-              <div class="markdown level1 summary"><p>Returns true if the planning item references a structure set with the input structure id AND the structure is contoured. Also allows a regex
+              <div class="markdown level1 summary"><p>Returns true if the planning item references a structure set with the input structure id AND the structure is
+contoured. Also allows a regex
 expression to match to structure id.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -168,8 +169,111 @@ expression to match to structure id.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
-                    <td><p>Returns true if the planning item references a structure set with the input structure id AND the structure is contoured.</p>
+                    <td><p>Returns true if the planning item references a structure set with the input structure id AND the structure is
+contoured.</p>
 </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},MayoQuery)">ExecuteQuery(PlanningItem, IEnumerable&lt;Structure&gt;, MayoQuery)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, MayoQuery query)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><em>ss</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">MayoQuery</span></td>
+                    <td><em>query</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},System.String)">ExecuteQuery(PlanningItem, IEnumerable&lt;Structure&gt;, String)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, string mayoFormatQuery)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><em>ss</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>mayoFormatQuery</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -277,111 +381,11 @@ expression to match to structure id.</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},MayoQuery)">ExecuteQuery(PlanningItem, IEnumerable&lt;Structure&gt;, MayoQuery)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, MayoQuery query)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">PlanningItem</span></td>
-                    <td><em>pi</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
-                    <td><em>ss</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">MayoQuery</span></td>
-                    <td><em>query</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.String)">ExecuteQuery(PlanningItem, IEnumerable&lt;Structure&gt;, String)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, string mayoFormatQuery)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">PlanningItem</span></td>
-                    <td><em>pi</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
-                    <td><em>ss</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>mayoFormatQuery</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,System.Collections.Generic.IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)">GetComplexDVH(PlanningItem, IEnumerable&lt;Structure&gt;, VolumePresentation, DoseValuePresentation, Double)</h4>
-              <div class="markdown level1 summary"><p>The &quot;complex&quot; dvh in this case, is 1. Allows for plan sums to have relative dose, by adding prescriptions to determine a 
-guessed prescribed dose value. (It is up to the user to determine if this is appropriate). 2). Allows for multiple structures
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)">GetComplexDVH(PlanningItem, IEnumerable&lt;Structure&gt;, VolumePresentation, DoseValuePresentation, Double)</h4>
+              <div class="markdown level1 summary"><p>The &quot;complex&quot; dvh in this case, is 1. Allows for plan sums to have relative dose, by adding prescriptions to
+determine a
+guessed prescribed dose value. (It is up to the user to determine if this is appropriate). 2). Allows for multiple
+structures
 to be merged into a single dvh by summing volumes as each dose value</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -406,7 +410,7 @@ to be merged into a single dvh by summing volumes as each dose value</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
                     <td><em>ss</em></td>
                     <td><p>the structures to merge into one DVH (useful for multiple volume queries from parallel organs)</p>
 </td>
@@ -448,13 +452,13 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)">GetComplimentVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)</h4>
-              <div class="markdown level1 summary"><p>Returns the compliment volume of the input structure at a given input dose</p>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,IEnumerable{Structure},DoseValue,VolumePresentation)">GetComplimentVolumeAtDose(PlanningItem, IEnumerable&lt;Structure&gt;, DoseValue, VolumePresentation)</h4>
+              <div class="markdown level1 summary"><p>Returns the sum of the compliment volumes across the input structures at a given input dose</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double GetComplimentVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)</code></pre>
+                <pre><code class="lang-csharp hljs">public static double GetComplimentVolumeAtDose(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, DoseValue dv, VolumePresentation vPres)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -473,9 +477,9 @@ to be merged into a single dvh by summing volumes as each dose value</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Structure</span></td>
-                    <td><em>s</em></td>
-                    <td><p>the structure to query</p>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><em>ss</em></td>
+                    <td><p>the structures to query</p>
 </td>
                   </tr>
                   <tr>
@@ -510,13 +514,13 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)">GetComplimentVolumeAtDose(PlanningItem, IEnumerable&lt;Structure&gt;, DoseValue, VolumePresentation)</h4>
-              <div class="markdown level1 summary"><p>Returns the sum of the compliment volumes across the input structures at a given input dose</p>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)">GetComplimentVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)</h4>
+              <div class="markdown level1 summary"><p>Returns the compliment volume of the input structure at a given input dose</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double GetComplimentVolumeAtDose(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, DoseValue dv, VolumePresentation vPres)</code></pre>
+                <pre><code class="lang-csharp hljs">public static double GetComplimentVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -535,9 +539,9 @@ to be merged into a single dvh by summing volumes as each dose value</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
-                    <td><em>ss</em></td>
-                    <td><p>the structures to query</p>
+                    <td><span class="xref">Structure</span></td>
+                    <td><em>s</em></td>
+                    <td><p>the structure to query</p>
 </td>
                   </tr>
                   <tr>
@@ -634,6 +638,72 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)">GetDoseAtVolume(PlanningItem, IEnumerable&lt;Structure&gt;, Double, VolumePresentation, DoseValuePresentation)</h4>
+              <div class="markdown level1 summary"><p>Finds the dose at a certain volume input of a structure</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DoseValue GetDoseAtVolume(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><em>ss</em></td>
+                    <td><p>the structure to analyze (will be merged into one dvh)</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><em>volume</em></td>
+                    <td><p>the volume to sample (units are in the vPres variable)</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">VolumePresentation</span></td>
+                    <td><em>vPres</em></td>
+                    <td><p>the units of the input volume</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">DoseValuePresentation</span></td>
+                    <td><em>dPres</em></td>
+                    <td><p>the dose value presentation you want returned</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DoseValue</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)">GetDoseAtVolume(PlanningItem, Structure, Double, VolumePresentation, DoseValuePresentation)</h4>
               <div class="markdown level1 summary"><p>Finds the dose at a certain volume input of a structure</p>
 </div>
@@ -701,79 +771,14 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)">GetDoseAtVolume(PlanningItem, IEnumerable&lt;Structure&gt;, Double, VolumePresentation, DoseValuePresentation)</h4>
-              <div class="markdown level1 summary"><p>Finds the dose at a certain volume input of a structure</p>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)">GetDoseComplimentAtVolume(PlanningItem, IEnumerable&lt;Structure&gt;, Double, VolumePresentation, DoseValuePresentation)</h4>
+              <div class="markdown level1 summary"><p>Return the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the
+object and subtracting the input volume</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static DoseValue GetDoseAtVolume(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">PlanningItem</span></td>
-                    <td><em>pi</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
-                    <td><em>ss</em></td>
-                    <td><p>the structure to analyze (will be merged into one dvh)</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td><em>volume</em></td>
-                    <td><p>the volume to sample (units are in the vPres variable)</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">VolumePresentation</span></td>
-                    <td><em>vPres</em></td>
-                    <td><p>the units of the input volume</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">DoseValuePresentation</span></td>
-                    <td><em>dPres</em></td>
-                    <td><p>the dose value presentation you want returned</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">DoseValue</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)">GetDoseComplimentAtVolume(PlanningItem, Structure, Double, VolumePresentation, DoseValuePresentation)</h4>
-              <div class="markdown level1 summary"><p>Return the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the object and subtracting the input volume</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)</code></pre>
+                <pre><code class="lang-csharp hljs">public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, IEnumerable&lt;Structure&gt; ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -792,9 +797,9 @@ to be merged into a single dvh by summing volumes as each dose value</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Structure</span></td>
-                    <td><em>s</em></td>
-                    <td><p>the input structure</p>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><em>ss</em></td>
+                    <td><p>the input structures (will be merged into one dvh)</p>
 </td>
                   </tr>
                   <tr>
@@ -835,13 +840,14 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,System.Collections.Generic.IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)">GetDoseComplimentAtVolume(PlanningItem, IEnumerable&lt;Structure&gt;, Double, VolumePresentation, DoseValuePresentation)</h4>
-              <div class="markdown level1 summary"><p>Return the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the object and subtracting the input volume</p>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)">GetDoseComplimentAtVolume(PlanningItem, Structure, Double, VolumePresentation, DoseValuePresentation)</h4>
+              <div class="markdown level1 summary"><p>Return the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the
+object and subtracting the input volume</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, IEnumerable&lt;Structure&gt; ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)</code></pre>
+                <pre><code class="lang-csharp hljs">public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -860,9 +866,9 @@ to be merged into a single dvh by summing volumes as each dose value</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
-                    <td><em>ss</em></td>
-                    <td><p>the input structures (will be merged into one dvh)</p>
+                    <td><span class="xref">Structure</span></td>
+                    <td><em>s</em></td>
+                    <td><p>the input structure</p>
 </td>
                   </tr>
                   <tr>
@@ -1035,7 +1041,7 @@ to be merged into a single dvh by summing volumes as each dose value</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
                     <td><p>the referenced structure set</p>
 </td>
                   </tr>
@@ -1087,13 +1093,13 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)">GetVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)</h4>
-              <div class="markdown level1 summary"><p>Returns the volume of the input structure at a given input dose</p>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,IEnumerable{Structure},DoseValue,VolumePresentation)">GetVolumeAtDose(PlanningItem, IEnumerable&lt;Structure&gt;, DoseValue, VolumePresentation)</h4>
+              <div class="markdown level1 summary"><p>Returns the sum of the volumes across the input structures at a given input dose</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)</code></pre>
+                <pre><code class="lang-csharp hljs">public static double GetVolumeAtDose(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, DoseValue dv, VolumePresentation vPres)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1112,9 +1118,9 @@ to be merged into a single dvh by summing volumes as each dose value</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Structure</span></td>
-                    <td><em>s</em></td>
-                    <td><p>the structure to query</p>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><em>ss</em></td>
+                    <td><p>the structures to query</p>
 </td>
                   </tr>
                   <tr>
@@ -1149,13 +1155,13 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,System.Collections.Generic.IEnumerable{Structure},DoseValue,VolumePresentation)">GetVolumeAtDose(PlanningItem, IEnumerable&lt;Structure&gt;, DoseValue, VolumePresentation)</h4>
-              <div class="markdown level1 summary"><p>Returns the sum of the volumes across the input structures at a given input dose</p>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)">GetVolumeAtDose(PlanningItem, Structure, DoseValue, VolumePresentation)</h4>
+              <div class="markdown level1 summary"><p>Returns the volume of the input structure at a given input dose</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double GetVolumeAtDose(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, DoseValue dv, VolumePresentation vPres)</code></pre>
+                <pre><code class="lang-csharp hljs">public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1174,9 +1180,9 @@ to be merged into a single dvh by summing volumes as each dose value</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
-                    <td><em>ss</em></td>
-                    <td><p>the structures to query</p>
+                    <td><span class="xref">Structure</span></td>
+                    <td><em>s</em></td>
+                    <td><p>the structure to query</p>
 </td>
                   </tr>
                   <tr>

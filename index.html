@@ -8,7 +8,7 @@
     <title>Extension Methods </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Extension Methods ">
-    <meta name="generator" content="docfx 2.15.5.0">
+    <meta name="generator" content="docfx 2.16.7.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -61,7 +61,7 @@
               
               <center><img src="images/esapixLogo.jpg" alt="Logo" title="ESAPIX Logo"></center>
 
-<p>Welcome to the ESAPIX library homepage. Kick start your Eclipse Scripting with a powerful, open source library. It provides:</p>
+<p>Welcome to the <a href="https://github.com/rexcardan/ESAPIX">ESAPIX library</a> homepage. Kick start your Eclipse Scripting with a powerful, open source library. It provides:</p>
 <h2 id="extension-methods">Extension Methods</h2>
 <p>There are several extension methods available for VMS equivalent classes. Check out <a href="https://github.com/rexcardan/ESAPIX/tree/master/ESAPIX/Extensions">ESAPIX.Extensions</a> namespace to do stuff like this:</p>
 <pre><code class="lang-cs">            var plan = patient.Courses
@@ -89,22 +89,23 @@ Checkout <a class="xref" href="articles/facades.html">ESAPIX Facades</a> to lear
 </ul>
 </li>
 <li><strong>Right click</strong> the <em>Views</em> folder and select <strong>Add &gt;&gt; Window</strong>. Call it <em>MainView</em>.</li>
-<li>Copy and paste this into the XAML file, but replace YOURPROJECTNAME with your project name
-<code>cs
-&lt;Window x:Class=&quot;YOURPROJECTNAME.Views.MainView&quot;
-     xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
-     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-     xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
-     xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
-     xmlns:local=&quot;clr-namespace:ESAPIWPF.Views&quot;
-     mc:Ignorable=&quot;d&quot;
-     xmlns:prism=&quot;http://prismlibrary.com/&quot;
-     prism:ViewModelLocator.AutoWireViewModel=&quot;True&quot;
-     Title=&quot;MainView&quot; Height=&quot;300&quot; Width=&quot;300&quot;&gt;
- &lt;Grid&gt;
-     &lt;TextBlock Text=&quot;{Binding ESAPITest}&quot; FontSize=&quot;25&quot;/&gt;
- &lt;/Grid&gt;
-&lt;/Window&gt;</code></li>
+<li>Copy and paste this into the XAML file, but replace YOURPROJECTNAME with your project name</li>
+</ol>
+<pre><code class="lang-xml">&lt;Window x:Class=&quot;YOURPROJECTNAME.Views.MainView&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+        xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+        xmlns:local=&quot;clr-namespace:ESAPIWPF.Views&quot;
+        mc:Ignorable=&quot;d&quot;
+        xmlns:prism=&quot;http://prismlibrary.com/&quot;
+        prism:ViewModelLocator.AutoWireViewModel=&quot;True&quot;
+        Title=&quot;MainView&quot; Height=&quot;300&quot; Width=&quot;300&quot;&gt;
+    &lt;Grid&gt;
+        &lt;TextBlock Text=&quot;{Binding ESAPITest}&quot; FontSize=&quot;25&quot;/&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</code></pre><ol>
 <li><strong>Right click</strong> the <em>ViewModels</em> folder and select <strong>Add &gt;&gt; Class</strong>. Call it <em>MainViewModel</em>.</li>
 <li>Copy and paste this into the MainViewModel file, but replace YOURPROJECTNAME with your project name
 ```cs
@@ -172,15 +173,15 @@ using W = System.Windows;</li>
 <li><strong>Right click</strong> your solution file and select **Add &gt;&gt; New Project **</li>
 <li>Select <em>Class Library</em> as the type, and name it <strong>VMS Link</strong> (this doesn&#39;t matter except that&#39;s what we named it in the code above)</li>
 <li>Add the NuGet Package ESAPIX_Bootstrapper_{version} by searching again for <em>&quot;ESAPI&quot;</em> in <strong>Manage NuGet Packages</strong></li>
-<li><strong>Add a class</strong> called <em>VMSLinker</em> to this project and paste this code
-```cs
-using System;
+<li><strong>Add a class</strong> called <em>VMSLinker</em> to this project and paste this code</li>
+</ol>
+<pre><code class="lang-cs">using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;</li>
-</ol>
-<p>namespace VMSLink
+using System.Threading.Tasks;
+
+namespace VMSLink
 {
     public class VMSLinker
     {
@@ -189,15 +190,17 @@ using System.Threading.Tasks;</li>
             ESAPIX.Bootstrapper.FacadeInitializer.Initialize();
         }
     }
-}</p>
-<pre><code>5. Right click your original project *References*, select **Add Reference** and click *VMSLink* in the project tab
-6. Run your project!
+}
+</code></pre><ol>
+<li>Right click your original project <em>References</em>, select <strong>Add Reference</strong> and click <em>VMSLink</em> in the project tab</li>
+<li>Run your project!</li>
+</ol>
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="articles/facades.html">Articles</a></li>
+<li><a href="articles/mayoFormat.html">Mayo format Querying</a></li>
+</ul>
 
-### See Also
-*   @facades.md
-*   @mayoFormat.md
-
-</code></pre>
             </article>
           </div>
           
