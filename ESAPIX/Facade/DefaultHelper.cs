@@ -10,10 +10,8 @@ namespace ESAPIX.Facade
     {
         public static bool IsDefault(dynamic input)
         {
-            if (input == null)
+            if (Object.ReferenceEquals(null, input)
                 return true;
-            if (input.GetType().IsValueType)
-                return input == Activator.CreateInstance(input.GetType());
             return false;
         }
     }

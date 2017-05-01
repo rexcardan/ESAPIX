@@ -44,11 +44,11 @@ namespace ESAPIX.Bootstrapper
             });
             VMSConstructor.ConstructSegmentProfileFunc0 = new Func<dynamic, dynamic, System.Collections.BitArray, dynamic>((origin, step, data) =>
             {
-                return new VMS.TPS.Common.Model.Types.SegmentProfile(origin._client, step._client, data);
+                return new VMS.TPS.Common.Model.Types.SegmentProfile(origin, step, data);
             });
             VMSConstructor.ConstructSegmentProfilePointFunc0 = new Func<dynamic, System.Boolean, dynamic>((position, value) =>
             {
-                return new VMS.TPS.Common.Model.Types.SegmentProfilePoint(position._client, value);
+                return new VMS.TPS.Common.Model.Types.SegmentProfilePoint(position, value);
             });
             VMSConstructor.ConstructDoseValueFunc0 = new Func<System.Double, System.String, dynamic>((value, unitName) =>
             {
@@ -60,15 +60,15 @@ namespace ESAPIX.Bootstrapper
             });
             VMSConstructor.ConstructProfilePointFunc0 = new Func<dynamic, System.Double, dynamic>((position, value) =>
             {
-                return new VMS.TPS.Common.Model.Types.ProfilePoint(position._client, value);
+                return new VMS.TPS.Common.Model.Types.ProfilePoint(position, value);
             });
             VMSConstructor.ConstructDoseProfileFunc0 = new Func<dynamic, dynamic, System.Double[], dynamic, dynamic>((origin, step, data, unit) =>
             {
-                return new VMS.TPS.Common.Model.Types.DoseProfile(origin._client, step._client, data, (VMS.TPS.Common.Model.Types.DoseValue.DoseUnit)unit);
+                return new VMS.TPS.Common.Model.Types.DoseProfile(origin, step, data, (VMS.TPS.Common.Model.Types.DoseValue.DoseUnit)unit);
             });
             VMSConstructor.ConstructDVHPointFunc0 = new Func<dynamic, System.Double, System.String, dynamic>((dose, volume, volumeUnit) =>
             {
-                return new VMS.TPS.Common.Model.Types.DVHPoint(dose._client, volume, volumeUnit);
+                return new VMS.TPS.Common.Model.Types.DVHPoint(dose, volume, volumeUnit);
             });
             VMSConstructor.ConstructVRectFunc0 = new Func<dynamic, dynamic, dynamic, dynamic, dynamic>((x1, y1, x2, y2) =>
             {
@@ -88,7 +88,7 @@ namespace ESAPIX.Bootstrapper
             });
             VMSConstructor.ConstructImageProfileFunc0 = new Func<dynamic, dynamic, System.Double[], System.String, dynamic>((origin, step, data, unit) =>
             {
-                return new VMS.TPS.Common.Model.Types.ImageProfile(origin._client, step._client, data, unit);
+                return new VMS.TPS.Common.Model.Types.ImageProfile(origin, step, data, unit);
             });
             VMSConstructor.ConstructLMCVOptionsFunc0 = new Func<System.Boolean, dynamic>((fixedJaws) =>
             {
@@ -132,7 +132,7 @@ namespace ESAPIX.Bootstrapper
             });
             VMSConstructor.ConstructOptimizationOptionsVMATFunc4 = new Func<dynamic, dynamic>((options) =>
             {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT(options._client);
+                return new VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT(options);
             });
             VMSConstructor.ConstructExternalBeamMachineParametersFunc0 = new Func<System.String, System.String, System.Int32, System.String, System.String, dynamic>((machineId, energyModeId, doseRate, techniqueId, primaryFluenceModeId) =>
             {
