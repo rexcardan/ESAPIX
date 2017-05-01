@@ -59,7 +59,7 @@ namespace ESAPIX.Facade.Types
             else
             {
                 _client = new ExpandoObject();
-                _client.Value = value;
+                _client.Dose = value;
                 _client.Unit = unit;
             }
         }
