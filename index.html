@@ -8,7 +8,7 @@
     <title>Extension Methods </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Extension Methods ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.15.5.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -76,13 +76,128 @@ Checkout <a class="xref" href="articles/facades.html">ESAPIX Facades</a> to lear
 <h2 id="iscriptcontext-interface">IScriptContext Interface</h2>
 <p>IScriptContext is a technique used by ESAPIX to abstract the difference between standalone applications and plugin applications. You can build one app that runs whichever way you want, which is great for developement. One of the challenges with developing plugin applications is the need to debug it. IScriptContext is ESAPIX&#39;s solution to the problem. Watch a tutorial on how to use IScriptContext <a href="https://www.youtube.com/watch?v=6LXhqgt0jT4">here</a>.</p>
 <h2 id="robust-dvh-constraint-help">Robust DVH Constraint Help</h2>
-<p>ESAPIX has a lot of code dedicated to helping evaluate DVH metrics. You have the Mayo format (@mayoFormat.md) query at your disposal to do some complex queries quickly and evaluate the things which are most important.</p>
-<h3 id="see-also">See Also</h3>
-<ul>
-<li><a class="xref" href="articles/facades.html">ESAPIX Facades</a></li>
-<li><a class="xref" href="articles/mayoFormat.html">Mayo Format and Querying</a></li>
+<p>ESAPIX has a lot of code dedicated to helping evaluate DVH metrics. You have the <a class="xref" href="articles/mayoFormat.html">Mayo Format and Querying</a> at your disposal to do some complex queries quickly and evaluate the things which are most important.</p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="wpf-application">WPF Application</h2>
+<ol>
+<li>Create a new WPF project in Visual Studio. </li>
+<li>Right click your project and select <strong>Manage NuGet Packages...</strong></li>
+<li>Search for <em>&quot;ESAPI&quot;</em> and select Install the most recent ESAPIX library for your install (eg. ESAPIX_13.6 for Aria 13.6)</li>
+<li>Create two folders in your project : <ul>
+<li>Views</li>
+<li>ViewModels</li>
 </ul>
+</li>
+<li><strong>Right click</strong> the <em>Views</em> folder and select <strong>Add &gt;&gt; Window</strong>. Call it <em>MainView</em>.</li>
+<li>Copy and paste this into the XAML file, but replace YOURPROJECTNAME with your project name
+<code>cs
+&lt;Window x:Class=&quot;YOURPROJECTNAME.Views.MainView&quot;
+     xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+     xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+     xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+     xmlns:local=&quot;clr-namespace:ESAPIWPF.Views&quot;
+     mc:Ignorable=&quot;d&quot;
+     xmlns:prism=&quot;http://prismlibrary.com/&quot;
+     prism:ViewModelLocator.AutoWireViewModel=&quot;True&quot;
+     Title=&quot;MainView&quot; Height=&quot;300&quot; Width=&quot;300&quot;&gt;
+ &lt;Grid&gt;
+     &lt;TextBlock Text=&quot;{Binding ESAPITest}&quot; FontSize=&quot;25&quot;/&gt;
+ &lt;/Grid&gt;
+&lt;/Window&gt;</code></li>
+<li><strong>Right click</strong> the <em>ViewModels</em> folder and select <strong>Add &gt;&gt; Class</strong>. Call it <em>MainViewModel</em>.</li>
+<li>Copy and paste this into the MainViewModel file, but replace YOURPROJECTNAME with your project name
+```cs
+using ESAPIX.Facade.API;
+using ESAPIX.Interfaces;
+using Prism.Mvvm;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using W = System.Windows;</li>
+</ol>
+<p>namespace YOURPROJECTNAME.ViewModels
+{
+    public class MainViewModel : BindableBase
+    {
+        private string esapiTest;
+        private IScriptContext _ctx;</p>
+<pre><code>    public string ESAPITest
+    {
+        get { return esapiTest; }
+        set { SetProperty(ref esapiTest, value); }
+    }
 
+    public MainViewModel(IScriptContext ctx)
+    {
+        _ctx = ctx;
+        ctx.PatientChanged += Ctx_PatientChanged;
+    }
+
+    private void Ctx_PatientChanged(Patient newPatient)
+    {
+        if (newPatient != null)
+        {
+            var plans = newPatient.Courses.SelectMany(c =&gt; c.PlanSetups).Count();
+            ESAPITest = $&quot;{newPatient?.LastName}, {newPatient?.FirstName} | {plans} Plans!&quot;;
+        }
+    }
+}
+</code></pre><p>}</p>
+<pre><code>9. Open the App.xaml file, and remove the * StartupUri=&quot;MainWindow&quot;* at the top.
+10. Open up the App.cs file and replace the App class with this:
+
+```cs
+    /// &lt;summary&gt;
+    /// Interaction logic for App.xaml
+    /// &lt;/summary&gt;
+    public partial class App : Application
+    {
+        string USERNAME = &quot;&quot;;
+        string PASSWORD = &quot;&quot;;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            VMSLink.VMSLinker.Run(); //For facade to link up
+            var bs = new ESAPIX.AppKit.AppBootstrapper&lt;MainView&gt;(USERNAME, PASSWORD);
+            bs.Run();
+        }
+    }
+</code></pre><h2 id="linking-up-facades">Linking Up Facades</h2>
+<p>So far we haven&#39;t actually wired up the Varian classes. You could build and play with your app at this stage, but it won&#39;t connect to real Varian data. To link it up, we will create one extra tiny project in the same solution. We are doing this to have a separation of VMS data with application development. This makes it easier to test your application, use in unit tests, and do cool multithreaded stuff.</p>
+<ol>
+<li><strong>Right click</strong> your solution file and select **Add &gt;&gt; New Project **</li>
+<li>Select <em>Class Library</em> as the type, and name it <strong>VMS Link</strong> (this doesn&#39;t matter except that&#39;s what we named it in the code above)</li>
+<li>Add the NuGet Package ESAPIX_Bootstrapper_{version} by searching again for <em>&quot;ESAPI&quot;</em> in <strong>Manage NuGet Packages</strong></li>
+<li><strong>Add a class</strong> called <em>VMSLinker</em> to this project and paste this code
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;</li>
+</ol>
+<p>namespace VMSLink
+{
+    public class VMSLinker
+    {
+        public static void Run()
+        {
+            ESAPIX.Bootstrapper.FacadeInitializer.Initialize();
+        }
+    }
+}</p>
+<pre><code>5. Right click your original project *References*, select **Add Reference** and click *VMSLink* in the project tab
+6. Run your project!
+
+### See Also
+*   @facades.md
+*   @mayoFormat.md
+
+</code></pre>
             </article>
           </div>
           
