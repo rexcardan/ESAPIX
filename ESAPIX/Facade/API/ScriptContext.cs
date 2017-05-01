@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -27,24 +28,16 @@ namespace ESAPIX.Facade.API
         public ScriptContext(object context, object user, string appName)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructScriptContext(context, user, appName);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.Context = context;
-                _client.User = user;
-                _client.AppName = appName;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public User CurrentUser

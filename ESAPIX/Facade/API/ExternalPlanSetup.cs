@@ -23,7 +23,7 @@ namespace ESAPIX.Facade.API
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public EvaluationDose DoseAsEvaluationDose
@@ -126,7 +126,7 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetModelsForCalculationType(calculationType);
+                return local._client.GetModelsForCalculationType(EnumConverter.Convert(calculationType));
             });
             return retVal;
         }
@@ -146,7 +146,8 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizerResult(local._client.Optimize(maxIterations, optimizationOption));
+                return new OptimizerResult(
+                    local._client.Optimize(maxIterations, EnumConverter.Convert(optimizationOption)));
             });
             return retVal;
         }
@@ -156,7 +157,8 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizerResult(local._client.Optimize(maxIterations, optimizationOption, mlcId));
+                return new OptimizerResult(
+                    local._client.Optimize(maxIterations, EnumConverter.Convert(optimizationOption), mlcId));
             });
             return retVal;
         }
@@ -238,8 +240,8 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddArcBeam(machineParameters._client, jawPositions._client,
-                    collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle,
-                    isocenter._client));
+                    collimatorAngle, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
+                    patientSupportAngle, isocenter._client));
             });
             return retVal;
         }
@@ -252,8 +254,8 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddConformalArcBeam(machineParameters._client, collimatorAngle,
-                    controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle,
-                    isocenter._client));
+                    controlPointCount, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
+                    patientSupportAngle, isocenter._client));
             });
             return retVal;
         }
@@ -266,8 +268,8 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddMLCArcBeam(machineParameters._client, leafPositions,
-                    jawPositions._client, collimatorAngle, gantryAngle, gantryStop, gantryDirection,
-                    patientSupportAngle, isocenter._client));
+                    jawPositions._client, collimatorAngle, gantryAngle, gantryStop,
+                    EnumConverter.Convert(gantryDirection), patientSupportAngle, isocenter._client));
             });
             return retVal;
         }
@@ -332,8 +334,8 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddVMATBeam(machineParameters._client, metersetWeights,
-                    collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle,
-                    isocenter._client));
+                    collimatorAngle, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
+                    patientSupportAngle, isocenter._client));
             });
             return retVal;
         }

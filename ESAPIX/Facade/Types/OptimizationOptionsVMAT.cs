@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -23,94 +24,58 @@ namespace ESAPIX.Facade.Types
         public OptimizationOptionsVMAT(OptimizationOption startOption, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.StartOption = startOption;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public OptimizationOptionsVMAT(OptimizationIntermediateDoseOption intermediateDoseOption, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructOptimizationOptionsVMAT(intermediateDoseOption, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.IntermediateDoseOption = intermediateDoseOption;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public OptimizationOptionsVMAT(int numberOfCycles, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructOptimizationOptionsVMAT(numberOfCycles, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.NumberOfCycles = numberOfCycles;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public OptimizationOptionsVMAT(OptimizationOption startOption,
             OptimizationIntermediateDoseOption intermediateDoseOption, int numberOfCycles, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructOptimizationOptionsVMAT(startOption, intermediateDoseOption,
                         numberOfCycles, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.StartOption = startOption;
-                _client.IntermediateDoseOption = intermediateDoseOption;
-                _client.NumberOfCycles = numberOfCycles;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public OptimizationOptionsVMAT(OptimizationOptionsVMAT options)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructOptimizationOptionsVMAT(options);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.Options = options;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public int NumberOfOptimizationCycles

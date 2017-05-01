@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -24,22 +25,12 @@ namespace ESAPIX.Facade.Types
             int numberOfStepsBeforeIntermediateDose, OptimizationConvergenceOption convergenceOption, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState,
                         numberOfStepsBeforeIntermediateDose, convergenceOption, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.MaxIterations = maxIterations;
-                _client.InitialState = initialState;
-                _client.NumberOfStepsBeforeIntermediateDose = numberOfStepsBeforeIntermediateDose;
-                _client.ConvergenceOption = convergenceOption;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public OptimizationOptionsIMRT(int maxIterations, OptimizationOption initialState,
@@ -47,49 +38,30 @@ namespace ESAPIX.Facade.Types
             string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState,
                         convergenceOption, intermediateDoseOption, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.MaxIterations = maxIterations;
-                _client.InitialState = initialState;
-                _client.ConvergenceOption = convergenceOption;
-                _client.IntermediateDoseOption = intermediateDoseOption;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public OptimizationOptionsIMRT(int maxIterations, OptimizationOption initialState,
             OptimizationConvergenceOption convergenceOption, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client =
                         VMSConstructor.ConstructOptimizationOptionsIMRT(maxIterations, initialState,
                             convergenceOption, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.MaxIterations = maxIterations;
-                _client.InitialState = initialState;
-                _client.ConvergenceOption = convergenceOption;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public OptimizationConvergenceOption ConvergenceOption

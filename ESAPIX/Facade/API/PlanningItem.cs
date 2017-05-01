@@ -23,7 +23,7 @@ namespace ESAPIX.Facade.API
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public DateTime? CreationDateTime
@@ -94,8 +94,8 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new DVHData(local._client.GetDVHCumulativeData(structure._client, dosePresentation,
-                    volumePresentation, binWidth));
+                return new DVHData(local._client.GetDVHCumulativeData(structure._client,
+                    EnumConverter.Convert(dosePresentation), EnumConverter.Convert(volumePresentation), binWidth));
             });
             return retVal;
         }

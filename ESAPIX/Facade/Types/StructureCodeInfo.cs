@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -25,23 +26,16 @@ namespace ESAPIX.Facade.Types
         public StructureCodeInfo(string codingScheme, string code)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructStructureCodeInfo(codingScheme, code);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.CodingScheme = codingScheme;
-                _client.Code = code;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public string CodingScheme

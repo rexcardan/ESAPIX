@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -25,23 +26,16 @@ namespace ESAPIX.Facade.Types
         public MetersetValue(double value, DosimeterUnit unit)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructMetersetValue(value, unit);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.Value = value;
-                _client.Unit = unit;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public double Value

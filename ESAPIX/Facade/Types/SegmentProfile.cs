@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -27,24 +28,16 @@ namespace ESAPIX.Facade.Types
         public SegmentProfile(VVector origin, VVector step, BitArray data)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructSegmentProfile(origin, step, data);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.Origin = origin;
-                _client.Step = step;
-                _client.Data = data;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public SegmentProfilePoint this[int index]

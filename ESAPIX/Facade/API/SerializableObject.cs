@@ -23,7 +23,7 @@ namespace ESAPIX.Facade.API
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public System.Xml.Schema.XmlSchema GetSchema()

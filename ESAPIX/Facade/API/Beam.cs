@@ -5,9 +5,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
-using ESAPIX.Helpers;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
@@ -28,7 +25,7 @@ namespace ESAPIX.Facade.API
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public Applicator Applicator

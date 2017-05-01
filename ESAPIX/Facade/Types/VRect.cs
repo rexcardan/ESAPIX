@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -25,25 +26,16 @@ namespace ESAPIX.Facade.Types
         public VRect(T x1, T y1, T x2, T y2)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructVRect(x1, y1, x2, y2);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.X1 = x1;
-                _client.Y1 = y1;
-                _client.X2 = x2;
-                _client.Y2 = y2;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public T X1

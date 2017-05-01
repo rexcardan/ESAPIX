@@ -24,7 +24,7 @@ namespace ESAPIX.Facade.API
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public Types.PlanSetupApprovalStatus ApprovalStatus
@@ -752,7 +752,10 @@ namespace ESAPIX.Facade.API
         public void ClearCalculationModel(Types.CalculationType calculationType)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ClearCalculationModel(calculationType); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.ClearCalculationModel(EnumConverter.Convert(calculationType));
+            });
         }
 
         public string GetCalculationModel(Types.CalculationType calculationType)
@@ -760,7 +763,7 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetCalculationModel(calculationType);
+                return local._client.GetCalculationModel(EnumConverter.Convert(calculationType));
             });
             return retVal;
         }
@@ -794,7 +797,7 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Types.DoseValue(local._client.GetDoseAtVolume(structure._client, volume,
-                    volumePresentation, requestedDosePresentation));
+                    EnumConverter.Convert(volumePresentation), EnumConverter.Convert(requestedDosePresentation)));
             });
             return retVal;
         }
@@ -805,7 +808,8 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetVolumeAtDose(structure._client, dose._client, requestedVolumePresentation);
+                return local._client.GetVolumeAtDose(structure._client, dose._client,
+                    EnumConverter.Convert(requestedVolumePresentation));
             });
             return retVal;
         }
@@ -813,8 +817,10 @@ namespace ESAPIX.Facade.API
         public void SetCalculationModel(Types.CalculationType calculationType, string model)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(
-                () => { local._client.SetCalculationModel(calculationType, model); });
+            X.Instance.CurrentContext.Thread.Invoke(() =>
+            {
+                local._client.SetCalculationModel(EnumConverter.Convert(calculationType), model);
+            });
         }
 
         public bool SetCalculationOption(string calculationModel, string optionName, string optionValue)

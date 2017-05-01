@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using X = ESAPIX.Facade.XContext;
 
@@ -25,28 +26,16 @@ namespace ESAPIX.Facade.Types
             double y2, double z2)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructAxisAlignedMargins(geometry, x1, y1, z1, x2, y2, z2);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.Geometry = geometry;
-                _client.X1 = x1;
-                _client.Y1 = y1;
-                _client.Z1 = z1;
-                _client.X2 = x2;
-                _client.Y2 = y2;
-                _client.Z2 = z2;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public StructureMarginGeometry Geometry

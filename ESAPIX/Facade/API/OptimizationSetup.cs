@@ -24,7 +24,7 @@ namespace ESAPIX.Facade.API
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public IEnumerable<OptimizationObjective> Objectives
@@ -157,7 +157,7 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new OptimizationEUDObjective(local._client.AddEUDObjective(structure._client,
-                    objectiveOperator, dose._client, parameterA, priority));
+                    EnumConverter.Convert(objectiveOperator), dose._client, parameterA, priority));
             });
             return retVal;
         }
@@ -193,7 +193,7 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new OptimizationPointObjective(local._client.AddPointObjective(structure._client,
-                    objectiveOperator, dose._client, volume, priority));
+                    EnumConverter.Convert(objectiveOperator), dose._client, volume, priority));
             });
             return retVal;
         }

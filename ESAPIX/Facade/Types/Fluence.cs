@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -25,43 +26,26 @@ namespace ESAPIX.Facade.Types
         public Fluence(float[,] fluenceMatrix, double xOrigin, double yOrigin)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.FluenceMatrix = fluenceMatrix;
-                _client.XOrigin = xOrigin;
-                _client.YOrigin = yOrigin;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public Fluence(float[,] fluenceMatrix, double xOrigin, double yOrigin, string mlcId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructFluence(fluenceMatrix, xOrigin, yOrigin, mlcId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.FluenceMatrix = fluenceMatrix;
-                _client.XOrigin = xOrigin;
-                _client.YOrigin = yOrigin;
-                _client.MlcId = mlcId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public int XSizePixel

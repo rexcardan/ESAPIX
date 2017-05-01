@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -26,27 +27,17 @@ namespace ESAPIX.Facade.Types
             string primaryFluenceModeId)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
                     _client = VMSConstructor.ConstructExternalBeamMachineParameters(machineId, energyModeId,
                         doseRate, techniqueId, primaryFluenceModeId);
                 });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.MachineId = machineId;
-                _client.EnergyModeId = energyModeId;
-                _client.DoseRate = doseRate;
-                _client.TechniqueId = techniqueId;
-                _client.PrimaryFluenceModeId = primaryFluenceModeId;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public string MachineId

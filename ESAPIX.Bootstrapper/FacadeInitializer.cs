@@ -139,6 +139,29 @@ namespace ESAPIX.Bootstrapper
                 return new VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters(machineId, energyModeId, doseRate, techniqueId, primaryFluenceModeId);
             });
 
+            #region ENUM CONVERSION
+            EnumConverter.StructureMarginGeometryConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.StructureMarginGeometry)es; };
+            EnumConverter.PatientOrientationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PatientOrientation)es; };
+            EnumConverter.SeriesModalityConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.SeriesModality)es; };
+            EnumConverter.DoseUnitConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DoseValue.DoseUnit)es; };
+            EnumConverter.DoseValuePresentationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DoseValuePresentation)es; };
+            EnumConverter.VolumePresentationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.VolumePresentation)es; };
+            EnumConverter.PlanSetupApprovalStatusConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PlanSetupApprovalStatus)es; };
+            EnumConverter.BlockTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.BlockType)es; };
+            EnumConverter.GantryDirectionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.GantryDirection)es; };
+            EnumConverter.MLCPlanTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.MLCPlanType)es; };
+            EnumConverter.SetupTechniqueConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.SetupTechnique)es; };
+            EnumConverter.DosimeterUnitConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DosimeterUnit)es; };
+            EnumConverter.DVHEstimateTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DVHEstimateType)es; };
+            EnumConverter.OptimizationObjectiveOperatorConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator)es; };
+            EnumConverter.PlanTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PlanType)es; };
+            EnumConverter.CalculationTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.CalculationType)es; };
+            EnumConverter.PlanSumOperationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PlanSumOperation)es; };
+            EnumConverter.OptimizationOptionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationOption)es; };
+            EnumConverter.OptimizationIntermediateDoseOptionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationIntermediateDoseOption)es; };
+            EnumConverter.OptimizationConvergenceOptionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationConvergenceOption)es; };
+            #endregion
+
         }
     }
 }

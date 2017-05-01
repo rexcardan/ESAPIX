@@ -1,5 +1,7 @@
 #region
 
+using System.Collections;
+using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -8,7 +10,7 @@ using X = ESAPIX.Facade.XContext;
 
 namespace ESAPIX.Facade.API
 {
-    public class ControlPointCollection : SerializableObject
+    public class ControlPointCollection : SerializableObject, IEnumerable<ControlPoint>
     {
         public ControlPointCollection()
         {
@@ -22,7 +24,7 @@ namespace ESAPIX.Facade.API
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public ControlPoint this[int index]
@@ -59,6 +61,18 @@ namespace ESAPIX.Facade.API
             {
                 if (_client is ExpandoObject) _client.Count = value;
             }
+        }
+
+        public IEnumerator<ControlPoint> GetEnumerator()
+        {
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
         }
 
         public void WriteXml(System.Xml.XmlWriter writer)

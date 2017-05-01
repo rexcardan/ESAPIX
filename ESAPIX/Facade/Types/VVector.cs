@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
@@ -25,22 +26,14 @@ namespace ESAPIX.Facade.Types
         public VVector(double xi, double yi, double zi)
         {
             if (X.Instance.CurrentContext != null)
-            {
                 X.Instance.CurrentContext.Thread.Invoke(
                     () => { _client = VMSConstructor.ConstructVVector(xi, yi, zi); });
-            }
-            else
-            {
-                _client = new ExpandoObject();
-                _client.Xi = xi;
-                _client.Yi = yi;
-                _client.Zi = zi;
-            }
+            else throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
         {
-            get { return !DefaultHelper.IsDefault(_client); }
+            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
         public double this[int index]
