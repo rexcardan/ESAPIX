@@ -3,13 +3,16 @@
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
+using System.Collections;
+using System.Collections.Generic;
 
 #endregion
 
 
 namespace ESAPIX.Facade.API
 {
-    public class ControlPointCollection : SerializableObject
+    public class ControlPointCollection : SerializableObject,  IEnumerable<ControlPoint>
+
     {
         public ControlPointCollection()
         {
@@ -67,5 +70,18 @@ namespace ESAPIX.Facade.API
             var local = this;
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
+
+        public IEnumerator<ControlPoint> GetEnumerator()
+        {
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
+        }
+
     }
 }
