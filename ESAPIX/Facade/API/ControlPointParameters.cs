@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -61,20 +63,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VRect<double> JawPositions
+        public VRect<double> JawPositions
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("JawPositions")
                         ? _client.JawPositions
-                        : default(Types.VRect<double>);
+                        : default(VRect<double>);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.JawPositions)) return default(Types.VRect<double>);
-                    return new Types.VRect<double>(local._client.JawPositions);
-                });
+                return X.Instance.CurrentContext.GetValue<VRect<double>>(sc => { return local._client.JawPositions; });
             }
             set
             {

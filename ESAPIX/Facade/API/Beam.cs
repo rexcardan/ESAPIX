@@ -5,9 +5,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -376,18 +378,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.GantryDirection GantryDirection
+        public GantryDirection GantryDirection
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("GantryDirection")
                         ? _client.GantryDirection
-                        : default(Types.GantryDirection);
+                        : default(GantryDirection);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<GantryDirection>(sc =>
                 {
-                    return (Types.GantryDirection) local._client.GantryDirection;
+                    return local._client.GantryDirection;
                 });
             }
             set
@@ -396,20 +398,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector IsocenterPosition
+        public VVector IsocenterPosition
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("IsocenterPosition")
                         ? _client.IsocenterPosition
-                        : default(Types.VVector);
+                        : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.IsocenterPosition)) return default(Types.VVector);
-                    return new Types.VVector(local._client.IsocenterPosition);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.IsocenterPosition; });
             }
             set
             {
@@ -470,19 +468,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.MLCPlanType MLCPlanType
+        public MLCPlanType MLCPlanType
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("MLCPlanType")
                         ? _client.MLCPlanType
-                        : default(Types.MLCPlanType);
+                        : default(MLCPlanType);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    return (Types.MLCPlanType) local._client.MLCPlanType;
-                });
+                return X.Instance.CurrentContext.GetValue<MLCPlanType>(sc => { return local._client.MLCPlanType; });
             }
             set
             {
@@ -580,19 +575,17 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.SetupTechnique SetupTechnique
+        public SetupTechnique SetupTechnique
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("SetupTechnique")
                         ? _client.SetupTechnique
-                        : default(Types.SetupTechnique);
+                        : default(SetupTechnique);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    return (Types.SetupTechnique) local._client.SetupTechnique;
-                });
+                return X.Instance.CurrentContext.GetValue<SetupTechnique>(
+                    sc => { return local._client.SetupTechnique; });
             }
             set
             {
@@ -797,20 +790,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.MetersetValue Meterset
+        public MetersetValue Meterset
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("Meterset")
                         ? _client.Meterset
-                        : default(Types.MetersetValue);
+                        : default(MetersetValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Meterset)) return default(Types.MetersetValue);
-                    return new Types.MetersetValue(local._client.Meterset);
-                });
+                return X.Instance.CurrentContext.GetValue<MetersetValue>(sc => { return local._client.Meterset; });
             }
             set
             {
@@ -851,13 +840,13 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ApplyParameters(beamParams._client); });
         }
 
-        public bool CanSetOptimalFluence(Types.Fluence fluence, out string message)
+        public bool CanSetOptimalFluence(Fluence fluence, out string message)
         {
             var message_OUT = default(string);
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.CanSetOptimalFluence(fluence._client, out message_OUT);
+                return local._client.CanSetOptimalFluence(fluence, out message_OUT);
             });
             message = message_OUT;
             return retVal;
@@ -873,30 +862,27 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public Types.Fluence GetOptimalFluence()
+        public Fluence GetOptimalFluence()
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetOptimalFluence(); });
+            return retVal;
+        }
+
+        public VVector GetSourceLocation(double gantryAngle)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Types.Fluence(local._client.GetOptimalFluence());
+                return local._client.GetSourceLocation(gantryAngle);
             });
             return retVal;
         }
 
-        public Types.VVector GetSourceLocation(double gantryAngle)
+        public void SetOptimalFluence(Fluence fluence)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Types.VVector(local._client.GetSourceLocation(gantryAngle));
-            });
-            return retVal;
-        }
-
-        public void SetOptimalFluence(Types.Fluence fluence)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetOptimalFluence(fluence._client); });
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetOptimalFluence(fluence); });
         }
     }
 }

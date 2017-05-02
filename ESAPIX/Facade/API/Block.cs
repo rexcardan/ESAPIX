@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -115,14 +117,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.BlockType Type
+        public BlockType Type
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Type") ? _client.Type : default(Types.BlockType);
+                    return (_client as ExpandoObject).HasProperty("Type") ? _client.Type : default(BlockType);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc => { return (Types.BlockType) local._client.Type; });
+                return X.Instance.CurrentContext.GetValue<BlockType>(sc => { return local._client.Type; });
             }
             set
             {

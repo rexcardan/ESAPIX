@@ -3,11 +3,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -28,20 +29,16 @@ namespace ESAPIX.Facade.API
             get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
-        public Types.VVector CenterPoint
+        public VVector CenterPoint
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("CenterPoint")
                         ? _client.CenterPoint
-                        : default(Types.VVector);
+                        : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.CenterPoint)) return default(Types.VVector);
-                    return new Types.VVector(local._client.CenterPoint);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.CenterPoint; });
             }
             set
             {
@@ -187,7 +184,7 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public IEnumerable<Types.StructureCodeInfo> StructureCodeInfos
+        public IEnumerable<StructureCodeInfo> StructureCodeInfos
         {
             get
             {
@@ -207,14 +204,14 @@ namespace ESAPIX.Facade.API
                     });
                     while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
-                        var facade = new Types.StructureCodeInfo();
+                        var facade = default(StructureCodeInfo);
                         X.Instance.CurrentContext.Thread.Invoke(() =>
                         {
                             var vms = enumerator.Current;
                             if (vms != null)
-                                facade._client = vms;
+                                facade = (StructureCodeInfo) vms;
                         });
-                        if (facade._client != null)
+                        if (facade != null)
                             yield return facade;
                     }
                 }
@@ -261,13 +258,10 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public void AddContourOnImagePlane(Types.VVector[] contour, int z)
+        public void AddContourOnImagePlane(VVector[] contour, int z)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.AddContourOnImagePlane(contour.Select(n => n._client).ToArray(), z);
-            });
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.AddContourOnImagePlane(contour, z); });
         }
 
         public SegmentVolume And(SegmentVolume other)
@@ -280,12 +274,12 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public SegmentVolume AsymmetricMargin(Types.AxisAlignedMargins margins)
+        public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new SegmentVolume(local._client.AsymmetricMargin(margins._client));
+                return new SegmentVolume(local._client.AsymmetricMargin(margins));
             });
             return retVal;
         }
@@ -334,14 +328,11 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public Types.VVector[][] GetContoursOnImagePlane(int z)
+        public VVector[][] GetContoursOnImagePlane(int z)
         {
-            var stubResult = _client.GetContoursOnImagePlane(z);
-            int firstDim = stubResult.GetLength(0);
-            var facade = new Types.VVector[firstDim][];
-            for (var i = 0; i < firstDim; i++)
-                facade[i] = ((IEnumerable<dynamic>) stubResult[0]).Select(s => new Types.VVector(s._client)).ToArray();
-            return facade;
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetContoursOnImagePlane(z); });
+            return retVal;
         }
 
         public int GetNumberOfSeparateParts()
@@ -351,24 +342,22 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public Types.SegmentProfile GetSegmentProfile(Types.VVector start, Types.VVector stop,
-            BitArray preallocatedBuffer)
+        public SegmentProfile GetSegmentProfile(VVector start, VVector stop, BitArray preallocatedBuffer)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Types.SegmentProfile(
-                    local._client.GetSegmentProfile(start._client, stop._client, preallocatedBuffer));
+                return local._client.GetSegmentProfile(start, stop, preallocatedBuffer);
             });
             return retVal;
         }
 
-        public bool IsPointInsideSegment(Types.VVector point)
+        public bool IsPointInsideSegment(VVector point)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.IsPointInsideSegment(point._client);
+                return local._client.IsPointInsideSegment(point);
             });
             return retVal;
         }
@@ -423,13 +412,10 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public void SubtractContourOnImagePlane(Types.VVector[] contour, int z)
+        public void SubtractContourOnImagePlane(VVector[] contour, int z)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.SubtractContourOnImagePlane(contour.Select(n => n._client).ToArray(), z);
-            });
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SubtractContourOnImagePlane(contour, z); });
         }
 
         public SegmentVolume Xor(SegmentVolume other)

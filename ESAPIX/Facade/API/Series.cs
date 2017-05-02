@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -154,19 +156,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.SeriesModality Modality
+        public SeriesModality Modality
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("Modality")
                         ? _client.Modality
-                        : default(Types.SeriesModality);
+                        : default(SeriesModality);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    return (Types.SeriesModality) local._client.Modality;
-                });
+                return X.Instance.CurrentContext.GetValue<SeriesModality>(sc => { return local._client.Modality; });
             }
             set
             {

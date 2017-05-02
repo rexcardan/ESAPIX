@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -27,18 +29,18 @@ namespace ESAPIX.Facade.API
             get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
-        public Types.PlanSetupApprovalStatus ApprovalStatus
+        public PlanSetupApprovalStatus ApprovalStatus
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("ApprovalStatus")
                         ? _client.ApprovalStatus
-                        : default(Types.PlanSetupApprovalStatus);
+                        : default(PlanSetupApprovalStatus);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<PlanSetupApprovalStatus>(sc =>
                 {
-                    return (Types.PlanSetupApprovalStatus) local._client.ApprovalStatus;
+                    return local._client.ApprovalStatus;
                 });
             }
             set
@@ -357,19 +359,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector PlanNormalizationPoint
+        public VVector PlanNormalizationPoint
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("PlanNormalizationPoint")
                         ? _client.PlanNormalizationPoint
-                        : default(Types.VVector);
+                        : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<VVector>(sc =>
                 {
-                    if (DefaultHelper.IsDefault(local._client.PlanNormalizationPoint)) return default(Types.VVector);
-                    return new Types.VVector(local._client.PlanNormalizationPoint);
+                    return local._client.PlanNormalizationPoint;
                 });
             }
             set
@@ -378,16 +379,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.PlanType PlanType
+        public PlanType PlanType
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("PlanType")
-                        ? _client.PlanType
-                        : default(Types.PlanType);
+                    return (_client as ExpandoObject).HasProperty("PlanType") ? _client.PlanType : default(PlanType);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc => { return (Types.PlanType) local._client.PlanType; });
+                return X.Instance.CurrentContext.GetValue<PlanType>(sc => { return local._client.PlanType; });
             }
             set
             {
@@ -575,20 +574,17 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue TotalPrescribedDose
+        public DoseValue TotalPrescribedDose
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("TotalPrescribedDose")
                         ? _client.TotalPrescribedDose
-                        : default(Types.DoseValue);
+                        : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.TotalPrescribedDose)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.TotalPrescribedDose);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(
+                    sc => { return local._client.TotalPrescribedDose; });
             }
             set
             {
@@ -633,18 +629,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.PatientOrientation TreatmentOrientation
+        public PatientOrientation TreatmentOrientation
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("TreatmentOrientation")
                         ? _client.TreatmentOrientation
-                        : default(Types.PatientOrientation);
+                        : default(PatientOrientation);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<PatientOrientation>(sc =>
                 {
-                    return (Types.PatientOrientation) local._client.TreatmentOrientation;
+                    return local._client.TreatmentOrientation;
                 });
             }
             set
@@ -749,7 +745,7 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public void ClearCalculationModel(Types.CalculationType calculationType)
+        public void ClearCalculationModel(CalculationType calculationType)
         {
             var local = this;
             X.Instance.CurrentContext.Thread.Invoke(() =>
@@ -758,7 +754,7 @@ namespace ESAPIX.Facade.API
             });
         }
 
-        public string GetCalculationModel(Types.CalculationType calculationType)
+        public string GetCalculationModel(CalculationType calculationType)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
@@ -790,31 +786,31 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public Types.DoseValue GetDoseAtVolume(Structure structure, double volume,
-            Types.VolumePresentation volumePresentation, Types.DoseValuePresentation requestedDosePresentation)
+        public DoseValue GetDoseAtVolume(Structure structure, double volume, VolumePresentation volumePresentation,
+            DoseValuePresentation requestedDosePresentation)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Types.DoseValue(local._client.GetDoseAtVolume(structure._client, volume,
-                    EnumConverter.Convert(volumePresentation), EnumConverter.Convert(requestedDosePresentation)));
+                return local._client.GetDoseAtVolume(structure._client, volume,
+                    EnumConverter.Convert(volumePresentation), EnumConverter.Convert(requestedDosePresentation));
             });
             return retVal;
         }
 
-        public double GetVolumeAtDose(Structure structure, Types.DoseValue dose,
-            Types.VolumePresentation requestedVolumePresentation)
+        public double GetVolumeAtDose(Structure structure, DoseValue dose,
+            VolumePresentation requestedVolumePresentation)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetVolumeAtDose(structure._client, dose._client,
+                return local._client.GetVolumeAtDose(structure._client, dose,
                     EnumConverter.Convert(requestedVolumePresentation));
             });
             return retVal;
         }
 
-        public void SetCalculationModel(Types.CalculationType calculationType, string model)
+        public void SetCalculationModel(CalculationType calculationType, string model)
         {
             var local = this;
             X.Instance.CurrentContext.Thread.Invoke(() =>

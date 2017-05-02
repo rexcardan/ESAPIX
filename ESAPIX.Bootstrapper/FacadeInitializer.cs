@@ -1,13 +1,11 @@
-﻿using ESAPIX.Facade;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VMS.TPS.Common.Model.Types;
+﻿#region
+
+using ESAPIX.Facade;
 using V = VMS.TPS.Common.Model.API;
 using X = ESAPIX.Facade.API;
 using T = VMS.TPS.Common.Model.Types;
+
+#endregion
 
 namespace ESAPIX.Bootstrapper
 {
@@ -16,152 +14,127 @@ namespace ESAPIX.Bootstrapper
         public static void Initialize()
         {
             //DO STATIC METHOD MAPS
-            StaticHelper.CreateApplicationFunc = new Func<string, string, dynamic>((user, pw) =>
-            {
-                return V.Application.CreateApplication(user, pw);
-            });
+            StaticHelper.CreateApplicationFunc = (user, pw) => { return V.Application.CreateApplication(user, pw); };
 
-            StaticHelper.DoseValue_UndefinedDoseFunc = new Func<dynamic>(() => DoseValue.UndefinedDose());
-            StaticHelper.SerializableObject_ClearSerializationHistoryAction = new Action(() => V.SerializableObject.ClearSerializationHistory());
-            StaticHelper.VVector_DistanceFunc = new Func<dynamic, dynamic, double>((v1, v2) => VVector.Distance(v1, v2));
+            StaticHelper.DoseValue_UndefinedDoseFunc = () => T.DoseValue.UndefinedDose();
+            StaticHelper.SerializableObject_ClearSerializationHistoryAction =
+                () => V.SerializableObject.ClearSerializationHistory();
+            StaticHelper.VVector_DistanceFunc = (v1, v2) => T.VVector.Distance(v1, v2);
 
 
-            VMSConstructor.ConstructScriptContextFunc0 = new Func<System.Object, System.Object, System.String, dynamic>((context, user, appName) =>
+            VMSConstructor.ConstructScriptContextFunc0 = (context, user, appName) =>
             {
                 return new VMS.TPS.Common.Model.API.ScriptContext(context, user, appName);
-            });
-            VMSConstructor.ConstructVVectorFunc0 = new Func<System.Double, System.Double, System.Double, dynamic>((xi, yi, zi) =>
+            };
+            VMSConstructor.ConstructVVectorFunc0 = (xi, yi, zi) => { return new T.VVector(xi, yi, zi); };
+            VMSConstructor.ConstructAxisAlignedMarginsFunc0 = (geometry, x1, y1, z1, x2, y2, z2) =>
             {
-                return new VMS.TPS.Common.Model.Types.VVector(xi, yi, zi);
-            });
-            VMSConstructor.ConstructAxisAlignedMarginsFunc0 = new Func<dynamic, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, dynamic>((geometry, x1, y1, z1, x2, y2, z2) =>
+                return new T.AxisAlignedMargins((T.StructureMarginGeometry) geometry, x1, y1, z1, x2, y2, z2);
+            };
+            VMSConstructor.ConstructStructureCodeInfoFunc0 = (codingScheme, code) =>
             {
-                return new VMS.TPS.Common.Model.Types.AxisAlignedMargins((VMS.TPS.Common.Model.Types.StructureMarginGeometry)geometry, x1, y1, z1, x2, y2, z2);
-            });
-            VMSConstructor.ConstructStructureCodeInfoFunc0 = new Func<System.String, System.String, dynamic>((codingScheme, code) =>
+                return new T.StructureCodeInfo(codingScheme, code);
+            };
+            VMSConstructor.ConstructSegmentProfileFunc0 = (origin, step, data) =>
             {
-                return new VMS.TPS.Common.Model.Types.StructureCodeInfo(codingScheme, code);
-            });
-            VMSConstructor.ConstructSegmentProfileFunc0 = new Func<dynamic, dynamic, System.Collections.BitArray, dynamic>((origin, step, data) =>
+                return new T.SegmentProfile(origin, step, data);
+            };
+            VMSConstructor.ConstructSegmentProfilePointFunc0 = (position, value) =>
             {
-                return new VMS.TPS.Common.Model.Types.SegmentProfile(origin, step, data);
-            });
-            VMSConstructor.ConstructSegmentProfilePointFunc0 = new Func<dynamic, System.Boolean, dynamic>((position, value) =>
+                return new T.SegmentProfilePoint(position, value);
+            };
+            VMSConstructor.ConstructDoseValueFunc0 = (value, unitName) => { return new T.DoseValue(value, unitName); };
+            VMSConstructor.ConstructDoseValueFunc1 = (value, unit) =>
             {
-                return new VMS.TPS.Common.Model.Types.SegmentProfilePoint(position, value);
-            });
-            VMSConstructor.ConstructDoseValueFunc0 = new Func<System.Double, System.String, dynamic>((value, unitName) =>
+                return new T.DoseValue(value, (T.DoseValue.DoseUnit) unit);
+            };
+            VMSConstructor.ConstructProfilePointFunc0 = (position, value) =>
             {
-                return new VMS.TPS.Common.Model.Types.DoseValue(value, unitName);
-            });
-            VMSConstructor.ConstructDoseValueFunc1 = new Func<System.Double, dynamic, dynamic>((value, unit) =>
+                return new T.ProfilePoint(position, value);
+            };
+            VMSConstructor.ConstructDoseProfileFunc0 = (origin, step, data, unit) =>
             {
-                return new VMS.TPS.Common.Model.Types.DoseValue(value, (VMS.TPS.Common.Model.Types.DoseValue.DoseUnit)unit);
-            });
-            VMSConstructor.ConstructProfilePointFunc0 = new Func<dynamic, System.Double, dynamic>((position, value) =>
+                return new T.DoseProfile(origin, step, data, (T.DoseValue.DoseUnit) unit);
+            };
+            VMSConstructor.ConstructDVHPointFunc0 = (dose, volume, volumeUnit) =>
             {
-                return new VMS.TPS.Common.Model.Types.ProfilePoint(position, value);
-            });
-            VMSConstructor.ConstructDoseProfileFunc0 = new Func<dynamic, dynamic, System.Double[], dynamic, dynamic>((origin, step, data, unit) =>
+                return new T.DVHPoint(dose, volume, volumeUnit);
+            };
+            VMSConstructor.ConstructVRectFunc0 = (x1, y1, x2, y2) => { return new T.VRect<double>(x1, y1, x2, y2); };
+            VMSConstructor.ConstructMetersetValueFunc0 = (value, unit) =>
             {
-                return new VMS.TPS.Common.Model.Types.DoseProfile(origin, step, data, (VMS.TPS.Common.Model.Types.DoseValue.DoseUnit)unit);
-            });
-            VMSConstructor.ConstructDVHPointFunc0 = new Func<dynamic, System.Double, System.String, dynamic>((dose, volume, volumeUnit) =>
+                return new T.MetersetValue(value, (T.DosimeterUnit) unit);
+            };
+            VMSConstructor.ConstructFluenceFunc0 = (fluenceMatrix, xOrigin, yOrigin) =>
             {
-                return new VMS.TPS.Common.Model.Types.DVHPoint(dose, volume, volumeUnit);
-            });
-            VMSConstructor.ConstructVRectFunc0 = new Func<dynamic, dynamic, dynamic, dynamic, dynamic>((x1, y1, x2, y2) =>
+                return new T.Fluence(fluenceMatrix, xOrigin, yOrigin);
+            };
+            VMSConstructor.ConstructFluenceFunc1 = (fluenceMatrix, xOrigin, yOrigin, mlcId) =>
             {
-                return new VMS.TPS.Common.Model.Types.VRect<double>(x1, y1, x2, y2);
-            });
-            VMSConstructor.ConstructMetersetValueFunc0 = new Func<System.Double, dynamic, dynamic>((value, unit) =>
+                return new T.Fluence(fluenceMatrix, xOrigin, yOrigin, mlcId);
+            };
+            VMSConstructor.ConstructImageProfileFunc0 = (origin, step, data, unit) =>
             {
-                return new VMS.TPS.Common.Model.Types.MetersetValue(value, (VMS.TPS.Common.Model.Types.DosimeterUnit)unit);
-            });
-            VMSConstructor.ConstructFluenceFunc0 = new Func<System.Single[,], System.Double, System.Double, dynamic>((fluenceMatrix, xOrigin, yOrigin) =>
+                return new T.ImageProfile(origin, step, data, unit);
+            };
+            VMSConstructor.ConstructLMCVOptionsFunc0 = fixedJaws => { return new T.LMCVOptions(fixedJaws); };
+            VMSConstructor.ConstructSmartLMCOptionsFunc0 = (fixedFieldBorders, jawTracking) =>
             {
-                return new VMS.TPS.Common.Model.Types.Fluence(fluenceMatrix, xOrigin, yOrigin);
-            });
-            VMSConstructor.ConstructFluenceFunc1 = new Func<System.Single[,], System.Double, System.Double, System.String, dynamic>((fluenceMatrix, xOrigin, yOrigin, mlcId) =>
+                return new T.SmartLMCOptions(fixedFieldBorders, jawTracking);
+            };
+            VMSConstructor.ConstructLMCMSSOptionsFunc0 = numberOfIterations =>
             {
-                return new VMS.TPS.Common.Model.Types.Fluence(fluenceMatrix, xOrigin, yOrigin, mlcId);
-            });
-            VMSConstructor.ConstructImageProfileFunc0 = new Func<dynamic, dynamic, System.Double[], System.String, dynamic>((origin, step, data, unit) =>
+                return new T.LMCMSSOptions(numberOfIterations);
+            };
+            VMSConstructor.ConstructOptimizationOptionsIMRTFunc0 =
+                (maxIterations, initialState, numberOfStepsBeforeIntermediateDose, convergenceOption, mlcId) =>
+                {
+                    return new T.OptimizationOptionsIMRT(maxIterations, (T.OptimizationOption) initialState,
+                        numberOfStepsBeforeIntermediateDose, (T.OptimizationConvergenceOption) convergenceOption,
+                        mlcId);
+                };
+            VMSConstructor.ConstructOptimizationOptionsIMRTFunc1 =
+                (maxIterations, initialState, convergenceOption, intermediateDoseOption, mlcId) =>
+                {
+                    return new T.OptimizationOptionsIMRT(maxIterations, (T.OptimizationOption) initialState,
+                        (T.OptimizationConvergenceOption) convergenceOption,
+                        (T.OptimizationIntermediateDoseOption) intermediateDoseOption, mlcId);
+                };
+            VMSConstructor.ConstructOptimizationOptionsIMRTFunc2 =
+                (maxIterations, initialState, convergenceOption, mlcId) =>
+                {
+                    return new T.OptimizationOptionsIMRT(maxIterations, (T.OptimizationOption) initialState,
+                        (T.OptimizationConvergenceOption) convergenceOption, mlcId);
+                };
+            VMSConstructor.ConstructOptimizationOptionsVMATFunc0 = (startOption, mlcId) =>
             {
-                return new VMS.TPS.Common.Model.Types.ImageProfile(origin, step, data, unit);
-            });
-            VMSConstructor.ConstructLMCVOptionsFunc0 = new Func<System.Boolean, dynamic>((fixedJaws) =>
+                return new T.OptimizationOptionsVMAT((T.OptimizationOption) startOption, mlcId);
+            };
+            VMSConstructor.ConstructOptimizationOptionsVMATFunc1 = (intermediateDoseOption, mlcId) =>
             {
-                return new VMS.TPS.Common.Model.Types.LMCVOptions(fixedJaws);
-            });
-            VMSConstructor.ConstructSmartLMCOptionsFunc0 = new Func<System.Boolean, System.Boolean, dynamic>((fixedFieldBorders, jawTracking) =>
+                return new T.OptimizationOptionsVMAT((T.OptimizationIntermediateDoseOption) intermediateDoseOption,
+                    mlcId);
+            };
+            VMSConstructor.ConstructOptimizationOptionsVMATFunc2 = (numberOfCycles, mlcId) =>
             {
-                return new VMS.TPS.Common.Model.Types.SmartLMCOptions(fixedFieldBorders, jawTracking);
-            });
-            VMSConstructor.ConstructLMCMSSOptionsFunc0 = new Func<System.Int32, dynamic>((numberOfIterations) =>
+                return new T.OptimizationOptionsVMAT(numberOfCycles, mlcId);
+            };
+            VMSConstructor.ConstructOptimizationOptionsVMATFunc3 =
+                (startOption, intermediateDoseOption, numberOfCycles, mlcId) =>
+                {
+                    return new T.OptimizationOptionsVMAT((T.OptimizationOption) startOption,
+                        (T.OptimizationIntermediateDoseOption) intermediateDoseOption, numberOfCycles, mlcId);
+                };
+            VMSConstructor.ConstructOptimizationOptionsVMATFunc4 = options =>
             {
-                return new VMS.TPS.Common.Model.Types.LMCMSSOptions(numberOfIterations);
-            });
-            VMSConstructor.ConstructOptimizationOptionsIMRTFunc0 = new Func<System.Int32, dynamic, System.Int32, dynamic, System.String, dynamic>((maxIterations, initialState, numberOfStepsBeforeIntermediateDose, convergenceOption, mlcId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsIMRT(maxIterations, (VMS.TPS.Common.Model.Types.OptimizationOption)initialState, numberOfStepsBeforeIntermediateDose, (VMS.TPS.Common.Model.Types.OptimizationConvergenceOption)convergenceOption, mlcId);
-            });
-            VMSConstructor.ConstructOptimizationOptionsIMRTFunc1 = new Func<System.Int32, dynamic, dynamic, dynamic, System.String, dynamic>((maxIterations, initialState, convergenceOption, intermediateDoseOption, mlcId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsIMRT(maxIterations, (VMS.TPS.Common.Model.Types.OptimizationOption)initialState, (VMS.TPS.Common.Model.Types.OptimizationConvergenceOption)convergenceOption, (VMS.TPS.Common.Model.Types.OptimizationIntermediateDoseOption)intermediateDoseOption, mlcId);
-            });
-            VMSConstructor.ConstructOptimizationOptionsIMRTFunc2 = new Func<System.Int32, dynamic, dynamic, System.String, dynamic>((maxIterations, initialState, convergenceOption, mlcId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsIMRT(maxIterations, (VMS.TPS.Common.Model.Types.OptimizationOption)initialState, (VMS.TPS.Common.Model.Types.OptimizationConvergenceOption)convergenceOption, mlcId);
-            });
-            VMSConstructor.ConstructOptimizationOptionsVMATFunc0 = new Func<dynamic, System.String, dynamic>((startOption, mlcId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT((VMS.TPS.Common.Model.Types.OptimizationOption)startOption, mlcId);
-            });
-            VMSConstructor.ConstructOptimizationOptionsVMATFunc1 = new Func<dynamic, System.String, dynamic>((intermediateDoseOption, mlcId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT((VMS.TPS.Common.Model.Types.OptimizationIntermediateDoseOption)intermediateDoseOption, mlcId);
-            });
-            VMSConstructor.ConstructOptimizationOptionsVMATFunc2 = new Func<System.Int32, System.String, dynamic>((numberOfCycles, mlcId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT(numberOfCycles, mlcId);
-            });
-            VMSConstructor.ConstructOptimizationOptionsVMATFunc3 = new Func<dynamic, dynamic, System.Int32, System.String, dynamic>((startOption, intermediateDoseOption, numberOfCycles, mlcId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT((VMS.TPS.Common.Model.Types.OptimizationOption)startOption, (VMS.TPS.Common.Model.Types.OptimizationIntermediateDoseOption)intermediateDoseOption, numberOfCycles, mlcId);
-            });
-            VMSConstructor.ConstructOptimizationOptionsVMATFunc4 = new Func<dynamic, dynamic>((options) =>
-            {
-                return new VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT(options);
-            });
-            VMSConstructor.ConstructExternalBeamMachineParametersFunc0 = new Func<System.String, System.String, System.Int32, System.String, System.String, dynamic>((machineId, energyModeId, doseRate, techniqueId, primaryFluenceModeId) =>
-            {
-                return new VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters(machineId, energyModeId, doseRate, techniqueId, primaryFluenceModeId);
-            });
-
-            #region ENUM CONVERSION
-            EnumConverter.StructureMarginGeometryConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.StructureMarginGeometry)es; };
-            EnumConverter.PatientOrientationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PatientOrientation)es; };
-            EnumConverter.SeriesModalityConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.SeriesModality)es; };
-            EnumConverter.DoseUnitConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DoseValue.DoseUnit)es; };
-            EnumConverter.DoseValuePresentationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DoseValuePresentation)es; };
-            EnumConverter.VolumePresentationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.VolumePresentation)es; };
-            EnumConverter.PlanSetupApprovalStatusConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PlanSetupApprovalStatus)es; };
-            EnumConverter.BlockTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.BlockType)es; };
-            EnumConverter.GantryDirectionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.GantryDirection)es; };
-            EnumConverter.MLCPlanTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.MLCPlanType)es; };
-            EnumConverter.SetupTechniqueConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.SetupTechnique)es; };
-            EnumConverter.DosimeterUnitConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DosimeterUnit)es; };
-            EnumConverter.DVHEstimateTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.DVHEstimateType)es; };
-            EnumConverter.OptimizationObjectiveOperatorConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator)es; };
-            EnumConverter.PlanTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PlanType)es; };
-            EnumConverter.CalculationTypeConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.CalculationType)es; };
-            EnumConverter.PlanSumOperationConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.PlanSumOperation)es; };
-            EnumConverter.OptimizationOptionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationOption)es; };
-            EnumConverter.OptimizationIntermediateDoseOptionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationIntermediateDoseOption)es; };
-            EnumConverter.OptimizationConvergenceOptionConvertFunc = (es) => { return (VMS.TPS.Common.Model.Types.OptimizationConvergenceOption)es; };
-            #endregion
-
+                return new T.OptimizationOptionsVMAT(options);
+            };
+            VMSConstructor.ConstructExternalBeamMachineParametersFunc0 =
+                (machineId, energyModeId, doseRate, techniqueId, primaryFluenceModeId) =>
+                {
+                    return new T.ExternalBeamMachineParameters(machineId, energyModeId, doseRate, techniqueId,
+                        primaryFluenceModeId);
+                };
         }
     }
 }

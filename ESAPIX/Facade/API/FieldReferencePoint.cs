@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -42,20 +44,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue FieldDose
+        public DoseValue FieldDose
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("FieldDose")
-                        ? _client.FieldDose
-                        : default(Types.DoseValue);
+                    return (_client as ExpandoObject).HasProperty("FieldDose") ? _client.FieldDose : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.FieldDose)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.FieldDose);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.FieldDose; });
             }
             set
             {
@@ -121,20 +117,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector RefPointLocation
+        public VVector RefPointLocation
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("RefPointLocation")
                         ? _client.RefPointLocation
-                        : default(Types.VVector);
+                        : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.RefPointLocation)) return default(Types.VVector);
-                    return new Types.VVector(local._client.RefPointLocation);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.RefPointLocation; });
             }
             set
             {

@@ -1,7 +1,7 @@
 ﻿#region
 
 using System;
-using ESAPIX.Facade.Types;
+using VMS.TPS.Common.Model.Types;
 
 #endregion
 

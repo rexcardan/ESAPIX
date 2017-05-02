@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -101,17 +103,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector[] Shape
+        public VVector[] Shape
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Shape") ? _client.Shape : default(Types.VVector[]);
+                    return (_client as ExpandoObject).HasProperty("Shape") ? _client.Shape : default(VVector[]);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<Types.VVector[]>(sc =>
-                {
-                    return ArrayHelper.GenerateVVectorArray(local._client.Shape);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector[]>(sc => { return local._client.Shape; });
             }
             set
             {

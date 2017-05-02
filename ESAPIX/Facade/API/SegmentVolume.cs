@@ -1,9 +1,11 @@
 #region
 
 using System.Dynamic;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -40,12 +42,12 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public SegmentVolume AsymmetricMargin(Types.AxisAlignedMargins margins)
+        public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new SegmentVolume(local._client.AsymmetricMargin(margins._client));
+                return new SegmentVolume(local._client.AsymmetricMargin(margins));
             });
             return retVal;
         }

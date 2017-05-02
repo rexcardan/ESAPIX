@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ESAPIX.Facade.API;
-using ESAPIX.Facade.Types;
 using ESAPIX.Helpers;
+using VMS.TPS.Common.Model.Types;
 using static ESAPIX.Helpers.MathHelper;
 
 #endregion

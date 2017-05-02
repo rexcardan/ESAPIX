@@ -1,18 +1,21 @@
-﻿using ESAPIX.AppKit;
+﻿#region
+
+using System.Windows;
+using ESAPIX.AppKit;
 using ESAPIX.Facade;
 using ESAPIX.Facade.API;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+
+#endregion
 
 namespace ESAPIX.Bootstrapper
 {
     public class VMSBootstrapper
     {
-        public VMSBootstrapper() { FacadeInitializer.Initialize(); }
+        public VMSBootstrapper()
+        {
+            FacadeInitializer.Initialize();
+        }
+
         public Facade.API.Application GenerateFacadeApp(string username, string password)
         {
             return Facade.API.Application.CreateApplication(username, password);

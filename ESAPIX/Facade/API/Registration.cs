@@ -3,9 +3,11 @@
 using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -101,23 +103,17 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public Types.VVector InverseTransformPoint(Types.VVector pt)
+        public VVector InverseTransformPoint(VVector pt)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Types.VVector(local._client.InverseTransformPoint(pt._client));
-            });
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.InverseTransformPoint(pt); });
             return retVal;
         }
 
-        public Types.VVector TransformPoint(Types.VVector pt)
+        public VVector TransformPoint(VVector pt)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Types.VVector(local._client.TransformPoint(pt._client));
-            });
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.TransformPoint(pt); });
             return retVal;
         }
     }

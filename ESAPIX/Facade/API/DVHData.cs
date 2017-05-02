@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -40,19 +42,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DVHPoint[] CurveData
+        public DVHPoint[] CurveData
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("CurveData")
                         ? _client.CurveData
-                        : default(Types.DVHPoint[]);
+                        : default(DVHPoint[]);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<Types.DVHPoint[]>(sc =>
-                {
-                    return ArrayHelper.GenerateDVHPointArray(local._client.CurveData);
-                });
+                return X.Instance.CurrentContext.GetValue<DVHPoint[]>(sc => { return local._client.CurveData; });
             }
             set
             {
@@ -60,20 +59,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue MaxDose
+        public DoseValue MaxDose
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MaxDose")
-                        ? _client.MaxDose
-                        : default(Types.DoseValue);
+                    return (_client as ExpandoObject).HasProperty("MaxDose") ? _client.MaxDose : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.MaxDose)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.MaxDose);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.MaxDose; });
             }
             set
             {
@@ -81,20 +74,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue MeanDose
+        public DoseValue MeanDose
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MeanDose")
-                        ? _client.MeanDose
-                        : default(Types.DoseValue);
+                    return (_client as ExpandoObject).HasProperty("MeanDose") ? _client.MeanDose : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.MeanDose)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.MeanDose);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.MeanDose; });
             }
             set
             {
@@ -102,20 +89,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue MedianDose
+        public DoseValue MedianDose
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("MedianDose")
                         ? _client.MedianDose
-                        : default(Types.DoseValue);
+                        : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.MedianDose)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.MedianDose);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.MedianDose; });
             }
             set
             {
@@ -123,20 +106,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue MinDose
+        public DoseValue MinDose
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MinDose")
-                        ? _client.MinDose
-                        : default(Types.DoseValue);
+                    return (_client as ExpandoObject).HasProperty("MinDose") ? _client.MinDose : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.MinDose)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.MinDose);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.MinDose; });
             }
             set
             {

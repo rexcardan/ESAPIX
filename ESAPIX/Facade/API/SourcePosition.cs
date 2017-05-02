@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -76,20 +78,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector Translation
+        public VVector Translation
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("Translation")
                         ? _client.Translation
-                        : default(Types.VVector);
+                        : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Translation)) return default(Types.VVector);
-                    return new Types.VVector(local._client.Translation);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.Translation; });
             }
             set
             {

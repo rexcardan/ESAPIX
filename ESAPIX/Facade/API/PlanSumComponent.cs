@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -42,18 +44,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.PlanSumOperation PlanSumOperation
+        public PlanSumOperation PlanSumOperation
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("PlanSumOperation")
                         ? _client.PlanSumOperation
-                        : default(Types.PlanSumOperation);
+                        : default(PlanSumOperation);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<PlanSumOperation>(sc =>
                 {
-                    return (Types.PlanSumOperation) local._client.PlanSumOperation;
+                    return local._client.PlanSumOperation;
                 });
             }
             set

@@ -3,9 +3,11 @@
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -47,16 +49,12 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public CalculationResult CalculateDoseWithPresetValues(
-            List<KeyValuePair<string, Types.MetersetValue>> presetValues)
+        public CalculationResult CalculateDoseWithPresetValues(List<KeyValuePair<string, MetersetValue>> presetValues)
         {
-            var conv = new List<KeyValuePair<string, dynamic>>();
-            foreach (var val in presetValues)
-                conv.Add(new KeyValuePair<string, dynamic>(val.Key, val.Value._client));
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new CalculationResult(local._client.CalculateDoseWithPresetValues(conv));
+                return new CalculationResult(local._client.CalculateDoseWithPresetValues(presetValues));
             });
             return retVal;
         }
@@ -91,37 +89,37 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public CalculationResult CalculateLeafMotions(Types.LMCVOptions options)
+        public CalculationResult CalculateLeafMotions(LMCVOptions options)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new CalculationResult(local._client.CalculateLeafMotions(options._client));
+                return new CalculationResult(local._client.CalculateLeafMotions(options));
             });
             return retVal;
         }
 
-        public CalculationResult CalculateLeafMotions(Types.SmartLMCOptions options)
+        public CalculationResult CalculateLeafMotions(SmartLMCOptions options)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new CalculationResult(local._client.CalculateLeafMotions(options._client));
+                return new CalculationResult(local._client.CalculateLeafMotions(options));
             });
             return retVal;
         }
 
-        public CalculationResult CalculateLeafMotions(Types.LMCMSSOptions options)
+        public CalculationResult CalculateLeafMotions(LMCMSSOptions options)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new CalculationResult(local._client.CalculateLeafMotions(options._client));
+                return new CalculationResult(local._client.CalculateLeafMotions(options));
             });
             return retVal;
         }
 
-        public IEnumerable<string> GetModelsForCalculationType(Types.CalculationType calculationType)
+        public IEnumerable<string> GetModelsForCalculationType(CalculationType calculationType)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
@@ -141,7 +139,7 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public OptimizerResult Optimize(int maxIterations, Types.OptimizationOption optimizationOption)
+        public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
@@ -152,7 +150,7 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public OptimizerResult Optimize(int maxIterations, Types.OptimizationOption optimizationOption, string mlcId)
+        public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption, string mlcId)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
@@ -173,12 +171,12 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public OptimizerResult Optimize(Types.OptimizationOptionsIMRT options)
+        public OptimizerResult Optimize(OptimizationOptionsIMRT options)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizerResult(local._client.Optimize(options._client));
+                return new OptimizerResult(local._client.Optimize(options));
             });
             return retVal;
         }
@@ -203,27 +201,26 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public OptimizerResult OptimizeVMAT(Types.OptimizationOptionsVMAT options)
+        public OptimizerResult OptimizeVMAT(OptimizationOptionsVMAT options)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizerResult(local._client.OptimizeVMAT(options._client));
+                return new OptimizerResult(local._client.OptimizeVMAT(options));
             });
             return retVal;
         }
 
-        public CalculationResult CalculateDVHEstimates(string modelId,
-            Dictionary<string, Types.DoseValue> targetDoseLevels, Dictionary<string, string> structureMatches)
+        public CalculationResult CalculateDVHEstimates(string modelId, Dictionary<string, DoseValue> targetDoseLevels,
+            Dictionary<string, string> structureMatches)
         {
-            var conv = new Dictionary<string, dynamic>();
-            foreach (var entry in targetDoseLevels)
-                conv.Add(entry.Key, entry.Value._client);
             var local = this;
-            return X.Instance.CurrentContext.GetValue(sc =>
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new CalculationResult(_client.CalculateDVHEstimates(modelId, conv, structureMatches));
+                return new CalculationResult(
+                    local._client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches));
             });
+            return retVal;
         }
 
         public void WriteXml(System.Xml.XmlWriter writer)
@@ -232,110 +229,109 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public Beam AddArcBeam(Types.ExternalBeamMachineParameters machineParameters, Types.VRect<double> jawPositions,
-            double collimatorAngle, double gantryAngle, double gantryStop, Types.GantryDirection gantryDirection,
-            double patientSupportAngle, Types.VVector isocenter)
+        public Beam AddArcBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions,
+            double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
+            double patientSupportAngle, VVector isocenter)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Beam(local._client.AddArcBeam(machineParameters._client, jawPositions._client,
-                    collimatorAngle, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
-                    patientSupportAngle, isocenter._client));
+                return new Beam(local._client.AddArcBeam(machineParameters, jawPositions, collimatorAngle,
+                    gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection), patientSupportAngle,
+                    isocenter));
             });
             return retVal;
         }
 
-        public Beam AddConformalArcBeam(Types.ExternalBeamMachineParameters machineParameters, double collimatorAngle,
-            int controlPointCount, double gantryAngle, double gantryStop, Types.GantryDirection gantryDirection,
-            double patientSupportAngle, Types.VVector isocenter)
+        public Beam AddConformalArcBeam(ExternalBeamMachineParameters machineParameters, double collimatorAngle,
+            int controlPointCount, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
+            double patientSupportAngle, VVector isocenter)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Beam(local._client.AddConformalArcBeam(machineParameters._client, collimatorAngle,
+                return new Beam(local._client.AddConformalArcBeam(machineParameters, collimatorAngle,
                     controlPointCount, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
-                    patientSupportAngle, isocenter._client));
+                    patientSupportAngle, isocenter));
             });
             return retVal;
         }
 
-        public Beam AddMLCArcBeam(Types.ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
-            Types.VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop,
-            Types.GantryDirection gantryDirection, double patientSupportAngle, Types.VVector isocenter)
+        public Beam AddMLCArcBeam(ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
+            VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop,
+            GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Beam(local._client.AddMLCArcBeam(machineParameters._client, leafPositions,
-                    jawPositions._client, collimatorAngle, gantryAngle, gantryStop,
-                    EnumConverter.Convert(gantryDirection), patientSupportAngle, isocenter._client));
-            });
-            return retVal;
-        }
-
-        public Beam AddMLCBeam(Types.ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
-            Types.VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle,
-            Types.VVector isocenter)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Beam(local._client.AddMLCBeam(machineParameters._client, leafPositions,
-                    jawPositions._client, collimatorAngle, gantryAngle, patientSupportAngle, isocenter._client));
-            });
-            return retVal;
-        }
-
-        public Beam AddMultipleStaticSegmentBeam(Types.ExternalBeamMachineParameters machineParameters,
-            IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
-            Types.VVector isocenter)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Beam(local._client.AddMultipleStaticSegmentBeam(machineParameters._client,
-                    metersetWeights, collimatorAngle, gantryAngle, patientSupportAngle, isocenter._client));
-            });
-            return retVal;
-        }
-
-        public Beam AddSlidingWindowBeam(Types.ExternalBeamMachineParameters machineParameters,
-            IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
-            Types.VVector isocenter)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Beam(local._client.AddSlidingWindowBeam(machineParameters._client, metersetWeights,
-                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter._client));
-            });
-            return retVal;
-        }
-
-        public Beam AddStaticBeam(Types.ExternalBeamMachineParameters machineParameters,
-            Types.VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle,
-            Types.VVector isocenter)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Beam(local._client.AddStaticBeam(machineParameters._client, jawPositions._client,
-                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter._client));
-            });
-            return retVal;
-        }
-
-        public Beam AddVMATBeam(Types.ExternalBeamMachineParameters machineParameters,
-            IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double gantryStop,
-            Types.GantryDirection gantryDirection, double patientSupportAngle, Types.VVector isocenter)
-        {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Beam(local._client.AddVMATBeam(machineParameters._client, metersetWeights,
+                return new Beam(local._client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions,
                     collimatorAngle, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
-                    patientSupportAngle, isocenter._client));
+                    patientSupportAngle, isocenter));
+            });
+            return retVal;
+        }
+
+        public Beam AddMLCBeam(ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
+            VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle,
+            VVector isocenter)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Beam(local._client.AddMLCBeam(machineParameters, leafPositions, jawPositions,
+                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+            });
+            return retVal;
+        }
+
+        public Beam AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters machineParameters,
+            IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
+            VVector isocenter)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Beam(local._client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights,
+                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+            });
+            return retVal;
+        }
+
+        public Beam AddSlidingWindowBeam(ExternalBeamMachineParameters machineParameters,
+            IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
+            VVector isocenter)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Beam(local._client.AddSlidingWindowBeam(machineParameters, metersetWeights,
+                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+            });
+            return retVal;
+        }
+
+        public Beam AddStaticBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions,
+            double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Beam(local._client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle,
+                    gantryAngle, patientSupportAngle, isocenter));
+            });
+            return retVal;
+        }
+
+        public Beam AddVMATBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights,
+            double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
+            double patientSupportAngle, VVector isocenter)
+        {
+            var local = this;
+            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            {
+                return new Beam(local._client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle,
+                    gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection), patientSupportAngle,
+                    isocenter));
             });
             return retVal;
         }

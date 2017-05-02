@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections;
-using ESAPIX.Facade.Types;
+using VMS.TPS.Common.Model.Types;
 
 #endregion
 
@@ -94,27 +94,6 @@ namespace ESAPIX.Facade
             });
         }
 
-        internal static dynamic ConstructSegmentProfile(VVector origin, VVector step, BitArray data)
-        {
-            if (ConstructSegmentProfileFunc0 == null)
-                throw new NullReferenceException(
-                    "The function ConstructSegmentProfileFunc0 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructSegmentProfileFunc0(origin._client, step._client, data);
-            });
-        }
-
-        internal static dynamic ConstructSegmentProfilePoint(VVector position, bool value)
-        {
-            if (ConstructSegmentProfilePointFunc0 == null)
-                throw new NullReferenceException(
-                    "The function ConstructSegmentProfilePointFunc0 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructSegmentProfilePointFunc0(position._client, value);
-            });
-        }
 
         internal static dynamic ConstructDoseValue(double value, string unitName)
         {
@@ -135,50 +114,6 @@ namespace ESAPIX.Facade
             return XContext.Instance.CurrentContext.GetValue(sc => { return ConstructDoseValueFunc1(value, unit); });
         }
 
-        internal static dynamic ConstructLineProfile(VVector origin, VVector step, double[] data)
-        {
-            if (ConstructLineProfileFunc0 == null)
-                throw new NullReferenceException(
-                    "The function ConstructLineProfileFunc0 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructLineProfileFunc0(origin._client, step._client, data);
-            });
-        }
-
-        internal static dynamic ConstructProfilePoint(VVector position, double value)
-        {
-            if (ConstructProfilePointFunc0 == null)
-                throw new NullReferenceException(
-                    "The function ConstructProfilePointFunc0 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructProfilePointFunc0(position._client, value);
-            });
-        }
-
-        internal static dynamic ConstructDoseProfile(VVector origin, VVector step, double[] data,
-            DoseValue.DoseUnit unit)
-        {
-            if (ConstructDoseProfileFunc0 == null)
-                throw new NullReferenceException(
-                    "The function ConstructDoseProfileFunc0 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructDoseProfileFunc0(origin._client, step._client, data, unit);
-            });
-        }
-
-        internal static dynamic ConstructDVHPoint(DoseValue dose, double volume, string volumeUnit)
-        {
-            if (ConstructDVHPointFunc0 == null)
-                throw new NullReferenceException(
-                    "The function ConstructDVHPointFunc0 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructDVHPointFunc0(dose._client, volume, volumeUnit);
-            });
-        }
 
         internal static dynamic ConstructVRect<T>(T x1, T y1, T x2, T y2)
         {
@@ -218,17 +153,6 @@ namespace ESAPIX.Facade
             return XContext.Instance.CurrentContext.GetValue(sc =>
             {
                 return ConstructFluenceFunc1(fluenceMatrix, xOrigin, yOrigin, mlcId);
-            });
-        }
-
-        internal static dynamic ConstructImageProfile(VVector origin, VVector step, double[] data, string unit)
-        {
-            if (ConstructImageProfileFunc0 == null)
-                throw new NullReferenceException(
-                    "The function ConstructImageProfileFunc0 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructImageProfileFunc0(origin._client, step._client, data, unit);
             });
         }
 
@@ -345,17 +269,6 @@ namespace ESAPIX.Facade
             {
                 return ConstructOptimizationOptionsVMATFunc3(startOption, intermediateDoseOption, numberOfCycles,
                     mlcId);
-            });
-        }
-
-        internal static dynamic ConstructOptimizationOptionsVMAT(OptimizationOptionsVMAT options)
-        {
-            if (ConstructOptimizationOptionsVMATFunc4 == null)
-                throw new NullReferenceException(
-                    "The function ConstructOptimizationOptionsVMATFunc4 has not been initialized. Try calling FacadeInitializer.Initialize() in ESAPIX.VMS before calling this method.");
-            return XContext.Instance.CurrentContext.GetValue(sc =>
-            {
-                return ConstructOptimizationOptionsVMATFunc4(options._client);
             });
         }
 

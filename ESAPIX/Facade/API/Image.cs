@@ -3,9 +3,11 @@
 using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -112,18 +114,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.PatientOrientation ImagingOrientation
+        public PatientOrientation ImagingOrientation
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("ImagingOrientation")
                         ? _client.ImagingOrientation
-                        : default(Types.PatientOrientation);
+                        : default(PatientOrientation);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<PatientOrientation>(sc =>
                 {
-                    return (Types.PatientOrientation) local._client.ImagingOrientation;
+                    return local._client.ImagingOrientation;
                 });
             }
             set
@@ -162,18 +164,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector Origin
+        public VVector Origin
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Origin") ? _client.Origin : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("Origin") ? _client.Origin : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Origin)) return default(Types.VVector);
-                    return new Types.VVector(local._client.Origin);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.Origin; });
             }
             set
             {
@@ -200,20 +198,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector UserOrigin
+        public VVector UserOrigin
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("UserOrigin")
-                        ? _client.UserOrigin
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("UserOrigin") ? _client.UserOrigin : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.UserOrigin)) return default(Types.VVector);
-                    return new Types.VVector(local._client.UserOrigin);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.UserOrigin; });
             }
             set
             {
@@ -253,20 +245,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector XDirection
+        public VVector XDirection
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("XDirection")
-                        ? _client.XDirection
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("XDirection") ? _client.XDirection : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.XDirection)) return default(Types.VVector);
-                    return new Types.VVector(local._client.XDirection);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.XDirection; });
             }
             set
             {
@@ -304,20 +290,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector YDirection
+        public VVector YDirection
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("YDirection")
-                        ? _client.YDirection
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("YDirection") ? _client.YDirection : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.YDirection)) return default(Types.VVector);
-                    return new Types.VVector(local._client.YDirection);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.YDirection; });
             }
             set
             {
@@ -355,20 +335,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector ZDirection
+        public VVector ZDirection
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ZDirection")
-                        ? _client.ZDirection
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("ZDirection") ? _client.ZDirection : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.ZDirection)) return default(Types.VVector);
-                    return new Types.VVector(local._client.ZDirection);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.ZDirection; });
             }
             set
             {
@@ -412,23 +386,22 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public Types.VVector DicomToUser(Types.VVector dicom, PlanSetup planSetup)
+        public VVector DicomToUser(VVector dicom, PlanSetup planSetup)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Types.VVector(local._client.DicomToUser(dicom._client, planSetup._client));
+                return local._client.DicomToUser(dicom, planSetup._client);
             });
             return retVal;
         }
 
-        public Types.ImageProfile GetImageProfile(Types.VVector start, Types.VVector stop, double[] preallocatedBuffer)
+        public ImageProfile GetImageProfile(VVector start, VVector stop, double[] preallocatedBuffer)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Types.ImageProfile(
-                    local._client.GetImageProfile(start._client, stop._client, preallocatedBuffer));
+                return local._client.GetImageProfile(start, stop, preallocatedBuffer);
             });
             return retVal;
         }
@@ -439,12 +412,12 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.GetVoxels(planeIndex, preallocatedBuffer); });
         }
 
-        public Types.VVector UserToDicom(Types.VVector user, PlanSetup planSetup)
+        public VVector UserToDicom(VVector user, PlanSetup planSetup)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Types.VVector(local._client.UserToDicom(user._client, planSetup._client));
+                return local._client.UserToDicom(user, planSetup._client);
             });
             return retVal;
         }

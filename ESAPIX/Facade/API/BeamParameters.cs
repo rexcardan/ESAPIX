@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -67,18 +69,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.GantryDirection GantryDirection
+        public GantryDirection GantryDirection
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("GantryDirection")
                         ? _client.GantryDirection
-                        : default(Types.GantryDirection);
+                        : default(GantryDirection);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<GantryDirection>(sc =>
                 {
-                    return (Types.GantryDirection) local._client.GantryDirection;
+                    return local._client.GantryDirection;
                 });
             }
             set
@@ -87,20 +89,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector Isocenter
+        public VVector Isocenter
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Isocenter")
-                        ? _client.Isocenter
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("Isocenter") ? _client.Isocenter : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Isocenter)) return default(Types.VVector);
-                    return new Types.VVector(local._client.Isocenter);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.Isocenter; });
             }
             set
             {
@@ -131,10 +127,10 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetAllLeafPositions(leafPositions); });
         }
 
-        public void SetJawPositions(Types.VRect<double> positions)
+        public void SetJawPositions(VRect<double> positions)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetJawPositions(positions._client); });
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetJawPositions(positions); });
         }
     }
 }

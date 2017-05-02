@@ -3,9 +3,11 @@
 using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -62,18 +64,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValuePresentation DoseValuePresentation
+        public DoseValuePresentation DoseValuePresentation
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("DoseValuePresentation")
                         ? _client.DoseValuePresentation
-                        : default(Types.DoseValuePresentation);
+                        : default(DoseValuePresentation);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<DoseValuePresentation>(sc =>
                 {
-                    return (Types.DoseValuePresentation) local._client.DoseValuePresentation;
+                    return local._client.DoseValuePresentation;
                 });
             }
             set
@@ -88,8 +90,8 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public DVHData GetDVHCumulativeData(Structure structure, Types.DoseValuePresentation dosePresentation,
-            Types.VolumePresentation volumePresentation, double binWidth)
+        public DVHData GetDVHCumulativeData(Structure structure, DoseValuePresentation dosePresentation,
+            VolumePresentation volumePresentation, double binWidth)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>

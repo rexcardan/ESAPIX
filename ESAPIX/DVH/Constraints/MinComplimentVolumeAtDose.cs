@@ -1,6 +1,6 @@
 ﻿#region
 
-using ESAPIX.Facade.Types;
+using VMS.TPS.Common.Model.Types;
 
 #endregion
 

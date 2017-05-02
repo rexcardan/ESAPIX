@@ -8,6 +8,7 @@ using X = ESAPIX.Facade.XContext;
 
 #endregion
 
+
 namespace ESAPIX.Facade.API
 {
     public class StructureSet : ApiDataObject

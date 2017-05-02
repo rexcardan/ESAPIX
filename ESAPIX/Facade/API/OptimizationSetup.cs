@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -150,26 +152,24 @@ namespace ESAPIX.Facade.API
         }
 
         public OptimizationEUDObjective AddEUDObjective(Structure structure,
-            Types.OptimizationObjectiveOperator objectiveOperator, Types.DoseValue dose, double parameterA,
-            double priority)
+            OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double parameterA, double priority)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new OptimizationEUDObjective(local._client.AddEUDObjective(structure._client,
-                    EnumConverter.Convert(objectiveOperator), dose._client, parameterA, priority));
+                    EnumConverter.Convert(objectiveOperator), dose, parameterA, priority));
             });
             return retVal;
         }
 
-        public OptimizationMeanDoseObjective AddMeanDoseObjective(Structure structure, Types.DoseValue dose,
-            double priority)
+        public OptimizationMeanDoseObjective AddMeanDoseObjective(Structure structure, DoseValue dose, double priority)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new OptimizationMeanDoseObjective(
-                    local._client.AddMeanDoseObjective(structure._client, dose._client, priority));
+                    local._client.AddMeanDoseObjective(structure._client, dose, priority));
             });
             return retVal;
         }
@@ -187,13 +187,13 @@ namespace ESAPIX.Facade.API
         }
 
         public OptimizationPointObjective AddPointObjective(Structure structure,
-            Types.OptimizationObjectiveOperator objectiveOperator, Types.DoseValue dose, double volume, double priority)
+            OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double volume, double priority)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new OptimizationPointObjective(local._client.AddPointObjective(structure._client,
-                    EnumConverter.Convert(objectiveOperator), dose._client, volume, priority));
+                    EnumConverter.Convert(objectiveOperator), dose, volume, priority));
             });
             return retVal;
         }

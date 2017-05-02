@@ -92,6 +92,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="VMS.TPS.Common.Model.Types">
+      <HintPath>lib\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -234,52 +237,11 @@
     <Compile Include="Facade\API\Tray.cs" />
     <Compile Include="Facade\API\User.cs" />
     <Compile Include="Facade\API\Wedge.cs" />
-    <Compile Include="Facade\ArrayHelper.cs" />
     <Compile Include="Facade\DefaultHelper.cs" />
     <Compile Include="Facade\EnumConverter.cs" />
     <Compile Include="Facade\Serialization\FacadeSerializer.cs" />
     <Compile Include="Facade\Serialization\InfiniteLoopResolver.cs" />
     <Compile Include="Facade\StaticHelper.cs" />
-    <Compile Include="Facade\Types\AxisAlignedMargins.cs" />
-    <Compile Include="Facade\Types\BlockType.cs" />
-    <Compile Include="Facade\Types\CalculationType.cs" />
-    <Compile Include="Facade\Types\DoseProfile.cs" />
-    <Compile Include="Facade\Types\DoseValue.cs" />
-    <Compile Include="Facade\Types\DoseValuePresentation.cs" />
-    <Compile Include="Facade\Types\DosimeterUnit.cs" />
-    <Compile Include="Facade\Types\DVHEstimateType.cs" />
-    <Compile Include="Facade\Types\DVHPoint.cs" />
-    <Compile Include="Facade\Types\ExternalBeamMachineParameters.cs" />
-    <Compile Include="Facade\Types\Fluence.cs" />
-    <Compile Include="Facade\Types\GantryDirection.cs" />
-    <Compile Include="Facade\Types\ImageProfile.cs" />
-    <Compile Include="Facade\Types\LineProfile.cs" />
-    <Compile Include="Facade\Types\LMCMSSOptions.cs" />
-    <Compile Include="Facade\Types\LMCVOptions.cs" />
-    <Compile Include="Facade\Types\MetersetValue.cs" />
-    <Compile Include="Facade\Types\MLCPlanType.cs" />
-    <Compile Include="Facade\Types\OptimizationConvergenceOption.cs" />
-    <Compile Include="Facade\Types\OptimizationIntermediateDoseOption.cs" />
-    <Compile Include="Facade\Types\OptimizationObjectiveOperator.cs" />
-    <Compile Include="Facade\Types\OptimizationOption.cs" />
-    <Compile Include="Facade\Types\OptimizationOptionsBase.cs" />
-    <Compile Include="Facade\Types\OptimizationOptionsIMRT.cs" />
-    <Compile Include="Facade\Types\OptimizationOptionsVMAT.cs" />
-    <Compile Include="Facade\Types\PatientOrientation.cs" />
-    <Compile Include="Facade\Types\PlanSetupApprovalStatus.cs" />
-    <Compile Include="Facade\Types\PlanSumOperation.cs" />
-    <Compile Include="Facade\Types\PlanType.cs" />
-    <Compile Include="Facade\Types\ProfilePoint.cs" />
-    <Compile Include="Facade\Types\SegmentProfile.cs" />
-    <Compile Include="Facade\Types\SegmentProfilePoint.cs" />
-    <Compile Include="Facade\Types\SeriesModality.cs" />
-    <Compile Include="Facade\Types\SetupTechnique.cs" />
-    <Compile Include="Facade\Types\SmartLMCOptions.cs" />
-    <Compile Include="Facade\Types\StructureCodeInfo.cs" />
-    <Compile Include="Facade\Types\StructureMarginGeometry.cs" />
-    <Compile Include="Facade\Types\VolumePresentation.cs" />
-    <Compile Include="Facade\Types\VRect.cs" />
-    <Compile Include="Facade\Types\VVector.cs" />
     <Compile Include="Facade\VMSConstructor.cs" />
     <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Facade\Serialization\IEnumerableJsonConverter.cs" />

@@ -2,8 +2,8 @@
 
 using ESAPIX.DVH.Constraints;
 using ESAPIX.DVH.Query;
-using ESAPIX.Facade.Types;
-using static ESAPIX.Facade.Types.DoseValue;
+using VMS.TPS.Common.Model.Types;
+using static VMS.TPS.Common.Model.Types.DoseValue;
 
 #endregion
 

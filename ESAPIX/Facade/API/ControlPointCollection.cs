@@ -1,16 +1,15 @@
 #region
 
-using System.Collections;
-using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
 
+
 namespace ESAPIX.Facade.API
 {
-    public class ControlPointCollection : SerializableObject, IEnumerable<ControlPoint>
+    public class ControlPointCollection : SerializableObject
     {
         public ControlPointCollection()
         {
@@ -61,18 +60,6 @@ namespace ESAPIX.Facade.API
             {
                 if (_client is ExpandoObject) _client.Count = value;
             }
-        }
-
-        public IEnumerator<ControlPoint> GetEnumerator()
-        {
-            for (var i = 0; i < Count; i++)
-                yield return this[i];
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            for (var i = 0; i < Count; i++)
-                yield return this[i];
         }
 
         public void WriteXml(System.Xml.XmlWriter writer)

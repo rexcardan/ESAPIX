@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -27,20 +29,14 @@ namespace ESAPIX.Facade.API
             get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
-        public Types.DoseValue DoseMax3D
+        public DoseValue DoseMax3D
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("DoseMax3D")
-                        ? _client.DoseMax3D
-                        : default(Types.DoseValue);
+                    return (_client as ExpandoObject).HasProperty("DoseMax3D") ? _client.DoseMax3D : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.DoseMax3D)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.DoseMax3D);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.DoseMax3D; });
             }
             set
             {
@@ -48,20 +44,16 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector DoseMax3DLocation
+        public VVector DoseMax3DLocation
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("DoseMax3DLocation")
                         ? _client.DoseMax3DLocation
-                        : default(Types.VVector);
+                        : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.DoseMax3DLocation)) return default(Types.VVector);
-                    return new Types.VVector(local._client.DoseMax3DLocation);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.DoseMax3DLocation; });
             }
             set
             {
@@ -107,18 +99,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector Origin
+        public VVector Origin
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Origin") ? _client.Origin : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("Origin") ? _client.Origin : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Origin)) return default(Types.VVector);
-                    return new Types.VVector(local._client.Origin);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.Origin; });
             }
             set
             {
@@ -175,20 +163,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector XDirection
+        public VVector XDirection
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("XDirection")
-                        ? _client.XDirection
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("XDirection") ? _client.XDirection : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.XDirection)) return default(Types.VVector);
-                    return new Types.VVector(local._client.XDirection);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.XDirection; });
             }
             set
             {
@@ -226,20 +208,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector YDirection
+        public VVector YDirection
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("YDirection")
-                        ? _client.YDirection
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("YDirection") ? _client.YDirection : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.YDirection)) return default(Types.VVector);
-                    return new Types.VVector(local._client.YDirection);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.YDirection; });
             }
             set
             {
@@ -277,20 +253,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.VVector ZDirection
+        public VVector ZDirection
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ZDirection")
-                        ? _client.ZDirection
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("ZDirection") ? _client.ZDirection : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.ZDirection)) return default(Types.VVector);
-                    return new Types.VVector(local._client.ZDirection);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.ZDirection; });
             }
             set
             {
@@ -334,24 +304,20 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public Types.DoseProfile GetDoseProfile(Types.VVector start, Types.VVector stop, double[] preallocatedBuffer)
+        public DoseProfile GetDoseProfile(VVector start, VVector stop, double[] preallocatedBuffer)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new Types.DoseProfile(
-                    local._client.GetDoseProfile(start._client, stop._client, preallocatedBuffer));
+                return local._client.GetDoseProfile(start, stop, preallocatedBuffer);
             });
             return retVal;
         }
 
-        public Types.DoseValue GetDoseToPoint(Types.VVector at)
+        public DoseValue GetDoseToPoint(VVector at)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Types.DoseValue(local._client.GetDoseToPoint(at._client));
-            });
+            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetDoseToPoint(at); });
             return retVal;
         }
 
@@ -367,13 +333,11 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetVoxels(planeIndex, values); });
         }
 
-        public Types.DoseValue VoxelToDoseValue(int voxelValue)
+        public DoseValue VoxelToDoseValue(int voxelValue)
         {
             var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
-            {
-                return new Types.DoseValue(local._client.VoxelToDoseValue(voxelValue));
-            });
+            var retVal =
+                X.Instance.CurrentContext.GetValue(sc => { return local._client.VoxelToDoseValue(voxelValue); });
             return retVal;
         }
     }

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Facade.API;
 using ESAPIX.DVH.Query;
-using ESAPIX.Facade.Types;
+using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Extensions.Tests
 {

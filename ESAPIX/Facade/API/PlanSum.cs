@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -149,12 +151,12 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public Types.PlanSumOperation GetPlanSumOperation(PlanSetup planSetupInPlanSum)
+        public PlanSumOperation GetPlanSumOperation(PlanSetup planSetupInPlanSum)
         {
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return (Types.PlanSumOperation) local._client.GetPlanSumOperation(planSetupInPlanSum._client);
+                return local._client.GetPlanSumOperation(planSetupInPlanSum._client);
             });
             return retVal;
         }

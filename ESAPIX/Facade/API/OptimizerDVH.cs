@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -27,19 +29,16 @@ namespace ESAPIX.Facade.API
             get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
-        public Types.DVHPoint[] CurveData
+        public DVHPoint[] CurveData
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("CurveData")
                         ? _client.CurveData
-                        : default(Types.DVHPoint[]);
+                        : default(DVHPoint[]);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<Types.DVHPoint[]>(sc =>
-                {
-                    return ArrayHelper.GenerateDVHPointArray(local._client.CurveData);
-                });
+                return X.Instance.CurrentContext.GetValue<DVHPoint[]>(sc => { return local._client.CurveData; });
             }
             set
             {

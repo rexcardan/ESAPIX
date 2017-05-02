@@ -1,10 +1,10 @@
-﻿using System;
+﻿#region
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using ESAPIX.Facade.API;
+using Newtonsoft.Json;
+
+#endregion
 
 namespace ESAPIX.Facade.Serialization
 {
@@ -14,10 +14,10 @@ namespace ESAPIX.Facade.Serialization
         {
             get
             {
-                return new JsonSerializerSettings()
+                return new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,
-                    Converters = new List<JsonConverter>() { new IEnumerableJsonConverter() }
+                    Converters = new List<JsonConverter> {new IEnumerableJsonConverter()}
                 };
             }
         }
@@ -26,7 +26,7 @@ namespace ESAPIX.Facade.Serialization
         {
             get
             {
-                return new JsonSerializerSettings()
+                return new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,
                     ContractResolver = new InfiniteLoopResolver()
@@ -54,5 +54,4 @@ namespace ESAPIX.Facade.Serialization
             return JsonConvert.SerializeObject(patient, SerializeSettings);
         }
     }
-
 }

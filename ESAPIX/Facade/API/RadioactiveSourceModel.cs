@@ -3,9 +3,11 @@
 using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -26,20 +28,14 @@ namespace ESAPIX.Facade.API
             get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
-        public Types.VVector ActiveSize
+        public VVector ActiveSize
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ActiveSize")
-                        ? _client.ActiveSize
-                        : default(Types.VVector);
+                    return (_client as ExpandoObject).HasProperty("ActiveSize") ? _client.ActiveSize : default(VVector);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.ActiveSize)) return default(Types.VVector);
-                    return new Types.VVector(local._client.ActiveSize);
-                });
+                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.ActiveSize; });
             }
             set
             {

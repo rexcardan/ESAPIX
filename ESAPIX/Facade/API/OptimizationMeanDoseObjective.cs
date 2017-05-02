@@ -2,9 +2,11 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -25,18 +27,14 @@ namespace ESAPIX.Facade.API
             get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
         }
 
-        public Types.DoseValue Dose
+        public DoseValue Dose
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Dose") ? _client.Dose : default(Types.DoseValue);
+                    return (_client as ExpandoObject).HasProperty("Dose") ? _client.Dose : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Dose)) return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.Dose);
-                });
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.Dose; });
             }
             set
             {

@@ -3,9 +3,11 @@
 using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -43,20 +45,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue DosePerFractionInPrimaryRefPoint
+        public DoseValue DosePerFractionInPrimaryRefPoint
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("DosePerFractionInPrimaryRefPoint")
                         ? _client.DosePerFractionInPrimaryRefPoint
-                        : default(Types.DoseValue);
+                        : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc =>
                 {
-                    if (DefaultHelper.IsDefault(local._client.DosePerFractionInPrimaryRefPoint))
-                        return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.DosePerFractionInPrimaryRefPoint);
+                    return local._client.DosePerFractionInPrimaryRefPoint;
                 });
             }
             set
@@ -82,20 +82,18 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public Types.DoseValue PrescribedDosePerFraction
+        public DoseValue PrescribedDosePerFraction
         {
             get
             {
                 if (_client is ExpandoObject)
                     return (_client as ExpandoObject).HasProperty("PrescribedDosePerFraction")
                         ? _client.PrescribedDosePerFraction
-                        : default(Types.DoseValue);
+                        : default(DoseValue);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
+                return X.Instance.CurrentContext.GetValue<DoseValue>(sc =>
                 {
-                    if (DefaultHelper.IsDefault(local._client.PrescribedDosePerFraction))
-                        return default(Types.DoseValue);
-                    return new Types.DoseValue(local._client.PrescribedDosePerFraction);
+                    return local._client.PrescribedDosePerFraction;
                 });
             }
             set
@@ -110,14 +108,13 @@ namespace ESAPIX.Facade.API
             X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
-        public void SetPrescription(int numberOfFractions, Types.DoseValue prescribedDosePerFraction,
+        public void SetPrescription(int numberOfFractions, DoseValue prescribedDosePerFraction,
             double prescribedPercentage)
         {
             var local = this;
             X.Instance.CurrentContext.Thread.Invoke(() =>
             {
-                local._client.SetPrescription(numberOfFractions, prescribedDosePerFraction._client,
-                    prescribedPercentage);
+                local._client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
             });
         }
     }

@@ -1,15 +1,19 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ESAPIX.Facade.API;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+#endregion
+
 namespace ESAPIX.Facade.Serialization
 {
     public class IEnumerableJsonConverter : JsonConverter
     {
-        private List<Type> neededTypes = new List<Type>()
+        private readonly List<Type> neededTypes = new List<Type>
         {
             typeof(IEnumerable<Block>),
             typeof(IEnumerable<Beam>),
@@ -33,56 +37,55 @@ namespace ESAPIX.Facade.Serialization
             typeof(IEnumerable<ControlPointParameters>),
             typeof(IEnumerable<PatientSummary>),
             typeof(IEnumerable<Structure>)
-
         };
+
+        public override bool CanRead
+        {
+            get { return true; }
+        }
+
+        public override bool CanWrite
+        {
+            get { return false; }
+        }
 
         public override bool CanConvert(Type objectType)
         {
             var interfaces = objectType.GetInterfaces();
             foreach (var intf in interfaces)
-            {
                 if (neededTypes.Contains(intf))
-                {
                     return true;
-                }
-            }
             return neededTypes.Contains(objectType);
         }
 
-        public override bool CanRead { get { return true; } }
-        public override bool CanWrite { get { return false; } }
-
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
+            JsonSerializer serializer)
         {
             var typ = objectType.GenericTypeArguments.FirstOrDefault();
             if (typ != null)
-            {
                 if (objectType != typeof(string))
                 {
-                    Type listGenericType = typeof(List<>);
+                    var listGenericType = typeof(List<>);
 
-                    Type listType = listGenericType.MakeGenericType(typ);
+                    var listType = listGenericType.MakeGenericType(typ);
                     dynamic list = Activator.CreateInstance(listType);
 
                     JArray.Load(reader)
                         .Select(i =>
                         {
                             dynamic ins = Activator.CreateInstance(typ);
-                            JsonConvert.PopulateObject(i.ToString(), ins, new JsonSerializerSettings()
+                            JsonConvert.PopulateObject(i.ToString(), ins, new JsonSerializerSettings
                             {
-                                Converters = new List<JsonConverter>() {this}
+                                Converters = new List<JsonConverter> {this}
                             });
                             return ins;
                         })
-                        .ToList().ForEach(i =>
-                        {
-                            list.Add(i);
-                        });
+                        .ToList()
+                        .ForEach(i => { list.Add(i); });
 
                     return list;
                 }
-            }
-          
+
             return existingValue;
         }
 

@@ -5,9 +5,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
 
 #endregion
+
 
 namespace ESAPIX.Facade.API
 {
@@ -370,7 +372,7 @@ namespace ESAPIX.Facade.API
             return retVal;
         }
 
-        public StructureSet AddEmptyPhantom(string imageId, Types.PatientOrientation orientation, int xSizePixel,
+        public StructureSet AddEmptyPhantom(string imageId, PatientOrientation orientation, int xSizePixel,
             int ySizePixel, double widthMM, double heightMM, int nrOfPlanes, double planeSepMM)
         {
             var local = this;
