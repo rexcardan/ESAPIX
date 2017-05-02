@@ -31,9 +31,16 @@ namespace ESAPIX.AppKit
                 {
                     thread = new Thread(() =>
                     {
-                        //Hack to initiate a windows message pump (keeps the thread alive) :(
-                        Application.Idle += Initialize;
-                        Application.Run();
+                        try
+                        {                         //Hack to initiate a windows message pump (keeps the thread alive) :(
+                            Application.Idle += Initialize;
+                            Application.Run();
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+
                     });
                     thread.IsBackground = true;
                     thread.SetApartmentState(ApartmentState.STA);

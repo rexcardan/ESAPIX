@@ -146,6 +146,11 @@ namespace ESAPIX.AppKit
         public void ClosePatient()
         {
             _app.ClosePatient();
+            OnPatientChanged(null);
+            SetPlanSetup(null);
+            SetCourse(null);
+            SetBrachyPlanSetup(null);
+            SetExternalPlanSetup(null);
         }
 
         #region CONTEXT CHANGED EVENTS

@@ -16,8 +16,13 @@
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center">
                     <TextBlock Text="Patient Id" Padding="5" Margin="5" Foreground="White" />
-                    <TextBox Text="{Binding PatientId}" Width="150" Padding="5" Margin="5" />
-                    <Button Content="Update Patient Context" MaxWidth="150" Margin="5" Padding="5" Click="Button_Click" />
+                    <TextBox x:Name="patientId" Width="150" Padding="5" Margin="5">
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Return" 
+                                Command="{Binding SearchCommand}"/>
+                        </TextBox.InputBindings>
+                    </TextBox>
+                    <Button Content="Update Patient Context" Command="{Binding SearchCommand}" MaxWidth="150" Margin="5" Padding="5"/>
                     <ComboBox ItemsSource="{Binding Courses}" Padding="5" Margin="5" Width="150"
                               SelectedItem="{Binding SelectedCourse, Mode=TwoWay}">
                         <ComboBox.ItemTemplate>
