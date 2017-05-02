@@ -38,7 +38,7 @@ namespace ESAPIX.AppKit
                         }
                         catch (Exception e)
                         {
-                            MessageBox.Show(e.Message);
+                            MessageBox.Show($"VMS Thread crashed : \n{e.ToString()}");
                         }
 
                     });
@@ -49,6 +49,7 @@ namespace ESAPIX.AppKit
                 }
             }
         }
+
 
         public async Task InvokeAsync(Action action)
         {

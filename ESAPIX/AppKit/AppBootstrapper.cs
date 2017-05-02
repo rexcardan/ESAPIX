@@ -41,6 +41,7 @@ namespace ESAPIX.AppKit
         protected override void InitializeShell()
         {
             var shell = (Window) Shell;
+            _ctx.UIDispatcher = shell.Dispatcher;
             shell.Closed += (send, args) =>
             {
                 //Dispose ESAPI and shutdown app

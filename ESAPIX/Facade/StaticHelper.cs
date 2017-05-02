@@ -35,6 +35,7 @@ namespace ESAPIX.Facade
             });
             var sac = new StandAloneContext(xapp, thread);
             XContext.Instance.CurrentContext = sac;
+            XContext.Instance.CurrentContext.UIDispatcher = System.Windows.Application.Current?.Dispatcher;
             return xapp;
         }
 

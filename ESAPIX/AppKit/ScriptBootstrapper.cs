@@ -20,7 +20,7 @@ namespace ESAPIX.AppKit
         private readonly DispatcherFrame _frame;
 
         //private EventAggregator _ea;
-        private readonly IScriptContext _sc;
+        private readonly PluginContext _sc;
 
         public Window _vmsWindow;
 
@@ -48,6 +48,7 @@ namespace ESAPIX.AppKit
         protected override void InitializeShell()
         {
             var shell = (Window) Shell;
+            _sc.UIDispatcher = shell.Dispatcher;
             shell.ShowDialog();
             _frame.Continue = false;
         }

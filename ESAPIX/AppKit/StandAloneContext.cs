@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
+using System.Windows.Threading;
 
 #endregion
 
@@ -46,6 +47,8 @@ namespace ESAPIX.AppKit
         public StructureSet StructureSet => PlanSetup?.StructureSet;
 
         public IVMSThread Thread { get; }
+
+        public Dispatcher UIDispatcher { get; set; }
 
         public string ApplicationName { get; set; } = "VMS Application";
 

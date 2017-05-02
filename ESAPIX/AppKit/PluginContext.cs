@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
+using System.Windows.Threading;
 
 #endregion
 
@@ -65,6 +66,8 @@ namespace ESAPIX.AppKit
             Thread.Invoke(() => { result = toExecute(this); });
             return result;
         }
+
+        public Dispatcher UIDispatcher { get; set; }
 
         #region NOT USED
 

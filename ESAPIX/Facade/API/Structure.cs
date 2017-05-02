@@ -6,6 +6,7 @@ using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using X = ESAPIX.Facade.XContext;
+using System.Windows.Media.Media3D;
 
 #endregion
 
@@ -137,10 +138,22 @@ namespace ESAPIX.Facade.API
                         ? _client.MeshGeometry
                         : default(System.Windows.Media.Media3D.MeshGeometry3D);
                 var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Windows.Media.Media3D.MeshGeometry3D>(sc =>
+                MeshGeometry3D mesh = new MeshGeometry3D();
+                Point3D[] points = new Point3D[0];
+                Vector3D[] normals = new Vector3D[0];
+                int[] indices = new int[0];
+
+                X.Instance.CurrentContext.Thread.Invoke(() =>
                 {
-                    return local._client.MeshGeometry;
+                    points = new Point3D[_client.MeshGeometry.Positions.Count];
+                    normals = new Vector3D[_client.MeshGeometry.Normals.Count];
+                    indices = new int[_client.MeshGeometry.TriangleIndices.Count];
+                    _client.MeshGeometry.Positions.CopyTo(points, 0);
+                    _client.MeshGeometry.Normals.CopyTo(normals, 0);
+                    _client.MeshGeometry.TriangleIndices.CopyTo(indices, 0);
                 });
+                mesh.Positions = new Point3DCollection(points);
+                return mesh;
             }
             set
             {
