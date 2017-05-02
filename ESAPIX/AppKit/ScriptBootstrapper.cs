@@ -19,7 +19,6 @@ namespace ESAPIX.AppKit
         private readonly IEventAggregator _ea;
         private readonly DispatcherFrame _frame;
 
-        //private EventAggregator _ea;
         private readonly PluginContext _sc;
 
         public Window _vmsWindow;
@@ -40,7 +39,7 @@ namespace ESAPIX.AppKit
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
-            Container.RegisterInstance(_sc);
+            Container.RegisterInstance<IScriptContext>(_sc);
             Container.RegisterInstance(_ea);
             Container.RegisterInstance(Container);
         }
@@ -57,8 +56,15 @@ namespace ESAPIX.AppKit
         {
             var ui = new Thread(() =>
             {
-                if (getSplash != null) getSplash().ShowDialog();
-                base.Run();
+                try
+                {
+                    if (getSplash != null) getSplash().ShowDialog();
+                    base.Run();
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                }
             });
             ui.SetApartmentState(ApartmentState.STA);
             ui.Start();
