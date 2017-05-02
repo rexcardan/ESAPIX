@@ -748,10 +748,7 @@ namespace ESAPIX.Facade.API
         public void ClearCalculationModel(CalculationType calculationType)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.ClearCalculationModel(EnumConverter.Convert(calculationType));
-            });
+            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ClearCalculationModel(calculationType); });
         }
 
         public string GetCalculationModel(CalculationType calculationType)
@@ -759,7 +756,7 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetCalculationModel(EnumConverter.Convert(calculationType));
+                return local._client.GetCalculationModel(calculationType);
             });
             return retVal;
         }
@@ -792,8 +789,8 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetDoseAtVolume(structure._client, volume,
-                    EnumConverter.Convert(volumePresentation), EnumConverter.Convert(requestedDosePresentation));
+                return local._client.GetDoseAtVolume(structure._client, volume, volumePresentation,
+                    requestedDosePresentation);
             });
             return retVal;
         }
@@ -804,8 +801,7 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetVolumeAtDose(structure._client, dose,
-                    EnumConverter.Convert(requestedVolumePresentation));
+                return local._client.GetVolumeAtDose(structure._client, dose, requestedVolumePresentation);
             });
             return retVal;
         }
@@ -813,10 +809,8 @@ namespace ESAPIX.Facade.API
         public void SetCalculationModel(CalculationType calculationType, string model)
         {
             var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.SetCalculationModel(EnumConverter.Convert(calculationType), model);
-            });
+            X.Instance.CurrentContext.Thread.Invoke(
+                () => { local._client.SetCalculationModel(calculationType, model); });
         }
 
         public bool SetCalculationOption(string calculationModel, string optionName, string optionValue)

@@ -378,8 +378,8 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new StructureSet(local._client.AddEmptyPhantom(imageId, EnumConverter.Convert(orientation),
-                    xSizePixel, ySizePixel, widthMM, heightMM, nrOfPlanes, planeSepMM));
+                return new StructureSet(local._client.AddEmptyPhantom(imageId, orientation, xSizePixel, ySizePixel,
+                    widthMM, heightMM, nrOfPlanes, planeSepMM));
             });
             return retVal;
         }

@@ -124,7 +124,7 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return local._client.GetModelsForCalculationType(EnumConverter.Convert(calculationType));
+                return local._client.GetModelsForCalculationType(calculationType);
             });
             return retVal;
         }
@@ -144,8 +144,7 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizerResult(
-                    local._client.Optimize(maxIterations, EnumConverter.Convert(optimizationOption)));
+                return new OptimizerResult(local._client.Optimize(maxIterations, optimizationOption));
             });
             return retVal;
         }
@@ -155,8 +154,7 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizerResult(
-                    local._client.Optimize(maxIterations, EnumConverter.Convert(optimizationOption), mlcId));
+                return new OptimizerResult(local._client.Optimize(maxIterations, optimizationOption, mlcId));
             });
             return retVal;
         }
@@ -237,8 +235,7 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddArcBeam(machineParameters, jawPositions, collimatorAngle,
-                    gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection), patientSupportAngle,
-                    isocenter));
+                    gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
             });
             return retVal;
         }
@@ -251,8 +248,7 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddConformalArcBeam(machineParameters, collimatorAngle,
-                    controlPointCount, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
-                    patientSupportAngle, isocenter));
+                    controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
             });
             return retVal;
         }
@@ -265,8 +261,7 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions,
-                    collimatorAngle, gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection),
-                    patientSupportAngle, isocenter));
+                    collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
             });
             return retVal;
         }
@@ -330,8 +325,7 @@ namespace ESAPIX.Facade.API
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
                 return new Beam(local._client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle,
-                    gantryAngle, gantryStop, EnumConverter.Convert(gantryDirection), patientSupportAngle,
-                    isocenter));
+                    gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
             });
             return retVal;
         }

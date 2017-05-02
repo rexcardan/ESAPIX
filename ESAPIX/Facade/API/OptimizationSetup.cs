@@ -157,8 +157,9 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizationEUDObjective(local._client.AddEUDObjective(structure._client,
-                    EnumConverter.Convert(objectiveOperator), dose, parameterA, priority));
+                return new OptimizationEUDObjective(
+                    local._client.AddEUDObjective(structure._client, objectiveOperator, dose, parameterA,
+                        priority));
             });
             return retVal;
         }
@@ -192,8 +193,8 @@ namespace ESAPIX.Facade.API
             var local = this;
             var retVal = X.Instance.CurrentContext.GetValue(sc =>
             {
-                return new OptimizationPointObjective(local._client.AddPointObjective(structure._client,
-                    EnumConverter.Convert(objectiveOperator), dose, volume, priority));
+                return new OptimizationPointObjective(
+                    local._client.AddPointObjective(structure._client, objectiveOperator, dose, volume, priority));
             });
             return retVal;
         }
