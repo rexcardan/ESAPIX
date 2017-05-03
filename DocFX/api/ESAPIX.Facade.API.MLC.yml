@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.MLC.#ctor
   - ESAPIX.Facade.API.MLC.#ctor(System.Object)
+  - ESAPIX.Facade.API.MLC.IsLive
   - ESAPIX.Facade.API.MLC.ManufacturerName
   - ESAPIX.Facade.API.MLC.MinDoseDynamicLeafGap
   - ESAPIX.Facade.API.MLC.Model
@@ -22,7 +23,7 @@ items:
   source:
     id: MLC
     path: ''
-    startLine: 9120
+    startLine: 10641
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -73,7 +74,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9122
+    startLine: 10643
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -99,7 +100,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9123
+    startLine: 10648
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -114,6 +115,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.MLC.IsLive
+  commentId: P:ESAPIX.Facade.API.MLC.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.MLC
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: MLC.IsLive
+  fullName: ESAPIX.Facade.API.MLC.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 10653
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.MLC.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.MLC.ManufacturerName
   commentId: P:ESAPIX.Facade.API.MLC.ManufacturerName
   id: ManufacturerName
@@ -128,7 +160,7 @@ items:
   source:
     id: ManufacturerName
     path: ''
-    startLine: 9124
+    startLine: 10658
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -159,7 +191,7 @@ items:
   source:
     id: MinDoseDynamicLeafGap
     path: ''
-    startLine: 9137
+    startLine: 10675
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -190,7 +222,7 @@ items:
   source:
     id: Model
     path: ''
-    startLine: 9150
+    startLine: 10695
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -221,7 +253,7 @@ items:
   source:
     id: SerialNumber
     path: ''
-    startLine: 9163
+    startLine: 10710
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -252,7 +284,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9176
+    startLine: 10727
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -726,6 +758,19 @@ references:
   name: MLC
   nameWithType: MLC.MLC
   fullName: ESAPIX.Facade.API.MLC.MLC
+- uid: ESAPIX.Facade.API.MLC.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.MLC.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: MLC.IsLive
+  fullName: ESAPIX.Facade.API.MLC.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.MLC.ManufacturerName*
   commentId: Overload:ESAPIX.Facade.API.MLC.ManufacturerName
   isExternal: false

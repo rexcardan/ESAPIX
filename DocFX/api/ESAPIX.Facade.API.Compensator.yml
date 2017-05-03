@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.Compensator.#ctor
   - ESAPIX.Facade.API.Compensator.#ctor(System.Object)
+  - ESAPIX.Facade.API.Compensator.IsLive
   - ESAPIX.Facade.API.Compensator.Material
   - ESAPIX.Facade.API.Compensator.Slot
   - ESAPIX.Facade.API.Compensator.Tray
@@ -21,7 +22,7 @@ items:
   source:
     id: Compensator
     path: ''
-    startLine: 6795
+    startLine: 7474
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -70,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6797
+    startLine: 7476
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,7 +97,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6798
+    startLine: 7481
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -111,6 +112,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Compensator.IsLive
+  commentId: P:ESAPIX.Facade.API.Compensator.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Compensator
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Compensator.IsLive
+  fullName: ESAPIX.Facade.API.Compensator.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 7486
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Compensator.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Compensator.Material
   commentId: P:ESAPIX.Facade.API.Compensator.Material
   id: Material
@@ -125,7 +157,7 @@ items:
   source:
     id: Material
     path: ''
-    startLine: 6799
+    startLine: 7491
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -156,7 +188,7 @@ items:
   source:
     id: Slot
     path: ''
-    startLine: 6812
+    startLine: 7512
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -187,7 +219,7 @@ items:
   source:
     id: Tray
     path: ''
-    startLine: 6825
+    startLine: 7531
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -218,7 +250,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6838
+    startLine: 7550
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -678,6 +710,19 @@ references:
   name: Compensator
   nameWithType: Compensator.Compensator
   fullName: ESAPIX.Facade.API.Compensator.Compensator
+- uid: ESAPIX.Facade.API.Compensator.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Compensator.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Compensator.IsLive
+  fullName: ESAPIX.Facade.API.Compensator.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Compensator.Material*
   commentId: Overload:ESAPIX.Facade.API.Compensator.Material
   isExternal: false

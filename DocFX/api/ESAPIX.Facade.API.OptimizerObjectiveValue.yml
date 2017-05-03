@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.OptimizerObjectiveValue.#ctor
   - ESAPIX.Facade.API.OptimizerObjectiveValue.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive
   - ESAPIX.Facade.API.OptimizerObjectiveValue.Structure
   - ESAPIX.Facade.API.OptimizerObjectiveValue.Value
   langs:
@@ -19,7 +20,7 @@ items:
   source:
     id: OptimizerObjectiveValue
     path: ''
-    startLine: 9952
+    startLine: 11774
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -56,7 +57,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9955
+    startLine: 11778
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -82,7 +83,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9956
+    startLine: 11783
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,6 +98,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizerObjectiveValue
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizerObjectiveValue.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 11788
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizerObjectiveValue.Structure
   commentId: P:ESAPIX.Facade.API.OptimizerObjectiveValue.Structure
   id: Structure
@@ -111,7 +143,7 @@ items:
   source:
     id: Structure
     path: ''
-    startLine: 9957
+    startLine: 11793
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -142,7 +174,7 @@ items:
   source:
     id: Value
     path: ''
-    startLine: 9970
+    startLine: 11812
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -464,6 +496,19 @@ references:
   name: OptimizerObjectiveValue
   nameWithType: OptimizerObjectiveValue.OptimizerObjectiveValue
   fullName: ESAPIX.Facade.API.OptimizerObjectiveValue.OptimizerObjectiveValue
+- uid: ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: OptimizerObjectiveValue.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerObjectiveValue.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizerObjectiveValue.Structure*
   commentId: Overload:ESAPIX.Facade.API.OptimizerObjectiveValue.Structure
   isExternal: false

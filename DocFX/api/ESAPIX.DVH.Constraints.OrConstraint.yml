@@ -26,7 +26,7 @@ items:
   source:
     id: OrConstraint
     path: ''
-    startLine: 2570
+    startLine: 2556
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -53,37 +53,61 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.DVH.Constraints.OrConstraint.Priority
-  commentId: P:ESAPIX.DVH.Constraints.OrConstraint.Priority
-  id: Priority
+- uid: ESAPIX.DVH.Constraints.OrConstraint.#ctor
+  commentId: M:ESAPIX.DVH.Constraints.OrConstraint.#ctor
+  id: '#ctor'
   parent: ESAPIX.DVH.Constraints.OrConstraint
   langs:
   - csharp
   - vb
-  name: Priority
-  nameWithType: OrConstraint.Priority
-  fullName: ESAPIX.DVH.Constraints.OrConstraint.Priority
-  type: Property
+  name: OrConstraint()
+  nameWithType: OrConstraint.OrConstraint()
+  fullName: ESAPIX.DVH.Constraints.OrConstraint.OrConstraint()
+  type: Constructor
   source:
-    id: Priority
+    id: .ctor
     path: ''
-    startLine: 2572
+    startLine: 2558
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
-    content: public PriorityType Priority { get; set; }
-    parameters: []
-    return:
-      type: ESAPIX.DVH.Constraints.PriorityType
-    content.vb: Public Property Priority As PriorityType
-  overload: ESAPIX.DVH.Constraints.OrConstraint.Priority*
-  implements:
-  - ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
+    content: public OrConstraint()
+    content.vb: Public Sub New
+  overload: ESAPIX.DVH.Constraints.OrConstraint.#ctor*
   modifiers.csharp:
   - public
-  - get
-  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.OrConstraint.#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.IConstraint)
+  commentId: M:ESAPIX.DVH.Constraints.OrConstraint.#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.IConstraint)
+  id: '#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.IConstraint)'
+  parent: ESAPIX.DVH.Constraints.OrConstraint
+  langs:
+  - csharp
+  - vb
+  name: OrConstraint(IConstraint, IConstraint)
+  nameWithType: OrConstraint.OrConstraint(IConstraint, IConstraint)
+  fullName: ESAPIX.DVH.Constraints.OrConstraint.OrConstraint(ESAPIX.DVH.Constraints.IConstraint, ESAPIX.DVH.Constraints.IConstraint)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2562
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public OrConstraint(IConstraint cst1, IConstraint cst2)
+    parameters:
+    - id: cst1
+      type: ESAPIX.DVH.Constraints.IConstraint
+    - id: cst2
+      type: ESAPIX.DVH.Constraints.IConstraint
+    content.vb: Public Sub New(cst1 As IConstraint, cst2 As IConstraint)
+  overload: ESAPIX.DVH.Constraints.OrConstraint.#ctor*
+  modifiers.csharp:
+  - public
   modifiers.vb:
   - Public
 - uid: ESAPIX.DVH.Constraints.OrConstraint.C1
@@ -100,7 +124,7 @@ items:
   source:
     id: C1
     path: ''
-    startLine: 2573
+    startLine: 2568
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -131,7 +155,7 @@ items:
   source:
     id: C2
     path: ''
-    startLine: 2574
+    startLine: 2569
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -142,6 +166,39 @@ items:
       type: ESAPIX.DVH.Constraints.IConstraint
     content.vb: Public Property C2 As IConstraint
   overload: ESAPIX.DVH.Constraints.OrConstraint.C2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.OrConstraint.Priority
+  commentId: P:ESAPIX.DVH.Constraints.OrConstraint.Priority
+  id: Priority
+  parent: ESAPIX.DVH.Constraints.OrConstraint
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OrConstraint.Priority
+  fullName: ESAPIX.DVH.Constraints.OrConstraint.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 2570
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public PriorityType Priority { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.DVH.Constraints.PriorityType
+    content.vb: Public Property Priority As PriorityType
+  overload: ESAPIX.DVH.Constraints.OrConstraint.Priority*
+  implements:
+  - ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
   modifiers.csharp:
   - public
   - get
@@ -162,7 +219,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 2576
+    startLine: 2572
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -195,7 +252,7 @@ items:
   source:
     id: FullName
     path: ''
-    startLine: 2577
+    startLine: 2573
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -214,63 +271,6 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: ESAPIX.DVH.Constraints.OrConstraint.#ctor
-  commentId: M:ESAPIX.DVH.Constraints.OrConstraint.#ctor
-  id: '#ctor'
-  parent: ESAPIX.DVH.Constraints.OrConstraint
-  langs:
-  - csharp
-  - vb
-  name: OrConstraint()
-  nameWithType: OrConstraint.OrConstraint()
-  fullName: ESAPIX.DVH.Constraints.OrConstraint.OrConstraint()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 2579
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.DVH.Constraints
-  syntax:
-    content: public OrConstraint()
-    content.vb: Public Sub New
-  overload: ESAPIX.DVH.Constraints.OrConstraint.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.DVH.Constraints.OrConstraint.#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.IConstraint)
-  commentId: M:ESAPIX.DVH.Constraints.OrConstraint.#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.IConstraint)
-  id: '#ctor(ESAPIX.DVH.Constraints.IConstraint,ESAPIX.DVH.Constraints.IConstraint)'
-  parent: ESAPIX.DVH.Constraints.OrConstraint
-  langs:
-  - csharp
-  - vb
-  name: OrConstraint(IConstraint, IConstraint)
-  nameWithType: OrConstraint.OrConstraint(IConstraint, IConstraint)
-  fullName: ESAPIX.DVH.Constraints.OrConstraint.OrConstraint(ESAPIX.DVH.Constraints.IConstraint, ESAPIX.DVH.Constraints.IConstraint)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 2581
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.DVH.Constraints
-  syntax:
-    content: public OrConstraint(IConstraint cst1, IConstraint cst2)
-    parameters:
-    - id: cst1
-      type: ESAPIX.DVH.Constraints.IConstraint
-    - id: cst2
-      type: ESAPIX.DVH.Constraints.IConstraint
-    content.vb: Public Sub New(cst1 As IConstraint, cst2 As IConstraint)
-  overload: ESAPIX.DVH.Constraints.OrConstraint.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: ESAPIX.DVH.Constraints.OrConstraint.CanConstrain(PlanningItem)
   commentId: M:ESAPIX.DVH.Constraints.OrConstraint.CanConstrain(PlanningItem)
   id: CanConstrain(PlanningItem)
@@ -285,7 +285,7 @@ items:
   source:
     id: CanConstrain
     path: ''
-    startLine: 2587
+    startLine: 2575
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -318,7 +318,7 @@ items:
   source:
     id: Constrain
     path: ''
-    startLine: 2608
+    startLine: 2594
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -351,7 +351,7 @@ items:
   source:
     id: GetFailedResultType
     path: ''
-    startLine: 2620
+    startLine: 2608
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -381,7 +381,7 @@ items:
   source:
     id: ToString
     path: ''
-    startLine: 2625
+    startLine: 2613
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -680,6 +680,24 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ESAPIX.DVH.Constraints.OrConstraint.#ctor*
+  commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.#ctor
+  isExternal: false
+  name: OrConstraint
+  nameWithType: OrConstraint.OrConstraint
+  fullName: ESAPIX.DVH.Constraints.OrConstraint.OrConstraint
+- uid: ESAPIX.DVH.Constraints.OrConstraint.C1*
+  commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.C1
+  isExternal: false
+  name: C1
+  nameWithType: OrConstraint.C1
+  fullName: ESAPIX.DVH.Constraints.OrConstraint.C1
+- uid: ESAPIX.DVH.Constraints.OrConstraint.C2*
+  commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.C2
+  isExternal: false
+  name: C2
+  nameWithType: OrConstraint.C2
+  fullName: ESAPIX.DVH.Constraints.OrConstraint.C2
 - uid: ESAPIX.DVH.Constraints.OrConstraint.Priority*
   commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.Priority
   isExternal: false
@@ -700,18 +718,6 @@ references:
   name: PriorityType
   nameWithType: PriorityType
   fullName: ESAPIX.DVH.Constraints.PriorityType
-- uid: ESAPIX.DVH.Constraints.OrConstraint.C1*
-  commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.C1
-  isExternal: false
-  name: C1
-  nameWithType: OrConstraint.C1
-  fullName: ESAPIX.DVH.Constraints.OrConstraint.C1
-- uid: ESAPIX.DVH.Constraints.OrConstraint.C2*
-  commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.C2
-  isExternal: false
-  name: C2
-  nameWithType: OrConstraint.C2
-  fullName: ESAPIX.DVH.Constraints.OrConstraint.C2
 - uid: ESAPIX.DVH.Constraints.OrConstraint.Name*
   commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.Name
   isExternal: false
@@ -745,12 +751,6 @@ references:
   name: FullName
   nameWithType: IConstraint.FullName
   fullName: ESAPIX.DVH.Constraints.IConstraint.FullName
-- uid: ESAPIX.DVH.Constraints.OrConstraint.#ctor*
-  commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.#ctor
-  isExternal: false
-  name: OrConstraint
-  nameWithType: OrConstraint.OrConstraint
-  fullName: ESAPIX.DVH.Constraints.OrConstraint.OrConstraint
 - uid: ESAPIX.DVH.Constraints.OrConstraint.CanConstrain*
   commentId: Overload:ESAPIX.DVH.Constraints.OrConstraint.CanConstrain
   isExternal: false

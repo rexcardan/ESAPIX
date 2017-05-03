@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.Hospital.#ctor
   - ESAPIX.Facade.API.Hospital.#ctor(System.Object)
   - ESAPIX.Facade.API.Hospital.CreationDateTime
+  - ESAPIX.Facade.API.Hospital.IsLive
   - ESAPIX.Facade.API.Hospital.Location
   - ESAPIX.Facade.API.Hospital.WriteXml(System.Xml.XmlWriter)
   langs:
@@ -20,7 +21,7 @@ items:
   source:
     id: Hospital
     path: ''
-    startLine: 8660
+    startLine: 10048
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -69,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8662
+    startLine: 10050
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,7 +96,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8663
+    startLine: 10055
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -110,6 +111,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Hospital.IsLive
+  commentId: P:ESAPIX.Facade.API.Hospital.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Hospital.IsLive
+  fullName: ESAPIX.Facade.API.Hospital.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 10060
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Hospital.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Hospital.CreationDateTime
   commentId: P:ESAPIX.Facade.API.Hospital.CreationDateTime
   id: CreationDateTime
@@ -124,7 +156,7 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 8664
+    startLine: 10065
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -155,7 +187,7 @@ items:
   source:
     id: Location
     path: ''
-    startLine: 8677
+    startLine: 10082
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -186,7 +218,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 8690
+    startLine: 10097
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -646,6 +678,19 @@ references:
   name: Hospital
   nameWithType: Hospital.Hospital
   fullName: ESAPIX.Facade.API.Hospital.Hospital
+- uid: ESAPIX.Facade.API.Hospital.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Hospital.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Hospital.IsLive
+  fullName: ESAPIX.Facade.API.Hospital.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Hospital.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.Hospital.CreationDateTime
   isExternal: false

@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.User.#ctor
   - ESAPIX.Facade.API.User.#ctor(System.Object)
+  - ESAPIX.Facade.API.User.IsLive
   - ESAPIX.Facade.API.User.Language
   - ESAPIX.Facade.API.User.WriteXml(System.Xml.XmlWriter)
   langs:
@@ -19,7 +20,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 13127
+    startLine: 16150
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13129
+    startLine: 16152
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,7 +95,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13130
+    startLine: 16157
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -109,6 +110,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.User.IsLive
+  commentId: P:ESAPIX.Facade.API.User.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.User
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: User.IsLive
+  fullName: ESAPIX.Facade.API.User.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 16162
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.User.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.User.Language
   commentId: P:ESAPIX.Facade.API.User.Language
   id: Language
@@ -123,7 +155,7 @@ items:
   source:
     id: Language
     path: ''
-    startLine: 13131
+    startLine: 16167
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -154,7 +186,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 13144
+    startLine: 16182
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -614,6 +646,19 @@ references:
   name: User
   nameWithType: User.User
   fullName: ESAPIX.Facade.API.User.User
+- uid: ESAPIX.Facade.API.User.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.User.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: User.IsLive
+  fullName: ESAPIX.Facade.API.User.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.User.Language*
   commentId: Overload:ESAPIX.Facade.API.User.Language
   isExternal: false

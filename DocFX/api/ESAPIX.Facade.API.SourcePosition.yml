@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.SourcePosition.#ctor
   - ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
   - ESAPIX.Facade.API.SourcePosition.DwellTime
+  - ESAPIX.Facade.API.SourcePosition.IsLive
   - ESAPIX.Facade.API.SourcePosition.RadioactiveSource
   - ESAPIX.Facade.API.SourcePosition.Transform
   - ESAPIX.Facade.API.SourcePosition.Translation
@@ -22,7 +23,7 @@ items:
   source:
     id: SourcePosition
     path: ''
-    startLine: 12472
+    startLine: 15282
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -71,7 +72,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12474
+    startLine: 15284
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,7 +98,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12475
+    startLine: 15289
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -112,6 +113,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.SourcePosition.IsLive
+  commentId: P:ESAPIX.Facade.API.SourcePosition.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: SourcePosition.IsLive
+  fullName: ESAPIX.Facade.API.SourcePosition.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 15294
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.SourcePosition.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.SourcePosition.DwellTime
   commentId: P:ESAPIX.Facade.API.SourcePosition.DwellTime
   id: DwellTime
@@ -126,7 +158,7 @@ items:
   source:
     id: DwellTime
     path: ''
-    startLine: 12476
+    startLine: 15299
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -157,7 +189,7 @@ items:
   source:
     id: RadioactiveSource
     path: ''
-    startLine: 12489
+    startLine: 15314
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -188,7 +220,7 @@ items:
   source:
     id: Transform
     path: ''
-    startLine: 12502
+    startLine: 15335
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -219,7 +251,7 @@ items:
   source:
     id: Translation
     path: ''
-    startLine: 12515
+    startLine: 15350
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -227,7 +259,7 @@ items:
     content: public VVector Translation { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property Translation As VVector
   overload: ESAPIX.Facade.API.SourcePosition.Translation*
   modifiers.csharp:
@@ -250,7 +282,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 12528
+    startLine: 15367
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -710,6 +742,19 @@ references:
   name: SourcePosition
   nameWithType: SourcePosition.SourcePosition
   fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition
+- uid: ESAPIX.Facade.API.SourcePosition.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.SourcePosition.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: SourcePosition.IsLive
+  fullName: ESAPIX.Facade.API.SourcePosition.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.SourcePosition.DwellTime*
   commentId: Overload:ESAPIX.Facade.API.SourcePosition.DwellTime
   isExternal: false
@@ -773,19 +818,11 @@ references:
   name: Translation
   nameWithType: SourcePosition.Translation
   fullName: ESAPIX.Facade.API.SourcePosition.Translation
-- uid: ESAPIX.Facade.Types.VVector
-  commentId: T:ESAPIX.Facade.Types.VVector
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: VVector
+  isExternal: true
   name: VVector
   nameWithType: VVector
-  fullName: ESAPIX.Facade.Types.VVector
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: VVector
 - uid: ESAPIX.Facade.API.SourcePosition.WriteXml*
   commentId: Overload:ESAPIX.Facade.API.SourcePosition.WriteXml
   isExternal: false

@@ -7,32 +7,33 @@ items:
   children:
   - ESAPIX.Facade.API.ExternalPlanSetup.#ctor
   - ESAPIX.Facade.API.ExternalPlanSetup.#ctor(System.Object)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  - ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,VVector)
+  - ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   - ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose
-  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}})
-  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,System.Collections.Generic.Dictionary{System.String,ESAPIX.Facade.Types.DoseValue},System.Collections.Generic.Dictionary{System.String,System.String})
+  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List{KeyValuePair{System.String,MetersetValue}})
+  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,Dictionary{System.String,DoseValue},Dictionary{System.String,System.String})
   - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions
-  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
-  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
-  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
+  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
+  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
+  - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
   - ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotionsAndDose
   - ESAPIX.Facade.API.ExternalPlanSetup.CreateEvaluationDose
   - ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose
-  - ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
+  - ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
+  - ESAPIX.Facade.API.ExternalPlanSetup.IsLive
   - ESAPIX.Facade.API.ExternalPlanSetup.Optimize
-  - ESAPIX.Facade.API.ExternalPlanSetup.Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
+  - ESAPIX.Facade.API.ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
   - ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32)
-  - ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption)
-  - ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.String)
+  - ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption)
+  - ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption,System.String)
   - ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT
-  - ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
+  - ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
   - ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(System.String)
   - ESAPIX.Facade.API.ExternalPlanSetup.RemoveBeam(ESAPIX.Facade.API.Beam)
   - ESAPIX.Facade.API.ExternalPlanSetup.WriteXml(System.Xml.XmlWriter)
@@ -46,7 +47,7 @@ items:
   source:
     id: ExternalPlanSetup
     path: ''
-    startLine: 8226
+    startLine: 9421
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -99,18 +100,18 @@ items:
   - ESAPIX.Facade.API.PlanSetup.VerifiedPlan
   - ESAPIX.Facade.API.PlanSetup.Id
   - ESAPIX.Facade.API.PlanSetup.PlanNormalizationValue
-  - ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
-  - ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  - ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
+  - ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
   - ESAPIX.Facade.API.PlanSetup.GetCalculationOption(System.String,System.String,System.String@)
   - ESAPIX.Facade.API.PlanSetup.GetCalculationOptions(System.String)
-  - ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,ESAPIX.Facade.Types.VolumePresentation,ESAPIX.Facade.Types.DoseValuePresentation)
-  - ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,ESAPIX.Facade.Types.VolumePresentation)
-  - ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType,System.String)
+  - ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  - ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
+  - ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
   - ESAPIX.Facade.API.PlanSetup.SetCalculationOption(System.String,System.String,System.String)
   - ESAPIX.Facade.API.PlanningItem.CreationDateTime
   - ESAPIX.Facade.API.PlanningItem.Dose
   - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
-  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValuePresentation,ESAPIX.Facade.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
@@ -145,7 +146,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8228
+    startLine: 9423
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -171,7 +172,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8229
+    startLine: 9428
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -186,6 +187,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.IsLive
+  commentId: P:ESAPIX.Facade.API.ExternalPlanSetup.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ExternalPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ExternalPlanSetup.IsLive
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 9433
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.ExternalPlanSetup.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose
   commentId: P:ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose
   id: DoseAsEvaluationDose
@@ -200,7 +232,7 @@ items:
   source:
     id: DoseAsEvaluationDose
     path: ''
-    startLine: 8230
+    startLine: 9438
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -217,21 +249,21 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}})
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}})
-  id: CalculateDoseWithPresetValues(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}})
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List{KeyValuePair{System.String,MetersetValue}})
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List{KeyValuePair{System.String,MetersetValue}})
+  id: CalculateDoseWithPresetValues(List{KeyValuePair{System.String,MetersetValue}})
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: CalculateDoseWithPresetValues(List<KeyValuePair<String, MetersetValue>>)
   nameWithType: ExternalPlanSetup.CalculateDoseWithPresetValues(List<KeyValuePair<String, MetersetValue>>)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, ESAPIX.Facade.Types.MetersetValue>>)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List<KeyValuePair<System.String, MetersetValue>>)
   type: Method
   source:
     id: CalculateDoseWithPresetValues
     path: ''
-    startLine: 8243
+    startLine: 9459
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -239,7 +271,7 @@ items:
     content: public CalculationResult CalculateDoseWithPresetValues(List<KeyValuePair<string, MetersetValue>> presetValues)
     parameters:
     - id: presetValues
-      type: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}}
+      type: List{KeyValuePair{System.String,MetersetValue}}
     return:
       type: ESAPIX.Facade.API.CalculationResult
     content.vb: Public Function CalculateDoseWithPresetValues(presetValues As List(Of KeyValuePair(Of String, MetersetValue))) As CalculationResult
@@ -249,7 +281,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of System.String, ESAPIX.Facade.Types.MetersetValue)))
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List(Of KeyValuePair(Of System.String, MetersetValue)))
   name.vb: CalculateDoseWithPresetValues(List(Of KeyValuePair(Of String, MetersetValue)))
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose
   commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose
@@ -265,7 +297,7 @@ items:
   source:
     id: CalculateDose
     path: ''
-    startLine: 8253
+    startLine: 9469
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -293,7 +325,7 @@ items:
   source:
     id: CalculateLeafMotionsAndDose
     path: ''
-    startLine: 8260
+    startLine: 9479
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -321,7 +353,7 @@ items:
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 8267
+    startLine: 9489
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -335,21 +367,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
-  id: CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
+  id: CalculateLeafMotions(LMCVOptions)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: CalculateLeafMotions(LMCVOptions)
   nameWithType: ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
   type: Method
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 8274
+    startLine: 9499
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -357,7 +389,7 @@ items:
     content: public CalculationResult CalculateLeafMotions(LMCVOptions options)
     parameters:
     - id: options
-      type: ESAPIX.Facade.Types.LMCVOptions
+      type: LMCVOptions
     return:
       type: ESAPIX.Facade.API.CalculationResult
     content.vb: Public Function CalculateLeafMotions(options As LMCVOptions) As CalculationResult
@@ -366,21 +398,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
-  id: CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
+  id: CalculateLeafMotions(SmartLMCOptions)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: CalculateLeafMotions(SmartLMCOptions)
   nameWithType: ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
   type: Method
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 8281
+    startLine: 9509
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -388,7 +420,7 @@ items:
     content: public CalculationResult CalculateLeafMotions(SmartLMCOptions options)
     parameters:
     - id: options
-      type: ESAPIX.Facade.Types.SmartLMCOptions
+      type: SmartLMCOptions
     return:
       type: ESAPIX.Facade.API.CalculationResult
     content.vb: Public Function CalculateLeafMotions(options As SmartLMCOptions) As CalculationResult
@@ -397,21 +429,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
-  id: CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
+  id: CalculateLeafMotions(LMCMSSOptions)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: CalculateLeafMotions(LMCMSSOptions)
   nameWithType: ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
   type: Method
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 8288
+    startLine: 9519
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -419,7 +451,7 @@ items:
     content: public CalculationResult CalculateLeafMotions(LMCMSSOptions options)
     parameters:
     - id: options
-      type: ESAPIX.Facade.Types.LMCMSSOptions
+      type: LMCMSSOptions
     return:
       type: ESAPIX.Facade.API.CalculationResult
     content.vb: Public Function CalculateLeafMotions(options As LMCMSSOptions) As CalculationResult
@@ -428,21 +460,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
-  id: GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
+  id: GetModelsForCalculationType(CalculationType)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: GetModelsForCalculationType(CalculationType)
   nameWithType: ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
   type: Method
   source:
     id: GetModelsForCalculationType
     path: ''
-    startLine: 8295
+    startLine: 9529
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -450,9 +482,9 @@ items:
     content: public IEnumerable<string> GetModelsForCalculationType(CalculationType calculationType)
     parameters:
     - id: calculationType
-      type: ESAPIX.Facade.Types.CalculationType
+      type: CalculationType
     return:
-      type: System.Collections.Generic.IEnumerable{System.String}
+      type: IEnumerable{System.String}
     content.vb: Public Function GetModelsForCalculationType(calculationType As CalculationType) As IEnumerable(Of String)
   overload: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType*
   modifiers.csharp:
@@ -473,7 +505,7 @@ items:
   source:
     id: Optimize
     path: ''
-    startLine: 8302
+    startLine: 9539
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -490,21 +522,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption)
-  id: Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption)
+  id: Optimize(System.Int32,OptimizationOption)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: Optimize(Int32, OptimizationOption)
   nameWithType: ExternalPlanSetup.Optimize(Int32, OptimizationOption)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, ESAPIX.Facade.Types.OptimizationOption)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, OptimizationOption)
   type: Method
   source:
     id: Optimize
     path: ''
-    startLine: 8309
+    startLine: 9549
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -514,7 +546,7 @@ items:
     - id: maxIterations
       type: System.Int32
     - id: optimizationOption
-      type: ESAPIX.Facade.Types.OptimizationOption
+      type: OptimizationOption
     return:
       type: ESAPIX.Facade.API.OptimizerResult
     content.vb: Public Function Optimize(maxIterations As Integer, optimizationOption As OptimizationOption) As OptimizerResult
@@ -523,21 +555,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.String)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.String)
-  id: Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.String)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption,System.String)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption,System.String)
+  id: Optimize(System.Int32,OptimizationOption,System.String)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: Optimize(Int32, OptimizationOption, String)
   nameWithType: ExternalPlanSetup.Optimize(Int32, OptimizationOption, String)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, ESAPIX.Facade.Types.OptimizationOption, System.String)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, OptimizationOption, System.String)
   type: Method
   source:
     id: Optimize
     path: ''
-    startLine: 8316
+    startLine: 9559
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -547,7 +579,7 @@ items:
     - id: maxIterations
       type: System.Int32
     - id: optimizationOption
-      type: ESAPIX.Facade.Types.OptimizationOption
+      type: OptimizationOption
     - id: mlcId
       type: System.String
     return:
@@ -572,7 +604,7 @@ items:
   source:
     id: Optimize
     path: ''
-    startLine: 8323
+    startLine: 9569
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -586,21 +618,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
-  id: Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
+  id: Optimize(OptimizationOptionsIMRT)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: Optimize(OptimizationOptionsIMRT)
   nameWithType: ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
   type: Method
   source:
     id: Optimize
     path: ''
-    startLine: 8330
+    startLine: 9579
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -608,7 +640,7 @@ items:
     content: public OptimizerResult Optimize(OptimizationOptionsIMRT options)
     parameters:
     - id: options
-      type: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+      type: OptimizationOptionsIMRT
     return:
       type: ESAPIX.Facade.API.OptimizerResult
     content.vb: Public Function Optimize(options As OptimizationOptionsIMRT) As OptimizerResult
@@ -631,7 +663,7 @@ items:
   source:
     id: OptimizeVMAT
     path: ''
-    startLine: 8337
+    startLine: 9589
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -662,7 +694,7 @@ items:
   source:
     id: OptimizeVMAT
     path: ''
-    startLine: 8344
+    startLine: 9599
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -676,21 +708,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
-  id: OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
+  id: OptimizeVMAT(OptimizationOptionsVMAT)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: OptimizeVMAT(OptimizationOptionsVMAT)
   nameWithType: ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
   type: Method
   source:
     id: OptimizeVMAT
     path: ''
-    startLine: 8351
+    startLine: 9609
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -698,7 +730,7 @@ items:
     content: public OptimizerResult OptimizeVMAT(OptimizationOptionsVMAT options)
     parameters:
     - id: options
-      type: ESAPIX.Facade.Types.OptimizationOptionsVMAT
+      type: OptimizationOptionsVMAT
     return:
       type: ESAPIX.Facade.API.OptimizerResult
     content.vb: Public Function OptimizeVMAT(options As OptimizationOptionsVMAT) As OptimizerResult
@@ -707,21 +739,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,System.Collections.Generic.Dictionary{System.String,ESAPIX.Facade.Types.DoseValue},System.Collections.Generic.Dictionary{System.String,System.String})
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,System.Collections.Generic.Dictionary{System.String,ESAPIX.Facade.Types.DoseValue},System.Collections.Generic.Dictionary{System.String,System.String})
-  id: CalculateDVHEstimates(System.String,System.Collections.Generic.Dictionary{System.String,ESAPIX.Facade.Types.DoseValue},System.Collections.Generic.Dictionary{System.String,System.String})
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,Dictionary{System.String,DoseValue},Dictionary{System.String,System.String})
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,Dictionary{System.String,DoseValue},Dictionary{System.String,System.String})
+  id: CalculateDVHEstimates(System.String,Dictionary{System.String,DoseValue},Dictionary{System.String,System.String})
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: CalculateDVHEstimates(String, Dictionary<String, DoseValue>, Dictionary<String, String>)
   nameWithType: ExternalPlanSetup.CalculateDVHEstimates(String, Dictionary<String, DoseValue>, Dictionary<String, String>)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, System.Collections.Generic.Dictionary<System.String, ESAPIX.Facade.Types.DoseValue>, System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, Dictionary<System.String, DoseValue>, Dictionary<System.String, System.String>)
   type: Method
   source:
     id: CalculateDVHEstimates
     path: ''
-    startLine: 8358
+    startLine: 9619
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -731,9 +763,9 @@ items:
     - id: modelId
       type: System.String
     - id: targetDoseLevels
-      type: System.Collections.Generic.Dictionary{System.String,ESAPIX.Facade.Types.DoseValue}
+      type: Dictionary{System.String,DoseValue}
     - id: structureMatches
-      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      type: Dictionary{System.String,System.String}
     return:
       type: ESAPIX.Facade.API.CalculationResult
     content.vb: Public Function CalculateDVHEstimates(modelId As String, targetDoseLevels As Dictionary(Of String, DoseValue), structureMatches As Dictionary(Of String, String)) As CalculationResult
@@ -743,7 +775,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, System.Collections.Generic.Dictionary(Of System.String, ESAPIX.Facade.Types.DoseValue), System.Collections.Generic.Dictionary(Of System.String, System.String))
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, Dictionary(Of System.String, DoseValue), Dictionary(Of System.String, System.String))
   name.vb: CalculateDVHEstimates(String, Dictionary(Of String, DoseValue), Dictionary(Of String, String))
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.WriteXml(System.Xml.XmlWriter)
   commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.WriteXml(System.Xml.XmlWriter)
@@ -759,7 +791,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 8368
+    startLine: 9631
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -774,21 +806,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  id: AddArcBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddArcBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   nameWithType: ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect<System.Double>, System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   type: Method
   source:
     id: AddArcBeam
     path: ''
-    startLine: 8377
+    startLine: 9637
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -796,9 +828,9 @@ items:
     content: public Beam AddArcBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: jawPositions
-      type: ESAPIX.Facade.Types.VRect{System.Double}
+      type: VRect{System.Double}
     - id: collimatorAngle
       type: System.Double
     - id: gantryAngle
@@ -806,11 +838,11 @@ items:
     - id: gantryStop
       type: System.Double
     - id: gantryDirection
-      type: ESAPIX.Facade.Types.GantryDirection
+      type: GantryDirection
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddArcBeam(machineParameters As ExternalBeamMachineParameters, jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -820,23 +852,23 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect(Of System.Double), System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   name.vb: AddArcBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  id: AddConformalArcBeam(ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,GantryDirection,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddConformalArcBeam(ExternalBeamMachineParameters, Double, Int32, Double, Double, GantryDirection, Double, VVector)
   nameWithType: ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters, Double, Int32, Double, Double, GantryDirection, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Double, System.Int32, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters, System.Double, System.Int32, System.Double, System.Double, GantryDirection, System.Double, VVector)
   type: Method
   source:
     id: AddConformalArcBeam
     path: ''
-    startLine: 8384
+    startLine: 9650
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -844,7 +876,7 @@ items:
     content: public Beam AddConformalArcBeam(ExternalBeamMachineParameters machineParameters, double collimatorAngle, int controlPointCount, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: collimatorAngle
       type: System.Double
     - id: controlPointCount
@@ -854,11 +886,11 @@ items:
     - id: gantryStop
       type: System.Double
     - id: gantryDirection
-      type: ESAPIX.Facade.Types.GantryDirection
+      type: GantryDirection
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddConformalArcBeam(machineParameters As ExternalBeamMachineParameters, collimatorAngle As Double, controlPointCount As Integer, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -867,21 +899,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  id: AddMLCArcBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddMLCArcBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   nameWithType: ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single[,], ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, System.Single[,], VRect<System.Double>, System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   type: Method
   source:
     id: AddMLCArcBeam
     path: ''
-    startLine: 8391
+    startLine: 9663
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -889,11 +921,11 @@ items:
     content: public Beam AddMLCArcBeam(ExternalBeamMachineParameters machineParameters, float[, ] leafPositions, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: leafPositions
       type: System.Single[,]
     - id: jawPositions
-      type: ESAPIX.Facade.Types.VRect{System.Double}
+      type: VRect{System.Double}
     - id: collimatorAngle
       type: System.Double
     - id: gantryAngle
@@ -901,11 +933,11 @@ items:
     - id: gantryStop
       type: System.Double
     - id: gantryDirection
-      type: ESAPIX.Facade.Types.GantryDirection
+      type: GantryDirection
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddMLCArcBeam(machineParameters As ExternalBeamMachineParameters, leafPositions As Single(,), jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -915,23 +947,23 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single(,), ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, System.Single(,), VRect(Of System.Double), System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   name.vb: AddMLCArcBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,VVector)
+  id: AddMLCBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddMLCBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, VVector)
   nameWithType: ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single[,], ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, System.Single[,], VRect<System.Double>, System.Double, System.Double, System.Double, VVector)
   type: Method
   source:
     id: AddMLCBeam
     path: ''
-    startLine: 8398
+    startLine: 9676
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -939,11 +971,11 @@ items:
     content: public Beam AddMLCBeam(ExternalBeamMachineParameters machineParameters, float[, ] leafPositions, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: leafPositions
       type: System.Single[,]
     - id: jawPositions
-      type: ESAPIX.Facade.Types.VRect{System.Double}
+      type: VRect{System.Double}
     - id: collimatorAngle
       type: System.Double
     - id: gantryAngle
@@ -951,7 +983,7 @@ items:
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddMLCBeam(machineParameters As ExternalBeamMachineParameters, leafPositions As Single(,), jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -961,23 +993,23 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single(,), ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, System.Single(,), VRect(Of System.Double), System.Double, System.Double, System.Double, VVector)
   name.vb: AddMLCBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, VVector)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
+  id: AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
   nameWithType: ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Collections.Generic.IEnumerable<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, VVector)
   type: Method
   source:
     id: AddMultipleStaticSegmentBeam
     path: ''
-    startLine: 8405
+    startLine: 9689
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -985,9 +1017,9 @@ items:
     content: public Beam AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: metersetWeights
-      type: System.Collections.Generic.IEnumerable{System.Double}
+      type: IEnumerable{System.Double}
     - id: collimatorAngle
       type: System.Double
     - id: gantryAngle
@@ -995,7 +1027,7 @@ items:
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddMultipleStaticSegmentBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -1005,23 +1037,23 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Collections.Generic.IEnumerable(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, VVector)
   name.vb: AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
+  id: AddSlidingWindowBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
   nameWithType: ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Collections.Generic.IEnumerable<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, VVector)
   type: Method
   source:
     id: AddSlidingWindowBeam
     path: ''
-    startLine: 8412
+    startLine: 9702
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1029,9 +1061,9 @@ items:
     content: public Beam AddSlidingWindowBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: metersetWeights
-      type: System.Collections.Generic.IEnumerable{System.Double}
+      type: IEnumerable{System.Double}
     - id: collimatorAngle
       type: System.Double
     - id: gantryAngle
@@ -1039,7 +1071,7 @@ items:
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddSlidingWindowBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -1049,23 +1081,23 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Collections.Generic.IEnumerable(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, VVector)
   name.vb: AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,VVector)
+  id: AddStaticBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddStaticBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, VVector)
   nameWithType: ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect<System.Double>, System.Double, System.Double, System.Double, VVector)
   type: Method
   source:
     id: AddStaticBeam
     path: ''
-    startLine: 8419
+    startLine: 9715
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1073,9 +1105,9 @@ items:
     content: public Beam AddStaticBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: jawPositions
-      type: ESAPIX.Facade.Types.VRect{System.Double}
+      type: VRect{System.Double}
     - id: collimatorAngle
       type: System.Double
     - id: gantryAngle
@@ -1083,7 +1115,7 @@ items:
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddStaticBeam(machineParameters As ExternalBeamMachineParameters, jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -1093,23 +1125,23 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect(Of System.Double), System.Double, System.Double, System.Double, VVector)
   name.vb: AddStaticBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, VVector)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  id: AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Collections.Generic.IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  id: AddVMATBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   parent: ESAPIX.Facade.API.ExternalPlanSetup
   langs:
   - csharp
   - vb
   name: AddVMATBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   nameWithType: ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, GantryDirection, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Collections.Generic.IEnumerable<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   type: Method
   source:
     id: AddVMATBeam
     path: ''
-    startLine: 8426
+    startLine: 9727
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1117,9 +1149,9 @@ items:
     content: public Beam AddVMATBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
     parameters:
     - id: machineParameters
-      type: ESAPIX.Facade.Types.ExternalBeamMachineParameters
+      type: ExternalBeamMachineParameters
     - id: metersetWeights
-      type: System.Collections.Generic.IEnumerable{System.Double}
+      type: IEnumerable{System.Double}
     - id: collimatorAngle
       type: System.Double
     - id: gantryAngle
@@ -1127,11 +1159,11 @@ items:
     - id: gantryStop
       type: System.Double
     - id: gantryDirection
-      type: ESAPIX.Facade.Types.GantryDirection
+      type: GantryDirection
     - id: patientSupportAngle
       type: System.Double
     - id: isocenter
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
     content.vb: Public Function AddVMATBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
@@ -1141,7 +1173,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Collections.Generic.IEnumerable(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   name.vb: AddVMATBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.CreateEvaluationDose
   commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CreateEvaluationDose
@@ -1157,7 +1189,7 @@ items:
   source:
     id: CreateEvaluationDose
     path: ''
-    startLine: 8433
+    startLine: 9740
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1185,7 +1217,7 @@ items:
   source:
     id: RemoveBeam
     path: ''
-    startLine: 8440
+    startLine: 9750
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1501,77 +1533,81 @@ references:
   name: PlanNormalizationValue
   nameWithType: PlanSetup.PlanNormalizationValue
   fullName: ESAPIX.Facade.API.PlanSetup.PlanNormalizationValue
-- uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
+- uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
   parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
+  isExternal: true
   name: ClearCalculationModel(CalculationType)
   nameWithType: PlanSetup.ClearCalculationModel(CalculationType)
-  fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
     name: ClearCalculationModel
     nameWithType: PlanSetup.ClearCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.CalculationType
+  - uid: CalculationType
     name: CalculationType
     nameWithType: CalculationType
-    fullName: ESAPIX.Facade.Types.CalculationType
+    fullName: CalculationType
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
     name: ClearCalculationModel
     nameWithType: PlanSetup.ClearCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.CalculationType
+  - uid: CalculationType
     name: CalculationType
     nameWithType: CalculationType
-    fullName: ESAPIX.Facade.Types.CalculationType
+    fullName: CalculationType
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
+- uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
   parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
+  isExternal: true
   name: GetCalculationModel(CalculationType)
   nameWithType: PlanSetup.GetCalculationModel(CalculationType)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
     name: GetCalculationModel
     nameWithType: PlanSetup.GetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.CalculationType
+  - uid: CalculationType
     name: CalculationType
     nameWithType: CalculationType
-    fullName: ESAPIX.Facade.Types.CalculationType
+    fullName: CalculationType
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
     name: GetCalculationModel
     nameWithType: PlanSetup.GetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.CalculationType
+  - uid: CalculationType
     name: CalculationType
     nameWithType: CalculationType
-    fullName: ESAPIX.Facade.Types.CalculationType
+    fullName: CalculationType
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1685,15 +1721,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,ESAPIX.Facade.Types.VolumePresentation,ESAPIX.Facade.Types.DoseValuePresentation)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,ESAPIX.Facade.Types.VolumePresentation,ESAPIX.Facade.Types.DoseValuePresentation)
+- uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: true
   name: GetDoseAtVolume(Structure, Double, VolumePresentation, DoseValuePresentation)
   nameWithType: PlanSetup.GetDoseAtVolume(Structure, Double, VolumePresentation, DoseValuePresentation)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, ESAPIX.Facade.Types.VolumePresentation, ESAPIX.Facade.Types.DoseValuePresentation)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, VolumePresentation, DoseValuePresentation)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,ESAPIX.Facade.Types.VolumePresentation,ESAPIX.Facade.Types.DoseValuePresentation)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
     name: GetDoseAtVolume
     nameWithType: PlanSetup.GetDoseAtVolume
     fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
@@ -1715,22 +1751,24 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VolumePresentation
+  - uid: VolumePresentation
     name: VolumePresentation
     nameWithType: VolumePresentation
-    fullName: ESAPIX.Facade.Types.VolumePresentation
+    fullName: VolumePresentation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValuePresentation
+  - uid: DoseValuePresentation
     name: DoseValuePresentation
     nameWithType: DoseValuePresentation
-    fullName: ESAPIX.Facade.Types.DoseValuePresentation
+    fullName: DoseValuePresentation
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,ESAPIX.Facade.Types.VolumePresentation,ESAPIX.Facade.Types.DoseValuePresentation)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
     name: GetDoseAtVolume
     nameWithType: PlanSetup.GetDoseAtVolume
     fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
@@ -1752,29 +1790,31 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VolumePresentation
+  - uid: VolumePresentation
     name: VolumePresentation
     nameWithType: VolumePresentation
-    fullName: ESAPIX.Facade.Types.VolumePresentation
+    fullName: VolumePresentation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValuePresentation
+  - uid: DoseValuePresentation
     name: DoseValuePresentation
     nameWithType: DoseValuePresentation
-    fullName: ESAPIX.Facade.Types.DoseValuePresentation
+    fullName: DoseValuePresentation
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,ESAPIX.Facade.Types.VolumePresentation)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,ESAPIX.Facade.Types.VolumePresentation)
+- uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
   parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
+  isExternal: true
   name: GetVolumeAtDose(Structure, DoseValue, VolumePresentation)
   nameWithType: PlanSetup.GetVolumeAtDose(Structure, DoseValue, VolumePresentation)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.DoseValue, ESAPIX.Facade.Types.VolumePresentation)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure, DoseValue, VolumePresentation)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,ESAPIX.Facade.Types.VolumePresentation)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
     name: GetVolumeAtDose
     nameWithType: PlanSetup.GetVolumeAtDose
     fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose
@@ -1788,22 +1828,24 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValue
+  - uid: DoseValue
     name: DoseValue
     nameWithType: DoseValue
-    fullName: ESAPIX.Facade.Types.DoseValue
+    fullName: DoseValue
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VolumePresentation
+  - uid: VolumePresentation
     name: VolumePresentation
     nameWithType: VolumePresentation
-    fullName: ESAPIX.Facade.Types.VolumePresentation
+    fullName: VolumePresentation
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,ESAPIX.Facade.Types.VolumePresentation)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
     name: GetVolumeAtDose
     nameWithType: PlanSetup.GetVolumeAtDose
     fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose
@@ -1817,39 +1859,42 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValue
+  - uid: DoseValue
     name: DoseValue
     nameWithType: DoseValue
-    fullName: ESAPIX.Facade.Types.DoseValue
+    fullName: DoseValue
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VolumePresentation
+  - uid: VolumePresentation
     name: VolumePresentation
     nameWithType: VolumePresentation
-    fullName: ESAPIX.Facade.Types.VolumePresentation
+    fullName: VolumePresentation
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType,System.String)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType,System.String)
+- uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: true
   name: SetCalculationModel(CalculationType, String)
   nameWithType: PlanSetup.SetCalculationModel(CalculationType, String)
-  fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType, System.String)
+  fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType, System.String)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType,System.String)
+  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
     name: SetCalculationModel
     nameWithType: PlanSetup.SetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.CalculationType
+  - uid: CalculationType
     name: CalculationType
     nameWithType: CalculationType
-    fullName: ESAPIX.Facade.Types.CalculationType
+    fullName: CalculationType
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1862,17 +1907,18 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType,System.String)
+  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
     name: SetCalculationModel
     nameWithType: PlanSetup.SetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.CalculationType
+  - uid: CalculationType
     name: CalculationType
     nameWithType: CalculationType
-    fullName: ESAPIX.Facade.Types.CalculationType
+    fullName: CalculationType
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1976,15 +2022,15 @@ references:
   name: DoseValuePresentation
   nameWithType: PlanningItem.DoseValuePresentation
   fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
-- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValuePresentation,ESAPIX.Facade.Types.VolumePresentation,System.Double)
-  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValuePresentation,ESAPIX.Facade.Types.VolumePresentation,System.Double)
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
   parent: ESAPIX.Facade.API.PlanningItem
   isExternal: true
   name: GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
   nameWithType: PlanningItem.GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
-  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.DoseValuePresentation, ESAPIX.Facade.Types.VolumePresentation, System.Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, DoseValuePresentation, VolumePresentation, System.Double)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValuePresentation,ESAPIX.Facade.Types.VolumePresentation,System.Double)
+  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
     name: GetDVHCumulativeData
     nameWithType: PlanningItem.GetDVHCumulativeData
     fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData
@@ -1998,17 +2044,19 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValuePresentation
+  - uid: DoseValuePresentation
     name: DoseValuePresentation
     nameWithType: DoseValuePresentation
-    fullName: ESAPIX.Facade.Types.DoseValuePresentation
+    fullName: DoseValuePresentation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VolumePresentation
+  - uid: VolumePresentation
     name: VolumePresentation
     nameWithType: VolumePresentation
-    fullName: ESAPIX.Facade.Types.VolumePresentation
+    fullName: VolumePresentation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2021,7 +2069,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValuePresentation,ESAPIX.Facade.Types.VolumePresentation,System.Double)
+  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
     name: GetDVHCumulativeData
     nameWithType: PlanningItem.GetDVHCumulativeData
     fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData
@@ -2035,17 +2083,19 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValuePresentation
+  - uid: DoseValuePresentation
     name: DoseValuePresentation
     nameWithType: DoseValuePresentation
-    fullName: ESAPIX.Facade.Types.DoseValuePresentation
+    fullName: DoseValuePresentation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VolumePresentation
+  - uid: VolumePresentation
     name: VolumePresentation
     nameWithType: VolumePresentation
-    fullName: ESAPIX.Facade.Types.VolumePresentation
+    fullName: VolumePresentation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2467,6 +2517,19 @@ references:
   name: ExternalPlanSetup
   nameWithType: ExternalPlanSetup.ExternalPlanSetup
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.ExternalPlanSetup
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: ExternalPlanSetup.IsLive
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose*
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose
   isExternal: false
@@ -2486,29 +2549,28 @@ references:
   name: CalculateDoseWithPresetValues
   nameWithType: ExternalPlanSetup.CalculateDoseWithPresetValues
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues
-- uid: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}}
-  commentId: T:System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{KeyValuePair{System.String,MetersetValue}}
+  commentId: '!:List{KeyValuePair{System.String,MetersetValue}}'
+  definition: List`1
   name: List<KeyValuePair<String, MetersetValue>>
   nameWithType: List<KeyValuePair<String, MetersetValue>>
-  fullName: System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, ESAPIX.Facade.Types.MetersetValue>>
+  fullName: List<KeyValuePair<System.String, MetersetValue>>
   nameWithType.vb: List(Of KeyValuePair(Of String, MetersetValue))
-  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of System.String, ESAPIX.Facade.Types.MetersetValue))
+  fullName.vb: List(Of KeyValuePair(Of System.String, MetersetValue))
   name.vb: List(Of KeyValuePair(Of String, MetersetValue))
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.Collections.Generic.KeyValuePair`2
+  - uid: KeyValuePair`2
     name: KeyValuePair
     nameWithType: KeyValuePair
-    fullName: System.Collections.Generic.KeyValuePair
+    fullName: KeyValuePair
     isExternal: true
   - name: <
     nameWithType: <
@@ -2521,10 +2583,11 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.MetersetValue
+  - uid: MetersetValue
     name: MetersetValue
     nameWithType: MetersetValue
-    fullName: ESAPIX.Facade.Types.MetersetValue
+    fullName: MetersetValue
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -2532,18 +2595,18 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.Collections.Generic.KeyValuePair`2
+  - uid: KeyValuePair`2
     name: KeyValuePair
     nameWithType: KeyValuePair
-    fullName: System.Collections.Generic.KeyValuePair
+    fullName: KeyValuePair
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2556,10 +2619,11 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.MetersetValue
+  - uid: MetersetValue
     name: MetersetValue
     nameWithType: MetersetValue
-    fullName: ESAPIX.Facade.Types.MetersetValue
+    fullName: MetersetValue
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2573,51 +2637,44 @@ references:
   name: CalculationResult
   nameWithType: CalculationResult
   fullName: ESAPIX.Facade.API.CalculationResult
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose*
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose
   isExternal: false
@@ -2636,61 +2693,49 @@ references:
   name: CalculateLeafMotions
   nameWithType: ExternalPlanSetup.CalculateLeafMotions
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions
-- uid: ESAPIX.Facade.Types.LMCVOptions
-  commentId: T:ESAPIX.Facade.Types.LMCVOptions
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: LMCVOptions
+  commentId: '!:LMCVOptions'
+  isExternal: true
   name: LMCVOptions
   nameWithType: LMCVOptions
-  fullName: ESAPIX.Facade.Types.LMCVOptions
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
-- uid: ESAPIX.Facade.Types.SmartLMCOptions
-  commentId: T:ESAPIX.Facade.Types.SmartLMCOptions
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+  fullName: LMCVOptions
+- uid: SmartLMCOptions
+  commentId: '!:SmartLMCOptions'
+  isExternal: true
   name: SmartLMCOptions
   nameWithType: SmartLMCOptions
-  fullName: ESAPIX.Facade.Types.SmartLMCOptions
-- uid: ESAPIX.Facade.Types.LMCMSSOptions
-  commentId: T:ESAPIX.Facade.Types.LMCMSSOptions
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+  fullName: SmartLMCOptions
+- uid: LMCMSSOptions
+  commentId: '!:LMCMSSOptions'
+  isExternal: true
   name: LMCMSSOptions
   nameWithType: LMCMSSOptions
-  fullName: ESAPIX.Facade.Types.LMCMSSOptions
+  fullName: LMCMSSOptions
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType*
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType
   isExternal: false
   name: GetModelsForCalculationType
   nameWithType: ExternalPlanSetup.GetModelsForCalculationType
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType
-- uid: ESAPIX.Facade.Types.CalculationType
-  commentId: T:ESAPIX.Facade.Types.CalculationType
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: CalculationType
+  isExternal: true
   name: CalculationType
   nameWithType: CalculationType
-  fullName: ESAPIX.Facade.Types.CalculationType
-- uid: System.Collections.Generic.IEnumerable{System.String}
-  commentId: T:System.Collections.Generic.IEnumerable{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+  fullName: CalculationType
+- uid: IEnumerable{System.String}
+  commentId: '!:IEnumerable{System.String}'
+  definition: IEnumerable`1
   name: IEnumerable<String>
   nameWithType: IEnumerable<String>
-  fullName: System.Collections.Generic.IEnumerable<System.String>
+  fullName: IEnumerable<System.String>
   nameWithType.vb: IEnumerable(Of String)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  fullName.vb: IEnumerable(Of System.String)
   name.vb: IEnumerable(Of String)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -2704,10 +2749,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2720,42 +2765,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
@@ -2779,13 +2823,11 @@ references:
   name: OptimizerResult
   nameWithType: OptimizerResult
   fullName: ESAPIX.Facade.API.OptimizerResult
-- uid: ESAPIX.Facade.Types.OptimizationOption
-  commentId: T:ESAPIX.Facade.Types.OptimizationOption
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: OptimizationOption
+  isExternal: true
   name: OptimizationOption
   nameWithType: OptimizationOption
-  fullName: ESAPIX.Facade.Types.OptimizationOption
+  fullName: OptimizationOption
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -2793,47 +2835,44 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT
-  commentId: T:ESAPIX.Facade.Types.OptimizationOptionsIMRT
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: OptimizationOptionsIMRT
+  commentId: '!:OptimizationOptionsIMRT'
+  isExternal: true
   name: OptimizationOptionsIMRT
   nameWithType: OptimizationOptionsIMRT
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT
+  fullName: OptimizationOptionsIMRT
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT*
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT
   isExternal: false
   name: OptimizeVMAT
   nameWithType: ExternalPlanSetup.OptimizeVMAT
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT
-- uid: ESAPIX.Facade.Types.OptimizationOptionsVMAT
-  commentId: T:ESAPIX.Facade.Types.OptimizationOptionsVMAT
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: OptimizationOptionsVMAT
+  commentId: '!:OptimizationOptionsVMAT'
+  isExternal: true
   name: OptimizationOptionsVMAT
   nameWithType: OptimizationOptionsVMAT
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsVMAT
+  fullName: OptimizationOptionsVMAT
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates*
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates
   isExternal: false
   name: CalculateDVHEstimates
   nameWithType: ExternalPlanSetup.CalculateDVHEstimates
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates
-- uid: System.Collections.Generic.Dictionary{System.String,ESAPIX.Facade.Types.DoseValue}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,ESAPIX.Facade.Types.DoseValue}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Dictionary`2
+- uid: Dictionary{System.String,DoseValue}
+  commentId: '!:Dictionary{System.String,DoseValue}'
+  definition: Dictionary`2
   name: Dictionary<String, DoseValue>
   nameWithType: Dictionary<String, DoseValue>
-  fullName: System.Collections.Generic.Dictionary<System.String, ESAPIX.Facade.Types.DoseValue>
+  fullName: Dictionary<System.String, DoseValue>
   nameWithType.vb: Dictionary(Of String, DoseValue)
-  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, ESAPIX.Facade.Types.DoseValue)
+  fullName.vb: Dictionary(Of System.String, DoseValue)
   name.vb: Dictionary(Of String, DoseValue)
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -2846,18 +2885,19 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValue
+  - uid: DoseValue
     name: DoseValue
     nameWithType: DoseValue
-    fullName: ESAPIX.Facade.Types.DoseValue
+    fullName: DoseValue
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2870,28 +2910,28 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.DoseValue
+  - uid: DoseValue
     name: DoseValue
     nameWithType: DoseValue
-    fullName: ESAPIX.Facade.Types.DoseValue
+    fullName: DoseValue
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.Dictionary{System.String,System.String}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Dictionary`2
+- uid: Dictionary{System.String,System.String}
+  commentId: '!:Dictionary{System.String,System.String}'
+  definition: Dictionary`2
   name: Dictionary<String, String>
   nameWithType: Dictionary<String, String>
-  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  fullName: Dictionary<System.String, System.String>
   nameWithType.vb: Dictionary(Of String, String)
-  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  fullName.vb: Dictionary(Of System.String, System.String)
   name.vb: Dictionary(Of String, String)
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -2913,10 +2953,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2937,54 +2977,53 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.Dictionary`2
-  commentId: T:System.Collections.Generic.Dictionary`2
+- uid: Dictionary`2
   isExternal: true
-  name: Dictionary<TKey, TValue>
-  nameWithType: Dictionary<TKey, TValue>
-  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
-  nameWithType.vb: Dictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
-  name.vb: Dictionary(Of TKey, TValue)
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
@@ -3005,28 +3044,26 @@ references:
   name: AddArcBeam
   nameWithType: ExternalPlanSetup.AddArcBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam
-- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters
-  commentId: T:ESAPIX.Facade.Types.ExternalBeamMachineParameters
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: ExternalBeamMachineParameters
+  isExternal: true
   name: ExternalBeamMachineParameters
   nameWithType: ExternalBeamMachineParameters
-  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters
-- uid: ESAPIX.Facade.Types.VRect{System.Double}
-  commentId: T:ESAPIX.Facade.Types.VRect{System.Double}
-  parent: ESAPIX.Facade.Types
-  definition: ESAPIX.Facade.Types.VRect`1
+  fullName: ExternalBeamMachineParameters
+- uid: VRect{System.Double}
+  commentId: '!:VRect{System.Double}'
+  definition: VRect`1
   name: VRect<Double>
   nameWithType: VRect<Double>
-  fullName: ESAPIX.Facade.Types.VRect<System.Double>
+  fullName: VRect<System.Double>
   nameWithType.vb: VRect(Of Double)
-  fullName.vb: ESAPIX.Facade.Types.VRect(Of System.Double)
+  fullName.vb: VRect(Of System.Double)
   name.vb: VRect(Of Double)
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
@@ -3039,10 +3076,11 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -3061,20 +3099,16 @@ references:
   name: Double
   nameWithType: Double
   fullName: System.Double
-- uid: ESAPIX.Facade.Types.GantryDirection
-  commentId: T:ESAPIX.Facade.Types.GantryDirection
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: GantryDirection
+  isExternal: true
   name: GantryDirection
   nameWithType: GantryDirection
-  fullName: ESAPIX.Facade.Types.GantryDirection
-- uid: ESAPIX.Facade.Types.VVector
-  commentId: T:ESAPIX.Facade.Types.VVector
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+  fullName: GantryDirection
+- uid: VVector
+  isExternal: true
   name: VVector
   nameWithType: VVector
-  fullName: ESAPIX.Facade.Types.VVector
+  fullName: VVector
 - uid: ESAPIX.Facade.API.Beam
   commentId: T:ESAPIX.Facade.API.Beam
   parent: ESAPIX.Facade.API
@@ -3082,41 +3116,41 @@ references:
   name: Beam
   nameWithType: Beam
   fullName: ESAPIX.Facade.API.Beam
-- uid: ESAPIX.Facade.Types.VRect`1
-  commentId: T:ESAPIX.Facade.Types.VRect`1
-  parent: ESAPIX.Facade.Types
-  isExternal: false
-  name: VRect<T>
-  nameWithType: VRect<T>
-  fullName: ESAPIX.Facade.Types.VRect<T>
-  nameWithType.vb: VRect(Of T)
-  fullName.vb: ESAPIX.Facade.Types.VRect(Of T)
-  name.vb: VRect(Of T)
+- uid: VRect`1
+  isExternal: true
+  name: VRect<>
+  nameWithType: VRect<>
+  fullName: VRect<>
+  nameWithType.vb: VRect(Of )
+  fullName.vb: VRect(Of )
+  name.vb: VRect(Of )
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
@@ -3169,21 +3203,20 @@ references:
   name: AddMultipleStaticSegmentBeam
   nameWithType: ExternalPlanSetup.AddMultipleStaticSegmentBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam
-- uid: System.Collections.Generic.IEnumerable{System.Double}
-  commentId: T:System.Collections.Generic.IEnumerable{System.Double}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{System.Double}
+  commentId: '!:IEnumerable{System.Double}'
+  definition: IEnumerable`1
   name: IEnumerable<Double>
   nameWithType: IEnumerable<Double>
-  fullName: System.Collections.Generic.IEnumerable<System.Double>
+  fullName: IEnumerable<System.Double>
   nameWithType.vb: IEnumerable(Of Double)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Double)
+  fullName.vb: IEnumerable(Of System.Double)
   name.vb: IEnumerable(Of Double)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -3197,10 +3230,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

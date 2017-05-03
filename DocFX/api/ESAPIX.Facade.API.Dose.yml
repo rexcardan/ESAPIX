@@ -9,9 +9,10 @@ items:
   - ESAPIX.Facade.API.Dose.#ctor(System.Object)
   - ESAPIX.Facade.API.Dose.DoseMax3D
   - ESAPIX.Facade.API.Dose.DoseMax3DLocation
-  - ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
-  - ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+  - ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
+  - ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
   - ESAPIX.Facade.API.Dose.GetVoxels(System.Int32,System.Int32[0:,0:])
+  - ESAPIX.Facade.API.Dose.IsLive
   - ESAPIX.Facade.API.Dose.Isodoses
   - ESAPIX.Facade.API.Dose.Origin
   - ESAPIX.Facade.API.Dose.Series
@@ -39,7 +40,7 @@ items:
   source:
     id: Dose
     path: ''
-    startLine: 7501
+    startLine: 8492
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -92,7 +93,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7503
+    startLine: 8494
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -118,7 +119,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7504
+    startLine: 8499
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -133,6 +134,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Dose.IsLive
+  commentId: P:ESAPIX.Facade.API.Dose.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Dose
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Dose.IsLive
+  fullName: ESAPIX.Facade.API.Dose.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 8504
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Dose.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Dose.DoseMax3D
   commentId: P:ESAPIX.Facade.API.Dose.DoseMax3D
   id: DoseMax3D
@@ -147,7 +179,7 @@ items:
   source:
     id: DoseMax3D
     path: ''
-    startLine: 7505
+    startLine: 8509
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -155,7 +187,7 @@ items:
     content: public DoseValue DoseMax3D { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     content.vb: Public Property DoseMax3D As DoseValue
   overload: ESAPIX.Facade.API.Dose.DoseMax3D*
   modifiers.csharp:
@@ -178,7 +210,7 @@ items:
   source:
     id: DoseMax3DLocation
     path: ''
-    startLine: 7518
+    startLine: 8524
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -186,7 +218,7 @@ items:
     content: public VVector DoseMax3DLocation { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property DoseMax3DLocation As VVector
   overload: ESAPIX.Facade.API.Dose.DoseMax3DLocation*
   modifiers.csharp:
@@ -209,23 +241,23 @@ items:
   source:
     id: Isodoses
     path: ''
-    startLine: 7531
+    startLine: 8541
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<Isodose> Isodoses { get; }
+    content: public IEnumerable<Isodose> Isodoses { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Isodose}
-    content.vb: Public ReadOnly Property Isodoses As IEnumerable(Of Isodose)
+      type: IEnumerable{ESAPIX.Facade.API.Isodose}
+    content.vb: Public Property Isodoses As IEnumerable(Of Isodose)
   overload: ESAPIX.Facade.API.Dose.Isodoses*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Dose.Origin
   commentId: P:ESAPIX.Facade.API.Dose.Origin
   id: Origin
@@ -240,7 +272,7 @@ items:
   source:
     id: Origin
     path: ''
-    startLine: 7557
+    startLine: 8579
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -248,7 +280,7 @@ items:
     content: public VVector Origin { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property Origin As VVector
   overload: ESAPIX.Facade.API.Dose.Origin*
   modifiers.csharp:
@@ -271,7 +303,7 @@ items:
   source:
     id: Series
     path: ''
-    startLine: 7570
+    startLine: 8594
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -302,7 +334,7 @@ items:
   source:
     id: SeriesUID
     path: ''
-    startLine: 7583
+    startLine: 8613
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -333,7 +365,7 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 7596
+    startLine: 8628
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -364,7 +396,7 @@ items:
   source:
     id: XDirection
     path: ''
-    startLine: 7609
+    startLine: 8643
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -372,7 +404,7 @@ items:
     content: public VVector XDirection { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property XDirection As VVector
   overload: ESAPIX.Facade.API.Dose.XDirection*
   modifiers.csharp:
@@ -395,7 +427,7 @@ items:
   source:
     id: XRes
     path: ''
-    startLine: 7622
+    startLine: 8658
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -426,7 +458,7 @@ items:
   source:
     id: XSize
     path: ''
-    startLine: 7635
+    startLine: 8673
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -457,7 +489,7 @@ items:
   source:
     id: YDirection
     path: ''
-    startLine: 7648
+    startLine: 8688
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -465,7 +497,7 @@ items:
     content: public VVector YDirection { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property YDirection As VVector
   overload: ESAPIX.Facade.API.Dose.YDirection*
   modifiers.csharp:
@@ -488,7 +520,7 @@ items:
   source:
     id: YRes
     path: ''
-    startLine: 7661
+    startLine: 8703
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -519,7 +551,7 @@ items:
   source:
     id: YSize
     path: ''
-    startLine: 7674
+    startLine: 8718
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -550,7 +582,7 @@ items:
   source:
     id: ZDirection
     path: ''
-    startLine: 7687
+    startLine: 8733
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -558,7 +590,7 @@ items:
     content: public VVector ZDirection { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property ZDirection As VVector
   overload: ESAPIX.Facade.API.Dose.ZDirection*
   modifiers.csharp:
@@ -581,7 +613,7 @@ items:
   source:
     id: ZRes
     path: ''
-    startLine: 7700
+    startLine: 8748
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -612,7 +644,7 @@ items:
   source:
     id: ZSize
     path: ''
-    startLine: 7713
+    startLine: 8763
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -643,7 +675,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 7726
+    startLine: 8778
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -658,21 +690,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
-  commentId: M:ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
-  id: GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+- uid: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
+  commentId: M:ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
+  id: GetDoseProfile(VVector,VVector,System.Double[])
   parent: ESAPIX.Facade.API.Dose
   langs:
   - csharp
   - vb
   name: GetDoseProfile(VVector, VVector, Double[])
   nameWithType: Dose.GetDoseProfile(VVector, VVector, Double[])
-  fullName: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double[])
+  fullName: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector, VVector, System.Double[])
   type: Method
   source:
     id: GetDoseProfile
     path: ''
-    startLine: 7735
+    startLine: 8784
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -680,13 +712,13 @@ items:
     content: public DoseProfile GetDoseProfile(VVector start, VVector stop, double[] preallocatedBuffer)
     parameters:
     - id: start
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: stop
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: preallocatedBuffer
       type: System.Double[]
     return:
-      type: ESAPIX.Facade.Types.DoseProfile
+      type: DoseProfile
     content.vb: Public Function GetDoseProfile(start As VVector, stop As VVector, preallocatedBuffer As Double()) As DoseProfile
   overload: ESAPIX.Facade.API.Dose.GetDoseProfile*
   nameWithType.vb: Dose.GetDoseProfile(VVector, VVector, Double())
@@ -694,23 +726,23 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double())
+  fullName.vb: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector, VVector, System.Double())
   name.vb: GetDoseProfile(VVector, VVector, Double())
-- uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
-  id: GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
+  commentId: M:ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
+  id: GetDoseToPoint(VVector)
   parent: ESAPIX.Facade.API.Dose
   langs:
   - csharp
   - vb
   name: GetDoseToPoint(VVector)
   nameWithType: Dose.GetDoseToPoint(VVector)
-  fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
   type: Method
   source:
     id: GetDoseToPoint
     path: ''
-    startLine: 7742
+    startLine: 8794
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -718,9 +750,9 @@ items:
     content: public DoseValue GetDoseToPoint(VVector at)
     parameters:
     - id: at
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     content.vb: Public Function GetDoseToPoint(at As VVector) As DoseValue
   overload: ESAPIX.Facade.API.Dose.GetDoseToPoint*
   modifiers.csharp:
@@ -741,7 +773,7 @@ items:
   source:
     id: GetVoxels
     path: ''
-    startLine: 7749
+    startLine: 8801
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -775,7 +807,7 @@ items:
   source:
     id: SetVoxels
     path: ''
-    startLine: 7758
+    startLine: 8807
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -809,7 +841,7 @@ items:
   source:
     id: VoxelToDoseValue
     path: ''
-    startLine: 7767
+    startLine: 8813
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -819,7 +851,7 @@ items:
     - id: voxelValue
       type: System.Int32
     return:
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     content.vb: Public Function VoxelToDoseValue(voxelValue As Integer) As DoseValue
   overload: ESAPIX.Facade.API.Dose.VoxelToDoseValue*
   modifiers.csharp:
@@ -1271,59 +1303,61 @@ references:
   name: Dose
   nameWithType: Dose.Dose
   fullName: ESAPIX.Facade.API.Dose.Dose
+- uid: ESAPIX.Facade.API.Dose.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Dose.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Dose.IsLive
+  fullName: ESAPIX.Facade.API.Dose.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Dose.DoseMax3D*
   commentId: Overload:ESAPIX.Facade.API.Dose.DoseMax3D
   isExternal: false
   name: DoseMax3D
   nameWithType: Dose.DoseMax3D
   fullName: ESAPIX.Facade.API.Dose.DoseMax3D
-- uid: ESAPIX.Facade.Types.DoseValue
-  commentId: T:ESAPIX.Facade.Types.DoseValue
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: DoseValue
+  isExternal: true
   name: DoseValue
   nameWithType: DoseValue
-  fullName: ESAPIX.Facade.Types.DoseValue
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: DoseValue
 - uid: ESAPIX.Facade.API.Dose.DoseMax3DLocation*
   commentId: Overload:ESAPIX.Facade.API.Dose.DoseMax3DLocation
   isExternal: false
   name: DoseMax3DLocation
   nameWithType: Dose.DoseMax3DLocation
   fullName: ESAPIX.Facade.API.Dose.DoseMax3DLocation
-- uid: ESAPIX.Facade.Types.VVector
-  commentId: T:ESAPIX.Facade.Types.VVector
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: VVector
+  isExternal: true
   name: VVector
   nameWithType: VVector
-  fullName: ESAPIX.Facade.Types.VVector
+  fullName: VVector
 - uid: ESAPIX.Facade.API.Dose.Isodoses*
   commentId: Overload:ESAPIX.Facade.API.Dose.Isodoses
   isExternal: false
   name: Isodoses
   nameWithType: Dose.Isodoses
   fullName: ESAPIX.Facade.API.Dose.Isodoses
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Isodose}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Isodose}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.Isodose}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.Isodose}'
+  definition: IEnumerable`1
   name: IEnumerable<Isodose>
   nameWithType: IEnumerable<Isodose>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Isodose>
+  fullName: IEnumerable<ESAPIX.Facade.API.Isodose>
   nameWithType.vb: IEnumerable(Of Isodose)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Isodose)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.Isodose)
   name.vb: IEnumerable(Of Isodose)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1336,10 +1370,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1351,51 +1385,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.Dose.Origin*
   commentId: Overload:ESAPIX.Facade.API.Dose.Origin
   isExternal: false
@@ -1544,13 +1571,12 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: ESAPIX.Facade.Types.DoseProfile
-  commentId: T:ESAPIX.Facade.Types.DoseProfile
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: DoseProfile
+  commentId: '!:DoseProfile'
+  isExternal: true
   name: DoseProfile
   nameWithType: DoseProfile
-  fullName: ESAPIX.Facade.Types.DoseProfile
+  fullName: DoseProfile
 - uid: ESAPIX.Facade.API.Dose.GetDoseToPoint*
   commentId: Overload:ESAPIX.Facade.API.Dose.GetDoseToPoint
   isExternal: false

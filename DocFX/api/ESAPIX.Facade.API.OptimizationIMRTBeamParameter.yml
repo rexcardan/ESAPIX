@@ -11,6 +11,7 @@ items:
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter.BeamId
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Excluded
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter.FixedJaws
+  - ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter.SmoothX
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter.SmoothY
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter.WriteXml(System.Xml.XmlWriter)
@@ -24,7 +25,7 @@ items:
   source:
     id: OptimizationIMRTBeamParameter
     path: ''
-    startLine: 9272
+    startLine: 10846
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9274
+    startLine: 10848
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,7 +95,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9275
+    startLine: 10853
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -109,6 +110,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizationIMRTBeamParameter
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizationIMRTBeamParameter.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 10858
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Beam
   commentId: P:ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Beam
   id: Beam
@@ -123,7 +155,7 @@ items:
   source:
     id: Beam
     path: ''
-    startLine: 9276
+    startLine: 10863
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -154,7 +186,7 @@ items:
   source:
     id: BeamId
     path: ''
-    startLine: 9289
+    startLine: 10882
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -185,7 +217,7 @@ items:
   source:
     id: Excluded
     path: ''
-    startLine: 9302
+    startLine: 10897
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -216,7 +248,7 @@ items:
   source:
     id: FixedJaws
     path: ''
-    startLine: 9315
+    startLine: 10912
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -247,7 +279,7 @@ items:
   source:
     id: SmoothX
     path: ''
-    startLine: 9328
+    startLine: 10927
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -278,7 +310,7 @@ items:
   source:
     id: SmoothY
     path: ''
-    startLine: 9341
+    startLine: 10942
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -309,7 +341,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9354
+    startLine: 10957
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -736,6 +768,19 @@ references:
   name: OptimizationIMRTBeamParameter
   nameWithType: OptimizationIMRTBeamParameter.OptimizationIMRTBeamParameter
   fullName: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.OptimizationIMRTBeamParameter
+- uid: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: OptimizationIMRTBeamParameter.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Beam*
   commentId: Overload:ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Beam
   isExternal: false
@@ -768,13 +813,6 @@ references:
   name: Excluded
   nameWithType: OptimizationIMRTBeamParameter.Excluded
   fullName: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Excluded
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.FixedJaws*
   commentId: Overload:ESAPIX.Facade.API.OptimizationIMRTBeamParameter.FixedJaws
   isExternal: false

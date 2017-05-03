@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.CalculationResult.#ctor
   - ESAPIX.Facade.API.CalculationResult.#ctor(System.Object)
+  - ESAPIX.Facade.API.CalculationResult.IsLive
   - ESAPIX.Facade.API.CalculationResult.Success
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
   source:
     id: CalculationResult
     path: ''
-    startLine: 6611
+    startLine: 7210
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -57,7 +58,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6614
+    startLine: 7214
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -83,7 +84,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6615
+    startLine: 7219
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -98,6 +99,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.CalculationResult.IsLive
+  commentId: P:ESAPIX.Facade.API.CalculationResult.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.CalculationResult
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: CalculationResult.IsLive
+  fullName: ESAPIX.Facade.API.CalculationResult.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 7224
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.CalculationResult.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.CalculationResult.Success
   commentId: P:ESAPIX.Facade.API.CalculationResult.Success
   id: Success
@@ -112,7 +144,7 @@ items:
   source:
     id: Success
     path: ''
-    startLine: 6616
+    startLine: 7229
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -434,12 +466,12 @@ references:
   name: CalculationResult
   nameWithType: CalculationResult.CalculationResult
   fullName: ESAPIX.Facade.API.CalculationResult.CalculationResult
-- uid: ESAPIX.Facade.API.CalculationResult.Success*
-  commentId: Overload:ESAPIX.Facade.API.CalculationResult.Success
+- uid: ESAPIX.Facade.API.CalculationResult.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.CalculationResult.IsLive
   isExternal: false
-  name: Success
-  nameWithType: CalculationResult.Success
-  fullName: ESAPIX.Facade.API.CalculationResult.Success
+  name: IsLive
+  nameWithType: CalculationResult.IsLive
+  fullName: ESAPIX.Facade.API.CalculationResult.IsLive
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -447,3 +479,9 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: ESAPIX.Facade.API.CalculationResult.Success*
+  commentId: Overload:ESAPIX.Facade.API.CalculationResult.Success
+  isExternal: false
+  name: Success
+  nameWithType: CalculationResult.Success
+  fullName: ESAPIX.Facade.API.CalculationResult.Success

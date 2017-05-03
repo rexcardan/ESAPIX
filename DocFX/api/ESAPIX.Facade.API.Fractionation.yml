@@ -9,9 +9,10 @@ items:
   - ESAPIX.Facade.API.Fractionation.#ctor(System.Object)
   - ESAPIX.Facade.API.Fractionation.CreationDateTime
   - ESAPIX.Facade.API.Fractionation.DosePerFractionInPrimaryRefPoint
+  - ESAPIX.Facade.API.Fractionation.IsLive
   - ESAPIX.Facade.API.Fractionation.NumberOfFractions
   - ESAPIX.Facade.API.Fractionation.PrescribedDosePerFraction
-  - ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,ESAPIX.Facade.Types.DoseValue,System.Double)
+  - ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,DoseValue,System.Double)
   - ESAPIX.Facade.API.Fractionation.WriteXml(System.Xml.XmlWriter)
   langs:
   - csharp
@@ -23,7 +24,7 @@ items:
   source:
     id: Fractionation
     path: ''
-    startLine: 8575
+    startLine: 9928
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -72,7 +73,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8577
+    startLine: 9930
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -98,7 +99,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8578
+    startLine: 9935
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -113,6 +114,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Fractionation.IsLive
+  commentId: P:ESAPIX.Facade.API.Fractionation.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Fractionation
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Fractionation.IsLive
+  fullName: ESAPIX.Facade.API.Fractionation.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 9940
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Fractionation.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Fractionation.CreationDateTime
   commentId: P:ESAPIX.Facade.API.Fractionation.CreationDateTime
   id: CreationDateTime
@@ -127,7 +159,7 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 8579
+    startLine: 9945
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -158,7 +190,7 @@ items:
   source:
     id: DosePerFractionInPrimaryRefPoint
     path: ''
-    startLine: 8592
+    startLine: 9962
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -166,7 +198,7 @@ items:
     content: public DoseValue DosePerFractionInPrimaryRefPoint { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     content.vb: Public Property DosePerFractionInPrimaryRefPoint As DoseValue
   overload: ESAPIX.Facade.API.Fractionation.DosePerFractionInPrimaryRefPoint*
   modifiers.csharp:
@@ -189,7 +221,7 @@ items:
   source:
     id: NumberOfFractions
     path: ''
-    startLine: 8605
+    startLine: 9982
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -220,7 +252,7 @@ items:
   source:
     id: PrescribedDosePerFraction
     path: ''
-    startLine: 8618
+    startLine: 9999
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -228,7 +260,7 @@ items:
     content: public DoseValue PrescribedDosePerFraction { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     content.vb: Public Property PrescribedDosePerFraction As DoseValue
   overload: ESAPIX.Facade.API.Fractionation.PrescribedDosePerFraction*
   modifiers.csharp:
@@ -251,7 +283,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 8631
+    startLine: 10019
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -266,21 +298,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,ESAPIX.Facade.Types.DoseValue,System.Double)
-  commentId: M:ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,ESAPIX.Facade.Types.DoseValue,System.Double)
-  id: SetPrescription(System.Int32,ESAPIX.Facade.Types.DoseValue,System.Double)
+- uid: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,DoseValue,System.Double)
+  commentId: M:ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,DoseValue,System.Double)
+  id: SetPrescription(System.Int32,DoseValue,System.Double)
   parent: ESAPIX.Facade.API.Fractionation
   langs:
   - csharp
   - vb
   name: SetPrescription(Int32, DoseValue, Double)
   nameWithType: Fractionation.SetPrescription(Int32, DoseValue, Double)
-  fullName: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32, ESAPIX.Facade.Types.DoseValue, System.Double)
+  fullName: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32, DoseValue, System.Double)
   type: Method
   source:
     id: SetPrescription
     path: ''
-    startLine: 8640
+    startLine: 10025
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -290,7 +322,7 @@ items:
     - id: numberOfFractions
       type: System.Int32
     - id: prescribedDosePerFraction
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     - id: prescribedPercentage
       type: System.Double
     content.vb: Public Sub SetPrescription(numberOfFractions As Integer, prescribedDosePerFraction As DoseValue, prescribedPercentage As Double)
@@ -744,6 +776,19 @@ references:
   name: Fractionation
   nameWithType: Fractionation.Fractionation
   fullName: ESAPIX.Facade.API.Fractionation.Fractionation
+- uid: ESAPIX.Facade.API.Fractionation.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Fractionation.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Fractionation.IsLive
+  fullName: ESAPIX.Facade.API.Fractionation.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Fractionation.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.Fractionation.CreationDateTime
   isExternal: false
@@ -839,19 +884,11 @@ references:
   name: DosePerFractionInPrimaryRefPoint
   nameWithType: Fractionation.DosePerFractionInPrimaryRefPoint
   fullName: ESAPIX.Facade.API.Fractionation.DosePerFractionInPrimaryRefPoint
-- uid: ESAPIX.Facade.Types.DoseValue
-  commentId: T:ESAPIX.Facade.Types.DoseValue
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: DoseValue
+  isExternal: true
   name: DoseValue
   nameWithType: DoseValue
-  fullName: ESAPIX.Facade.Types.DoseValue
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: DoseValue
 - uid: ESAPIX.Facade.API.Fractionation.NumberOfFractions*
   commentId: Overload:ESAPIX.Facade.API.Fractionation.NumberOfFractions
   isExternal: false

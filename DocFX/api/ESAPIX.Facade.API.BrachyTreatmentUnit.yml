@@ -10,6 +10,7 @@ items:
   - ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   - ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
   - ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
   - ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
   - ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
   - ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
@@ -35,7 +36,7 @@ items:
   source:
     id: BrachyTreatmentUnit
     path: ''
-    startLine: 6372
+    startLine: 6883
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -84,7 +85,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6374
+    startLine: 6885
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -110,7 +111,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6375
+    startLine: 6890
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -125,6 +126,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BrachyTreatmentUnit.IsLive
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 6895
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   id: DoseRateMode
@@ -139,7 +171,7 @@ items:
   source:
     id: DoseRateMode
     path: ''
-    startLine: 6376
+    startLine: 6900
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -170,7 +202,7 @@ items:
   source:
     id: DwellTimeResolution
     path: ''
-    startLine: 6389
+    startLine: 6917
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -201,7 +233,7 @@ items:
   source:
     id: MachineInterface
     path: ''
-    startLine: 6402
+    startLine: 6934
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -232,7 +264,7 @@ items:
   source:
     id: MachineModel
     path: ''
-    startLine: 6415
+    startLine: 6951
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -263,7 +295,7 @@ items:
   source:
     id: MaxDwellTimePerChannel
     path: ''
-    startLine: 6428
+    startLine: 6968
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -294,7 +326,7 @@ items:
   source:
     id: MaxDwellTimePerPos
     path: ''
-    startLine: 6441
+    startLine: 6986
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -325,7 +357,7 @@ items:
   source:
     id: MaxDwellTimePerTreatment
     path: ''
-    startLine: 6454
+    startLine: 7003
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -356,7 +388,7 @@ items:
   source:
     id: MaximumChannelLength
     path: ''
-    startLine: 6467
+    startLine: 7023
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -387,7 +419,7 @@ items:
   source:
     id: MaximumDwellPositionsPerChannel
     path: ''
-    startLine: 6480
+    startLine: 7040
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -418,7 +450,7 @@ items:
   source:
     id: MaximumStepSize
     path: ''
-    startLine: 6493
+    startLine: 7060
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -449,7 +481,7 @@ items:
   source:
     id: MinimumChannelLength
     path: ''
-    startLine: 6506
+    startLine: 7077
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -480,7 +512,7 @@ items:
   source:
     id: MinimumStepSize
     path: ''
-    startLine: 6519
+    startLine: 7094
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -511,7 +543,7 @@ items:
   source:
     id: NumberOfChannels
     path: ''
-    startLine: 6532
+    startLine: 7111
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -542,7 +574,7 @@ items:
   source:
     id: SourceCenterOffsetFromTip
     path: ''
-    startLine: 6545
+    startLine: 7128
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -573,7 +605,7 @@ items:
   source:
     id: SourceMovementType
     path: ''
-    startLine: 6558
+    startLine: 7148
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -604,7 +636,7 @@ items:
   source:
     id: StepSizeResolution
     path: ''
-    startLine: 6571
+    startLine: 7165
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -635,7 +667,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6584
+    startLine: 7182
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -664,7 +696,7 @@ items:
   source:
     id: GetActiveRadioactiveSource
     path: ''
-    startLine: 6593
+    startLine: 7188
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1123,6 +1155,19 @@ references:
   name: BrachyTreatmentUnit
   nameWithType: BrachyTreatmentUnit.BrachyTreatmentUnit
   fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.BrachyTreatmentUnit
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: BrachyTreatmentUnit.IsLive
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode*
   commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   isExternal: false

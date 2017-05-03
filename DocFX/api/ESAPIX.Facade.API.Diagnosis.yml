@@ -10,6 +10,7 @@ items:
   - ESAPIX.Facade.API.Diagnosis.ClinicalDescription
   - ESAPIX.Facade.API.Diagnosis.Code
   - ESAPIX.Facade.API.Diagnosis.CodeTable
+  - ESAPIX.Facade.API.Diagnosis.IsLive
   - ESAPIX.Facade.API.Diagnosis.WriteXml(System.Xml.XmlWriter)
   langs:
   - csharp
@@ -21,7 +22,7 @@ items:
   source:
     id: Diagnosis
     path: ''
-    startLine: 7438
+    startLine: 8407
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -70,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7440
+    startLine: 8409
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,7 +97,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7441
+    startLine: 8414
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -111,6 +112,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Diagnosis.IsLive
+  commentId: P:ESAPIX.Facade.API.Diagnosis.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Diagnosis.IsLive
+  fullName: ESAPIX.Facade.API.Diagnosis.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 8419
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Diagnosis.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
   commentId: P:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
   id: ClinicalDescription
@@ -125,7 +157,7 @@ items:
   source:
     id: ClinicalDescription
     path: ''
-    startLine: 7442
+    startLine: 8424
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -156,7 +188,7 @@ items:
   source:
     id: Code
     path: ''
-    startLine: 7455
+    startLine: 8441
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -187,7 +219,7 @@ items:
   source:
     id: CodeTable
     path: ''
-    startLine: 7468
+    startLine: 8456
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -218,7 +250,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 7481
+    startLine: 8471
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -678,6 +710,19 @@ references:
   name: Diagnosis
   nameWithType: Diagnosis.Diagnosis
   fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis
+- uid: ESAPIX.Facade.API.Diagnosis.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Diagnosis.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Diagnosis.IsLive
+  fullName: ESAPIX.Facade.API.Diagnosis.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
   commentId: Overload:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
   isExternal: false

@@ -20,7 +20,7 @@ items:
   source:
     id: ScriptComThread
     path: ''
-    startLine: 355
+    startLine: 367
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -62,7 +62,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 359
+    startLine: 371
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -91,7 +91,7 @@ items:
   source:
     id: ThreadId
     path: ''
-    startLine: 364
+    startLine: 376
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -124,7 +124,7 @@ items:
   source:
     id: Dispose
     path: ''
-    startLine: 372
+    startLine: 378
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -152,7 +152,7 @@ items:
   source:
     id: Invoke
     path: ''
-    startLine: 377
+    startLine: 383
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -183,7 +183,7 @@ items:
   source:
     id: InvokeAsync
     path: ''
-    startLine: 382
+    startLine: 388
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -193,7 +193,7 @@ items:
     - id: action
       type: System.Action
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
     content.vb: Public Function InvokeAsync(action As Action) As Task
   overload: ESAPIX.AppKit.ScriptComThread.InvokeAsync*
   implements:
@@ -528,7 +528,6 @@ references:
   nameWithType: ScriptComThread.ScriptComThread
   fullName: ESAPIX.AppKit.ScriptComThread.ScriptComThread
 - uid: Dispatcher
-  commentId: '!:Dispatcher'
   isExternal: true
   name: Dispatcher
   nameWithType: Dispatcher
@@ -687,16 +686,8 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
+- uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: false
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  fullName: Task

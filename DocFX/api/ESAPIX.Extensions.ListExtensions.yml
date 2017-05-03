@@ -5,7 +5,7 @@ items:
   id: ListExtensions
   parent: ESAPIX.Extensions
   children:
-  - ESAPIX.Extensions.ListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  - ESAPIX.Extensions.ListExtensions.Swap``1(IList{``0},System.Int32,System.Int32)
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     id: ListExtensions
     path: ''
-    startLine: 3587
+    startLine: 3512
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -40,9 +40,9 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: ESAPIX.Extensions.ListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
-  commentId: M:ESAPIX.Extensions.ListExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
-  id: Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+- uid: ESAPIX.Extensions.ListExtensions.Swap``1(IList{``0},System.Int32,System.Int32)
+  commentId: M:ESAPIX.Extensions.ListExtensions.Swap``1(IList{``0},System.Int32,System.Int32)
+  id: Swap``1(IList{``0},System.Int32,System.Int32)
   isExtensionMethod: true
   parent: ESAPIX.Extensions.ListExtensions
   langs:
@@ -50,12 +50,12 @@ items:
   - vb
   name: Swap<T>(IList<T>, Int32, Int32)
   nameWithType: ListExtensions.Swap<T>(IList<T>, Int32, Int32)
-  fullName: ESAPIX.Extensions.ListExtensions.Swap<T>(System.Collections.Generic.IList<T>, System.Int32, System.Int32)
+  fullName: ESAPIX.Extensions.ListExtensions.Swap<T>(IList<T>, System.Int32, System.Int32)
   type: Method
   source:
     id: Swap
     path: ''
-    startLine: 3589
+    startLine: 3514
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -63,7 +63,7 @@ items:
     content: public static IList<T> Swap<T>(this IList<T> list, int indexA, int indexB)
     parameters:
     - id: list
-      type: System.Collections.Generic.IList{{T}}
+      type: IList{{T}}
     - id: indexA
       type: System.Int32
     - id: indexB
@@ -71,7 +71,7 @@ items:
     typeParameters:
     - id: T
     return:
-      type: System.Collections.Generic.IList{{T}}
+      type: IList{{T}}
     content.vb: >-
       <ExtensionAttribute>
 
@@ -84,7 +84,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: ESAPIX.Extensions.ListExtensions.Swap(Of T)(System.Collections.Generic.IList(Of T), System.Int32, System.Int32)
+  fullName.vb: ESAPIX.Extensions.ListExtensions.Swap(Of T)(IList(Of T), System.Int32, System.Int32)
   name.vb: Swap(Of T)(IList(Of T), Int32, Int32)
 references:
 - uid: ESAPIX.Extensions
@@ -391,21 +391,20 @@ references:
   name: Swap
   nameWithType: ListExtensions.Swap
   fullName: ESAPIX.Extensions.ListExtensions.Swap
-- uid: System.Collections.Generic.IList{{T}}
-  commentId: T:System.Collections.Generic.IList{``0}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IList`1
+- uid: IList{{T}}
+  commentId: '!:IList{``0}'
+  definition: IList`1
   name: IList<T>
   nameWithType: IList<T>
-  fullName: System.Collections.Generic.IList<T>
+  fullName: IList<T>
   nameWithType.vb: IList(Of T)
-  fullName.vb: System.Collections.Generic.IList(Of T)
+  fullName.vb: IList(Of T)
   name.vb: IList(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.IList`1
+  - uid: IList`1
     name: IList
     nameWithType: IList
-    fullName: System.Collections.Generic.IList
+    fullName: IList
     isExternal: true
   - name: <
     nameWithType: <
@@ -417,10 +416,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IList`1
+  - uid: IList`1
     name: IList
     nameWithType: IList
-    fullName: System.Collections.Generic.IList
+    fullName: IList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -438,48 +437,41 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: System.Collections.Generic.IList`1
-  commentId: T:System.Collections.Generic.IList`1
+- uid: IList`1
   isExternal: true
-  name: IList<T>
-  nameWithType: IList<T>
-  fullName: System.Collections.Generic.IList<T>
-  nameWithType.vb: IList(Of T)
-  fullName.vb: System.Collections.Generic.IList(Of T)
-  name.vb: IList(Of T)
+  name: IList<>
+  nameWithType: IList<>
+  fullName: IList<>
+  nameWithType.vb: IList(Of )
+  fullName.vb: IList(Of )
+  name.vb: IList(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IList`1
+  - uid: IList`1
     name: IList
     nameWithType: IList
-    fullName: System.Collections.Generic.IList
+    fullName: IList
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IList`1
+  - uid: IList`1
     name: IList
     nameWithType: IList
-    fullName: System.Collections.Generic.IList
+    fullName: IList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic

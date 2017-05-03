@@ -28,7 +28,7 @@ items:
   source:
     id: DoseStructureConstraint
     path: ''
-    startLine: 1933
+    startLine: 1941
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -81,7 +81,7 @@ items:
   source:
     id: StructureName
     path: ''
-    startLine: 1938
+    startLine: 1947
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -112,7 +112,7 @@ items:
   source:
     id: ConstraintDose
     path: ''
-    startLine: 1940
+    startLine: 1949
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -129,6 +129,103 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
+  id: Dose
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: DoseStructureConstraint.Dose
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 1963
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nThe dose value component of the constraint dose - Used for text storage\n"
+  example: []
+  syntax:
+    content: public double Dose { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Dose As Double
+  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+  id: Unit
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: DoseStructureConstraint.Unit
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+  type: Property
+  source:
+    id: Unit
+    path: ''
+    startLine: 1968
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  summary: "\nThe dose unit component of the constraint dose - Used for text storage\n"
+  example: []
+  syntax:
+    content: public DoseValue.DoseUnit Unit { get; set; }
+    parameters: []
+    return:
+      type: DoseValue.DoseUnit
+    content.vb: Public Property Unit As DoseValue.DoseUnit
+  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  id: StructureNames
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  langs:
+  - csharp
+  - vb
+  name: StructureNames
+  nameWithType: DoseStructureConstraint.StructureNames
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  type: Property
+  source:
+    id: StructureNames
+    path: ''
+    startLine: 1973
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Constraints
+  syntax:
+    content: public string[] StructureNames { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public ReadOnly Property StructureNames As String()
+  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
   commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
   id: Name
@@ -143,7 +240,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1947
+    startLine: 1976
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -178,7 +275,7 @@ items:
   source:
     id: FullName
     path: ''
-    startLine: 1948
+    startLine: 1977
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -197,72 +294,6 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
-  id: Dose
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  langs:
-  - csharp
-  - vb
-  name: Dose
-  nameWithType: DoseStructureConstraint.Dose
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
-  type: Property
-  source:
-    id: Dose
-    path: ''
-    startLine: 1953
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.DVH.Constraints
-  summary: "\nThe dose value component of the constraint dose - Used for text storage\n"
-  example: []
-  syntax:
-    content: public double Dose { get; set; }
-    parameters: []
-    return:
-      type: System.Double
-    content.vb: Public Property Dose As Double
-  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
-  id: Unit
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  langs:
-  - csharp
-  - vb
-  name: Unit
-  nameWithType: DoseStructureConstraint.Unit
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
-  type: Property
-  source:
-    id: Unit
-    path: ''
-    startLine: 1958
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.DVH.Constraints
-  summary: "\nThe dose unit component of the constraint dose - Used for text storage\n"
-  example: []
-  syntax:
-    content: public DoseValue.DoseUnit Unit { get; set; }
-    parameters: []
-    return:
-      type: DoseValue.DoseUnit
-    content.vb: Public Property Unit As DoseValue.DoseUnit
-  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   id: Priority
@@ -277,7 +308,7 @@ items:
   source:
     id: Priority
     path: ''
-    startLine: 1960
+    startLine: 1979
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -310,7 +341,7 @@ items:
   source:
     id: Constrain
     path: ''
-    startLine: 1962
+    startLine: 1981
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -345,7 +376,7 @@ items:
   source:
     id: CanConstrain
     path: ''
-    startLine: 1964
+    startLine: 1983
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -364,37 +395,36 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
-  id: StructureNames
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  id: GetFailedResultType
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
   langs:
   - csharp
   - vb
-  name: StructureNames
-  nameWithType: DoseStructureConstraint.StructureNames
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
-  type: Property
+  name: GetFailedResultType()
+  nameWithType: DoseStructureConstraint.GetFailedResultType()
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType()
+  type: Method
   source:
-    id: StructureNames
+    id: GetFailedResultType
     path: ''
-    startLine: 1989
+    startLine: 2009
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
-    content: public string[] StructureNames { get; }
-    parameters: []
+    content: public ResultType GetFailedResultType()
     return:
-      type: System.String[]
-    content.vb: Public ReadOnly Property StructureNames As String()
-  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames*
+      type: ESAPIX.DVH.Constraints.ResultType
+    content.vb: Public Function GetFailedResultType As ResultType
+  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType*
+  implements:
+  - ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
   modifiers.csharp:
   - public
-  - get
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   id: GetMergedDVH(PlanningItem)
@@ -409,7 +439,7 @@ items:
   source:
     id: GetMergedDVH
     path: ''
-    startLine: 2000
+    startLine: 2024
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -444,7 +474,7 @@ items:
   source:
     id: GetStructures
     path: ''
-    startLine: 2012
+    startLine: 2037
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -457,40 +487,10 @@ items:
       type: PlanningItem
       description: the planning item to query
     return:
-      type: System.Collections.Generic.IEnumerable{Structure}
+      type: IEnumerable{Structure}
       description: the collection of structures
     content.vb: Public Function GetStructures(pi As PlanningItem) As IEnumerable(Of  Structure)
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  id: GetFailedResultType
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  langs:
-  - csharp
-  - vb
-  name: GetFailedResultType()
-  nameWithType: DoseStructureConstraint.GetFailedResultType()
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType()
-  type: Method
-  source:
-    id: GetFailedResultType
-    path: ''
-    startLine: 2017
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.DVH.Constraints
-  syntax:
-    content: public ResultType GetFailedResultType()
-    return:
-      type: ESAPIX.DVH.Constraints.ResultType
-    content.vb: Public Function GetFailedResultType As ResultType
-  overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType*
-  implements:
-  - ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -832,6 +832,61 @@ references:
   name: DoseValue
   nameWithType: DoseValue
   fullName: DoseValue
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose*
+  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
+  isExternal: false
+  name: Dose
+  nameWithType: DoseStructureConstraint.Dose
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit*
+  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+  isExternal: false
+  name: Unit
+  nameWithType: DoseStructureConstraint.Unit
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+- uid: DoseValue.DoseUnit
+  isExternal: true
+  name: DoseValue.DoseUnit
+  nameWithType: DoseValue.DoseUnit
+  fullName: DoseValue.DoseUnit
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames*
+  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  isExternal: false
+  name: StructureNames
+  nameWithType: DoseStructureConstraint.StructureNames
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name*
   commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
   isExternal: false
@@ -858,30 +913,6 @@ references:
   name: FullName
   nameWithType: IConstraint.FullName
   fullName: ESAPIX.DVH.Constraints.IConstraint.FullName
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose*
-  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
-  isExternal: false
-  name: Dose
-  nameWithType: DoseStructureConstraint.Dose
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
-- uid: System.Double
-  commentId: T:System.Double
-  parent: System
-  isExternal: true
-  name: Double
-  nameWithType: Double
-  fullName: System.Double
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit*
-  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
-  isExternal: false
-  name: Unit
-  nameWithType: DoseStructureConstraint.Unit
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
-- uid: DoseValue.DoseUnit
-  isExternal: true
-  name: DoseValue.DoseUnit
-  nameWithType: DoseValue.DoseUnit
-  fullName: DoseValue.DoseUnit
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority*
   commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   isExternal: false
@@ -1004,163 +1035,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames*
-  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
-  isExternal: false
-  name: StructureNames
-  nameWithType: DoseStructureConstraint.StructureNames
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH*
-  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH
-  isExternal: false
-  name: GetMergedDVH
-  nameWithType: DoseStructureConstraint.GetMergedDVH
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH
-- uid: DVHPoint[]
-  name: DVHPoint[]
-  nameWithType: DVHPoint[]
-  fullName: DVHPoint[]
-  nameWithType.vb: DVHPoint()
-  fullName.vb: DVHPoint()
-  name.vb: DVHPoint()
-  spec.csharp:
-  - uid: DVHPoint
-    name: DVHPoint
-    nameWithType: DVHPoint
-    fullName: DVHPoint
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: DVHPoint
-    name: DVHPoint
-    nameWithType: DVHPoint
-    fullName: DVHPoint
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures*
-  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures
-  isExternal: false
-  name: GetStructures
-  nameWithType: DoseStructureConstraint.GetStructures
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures
-- uid: System.Collections.Generic.IEnumerable{Structure}
-  commentId: T:System.Collections.Generic.IEnumerable{Structure}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
-  name: IEnumerable<Structure>
-  nameWithType: IEnumerable<Structure>
-  fullName: System.Collections.Generic.IEnumerable<Structure>
-  nameWithType.vb: IEnumerable(Of Structure)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of Structure)
-  name.vb: IEnumerable(Of Structure)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: Structure
-    name: Structure
-    nameWithType: Structure
-    fullName: Structure
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: Structure
-    name: Structure
-    nameWithType: Structure
-    fullName: Structure
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
-  isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType*
   commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
   isExternal: false
@@ -1203,3 +1077,121 @@ references:
   name: ResultType
   nameWithType: ResultType
   fullName: ESAPIX.DVH.Constraints.ResultType
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH*
+  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH
+  isExternal: false
+  name: GetMergedDVH
+  nameWithType: DoseStructureConstraint.GetMergedDVH
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH
+- uid: DVHPoint[]
+  name: DVHPoint[]
+  nameWithType: DVHPoint[]
+  fullName: DVHPoint[]
+  nameWithType.vb: DVHPoint()
+  fullName.vb: DVHPoint()
+  name.vb: DVHPoint()
+  spec.csharp:
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: DVHPoint
+    name: DVHPoint
+    nameWithType: DVHPoint
+    fullName: DVHPoint
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures*
+  commentId: Overload:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures
+  isExternal: false
+  name: GetStructures
+  nameWithType: DoseStructureConstraint.GetStructures
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures
+- uid: IEnumerable{Structure}
+  commentId: '!:IEnumerable{Structure}'
+  definition: IEnumerable`1
+  name: IEnumerable<Structure>
+  nameWithType: IEnumerable<Structure>
+  fullName: IEnumerable<Structure>
+  nameWithType.vb: IEnumerable(Of Structure)
+  fullName.vb: IEnumerable(Of Structure)
+  name.vb: IEnumerable(Of Structure)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
