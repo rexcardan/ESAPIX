@@ -77,22 +77,23 @@
 </ul>
 </li>
 <li><strong>Right click</strong> the <em>Views</em> folder and select <strong>Add &gt;&gt; Window</strong>. Call it <em>MainView</em>.</li>
-<li>Copy and paste this into the XAML file, but replace YOURPROJECTNAME with your project name
-<code>xml
-&lt;Window x:Class=&quot;YOURPROJECTNAME.Views.MainView&quot;
-     xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
-     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-     xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
-     xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
-     xmlns:local=&quot;clr-namespace:ESAPIWPF.Views&quot;
-     mc:Ignorable=&quot;d&quot;
-     xmlns:prism=&quot;http://prismlibrary.com/&quot;
-     prism:ViewModelLocator.AutoWireViewModel=&quot;True&quot;
-     Title=&quot;MainView&quot; Height=&quot;300&quot; Width=&quot;300&quot;&gt;
- &lt;Grid&gt;
-     &lt;TextBlock Text=&quot;{Binding ESAPITest}&quot; FontSize=&quot;25&quot;/&gt;
- &lt;/Grid&gt;
-&lt;/Window&gt;</code></li>
+<li>Copy and paste this into the XAML file, but replace YOURPROJECTNAME with your project name</li>
+</ol>
+<pre><code class="lang-xml">&lt;Window x:Class=&quot;YOURPROJECTNAME.Views.MainView&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+        xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+        xmlns:local=&quot;clr-namespace:ESAPIWPF.Views&quot;
+        mc:Ignorable=&quot;d&quot;
+        xmlns:prism=&quot;http://prismlibrary.com/&quot;
+        prism:ViewModelLocator.AutoWireViewModel=&quot;True&quot;
+        Title=&quot;MainView&quot; Height=&quot;300&quot; Width=&quot;300&quot;&gt;
+    &lt;Grid&gt;
+        &lt;TextBlock Text=&quot;{Binding ESAPITest}&quot; FontSize=&quot;25&quot;/&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</code></pre><ol>
 <li><strong>Right click</strong> the <em>ViewModels</em> folder and select <strong>Add &gt;&gt; Class</strong>. Call it <em>MainViewModel</em>.</li>
 <li>Copy and paste this into the MainViewModel file, but replace YOURPROJECTNAME with your project name
 ```cs
