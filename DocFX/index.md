@@ -1,6 +1,6 @@
 <center>![Logo](images/esapixLogo.jpg "ESAPIX Logo")</center>
 
-Welcome to the ESAPIX library homepage. Kick start your Eclipse Scripting with a powerful, open source library. It provides:
+Welcome to the [ESAPIX library](https://github.com/rexcardan/ESAPIX/) homepage. Kick start your Eclipse Scripting with a powerful, open source library. It provides:
 
 * Extenstion Methods
 * Facade Access
@@ -8,8 +8,8 @@ Welcome to the ESAPIX library homepage. Kick start your Eclipse Scripting with a
 * Robust DVH Constraint classes
 
 ## Getting Started
-* [Supercharging Plugins](@articles/pluginBootstrapping.md)
-* [Supercharging WPF Applications](@articles/standAloneBootstrapping.md)
+* [Supercharging Plugins](articles/scriptBootstrapping.md)
+* [Supercharging WPF Applications](articles/standAloneBootstrapping.md)
 
 ## Features
 
@@ -36,5 +36,5 @@ ESAPIX has a lot of code dedicated to helping evaluate DVH metrics. You have the
 
 
 ### See Also
-*	[Facades](@articles/facades.md)
-*	[Mayo Format](@articles/mayoFormat.md)
+*	[Facades](articles/facades.md)
+*	[Mayo Format](articles/mayoFormat.md)
