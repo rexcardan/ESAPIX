@@ -723,18 +723,6 @@ references:
   commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.OnPropertyChanged
   fullName: ESAPIX.AppKit.Overlay.SelectPatient.OnPropertyChanged
   nameWithType: SelectPatient.OnPropertyChanged
-- uid: ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  name: PatientId
-  href: api/ESAPIX.AppKit.Overlay.SelectPatient.html
-  commentId: P:ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  fullName: ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  nameWithType: SelectPatient.PatientId
-- uid: ESAPIX.AppKit.Overlay.SelectPatient.PatientId*
-  name: PatientId
-  href: api/ESAPIX.AppKit.Overlay.SelectPatient.html
-  commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  fullName: ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  nameWithType: SelectPatient.PatientId
 - uid: ESAPIX.AppKit.Overlay.SelectPatient.PlanItems
   name: PlanItems
   href: api/ESAPIX.AppKit.Overlay.SelectPatient.html
@@ -753,6 +741,18 @@ references:
   commentId: E:ESAPIX.AppKit.Overlay.SelectPatient.PropertyChanged
   fullName: ESAPIX.AppKit.Overlay.SelectPatient.PropertyChanged
   nameWithType: SelectPatient.PropertyChanged
+- uid: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  name: SearchCommand
+  href: api/ESAPIX.AppKit.Overlay.SelectPatient.html
+  commentId: P:ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  fullName: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  nameWithType: SelectPatient.SearchCommand
+- uid: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand*
+  name: SearchCommand
+  href: api/ESAPIX.AppKit.Overlay.SelectPatient.html
+  commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  fullName: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  nameWithType: SelectPatient.SearchCommand
 - uid: ESAPIX.AppKit.Overlay.SelectPatient.SelectedCourse
   name: SelectedCourse
   href: api/ESAPIX.AppKit.Overlay.SelectPatient.html
@@ -1047,6 +1047,18 @@ references:
   commentId: Overload:ESAPIX.AppKit.PluginContext.Thread
   fullName: ESAPIX.AppKit.PluginContext.Thread
   nameWithType: PluginContext.Thread
+- uid: ESAPIX.AppKit.PluginContext.UIDispatcher
+  name: UIDispatcher
+  href: api/ESAPIX.AppKit.PluginContext.html
+  commentId: P:ESAPIX.AppKit.PluginContext.UIDispatcher
+  fullName: ESAPIX.AppKit.PluginContext.UIDispatcher
+  nameWithType: PluginContext.UIDispatcher
+- uid: ESAPIX.AppKit.PluginContext.UIDispatcher*
+  name: UIDispatcher
+  href: api/ESAPIX.AppKit.PluginContext.html
+  commentId: Overload:ESAPIX.AppKit.PluginContext.UIDispatcher
+  fullName: ESAPIX.AppKit.PluginContext.UIDispatcher
+  nameWithType: PluginContext.UIDispatcher
 - uid: ESAPIX.AppKit.ScriptBootstrapper`1
   name: ScriptBootstrapper<T>
   href: api/ESAPIX.AppKit.ScriptBootstrapper-1.html
@@ -1721,30 +1733,42 @@ references:
   commentId: Overload:ESAPIX.AppKit.StandAloneContext.Thread
   fullName: ESAPIX.AppKit.StandAloneContext.Thread
   nameWithType: StandAloneContext.Thread
+- uid: ESAPIX.AppKit.StandAloneContext.UIDispatcher
+  name: UIDispatcher
+  href: api/ESAPIX.AppKit.StandAloneContext.html
+  commentId: P:ESAPIX.AppKit.StandAloneContext.UIDispatcher
+  fullName: ESAPIX.AppKit.StandAloneContext.UIDispatcher
+  nameWithType: StandAloneContext.UIDispatcher
+- uid: ESAPIX.AppKit.StandAloneContext.UIDispatcher*
+  name: UIDispatcher
+  href: api/ESAPIX.AppKit.StandAloneContext.html
+  commentId: Overload:ESAPIX.AppKit.StandAloneContext.UIDispatcher
+  fullName: ESAPIX.AppKit.StandAloneContext.UIDispatcher
+  nameWithType: StandAloneContext.UIDispatcher
 - uid: ESAPIX.AppKit.XScriptBase
   name: XScriptBase
   href: api/ESAPIX.AppKit.XScriptBase.html
   commentId: T:ESAPIX.AppKit.XScriptBase
   fullName: ESAPIX.AppKit.XScriptBase
   nameWithType: XScriptBase
-- uid: ESAPIX.AppKit.XScriptBase.Execute(ScriptContext,Window)
-  name: Execute(ScriptContext, Window)
+- uid: ESAPIX.AppKit.XScriptBase.Execute(System.Object,Window)
+  name: Execute(Object, Window)
   href: api/ESAPIX.AppKit.XScriptBase.html
-  commentId: M:ESAPIX.AppKit.XScriptBase.Execute(ScriptContext,Window)
-  fullName: ESAPIX.AppKit.XScriptBase.Execute(ScriptContext, Window)
-  nameWithType: XScriptBase.Execute(ScriptContext, Window)
+  commentId: M:ESAPIX.AppKit.XScriptBase.Execute(System.Object,Window)
+  fullName: ESAPIX.AppKit.XScriptBase.Execute(System.Object, Window)
+  nameWithType: XScriptBase.Execute(Object, Window)
 - uid: ESAPIX.AppKit.XScriptBase.Execute*
   name: Execute
   href: api/ESAPIX.AppKit.XScriptBase.html
   commentId: Overload:ESAPIX.AppKit.XScriptBase.Execute
   fullName: ESAPIX.AppKit.XScriptBase.Execute
   nameWithType: XScriptBase.Execute
-- uid: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,Window)
-  name: XExecute(PluginContext, Window)
+- uid: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,DispatcherFrame)
+  name: XExecute(PluginContext, DispatcherFrame)
   href: api/ESAPIX.AppKit.XScriptBase.html
-  commentId: M:ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,Window)
-  fullName: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext, Window)
-  nameWithType: XScriptBase.XExecute(PluginContext, Window)
+  commentId: M:ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,DispatcherFrame)
+  fullName: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext, DispatcherFrame)
+  nameWithType: XScriptBase.XExecute(PluginContext, DispatcherFrame)
 - uid: ESAPIX.AppKit.XScriptBase.XExecute*
   name: XExecute
   href: api/ESAPIX.AppKit.XScriptBase.html
@@ -5309,13 +5333,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Beam.CalculationLogs
   fullName: ESAPIX.Facade.API.Beam.CalculationLogs
   nameWithType: Beam.CalculationLogs
-- uid: ESAPIX.Facade.API.Beam.CanSetOptimalFluence(ESAPIX.Facade.Types.Fluence,System.String@)
+- uid: ESAPIX.Facade.API.Beam.CanSetOptimalFluence(Fluence,System.String@)
   name: CanSetOptimalFluence(Fluence, out String)
   href: api/ESAPIX.Facade.API.Beam.html
-  commentId: M:ESAPIX.Facade.API.Beam.CanSetOptimalFluence(ESAPIX.Facade.Types.Fluence,System.String@)
+  commentId: M:ESAPIX.Facade.API.Beam.CanSetOptimalFluence(Fluence,System.String@)
   name.vb: CanSetOptimalFluence(Fluence, ByRef String)
-  fullName: ESAPIX.Facade.API.Beam.CanSetOptimalFluence(ESAPIX.Facade.Types.Fluence, out System.String)
-  fullName.vb: ESAPIX.Facade.API.Beam.CanSetOptimalFluence(ESAPIX.Facade.Types.Fluence, ByRef System.String)
+  fullName: ESAPIX.Facade.API.Beam.CanSetOptimalFluence(Fluence, out System.String)
+  fullName.vb: ESAPIX.Facade.API.Beam.CanSetOptimalFluence(Fluence, ByRef System.String)
   nameWithType: Beam.CanSetOptimalFluence(Fluence, out String)
   nameWithType.vb: Beam.CanSetOptimalFluence(Fluence, ByRef String)
 - uid: ESAPIX.Facade.API.Beam.CanSetOptimalFluence*
@@ -5636,11 +5660,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Beam.ReferenceImage
   fullName: ESAPIX.Facade.API.Beam.ReferenceImage
   nameWithType: Beam.ReferenceImage
-- uid: ESAPIX.Facade.API.Beam.SetOptimalFluence(ESAPIX.Facade.Types.Fluence)
+- uid: ESAPIX.Facade.API.Beam.SetOptimalFluence(Fluence)
   name: SetOptimalFluence(Fluence)
   href: api/ESAPIX.Facade.API.Beam.html
-  commentId: M:ESAPIX.Facade.API.Beam.SetOptimalFluence(ESAPIX.Facade.Types.Fluence)
-  fullName: ESAPIX.Facade.API.Beam.SetOptimalFluence(ESAPIX.Facade.Types.Fluence)
+  commentId: M:ESAPIX.Facade.API.Beam.SetOptimalFluence(Fluence)
+  fullName: ESAPIX.Facade.API.Beam.SetOptimalFluence(Fluence)
   nameWithType: Beam.SetOptimalFluence(Fluence)
 - uid: ESAPIX.Facade.API.Beam.SetOptimalFluence*
   name: SetOptimalFluence
@@ -5975,13 +5999,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions
   fullName: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions
   nameWithType: BeamParameters.SetAllLeafPositions
-- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect{System.Double})
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect{System.Double})
   name: SetJawPositions(VRect<Double>)
   href: api/ESAPIX.Facade.API.BeamParameters.html
-  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect{System.Double})
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect{System.Double})
   name.vb: SetJawPositions(VRect(Of Double))
-  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect<System.Double>)
-  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(ESAPIX.Facade.Types.VRect(Of System.Double))
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect<System.Double>)
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect(Of System.Double))
   nameWithType: BeamParameters.SetJawPositions(VRect<Double>)
   nameWithType.vb: BeamParameters.SetJawPositions(VRect(Of Double))
 - uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
@@ -7274,6 +7298,18 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.Count
   fullName: ESAPIX.Facade.API.ControlPointCollection.Count
   nameWithType: ControlPointCollection.Count
+- uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  name: GetEnumerator()
+  href: api/ESAPIX.Facade.API.ControlPointCollection.html
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator()
+  nameWithType: ControlPointCollection.GetEnumerator()
+- uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
+  name: GetEnumerator
+  href: api/ESAPIX.Facade.API.ControlPointCollection.html
+  commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  nameWithType: ControlPointCollection.GetEnumerator
 - uid: ESAPIX.Facade.API.ControlPointCollection.IsLive
   name: IsLive
   href: api/ESAPIX.Facade.API.ControlPointCollection.html
@@ -7817,13 +7853,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Dose.DoseMax3DLocation
   fullName: ESAPIX.Facade.API.Dose.DoseMax3DLocation
   nameWithType: Dose.DoseMax3DLocation
-- uid: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+- uid: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
   name: GetDoseProfile(VVector, VVector, Double[])
   href: api/ESAPIX.Facade.API.Dose.html
-  commentId: M:ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+  commentId: M:ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
   name.vb: GetDoseProfile(VVector, VVector, Double())
-  fullName: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double[])
-  fullName.vb: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double())
+  fullName: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector, VVector, System.Double[])
+  fullName.vb: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector, VVector, System.Double())
   nameWithType: Dose.GetDoseProfile(VVector, VVector, Double[])
   nameWithType.vb: Dose.GetDoseProfile(VVector, VVector, Double())
 - uid: ESAPIX.Facade.API.Dose.GetDoseProfile*
@@ -7832,11 +7868,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Dose.GetDoseProfile
   fullName: ESAPIX.Facade.API.Dose.GetDoseProfile
   nameWithType: Dose.GetDoseProfile
-- uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
   name: GetDoseToPoint(VVector)
   href: api/ESAPIX.Facade.API.Dose.html
-  commentId: M:ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
-  fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
+  fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
   nameWithType: Dose.GetDoseToPoint(VVector)
 - uid: ESAPIX.Facade.API.Dose.GetDoseToPoint*
   name: GetDoseToPoint
@@ -8645,13 +8681,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.#ctor
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.ExternalPlanSetup
   nameWithType: ExternalPlanSetup.ExternalPlanSetup
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   name: AddArcBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   name.vb: AddArcBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect<System.Double>, System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect(Of System.Double), System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   nameWithType.vb: ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam*
@@ -8660,11 +8696,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam
   nameWithType: ExternalPlanSetup.AddArcBeam
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,GantryDirection,System.Double,VVector)
   name: AddConformalArcBeam(ExternalBeamMachineParameters, Double, Int32, Double, Double, GantryDirection, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Double, System.Int32, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters,System.Double,System.Int32,System.Double,System.Double,GantryDirection,System.Double,VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters, System.Double, System.Int32, System.Double, System.Double, GantryDirection, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddConformalArcBeam(ExternalBeamMachineParameters, Double, Int32, Double, Double, GantryDirection, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam*
   name: AddConformalArcBeam
@@ -8672,13 +8708,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam
   nameWithType: ExternalPlanSetup.AddConformalArcBeam
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   name: AddMLCArcBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   name.vb: AddMLCArcBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single[,], ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single(,), ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, System.Single[,], VRect<System.Double>, System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, System.Single(,), VRect(Of System.Double), System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   nameWithType.vb: ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam*
@@ -8687,13 +8723,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam
   nameWithType: ExternalPlanSetup.AddMLCArcBeam
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,VVector)
   name: AddMLCBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,System.Single[0:,0:],ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters,System.Single[0:,0:],VRect{System.Double},System.Double,System.Double,System.Double,VVector)
   name.vb: AddMLCBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single[,], ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, System.Single(,), ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, System.Single[,], VRect<System.Double>, System.Double, System.Double, System.Double, VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, System.Single(,), VRect(Of System.Double), System.Double, System.Double, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, Single[,], VRect<Double>, Double, Double, Double, VVector)
   nameWithType.vb: ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam*
@@ -8702,13 +8738,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam
   nameWithType: ExternalPlanSetup.AddMLCBeam
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
   name: AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
   name.vb: AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
   nameWithType.vb: ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam*
@@ -8717,13 +8753,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam
   nameWithType: ExternalPlanSetup.AddMultipleStaticSegmentBeam
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
   name: AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,VVector)
   name.vb: AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, VVector)
   nameWithType.vb: ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam*
@@ -8732,13 +8768,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam
   nameWithType: ExternalPlanSetup.AddSlidingWindowBeam
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,VVector)
   name: AddStaticBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,ESAPIX.Facade.Types.VRect{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters,VRect{System.Double},System.Double,System.Double,System.Double,VVector)
   name.vb: AddStaticBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, ESAPIX.Facade.Types.VRect(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect<System.Double>, System.Double, System.Double, System.Double, VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect(Of System.Double), System.Double, System.Double, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect<Double>, Double, Double, Double, VVector)
   nameWithType.vb: ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam*
@@ -8747,13 +8783,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam
   nameWithType: ExternalPlanSetup.AddStaticBeam
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   name: AddVMATBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,ESAPIX.Facade.Types.GantryDirection,System.Double,ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters,IEnumerable{System.Double},System.Double,System.Double,System.Double,GantryDirection,System.Double,VVector)
   name.vb: AddVMATBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ESAPIX.Facade.Types.ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, ESAPIX.Facade.Types.GantryDirection, System.Double, ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable<System.Double>, System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable(Of System.Double), System.Double, System.Double, System.Double, GantryDirection, System.Double, VVector)
   nameWithType: ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable<Double>, Double, Double, Double, GantryDirection, Double, VVector)
   nameWithType.vb: ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam*
@@ -8774,13 +8810,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose
   nameWithType: ExternalPlanSetup.CalculateDose
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List{KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}})
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List{KeyValuePair{System.String,MetersetValue}})
   name: CalculateDoseWithPresetValues(List<KeyValuePair<String, MetersetValue>>)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List{KeyValuePair{System.String,ESAPIX.Facade.Types.MetersetValue}})
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List{KeyValuePair{System.String,MetersetValue}})
   name.vb: CalculateDoseWithPresetValues(List(Of KeyValuePair(Of String, MetersetValue)))
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List<KeyValuePair<System.String, ESAPIX.Facade.Types.MetersetValue>>)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List(Of KeyValuePair(Of System.String, ESAPIX.Facade.Types.MetersetValue)))
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List<KeyValuePair<System.String, MetersetValue>>)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues(List(Of KeyValuePair(Of System.String, MetersetValue)))
   nameWithType: ExternalPlanSetup.CalculateDoseWithPresetValues(List<KeyValuePair<String, MetersetValue>>)
   nameWithType.vb: ExternalPlanSetup.CalculateDoseWithPresetValues(List(Of KeyValuePair(Of String, MetersetValue)))
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues*
@@ -8789,13 +8825,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues
   nameWithType: ExternalPlanSetup.CalculateDoseWithPresetValues
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,Dictionary{System.String,ESAPIX.Facade.Types.DoseValue},Dictionary{System.String,System.String})
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,Dictionary{System.String,DoseValue},Dictionary{System.String,System.String})
   name: CalculateDVHEstimates(String, Dictionary<String, DoseValue>, Dictionary<String, String>)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,Dictionary{System.String,ESAPIX.Facade.Types.DoseValue},Dictionary{System.String,System.String})
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String,Dictionary{System.String,DoseValue},Dictionary{System.String,System.String})
   name.vb: CalculateDVHEstimates(String, Dictionary(Of String, DoseValue), Dictionary(Of String, String))
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, Dictionary<System.String, ESAPIX.Facade.Types.DoseValue>, Dictionary<System.String, System.String>)
-  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, Dictionary(Of System.String, ESAPIX.Facade.Types.DoseValue), Dictionary(Of System.String, System.String))
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, Dictionary<System.String, DoseValue>, Dictionary<System.String, System.String>)
+  fullName.vb: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates(System.String, Dictionary(Of System.String, DoseValue), Dictionary(Of System.String, System.String))
   nameWithType: ExternalPlanSetup.CalculateDVHEstimates(String, Dictionary<String, DoseValue>, Dictionary<String, String>)
   nameWithType.vb: ExternalPlanSetup.CalculateDVHEstimates(String, Dictionary(Of String, DoseValue), Dictionary(Of String, String))
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates*
@@ -8810,23 +8846,23 @@ references:
   commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions()
   nameWithType: ExternalPlanSetup.CalculateLeafMotions()
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
   name: CalculateLeafMotions(LMCMSSOptions)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCMSSOptions)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
   nameWithType: ExternalPlanSetup.CalculateLeafMotions(LMCMSSOptions)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
   name: CalculateLeafMotions(LMCVOptions)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.LMCVOptions)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
   nameWithType: ExternalPlanSetup.CalculateLeafMotions(LMCVOptions)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
   name: CalculateLeafMotions(SmartLMCOptions)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(ESAPIX.Facade.Types.SmartLMCOptions)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
   nameWithType: ExternalPlanSetup.CalculateLeafMotions(SmartLMCOptions)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions*
   name: CalculateLeafMotions
@@ -8870,11 +8906,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose
   nameWithType: ExternalPlanSetup.DoseAsEvaluationDose
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
   name: GetModelsForCalculationType(CalculationType)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(ESAPIX.Facade.Types.CalculationType)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
   nameWithType: ExternalPlanSetup.GetModelsForCalculationType(CalculationType)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType*
   name: GetModelsForCalculationType
@@ -8900,11 +8936,11 @@ references:
   commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize()
   nameWithType: ExternalPlanSetup.Optimize()
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
   name: Optimize(OptimizationOptionsIMRT)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(ESAPIX.Facade.Types.OptimizationOptionsIMRT)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
   nameWithType: ExternalPlanSetup.Optimize(OptimizationOptionsIMRT)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32)
   name: Optimize(Int32)
@@ -8912,17 +8948,17 @@ references:
   commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32)
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32)
   nameWithType: ExternalPlanSetup.Optimize(Int32)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption)
   name: Optimize(Int32, OptimizationOption)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, ESAPIX.Facade.Types.OptimizationOption)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, OptimizationOption)
   nameWithType: ExternalPlanSetup.Optimize(Int32, OptimizationOption)
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.String)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption,System.String)
   name: Optimize(Int32, OptimizationOption, String)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,ESAPIX.Facade.Types.OptimizationOption,System.String)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, ESAPIX.Facade.Types.OptimizationOption, System.String)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32,OptimizationOption,System.String)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.Optimize(System.Int32, OptimizationOption, System.String)
   nameWithType: ExternalPlanSetup.Optimize(Int32, OptimizationOption, String)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.Optimize*
   name: Optimize
@@ -8936,11 +8972,11 @@ references:
   commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT
   fullName: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT()
   nameWithType: ExternalPlanSetup.OptimizeVMAT()
-- uid: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
+- uid: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
   name: OptimizeVMAT(OptimizationOptionsVMAT)
   href: api/ESAPIX.Facade.API.ExternalPlanSetup.html
-  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(ESAPIX.Facade.Types.OptimizationOptionsVMAT)
+  commentId: M:ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
   nameWithType: ExternalPlanSetup.OptimizeVMAT(OptimizationOptionsVMAT)
 - uid: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT(System.String)
   name: OptimizeVMAT(String)
@@ -9194,11 +9230,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Fractionation.PrescribedDosePerFraction
   fullName: ESAPIX.Facade.API.Fractionation.PrescribedDosePerFraction
   nameWithType: Fractionation.PrescribedDosePerFraction
-- uid: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,ESAPIX.Facade.Types.DoseValue,System.Double)
+- uid: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,DoseValue,System.Double)
   name: SetPrescription(Int32, DoseValue, Double)
   href: api/ESAPIX.Facade.API.Fractionation.html
-  commentId: M:ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,ESAPIX.Facade.Types.DoseValue,System.Double)
-  fullName: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32, ESAPIX.Facade.Types.DoseValue, System.Double)
+  commentId: M:ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32,DoseValue,System.Double)
+  fullName: ESAPIX.Facade.API.Fractionation.SetPrescription(System.Int32, DoseValue, System.Double)
   nameWithType: Fractionation.SetPrescription(Int32, DoseValue, Double)
 - uid: ESAPIX.Facade.API.Fractionation.SetPrescription*
   name: SetPrescription
@@ -9338,11 +9374,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Image.CreationDateTime
   fullName: ESAPIX.Facade.API.Image.CreationDateTime
   nameWithType: Image.CreationDateTime
-- uid: ESAPIX.Facade.API.Image.DicomToUser(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
+- uid: ESAPIX.Facade.API.Image.DicomToUser(VVector,ESAPIX.Facade.API.PlanSetup)
   name: DicomToUser(VVector, PlanSetup)
   href: api/ESAPIX.Facade.API.Image.html
-  commentId: M:ESAPIX.Facade.API.Image.DicomToUser(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
-  fullName: ESAPIX.Facade.API.Image.DicomToUser(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.API.PlanSetup)
+  commentId: M:ESAPIX.Facade.API.Image.DicomToUser(VVector,ESAPIX.Facade.API.PlanSetup)
+  fullName: ESAPIX.Facade.API.Image.DicomToUser(VVector, ESAPIX.Facade.API.PlanSetup)
   nameWithType: Image.DicomToUser(VVector, PlanSetup)
 - uid: ESAPIX.Facade.API.Image.DicomToUser*
   name: DicomToUser
@@ -9374,13 +9410,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Image.FOR
   fullName: ESAPIX.Facade.API.Image.FOR
   nameWithType: Image.FOR
-- uid: ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+- uid: ESAPIX.Facade.API.Image.GetImageProfile(VVector,VVector,System.Double[])
   name: GetImageProfile(VVector, VVector, Double[])
   href: api/ESAPIX.Facade.API.Image.html
-  commentId: M:ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+  commentId: M:ESAPIX.Facade.API.Image.GetImageProfile(VVector,VVector,System.Double[])
   name.vb: GetImageProfile(VVector, VVector, Double())
-  fullName: ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double[])
-  fullName.vb: ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double())
+  fullName: ESAPIX.Facade.API.Image.GetImageProfile(VVector, VVector, System.Double[])
+  fullName.vb: ESAPIX.Facade.API.Image.GetImageProfile(VVector, VVector, System.Double())
   nameWithType: Image.GetImageProfile(VVector, VVector, Double[])
   nameWithType.vb: Image.GetImageProfile(VVector, VVector, Double())
 - uid: ESAPIX.Facade.API.Image.GetImageProfile*
@@ -9512,11 +9548,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Image.UserOriginComments
   fullName: ESAPIX.Facade.API.Image.UserOriginComments
   nameWithType: Image.UserOriginComments
-- uid: ESAPIX.Facade.API.Image.UserToDicom(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
+- uid: ESAPIX.Facade.API.Image.UserToDicom(VVector,ESAPIX.Facade.API.PlanSetup)
   name: UserToDicom(VVector, PlanSetup)
   href: api/ESAPIX.Facade.API.Image.html
-  commentId: M:ESAPIX.Facade.API.Image.UserToDicom(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
-  fullName: ESAPIX.Facade.API.Image.UserToDicom(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.API.PlanSetup)
+  commentId: M:ESAPIX.Facade.API.Image.UserToDicom(VVector,ESAPIX.Facade.API.PlanSetup)
+  fullName: ESAPIX.Facade.API.Image.UserToDicom(VVector, ESAPIX.Facade.API.PlanSetup)
   nameWithType: Image.UserToDicom(VVector, PlanSetup)
 - uid: ESAPIX.Facade.API.Image.UserToDicom*
   name: UserToDicom
@@ -10640,11 +10676,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter
   fullName: ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter
   nameWithType: OptimizationSetup.AddBeamSpecificParameter
-- uid: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
   name: AddEUDObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
   href: api/ESAPIX.Facade.API.OptimizationSetup.html
-  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
-  fullName: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator, ESAPIX.Facade.Types.DoseValue, System.Double, System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure, OptimizationObjectiveOperator, DoseValue, System.Double, System.Double)
   nameWithType: OptimizationSetup.AddEUDObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
 - uid: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective*
   name: AddEUDObjective
@@ -10652,11 +10688,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective
   fullName: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective
   nameWithType: OptimizationSetup.AddEUDObjective
-- uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,DoseValue,System.Double)
   name: AddMeanDoseObjective(Structure, DoseValue, Double)
   href: api/ESAPIX.Facade.API.OptimizationSetup.html
-  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
-  fullName: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.DoseValue, System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,DoseValue,System.Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure, DoseValue, System.Double)
   nameWithType: OptimizationSetup.AddMeanDoseObjective(Structure, DoseValue, Double)
 - uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective*
   name: AddMeanDoseObjective
@@ -10676,11 +10712,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective
   fullName: ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective
   nameWithType: OptimizationSetup.AddNormalTissueObjective
-- uid: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
   name: AddPointObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
   href: api/ESAPIX.Facade.API.OptimizationSetup.html
-  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
-  fullName: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator, ESAPIX.Facade.Types.DoseValue, System.Double, System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure, OptimizationObjectiveOperator, DoseValue, System.Double, System.Double)
   nameWithType: OptimizationSetup.AddPointObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
 - uid: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective*
   name: AddPointObjective
@@ -11024,11 +11060,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Patient.AddCourse
   fullName: ESAPIX.Facade.API.Patient.AddCourse
   nameWithType: Patient.AddCourse
-- uid: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+- uid: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
   name: AddEmptyPhantom(String, PatientOrientation, Int32, Int32, Double, Double, Int32, Double)
   href: api/ESAPIX.Facade.API.Patient.html
-  commentId: M:ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
-  fullName: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String, ESAPIX.Facade.Types.PatientOrientation, System.Int32, System.Int32, System.Double, System.Double, System.Int32, System.Double)
+  commentId: M:ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  fullName: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String, PatientOrientation, System.Int32, System.Int32, System.Double, System.Double, System.Int32, System.Double)
   nameWithType: Patient.AddEmptyPhantom(String, PatientOrientation, Int32, Int32, Double, Double, Int32, Double)
 - uid: ESAPIX.Facade.API.Patient.AddEmptyPhantom*
   name: AddEmptyPhantom
@@ -11591,11 +11627,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
   fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
   nameWithType: PlanningItem.DoseValuePresentation
-- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValuePresentation,ESAPIX.Facade.Types.VolumePresentation,System.Double)
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
   name: GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
   href: api/ESAPIX.Facade.API.PlanningItem.html
-  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValuePresentation,ESAPIX.Facade.Types.VolumePresentation,System.Double)
-  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.DoseValuePresentation, ESAPIX.Facade.Types.VolumePresentation, System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, DoseValuePresentation, VolumePresentation, System.Double)
   nameWithType: PlanningItem.GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
 - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
   name: GetDVHCumulativeData
@@ -11723,11 +11759,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.PlanSetup.Beams
   fullName: ESAPIX.Facade.API.PlanSetup.Beams
   nameWithType: PlanSetup.Beams
-- uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
+- uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
   name: ClearCalculationModel(CalculationType)
   href: api/ESAPIX.Facade.API.PlanSetup.html
-  commentId: M:ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
-  fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
+  fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
   nameWithType: PlanSetup.ClearCalculationModel(CalculationType)
 - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel*
   name: ClearCalculationModel
@@ -11795,11 +11831,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
   fullName: ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
   nameWithType: PlanSetup.ElectronCalculationOptions
-- uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
+- uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
   name: GetCalculationModel(CalculationType)
   href: api/ESAPIX.Facade.API.PlanSetup.html
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(ESAPIX.Facade.Types.CalculationType)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
   nameWithType: PlanSetup.GetCalculationModel(CalculationType)
 - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel*
   name: GetCalculationModel
@@ -11834,11 +11870,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.PlanSetup.GetCalculationOptions
   fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationOptions
   nameWithType: PlanSetup.GetCalculationOptions
-- uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,ESAPIX.Facade.Types.VolumePresentation,ESAPIX.Facade.Types.DoseValuePresentation)
+- uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
   name: GetDoseAtVolume(Structure, Double, VolumePresentation, DoseValuePresentation)
   href: api/ESAPIX.Facade.API.PlanSetup.html
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,ESAPIX.Facade.Types.VolumePresentation,ESAPIX.Facade.Types.DoseValuePresentation)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, ESAPIX.Facade.Types.VolumePresentation, ESAPIX.Facade.Types.DoseValuePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, VolumePresentation, DoseValuePresentation)
   nameWithType: PlanSetup.GetDoseAtVolume(Structure, Double, VolumePresentation, DoseValuePresentation)
 - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume*
   name: GetDoseAtVolume
@@ -11846,11 +11882,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
   fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
   nameWithType: PlanSetup.GetDoseAtVolume
-- uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,ESAPIX.Facade.Types.VolumePresentation)
+- uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
   name: GetVolumeAtDose(Structure, DoseValue, VolumePresentation)
   href: api/ESAPIX.Facade.API.PlanSetup.html
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,ESAPIX.Facade.Types.VolumePresentation)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.DoseValue, ESAPIX.Facade.Types.VolumePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure, DoseValue, VolumePresentation)
   nameWithType: PlanSetup.GetVolumeAtDose(Structure, DoseValue, VolumePresentation)
 - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose*
   name: GetVolumeAtDose
@@ -12122,11 +12158,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.PlanSetup.SeriesUID
   fullName: ESAPIX.Facade.API.PlanSetup.SeriesUID
   nameWithType: PlanSetup.SeriesUID
-- uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType,System.String)
+- uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
   name: SetCalculationModel(CalculationType, String)
   href: api/ESAPIX.Facade.API.PlanSetup.html
-  commentId: M:ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType,System.String)
-  fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(ESAPIX.Facade.Types.CalculationType, System.String)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
+  fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType, System.String)
   nameWithType: PlanSetup.SetCalculationModel(CalculationType, String)
 - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel*
   name: SetCalculationModel
@@ -12842,11 +12878,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Registration.CreationDateTime
   fullName: ESAPIX.Facade.API.Registration.CreationDateTime
   nameWithType: Registration.CreationDateTime
-- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VVector)
   name: InverseTransformPoint(VVector)
   href: api/ESAPIX.Facade.API.Registration.html
-  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(ESAPIX.Facade.Types.VVector)
-  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VVector)
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VVector)
   nameWithType: Registration.InverseTransformPoint(VVector)
 - uid: ESAPIX.Facade.API.Registration.InverseTransformPoint*
   name: InverseTransformPoint
@@ -12902,11 +12938,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Registration.TransformationMatrix
   fullName: ESAPIX.Facade.API.Registration.TransformationMatrix
   nameWithType: Registration.TransformationMatrix
-- uid: ESAPIX.Facade.API.Registration.TransformPoint(ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.Registration.TransformPoint(VVector)
   name: TransformPoint(VVector)
   href: api/ESAPIX.Facade.API.Registration.html
-  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(ESAPIX.Facade.Types.VVector)
-  fullName: ESAPIX.Facade.API.Registration.TransformPoint(ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VVector)
+  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VVector)
   nameWithType: Registration.TransformPoint(VVector)
 - uid: ESAPIX.Facade.API.Registration.TransformPoint*
   name: TransformPoint
@@ -13244,11 +13280,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.SegmentVolume.And
   fullName: ESAPIX.Facade.API.SegmentVolume.And
   nameWithType: SegmentVolume.And
-- uid: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+- uid: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
   name: AsymmetricMargin(AxisAlignedMargins)
   href: api/ESAPIX.Facade.API.SegmentVolume.html
-  commentId: M:ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
-  fullName: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+  commentId: M:ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
+  fullName: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
   nameWithType: SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
 - uid: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin*
   name: AsymmetricMargin
@@ -13760,13 +13796,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Structure.#ctor
   fullName: ESAPIX.Facade.API.Structure.Structure
   nameWithType: Structure.Structure
-- uid: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+- uid: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector[],System.Int32)
   name: AddContourOnImagePlane(VVector[], Int32)
   href: api/ESAPIX.Facade.API.Structure.html
-  commentId: M:ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+  commentId: M:ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector[],System.Int32)
   name.vb: AddContourOnImagePlane(VVector(), Int32)
-  fullName: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[], System.Int32)
-  fullName.vb: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector(), System.Int32)
+  fullName: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector[], System.Int32)
+  fullName.vb: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector(), System.Int32)
   nameWithType: Structure.AddContourOnImagePlane(VVector[], Int32)
   nameWithType.vb: Structure.AddContourOnImagePlane(VVector(), Int32)
 - uid: ESAPIX.Facade.API.Structure.AddContourOnImagePlane*
@@ -13787,11 +13823,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Structure.And
   fullName: ESAPIX.Facade.API.Structure.And
   nameWithType: Structure.And
-- uid: ESAPIX.Facade.API.Structure.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+- uid: ESAPIX.Facade.API.Structure.AsymmetricMargin(AxisAlignedMargins)
   name: AsymmetricMargin(AxisAlignedMargins)
   href: api/ESAPIX.Facade.API.Structure.html
-  commentId: M:ESAPIX.Facade.API.Structure.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
-  fullName: ESAPIX.Facade.API.Structure.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+  commentId: M:ESAPIX.Facade.API.Structure.AsymmetricMargin(AxisAlignedMargins)
+  fullName: ESAPIX.Facade.API.Structure.AsymmetricMargin(AxisAlignedMargins)
   nameWithType: Structure.AsymmetricMargin(AxisAlignedMargins)
 - uid: ESAPIX.Facade.API.Structure.AsymmetricMargin*
   name: AsymmetricMargin
@@ -13925,11 +13961,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Structure.GetNumberOfSeparateParts
   fullName: ESAPIX.Facade.API.Structure.GetNumberOfSeparateParts
   nameWithType: Structure.GetNumberOfSeparateParts
-- uid: ESAPIX.Facade.API.Structure.GetSegmentProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,BitArray)
+- uid: ESAPIX.Facade.API.Structure.GetSegmentProfile(VVector,VVector,BitArray)
   name: GetSegmentProfile(VVector, VVector, BitArray)
   href: api/ESAPIX.Facade.API.Structure.html
-  commentId: M:ESAPIX.Facade.API.Structure.GetSegmentProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,BitArray)
-  fullName: ESAPIX.Facade.API.Structure.GetSegmentProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, BitArray)
+  commentId: M:ESAPIX.Facade.API.Structure.GetSegmentProfile(VVector,VVector,BitArray)
+  fullName: ESAPIX.Facade.API.Structure.GetSegmentProfile(VVector, VVector, BitArray)
   nameWithType: Structure.GetSegmentProfile(VVector, VVector, BitArray)
 - uid: ESAPIX.Facade.API.Structure.GetSegmentProfile*
   name: GetSegmentProfile
@@ -13997,11 +14033,11 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Structure.IsLive
   fullName: ESAPIX.Facade.API.Structure.IsLive
   nameWithType: Structure.IsLive
-- uid: ESAPIX.Facade.API.Structure.IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.Structure.IsPointInsideSegment(VVector)
   name: IsPointInsideSegment(VVector)
   href: api/ESAPIX.Facade.API.Structure.html
-  commentId: M:ESAPIX.Facade.API.Structure.IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
-  fullName: ESAPIX.Facade.API.Structure.IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Structure.IsPointInsideSegment(VVector)
+  fullName: ESAPIX.Facade.API.Structure.IsPointInsideSegment(VVector)
   nameWithType: Structure.IsPointInsideSegment(VVector)
 - uid: ESAPIX.Facade.API.Structure.IsPointInsideSegment*
   name: IsPointInsideSegment
@@ -14129,13 +14165,13 @@ references:
   commentId: Overload:ESAPIX.Facade.API.Structure.Sub
   fullName: ESAPIX.Facade.API.Structure.Sub
   nameWithType: Structure.Sub
-- uid: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+- uid: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector[],System.Int32)
   name: SubtractContourOnImagePlane(VVector[], Int32)
   href: api/ESAPIX.Facade.API.Structure.html
-  commentId: M:ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+  commentId: M:ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector[],System.Int32)
   name.vb: SubtractContourOnImagePlane(VVector(), Int32)
-  fullName: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[], System.Int32)
-  fullName.vb: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector(), System.Int32)
+  fullName: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector[], System.Int32)
+  fullName.vb: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector(), System.Int32)
   nameWithType: Structure.SubtractContourOnImagePlane(VVector[], Int32)
   nameWithType.vb: Structure.SubtractContourOnImagePlane(VVector(), Int32)
 - uid: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane*
@@ -14978,18 +15014,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.AxisAlignedMargins.Geometry
   fullName: ESAPIX.Facade.Types.AxisAlignedMargins.Geometry
   nameWithType: AxisAlignedMargins.Geometry
-- uid: ESAPIX.Facade.Types.AxisAlignedMargins.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.AxisAlignedMargins.html
-  commentId: P:ESAPIX.Facade.Types.AxisAlignedMargins.IsLive
-  fullName: ESAPIX.Facade.Types.AxisAlignedMargins.IsLive
-  nameWithType: AxisAlignedMargins.IsLive
-- uid: ESAPIX.Facade.Types.AxisAlignedMargins.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.AxisAlignedMargins.html
-  commentId: Overload:ESAPIX.Facade.Types.AxisAlignedMargins.IsLive
-  fullName: ESAPIX.Facade.Types.AxisAlignedMargins.IsLive
-  nameWithType: AxisAlignedMargins.IsLive
 - uid: ESAPIX.Facade.Types.AxisAlignedMargins.ToString
   name: ToString()
   href: api/ESAPIX.Facade.Types.AxisAlignedMargins.html
@@ -15173,18 +15197,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.DoseProfile.#ctor
   fullName: ESAPIX.Facade.Types.DoseProfile.DoseProfile
   nameWithType: DoseProfile.DoseProfile
-- uid: ESAPIX.Facade.Types.DoseProfile.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.DoseProfile.html
-  commentId: P:ESAPIX.Facade.Types.DoseProfile.IsLive
-  fullName: ESAPIX.Facade.Types.DoseProfile.IsLive
-  nameWithType: DoseProfile.IsLive
-- uid: ESAPIX.Facade.Types.DoseProfile.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.DoseProfile.html
-  commentId: Overload:ESAPIX.Facade.Types.DoseProfile.IsLive
-  fullName: ESAPIX.Facade.Types.DoseProfile.IsLive
-  nameWithType: DoseProfile.IsLive
 - uid: ESAPIX.Facade.Types.DoseProfile.Unit
   name: Unit
   href: api/ESAPIX.Facade.Types.DoseProfile.html
@@ -15299,18 +15311,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.DoseValue.GetSchema
   fullName: ESAPIX.Facade.Types.DoseValue.GetSchema
   nameWithType: DoseValue.GetSchema
-- uid: ESAPIX.Facade.Types.DoseValue.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.DoseValue.html
-  commentId: P:ESAPIX.Facade.Types.DoseValue.IsLive
-  fullName: ESAPIX.Facade.Types.DoseValue.IsLive
-  nameWithType: DoseValue.IsLive
-- uid: ESAPIX.Facade.Types.DoseValue.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.DoseValue.html
-  commentId: Overload:ESAPIX.Facade.Types.DoseValue.IsLive
-  fullName: ESAPIX.Facade.Types.DoseValue.IsLive
-  nameWithType: DoseValue.IsLive
 - uid: ESAPIX.Facade.Types.DoseValue.ReadXml(System.Xml.XmlReader)
   name: ReadXml(Xml.XmlReader)
   href: api/ESAPIX.Facade.Types.DoseValue.html
@@ -15521,18 +15521,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.DVHPoint.GetSchema
   fullName: ESAPIX.Facade.Types.DVHPoint.GetSchema
   nameWithType: DVHPoint.GetSchema
-- uid: ESAPIX.Facade.Types.DVHPoint.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.DVHPoint.html
-  commentId: P:ESAPIX.Facade.Types.DVHPoint.IsLive
-  fullName: ESAPIX.Facade.Types.DVHPoint.IsLive
-  nameWithType: DVHPoint.IsLive
-- uid: ESAPIX.Facade.Types.DVHPoint.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.DVHPoint.html
-  commentId: Overload:ESAPIX.Facade.Types.DVHPoint.IsLive
-  fullName: ESAPIX.Facade.Types.DVHPoint.IsLive
-  nameWithType: DVHPoint.IsLive
 - uid: ESAPIX.Facade.Types.DVHPoint.ReadXml(System.Xml.XmlReader)
   name: ReadXml(Xml.XmlReader)
   href: api/ESAPIX.Facade.Types.DVHPoint.html
@@ -15635,18 +15623,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
   fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.EnergyModeId
   nameWithType: ExternalBeamMachineParameters.EnergyModeId
-- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.ExternalBeamMachineParameters.html
-  commentId: P:ESAPIX.Facade.Types.ExternalBeamMachineParameters.IsLive
-  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.IsLive
-  nameWithType: ExternalBeamMachineParameters.IsLive
-- uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.ExternalBeamMachineParameters.html
-  commentId: Overload:ESAPIX.Facade.Types.ExternalBeamMachineParameters.IsLive
-  fullName: ESAPIX.Facade.Types.ExternalBeamMachineParameters.IsLive
-  nameWithType: ExternalBeamMachineParameters.IsLive
 - uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters.MachineId
   name: MachineId
   href: api/ESAPIX.Facade.Types.ExternalBeamMachineParameters.html
@@ -15737,18 +15713,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.Fluence.GetPixels
   fullName: ESAPIX.Facade.Types.Fluence.GetPixels
   nameWithType: Fluence.GetPixels
-- uid: ESAPIX.Facade.Types.Fluence.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.Fluence.html
-  commentId: P:ESAPIX.Facade.Types.Fluence.IsLive
-  fullName: ESAPIX.Facade.Types.Fluence.IsLive
-  nameWithType: Fluence.IsLive
-- uid: ESAPIX.Facade.Types.Fluence.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.Fluence.html
-  commentId: Overload:ESAPIX.Facade.Types.Fluence.IsLive
-  fullName: ESAPIX.Facade.Types.Fluence.IsLive
-  nameWithType: Fluence.IsLive
 - uid: ESAPIX.Facade.Types.Fluence.MLCId
   name: MLCId
   href: api/ESAPIX.Facade.Types.Fluence.html
@@ -15890,18 +15854,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.ImageProfile.#ctor
   fullName: ESAPIX.Facade.Types.ImageProfile.ImageProfile
   nameWithType: ImageProfile.ImageProfile
-- uid: ESAPIX.Facade.Types.ImageProfile.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.ImageProfile.html
-  commentId: P:ESAPIX.Facade.Types.ImageProfile.IsLive
-  fullName: ESAPIX.Facade.Types.ImageProfile.IsLive
-  nameWithType: ImageProfile.IsLive
-- uid: ESAPIX.Facade.Types.ImageProfile.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.ImageProfile.html
-  commentId: Overload:ESAPIX.Facade.Types.ImageProfile.IsLive
-  fullName: ESAPIX.Facade.Types.ImageProfile.IsLive
-  nameWithType: ImageProfile.IsLive
 - uid: ESAPIX.Facade.Types.ImageProfile.Unit
   name: Unit
   href: api/ESAPIX.Facade.Types.ImageProfile.html
@@ -15959,27 +15911,12 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.LineProfile.Count
   fullName: ESAPIX.Facade.Types.LineProfile.Count
   nameWithType: LineProfile.Count
-- uid: ESAPIX.Facade.Types.LineProfile.IsLive
-  name: IsLive
+- uid: ESAPIX.Facade.Types.LineProfile.Item
+  name: Item
   href: api/ESAPIX.Facade.Types.LineProfile.html
-  commentId: P:ESAPIX.Facade.Types.LineProfile.IsLive
-  fullName: ESAPIX.Facade.Types.LineProfile.IsLive
-  nameWithType: LineProfile.IsLive
-- uid: ESAPIX.Facade.Types.LineProfile.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.LineProfile.html
-  commentId: Overload:ESAPIX.Facade.Types.LineProfile.IsLive
-  fullName: ESAPIX.Facade.Types.LineProfile.IsLive
-  nameWithType: LineProfile.IsLive
-- uid: ESAPIX.Facade.Types.LineProfile.Item(System.Int32)
-  name: Item[Int32]
-  href: api/ESAPIX.Facade.Types.LineProfile.html
-  commentId: P:ESAPIX.Facade.Types.LineProfile.Item(System.Int32)
-  name.vb: Item(Int32)
-  fullName: ESAPIX.Facade.Types.LineProfile.Item[System.Int32]
-  fullName.vb: ESAPIX.Facade.Types.LineProfile.Item(System.Int32)
-  nameWithType: LineProfile.Item[Int32]
-  nameWithType.vb: LineProfile.Item(Int32)
+  commentId: P:ESAPIX.Facade.Types.LineProfile.Item
+  fullName: ESAPIX.Facade.Types.LineProfile.Item
+  nameWithType: LineProfile.Item
 - uid: ESAPIX.Facade.Types.LineProfile.Item*
   name: Item
   href: api/ESAPIX.Facade.Types.LineProfile.html
@@ -16016,18 +15953,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.LMCMSSOptions.#ctor
   fullName: ESAPIX.Facade.Types.LMCMSSOptions.LMCMSSOptions
   nameWithType: LMCMSSOptions.LMCMSSOptions
-- uid: ESAPIX.Facade.Types.LMCMSSOptions.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.LMCMSSOptions.html
-  commentId: P:ESAPIX.Facade.Types.LMCMSSOptions.IsLive
-  fullName: ESAPIX.Facade.Types.LMCMSSOptions.IsLive
-  nameWithType: LMCMSSOptions.IsLive
-- uid: ESAPIX.Facade.Types.LMCMSSOptions.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.LMCMSSOptions.html
-  commentId: Overload:ESAPIX.Facade.Types.LMCMSSOptions.IsLive
-  fullName: ESAPIX.Facade.Types.LMCMSSOptions.IsLive
-  nameWithType: LMCMSSOptions.IsLive
 - uid: ESAPIX.Facade.Types.LMCMSSOptions.NumberOfIterations
   name: NumberOfIterations
   href: api/ESAPIX.Facade.Types.LMCMSSOptions.html
@@ -16082,18 +16007,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.LMCVOptions.FixedJaws
   fullName: ESAPIX.Facade.Types.LMCVOptions.FixedJaws
   nameWithType: LMCVOptions.FixedJaws
-- uid: ESAPIX.Facade.Types.LMCVOptions.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.LMCVOptions.html
-  commentId: P:ESAPIX.Facade.Types.LMCVOptions.IsLive
-  fullName: ESAPIX.Facade.Types.LMCVOptions.IsLive
-  nameWithType: LMCVOptions.IsLive
-- uid: ESAPIX.Facade.Types.LMCVOptions.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.LMCVOptions.html
-  commentId: Overload:ESAPIX.Facade.Types.LMCVOptions.IsLive
-  fullName: ESAPIX.Facade.Types.LMCVOptions.IsLive
-  nameWithType: LMCVOptions.IsLive
 - uid: ESAPIX.Facade.Types.MetersetValue
   name: MetersetValue
   href: api/ESAPIX.Facade.Types.MetersetValue.html
@@ -16136,18 +16049,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.MetersetValue.GetSchema
   fullName: ESAPIX.Facade.Types.MetersetValue.GetSchema
   nameWithType: MetersetValue.GetSchema
-- uid: ESAPIX.Facade.Types.MetersetValue.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.MetersetValue.html
-  commentId: P:ESAPIX.Facade.Types.MetersetValue.IsLive
-  fullName: ESAPIX.Facade.Types.MetersetValue.IsLive
-  nameWithType: MetersetValue.IsLive
-- uid: ESAPIX.Facade.Types.MetersetValue.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.MetersetValue.html
-  commentId: Overload:ESAPIX.Facade.Types.MetersetValue.IsLive
-  fullName: ESAPIX.Facade.Types.MetersetValue.IsLive
-  nameWithType: MetersetValue.IsLive
 - uid: ESAPIX.Facade.Types.MetersetValue.ReadXml(System.Xml.XmlReader)
   name: ReadXml(Xml.XmlReader)
   href: api/ESAPIX.Facade.Types.MetersetValue.html
@@ -16364,18 +16265,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsBase.IntermediateDoseOption
   fullName: ESAPIX.Facade.Types.OptimizationOptionsBase.IntermediateDoseOption
   nameWithType: OptimizationOptionsBase.IntermediateDoseOption
-- uid: ESAPIX.Facade.Types.OptimizationOptionsBase.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.OptimizationOptionsBase.html
-  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsBase.IsLive
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsBase.IsLive
-  nameWithType: OptimizationOptionsBase.IsLive
-- uid: ESAPIX.Facade.Types.OptimizationOptionsBase.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.OptimizationOptionsBase.html
-  commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsBase.IsLive
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsBase.IsLive
-  nameWithType: OptimizationOptionsBase.IsLive
 - uid: ESAPIX.Facade.Types.OptimizationOptionsBase.MLC
   name: MLC
   href: api/ESAPIX.Facade.Types.OptimizationOptionsBase.html
@@ -16454,18 +16343,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
   fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.ConvergenceOption
   nameWithType: OptimizationOptionsIMRT.ConvergenceOption
-- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.OptimizationOptionsIMRT.html
-  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsIMRT.IsLive
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.IsLive
-  nameWithType: OptimizationOptionsIMRT.IsLive
-- uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.OptimizationOptionsIMRT.html
-  commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsIMRT.IsLive
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsIMRT.IsLive
-  nameWithType: OptimizationOptionsIMRT.IsLive
 - uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT.MaximumNumberOfIterations
   name: MaximumNumberOfIterations
   href: api/ESAPIX.Facade.Types.OptimizationOptionsIMRT.html
@@ -16544,18 +16421,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsVMAT.#ctor
   fullName: ESAPIX.Facade.Types.OptimizationOptionsVMAT.OptimizationOptionsVMAT
   nameWithType: OptimizationOptionsVMAT.OptimizationOptionsVMAT
-- uid: ESAPIX.Facade.Types.OptimizationOptionsVMAT.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.OptimizationOptionsVMAT.html
-  commentId: P:ESAPIX.Facade.Types.OptimizationOptionsVMAT.IsLive
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsVMAT.IsLive
-  nameWithType: OptimizationOptionsVMAT.IsLive
-- uid: ESAPIX.Facade.Types.OptimizationOptionsVMAT.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.OptimizationOptionsVMAT.html
-  commentId: Overload:ESAPIX.Facade.Types.OptimizationOptionsVMAT.IsLive
-  fullName: ESAPIX.Facade.Types.OptimizationOptionsVMAT.IsLive
-  nameWithType: OptimizationOptionsVMAT.IsLive
 - uid: ESAPIX.Facade.Types.OptimizationOptionsVMAT.NumberOfOptimizationCycles
   name: NumberOfOptimizationCycles
   href: api/ESAPIX.Facade.Types.OptimizationOptionsVMAT.html
@@ -16790,18 +16655,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.ProfilePoint.#ctor
   fullName: ESAPIX.Facade.Types.ProfilePoint.ProfilePoint
   nameWithType: ProfilePoint.ProfilePoint
-- uid: ESAPIX.Facade.Types.ProfilePoint.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.ProfilePoint.html
-  commentId: P:ESAPIX.Facade.Types.ProfilePoint.IsLive
-  fullName: ESAPIX.Facade.Types.ProfilePoint.IsLive
-  nameWithType: ProfilePoint.IsLive
-- uid: ESAPIX.Facade.Types.ProfilePoint.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.ProfilePoint.html
-  commentId: Overload:ESAPIX.Facade.Types.ProfilePoint.IsLive
-  fullName: ESAPIX.Facade.Types.ProfilePoint.IsLive
-  nameWithType: ProfilePoint.IsLive
 - uid: ESAPIX.Facade.Types.ProfilePoint.Position
   name: Position
   href: api/ESAPIX.Facade.Types.ProfilePoint.html
@@ -16838,11 +16691,11 @@ references:
   commentId: M:ESAPIX.Facade.Types.SegmentProfile.#ctor
   fullName: ESAPIX.Facade.Types.SegmentProfile.SegmentProfile()
   nameWithType: SegmentProfile.SegmentProfile()
-- uid: ESAPIX.Facade.Types.SegmentProfile.#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,BitArray)
+- uid: ESAPIX.Facade.Types.SegmentProfile.#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Collections.BitArray)
   name: SegmentProfile(VVector, VVector, BitArray)
   href: api/ESAPIX.Facade.Types.SegmentProfile.html
-  commentId: M:ESAPIX.Facade.Types.SegmentProfile.#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,BitArray)
-  fullName: ESAPIX.Facade.Types.SegmentProfile.SegmentProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, BitArray)
+  commentId: M:ESAPIX.Facade.Types.SegmentProfile.#ctor(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Collections.BitArray)
+  fullName: ESAPIX.Facade.Types.SegmentProfile.SegmentProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Collections.BitArray)
   nameWithType: SegmentProfile.SegmentProfile(VVector, VVector, BitArray)
 - uid: ESAPIX.Facade.Types.SegmentProfile.#ctor(System.Object)
   name: SegmentProfile(Object)
@@ -16880,27 +16733,12 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.SegmentProfile.EdgeCoordinates
   fullName: ESAPIX.Facade.Types.SegmentProfile.EdgeCoordinates
   nameWithType: SegmentProfile.EdgeCoordinates
-- uid: ESAPIX.Facade.Types.SegmentProfile.IsLive
-  name: IsLive
+- uid: ESAPIX.Facade.Types.SegmentProfile.Item
+  name: Item
   href: api/ESAPIX.Facade.Types.SegmentProfile.html
-  commentId: P:ESAPIX.Facade.Types.SegmentProfile.IsLive
-  fullName: ESAPIX.Facade.Types.SegmentProfile.IsLive
-  nameWithType: SegmentProfile.IsLive
-- uid: ESAPIX.Facade.Types.SegmentProfile.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.SegmentProfile.html
-  commentId: Overload:ESAPIX.Facade.Types.SegmentProfile.IsLive
-  fullName: ESAPIX.Facade.Types.SegmentProfile.IsLive
-  nameWithType: SegmentProfile.IsLive
-- uid: ESAPIX.Facade.Types.SegmentProfile.Item(System.Int32)
-  name: Item[Int32]
-  href: api/ESAPIX.Facade.Types.SegmentProfile.html
-  commentId: P:ESAPIX.Facade.Types.SegmentProfile.Item(System.Int32)
-  name.vb: Item(Int32)
-  fullName: ESAPIX.Facade.Types.SegmentProfile.Item[System.Int32]
-  fullName.vb: ESAPIX.Facade.Types.SegmentProfile.Item(System.Int32)
-  nameWithType: SegmentProfile.Item[Int32]
-  nameWithType.vb: SegmentProfile.Item(Int32)
+  commentId: P:ESAPIX.Facade.Types.SegmentProfile.Item
+  fullName: ESAPIX.Facade.Types.SegmentProfile.Item
+  nameWithType: SegmentProfile.Item
 - uid: ESAPIX.Facade.Types.SegmentProfile.Item*
   name: Item
   href: api/ESAPIX.Facade.Types.SegmentProfile.html
@@ -16937,18 +16775,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.SegmentProfilePoint.#ctor
   fullName: ESAPIX.Facade.Types.SegmentProfilePoint.SegmentProfilePoint
   nameWithType: SegmentProfilePoint.SegmentProfilePoint
-- uid: ESAPIX.Facade.Types.SegmentProfilePoint.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.SegmentProfilePoint.html
-  commentId: P:ESAPIX.Facade.Types.SegmentProfilePoint.IsLive
-  fullName: ESAPIX.Facade.Types.SegmentProfilePoint.IsLive
-  nameWithType: SegmentProfilePoint.IsLive
-- uid: ESAPIX.Facade.Types.SegmentProfilePoint.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.SegmentProfilePoint.html
-  commentId: Overload:ESAPIX.Facade.Types.SegmentProfilePoint.IsLive
-  fullName: ESAPIX.Facade.Types.SegmentProfilePoint.IsLive
-  nameWithType: SegmentProfilePoint.IsLive
 - uid: ESAPIX.Facade.Types.SegmentProfilePoint.Position
   name: Position
   href: api/ESAPIX.Facade.Types.SegmentProfilePoint.html
@@ -17117,18 +16943,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.SmartLMCOptions.FixedFieldBorders
   fullName: ESAPIX.Facade.Types.SmartLMCOptions.FixedFieldBorders
   nameWithType: SmartLMCOptions.FixedFieldBorders
-- uid: ESAPIX.Facade.Types.SmartLMCOptions.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.SmartLMCOptions.html
-  commentId: P:ESAPIX.Facade.Types.SmartLMCOptions.IsLive
-  fullName: ESAPIX.Facade.Types.SmartLMCOptions.IsLive
-  nameWithType: SmartLMCOptions.IsLive
-- uid: ESAPIX.Facade.Types.SmartLMCOptions.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.SmartLMCOptions.html
-  commentId: Overload:ESAPIX.Facade.Types.SmartLMCOptions.IsLive
-  fullName: ESAPIX.Facade.Types.SmartLMCOptions.IsLive
-  nameWithType: SmartLMCOptions.IsLive
 - uid: ESAPIX.Facade.Types.SmartLMCOptions.JawTracking
   name: JawTracking
   href: api/ESAPIX.Facade.Types.SmartLMCOptions.html
@@ -17237,18 +17051,6 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.GetSchema
   fullName: ESAPIX.Facade.Types.StructureCodeInfo.GetSchema
   nameWithType: StructureCodeInfo.GetSchema
-- uid: ESAPIX.Facade.Types.StructureCodeInfo.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.StructureCodeInfo.html
-  commentId: P:ESAPIX.Facade.Types.StructureCodeInfo.IsLive
-  fullName: ESAPIX.Facade.Types.StructureCodeInfo.IsLive
-  nameWithType: StructureCodeInfo.IsLive
-- uid: ESAPIX.Facade.Types.StructureCodeInfo.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.StructureCodeInfo.html
-  commentId: Overload:ESAPIX.Facade.Types.StructureCodeInfo.IsLive
-  fullName: ESAPIX.Facade.Types.StructureCodeInfo.IsLive
-  nameWithType: StructureCodeInfo.IsLive
 - uid: ESAPIX.Facade.Types.StructureCodeInfo.ReadXml(System.Xml.XmlReader)
   name: ReadXml(Xml.XmlReader)
   href: api/ESAPIX.Facade.Types.StructureCodeInfo.html
@@ -17403,22 +17205,6 @@ references:
   fullName.vb: ESAPIX.Facade.Types.VRect(Of T).GetHashCode
   nameWithType: VRect<T>.GetHashCode
   nameWithType.vb: VRect(Of T).GetHashCode
-- uid: ESAPIX.Facade.Types.VRect`1.IsLive
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.VRect-1.html
-  commentId: P:ESAPIX.Facade.Types.VRect`1.IsLive
-  fullName: ESAPIX.Facade.Types.VRect<T>.IsLive
-  fullName.vb: ESAPIX.Facade.Types.VRect(Of T).IsLive
-  nameWithType: VRect<T>.IsLive
-  nameWithType.vb: VRect(Of T).IsLive
-- uid: ESAPIX.Facade.Types.VRect`1.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.VRect-1.html
-  commentId: Overload:ESAPIX.Facade.Types.VRect`1.IsLive
-  fullName: ESAPIX.Facade.Types.VRect<T>.IsLive
-  fullName.vb: ESAPIX.Facade.Types.VRect(Of T).IsLive
-  nameWithType: VRect<T>.IsLive
-  nameWithType.vb: VRect(Of T).IsLive
 - uid: ESAPIX.Facade.Types.VRect`1.ToString
   name: ToString()
   href: api/ESAPIX.Facade.Types.VRect-1.html
@@ -17541,27 +17327,12 @@ references:
   commentId: Overload:ESAPIX.Facade.Types.VVector.Distance
   fullName: ESAPIX.Facade.Types.VVector.Distance
   nameWithType: VVector.Distance
-- uid: ESAPIX.Facade.Types.VVector.IsLive
-  name: IsLive
+- uid: ESAPIX.Facade.Types.VVector.Item
+  name: Item
   href: api/ESAPIX.Facade.Types.VVector.html
-  commentId: P:ESAPIX.Facade.Types.VVector.IsLive
-  fullName: ESAPIX.Facade.Types.VVector.IsLive
-  nameWithType: VVector.IsLive
-- uid: ESAPIX.Facade.Types.VVector.IsLive*
-  name: IsLive
-  href: api/ESAPIX.Facade.Types.VVector.html
-  commentId: Overload:ESAPIX.Facade.Types.VVector.IsLive
-  fullName: ESAPIX.Facade.Types.VVector.IsLive
-  nameWithType: VVector.IsLive
-- uid: ESAPIX.Facade.Types.VVector.Item(System.Int32)
-  name: Item[Int32]
-  href: api/ESAPIX.Facade.Types.VVector.html
-  commentId: P:ESAPIX.Facade.Types.VVector.Item(System.Int32)
-  name.vb: Item(Int32)
-  fullName: ESAPIX.Facade.Types.VVector.Item[System.Int32]
-  fullName.vb: ESAPIX.Facade.Types.VVector.Item(System.Int32)
-  nameWithType: VVector.Item[Int32]
-  nameWithType.vb: VVector.Item(Int32)
+  commentId: P:ESAPIX.Facade.Types.VVector.Item
+  fullName: ESAPIX.Facade.Types.VVector.Item
+  nameWithType: VVector.Item
 - uid: ESAPIX.Facade.Types.VVector.Item*
   name: Item
   href: api/ESAPIX.Facade.Types.VVector.html
@@ -18271,6 +18042,18 @@ references:
   commentId: Overload:ESAPIX.Interfaces.IScriptContext.Thread
   fullName: ESAPIX.Interfaces.IScriptContext.Thread
   nameWithType: IScriptContext.Thread
+- uid: ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  name: UIDispatcher
+  href: api/ESAPIX.Interfaces.IScriptContext.html
+  commentId: P:ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  fullName: ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  nameWithType: IScriptContext.UIDispatcher
+- uid: ESAPIX.Interfaces.IScriptContext.UIDispatcher*
+  name: UIDispatcher
+  href: api/ESAPIX.Interfaces.IScriptContext.html
+  commentId: Overload:ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  fullName: ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  nameWithType: IScriptContext.UIDispatcher
 - uid: ESAPIX.Interfaces.ISecureStorable
   name: ISecureStorable
   href: api/ESAPIX.Interfaces.ISecureStorable.html
@@ -18478,3 +18261,9 @@ references:
 - uid: mayoFormat.md
   name: Mayo Format and Querying
   href: articles/mayoFormat.html
+- uid: scriptBootstrapping.md
+  name: Bootstrapping Your Plugin Script
+  href: articles/scriptBootstrapping.html
+- uid: standAloneBootstrapping.md
+  name: Bootstrapping Your Stand Alone App
+  href: articles/standAloneBootstrapping.html

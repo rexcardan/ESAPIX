@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bootstrapping Your Stand Alone App </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bootstrapping Your Stand Alone App ">
+    <meta name="generator" content="docfx 2.16.0.499">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="standAloneBootstrapping.md">
+              <a href="https://github.com/rexcardan/ESAPIX/blob/master/DocFX/articles/standAloneBootstrapping.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="bootstrapping-your-stand-alone-app">Bootstrapping Your Stand Alone App</h1>
+              
+<ol>
+<li>Create a new WPF project in Visual Studio. </li>
+<li>Right click your project and select <strong>Manage NuGet Packages...</strong></li>
+<li>Search for <em>&quot;ESAPI&quot;</em> and select Install the most recent ESAPIX library for your install (eg. ESAPIX_13.6 for Aria 13.6)</li>
+<li>Create two folders in your project : <ul>
+<li>Views</li>
+<li>ViewModels</li>
+</ul>
+</li>
+<li><strong>Right click</strong> the <em>Views</em> folder and select <strong>Add &gt;&gt; Window</strong>. Call it <em>MainView</em>.</li>
+<li>Copy and paste this into the XAML file, but replace YOURPROJECTNAME with your project name
+<code>cs
+&lt;Window x:Class=&quot;YOURPROJECTNAME.Views.MainView&quot;
+     xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+     xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+     xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+     xmlns:local=&quot;clr-namespace:ESAPIWPF.Views&quot;
+     mc:Ignorable=&quot;d&quot;
+     xmlns:prism=&quot;http://prismlibrary.com/&quot;
+     prism:ViewModelLocator.AutoWireViewModel=&quot;True&quot;
+     Title=&quot;MainView&quot; Height=&quot;300&quot; Width=&quot;300&quot;&gt;
+ &lt;Grid&gt;
+     &lt;TextBlock Text=&quot;{Binding ESAPITest}&quot; FontSize=&quot;25&quot;/&gt;
+ &lt;/Grid&gt;
+&lt;/Window&gt;</code></li>
+<li><strong>Right click</strong> the <em>ViewModels</em> folder and select <strong>Add &gt;&gt; Class</strong>. Call it <em>MainViewModel</em>.</li>
+<li>Copy and paste this into the MainViewModel file, but replace YOURPROJECTNAME with your project name
+```cs
+using ESAPIX.Facade.API;
+using ESAPIX.Interfaces;
+using Prism.Mvvm;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using W = System.Windows;</li>
+</ol>
+<p>namespace YOURPROJECTNAME.ViewModels
+{
+    public class MainViewModel : BindableBase
+    {
+        private string esapiTest;
+        private IScriptContext _ctx;</p>
+<pre><code>    public string ESAPITest
+    {
+        get { return esapiTest; }
+        set { SetProperty(ref esapiTest, value); }
+    }
+
+    public MainViewModel(IScriptContext ctx)
+    {
+        _ctx = ctx;
+        ctx.PatientChanged += Ctx_PatientChanged;
+    }
+
+    private void Ctx_PatientChanged(Patient newPatient)
+    {
+        if (newPatient != null)
+        {
+            var plans = newPatient.Courses.SelectMany(c =&gt; c.PlanSetups).Count();
+            ESAPITest = $&quot;{newPatient?.LastName}, {newPatient?.FirstName} | {plans} Plans!&quot;;
+        }
+    }
+}
+</code></pre><p>}</p>
+<pre><code>9. Open the App.xaml file, and remove the * StartupUri=&quot;MainWindow&quot;* at the top.
+10. Open up the App.cs file and replace the App class with this:
+
+```cs
+    /// &lt;summary&gt;
+    /// Interaction logic for App.xaml
+    /// &lt;/summary&gt;
+    public partial class App : Application
+    {
+        string USERNAME = &quot;&quot;;
+        string PASSWORD = &quot;&quot;;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            VMSLink.VMSLinker.Run(); //For facade to link up
+            var bs = new ESAPIX.AppKit.AppBootstrapper&lt;MainView&gt;(USERNAME, PASSWORD);
+            bs.Run();
+        }
+    }
+</code></pre><h2 id="linking-up-facades">Linking Up Facades</h2>
+<p>So far we haven&#39;t actually wired up the Varian classes. You could build and play with your app at this stage, but it won&#39;t connect to real Varian data. To link it up, we will create one extra tiny project in the same solution. We are doing this to have a separation of VMS data with application development. This makes it easier to test your application, use in unit tests, and do cool multithreaded stuff.</p>
+<ol>
+<li><strong>Right click</strong> your solution file and select **Add &gt;&gt; New Project **</li>
+<li>Select <em>Class Library</em> as the type, and name it <strong>VMS Link</strong> (this doesn&#39;t matter except that&#39;s what we named it in the code above)</li>
+<li>Add the NuGet Package ESAPIX_Bootstrapper_{version} by searching again for <em>&quot;ESAPI&quot;</em> in <strong>Manage NuGet Packages</strong></li>
+<li><strong>Add a class</strong> called <em>VMSLinker</em> to this project and paste this code
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;</li>
+</ol>
+<p>namespace VMSLink
+{
+    public class VMSLinker
+    {
+        public static void Run()
+        {
+            ESAPIX.Bootstrapper.FacadeInitializer.Initialize();
+        }
+    }
+}</p>
+<pre><code>5. Right click your original project *References*, select **Add Reference** and click *VMSLink* in the project tab
+6. Run your project!
+
+
+
+
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

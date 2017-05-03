@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bootstrapping Your Plugin Script </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bootstrapping Your Plugin Script ">
+    <meta name="generator" content="docfx 2.16.0.499">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="scriptBootstrapping.md">
+              <a href="https://github.com/rexcardan/ESAPIX/blob/master/DocFX/articles/scriptBootstrapping.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="bootstrapping-your-plugin-script">Bootstrapping Your Plugin Script</h1>
+              
+<h2 id="overview">Overview</h2>
+<p>If you are looking to supercharge your <em>plugins</em> with ESAPIX, you need to do a few things to get it properly wired up. You need to:</p>
+<ol>
+<li>Create a <strong>Script.cs</strong> file in your project.</li>
+<li>Install the latest ESAPIX via NuGet</li>
+<li>In your <em>Script.cs</em> file, include the following:</li>
+</ol>
+<pre><code class="lang-cs">namespace VMS.TPS
+{
+    public class Script : XScriptBase
+    {
+        public Script() : base() { }
+
+
+        public override void XExecute(PluginContext ctx, DispatcherFrame frame)
+        {
+            try
+            {
+                //When hooked up to bootstrapper (comment out otherwise)
+                FacadeInitializer.Initialize();
+                //Standard setup (assuming the view you want to show is called &quot;MainView&quot;)
+                var bs = new ScriptBootstrapper&lt;MainView&gt;(ctx, frame);
+                bs.Run(() =&gt; Splasher.GetSplash(this.GetType().Assembly));
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(&quot;Sorry, there was a problem launching this script.\n Emailing ....\n Please try again.&quot;);
+        //Log crash
+            }
+        }
+    }
+}
+</code></pre><ol>
+<li>Run the app. You are supercharged.</li>
+</ol>
+<h2 id="what-is-happening-in-this-code">What Is Happening In This Code</h2>
+<p>We are highjacking the traditional Script call from Varian and adding some spice along the way. Make sure the class is named <strong>Script.cs</strong> and that the namespace is <strong>VMS.TPS</strong>. Those are required for the call to work. Here are the other details.</p>
+<h3 id="xscriptbase">XScriptBase</h3>
+<p>We are inheriting from <em>XScriptBase</em> because this class has some plumbing to transform Varian&#39;s <em>ScriptContext</em> into ESAPIX&#39;s IScriptContext interface. For plugins, the concrete class used is <strong>PluginContext</strong> which you can see in our &quot;XExecute&quot; method. The PluginContext implements <a href="@facades.md">facade access</a>, holds the thread which we can access Varian objects, and implements IScriptContext so we can test our apps in standalone mode. 
+XScriptBase will also handle the window object (hides it) that is passed from Varian. This window contains the <a href="https://msdn.microsoft.com/en-us/library/system.windows.threading.dispatcher(v=vs.110).aspx">Dispatcher object</a> which lets ESAPIX know how to communicate with VMS. If you move outside of that thread...bad things will happen. Don&#39;t worry, ESAPIX will hold your hand. XScriptBase will also close the window when the app is done running (your app will actually run in a different window).Lastly, the XScriptBase will keep the app from closing prematurely, which it would do when you didn&#39;t use that window.</p>
+<ul>
+<li>VMS ScriptContext =&gt; ESAPIX PluginContext (IScriptContext)</li>
+<li>Gets Window Information then Hides Window</li>
+<li>Keeps App From Closing Until Finished</li>
+</ul>
+<h3 id="xexecute">XExecute</h3>
+<p>This method is to let you know that Varian is not calling this method. ESAPIX is. This is where <strong>YOU</strong> will wire up your bootstrapper. The above example code should show the basics. There are only three lines required:</p>
+<pre><code class="lang-cs">    FacadeInitializer.Initialize();
+        var bs = new ScriptBootstrapper&lt;MainView&gt;(ctx, frame);
+        bs.Run(() =&gt; Splasher.GetSplash(this.GetType().Assembly));
+</code></pre><p>The <strong>ScriptBootstrapper</strong> needs the type of the first Window you want to show to the user. In this example, <em>MainView.xaml</em> is the window we will show. The Splasher.GetSplash just splashes the default splash included with ESAPIX.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
