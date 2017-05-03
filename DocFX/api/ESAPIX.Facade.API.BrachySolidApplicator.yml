@@ -11,6 +11,7 @@ items:
   - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
   - ESAPIX.Facade.API.BrachySolidApplicator.Category
   - ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  - ESAPIX.Facade.API.BrachySolidApplicator.IsLive
   - ESAPIX.Facade.API.BrachySolidApplicator.Note
   - ESAPIX.Facade.API.BrachySolidApplicator.PartName
   - ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
@@ -29,7 +30,7 @@ items:
   source:
     id: BrachySolidApplicator
     path: ''
-    startLine: 6192
+    startLine: 6656
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -78,7 +79,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6194
+    startLine: 6658
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -104,7 +105,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6195
+    startLine: 6663
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -119,6 +120,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.IsLive
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BrachySolidApplicator.IsLive
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 6668
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
   commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
   id: ApplicatorSetName
@@ -133,7 +165,7 @@ items:
   source:
     id: ApplicatorSetName
     path: ''
-    startLine: 6196
+    startLine: 6673
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -164,7 +196,7 @@ items:
   source:
     id: ApplicatorSetType
     path: ''
-    startLine: 6209
+    startLine: 6690
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -195,7 +227,7 @@ items:
   source:
     id: Category
     path: ''
-    startLine: 6222
+    startLine: 6707
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -226,23 +258,23 @@ items:
   source:
     id: Catheters
     path: ''
-    startLine: 6235
+    startLine: 6722
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<Catheter> Catheters { get; }
+    content: public IEnumerable<Catheter> Catheters { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Catheter}
-    content.vb: Public ReadOnly Property Catheters As IEnumerable(Of Catheter)
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Catheters*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.BrachySolidApplicator.Note
   commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Note
   id: Note
@@ -257,7 +289,7 @@ items:
   source:
     id: Note
     path: ''
-    startLine: 6261
+    startLine: 6760
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -288,7 +320,7 @@ items:
   source:
     id: PartName
     path: ''
-    startLine: 6274
+    startLine: 6775
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -319,7 +351,7 @@ items:
   source:
     id: PartNumber
     path: ''
-    startLine: 6287
+    startLine: 6790
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -350,7 +382,7 @@ items:
   source:
     id: Summary
     path: ''
-    startLine: 6300
+    startLine: 6805
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -381,7 +413,7 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 6313
+    startLine: 6820
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -412,7 +444,7 @@ items:
   source:
     id: Vendor
     path: ''
-    startLine: 6326
+    startLine: 6835
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -443,7 +475,7 @@ items:
   source:
     id: Version
     path: ''
-    startLine: 6339
+    startLine: 6850
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -474,7 +506,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6352
+    startLine: 6865
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -934,6 +966,19 @@ references:
   name: BrachySolidApplicator
   nameWithType: BrachySolidApplicator.BrachySolidApplicator
   fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: BrachySolidApplicator.IsLive
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
   commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
   isExternal: false
@@ -965,21 +1010,20 @@ references:
   name: Catheters
   nameWithType: BrachySolidApplicator.Catheters
   fullName: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Catheter}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Catheter}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.Catheter}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.Catheter}'
+  definition: IEnumerable`1
   name: IEnumerable<Catheter>
   nameWithType: IEnumerable<Catheter>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Catheter>
+  fullName: IEnumerable<ESAPIX.Facade.API.Catheter>
   nameWithType.vb: IEnumerable(Of Catheter)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Catheter)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.Catheter)
   name.vb: IEnumerable(Of Catheter)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -992,10 +1036,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1007,51 +1051,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.BrachySolidApplicator.Note*
   commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.Note
   isExternal: false

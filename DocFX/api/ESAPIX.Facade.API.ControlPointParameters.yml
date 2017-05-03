@@ -9,6 +9,7 @@ items:
   - ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
   - ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
   - ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  - ESAPIX.Facade.API.ControlPointParameters.IsLive
   - ESAPIX.Facade.API.ControlPointParameters.JawPositions
   - ESAPIX.Facade.API.ControlPointParameters.LeafPositions
   - ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
@@ -26,7 +27,7 @@ items:
   source:
     id: ControlPointParameters
     path: ''
-    startLine: 7049
+    startLine: 7854
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -63,7 +64,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7052
+    startLine: 7858
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -89,7 +90,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7053
+    startLine: 7863
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -104,6 +105,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ControlPointParameters.IsLive
+  fullName: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 7868
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.ControlPointParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
   commentId: P:ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
   id: CollimatorAngle
@@ -118,7 +150,7 @@ items:
   source:
     id: CollimatorAngle
     path: ''
-    startLine: 7054
+    startLine: 7873
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -149,7 +181,7 @@ items:
   source:
     id: GantryAngle
     path: ''
-    startLine: 7067
+    startLine: 7890
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -180,7 +212,7 @@ items:
   source:
     id: JawPositions
     path: ''
-    startLine: 7080
+    startLine: 7907
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -188,7 +220,7 @@ items:
     content: public VRect<double> JawPositions { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VRect{System.Double}
+      type: VRect{System.Double}
     content.vb: Public Property JawPositions As VRect(Of Double)
   overload: ESAPIX.Facade.API.ControlPointParameters.JawPositions*
   modifiers.csharp:
@@ -211,7 +243,7 @@ items:
   source:
     id: LeafPositions
     path: ''
-    startLine: 7093
+    startLine: 7924
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -242,7 +274,7 @@ items:
   source:
     id: MetersetWeight
     path: ''
-    startLine: 7106
+    startLine: 7941
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -273,7 +305,7 @@ items:
   source:
     id: PatientSupportAngle
     path: ''
-    startLine: 7119
+    startLine: 7958
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -304,7 +336,7 @@ items:
   source:
     id: TableTopLateralPosition
     path: ''
-    startLine: 7132
+    startLine: 7975
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -335,7 +367,7 @@ items:
   source:
     id: TableTopLongitudinalPosition
     path: ''
-    startLine: 7145
+    startLine: 7995
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -366,7 +398,7 @@ items:
   source:
     id: TableTopVerticalPosition
     path: ''
-    startLine: 7158
+    startLine: 8015
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -688,6 +720,19 @@ references:
   name: ControlPointParameters
   nameWithType: ControlPointParameters.ControlPointParameters
   fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters
+- uid: ESAPIX.Facade.API.ControlPointParameters.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.ControlPointParameters.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: ControlPointParameters.IsLive
+  fullName: ESAPIX.Facade.API.ControlPointParameters.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle*
   commentId: Overload:ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
   isExternal: false
@@ -713,21 +758,21 @@ references:
   name: JawPositions
   nameWithType: ControlPointParameters.JawPositions
   fullName: ESAPIX.Facade.API.ControlPointParameters.JawPositions
-- uid: ESAPIX.Facade.Types.VRect{System.Double}
-  commentId: T:ESAPIX.Facade.Types.VRect{System.Double}
-  parent: ESAPIX.Facade.Types
-  definition: ESAPIX.Facade.Types.VRect`1
+- uid: VRect{System.Double}
+  commentId: '!:VRect{System.Double}'
+  definition: VRect`1
   name: VRect<Double>
   nameWithType: VRect<Double>
-  fullName: ESAPIX.Facade.Types.VRect<System.Double>
+  fullName: VRect<System.Double>
   nameWithType.vb: VRect(Of Double)
-  fullName.vb: ESAPIX.Facade.Types.VRect(Of System.Double)
+  fullName.vb: VRect(Of System.Double)
   name.vb: VRect(Of Double)
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
@@ -740,10 +785,11 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -755,50 +801,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.Types.VRect`1
-  commentId: T:ESAPIX.Facade.Types.VRect`1
-  parent: ESAPIX.Facade.Types
-  isExternal: false
-  name: VRect<T>
-  nameWithType: VRect<T>
-  fullName: ESAPIX.Facade.Types.VRect<T>
-  nameWithType.vb: VRect(Of T)
-  fullName.vb: ESAPIX.Facade.Types.VRect(Of T)
-  name.vb: VRect(Of T)
+- uid: VRect`1
+  isExternal: true
+  name: VRect<>
+  nameWithType: VRect<>
+  fullName: VRect<>
+  nameWithType.vb: VRect(Of )
+  fullName.vb: VRect(Of )
+  name.vb: VRect(Of )
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.VRect`1
+  - uid: VRect`1
     name: VRect
     nameWithType: VRect
-    fullName: ESAPIX.Facade.Types.VRect
+    fullName: VRect
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
 - uid: ESAPIX.Facade.API.ControlPointParameters.LeafPositions*
   commentId: Overload:ESAPIX.Facade.API.ControlPointParameters.LeafPositions
   isExternal: false

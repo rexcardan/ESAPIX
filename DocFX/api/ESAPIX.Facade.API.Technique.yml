@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.Technique.#ctor
   - ESAPIX.Facade.API.Technique.#ctor(System.Object)
+  - ESAPIX.Facade.API.Technique.IsLive
   - ESAPIX.Facade.API.Technique.WriteXml(System.Xml.XmlWriter)
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
   source:
     id: Technique
     path: ''
-    startLine: 13079
+    startLine: 16081
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -67,7 +68,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13081
+    startLine: 16083
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -93,7 +94,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13082
+    startLine: 16088
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -108,6 +109,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Technique.IsLive
+  commentId: P:ESAPIX.Facade.API.Technique.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Technique
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Technique.IsLive
+  fullName: ESAPIX.Facade.API.Technique.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 16093
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Technique.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Technique.WriteXml(System.Xml.XmlWriter)
   commentId: M:ESAPIX.Facade.API.Technique.WriteXml(System.Xml.XmlWriter)
   id: WriteXml(System.Xml.XmlWriter)
@@ -122,7 +154,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 13083
+    startLine: 16098
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -582,6 +614,19 @@ references:
   name: Technique
   nameWithType: Technique.Technique
   fullName: ESAPIX.Facade.API.Technique.Technique
+- uid: ESAPIX.Facade.API.Technique.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Technique.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Technique.IsLive
+  fullName: ESAPIX.Facade.API.Technique.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Technique.WriteXml*
   commentId: Overload:ESAPIX.Facade.API.Technique.WriteXml
   isExternal: false

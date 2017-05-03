@@ -9,11 +9,12 @@ items:
   - ESAPIX.Facade.API.OptimizationSetup.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective(System.Double)
   - ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter(ESAPIX.Facade.API.Beam,System.Double,System.Double,System.Boolean)
-  - ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
-  - ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,DoseValue,System.Double)
   - ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective(System.Double,System.Double,System.Double,System.Double,System.Double)
-  - ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
   - ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure,System.Double)
+  - ESAPIX.Facade.API.OptimizationSetup.IsLive
   - ESAPIX.Facade.API.OptimizationSetup.Objectives
   - ESAPIX.Facade.API.OptimizationSetup.Parameters
   - ESAPIX.Facade.API.OptimizationSetup.RemoveObjective(ESAPIX.Facade.API.OptimizationObjective)
@@ -30,7 +31,7 @@ items:
   source:
     id: OptimizationSetup
     path: ''
-    startLine: 9754
+    startLine: 11483
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -73,7 +74,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9756
+    startLine: 11485
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -99,7 +100,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9757
+    startLine: 11490
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -114,6 +115,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.OptimizationSetup.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizationSetup.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizationSetup
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizationSetup.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationSetup.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 11495
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizationSetup.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationSetup.Objectives
   commentId: P:ESAPIX.Facade.API.OptimizationSetup.Objectives
   id: Objectives
@@ -128,23 +160,23 @@ items:
   source:
     id: Objectives
     path: ''
-    startLine: 9758
+    startLine: 11500
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<OptimizationObjective> Objectives { get; }
+    content: public IEnumerable<OptimizationObjective> Objectives { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
-    content.vb: Public ReadOnly Property Objectives As IEnumerable(Of OptimizationObjective)
+      type: IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
+    content.vb: Public Property Objectives As IEnumerable(Of OptimizationObjective)
   overload: ESAPIX.Facade.API.OptimizationSetup.Objectives*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationSetup.Parameters
   commentId: P:ESAPIX.Facade.API.OptimizationSetup.Parameters
   id: Parameters
@@ -159,23 +191,23 @@ items:
   source:
     id: Parameters
     path: ''
-    startLine: 9784
+    startLine: 11538
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<OptimizationParameter> Parameters { get; }
+    content: public IEnumerable<OptimizationParameter> Parameters { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
-    content.vb: Public ReadOnly Property Parameters As IEnumerable(Of OptimizationParameter)
+      type: IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
+    content.vb: Public Property Parameters As IEnumerable(Of OptimizationParameter)
   overload: ESAPIX.Facade.API.OptimizationSetup.Parameters*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
   commentId: P:ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
   id: UseJawTracking
@@ -190,7 +222,7 @@ items:
   source:
     id: UseJawTracking
     path: ''
-    startLine: 9810
+    startLine: 11576
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -221,7 +253,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9823
+    startLine: 11593
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -250,7 +282,7 @@ items:
   source:
     id: AddAutomaticNormalTissueObjective
     path: ''
-    startLine: 9832
+    startLine: 11599
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -281,7 +313,7 @@ items:
   source:
     id: AddBeamSpecificParameter
     path: ''
-    startLine: 9839
+    startLine: 11610
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -304,21 +336,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
-  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
-  id: AddEUDObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
+  id: AddEUDObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
   parent: ESAPIX.Facade.API.OptimizationSetup
   langs:
   - csharp
   - vb
   name: AddEUDObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
   nameWithType: OptimizationSetup.AddEUDObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
-  fullName: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator, ESAPIX.Facade.Types.DoseValue, System.Double, System.Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective(ESAPIX.Facade.API.Structure, OptimizationObjectiveOperator, DoseValue, System.Double, System.Double)
   type: Method
   source:
     id: AddEUDObjective
     path: ''
-    startLine: 9846
+    startLine: 11622
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -328,9 +360,9 @@ items:
     - id: structure
       type: ESAPIX.Facade.API.Structure
     - id: objectiveOperator
-      type: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+      type: OptimizationObjectiveOperator
     - id: dose
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     - id: parameterA
       type: System.Double
     - id: priority
@@ -343,21 +375,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
-  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
-  id: AddMeanDoseObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.DoseValue,System.Double)
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,DoseValue,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure,DoseValue,System.Double)
+  id: AddMeanDoseObjective(ESAPIX.Facade.API.Structure,DoseValue,System.Double)
   parent: ESAPIX.Facade.API.OptimizationSetup
   langs:
   - csharp
   - vb
   name: AddMeanDoseObjective(Structure, DoseValue, Double)
   nameWithType: OptimizationSetup.AddMeanDoseObjective(Structure, DoseValue, Double)
-  fullName: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.DoseValue, System.Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective(ESAPIX.Facade.API.Structure, DoseValue, System.Double)
   type: Method
   source:
     id: AddMeanDoseObjective
     path: ''
-    startLine: 9853
+    startLine: 11635
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -367,7 +399,7 @@ items:
     - id: structure
       type: ESAPIX.Facade.API.Structure
     - id: dose
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     - id: priority
       type: System.Double
     return:
@@ -392,7 +424,7 @@ items:
   source:
     id: AddNormalTissueObjective
     path: ''
-    startLine: 9860
+    startLine: 11646
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -417,21 +449,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
-  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
-  id: AddPointObjective(ESAPIX.Facade.API.Structure,ESAPIX.Facade.Types.OptimizationObjectiveOperator,ESAPIX.Facade.Types.DoseValue,System.Double,System.Double)
+- uid: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
+  commentId: M:ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
+  id: AddPointObjective(ESAPIX.Facade.API.Structure,OptimizationObjectiveOperator,DoseValue,System.Double,System.Double)
   parent: ESAPIX.Facade.API.OptimizationSetup
   langs:
   - csharp
   - vb
   name: AddPointObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
   nameWithType: OptimizationSetup.AddPointObjective(Structure, OptimizationObjectiveOperator, DoseValue, Double, Double)
-  fullName: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure, ESAPIX.Facade.Types.OptimizationObjectiveOperator, ESAPIX.Facade.Types.DoseValue, System.Double, System.Double)
+  fullName: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective(ESAPIX.Facade.API.Structure, OptimizationObjectiveOperator, DoseValue, System.Double, System.Double)
   type: Method
   source:
     id: AddPointObjective
     path: ''
-    startLine: 9867
+    startLine: 11658
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -441,9 +473,9 @@ items:
     - id: structure
       type: ESAPIX.Facade.API.Structure
     - id: objectiveOperator
-      type: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+      type: OptimizationObjectiveOperator
     - id: dose
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     - id: volume
       type: System.Double
     - id: priority
@@ -470,7 +502,7 @@ items:
   source:
     id: RemoveObjective
     path: ''
-    startLine: 9874
+    startLine: 11670
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -499,7 +531,7 @@ items:
   source:
     id: RemoveParameter
     path: ''
-    startLine: 9883
+    startLine: 11676
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -528,7 +560,7 @@ items:
   source:
     id: AddStructurePointCloudParameter
     path: ''
-    startLine: 9892
+    startLine: 11682
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -956,27 +988,39 @@ references:
   name: OptimizationSetup
   nameWithType: OptimizationSetup.OptimizationSetup
   fullName: ESAPIX.Facade.API.OptimizationSetup.OptimizationSetup
+- uid: ESAPIX.Facade.API.OptimizationSetup.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: OptimizationSetup.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationSetup.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationSetup.Objectives*
   commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.Objectives
   isExternal: false
   name: Objectives
   nameWithType: OptimizationSetup.Objectives
   fullName: ESAPIX.Facade.API.OptimizationSetup.Objectives
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.OptimizationObjective}'
+  definition: IEnumerable`1
   name: IEnumerable<OptimizationObjective>
   nameWithType: IEnumerable<OptimizationObjective>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.OptimizationObjective>
+  fullName: IEnumerable<ESAPIX.Facade.API.OptimizationObjective>
   nameWithType.vb: IEnumerable(Of OptimizationObjective)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.OptimizationObjective)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.OptimizationObjective)
   name.vb: IEnumerable(Of OptimizationObjective)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -989,10 +1033,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1004,72 +1048,64 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.OptimizationSetup.Parameters*
   commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.Parameters
   isExternal: false
   name: Parameters
   nameWithType: OptimizationSetup.Parameters
   fullName: ESAPIX.Facade.API.OptimizationSetup.Parameters
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.OptimizationParameter}'
+  definition: IEnumerable`1
   name: IEnumerable<OptimizationParameter>
   nameWithType: IEnumerable<OptimizationParameter>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.OptimizationParameter>
+  fullName: IEnumerable<ESAPIX.Facade.API.OptimizationParameter>
   nameWithType.vb: IEnumerable(Of OptimizationParameter)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.OptimizationParameter)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.OptimizationParameter)
   name.vb: IEnumerable(Of OptimizationParameter)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1082,10 +1118,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1103,13 +1139,6 @@ references:
   name: UseJawTracking
   nameWithType: OptimizationSetup.UseJawTracking
   fullName: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationSetup.WriteXml*
   commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.WriteXml
   isExternal: false
@@ -1174,20 +1203,16 @@ references:
   name: Structure
   nameWithType: Structure
   fullName: ESAPIX.Facade.API.Structure
-- uid: ESAPIX.Facade.Types.OptimizationObjectiveOperator
-  commentId: T:ESAPIX.Facade.Types.OptimizationObjectiveOperator
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: OptimizationObjectiveOperator
+  isExternal: true
   name: OptimizationObjectiveOperator
   nameWithType: OptimizationObjectiveOperator
-  fullName: ESAPIX.Facade.Types.OptimizationObjectiveOperator
-- uid: ESAPIX.Facade.Types.DoseValue
-  commentId: T:ESAPIX.Facade.Types.DoseValue
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+  fullName: OptimizationObjectiveOperator
+- uid: DoseValue
+  isExternal: true
   name: DoseValue
   nameWithType: DoseValue
-  fullName: ESAPIX.Facade.Types.DoseValue
+  fullName: DoseValue
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective
   commentId: T:ESAPIX.Facade.API.OptimizationEUDObjective
   parent: ESAPIX.Facade.API
@@ -1195,12 +1220,6 @@ references:
   name: OptimizationEUDObjective
   nameWithType: OptimizationEUDObjective
   fullName: ESAPIX.Facade.API.OptimizationEUDObjective
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
 - uid: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective*
   commentId: Overload:ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective
   isExternal: false

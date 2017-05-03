@@ -9,20 +9,21 @@ items:
   - ESAPIX.Facade.API.Image.#ctor(System.Object)
   - ESAPIX.Facade.API.Image.ContrastBolusAgentIngredientName
   - ESAPIX.Facade.API.Image.CreationDateTime
-  - ESAPIX.Facade.API.Image.DicomToUser(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
+  - ESAPIX.Facade.API.Image.DicomToUser(VVector,ESAPIX.Facade.API.PlanSetup)
   - ESAPIX.Facade.API.Image.DisplayUnit
   - ESAPIX.Facade.API.Image.FOR
-  - ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+  - ESAPIX.Facade.API.Image.GetImageProfile(VVector,VVector,System.Double[])
   - ESAPIX.Facade.API.Image.GetVoxels(System.Int32,System.Int32[0:,0:])
   - ESAPIX.Facade.API.Image.HasUserOrigin
   - ESAPIX.Facade.API.Image.ImagingOrientation
+  - ESAPIX.Facade.API.Image.IsLive
   - ESAPIX.Facade.API.Image.IsProcessed
   - ESAPIX.Facade.API.Image.Level
   - ESAPIX.Facade.API.Image.Origin
   - ESAPIX.Facade.API.Image.Series
   - ESAPIX.Facade.API.Image.UserOrigin
   - ESAPIX.Facade.API.Image.UserOriginComments
-  - ESAPIX.Facade.API.Image.UserToDicom(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
+  - ESAPIX.Facade.API.Image.UserToDicom(VVector,ESAPIX.Facade.API.PlanSetup)
   - ESAPIX.Facade.API.Image.VoxelToDisplayValue(System.Int32)
   - ESAPIX.Facade.API.Image.Window
   - ESAPIX.Facade.API.Image.WriteXml(System.Xml.XmlWriter)
@@ -45,7 +46,7 @@ items:
   source:
     id: Image
     path: ''
-    startLine: 8710
+    startLine: 10117
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,7 +95,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8712
+    startLine: 10119
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -120,7 +121,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8713
+    startLine: 10124
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -135,6 +136,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Image.IsLive
+  commentId: P:ESAPIX.Facade.API.Image.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Image
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Image.IsLive
+  fullName: ESAPIX.Facade.API.Image.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 10129
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Image.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Image.ContrastBolusAgentIngredientName
   commentId: P:ESAPIX.Facade.API.Image.ContrastBolusAgentIngredientName
   id: ContrastBolusAgentIngredientName
@@ -149,7 +181,7 @@ items:
   source:
     id: ContrastBolusAgentIngredientName
     path: ''
-    startLine: 8714
+    startLine: 10134
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -180,7 +212,7 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 8727
+    startLine: 10154
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -211,7 +243,7 @@ items:
   source:
     id: DisplayUnit
     path: ''
-    startLine: 8740
+    startLine: 10171
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -242,7 +274,7 @@ items:
   source:
     id: FOR
     path: ''
-    startLine: 8753
+    startLine: 10188
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -273,7 +305,7 @@ items:
   source:
     id: HasUserOrigin
     path: ''
-    startLine: 8766
+    startLine: 10203
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -304,7 +336,7 @@ items:
   source:
     id: ImagingOrientation
     path: ''
-    startLine: 8779
+    startLine: 10220
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -312,7 +344,7 @@ items:
     content: public PatientOrientation ImagingOrientation { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.PatientOrientation
+      type: PatientOrientation
     content.vb: Public Property ImagingOrientation As PatientOrientation
   overload: ESAPIX.Facade.API.Image.ImagingOrientation*
   modifiers.csharp:
@@ -335,7 +367,7 @@ items:
   source:
     id: IsProcessed
     path: ''
-    startLine: 8792
+    startLine: 10240
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -366,7 +398,7 @@ items:
   source:
     id: Level
     path: ''
-    startLine: 8805
+    startLine: 10255
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -397,7 +429,7 @@ items:
   source:
     id: Origin
     path: ''
-    startLine: 8818
+    startLine: 10270
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -405,7 +437,7 @@ items:
     content: public VVector Origin { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property Origin As VVector
   overload: ESAPIX.Facade.API.Image.Origin*
   modifiers.csharp:
@@ -428,7 +460,7 @@ items:
   source:
     id: Series
     path: ''
-    startLine: 8831
+    startLine: 10285
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -459,7 +491,7 @@ items:
   source:
     id: UserOrigin
     path: ''
-    startLine: 8844
+    startLine: 10304
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -467,7 +499,7 @@ items:
     content: public VVector UserOrigin { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property UserOrigin As VVector
   overload: ESAPIX.Facade.API.Image.UserOrigin*
   modifiers.csharp:
@@ -490,7 +522,7 @@ items:
   source:
     id: UserOriginComments
     path: ''
-    startLine: 8857
+    startLine: 10319
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -521,7 +553,7 @@ items:
   source:
     id: Window
     path: ''
-    startLine: 8870
+    startLine: 10336
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -552,7 +584,7 @@ items:
   source:
     id: XDirection
     path: ''
-    startLine: 8883
+    startLine: 10351
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -560,7 +592,7 @@ items:
     content: public VVector XDirection { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property XDirection As VVector
   overload: ESAPIX.Facade.API.Image.XDirection*
   modifiers.csharp:
@@ -583,7 +615,7 @@ items:
   source:
     id: XRes
     path: ''
-    startLine: 8896
+    startLine: 10366
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -614,7 +646,7 @@ items:
   source:
     id: XSize
     path: ''
-    startLine: 8909
+    startLine: 10381
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -645,7 +677,7 @@ items:
   source:
     id: YDirection
     path: ''
-    startLine: 8922
+    startLine: 10396
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -653,7 +685,7 @@ items:
     content: public VVector YDirection { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property YDirection As VVector
   overload: ESAPIX.Facade.API.Image.YDirection*
   modifiers.csharp:
@@ -676,7 +708,7 @@ items:
   source:
     id: YRes
     path: ''
-    startLine: 8935
+    startLine: 10411
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -707,7 +739,7 @@ items:
   source:
     id: YSize
     path: ''
-    startLine: 8948
+    startLine: 10426
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -738,7 +770,7 @@ items:
   source:
     id: ZDirection
     path: ''
-    startLine: 8961
+    startLine: 10441
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -746,7 +778,7 @@ items:
     content: public VVector ZDirection { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property ZDirection As VVector
   overload: ESAPIX.Facade.API.Image.ZDirection*
   modifiers.csharp:
@@ -769,7 +801,7 @@ items:
   source:
     id: ZRes
     path: ''
-    startLine: 8974
+    startLine: 10456
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -800,7 +832,7 @@ items:
   source:
     id: ZSize
     path: ''
-    startLine: 8987
+    startLine: 10471
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -831,7 +863,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9000
+    startLine: 10486
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -846,21 +878,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Image.DicomToUser(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
-  commentId: M:ESAPIX.Facade.API.Image.DicomToUser(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
-  id: DicomToUser(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
+- uid: ESAPIX.Facade.API.Image.DicomToUser(VVector,ESAPIX.Facade.API.PlanSetup)
+  commentId: M:ESAPIX.Facade.API.Image.DicomToUser(VVector,ESAPIX.Facade.API.PlanSetup)
+  id: DicomToUser(VVector,ESAPIX.Facade.API.PlanSetup)
   parent: ESAPIX.Facade.API.Image
   langs:
   - csharp
   - vb
   name: DicomToUser(VVector, PlanSetup)
   nameWithType: Image.DicomToUser(VVector, PlanSetup)
-  fullName: ESAPIX.Facade.API.Image.DicomToUser(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.API.PlanSetup)
+  fullName: ESAPIX.Facade.API.Image.DicomToUser(VVector, ESAPIX.Facade.API.PlanSetup)
   type: Method
   source:
     id: DicomToUser
     path: ''
-    startLine: 9009
+    startLine: 10492
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -868,32 +900,32 @@ items:
     content: public VVector DicomToUser(VVector dicom, PlanSetup planSetup)
     parameters:
     - id: dicom
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: planSetup
       type: ESAPIX.Facade.API.PlanSetup
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Function DicomToUser(dicom As VVector, planSetup As PlanSetup) As VVector
   overload: ESAPIX.Facade.API.Image.DicomToUser*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
-  commentId: M:ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
-  id: GetImageProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+- uid: ESAPIX.Facade.API.Image.GetImageProfile(VVector,VVector,System.Double[])
+  commentId: M:ESAPIX.Facade.API.Image.GetImageProfile(VVector,VVector,System.Double[])
+  id: GetImageProfile(VVector,VVector,System.Double[])
   parent: ESAPIX.Facade.API.Image
   langs:
   - csharp
   - vb
   name: GetImageProfile(VVector, VVector, Double[])
   nameWithType: Image.GetImageProfile(VVector, VVector, Double[])
-  fullName: ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double[])
+  fullName: ESAPIX.Facade.API.Image.GetImageProfile(VVector, VVector, System.Double[])
   type: Method
   source:
     id: GetImageProfile
     path: ''
-    startLine: 9016
+    startLine: 10502
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -901,13 +933,13 @@ items:
     content: public ImageProfile GetImageProfile(VVector start, VVector stop, double[] preallocatedBuffer)
     parameters:
     - id: start
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: stop
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: preallocatedBuffer
       type: System.Double[]
     return:
-      type: ESAPIX.Facade.Types.ImageProfile
+      type: ImageProfile
     content.vb: Public Function GetImageProfile(start As VVector, stop As VVector, preallocatedBuffer As Double()) As ImageProfile
   overload: ESAPIX.Facade.API.Image.GetImageProfile*
   nameWithType.vb: Image.GetImageProfile(VVector, VVector, Double())
@@ -915,7 +947,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.Image.GetImageProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double())
+  fullName.vb: ESAPIX.Facade.API.Image.GetImageProfile(VVector, VVector, System.Double())
   name.vb: GetImageProfile(VVector, VVector, Double())
 - uid: ESAPIX.Facade.API.Image.GetVoxels(System.Int32,System.Int32[0:,0:])
   commentId: M:ESAPIX.Facade.API.Image.GetVoxels(System.Int32,System.Int32[0:,0:])
@@ -931,7 +963,7 @@ items:
   source:
     id: GetVoxels
     path: ''
-    startLine: 9023
+    startLine: 10512
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -951,21 +983,21 @@ items:
   - Public
   fullName.vb: ESAPIX.Facade.API.Image.GetVoxels(System.Int32, System.Int32(,))
   name.vb: GetVoxels(Int32, Int32(,))
-- uid: ESAPIX.Facade.API.Image.UserToDicom(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
-  commentId: M:ESAPIX.Facade.API.Image.UserToDicom(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
-  id: UserToDicom(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.API.PlanSetup)
+- uid: ESAPIX.Facade.API.Image.UserToDicom(VVector,ESAPIX.Facade.API.PlanSetup)
+  commentId: M:ESAPIX.Facade.API.Image.UserToDicom(VVector,ESAPIX.Facade.API.PlanSetup)
+  id: UserToDicom(VVector,ESAPIX.Facade.API.PlanSetup)
   parent: ESAPIX.Facade.API.Image
   langs:
   - csharp
   - vb
   name: UserToDicom(VVector, PlanSetup)
   nameWithType: Image.UserToDicom(VVector, PlanSetup)
-  fullName: ESAPIX.Facade.API.Image.UserToDicom(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.API.PlanSetup)
+  fullName: ESAPIX.Facade.API.Image.UserToDicom(VVector, ESAPIX.Facade.API.PlanSetup)
   type: Method
   source:
     id: UserToDicom
     path: ''
-    startLine: 9032
+    startLine: 10518
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -973,11 +1005,11 @@ items:
     content: public VVector UserToDicom(VVector user, PlanSetup planSetup)
     parameters:
     - id: user
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: planSetup
       type: ESAPIX.Facade.API.PlanSetup
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Function UserToDicom(user As VVector, planSetup As PlanSetup) As VVector
   overload: ESAPIX.Facade.API.Image.UserToDicom*
   modifiers.csharp:
@@ -998,7 +1030,7 @@ items:
   source:
     id: VoxelToDisplayValue
     path: ''
-    startLine: 9039
+    startLine: 10528
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1460,6 +1492,19 @@ references:
   name: Image
   nameWithType: Image.Image
   fullName: ESAPIX.Facade.API.Image.Image
+- uid: ESAPIX.Facade.API.Image.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Image.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Image.IsLive
+  fullName: ESAPIX.Facade.API.Image.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Image.ContrastBolusAgentIngredientName*
   commentId: Overload:ESAPIX.Facade.API.Image.ContrastBolusAgentIngredientName
   isExternal: false
@@ -1580,32 +1625,17 @@ references:
   name: HasUserOrigin
   nameWithType: Image.HasUserOrigin
   fullName: ESAPIX.Facade.API.Image.HasUserOrigin
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Image.ImagingOrientation*
   commentId: Overload:ESAPIX.Facade.API.Image.ImagingOrientation
   isExternal: false
   name: ImagingOrientation
   nameWithType: Image.ImagingOrientation
   fullName: ESAPIX.Facade.API.Image.ImagingOrientation
-- uid: ESAPIX.Facade.Types.PatientOrientation
-  commentId: T:ESAPIX.Facade.Types.PatientOrientation
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: PatientOrientation
+  isExternal: true
   name: PatientOrientation
   nameWithType: PatientOrientation
-  fullName: ESAPIX.Facade.Types.PatientOrientation
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: PatientOrientation
 - uid: ESAPIX.Facade.API.Image.IsProcessed*
   commentId: Overload:ESAPIX.Facade.API.Image.IsProcessed
   isExternal: false
@@ -1631,13 +1661,11 @@ references:
   name: Origin
   nameWithType: Image.Origin
   fullName: ESAPIX.Facade.API.Image.Origin
-- uid: ESAPIX.Facade.Types.VVector
-  commentId: T:ESAPIX.Facade.Types.VVector
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: VVector
+  isExternal: true
   name: VVector
   nameWithType: VVector
-  fullName: ESAPIX.Facade.Types.VVector
+  fullName: VVector
 - uid: ESAPIX.Facade.API.Image.Series*
   commentId: Overload:ESAPIX.Facade.API.Image.Series
   isExternal: false
@@ -1785,13 +1813,12 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: ESAPIX.Facade.Types.ImageProfile
-  commentId: T:ESAPIX.Facade.Types.ImageProfile
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: ImageProfile
+  commentId: '!:ImageProfile'
+  isExternal: true
   name: ImageProfile
   nameWithType: ImageProfile
-  fullName: ESAPIX.Facade.Types.ImageProfile
+  fullName: ImageProfile
 - uid: ESAPIX.Facade.API.Image.GetVoxels*
   commentId: Overload:ESAPIX.Facade.API.Image.GetVoxels
   isExternal: false

@@ -17,6 +17,7 @@ items:
   - ESAPIX.Facade.API.Course.ExternalPlanSetups
   - ESAPIX.Facade.API.Course.Id
   - ESAPIX.Facade.API.Course.Intent
+  - ESAPIX.Facade.API.Course.IsLive
   - ESAPIX.Facade.API.Course.Patient
   - ESAPIX.Facade.API.Course.PlanSetups
   - ESAPIX.Facade.API.Course.PlanSums
@@ -33,7 +34,7 @@ items:
   source:
     id: Course
     path: ''
-    startLine: 7182
+    startLine: 8050
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -81,7 +82,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7184
+    startLine: 8052
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -107,7 +108,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7185
+    startLine: 8057
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -122,6 +123,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Course.IsLive
+  commentId: P:ESAPIX.Facade.API.Course.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Course
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Course.IsLive
+  fullName: ESAPIX.Facade.API.Course.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 8062
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Course.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Course.CompletedDateTime
   commentId: P:ESAPIX.Facade.API.Course.CompletedDateTime
   id: CompletedDateTime
@@ -136,7 +168,7 @@ items:
   source:
     id: CompletedDateTime
     path: ''
-    startLine: 7186
+    startLine: 8067
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -167,23 +199,23 @@ items:
   source:
     id: Diagnoses
     path: ''
-    startLine: 7199
+    startLine: 8084
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<Diagnosis> Diagnoses { get; }
+    content: public IEnumerable<Diagnosis> Diagnoses { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Diagnosis}
-    content.vb: Public ReadOnly Property Diagnoses As IEnumerable(Of Diagnosis)
+      type: IEnumerable{ESAPIX.Facade.API.Diagnosis}
+    content.vb: Public Property Diagnoses As IEnumerable(Of Diagnosis)
   overload: ESAPIX.Facade.API.Course.Diagnoses*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Course.Intent
   commentId: P:ESAPIX.Facade.API.Course.Intent
   id: Intent
@@ -198,7 +230,7 @@ items:
   source:
     id: Intent
     path: ''
-    startLine: 7225
+    startLine: 8122
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -229,7 +261,7 @@ items:
   source:
     id: Patient
     path: ''
-    startLine: 7238
+    startLine: 8137
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -260,23 +292,23 @@ items:
   source:
     id: PlanSums
     path: ''
-    startLine: 7251
+    startLine: 8156
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<PlanSum> PlanSums { get; }
+    content: public IEnumerable<PlanSum> PlanSums { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSum}
-    content.vb: Public ReadOnly Property PlanSums As IEnumerable(Of PlanSum)
+      type: IEnumerable{ESAPIX.Facade.API.PlanSum}
+    content.vb: Public Property PlanSums As IEnumerable(Of PlanSum)
   overload: ESAPIX.Facade.API.Course.PlanSums*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Course.StartDateTime
   commentId: P:ESAPIX.Facade.API.Course.StartDateTime
   id: StartDateTime
@@ -291,7 +323,7 @@ items:
   source:
     id: StartDateTime
     path: ''
-    startLine: 7277
+    startLine: 8194
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -322,7 +354,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 7290
+    startLine: 8211
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -353,23 +385,23 @@ items:
   source:
     id: PlanSetups
     path: ''
-    startLine: 7303
+    startLine: 8226
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<PlanSetup> PlanSetups { get; }
+    content: public IEnumerable<PlanSetup> PlanSetups { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSetup}
-    content.vb: Public ReadOnly Property PlanSetups As IEnumerable(Of PlanSetup)
+      type: IEnumerable{ESAPIX.Facade.API.PlanSetup}
+    content.vb: Public Property PlanSetups As IEnumerable(Of PlanSetup)
   overload: ESAPIX.Facade.API.Course.PlanSetups*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Course.ExternalPlanSetups
   commentId: P:ESAPIX.Facade.API.Course.ExternalPlanSetups
   id: ExternalPlanSetups
@@ -384,23 +416,23 @@ items:
   source:
     id: ExternalPlanSetups
     path: ''
-    startLine: 7329
+    startLine: 8264
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<ExternalPlanSetup> ExternalPlanSetups { get; }
+    content: public IEnumerable<ExternalPlanSetup> ExternalPlanSetups { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
-    content.vb: Public ReadOnly Property ExternalPlanSetups As IEnumerable(Of ExternalPlanSetup)
+      type: IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
+    content.vb: Public Property ExternalPlanSetups As IEnumerable(Of ExternalPlanSetup)
   overload: ESAPIX.Facade.API.Course.ExternalPlanSetups*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Course.BrachyPlanSetups
   commentId: P:ESAPIX.Facade.API.Course.BrachyPlanSetups
   id: BrachyPlanSetups
@@ -415,23 +447,23 @@ items:
   source:
     id: BrachyPlanSetups
     path: ''
-    startLine: 7355
+    startLine: 8302
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<BrachyPlanSetup> BrachyPlanSetups { get; }
+    content: public IEnumerable<BrachyPlanSetup> BrachyPlanSetups { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
-    content.vb: Public ReadOnly Property BrachyPlanSetups As IEnumerable(Of BrachyPlanSetup)
+      type: IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
+    content.vb: Public Property BrachyPlanSetups As IEnumerable(Of BrachyPlanSetup)
   overload: ESAPIX.Facade.API.Course.BrachyPlanSetups*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Course.WriteXml(System.Xml.XmlWriter)
   commentId: M:ESAPIX.Facade.API.Course.WriteXml(System.Xml.XmlWriter)
   id: WriteXml(System.Xml.XmlWriter)
@@ -446,7 +478,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 7381
+    startLine: 8340
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -475,7 +507,7 @@ items:
   source:
     id: AddExternalPlanSetup
     path: ''
-    startLine: 7390
+    startLine: 8346
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -506,7 +538,7 @@ items:
   source:
     id: AddExternalPlanSetupAsVerificationPlan
     path: ''
-    startLine: 7397
+    startLine: 8356
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -539,7 +571,7 @@ items:
   source:
     id: CanAddPlanSetup
     path: ''
-    startLine: 7404
+    startLine: 8369
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -570,7 +602,7 @@ items:
   source:
     id: CanRemovePlanSetup
     path: ''
-    startLine: 7411
+    startLine: 8379
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -601,7 +633,7 @@ items:
   source:
     id: RemovePlanSetup
     path: ''
-    startLine: 7418
+    startLine: 8389
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1054,6 +1086,19 @@ references:
   name: Course
   nameWithType: Course.Course
   fullName: ESAPIX.Facade.API.Course.Course
+- uid: ESAPIX.Facade.API.Course.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Course.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Course.IsLive
+  fullName: ESAPIX.Facade.API.Course.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Course.CompletedDateTime*
   commentId: Overload:ESAPIX.Facade.API.Course.CompletedDateTime
   isExternal: false
@@ -1149,21 +1194,20 @@ references:
   name: Diagnoses
   nameWithType: Course.Diagnoses
   fullName: ESAPIX.Facade.API.Course.Diagnoses
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Diagnosis}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Diagnosis}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.Diagnosis}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.Diagnosis}'
+  definition: IEnumerable`1
   name: IEnumerable<Diagnosis>
   nameWithType: IEnumerable<Diagnosis>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Diagnosis>
+  fullName: IEnumerable<ESAPIX.Facade.API.Diagnosis>
   nameWithType.vb: IEnumerable(Of Diagnosis)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Diagnosis)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.Diagnosis)
   name.vb: IEnumerable(Of Diagnosis)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1176,10 +1220,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1191,51 +1235,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.Course.Intent*
   commentId: Overload:ESAPIX.Facade.API.Course.Intent
   isExternal: false
@@ -1268,21 +1305,20 @@ references:
   name: PlanSums
   nameWithType: Course.PlanSums
   fullName: ESAPIX.Facade.API.Course.PlanSums
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSum}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSum}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.PlanSum}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.PlanSum}'
+  definition: IEnumerable`1
   name: IEnumerable<PlanSum>
   nameWithType: IEnumerable<PlanSum>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.PlanSum>
+  fullName: IEnumerable<ESAPIX.Facade.API.PlanSum>
   nameWithType.vb: IEnumerable(Of PlanSum)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.PlanSum)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.PlanSum)
   name.vb: IEnumerable(Of PlanSum)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1295,10 +1331,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1328,21 +1364,20 @@ references:
   name: PlanSetups
   nameWithType: Course.PlanSetups
   fullName: ESAPIX.Facade.API.Course.PlanSetups
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSetup}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.PlanSetup}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.PlanSetup}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.PlanSetup}'
+  definition: IEnumerable`1
   name: IEnumerable<PlanSetup>
   nameWithType: IEnumerable<PlanSetup>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.PlanSetup>
+  fullName: IEnumerable<ESAPIX.Facade.API.PlanSetup>
   nameWithType.vb: IEnumerable(Of PlanSetup)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.PlanSetup)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.PlanSetup)
   name.vb: IEnumerable(Of PlanSetup)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1355,10 +1390,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1376,21 +1411,20 @@ references:
   name: ExternalPlanSetups
   nameWithType: Course.ExternalPlanSetups
   fullName: ESAPIX.Facade.API.Course.ExternalPlanSetups
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}'
+  definition: IEnumerable`1
   name: IEnumerable<ExternalPlanSetup>
   nameWithType: IEnumerable<ExternalPlanSetup>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.ExternalPlanSetup>
+  fullName: IEnumerable<ESAPIX.Facade.API.ExternalPlanSetup>
   nameWithType.vb: IEnumerable(Of ExternalPlanSetup)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.ExternalPlanSetup)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.ExternalPlanSetup)
   name.vb: IEnumerable(Of ExternalPlanSetup)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1403,10 +1437,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1424,21 +1458,20 @@ references:
   name: BrachyPlanSetups
   nameWithType: Course.BrachyPlanSetups
   fullName: ESAPIX.Facade.API.Course.BrachyPlanSetups
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}'
+  definition: IEnumerable`1
   name: IEnumerable<BrachyPlanSetup>
   nameWithType: IEnumerable<BrachyPlanSetup>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.BrachyPlanSetup>
+  fullName: IEnumerable<ESAPIX.Facade.API.BrachyPlanSetup>
   nameWithType.vb: IEnumerable(Of BrachyPlanSetup)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.BrachyPlanSetup)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.BrachyPlanSetup)
   name.vb: IEnumerable(Of BrachyPlanSetup)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1451,10 +1484,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1509,13 +1542,6 @@ references:
   name: CanAddPlanSetup
   nameWithType: Course.CanAddPlanSetup
   fullName: ESAPIX.Facade.API.Course.CanAddPlanSetup
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Course.CanRemovePlanSetup*
   commentId: Overload:ESAPIX.Facade.API.Course.CanRemovePlanSetup
   isExternal: false

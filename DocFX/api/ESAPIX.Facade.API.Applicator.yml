@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.Applicator.#ctor
   - ESAPIX.Facade.API.Applicator.#ctor(System.Object)
+  - ESAPIX.Facade.API.Applicator.IsLive
   - ESAPIX.Facade.API.Applicator.WriteXml(System.Xml.XmlWriter)
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
   source:
     id: Applicator
     path: ''
-    startLine: 5006
+    startLine: 5011
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -69,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5008
+    startLine: 5013
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,7 +96,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5009
+    startLine: 5018
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -110,6 +111,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Applicator.IsLive
+  commentId: P:ESAPIX.Facade.API.Applicator.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Applicator
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Applicator.IsLive
+  fullName: ESAPIX.Facade.API.Applicator.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 5023
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Applicator.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Applicator.WriteXml(System.Xml.XmlWriter)
   commentId: M:ESAPIX.Facade.API.Applicator.WriteXml(System.Xml.XmlWriter)
   id: WriteXml(System.Xml.XmlWriter)
@@ -124,7 +156,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 5010
+    startLine: 5028
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -598,6 +630,19 @@ references:
   name: Applicator
   nameWithType: Applicator.Applicator
   fullName: ESAPIX.Facade.API.Applicator.Applicator
+- uid: ESAPIX.Facade.API.Applicator.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Applicator.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Applicator.IsLive
+  fullName: ESAPIX.Facade.API.Applicator.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Applicator.WriteXml*
   commentId: Overload:ESAPIX.Facade.API.Applicator.WriteXml
   isExternal: false

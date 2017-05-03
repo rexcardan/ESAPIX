@@ -7,9 +7,9 @@ items:
   children:
   - ESAPIX.Facade.API.Structure.#ctor
   - ESAPIX.Facade.API.Structure.#ctor(System.Object)
-  - ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+  - ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector[],System.Int32)
   - ESAPIX.Facade.API.Structure.And(ESAPIX.Facade.API.SegmentVolume)
-  - ESAPIX.Facade.API.Structure.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+  - ESAPIX.Facade.API.Structure.AsymmetricMargin(AxisAlignedMargins)
   - ESAPIX.Facade.API.Structure.CanConvertToHighResolution
   - ESAPIX.Facade.API.Structure.CanSetAssignedHU(System.String@)
   - ESAPIX.Facade.API.Structure.CenterPoint
@@ -20,12 +20,13 @@ items:
   - ESAPIX.Facade.API.Structure.GetAssignedHU(System.Double@)
   - ESAPIX.Facade.API.Structure.GetContoursOnImagePlane(System.Int32)
   - ESAPIX.Facade.API.Structure.GetNumberOfSeparateParts
-  - ESAPIX.Facade.API.Structure.GetSegmentProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Collections.BitArray)
+  - ESAPIX.Facade.API.Structure.GetSegmentProfile(VVector,VVector,BitArray)
   - ESAPIX.Facade.API.Structure.HasSegment
   - ESAPIX.Facade.API.Structure.Id
   - ESAPIX.Facade.API.Structure.IsEmpty
   - ESAPIX.Facade.API.Structure.IsHighResolution
-  - ESAPIX.Facade.API.Structure.IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
+  - ESAPIX.Facade.API.Structure.IsLive
+  - ESAPIX.Facade.API.Structure.IsPointInsideSegment(VVector)
   - ESAPIX.Facade.API.Structure.Margin(System.Double)
   - ESAPIX.Facade.API.Structure.MeshGeometry
   - ESAPIX.Facade.API.Structure.Not
@@ -36,7 +37,7 @@ items:
   - ESAPIX.Facade.API.Structure.SetAssignedHU(System.Double)
   - ESAPIX.Facade.API.Structure.StructureCodeInfos
   - ESAPIX.Facade.API.Structure.Sub(ESAPIX.Facade.API.SegmentVolume)
-  - ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+  - ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector[],System.Int32)
   - ESAPIX.Facade.API.Structure.Volume
   - ESAPIX.Facade.API.Structure.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.Structure.Xor(ESAPIX.Facade.API.SegmentVolume)
@@ -50,7 +51,7 @@ items:
   source:
     id: Structure
     path: ''
-    startLine: 12548
+    startLine: 15389
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -98,7 +99,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12550
+    startLine: 15391
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -124,7 +125,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12551
+    startLine: 15396
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -139,6 +140,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Structure.IsLive
+  commentId: P:ESAPIX.Facade.API.Structure.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Structure
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Structure.IsLive
+  fullName: ESAPIX.Facade.API.Structure.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 15401
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Structure.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Structure.CenterPoint
   commentId: P:ESAPIX.Facade.API.Structure.CenterPoint
   id: CenterPoint
@@ -153,7 +185,7 @@ items:
   source:
     id: CenterPoint
     path: ''
-    startLine: 12552
+    startLine: 15406
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -161,7 +193,7 @@ items:
     content: public VVector CenterPoint { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     content.vb: Public Property CenterPoint As VVector
   overload: ESAPIX.Facade.API.Structure.CenterPoint*
   modifiers.csharp:
@@ -184,7 +216,7 @@ items:
   source:
     id: Color
     path: ''
-    startLine: 12565
+    startLine: 15423
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -215,7 +247,7 @@ items:
   source:
     id: DicomType
     path: ''
-    startLine: 12578
+    startLine: 15443
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -246,7 +278,7 @@ items:
   source:
     id: HasSegment
     path: ''
-    startLine: 12591
+    startLine: 15458
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -277,7 +309,7 @@ items:
   source:
     id: IsEmpty
     path: ''
-    startLine: 12604
+    startLine: 15473
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -308,7 +340,7 @@ items:
   source:
     id: IsHighResolution
     path: ''
-    startLine: 12617
+    startLine: 15488
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -339,7 +371,7 @@ items:
   source:
     id: MeshGeometry
     path: ''
-    startLine: 12630
+    startLine: 15505
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -370,7 +402,7 @@ items:
   source:
     id: ROINumber
     path: ''
-    startLine: 12643
+    startLine: 15537
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -401,7 +433,7 @@ items:
   source:
     id: SegmentVolume
     path: ''
-    startLine: 12656
+    startLine: 15552
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -432,23 +464,23 @@ items:
   source:
     id: StructureCodeInfos
     path: ''
-    startLine: 12669
+    startLine: 15573
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<StructureCodeInfo> StructureCodeInfos { get; }
+    content: public IEnumerable<StructureCodeInfo> StructureCodeInfos { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.Types.StructureCodeInfo}
-    content.vb: Public ReadOnly Property StructureCodeInfos As IEnumerable(Of StructureCodeInfo)
+      type: IEnumerable{StructureCodeInfo}
+    content.vb: Public Property StructureCodeInfos As IEnumerable(Of StructureCodeInfo)
   overload: ESAPIX.Facade.API.Structure.StructureCodeInfos*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Structure.Volume
   commentId: P:ESAPIX.Facade.API.Structure.Volume
   id: Volume
@@ -463,7 +495,7 @@ items:
   source:
     id: Volume
     path: ''
-    startLine: 12695
+    startLine: 15611
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -494,7 +526,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 12708
+    startLine: 15626
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -525,7 +557,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 12721
+    startLine: 15641
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -540,21 +572,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
-  commentId: M:ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
-  id: AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+- uid: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector[],System.Int32)
+  commentId: M:ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector[],System.Int32)
+  id: AddContourOnImagePlane(VVector[],System.Int32)
   parent: ESAPIX.Facade.API.Structure
   langs:
   - csharp
   - vb
   name: AddContourOnImagePlane(VVector[], Int32)
   nameWithType: Structure.AddContourOnImagePlane(VVector[], Int32)
-  fullName: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector[], System.Int32)
+  fullName: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector[], System.Int32)
   type: Method
   source:
     id: AddContourOnImagePlane
     path: ''
-    startLine: 12730
+    startLine: 15647
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -562,7 +594,7 @@ items:
     content: public void AddContourOnImagePlane(VVector[] contour, int z)
     parameters:
     - id: contour
-      type: ESAPIX.Facade.Types.VVector[]
+      type: VVector[]
     - id: z
       type: System.Int32
     content.vb: Public Sub AddContourOnImagePlane(contour As VVector(), z As Integer)
@@ -572,7 +604,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(ESAPIX.Facade.Types.VVector(), System.Int32)
+  fullName.vb: ESAPIX.Facade.API.Structure.AddContourOnImagePlane(VVector(), System.Int32)
   name.vb: AddContourOnImagePlane(VVector(), Int32)
 - uid: ESAPIX.Facade.API.Structure.And(ESAPIX.Facade.API.SegmentVolume)
   commentId: M:ESAPIX.Facade.API.Structure.And(ESAPIX.Facade.API.SegmentVolume)
@@ -588,7 +620,7 @@ items:
   source:
     id: And
     path: ''
-    startLine: 12739
+    startLine: 15653
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -605,21 +637,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Structure.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
-  commentId: M:ESAPIX.Facade.API.Structure.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
-  id: AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+- uid: ESAPIX.Facade.API.Structure.AsymmetricMargin(AxisAlignedMargins)
+  commentId: M:ESAPIX.Facade.API.Structure.AsymmetricMargin(AxisAlignedMargins)
+  id: AsymmetricMargin(AxisAlignedMargins)
   parent: ESAPIX.Facade.API.Structure
   langs:
   - csharp
   - vb
   name: AsymmetricMargin(AxisAlignedMargins)
   nameWithType: Structure.AsymmetricMargin(AxisAlignedMargins)
-  fullName: ESAPIX.Facade.API.Structure.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+  fullName: ESAPIX.Facade.API.Structure.AsymmetricMargin(AxisAlignedMargins)
   type: Method
   source:
     id: AsymmetricMargin
     path: ''
-    startLine: 12746
+    startLine: 15663
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -627,7 +659,7 @@ items:
     content: public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
     parameters:
     - id: margins
-      type: ESAPIX.Facade.Types.AxisAlignedMargins
+      type: AxisAlignedMargins
     return:
       type: ESAPIX.Facade.API.SegmentVolume
     content.vb: Public Function AsymmetricMargin(margins As AxisAlignedMargins) As SegmentVolume
@@ -650,7 +682,7 @@ items:
   source:
     id: CanConvertToHighResolution
     path: ''
-    startLine: 12753
+    startLine: 15673
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -678,7 +710,7 @@ items:
   source:
     id: CanSetAssignedHU
     path: ''
-    startLine: 12760
+    startLine: 15681
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -712,7 +744,7 @@ items:
   source:
     id: ClearAllContoursOnImagePlane
     path: ''
-    startLine: 12769
+    startLine: 15693
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -741,7 +773,7 @@ items:
   source:
     id: ConvertToHighResolution
     path: ''
-    startLine: 12778
+    startLine: 15699
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -767,7 +799,7 @@ items:
   source:
     id: GetAssignedHU
     path: ''
-    startLine: 12787
+    startLine: 15705
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -801,7 +833,7 @@ items:
   source:
     id: GetContoursOnImagePlane
     path: ''
-    startLine: 12796
+    startLine: 15717
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -811,7 +843,7 @@ items:
     - id: z
       type: System.Int32
     return:
-      type: ESAPIX.Facade.Types.VVector[][]
+      type: VVector[][]
     content.vb: Public Function GetContoursOnImagePlane(z As Integer) As VVector()()
   overload: ESAPIX.Facade.API.Structure.GetContoursOnImagePlane*
   modifiers.csharp:
@@ -832,7 +864,7 @@ items:
   source:
     id: GetNumberOfSeparateParts
     path: ''
-    startLine: 12805
+    startLine: 15724
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -846,21 +878,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Structure.GetSegmentProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Collections.BitArray)
-  commentId: M:ESAPIX.Facade.API.Structure.GetSegmentProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Collections.BitArray)
-  id: GetSegmentProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Collections.BitArray)
+- uid: ESAPIX.Facade.API.Structure.GetSegmentProfile(VVector,VVector,BitArray)
+  commentId: M:ESAPIX.Facade.API.Structure.GetSegmentProfile(VVector,VVector,BitArray)
+  id: GetSegmentProfile(VVector,VVector,BitArray)
   parent: ESAPIX.Facade.API.Structure
   langs:
   - csharp
   - vb
   name: GetSegmentProfile(VVector, VVector, BitArray)
   nameWithType: Structure.GetSegmentProfile(VVector, VVector, BitArray)
-  fullName: ESAPIX.Facade.API.Structure.GetSegmentProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Collections.BitArray)
+  fullName: ESAPIX.Facade.API.Structure.GetSegmentProfile(VVector, VVector, BitArray)
   type: Method
   source:
     id: GetSegmentProfile
     path: ''
-    startLine: 12812
+    startLine: 15731
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -868,34 +900,34 @@ items:
     content: public SegmentProfile GetSegmentProfile(VVector start, VVector stop, BitArray preallocatedBuffer)
     parameters:
     - id: start
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: stop
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     - id: preallocatedBuffer
-      type: System.Collections.BitArray
+      type: BitArray
     return:
-      type: ESAPIX.Facade.Types.SegmentProfile
+      type: SegmentProfile
     content.vb: Public Function GetSegmentProfile(start As VVector, stop As VVector, preallocatedBuffer As BitArray) As SegmentProfile
   overload: ESAPIX.Facade.API.Structure.GetSegmentProfile*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Structure.IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.Structure.IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
-  id: IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.Structure.IsPointInsideSegment(VVector)
+  commentId: M:ESAPIX.Facade.API.Structure.IsPointInsideSegment(VVector)
+  id: IsPointInsideSegment(VVector)
   parent: ESAPIX.Facade.API.Structure
   langs:
   - csharp
   - vb
   name: IsPointInsideSegment(VVector)
   nameWithType: Structure.IsPointInsideSegment(VVector)
-  fullName: ESAPIX.Facade.API.Structure.IsPointInsideSegment(ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.Structure.IsPointInsideSegment(VVector)
   type: Method
   source:
     id: IsPointInsideSegment
     path: ''
-    startLine: 12819
+    startLine: 15741
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -903,7 +935,7 @@ items:
     content: public bool IsPointInsideSegment(VVector point)
     parameters:
     - id: point
-      type: ESAPIX.Facade.Types.VVector
+      type: VVector
     return:
       type: System.Boolean
     content.vb: Public Function IsPointInsideSegment(point As VVector) As Boolean
@@ -926,7 +958,7 @@ items:
   source:
     id: Margin
     path: ''
-    startLine: 12826
+    startLine: 15751
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -957,7 +989,7 @@ items:
   source:
     id: Not
     path: ''
-    startLine: 12833
+    startLine: 15761
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -985,7 +1017,7 @@ items:
   source:
     id: Or
     path: ''
-    startLine: 12840
+    startLine: 15768
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1016,7 +1048,7 @@ items:
   source:
     id: ResetAssignedHU
     path: ''
-    startLine: 12847
+    startLine: 15778
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1044,7 +1076,7 @@ items:
   source:
     id: SetAssignedHU
     path: ''
-    startLine: 12854
+    startLine: 15785
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1073,7 +1105,7 @@ items:
   source:
     id: Sub
     path: ''
-    startLine: 12863
+    startLine: 15791
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1090,21 +1122,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
-  commentId: M:ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
-  id: SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[],System.Int32)
+- uid: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector[],System.Int32)
+  commentId: M:ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector[],System.Int32)
+  id: SubtractContourOnImagePlane(VVector[],System.Int32)
   parent: ESAPIX.Facade.API.Structure
   langs:
   - csharp
   - vb
   name: SubtractContourOnImagePlane(VVector[], Int32)
   nameWithType: Structure.SubtractContourOnImagePlane(VVector[], Int32)
-  fullName: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector[], System.Int32)
+  fullName: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector[], System.Int32)
   type: Method
   source:
     id: SubtractContourOnImagePlane
     path: ''
-    startLine: 12870
+    startLine: 15801
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1112,7 +1144,7 @@ items:
     content: public void SubtractContourOnImagePlane(VVector[] contour, int z)
     parameters:
     - id: contour
-      type: ESAPIX.Facade.Types.VVector[]
+      type: VVector[]
     - id: z
       type: System.Int32
     content.vb: Public Sub SubtractContourOnImagePlane(contour As VVector(), z As Integer)
@@ -1122,7 +1154,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(ESAPIX.Facade.Types.VVector(), System.Int32)
+  fullName.vb: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane(VVector(), System.Int32)
   name.vb: SubtractContourOnImagePlane(VVector(), Int32)
 - uid: ESAPIX.Facade.API.Structure.Xor(ESAPIX.Facade.API.SegmentVolume)
   commentId: M:ESAPIX.Facade.API.Structure.Xor(ESAPIX.Facade.API.SegmentVolume)
@@ -1138,7 +1170,7 @@ items:
   source:
     id: Xor
     path: ''
-    startLine: 12879
+    startLine: 15807
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -1593,25 +1625,30 @@ references:
   name: Structure
   nameWithType: Structure.Structure
   fullName: ESAPIX.Facade.API.Structure.Structure
+- uid: ESAPIX.Facade.API.Structure.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Structure.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Structure.IsLive
+  fullName: ESAPIX.Facade.API.Structure.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Structure.CenterPoint*
   commentId: Overload:ESAPIX.Facade.API.Structure.CenterPoint
   isExternal: false
   name: CenterPoint
   nameWithType: Structure.CenterPoint
   fullName: ESAPIX.Facade.API.Structure.CenterPoint
-- uid: ESAPIX.Facade.Types.VVector
-  commentId: T:ESAPIX.Facade.Types.VVector
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: VVector
+  isExternal: true
   name: VVector
   nameWithType: VVector
-  fullName: ESAPIX.Facade.Types.VVector
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: VVector
 - uid: ESAPIX.Facade.API.Structure.Color*
   commentId: Overload:ESAPIX.Facade.API.Structure.Color
   isExternal: false
@@ -1642,13 +1679,6 @@ references:
   name: HasSegment
   nameWithType: Structure.HasSegment
   fullName: ESAPIX.Facade.API.Structure.HasSegment
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Structure.IsEmpty*
   commentId: Overload:ESAPIX.Facade.API.Structure.IsEmpty
   isExternal: false
@@ -1704,93 +1734,87 @@ references:
   name: StructureCodeInfos
   nameWithType: Structure.StructureCodeInfos
   fullName: ESAPIX.Facade.API.Structure.StructureCodeInfos
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.Types.StructureCodeInfo}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.Types.StructureCodeInfo}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{StructureCodeInfo}
+  commentId: '!:IEnumerable{StructureCodeInfo}'
+  definition: IEnumerable`1
   name: IEnumerable<StructureCodeInfo>
   nameWithType: IEnumerable<StructureCodeInfo>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.Types.StructureCodeInfo>
+  fullName: IEnumerable<StructureCodeInfo>
   nameWithType.vb: IEnumerable(Of StructureCodeInfo)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.Types.StructureCodeInfo)
+  fullName.vb: IEnumerable(Of StructureCodeInfo)
   name.vb: IEnumerable(Of StructureCodeInfo)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: ESAPIX.Facade.Types.StructureCodeInfo
+  - uid: StructureCodeInfo
     name: StructureCodeInfo
     nameWithType: StructureCodeInfo
-    fullName: ESAPIX.Facade.Types.StructureCodeInfo
+    fullName: StructureCodeInfo
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: ESAPIX.Facade.Types.StructureCodeInfo
+  - uid: StructureCodeInfo
     name: StructureCodeInfo
     nameWithType: StructureCodeInfo
-    fullName: ESAPIX.Facade.Types.StructureCodeInfo
+    fullName: StructureCodeInfo
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.Structure.Volume*
   commentId: Overload:ESAPIX.Facade.API.Structure.Volume
   isExternal: false
@@ -1827,26 +1851,28 @@ references:
   name: AddContourOnImagePlane
   nameWithType: Structure.AddContourOnImagePlane
   fullName: ESAPIX.Facade.API.Structure.AddContourOnImagePlane
-- uid: ESAPIX.Facade.Types.VVector[]
+- uid: VVector[]
   name: VVector[]
   nameWithType: VVector[]
-  fullName: ESAPIX.Facade.Types.VVector[]
+  fullName: VVector[]
   nameWithType.vb: VVector()
-  fullName.vb: ESAPIX.Facade.Types.VVector()
+  fullName.vb: VVector()
   name.vb: VVector()
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
@@ -1862,13 +1888,11 @@ references:
   name: AsymmetricMargin
   nameWithType: Structure.AsymmetricMargin
   fullName: ESAPIX.Facade.API.Structure.AsymmetricMargin
-- uid: ESAPIX.Facade.Types.AxisAlignedMargins
-  commentId: T:ESAPIX.Facade.Types.AxisAlignedMargins
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: AxisAlignedMargins
+  isExternal: true
   name: AxisAlignedMargins
   nameWithType: AxisAlignedMargins
-  fullName: ESAPIX.Facade.Types.AxisAlignedMargins
+  fullName: AxisAlignedMargins
 - uid: ESAPIX.Facade.API.Structure.CanConvertToHighResolution*
   commentId: Overload:ESAPIX.Facade.API.Structure.CanConvertToHighResolution
   isExternal: false
@@ -1905,18 +1929,19 @@ references:
   name: GetContoursOnImagePlane
   nameWithType: Structure.GetContoursOnImagePlane
   fullName: ESAPIX.Facade.API.Structure.GetContoursOnImagePlane
-- uid: ESAPIX.Facade.Types.VVector[][]
+- uid: VVector[][]
   name: VVector[][]
   nameWithType: VVector[][]
-  fullName: ESAPIX.Facade.Types.VVector[][]
+  fullName: VVector[][]
   nameWithType.vb: VVector()()
-  fullName.vb: ESAPIX.Facade.Types.VVector()()
+  fullName.vb: VVector()()
   name.vb: VVector()()
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -1924,10 +1949,11 @@ references:
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
@@ -1946,26 +1972,18 @@ references:
   name: GetSegmentProfile
   nameWithType: Structure.GetSegmentProfile
   fullName: ESAPIX.Facade.API.Structure.GetSegmentProfile
-- uid: System.Collections.BitArray
-  commentId: T:System.Collections.BitArray
-  parent: System.Collections
+- uid: BitArray
+  commentId: '!:BitArray'
   isExternal: true
   name: BitArray
   nameWithType: BitArray
-  fullName: System.Collections.BitArray
-- uid: ESAPIX.Facade.Types.SegmentProfile
-  commentId: T:ESAPIX.Facade.Types.SegmentProfile
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+  fullName: BitArray
+- uid: SegmentProfile
+  commentId: '!:SegmentProfile'
+  isExternal: true
   name: SegmentProfile
   nameWithType: SegmentProfile
-  fullName: ESAPIX.Facade.Types.SegmentProfile
-- uid: System.Collections
-  commentId: N:System.Collections
-  isExternal: false
-  name: System.Collections
-  nameWithType: System.Collections
-  fullName: System.Collections
+  fullName: SegmentProfile
 - uid: ESAPIX.Facade.API.Structure.IsPointInsideSegment*
   commentId: Overload:ESAPIX.Facade.API.Structure.IsPointInsideSegment
   isExternal: false

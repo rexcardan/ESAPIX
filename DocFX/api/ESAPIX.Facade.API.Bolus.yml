@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.Bolus.#ctor
   - ESAPIX.Facade.API.Bolus.#ctor(System.Object)
   - ESAPIX.Facade.API.Bolus.Id
+  - ESAPIX.Facade.API.Bolus.IsLive
   - ESAPIX.Facade.API.Bolus.MaterialCTValue
   - ESAPIX.Facade.API.Bolus.Name
   - ESAPIX.Facade.API.Bolus.WriteXml(System.Xml.XmlWriter)
@@ -21,7 +22,7 @@ items:
   source:
     id: Bolus
     path: ''
-    startLine: 5962
+    startLine: 6335
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -64,7 +65,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5964
+    startLine: 6337
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -90,7 +91,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5965
+    startLine: 6342
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -105,6 +106,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Bolus.IsLive
+  commentId: P:ESAPIX.Facade.API.Bolus.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Bolus.IsLive
+  fullName: ESAPIX.Facade.API.Bolus.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 6347
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.Bolus.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Bolus.Id
   commentId: P:ESAPIX.Facade.API.Bolus.Id
   id: Id
@@ -119,7 +151,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 5966
+    startLine: 6352
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -150,7 +182,7 @@ items:
   source:
     id: MaterialCTValue
     path: ''
-    startLine: 5979
+    startLine: 6367
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -181,7 +213,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 5992
+    startLine: 6384
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -212,7 +244,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6005
+    startLine: 6399
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -636,6 +668,19 @@ references:
   name: Bolus
   nameWithType: Bolus.Bolus
   fullName: ESAPIX.Facade.API.Bolus.Bolus
+- uid: ESAPIX.Facade.API.Bolus.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Bolus.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Bolus.IsLive
+  fullName: ESAPIX.Facade.API.Bolus.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Bolus.Id*
   commentId: Overload:ESAPIX.Facade.API.Bolus.Id
   isExternal: false

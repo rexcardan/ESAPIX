@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.RadioactiveSource.#ctor
   - ESAPIX.Facade.API.RadioactiveSource.#ctor(System.Object)
   - ESAPIX.Facade.API.RadioactiveSource.CalibrationDate
+  - ESAPIX.Facade.API.RadioactiveSource.IsLive
   - ESAPIX.Facade.API.RadioactiveSource.NominalActivity
   - ESAPIX.Facade.API.RadioactiveSource.RadioactiveSourceModel
   - ESAPIX.Facade.API.RadioactiveSource.SerialNumber
@@ -23,7 +24,7 @@ items:
   source:
     id: RadioactiveSource
     path: ''
-    startLine: 11468
+    startLine: 13880
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -72,7 +73,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11470
+    startLine: 13882
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -98,7 +99,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11471
+    startLine: 13887
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -113,6 +114,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.RadioactiveSource.IsLive
+  commentId: P:ESAPIX.Facade.API.RadioactiveSource.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.RadioactiveSource
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: RadioactiveSource.IsLive
+  fullName: ESAPIX.Facade.API.RadioactiveSource.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 13892
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.RadioactiveSource.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.RadioactiveSource.CalibrationDate
   commentId: P:ESAPIX.Facade.API.RadioactiveSource.CalibrationDate
   id: CalibrationDate
@@ -127,7 +159,7 @@ items:
   source:
     id: CalibrationDate
     path: ''
-    startLine: 11472
+    startLine: 13897
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -158,7 +190,7 @@ items:
   source:
     id: NominalActivity
     path: ''
-    startLine: 11485
+    startLine: 13914
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -189,7 +221,7 @@ items:
   source:
     id: RadioactiveSourceModel
     path: ''
-    startLine: 11498
+    startLine: 13931
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -220,7 +252,7 @@ items:
   source:
     id: SerialNumber
     path: ''
-    startLine: 11511
+    startLine: 13953
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -251,7 +283,7 @@ items:
   source:
     id: Strength
     path: ''
-    startLine: 11524
+    startLine: 13970
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -282,7 +314,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 11537
+    startLine: 13985
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -742,6 +774,19 @@ references:
   name: RadioactiveSource
   nameWithType: RadioactiveSource.RadioactiveSource
   fullName: ESAPIX.Facade.API.RadioactiveSource.RadioactiveSource
+- uid: ESAPIX.Facade.API.RadioactiveSource.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.RadioactiveSource.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: RadioactiveSource.IsLive
+  fullName: ESAPIX.Facade.API.RadioactiveSource.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.RadioactiveSource.CalibrationDate*
   commentId: Overload:ESAPIX.Facade.API.RadioactiveSource.CalibrationDate
   isExternal: false
@@ -837,13 +882,6 @@ references:
   name: NominalActivity
   nameWithType: RadioactiveSource.NominalActivity
   fullName: ESAPIX.Facade.API.RadioactiveSource.NominalActivity
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.RadioactiveSource.RadioactiveSourceModel*
   commentId: Overload:ESAPIX.Facade.API.RadioactiveSource.RadioactiveSourceModel
   isExternal: false

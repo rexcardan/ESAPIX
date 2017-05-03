@@ -13,8 +13,8 @@ items:
   - ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose(DVHPoint[],DoseValue)
   - ESAPIX.Extensions.DVHDataExtensions.MaxDose(DVHPoint[])
   - ESAPIX.Extensions.DVHDataExtensions.MeanDose(DVHPoint[])
-  - ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
-  - ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
+  - ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable{DVHData})
+  - ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable{DVHPoint[]})
   - ESAPIX.Extensions.DVHDataExtensions.MinDose(DVHPoint[])
   langs:
   - csharp
@@ -26,7 +26,7 @@ items:
   source:
     id: DVHDataExtensions
     path: ''
-    startLine: 3300
+    startLine: 3229
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -65,7 +65,7 @@ items:
   source:
     id: GetVolumeAtDose
     path: ''
-    startLine: 3308
+    startLine: 3237
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -112,7 +112,7 @@ items:
   source:
     id: GetComplimentVolumeAtDose
     path: ''
-    startLine: 3337
+    startLine: 3262
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -159,7 +159,7 @@ items:
   source:
     id: GetDoseAtVolume
     path: ''
-    startLine: 3350
+    startLine: 3275
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -206,11 +206,11 @@ items:
   source:
     id: GetDoseCompliment
     path: ''
-    startLine: 3403
+    startLine: 3325
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
-  summary: "\nGets the compliment dose for the specified volume (the cold spot). Calculated by taking the total volume and subtracting the input volume.\n"
+  summary: "\nGets the compliment dose for the specified volume (the cold spot). Calculated by taking the total volume and\nsubtracting the input volume.\n"
   example: []
   syntax:
     content: public static DoseValue GetDoseCompliment(this DVHPoint[] dvh, double volume)
@@ -238,9 +238,9 @@ items:
   - Shared
   fullName.vb: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment(DVHPoint(), System.Double)
   name.vb: GetDoseCompliment(DVHPoint(), Double)
-- uid: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
-  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
-  id: MergeDVHs(System.Collections.Generic.IEnumerable{DVHData})
+- uid: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable{DVHData})
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable{DVHData})
+  id: MergeDVHs(IEnumerable{DVHData})
   isExtensionMethod: true
   parent: ESAPIX.Extensions.DVHDataExtensions
   langs:
@@ -248,12 +248,12 @@ items:
   - vb
   name: MergeDVHs(IEnumerable<DVHData>)
   nameWithType: DVHDataExtensions.MergeDVHs(IEnumerable<DVHData>)
-  fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable<DVHData>)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable<DVHData>)
   type: Method
   source:
     id: MergeDVHs
     path: ''
-    startLine: 3415
+    startLine: 3337
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -263,7 +263,7 @@ items:
     content: public static DVHPoint[] MergeDVHs(this IEnumerable<DVHData> dvhs)
     parameters:
     - id: dvhs
-      type: System.Collections.Generic.IEnumerable{DVHData}
+      type: IEnumerable{DVHData}
       description: ''
     return:
       type: DVHPoint[]
@@ -280,11 +280,11 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable(Of DVHData))
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable(Of DVHData))
   name.vb: MergeDVHs(IEnumerable(Of DVHData))
-- uid: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
-  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
-  id: MergeDVHs(System.Collections.Generic.IEnumerable{DVHPoint[]})
+- uid: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable{DVHPoint[]})
+  commentId: M:ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable{DVHPoint[]})
+  id: MergeDVHs(IEnumerable{DVHPoint[]})
   isExtensionMethod: true
   parent: ESAPIX.Extensions.DVHDataExtensions
   langs:
@@ -292,12 +292,12 @@ items:
   - vb
   name: MergeDVHs(IEnumerable<DVHPoint[]>)
   nameWithType: DVHDataExtensions.MergeDVHs(IEnumerable<DVHPoint[]>)
-  fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable<DVHPoint[]>)
+  fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable<DVHPoint[]>)
   type: Method
   source:
     id: MergeDVHs
     path: ''
-    startLine: 3425
+    startLine: 3347
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -307,7 +307,7 @@ items:
     content: public static DVHPoint[] MergeDVHs(this IEnumerable<DVHPoint[]> dvhs)
     parameters:
     - id: dvhs
-      type: System.Collections.Generic.IEnumerable{DVHPoint[]}
+      type: IEnumerable{DVHPoint[]}
       description: the multiple dvh curves to merge
     return:
       type: DVHPoint[]
@@ -324,7 +324,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(System.Collections.Generic.IEnumerable(Of DVHPoint()))
+  fullName.vb: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs(IEnumerable(Of DVHPoint()))
   name.vb: MergeDVHs(IEnumerable(Of DVHPoint()))
 - uid: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume(DVHPoint[])
   commentId: M:ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume(DVHPoint[])
@@ -341,7 +341,7 @@ items:
   source:
     id: ConvertToRelativeVolume
     path: ''
-    startLine: 3457
+    startLine: 3381
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -385,7 +385,7 @@ items:
   source:
     id: ConvertToRelativeDose
     path: ''
-    startLine: 3477
+    startLine: 3398
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -432,7 +432,7 @@ items:
   source:
     id: MaxDose
     path: ''
-    startLine: 3499
+    startLine: 3415
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -476,7 +476,7 @@ items:
   source:
     id: MinDose
     path: ''
-    startLine: 3515
+    startLine: 3431
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -520,7 +520,7 @@ items:
   source:
     id: MeanDose
     path: ''
-    startLine: 3531
+    startLine: 3447
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -915,21 +915,20 @@ references:
   name: MergeDVHs
   nameWithType: DVHDataExtensions.MergeDVHs
   fullName: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs
-- uid: System.Collections.Generic.IEnumerable{DVHData}
-  commentId: T:System.Collections.Generic.IEnumerable{DVHData}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{DVHData}
+  commentId: '!:IEnumerable{DVHData}'
+  definition: IEnumerable`1
   name: IEnumerable<DVHData>
   nameWithType: IEnumerable<DVHData>
-  fullName: System.Collections.Generic.IEnumerable<DVHData>
+  fullName: IEnumerable<DVHData>
   nameWithType.vb: IEnumerable(Of DVHData)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of DVHData)
+  fullName.vb: IEnumerable(Of DVHData)
   name.vb: IEnumerable(Of DVHData)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -943,10 +942,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -959,66 +958,58 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-- uid: System.Collections.Generic.IEnumerable{DVHPoint[]}
-  commentId: T:System.Collections.Generic.IEnumerable{DVHPoint[]}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{DVHPoint[]}
+  commentId: '!:IEnumerable{DVHPoint[]}'
+  definition: IEnumerable`1
   name: IEnumerable<DVHPoint[]>
   nameWithType: IEnumerable<DVHPoint[]>
-  fullName: System.Collections.Generic.IEnumerable<DVHPoint[]>
+  fullName: IEnumerable<DVHPoint[]>
   nameWithType.vb: IEnumerable(Of DVHPoint())
-  fullName.vb: System.Collections.Generic.IEnumerable(Of DVHPoint())
+  fullName.vb: IEnumerable(Of DVHPoint())
   name.vb: IEnumerable(Of DVHPoint())
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1035,10 +1026,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

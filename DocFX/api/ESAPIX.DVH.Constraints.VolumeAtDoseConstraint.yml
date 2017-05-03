@@ -20,7 +20,7 @@ items:
   source:
     id: VolumeAtDoseConstraint
     path: ''
-    startLine: 2755
+    startLine: 2735
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -42,16 +42,16 @@ items:
   inheritedMembers:
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureName
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.ConstraintDose
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.CanConstrain(PlanningItem)
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures(PlanningItem)
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -81,7 +81,7 @@ items:
   source:
     id: Volume
     path: ''
-    startLine: 2757
+    startLine: 2737
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -112,7 +112,7 @@ items:
   source:
     id: VolumeType
     path: ''
-    startLine: 2758
+    startLine: 2738
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -143,7 +143,7 @@ items:
   source:
     id: PassingFunc
     path: ''
-    startLine: 2763
+    startLine: 2743
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -178,7 +178,7 @@ items:
   source:
     id: GetVolumeAtDose
     path: ''
-    startLine: 2771
+    startLine: 2751
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -213,7 +213,7 @@ items:
   source:
     id: Constrain
     path: ''
-    startLine: 2778
+    startLine: 2758
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -282,20 +282,6 @@ references:
   name: ConstraintDose
   nameWithType: DoseStructureConstraint.ConstraintDose
   fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.ConstraintDose
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  isExternal: false
-  name: Name
-  nameWithType: DoseStructureConstraint.Name
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  isExternal: false
-  name: FullName
-  nameWithType: DoseStructureConstraint.FullName
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
   commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
@@ -310,6 +296,27 @@ references:
   name: Unit
   nameWithType: DoseStructureConstraint.Unit
   fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  isExternal: false
+  name: StructureNames
+  nameWithType: DoseStructureConstraint.StructureNames
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  isExternal: false
+  name: Name
+  nameWithType: DoseStructureConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  isExternal: false
+  name: FullName
+  nameWithType: DoseStructureConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
@@ -356,13 +363,35 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
   isExternal: false
-  name: StructureNames
-  nameWithType: DoseStructureConstraint.StructureNames
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  name: GetFailedResultType()
+  nameWithType: DoseStructureConstraint.GetFailedResultType()
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType()
+  spec.csharp:
+  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+    name: GetFailedResultType
+    nameWithType: DoseStructureConstraint.GetFailedResultType
+    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+    name: GetFailedResultType
+    nameWithType: DoseStructureConstraint.GetFailedResultType
+    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
@@ -438,35 +467,6 @@ references:
     nameWithType: PlanningItem
     fullName: PlanningItem
     isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  isExternal: false
-  name: GetFailedResultType()
-  nameWithType: DoseStructureConstraint.GetFailedResultType()
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType()
-  spec.csharp:
-  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-    name: GetFailedResultType
-    nameWithType: DoseStructureConstraint.GetFailedResultType
-    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-    name: GetFailedResultType
-    nameWithType: DoseStructureConstraint.GetFailedResultType
-    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  - name: (
-    nameWithType: (
-    fullName: (
   - name: )
     nameWithType: )
     fullName: )

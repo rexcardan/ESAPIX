@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.BeamDose.#ctor
   - ESAPIX.Facade.API.BeamDose.#ctor(System.Object)
+  - ESAPIX.Facade.API.BeamDose.IsLive
   - ESAPIX.Facade.API.BeamDose.WriteXml(System.Xml.XmlWriter)
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
   source:
     id: BeamDose
     path: ''
-    startLine: 5737
+    startLine: 6023
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -49,8 +50,8 @@ items:
   - ESAPIX.Facade.API.Dose.ZDirection
   - ESAPIX.Facade.API.Dose.ZRes
   - ESAPIX.Facade.API.Dose.ZSize
-  - ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
-  - ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+  - ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
+  - ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
   - ESAPIX.Facade.API.Dose.GetVoxels(System.Int32,System.Int32[0:,0:])
   - ESAPIX.Facade.API.Dose.SetVoxels(System.Int32,System.Int32[0:,0:])
   - ESAPIX.Facade.API.Dose.VoxelToDoseValue(System.Int32)
@@ -89,7 +90,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5739
+    startLine: 6025
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -115,7 +116,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5740
+    startLine: 6030
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -130,6 +131,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.BeamDose.IsLive
+  commentId: P:ESAPIX.Facade.API.BeamDose.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BeamDose
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BeamDose.IsLive
+  fullName: ESAPIX.Facade.API.BeamDose.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 6035
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.BeamDose.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.BeamDose.WriteXml(System.Xml.XmlWriter)
   commentId: M:ESAPIX.Facade.API.BeamDose.WriteXml(System.Xml.XmlWriter)
   id: WriteXml(System.Xml.XmlWriter)
@@ -144,7 +176,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 5741
+    startLine: 6040
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -306,35 +338,37 @@ references:
   name: ZSize
   nameWithType: Dose.ZSize
   fullName: ESAPIX.Facade.API.Dose.ZSize
-- uid: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
-  commentId: M:ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+- uid: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
+  commentId: M:ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
   parent: ESAPIX.Facade.API.Dose
   isExternal: true
   name: GetDoseProfile(VVector, VVector, Double[])
   nameWithType: Dose.GetDoseProfile(VVector, VVector, Double[])
-  fullName: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double[])
+  fullName: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector, VVector, System.Double[])
   nameWithType.vb: Dose.GetDoseProfile(VVector, VVector, Double())
-  fullName.vb: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector, ESAPIX.Facade.Types.VVector, System.Double())
+  fullName.vb: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector, VVector, System.Double())
   name.vb: GetDoseProfile(VVector, VVector, Double())
   spec.csharp:
-  - uid: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+  - uid: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
     name: GetDoseProfile
     nameWithType: Dose.GetDoseProfile
     fullName: ESAPIX.Facade.API.Dose.GetDoseProfile
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -350,24 +384,26 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.Dose.GetDoseProfile(ESAPIX.Facade.Types.VVector,ESAPIX.Facade.Types.VVector,System.Double[])
+  - uid: ESAPIX.Facade.API.Dose.GetDoseProfile(VVector,VVector,System.Double[])
     name: GetDoseProfile
     nameWithType: Dose.GetDoseProfile
     fullName: ESAPIX.Facade.API.Dose.GetDoseProfile
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -382,40 +418,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
-  commentId: M:ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+- uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
+  commentId: M:ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
   parent: ESAPIX.Facade.API.Dose
-  isExternal: false
+  isExternal: true
   name: GetDoseToPoint(VVector)
   nameWithType: Dose.GetDoseToPoint(VVector)
-  fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+  fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+  - uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
     name: GetDoseToPoint
     nameWithType: Dose.GetDoseToPoint
     fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(ESAPIX.Facade.Types.VVector)
+  - uid: ESAPIX.Facade.API.Dose.GetDoseToPoint(VVector)
     name: GetDoseToPoint
     nameWithType: Dose.GetDoseToPoint
     fullName: ESAPIX.Facade.API.Dose.GetDoseToPoint
   - name: (
     nameWithType: (
     fullName: (
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1003,6 +1041,19 @@ references:
   name: BeamDose
   nameWithType: BeamDose.BeamDose
   fullName: ESAPIX.Facade.API.BeamDose.BeamDose
+- uid: ESAPIX.Facade.API.BeamDose.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.BeamDose.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: BeamDose.IsLive
+  fullName: ESAPIX.Facade.API.BeamDose.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.BeamDose.WriteXml*
   commentId: Overload:ESAPIX.Facade.API.BeamDose.WriteXml
   isExternal: false

@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
   - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  - ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
   - ESAPIX.Facade.API.OptimizationEUDObjective.Operator
   - ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
   - ESAPIX.Facade.API.OptimizationEUDObjective.Priority
@@ -22,7 +23,7 @@ items:
   source:
     id: OptimizationEUDObjective
     path: ''
-    startLine: 9196
+    startLine: 10746
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9198
+    startLine: 10748
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,7 +95,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9199
+    startLine: 10753
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -109,6 +110,37 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizationEUDObjective.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 10758
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
   commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
   id: Dose
@@ -123,7 +155,7 @@ items:
   source:
     id: Dose
     path: ''
-    startLine: 9200
+    startLine: 10763
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -131,7 +163,7 @@ items:
     content: public DoseValue Dose { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.DoseValue
+      type: DoseValue
     content.vb: Public Property Dose As DoseValue
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
   modifiers.csharp:
@@ -154,7 +186,7 @@ items:
   source:
     id: Operator
     path: ''
-    startLine: 9213
+    startLine: 10778
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -162,7 +194,7 @@ items:
     content: public OptimizationObjectiveOperator Operator { get; set; }
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+      type: OptimizationObjectiveOperator
     content.vb: Public Property Operator As OptimizationObjectiveOperator
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
   modifiers.csharp:
@@ -185,7 +217,7 @@ items:
   source:
     id: ParameterA
     path: ''
-    startLine: 9226
+    startLine: 10798
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -216,7 +248,7 @@ items:
   source:
     id: Priority
     path: ''
-    startLine: 9239
+    startLine: 10813
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -247,7 +279,7 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9252
+    startLine: 10828
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -688,38 +720,41 @@ references:
   name: OptimizationEUDObjective
   nameWithType: OptimizationEUDObjective.OptimizationEUDObjective
   fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: OptimizationEUDObjective.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
   commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
   isExternal: false
   name: Dose
   nameWithType: OptimizationEUDObjective.Dose
   fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
-- uid: ESAPIX.Facade.Types.DoseValue
-  commentId: T:ESAPIX.Facade.Types.DoseValue
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: DoseValue
+  isExternal: true
   name: DoseValue
   nameWithType: DoseValue
-  fullName: ESAPIX.Facade.Types.DoseValue
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: DoseValue
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
   commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.Operator
   isExternal: false
   name: Operator
   nameWithType: OptimizationEUDObjective.Operator
   fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
-- uid: ESAPIX.Facade.Types.OptimizationObjectiveOperator
-  commentId: T:ESAPIX.Facade.Types.OptimizationObjectiveOperator
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: OptimizationObjectiveOperator
+  isExternal: true
   name: OptimizationObjectiveOperator
   nameWithType: OptimizationObjectiveOperator
-  fullName: ESAPIX.Facade.Types.OptimizationObjectiveOperator
+  fullName: OptimizationObjectiveOperator
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
   commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
   isExternal: false

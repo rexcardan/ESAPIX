@@ -20,7 +20,7 @@ items:
   source:
     id: MayoRegex
     path: ''
-    startLine: 3039
+    startLine: 3004
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
@@ -57,7 +57,7 @@ items:
   source:
     id: UnitsDesired
     path: ''
-    startLine: 3041
+    startLine: 3006
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
@@ -72,35 +72,6 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: ESAPIX.DVH.Query.MayoRegex.Valid
-  commentId: F:ESAPIX.DVH.Query.MayoRegex.Valid
-  id: Valid
-  parent: ESAPIX.DVH.Query.MayoRegex
-  langs:
-  - csharp
-  - vb
-  name: Valid
-  nameWithType: MayoRegex.Valid
-  fullName: ESAPIX.DVH.Query.MayoRegex.Valid
-  type: Field
-  source:
-    id: Valid
-    path: ''
-    startLine: 3042
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.DVH.Query
-  syntax:
-    content: public static string Valid
-    return:
-      type: System.String
-    content.vb: Public Shared Valid As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 - uid: ESAPIX.DVH.Query.MayoRegex.QueryType
   commentId: F:ESAPIX.DVH.Query.MayoRegex.QueryType
   id: QueryType
@@ -115,7 +86,7 @@ items:
   source:
     id: QueryType
     path: ''
-    startLine: 3043
+    startLine: 3007
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
@@ -144,7 +115,7 @@ items:
   source:
     id: QueryValue
     path: ''
-    startLine: 3044
+    startLine: 3008
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
@@ -173,7 +144,7 @@ items:
   source:
     id: QueryUnits
     path: ''
-    startLine: 3045
+    startLine: 3009
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
@@ -188,6 +159,35 @@ items:
   modifiers.vb:
   - Public
   - Const
+- uid: ESAPIX.DVH.Query.MayoRegex.Valid
+  commentId: F:ESAPIX.DVH.Query.MayoRegex.Valid
+  id: Valid
+  parent: ESAPIX.DVH.Query.MayoRegex
+  langs:
+  - csharp
+  - vb
+  name: Valid
+  nameWithType: MayoRegex.Valid
+  fullName: ESAPIX.DVH.Query.MayoRegex.Valid
+  type: Field
+  source:
+    id: Valid
+    path: ''
+    startLine: 3010
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.DVH.Query
+  syntax:
+    content: public static string Valid
+    return:
+      type: System.String
+    content.vb: Public Shared Valid As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: ESAPIX.DVH.Query
   commentId: N:ESAPIX.DVH.Query

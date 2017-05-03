@@ -8,7 +8,7 @@ items:
   - ESAPIX.Helpers.MagicStrings
   - ESAPIX.Helpers.MagicStrings.VolumeUnits
   - ESAPIX.Helpers.MathHelper
-  - ESAPIX.Helpers.StorageBinder`1
+  - ESAPIX.Helpers.SerializationHelper
   - ESAPIX.Helpers.XamlAssemblyLoader
   langs:
   - csharp
@@ -20,6 +20,12 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: ESAPIX.Helpers.SerializationHelper
+  commentId: T:ESAPIX.Helpers.SerializationHelper
+  isExternal: false
+  name: SerializationHelper
+  nameWithType: SerializationHelper
+  fullName: ESAPIX.Helpers.SerializationHelper
 - uid: ESAPIX.Helpers.FileHelper
   commentId: T:ESAPIX.Helpers.FileHelper
   isExternal: false
@@ -44,43 +50,6 @@ references:
   name: MathHelper
   nameWithType: MathHelper
   fullName: ESAPIX.Helpers.MathHelper
-- uid: ESAPIX.Helpers.StorageBinder`1
-  commentId: T:ESAPIX.Helpers.StorageBinder`1
-  isExternal: false
-  name: StorageBinder<T>
-  nameWithType: StorageBinder<T>
-  fullName: ESAPIX.Helpers.StorageBinder<T>
-  nameWithType.vb: StorageBinder(Of T)
-  fullName.vb: ESAPIX.Helpers.StorageBinder(Of T)
-  name.vb: StorageBinder(Of T)
-  spec.csharp:
-  - uid: ESAPIX.Helpers.StorageBinder`1
-    name: StorageBinder
-    nameWithType: StorageBinder
-    fullName: ESAPIX.Helpers.StorageBinder
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: ESAPIX.Helpers.StorageBinder`1
-    name: StorageBinder
-    nameWithType: StorageBinder
-    fullName: ESAPIX.Helpers.StorageBinder
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: ESAPIX.Helpers.XamlAssemblyLoader
   commentId: T:ESAPIX.Helpers.XamlAssemblyLoader
   isExternal: false
