@@ -131,10 +131,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Structure(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Structure.#ctor*
   modifiers.csharp:
   - public
@@ -160,10 +160,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Structure.IsLive*
   modifiers.csharp:
   - public
@@ -191,10 +191,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector CenterPoint { get; set; }
+    content.vb: Public Property CenterPoint As VVector
     parameters: []
     return:
       type: VVector
-    content.vb: Public Property CenterPoint As VVector
   overload: ESAPIX.Facade.API.Structure.CenterPoint*
   modifiers.csharp:
   - public
@@ -222,10 +222,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Color Color { get; set; }
+    content.vb: Public Property Color As Windows.Media.Color
     parameters: []
     return:
       type: System.Windows.Media.Color
-    content.vb: Public Property Color As Windows.Media.Color
   overload: ESAPIX.Facade.API.Structure.Color*
   modifiers.csharp:
   - public
@@ -253,10 +253,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string DicomType { get; set; }
+    content.vb: Public Property DicomType As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property DicomType As String
   overload: ESAPIX.Facade.API.Structure.DicomType*
   modifiers.csharp:
   - public
@@ -284,10 +284,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool HasSegment { get; set; }
+    content.vb: Public Property HasSegment As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property HasSegment As Boolean
   overload: ESAPIX.Facade.API.Structure.HasSegment*
   modifiers.csharp:
   - public
@@ -315,10 +315,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsEmpty { get; set; }
+    content.vb: Public Property IsEmpty As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsEmpty As Boolean
   overload: ESAPIX.Facade.API.Structure.IsEmpty*
   modifiers.csharp:
   - public
@@ -346,10 +346,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsHighResolution { get; set; }
+    content.vb: Public Property IsHighResolution As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsHighResolution As Boolean
   overload: ESAPIX.Facade.API.Structure.IsHighResolution*
   modifiers.csharp:
   - public
@@ -377,10 +377,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
     parameters: []
     return:
       type: System.Windows.Media.Media3D.MeshGeometry3D
-    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
   overload: ESAPIX.Facade.API.Structure.MeshGeometry*
   modifiers.csharp:
   - public
@@ -408,10 +408,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int ROINumber { get; set; }
+    content.vb: Public Property ROINumber As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property ROINumber As Integer
   overload: ESAPIX.Facade.API.Structure.ROINumber*
   modifiers.csharp:
   - public
@@ -439,10 +439,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume SegmentVolume { get; set; }
+    content.vb: Public Property SegmentVolume As SegmentVolume
     parameters: []
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Property SegmentVolume As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.SegmentVolume*
   modifiers.csharp:
   - public
@@ -470,10 +470,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<StructureCodeInfo> StructureCodeInfos { get; set; }
+    content.vb: Public Property StructureCodeInfos As IEnumerable(Of StructureCodeInfo)
     parameters: []
     return:
       type: IEnumerable{StructureCodeInfo}
-    content.vb: Public Property StructureCodeInfos As IEnumerable(Of StructureCodeInfo)
   overload: ESAPIX.Facade.API.Structure.StructureCodeInfos*
   modifiers.csharp:
   - public
@@ -501,10 +501,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Volume { get; set; }
+    content.vb: Public Property Volume As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Volume As Double
   overload: ESAPIX.Facade.API.Structure.Volume*
   modifiers.csharp:
   - public
@@ -532,10 +532,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
+    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.Structure.Id*
   modifiers.csharp:
   - public
@@ -563,10 +563,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Structure.WriteXml*
   modifiers.csharp:
   - public
@@ -592,12 +592,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void AddContourOnImagePlane(VVector[] contour, int z)
+    content.vb: Public Sub AddContourOnImagePlane(contour As VVector(), z As Integer)
     parameters:
     - id: contour
       type: VVector[]
     - id: z
       type: System.Int32
-    content.vb: Public Sub AddContourOnImagePlane(contour As VVector(), z As Integer)
   overload: ESAPIX.Facade.API.Structure.AddContourOnImagePlane*
   nameWithType.vb: Structure.AddContourOnImagePlane(VVector(), Int32)
   modifiers.csharp:
@@ -626,12 +626,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume And(SegmentVolume other)
+    content.vb: Public Function And(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function And(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.And*
   modifiers.csharp:
   - public
@@ -657,12 +657,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
+    content.vb: Public Function AsymmetricMargin(margins As AxisAlignedMargins) As SegmentVolume
     parameters:
     - id: margins
       type: AxisAlignedMargins
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function AsymmetricMargin(margins As AxisAlignedMargins) As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.AsymmetricMargin*
   modifiers.csharp:
   - public
@@ -688,9 +688,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanConvertToHighResolution()
+    content.vb: Public Function CanConvertToHighResolution As Boolean
     return:
       type: System.Boolean
-    content.vb: Public Function CanConvertToHighResolution As Boolean
   overload: ESAPIX.Facade.API.Structure.CanConvertToHighResolution*
   modifiers.csharp:
   - public
@@ -716,12 +716,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanSetAssignedHU(out string errorMessage)
+    content.vb: Public Function CanSetAssignedHU(ByRef errorMessage As String) As Boolean
     parameters:
     - id: errorMessage
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function CanSetAssignedHU(ByRef errorMessage As String) As Boolean
   overload: ESAPIX.Facade.API.Structure.CanSetAssignedHU*
   nameWithType.vb: Structure.CanSetAssignedHU(ByRef String)
   modifiers.csharp:
@@ -750,10 +750,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void ClearAllContoursOnImagePlane(int z)
+    content.vb: Public Sub ClearAllContoursOnImagePlane(z As Integer)
     parameters:
     - id: z
       type: System.Int32
-    content.vb: Public Sub ClearAllContoursOnImagePlane(z As Integer)
   overload: ESAPIX.Facade.API.Structure.ClearAllContoursOnImagePlane*
   modifiers.csharp:
   - public
@@ -805,12 +805,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool GetAssignedHU(out double huValue)
+    content.vb: Public Function GetAssignedHU(ByRef huValue As Double) As Boolean
     parameters:
     - id: huValue
       type: System.Double
     return:
       type: System.Boolean
-    content.vb: Public Function GetAssignedHU(ByRef huValue As Double) As Boolean
   overload: ESAPIX.Facade.API.Structure.GetAssignedHU*
   nameWithType.vb: Structure.GetAssignedHU(ByRef Double)
   modifiers.csharp:
@@ -839,12 +839,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector[][] GetContoursOnImagePlane(int z)
+    content.vb: Public Function GetContoursOnImagePlane(z As Integer) As VVector()()
     parameters:
     - id: z
       type: System.Int32
     return:
       type: VVector[][]
-    content.vb: Public Function GetContoursOnImagePlane(z As Integer) As VVector()()
   overload: ESAPIX.Facade.API.Structure.GetContoursOnImagePlane*
   modifiers.csharp:
   - public
@@ -870,9 +870,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int GetNumberOfSeparateParts()
+    content.vb: Public Function GetNumberOfSeparateParts As Integer
     return:
       type: System.Int32
-    content.vb: Public Function GetNumberOfSeparateParts As Integer
   overload: ESAPIX.Facade.API.Structure.GetNumberOfSeparateParts*
   modifiers.csharp:
   - public
@@ -898,6 +898,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentProfile GetSegmentProfile(VVector start, VVector stop, BitArray preallocatedBuffer)
+    content.vb: Public Function GetSegmentProfile(start As VVector, stop As VVector, preallocatedBuffer As BitArray) As SegmentProfile
     parameters:
     - id: start
       type: VVector
@@ -907,7 +908,6 @@ items:
       type: BitArray
     return:
       type: SegmentProfile
-    content.vb: Public Function GetSegmentProfile(start As VVector, stop As VVector, preallocatedBuffer As BitArray) As SegmentProfile
   overload: ESAPIX.Facade.API.Structure.GetSegmentProfile*
   modifiers.csharp:
   - public
@@ -933,12 +933,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsPointInsideSegment(VVector point)
+    content.vb: Public Function IsPointInsideSegment(point As VVector) As Boolean
     parameters:
     - id: point
       type: VVector
     return:
       type: System.Boolean
-    content.vb: Public Function IsPointInsideSegment(point As VVector) As Boolean
   overload: ESAPIX.Facade.API.Structure.IsPointInsideSegment*
   modifiers.csharp:
   - public
@@ -964,12 +964,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Margin(double marginInMM)
+    content.vb: Public Function Margin(marginInMM As Double) As SegmentVolume
     parameters:
     - id: marginInMM
       type: System.Double
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Margin(marginInMM As Double) As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.Margin*
   modifiers.csharp:
   - public
@@ -995,9 +995,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Not()
+    content.vb: Public Function Not As SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Not As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.Not*
   modifiers.csharp:
   - public
@@ -1023,12 +1023,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Or(SegmentVolume other)
+    content.vb: Public Function Or(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Or(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.Or*
   modifiers.csharp:
   - public
@@ -1054,9 +1054,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool ResetAssignedHU()
+    content.vb: Public Function ResetAssignedHU As Boolean
     return:
       type: System.Boolean
-    content.vb: Public Function ResetAssignedHU As Boolean
   overload: ESAPIX.Facade.API.Structure.ResetAssignedHU*
   modifiers.csharp:
   - public
@@ -1082,10 +1082,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetAssignedHU(double huValue)
+    content.vb: Public Sub SetAssignedHU(huValue As Double)
     parameters:
     - id: huValue
       type: System.Double
-    content.vb: Public Sub SetAssignedHU(huValue As Double)
   overload: ESAPIX.Facade.API.Structure.SetAssignedHU*
   modifiers.csharp:
   - public
@@ -1111,12 +1111,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Sub(SegmentVolume other)
+    content.vb: Public Function Sub(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Sub(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.Sub*
   modifiers.csharp:
   - public
@@ -1142,12 +1142,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SubtractContourOnImagePlane(VVector[] contour, int z)
+    content.vb: Public Sub SubtractContourOnImagePlane(contour As VVector(), z As Integer)
     parameters:
     - id: contour
       type: VVector[]
     - id: z
       type: System.Int32
-    content.vb: Public Sub SubtractContourOnImagePlane(contour As VVector(), z As Integer)
   overload: ESAPIX.Facade.API.Structure.SubtractContourOnImagePlane*
   nameWithType.vb: Structure.SubtractContourOnImagePlane(VVector(), Int32)
   modifiers.csharp:
@@ -1176,12 +1176,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Xor(SegmentVolume other)
+    content.vb: Public Function Xor(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Xor(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.Structure.Xor*
   modifiers.csharp:
   - public

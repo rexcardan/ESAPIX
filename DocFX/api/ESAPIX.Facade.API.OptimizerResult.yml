@@ -95,10 +95,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
   modifiers.csharp:
   - public
@@ -124,10 +124,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizerResult.IsLive*
   modifiers.csharp:
   - public
@@ -155,10 +155,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<OptimizerDVH> StructureDVHs { get; set; }
+    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
-    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
   overload: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
   modifiers.csharp:
   - public
@@ -186,10 +186,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues { get; set; }
+    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
-    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
   overload: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
   modifiers.csharp:
   - public
@@ -217,10 +217,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double TotalObjectiveFunctionValue { get; set; }
+    content.vb: Public Property TotalObjectiveFunctionValue As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property TotalObjectiveFunctionValue As Double
   overload: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
   modifiers.csharp:
   - public
@@ -248,10 +248,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int NumberOfIMRTOptimizerIterations { get; set; }
+    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
   overload: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
   modifiers.csharp:
   - public

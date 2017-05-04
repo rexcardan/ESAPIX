@@ -21,10 +21,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void ExternalPlanSetupChangedHandler(ExternalPlanSetup ps);
+    content.vb: Public Delegate Sub ExternalPlanSetupChangedHandler(ps As ExternalPlanSetup)
     parameters:
     - id: ps
       type: ExternalPlanSetup
-    content.vb: Public Delegate Sub ExternalPlanSetupChangedHandler(ps As ExternalPlanSetup)
   modifiers.csharp:
   - public
   - delegate

@@ -67,6 +67,7 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ConstraintResult(IConstraint constraint, ResultType resultType, string message, string value = "")
+    content.vb: Public Sub New(constraint As IConstraint, resultType As ResultType, message As String, value As String = "")
     parameters:
     - id: constraint
       type: ESAPIX.DVH.Constraints.IConstraint
@@ -76,7 +77,6 @@ items:
       type: System.String
     - id: value
       type: System.String
-    content.vb: Public Sub New(constraint As IConstraint, resultType As ResultType, message As String, value As String = "")
   overload: ESAPIX.DVH.Constraints.ConstraintResult.#ctor*
   modifiers.csharp:
   - public
@@ -102,10 +102,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public IConstraint Constraint { get; set; }
+    content.vb: Public Property Constraint As IConstraint
     parameters: []
     return:
       type: ESAPIX.DVH.Constraints.IConstraint
-    content.vb: Public Property Constraint As IConstraint
   overload: ESAPIX.DVH.Constraints.ConstraintResult.Constraint*
   modifiers.csharp:
   - public
@@ -135,10 +135,10 @@ items:
   example: []
   syntax:
     content: public bool IsSuccess { get; set; }
+    content.vb: Public Property IsSuccess As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsSuccess As Boolean
   overload: ESAPIX.DVH.Constraints.ConstraintResult.IsSuccess*
   modifiers.csharp:
   - public
@@ -168,10 +168,10 @@ items:
   example: []
   syntax:
     content: public bool IsApplicable { get; set; }
+    content.vb: Public Property IsApplicable As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsApplicable As Boolean
   overload: ESAPIX.DVH.Constraints.ConstraintResult.IsApplicable*
   modifiers.csharp:
   - public
@@ -201,10 +201,10 @@ items:
   example: []
   syntax:
     content: public ResultType ResultType { get; set; }
+    content.vb: Public Property ResultType As ResultType
     parameters: []
     return:
       type: ESAPIX.DVH.Constraints.ResultType
-    content.vb: Public Property ResultType As ResultType
   overload: ESAPIX.DVH.Constraints.ConstraintResult.ResultType*
   modifiers.csharp:
   - public
@@ -234,10 +234,10 @@ items:
   example: []
   syntax:
     content: public string Message { get; set; }
+    content.vb: Public Property Message As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Message As String
   overload: ESAPIX.DVH.Constraints.ConstraintResult.Message*
   modifiers.csharp:
   - public
@@ -267,10 +267,10 @@ items:
   example: []
   syntax:
     content: public string Value { get; set; }
+    content.vb: Public Property Value As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Value As String
   overload: ESAPIX.DVH.Constraints.ConstraintResult.Value*
   modifiers.csharp:
   - public

@@ -117,10 +117,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachyTreatmentUnit(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor*
   modifiers.csharp:
   - public
@@ -146,10 +146,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive*
   modifiers.csharp:
   - public
@@ -177,10 +177,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string DoseRateMode { get; set; }
+    content.vb: Public Property DoseRateMode As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property DoseRateMode As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode*
   modifiers.csharp:
   - public
@@ -208,10 +208,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DwellTimeResolution { get; set; }
+    content.vb: Public Property DwellTimeResolution As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property DwellTimeResolution As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution*
   modifiers.csharp:
   - public
@@ -239,10 +239,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineInterface { get; set; }
+    content.vb: Public Property MachineInterface As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineInterface As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface*
   modifiers.csharp:
   - public
@@ -270,10 +270,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineModel { get; set; }
+    content.vb: Public Property MachineModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineModel As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel*
   modifiers.csharp:
   - public
@@ -301,10 +301,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaxDwellTimePerChannel { get; set; }
+    content.vb: Public Property MaxDwellTimePerChannel As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaxDwellTimePerChannel As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel*
   modifiers.csharp:
   - public
@@ -332,10 +332,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaxDwellTimePerPos { get; set; }
+    content.vb: Public Property MaxDwellTimePerPos As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaxDwellTimePerPos As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos*
   modifiers.csharp:
   - public
@@ -363,10 +363,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaxDwellTimePerTreatment { get; set; }
+    content.vb: Public Property MaxDwellTimePerTreatment As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaxDwellTimePerTreatment As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment*
   modifiers.csharp:
   - public
@@ -394,10 +394,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaximumChannelLength { get; set; }
+    content.vb: Public Property MaximumChannelLength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaximumChannelLength As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength*
   modifiers.csharp:
   - public
@@ -425,10 +425,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int MaximumDwellPositionsPerChannel { get; set; }
+    content.vb: Public Property MaximumDwellPositionsPerChannel As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property MaximumDwellPositionsPerChannel As Integer
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel*
   modifiers.csharp:
   - public
@@ -456,10 +456,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaximumStepSize { get; set; }
+    content.vb: Public Property MaximumStepSize As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaximumStepSize As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize*
   modifiers.csharp:
   - public
@@ -487,10 +487,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MinimumChannelLength { get; set; }
+    content.vb: Public Property MinimumChannelLength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MinimumChannelLength As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength*
   modifiers.csharp:
   - public
@@ -518,10 +518,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MinimumStepSize { get; set; }
+    content.vb: Public Property MinimumStepSize As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MinimumStepSize As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize*
   modifiers.csharp:
   - public
@@ -549,10 +549,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int NumberOfChannels { get; set; }
+    content.vb: Public Property NumberOfChannels As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property NumberOfChannels As Integer
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels*
   modifiers.csharp:
   - public
@@ -580,10 +580,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SourceCenterOffsetFromTip { get; set; }
+    content.vb: Public Property SourceCenterOffsetFromTip As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SourceCenterOffsetFromTip As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip*
   modifiers.csharp:
   - public
@@ -611,10 +611,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SourceMovementType { get; set; }
+    content.vb: Public Property SourceMovementType As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SourceMovementType As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType*
   modifiers.csharp:
   - public
@@ -642,10 +642,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double StepSizeResolution { get; set; }
+    content.vb: Public Property StepSizeResolution As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property StepSizeResolution As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution*
   modifiers.csharp:
   - public
@@ -673,10 +673,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml*
   modifiers.csharp:
   - public
@@ -702,9 +702,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public RadioactiveSource GetActiveRadioactiveSource()
+    content.vb: Public Function GetActiveRadioactiveSource As RadioactiveSource
     return:
       type: ESAPIX.Facade.API.RadioactiveSource
-    content.vb: Public Function GetActiveRadioactiveSource As RadioactiveSource
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource*
   modifiers.csharp:
   - public

@@ -104,10 +104,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Wedge(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Wedge.#ctor*
   modifiers.csharp:
   - public
@@ -133,10 +133,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Wedge.IsLive*
   modifiers.csharp:
   - public
@@ -164,10 +164,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Direction { get; set; }
+    content.vb: Public Property Direction As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Direction As Double
   overload: ESAPIX.Facade.API.Wedge.Direction*
   modifiers.csharp:
   - public
@@ -195,10 +195,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double WedgeAngle { get; set; }
+    content.vb: Public Property WedgeAngle As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property WedgeAngle As Double
   overload: ESAPIX.Facade.API.Wedge.WedgeAngle*
   modifiers.csharp:
   - public
@@ -226,10 +226,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Wedge.WriteXml*
   modifiers.csharp:
   - public

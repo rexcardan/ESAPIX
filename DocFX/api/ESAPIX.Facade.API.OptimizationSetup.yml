@@ -106,10 +106,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationSetup(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationSetup.#ctor*
   modifiers.csharp:
   - public
@@ -135,10 +135,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationSetup.IsLive*
   modifiers.csharp:
   - public
@@ -166,10 +166,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<OptimizationObjective> Objectives { get; set; }
+    content.vb: Public Property Objectives As IEnumerable(Of OptimizationObjective)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.OptimizationObjective}
-    content.vb: Public Property Objectives As IEnumerable(Of OptimizationObjective)
   overload: ESAPIX.Facade.API.OptimizationSetup.Objectives*
   modifiers.csharp:
   - public
@@ -197,10 +197,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<OptimizationParameter> Parameters { get; set; }
+    content.vb: Public Property Parameters As IEnumerable(Of OptimizationParameter)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.OptimizationParameter}
-    content.vb: Public Property Parameters As IEnumerable(Of OptimizationParameter)
   overload: ESAPIX.Facade.API.OptimizationSetup.Parameters*
   modifiers.csharp:
   - public
@@ -228,10 +228,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool UseJawTracking { get; set; }
+    content.vb: Public Property UseJawTracking As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property UseJawTracking As Boolean
   overload: ESAPIX.Facade.API.OptimizationSetup.UseJawTracking*
   modifiers.csharp:
   - public
@@ -259,10 +259,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationSetup.WriteXml*
   modifiers.csharp:
   - public
@@ -288,12 +288,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationNormalTissueParameter AddAutomaticNormalTissueObjective(double priority)
+    content.vb: Public Function AddAutomaticNormalTissueObjective(priority As Double) As OptimizationNormalTissueParameter
     parameters:
     - id: priority
       type: System.Double
     return:
       type: ESAPIX.Facade.API.OptimizationNormalTissueParameter
-    content.vb: Public Function AddAutomaticNormalTissueObjective(priority As Double) As OptimizationNormalTissueParameter
   overload: ESAPIX.Facade.API.OptimizationSetup.AddAutomaticNormalTissueObjective*
   modifiers.csharp:
   - public
@@ -319,6 +319,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationIMRTBeamParameter AddBeamSpecificParameter(Beam beam, double smoothX, double smoothY, bool fixedJaws)
+    content.vb: Public Function AddBeamSpecificParameter(beam As Beam, smoothX As Double, smoothY As Double, fixedJaws As Boolean) As OptimizationIMRTBeamParameter
     parameters:
     - id: beam
       type: ESAPIX.Facade.API.Beam
@@ -330,7 +331,6 @@ items:
       type: System.Boolean
     return:
       type: ESAPIX.Facade.API.OptimizationIMRTBeamParameter
-    content.vb: Public Function AddBeamSpecificParameter(beam As Beam, smoothX As Double, smoothY As Double, fixedJaws As Boolean) As OptimizationIMRTBeamParameter
   overload: ESAPIX.Facade.API.OptimizationSetup.AddBeamSpecificParameter*
   modifiers.csharp:
   - public
@@ -356,6 +356,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationEUDObjective AddEUDObjective(Structure structure, OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double parameterA, double priority)
+    content.vb: Public Function AddEUDObjective(structure As  Structure, objectiveOperator As OptimizationObjectiveOperator, dose As DoseValue, parameterA As Double, priority As Double) As OptimizationEUDObjective
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
@@ -369,7 +370,6 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.OptimizationEUDObjective
-    content.vb: Public Function AddEUDObjective(structure As  Structure, objectiveOperator As OptimizationObjectiveOperator, dose As DoseValue, parameterA As Double, priority As Double) As OptimizationEUDObjective
   overload: ESAPIX.Facade.API.OptimizationSetup.AddEUDObjective*
   modifiers.csharp:
   - public
@@ -395,6 +395,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationMeanDoseObjective AddMeanDoseObjective(Structure structure, DoseValue dose, double priority)
+    content.vb: Public Function AddMeanDoseObjective(structure As  Structure, dose As DoseValue, priority As Double) As OptimizationMeanDoseObjective
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
@@ -404,7 +405,6 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.OptimizationMeanDoseObjective
-    content.vb: Public Function AddMeanDoseObjective(structure As  Structure, dose As DoseValue, priority As Double) As OptimizationMeanDoseObjective
   overload: ESAPIX.Facade.API.OptimizationSetup.AddMeanDoseObjective*
   modifiers.csharp:
   - public
@@ -430,6 +430,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationNormalTissueParameter AddNormalTissueObjective(double priority, double distanceFromTargetBorderInMM, double startDosePercentage, double endDosePercentage, double fallOff)
+    content.vb: Public Function AddNormalTissueObjective(priority As Double, distanceFromTargetBorderInMM As Double, startDosePercentage As Double, endDosePercentage As Double, fallOff As Double) As OptimizationNormalTissueParameter
     parameters:
     - id: priority
       type: System.Double
@@ -443,7 +444,6 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.OptimizationNormalTissueParameter
-    content.vb: Public Function AddNormalTissueObjective(priority As Double, distanceFromTargetBorderInMM As Double, startDosePercentage As Double, endDosePercentage As Double, fallOff As Double) As OptimizationNormalTissueParameter
   overload: ESAPIX.Facade.API.OptimizationSetup.AddNormalTissueObjective*
   modifiers.csharp:
   - public
@@ -469,6 +469,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationPointObjective AddPointObjective(Structure structure, OptimizationObjectiveOperator objectiveOperator, DoseValue dose, double volume, double priority)
+    content.vb: Public Function AddPointObjective(structure As  Structure, objectiveOperator As OptimizationObjectiveOperator, dose As DoseValue, volume As Double, priority As Double) As OptimizationPointObjective
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
@@ -482,7 +483,6 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.OptimizationPointObjective
-    content.vb: Public Function AddPointObjective(structure As  Structure, objectiveOperator As OptimizationObjectiveOperator, dose As DoseValue, volume As Double, priority As Double) As OptimizationPointObjective
   overload: ESAPIX.Facade.API.OptimizationSetup.AddPointObjective*
   modifiers.csharp:
   - public
@@ -508,10 +508,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveObjective(OptimizationObjective objective)
+    content.vb: Public Sub RemoveObjective(objective As OptimizationObjective)
     parameters:
     - id: objective
       type: ESAPIX.Facade.API.OptimizationObjective
-    content.vb: Public Sub RemoveObjective(objective As OptimizationObjective)
   overload: ESAPIX.Facade.API.OptimizationSetup.RemoveObjective*
   modifiers.csharp:
   - public
@@ -537,10 +537,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveParameter(OptimizationParameter parameter)
+    content.vb: Public Sub RemoveParameter(parameter As OptimizationParameter)
     parameters:
     - id: parameter
       type: ESAPIX.Facade.API.OptimizationParameter
-    content.vb: Public Sub RemoveParameter(parameter As OptimizationParameter)
   overload: ESAPIX.Facade.API.OptimizationSetup.RemoveParameter*
   modifiers.csharp:
   - public
@@ -566,6 +566,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationPointCloudParameter AddStructurePointCloudParameter(Structure structure, double pointResolutionInMM)
+    content.vb: Public Function AddStructurePointCloudParameter(structure As  Structure, pointResolutionInMM As Double) As OptimizationPointCloudParameter
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
@@ -573,7 +574,6 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.OptimizationPointCloudParameter
-    content.vb: Public Function AddStructurePointCloudParameter(structure As  Structure, pointResolutionInMM As Double) As OptimizationPointCloudParameter
   overload: ESAPIX.Facade.API.OptimizationSetup.AddStructurePointCloudParameter*
   modifiers.csharp:
   - public

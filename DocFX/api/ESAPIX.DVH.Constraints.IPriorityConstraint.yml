@@ -57,10 +57,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: PriorityType Priority { get; set; }
+    content.vb: Property Priority As PriorityType
     parameters: []
     return:
       type: ESAPIX.DVH.Constraints.PriorityType
-    content.vb: Property Priority As PriorityType
   overload: ESAPIX.DVH.Constraints.IPriorityConstraint.Priority*
   modifiers.csharp:
   - get
@@ -87,10 +87,10 @@ items:
   example: []
   syntax:
     content: ResultType GetFailedResultType()
+    content.vb: Function GetFailedResultType As ResultType
     return:
       type: ESAPIX.DVH.Constraints.ResultType
       description: ''
-    content.vb: Function GetFailedResultType As ResultType
   overload: ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType*
 references:
 - uid: ESAPIX.DVH.Constraints

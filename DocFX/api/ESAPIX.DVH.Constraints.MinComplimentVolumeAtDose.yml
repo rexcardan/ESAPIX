@@ -110,9 +110,9 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
   overload: ESAPIX.DVH.Constraints.MinComplimentVolumeAtDose.ToString*
   modifiers.csharp:

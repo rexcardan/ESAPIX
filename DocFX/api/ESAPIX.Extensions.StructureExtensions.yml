@@ -63,6 +63,10 @@ items:
   example: []
   syntax:
     content: public static double[, ] VoxelsOnSlice(this Structure str, Image image, int sliceZ)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function VoxelsOnSlice(str As  Structure, image As Image, sliceZ As Integer) As Double(,)
     parameters:
     - id: str
       type: Structure
@@ -76,10 +80,6 @@ items:
     return:
       type: System.Double[,]
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function VoxelsOnSlice(str As  Structure, image As Image, sliceZ As Integer) As Double(,)
   overload: ESAPIX.Extensions.StructureExtensions.VoxelsOnSlice*
   modifiers.csharp:
   - public

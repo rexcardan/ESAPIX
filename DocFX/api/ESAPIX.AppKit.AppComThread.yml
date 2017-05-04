@@ -71,10 +71,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public AppComThread(bool useNewThread = true)
+    content.vb: Public Sub New(useNewThread As Boolean = True)
     parameters:
     - id: useNewThread
       type: System.Boolean
-    content.vb: Public Sub New(useNewThread As Boolean = True)
   overload: ESAPIX.AppKit.AppComThread.#ctor*
   modifiers.csharp:
   - public
@@ -100,12 +100,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Task InvokeAsync(Action action)
+    content.vb: Public Function InvokeAsync(action As Action) As Task
     parameters:
     - id: action
       type: System.Action
     return:
       type: Task
-    content.vb: Public Function InvokeAsync(action As Action) As Task
   overload: ESAPIX.AppKit.AppComThread.InvokeAsync*
   implements:
   - ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
@@ -133,10 +133,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void Invoke(Action action)
+    content.vb: Public Sub Invoke(action As Action)
     parameters:
     - id: action
       type: System.Action
-    content.vb: Public Sub Invoke(action As Action)
   overload: ESAPIX.AppKit.AppComThread.Invoke*
   implements:
   - ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
@@ -192,10 +192,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public int ThreadId { get; }
+    content.vb: Public ReadOnly Property ThreadId As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property ThreadId As Integer
   overload: ESAPIX.AppKit.AppComThread.ThreadId*
   implements:
   - ESAPIX.Interfaces.IVMSThread.ThreadId
@@ -225,12 +225,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void BeginInvoke(Delegate dlg, params object[] args)
+    content.vb: Public Sub BeginInvoke(dlg As  Delegate, ParamArray args As Object())
     parameters:
     - id: dlg
       type: System.Delegate
     - id: args
       type: System.Object[]
-    content.vb: Public Sub BeginInvoke(dlg As  Delegate, ParamArray args As Object())
   overload: ESAPIX.AppKit.AppComThread.BeginInvoke*
   nameWithType.vb: AppComThread.BeginInvoke(Delegate, Object())
   modifiers.csharp:
@@ -259,6 +259,7 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public object Invoke(Delegate dlg, params object[] args)
+    content.vb: Public Function Invoke(dlg As  Delegate, ParamArray args As Object()) As Object
     parameters:
     - id: dlg
       type: System.Delegate
@@ -266,7 +267,6 @@ items:
       type: System.Object[]
     return:
       type: System.Object
-    content.vb: Public Function Invoke(dlg As  Delegate, ParamArray args As Object()) As Object
   overload: ESAPIX.AppKit.AppComThread.Invoke*
   nameWithType.vb: AppComThread.Invoke(Delegate, Object())
   modifiers.csharp:
@@ -295,12 +295,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: protected virtual void Initialize(object sender, EventArgs e)
+    content.vb: Protected Overridable Sub Initialize(sender As Object, e As EventArgs)
     parameters:
     - id: sender
       type: System.Object
     - id: e
       type: System.EventArgs
-    content.vb: Protected Overridable Sub Initialize(sender As Object, e As EventArgs)
   overload: ESAPIX.AppKit.AppComThread.Initialize*
   modifiers.csharp:
   - protected

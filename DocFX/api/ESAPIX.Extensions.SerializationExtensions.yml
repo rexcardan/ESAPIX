@@ -61,6 +61,10 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static string Serialize<T>(this T value)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Serialize(Of T)(value As T) As String
     parameters:
     - id: value
       type: '{T}'
@@ -68,10 +72,6 @@ items:
     - id: T
     return:
       type: System.String
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function Serialize(Of T)(value As T) As String
   overload: ESAPIX.Extensions.SerializationExtensions.Serialize*
   nameWithType.vb: SerializationExtensions.Serialize(Of T)(T)
   modifiers.csharp:

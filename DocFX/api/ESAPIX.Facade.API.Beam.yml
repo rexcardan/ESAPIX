@@ -143,10 +143,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Beam.#ctor*
   modifiers.csharp:
   - public
@@ -172,10 +172,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Beam.IsLive*
   modifiers.csharp:
   - public
@@ -203,10 +203,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Applicator Applicator { get; set; }
+    content.vb: Public Property Applicator As Applicator
     parameters: []
     return:
       type: ESAPIX.Facade.API.Applicator
-    content.vb: Public Property Applicator As Applicator
   overload: ESAPIX.Facade.API.Beam.Applicator*
   modifiers.csharp:
   - public
@@ -234,10 +234,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ArcLength { get; set; }
+    content.vb: Public Property ArcLength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property ArcLength As Double
   overload: ESAPIX.Facade.API.Beam.ArcLength*
   modifiers.csharp:
   - public
@@ -265,10 +265,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double AverageSSD { get; set; }
+    content.vb: Public Property AverageSSD As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property AverageSSD As Double
   overload: ESAPIX.Facade.API.Beam.AverageSSD*
   modifiers.csharp:
   - public
@@ -296,10 +296,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int BeamNumber { get; set; }
+    content.vb: Public Property BeamNumber As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property BeamNumber As Integer
   overload: ESAPIX.Facade.API.Beam.BeamNumber*
   modifiers.csharp:
   - public
@@ -327,10 +327,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Block> Blocks { get; set; }
+    content.vb: Public Property Blocks As IEnumerable(Of Block)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Block}
-    content.vb: Public Property Blocks As IEnumerable(Of Block)
   overload: ESAPIX.Facade.API.Beam.Blocks*
   modifiers.csharp:
   - public
@@ -358,10 +358,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Bolus> Boluses { get; set; }
+    content.vb: Public Property Boluses As IEnumerable(Of Bolus)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Bolus}
-    content.vb: Public Property Boluses As IEnumerable(Of Bolus)
   overload: ESAPIX.Facade.API.Beam.Boluses*
   modifiers.csharp:
   - public
@@ -389,10 +389,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<BeamCalculationLog> CalculationLogs { get; set; }
+    content.vb: Public Property CalculationLogs As IEnumerable(Of BeamCalculationLog)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.BeamCalculationLog}
-    content.vb: Public Property CalculationLogs As IEnumerable(Of BeamCalculationLog)
   overload: ESAPIX.Facade.API.Beam.CalculationLogs*
   modifiers.csharp:
   - public
@@ -420,10 +420,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Compensator Compensator { get; set; }
+    content.vb: Public Property Compensator As Compensator
     parameters: []
     return:
       type: ESAPIX.Facade.API.Compensator
-    content.vb: Public Property Compensator As Compensator
   overload: ESAPIX.Facade.API.Beam.Compensator*
   modifiers.csharp:
   - public
@@ -451,10 +451,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ControlPointCollection ControlPoints { get; set; }
+    content.vb: Public Property ControlPoints As ControlPointCollection
     parameters: []
     return:
       type: ESAPIX.Facade.API.ControlPointCollection
-    content.vb: Public Property ControlPoints As ControlPointCollection
   overload: ESAPIX.Facade.API.Beam.ControlPoints*
   modifiers.csharp:
   - public
@@ -482,10 +482,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
+    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Beam.CreationDateTime*
   modifiers.csharp:
   - public
@@ -513,10 +513,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BeamDose Dose { get; set; }
+    content.vb: Public Property Dose As BeamDose
     parameters: []
     return:
       type: ESAPIX.Facade.API.BeamDose
-    content.vb: Public Property Dose As BeamDose
   overload: ESAPIX.Facade.API.Beam.Dose*
   modifiers.csharp:
   - public
@@ -544,10 +544,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int DoseRate { get; set; }
+    content.vb: Public Property DoseRate As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property DoseRate As Integer
   overload: ESAPIX.Facade.API.Beam.DoseRate*
   modifiers.csharp:
   - public
@@ -575,10 +575,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DosimetricLeafGap { get; set; }
+    content.vb: Public Property DosimetricLeafGap As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property DosimetricLeafGap As Double
   overload: ESAPIX.Facade.API.Beam.DosimetricLeafGap*
   modifiers.csharp:
   - public
@@ -606,10 +606,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string EnergyModeDisplayName { get; set; }
+    content.vb: Public Property EnergyModeDisplayName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property EnergyModeDisplayName As String
   overload: ESAPIX.Facade.API.Beam.EnergyModeDisplayName*
   modifiers.csharp:
   - public
@@ -637,10 +637,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<FieldReferencePoint> FieldReferencePoints { get; set; }
+    content.vb: Public Property FieldReferencePoints As IEnumerable(Of FieldReferencePoint)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.FieldReferencePoint}
-    content.vb: Public Property FieldReferencePoints As IEnumerable(Of FieldReferencePoint)
   overload: ESAPIX.Facade.API.Beam.FieldReferencePoints*
   modifiers.csharp:
   - public
@@ -668,10 +668,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public GantryDirection GantryDirection { get; set; }
+    content.vb: Public Property GantryDirection As GantryDirection
     parameters: []
     return:
       type: GantryDirection
-    content.vb: Public Property GantryDirection As GantryDirection
   overload: ESAPIX.Facade.API.Beam.GantryDirection*
   modifiers.csharp:
   - public
@@ -699,10 +699,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector IsocenterPosition { get; set; }
+    content.vb: Public Property IsocenterPosition As VVector
     parameters: []
     return:
       type: VVector
-    content.vb: Public Property IsocenterPosition As VVector
   overload: ESAPIX.Facade.API.Beam.IsocenterPosition*
   modifiers.csharp:
   - public
@@ -730,10 +730,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsSetupField { get; set; }
+    content.vb: Public Property IsSetupField As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsSetupField As Boolean
   overload: ESAPIX.Facade.API.Beam.IsSetupField*
   modifiers.csharp:
   - public
@@ -761,10 +761,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MetersetPerGy { get; set; }
+    content.vb: Public Property MetersetPerGy As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MetersetPerGy As Double
   overload: ESAPIX.Facade.API.Beam.MetersetPerGy*
   modifiers.csharp:
   - public
@@ -792,10 +792,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public MLC MLC { get; set; }
+    content.vb: Public Property MLC As MLC
     parameters: []
     return:
       type: ESAPIX.Facade.API.MLC
-    content.vb: Public Property MLC As MLC
   overload: ESAPIX.Facade.API.Beam.MLC*
   modifiers.csharp:
   - public
@@ -823,10 +823,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public MLCPlanType MLCPlanType { get; set; }
+    content.vb: Public Property MLCPlanType As MLCPlanType
     parameters: []
     return:
       type: MLCPlanType
-    content.vb: Public Property MLCPlanType As MLCPlanType
   overload: ESAPIX.Facade.API.Beam.MLCPlanType*
   modifiers.csharp:
   - public
@@ -854,10 +854,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MLCTransmissionFactor { get; set; }
+    content.vb: Public Property MLCTransmissionFactor As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MLCTransmissionFactor As Double
   overload: ESAPIX.Facade.API.Beam.MLCTransmissionFactor*
   modifiers.csharp:
   - public
@@ -885,10 +885,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double NormalizationFactor { get; set; }
+    content.vb: Public Property NormalizationFactor As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property NormalizationFactor As Double
   overload: ESAPIX.Facade.API.Beam.NormalizationFactor*
   modifiers.csharp:
   - public
@@ -916,10 +916,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string NormalizationMethod { get; set; }
+    content.vb: Public Property NormalizationMethod As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property NormalizationMethod As String
   overload: ESAPIX.Facade.API.Beam.NormalizationMethod*
   modifiers.csharp:
   - public
@@ -947,10 +947,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PlannedSSD { get; set; }
+    content.vb: Public Property PlannedSSD As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property PlannedSSD As Double
   overload: ESAPIX.Facade.API.Beam.PlannedSSD*
   modifiers.csharp:
   - public
@@ -978,10 +978,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Image ReferenceImage { get; set; }
+    content.vb: Public Property ReferenceImage As Image
     parameters: []
     return:
       type: ESAPIX.Facade.API.Image
-    content.vb: Public Property ReferenceImage As Image
   overload: ESAPIX.Facade.API.Beam.ReferenceImage*
   modifiers.csharp:
   - public
@@ -1009,10 +1009,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SetupTechnique SetupTechnique { get; set; }
+    content.vb: Public Property SetupTechnique As SetupTechnique
     parameters: []
     return:
       type: SetupTechnique
-    content.vb: Public Property SetupTechnique As SetupTechnique
   overload: ESAPIX.Facade.API.Beam.SetupTechnique*
   modifiers.csharp:
   - public
@@ -1040,10 +1040,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SSD { get; set; }
+    content.vb: Public Property SSD As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SSD As Double
   overload: ESAPIX.Facade.API.Beam.SSD*
   modifiers.csharp:
   - public
@@ -1071,10 +1071,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SSDAtStopAngle { get; set; }
+    content.vb: Public Property SSDAtStopAngle As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SSDAtStopAngle As Double
   overload: ESAPIX.Facade.API.Beam.SSDAtStopAngle*
   modifiers.csharp:
   - public
@@ -1102,10 +1102,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Technique Technique { get; set; }
+    content.vb: Public Property Technique As Technique
     parameters: []
     return:
       type: ESAPIX.Facade.API.Technique
-    content.vb: Public Property Technique As Technique
   overload: ESAPIX.Facade.API.Beam.Technique*
   modifiers.csharp:
   - public
@@ -1133,10 +1133,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ToleranceTableLabel { get; set; }
+    content.vb: Public Property ToleranceTableLabel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ToleranceTableLabel As String
   overload: ESAPIX.Facade.API.Beam.ToleranceTableLabel*
   modifiers.csharp:
   - public
@@ -1164,10 +1164,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Tray> Trays { get; set; }
+    content.vb: Public Property Trays As IEnumerable(Of Tray)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Tray}
-    content.vb: Public Property Trays As IEnumerable(Of Tray)
   overload: ESAPIX.Facade.API.Beam.Trays*
   modifiers.csharp:
   - public
@@ -1195,10 +1195,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalBeamTreatmentUnit TreatmentUnit { get; set; }
+    content.vb: Public Property TreatmentUnit As ExternalBeamTreatmentUnit
     parameters: []
     return:
       type: ESAPIX.Facade.API.ExternalBeamTreatmentUnit
-    content.vb: Public Property TreatmentUnit As ExternalBeamTreatmentUnit
   overload: ESAPIX.Facade.API.Beam.TreatmentUnit*
   modifiers.csharp:
   - public
@@ -1226,10 +1226,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Wedge> Wedges { get; set; }
+    content.vb: Public Property Wedges As IEnumerable(Of Wedge)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Wedge}
-    content.vb: Public Property Wedges As IEnumerable(Of Wedge)
   overload: ESAPIX.Facade.API.Beam.Wedges*
   modifiers.csharp:
   - public
@@ -1257,10 +1257,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double WeightFactor { get; set; }
+    content.vb: Public Property WeightFactor As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property WeightFactor As Double
   overload: ESAPIX.Facade.API.Beam.WeightFactor*
   modifiers.csharp:
   - public
@@ -1288,10 +1288,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
+    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.Beam.Id*
   modifiers.csharp:
   - public
@@ -1319,10 +1319,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public MetersetValue Meterset { get; set; }
+    content.vb: Public Property Meterset As MetersetValue
     parameters: []
     return:
       type: MetersetValue
-    content.vb: Public Property Meterset As MetersetValue
   overload: ESAPIX.Facade.API.Beam.Meterset*
   modifiers.csharp:
   - public
@@ -1350,10 +1350,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalBeam ExternalBeam { get; set; }
+    content.vb: Public Property ExternalBeam As ExternalBeam
     parameters: []
     return:
       type: ESAPIX.Facade.API.ExternalBeam
-    content.vb: Public Property ExternalBeam As ExternalBeam
   overload: ESAPIX.Facade.API.Beam.ExternalBeam*
   modifiers.csharp:
   - public
@@ -1381,10 +1381,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Beam.WriteXml*
   modifiers.csharp:
   - public
@@ -1410,10 +1410,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void ApplyParameters(BeamParameters beamParams)
+    content.vb: Public Sub ApplyParameters(beamParams As BeamParameters)
     parameters:
     - id: beamParams
       type: ESAPIX.Facade.API.BeamParameters
-    content.vb: Public Sub ApplyParameters(beamParams As BeamParameters)
   overload: ESAPIX.Facade.API.Beam.ApplyParameters*
   modifiers.csharp:
   - public
@@ -1439,6 +1439,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanSetOptimalFluence(Fluence fluence, out string message)
+    content.vb: Public Function CanSetOptimalFluence(fluence As Fluence, ByRef message As String) As Boolean
     parameters:
     - id: fluence
       type: Fluence
@@ -1446,7 +1447,6 @@ items:
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function CanSetOptimalFluence(fluence As Fluence, ByRef message As String) As Boolean
   overload: ESAPIX.Facade.API.Beam.CanSetOptimalFluence*
   nameWithType.vb: Beam.CanSetOptimalFluence(Fluence, ByRef String)
   modifiers.csharp:
@@ -1475,9 +1475,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BeamParameters GetEditableParameters()
+    content.vb: Public Function GetEditableParameters As BeamParameters
     return:
       type: ESAPIX.Facade.API.BeamParameters
-    content.vb: Public Function GetEditableParameters As BeamParameters
   overload: ESAPIX.Facade.API.Beam.GetEditableParameters*
   modifiers.csharp:
   - public
@@ -1503,9 +1503,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Fluence GetOptimalFluence()
+    content.vb: Public Function GetOptimalFluence As Fluence
     return:
       type: Fluence
-    content.vb: Public Function GetOptimalFluence As Fluence
   overload: ESAPIX.Facade.API.Beam.GetOptimalFluence*
   modifiers.csharp:
   - public
@@ -1531,12 +1531,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector GetSourceLocation(double gantryAngle)
+    content.vb: Public Function GetSourceLocation(gantryAngle As Double) As VVector
     parameters:
     - id: gantryAngle
       type: System.Double
     return:
       type: VVector
-    content.vb: Public Function GetSourceLocation(gantryAngle As Double) As VVector
   overload: ESAPIX.Facade.API.Beam.GetSourceLocation*
   modifiers.csharp:
   - public
@@ -1562,10 +1562,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetOptimalFluence(Fluence fluence)
+    content.vb: Public Sub SetOptimalFluence(fluence As Fluence)
     parameters:
     - id: fluence
       type: Fluence
-    content.vb: Public Sub SetOptimalFluence(fluence As Fluence)
   overload: ESAPIX.Facade.API.Beam.SetOptimalFluence*
   modifiers.csharp:
   - public

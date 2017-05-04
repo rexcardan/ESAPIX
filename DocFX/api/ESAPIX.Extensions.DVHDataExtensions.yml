@@ -73,6 +73,10 @@ items:
   example: []
   syntax:
     content: public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumeAtDose(dvh As DVHPoint(), dv As DoseValue) As Double
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -83,10 +87,6 @@ items:
     return:
       type: System.Double
       description: the volume in the same units as the DVH point array
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetVolumeAtDose(dvh As DVHPoint(), dv As DoseValue) As Double
   overload: ESAPIX.Extensions.DVHDataExtensions.GetVolumeAtDose*
   nameWithType.vb: DVHDataExtensions.GetVolumeAtDose(DVHPoint(), DoseValue)
   modifiers.csharp:
@@ -120,6 +120,10 @@ items:
   example: []
   syntax:
     content: public static double GetComplimentVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplimentVolumeAtDose(dvh As DVHPoint(), dv As DoseValue) As Double
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -130,10 +134,6 @@ items:
     return:
       type: System.Double
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetComplimentVolumeAtDose(dvh As DVHPoint(), dv As DoseValue) As Double
   overload: ESAPIX.Extensions.DVHDataExtensions.GetComplimentVolumeAtDose*
   nameWithType.vb: DVHDataExtensions.GetComplimentVolumeAtDose(DVHPoint(), DoseValue)
   modifiers.csharp:
@@ -167,6 +167,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue GetDoseAtVolume(this DVHPoint[] dvh, double volume)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseAtVolume(dvh As DVHPoint(), volume As Double) As DoseValue
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -177,10 +181,6 @@ items:
     return:
       type: DoseValue
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseAtVolume(dvh As DVHPoint(), volume As Double) As DoseValue
   overload: ESAPIX.Extensions.DVHDataExtensions.GetDoseAtVolume*
   nameWithType.vb: DVHDataExtensions.GetDoseAtVolume(DVHPoint(), Double)
   modifiers.csharp:
@@ -214,6 +214,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue GetDoseCompliment(this DVHPoint[] dvh, double volume)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseCompliment(dvh As DVHPoint(), volume As Double) As DoseValue
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -224,10 +228,6 @@ items:
     return:
       type: DoseValue
       description: the cold spot dose at the specified volume
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseCompliment(dvh As DVHPoint(), volume As Double) As DoseValue
   overload: ESAPIX.Extensions.DVHDataExtensions.GetDoseCompliment*
   nameWithType.vb: DVHDataExtensions.GetDoseCompliment(DVHPoint(), Double)
   modifiers.csharp:
@@ -261,6 +261,10 @@ items:
   example: []
   syntax:
     content: public static DVHPoint[] MergeDVHs(this IEnumerable<DVHData> dvhs)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MergeDVHs(dvhs As IEnumerable(Of DVHData)) As DVHPoint()
     parameters:
     - id: dvhs
       type: IEnumerable{DVHData}
@@ -268,10 +272,6 @@ items:
     return:
       type: DVHPoint[]
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function MergeDVHs(dvhs As IEnumerable(Of DVHData)) As DVHPoint()
   overload: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs*
   nameWithType.vb: DVHDataExtensions.MergeDVHs(IEnumerable(Of DVHData))
   modifiers.csharp:
@@ -305,6 +305,10 @@ items:
   example: []
   syntax:
     content: public static DVHPoint[] MergeDVHs(this IEnumerable<DVHPoint[]> dvhs)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MergeDVHs(dvhs As IEnumerable(Of DVHPoint())) As DVHPoint()
     parameters:
     - id: dvhs
       type: IEnumerable{DVHPoint[]}
@@ -312,10 +316,6 @@ items:
     return:
       type: DVHPoint[]
       description: the combined dvh from multiple structures
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function MergeDVHs(dvhs As IEnumerable(Of DVHPoint())) As DVHPoint()
   overload: ESAPIX.Extensions.DVHDataExtensions.MergeDVHs*
   nameWithType.vb: DVHDataExtensions.MergeDVHs(IEnumerable(Of DVHPoint()))
   modifiers.csharp:
@@ -349,6 +349,10 @@ items:
   example: []
   syntax:
     content: public static DVHPoint[] ConvertToRelativeVolume(this DVHPoint[] dvh)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ConvertToRelativeVolume(dvh As DVHPoint()) As DVHPoint()
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -356,10 +360,6 @@ items:
     return:
       type: DVHPoint[]
       description: the dvh with relative volume points
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ConvertToRelativeVolume(dvh As DVHPoint()) As DVHPoint()
   overload: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeVolume*
   nameWithType.vb: DVHDataExtensions.ConvertToRelativeVolume(DVHPoint())
   modifiers.csharp:
@@ -393,6 +393,10 @@ items:
   example: []
   syntax:
     content: public static DVHPoint[] ConvertToRelativeDose(this DVHPoint[] dvh, DoseValue scalingPoint)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ConvertToRelativeDose(dvh As DVHPoint(), scalingPoint As DoseValue) As DVHPoint()
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -403,10 +407,6 @@ items:
     return:
       type: DVHPoint[]
       description: the dvh with relative dose points
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ConvertToRelativeDose(dvh As DVHPoint(), scalingPoint As DoseValue) As DVHPoint()
   overload: ESAPIX.Extensions.DVHDataExtensions.ConvertToRelativeDose*
   nameWithType.vb: DVHDataExtensions.ConvertToRelativeDose(DVHPoint(), DoseValue)
   modifiers.csharp:
@@ -440,6 +440,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue MaxDose(this DVHPoint[] dvh)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MaxDose(dvh As DVHPoint()) As DoseValue
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -447,10 +451,6 @@ items:
     return:
       type: DoseValue
       description: the max dose in the same units as the curve
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function MaxDose(dvh As DVHPoint()) As DoseValue
   overload: ESAPIX.Extensions.DVHDataExtensions.MaxDose*
   nameWithType.vb: DVHDataExtensions.MaxDose(DVHPoint())
   modifiers.csharp:
@@ -484,6 +484,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue MinDose(this DVHPoint[] dvh)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MinDose(dvh As DVHPoint()) As DoseValue
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -491,10 +495,6 @@ items:
     return:
       type: DoseValue
       description: the minimum dose in the same units as the curve
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function MinDose(dvh As DVHPoint()) As DoseValue
   overload: ESAPIX.Extensions.DVHDataExtensions.MinDose*
   nameWithType.vb: DVHDataExtensions.MinDose(DVHPoint())
   modifiers.csharp:
@@ -528,6 +528,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue MeanDose(this DVHPoint[] dvh)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MeanDose(dvh As DVHPoint()) As DoseValue
     parameters:
     - id: dvh
       type: DVHPoint[]
@@ -535,10 +539,6 @@ items:
     return:
       type: DoseValue
       description: the mean dose in the same units as the curve
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function MeanDose(dvh As DVHPoint()) As DoseValue
   overload: ESAPIX.Extensions.DVHDataExtensions.MeanDose*
   nameWithType.vb: DVHDataExtensions.MeanDose(DVHPoint())
   modifiers.csharp:

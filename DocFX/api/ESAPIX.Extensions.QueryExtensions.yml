@@ -66,6 +66,10 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double RunQuery(this MayoQuery query, PlanningItem pi, IEnumerable<Structure> ss)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RunQuery(query As MayoQuery, pi As PlanningItem, ss As IEnumerable(Of  Structure)) As Double
     parameters:
     - id: query
       type: MayoQuery
@@ -75,10 +79,6 @@ items:
       type: IEnumerable{Structure}
     return:
       type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function RunQuery(query As MayoQuery, pi As PlanningItem, ss As IEnumerable(Of  Structure)) As Double
   overload: ESAPIX.Extensions.QueryExtensions.RunQuery*
   nameWithType.vb: QueryExtensions.RunQuery(MayoQuery, PlanningItem, IEnumerable(Of Structure))
   modifiers.csharp:
@@ -112,6 +112,10 @@ items:
   example: []
   syntax:
     content: public static DoseValuePresentation GetDosePresentation(this MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDosePresentation(query As MayoQuery) As DoseValuePresentation
     parameters:
     - id: query
       type: MayoQuery
@@ -119,10 +123,6 @@ items:
     return:
       type: DoseValuePresentation
       description: the dose value presentation of the query
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDosePresentation(query As MayoQuery) As DoseValuePresentation
   overload: ESAPIX.Extensions.QueryExtensions.GetDosePresentation*
   modifiers.csharp:
   - public
@@ -153,6 +153,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue.DoseUnit GetDoseUnit(this MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseUnit(query As MayoQuery) As DoseValue.DoseUnit
     parameters:
     - id: query
       type: MayoQuery
@@ -160,10 +164,6 @@ items:
     return:
       type: DoseValue.DoseUnit
       description: the dose value presentation of the query
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseUnit(query As MayoQuery) As DoseValue.DoseUnit
   overload: ESAPIX.Extensions.QueryExtensions.GetDoseUnit*
   modifiers.csharp:
   - public
@@ -194,6 +194,10 @@ items:
   example: []
   syntax:
     content: public static VolumePresentation GetVolumePresentation(this MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumePresentation(query As MayoQuery) As VolumePresentation
     parameters:
     - id: query
       type: MayoQuery
@@ -201,10 +205,6 @@ items:
     return:
       type: VolumePresentation
       description: the volume presentation of the query
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetVolumePresentation(query As MayoQuery) As VolumePresentation
   overload: ESAPIX.Extensions.QueryExtensions.GetVolumePresentation*
   modifiers.csharp:
   - public

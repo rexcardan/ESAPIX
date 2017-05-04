@@ -111,10 +111,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachySolidApplicator(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
   modifiers.csharp:
   - public
@@ -140,10 +140,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.BrachySolidApplicator.IsLive*
   modifiers.csharp:
   - public
@@ -171,10 +171,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ApplicatorSetName { get; set; }
+    content.vb: Public Property ApplicatorSetName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ApplicatorSetName As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
   modifiers.csharp:
   - public
@@ -202,10 +202,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ApplicatorSetType { get; set; }
+    content.vb: Public Property ApplicatorSetType As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ApplicatorSetType As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType*
   modifiers.csharp:
   - public
@@ -233,10 +233,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Category { get; set; }
+    content.vb: Public Property Category As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Category As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Category*
   modifiers.csharp:
   - public
@@ -264,10 +264,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Catheter> Catheters { get; set; }
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Catheter}
-    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Catheters*
   modifiers.csharp:
   - public
@@ -295,10 +295,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Note { get; set; }
+    content.vb: Public Property Note As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Note As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Note*
   modifiers.csharp:
   - public
@@ -326,10 +326,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PartName { get; set; }
+    content.vb: Public Property PartName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PartName As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.PartName*
   modifiers.csharp:
   - public
@@ -357,10 +357,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PartNumber { get; set; }
+    content.vb: Public Property PartNumber As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PartNumber As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber*
   modifiers.csharp:
   - public
@@ -388,10 +388,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Summary { get; set; }
+    content.vb: Public Property Summary As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Summary As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Summary*
   modifiers.csharp:
   - public
@@ -419,10 +419,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
+    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.UID*
   modifiers.csharp:
   - public
@@ -450,10 +450,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Vendor { get; set; }
+    content.vb: Public Property Vendor As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Vendor As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Vendor*
   modifiers.csharp:
   - public
@@ -481,10 +481,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Version { get; set; }
+    content.vb: Public Property Version As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Version As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Version*
   modifiers.csharp:
   - public
@@ -512,10 +512,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.BrachySolidApplicator.WriteXml*
   modifiers.csharp:
   - public

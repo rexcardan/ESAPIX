@@ -21,10 +21,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void BrachyPlanSetupChangedHandler(BrachyPlanSetup ps);
+    content.vb: Public Delegate Sub BrachyPlanSetupChangedHandler(ps As BrachyPlanSetup)
     parameters:
     - id: ps
       type: BrachyPlanSetup
-    content.vb: Public Delegate Sub BrachyPlanSetupChangedHandler(ps As BrachyPlanSetup)
   modifiers.csharp:
   - public
   - delegate

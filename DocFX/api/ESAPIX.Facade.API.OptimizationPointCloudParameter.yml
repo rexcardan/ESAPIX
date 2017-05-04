@@ -97,10 +97,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationPointCloudParameter(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
   modifiers.csharp:
   - public
@@ -126,10 +126,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive*
   modifiers.csharp:
   - public
@@ -157,10 +157,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PointResolutionInMM { get; set; }
+    content.vb: Public Property PointResolutionInMM As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property PointResolutionInMM As Double
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM*
   modifiers.csharp:
   - public
@@ -188,10 +188,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Structure Structure { get; set; }
+    content.vb: 'Public Property Structure As '
     parameters: []
     return:
       type: ESAPIX.Facade.API.Structure
-    content.vb: 'Public Property Structure As '
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure*
   modifiers.csharp:
   - public
@@ -219,10 +219,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml*
   modifiers.csharp:
   - public

@@ -61,15 +61,15 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static string[] SplitOnWhiteSpace(this string s)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SplitOnWhiteSpace(s As String) As String()
     parameters:
     - id: s
       type: System.String
     return:
       type: System.String[]
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function SplitOnWhiteSpace(s As String) As String()
   overload: ESAPIX.Extensions.StringExtensions.SplitOnWhiteSpace*
   modifiers.csharp:
   - public

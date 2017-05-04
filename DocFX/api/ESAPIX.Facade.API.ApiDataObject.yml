@@ -134,10 +134,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ApiDataObject(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
   modifiers.csharp:
   - public
@@ -163,10 +163,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.ApiDataObject.IsLive*
   modifiers.csharp:
   - public
@@ -194,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
+    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.ApiDataObject.Id*
   modifiers.csharp:
   - public
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Name { get; set; }
+    content.vb: Public Property Name As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Name As String
   overload: ESAPIX.Facade.API.ApiDataObject.Name*
   modifiers.csharp:
   - public
@@ -256,10 +256,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Comment { get; set; }
+    content.vb: Public Property Comment As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Comment As String
   overload: ESAPIX.Facade.API.ApiDataObject.Comment*
   modifiers.csharp:
   - public
@@ -287,10 +287,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string HistoryUserName { get; set; }
+    content.vb: Public Property HistoryUserName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property HistoryUserName As String
   overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserName*
   modifiers.csharp:
   - public
@@ -318,10 +318,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime HistoryDateTime { get; set; }
+    content.vb: Public Property HistoryDateTime As Date
     parameters: []
     return:
       type: System.DateTime
-    content.vb: Public Property HistoryDateTime As Date
   overload: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime*
   modifiers.csharp:
   - public
@@ -349,9 +349,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ToString()
+    content.vb: Public Function ToString As String
     return:
       type: System.String
-    content.vb: Public Function ToString As String
   overload: ESAPIX.Facade.API.ApiDataObject.ToString*
   modifiers.csharp:
   - public
@@ -377,10 +377,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.ApiDataObject.WriteXml*
   modifiers.csharp:
   - public
@@ -406,12 +406,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool Equals(object obj)
+    content.vb: Public Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
     return:
       type: System.Boolean
-    content.vb: Public Function Equals(obj As Object) As Boolean
   overload: ESAPIX.Facade.API.ApiDataObject.Equals*
   modifiers.csharp:
   - public
@@ -437,9 +437,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int GetHashCode()
+    content.vb: Public Function GetHashCode As Integer
     return:
       type: System.Int32
-    content.vb: Public Function GetHashCode As Integer
   overload: ESAPIX.Facade.API.ApiDataObject.GetHashCode*
   modifiers.csharp:
   - public

@@ -106,10 +106,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public MLC(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.MLC.#ctor*
   modifiers.csharp:
   - public
@@ -135,10 +135,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.MLC.IsLive*
   modifiers.csharp:
   - public
@@ -166,10 +166,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ManufacturerName { get; set; }
+    content.vb: Public Property ManufacturerName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ManufacturerName As String
   overload: ESAPIX.Facade.API.MLC.ManufacturerName*
   modifiers.csharp:
   - public
@@ -197,10 +197,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MinDoseDynamicLeafGap { get; set; }
+    content.vb: Public Property MinDoseDynamicLeafGap As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MinDoseDynamicLeafGap As Double
   overload: ESAPIX.Facade.API.MLC.MinDoseDynamicLeafGap*
   modifiers.csharp:
   - public
@@ -228,10 +228,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Model { get; set; }
+    content.vb: Public Property Model As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Model As String
   overload: ESAPIX.Facade.API.MLC.Model*
   modifiers.csharp:
   - public
@@ -259,10 +259,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SerialNumber { get; set; }
+    content.vb: Public Property SerialNumber As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SerialNumber As String
   overload: ESAPIX.Facade.API.MLC.SerialNumber*
   modifiers.csharp:
   - public
@@ -290,10 +290,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.MLC.WriteXml*
   modifiers.csharp:
   - public

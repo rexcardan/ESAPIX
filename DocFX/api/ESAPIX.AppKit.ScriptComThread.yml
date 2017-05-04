@@ -68,10 +68,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public ScriptComThread(Dispatcher disp)
+    content.vb: Public Sub New(disp As Dispatcher)
     parameters:
     - id: disp
       type: Dispatcher
-    content.vb: Public Sub New(disp As Dispatcher)
   overload: ESAPIX.AppKit.ScriptComThread.#ctor*
   modifiers.csharp:
   - public
@@ -97,10 +97,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public int ThreadId { get; }
+    content.vb: Public ReadOnly Property ThreadId As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property ThreadId As Integer
   overload: ESAPIX.AppKit.ScriptComThread.ThreadId*
   implements:
   - ESAPIX.Interfaces.IVMSThread.ThreadId
@@ -158,10 +158,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void Invoke(Action action)
+    content.vb: Public Sub Invoke(action As Action)
     parameters:
     - id: action
       type: System.Action
-    content.vb: Public Sub Invoke(action As Action)
   overload: ESAPIX.AppKit.ScriptComThread.Invoke*
   implements:
   - ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
@@ -189,12 +189,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Task InvokeAsync(Action action)
+    content.vb: Public Function InvokeAsync(action As Action) As Task
     parameters:
     - id: action
       type: System.Action
     return:
       type: Task
-    content.vb: Public Function InvokeAsync(action As Action) As Task
   overload: ESAPIX.AppKit.ScriptComThread.InvokeAsync*
   implements:
   - ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)

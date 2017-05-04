@@ -111,10 +111,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public RadioactiveSourceModel(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.#ctor*
   modifiers.csharp:
   - public
@@ -140,10 +140,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.IsLive*
   modifiers.csharp:
   - public
@@ -171,10 +171,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector ActiveSize { get; set; }
+    content.vb: Public Property ActiveSize As VVector
     parameters: []
     return:
       type: VVector
-    content.vb: Public Property ActiveSize As VVector
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.ActiveSize*
   modifiers.csharp:
   - public
@@ -202,10 +202,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ActivityConversionFactor { get; set; }
+    content.vb: Public Property ActivityConversionFactor As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property ActivityConversionFactor As Double
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.ActivityConversionFactor*
   modifiers.csharp:
   - public
@@ -233,10 +233,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string CalculationModel { get; set; }
+    content.vb: Public Property CalculationModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property CalculationModel As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.CalculationModel*
   modifiers.csharp:
   - public
@@ -264,10 +264,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DoseRateConstant { get; set; }
+    content.vb: Public Property DoseRateConstant As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property DoseRateConstant As Double
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.DoseRateConstant*
   modifiers.csharp:
   - public
@@ -295,10 +295,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double HalfLife { get; set; }
+    content.vb: Public Property HalfLife As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property HalfLife As Double
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.HalfLife*
   modifiers.csharp:
   - public
@@ -326,10 +326,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string LiteratureReference { get; set; }
+    content.vb: Public Property LiteratureReference As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property LiteratureReference As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.LiteratureReference*
   modifiers.csharp:
   - public
@@ -357,10 +357,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Manufacturer { get; set; }
+    content.vb: Public Property Manufacturer As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Manufacturer As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.Manufacturer*
   modifiers.csharp:
   - public
@@ -388,10 +388,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SourceType { get; set; }
+    content.vb: Public Property SourceType As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SourceType As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.SourceType*
   modifiers.csharp:
   - public
@@ -419,10 +419,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Status { get; set; }
+    content.vb: Public Property Status As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Status As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.Status*
   modifiers.csharp:
   - public
@@ -450,10 +450,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? StatusDate { get; set; }
+    content.vb: Public Property StatusDate As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property StatusDate As Date?
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.StatusDate*
   modifiers.csharp:
   - public
@@ -481,10 +481,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string StatusUserName { get; set; }
+    content.vb: Public Property StatusUserName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property StatusUserName As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.StatusUserName*
   modifiers.csharp:
   - public
@@ -512,10 +512,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.WriteXml*
   modifiers.csharp:
   - public

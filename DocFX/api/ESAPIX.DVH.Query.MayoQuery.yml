@@ -63,10 +63,10 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public QueryType QueryType { get; set; }
+    content.vb: Public Property QueryType As QueryType
     parameters: []
     return:
       type: ESAPIX.DVH.Query.QueryType
-    content.vb: Public Property QueryType As QueryType
   overload: ESAPIX.DVH.Query.MayoQuery.QueryType*
   modifiers.csharp:
   - public
@@ -94,10 +94,10 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public Units QueryUnits { get; set; }
+    content.vb: Public Property QueryUnits As Units
     parameters: []
     return:
       type: ESAPIX.DVH.Query.Units
-    content.vb: Public Property QueryUnits As Units
   overload: ESAPIX.DVH.Query.MayoQuery.QueryUnits*
   modifiers.csharp:
   - public
@@ -125,10 +125,10 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public double QueryValue { get; set; }
+    content.vb: Public Property QueryValue As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property QueryValue As Double
   overload: ESAPIX.DVH.Query.MayoQuery.QueryValue*
   modifiers.csharp:
   - public
@@ -156,10 +156,10 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public Units UnitsDesired { get; set; }
+    content.vb: Public Property UnitsDesired As Units
     parameters: []
     return:
       type: ESAPIX.DVH.Query.Units
-    content.vb: Public Property UnitsDesired As Units
   overload: ESAPIX.DVH.Query.MayoQuery.UnitsDesired*
   modifiers.csharp:
   - public
@@ -187,9 +187,9 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
   overload: ESAPIX.DVH.Query.MayoQuery.ToString*
   modifiers.csharp:
@@ -218,12 +218,12 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static MayoQuery Read(string query)
+    content.vb: Public Shared Function Read(query As String) As MayoQuery
     parameters:
     - id: query
       type: System.String
     return:
       type: ESAPIX.DVH.Query.MayoQuery
-    content.vb: Public Shared Function Read(query As String) As MayoQuery
   overload: ESAPIX.DVH.Query.MayoQuery.Read*
   modifiers.csharp:
   - public

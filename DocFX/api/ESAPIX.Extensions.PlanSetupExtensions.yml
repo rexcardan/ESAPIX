@@ -61,15 +61,15 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static bool IsEcomp(this PlanSetup ps)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsEcomp(ps As PlanSetup) As Boolean
     parameters:
     - id: ps
       type: PlanSetup
     return:
       type: System.Boolean
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function IsEcomp(ps As PlanSetup) As Boolean
   overload: ESAPIX.Extensions.PlanSetupExtensions.IsEcomp*
   modifiers.csharp:
   - public

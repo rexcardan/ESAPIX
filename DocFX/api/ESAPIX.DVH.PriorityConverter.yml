@@ -60,12 +60,12 @@ items:
   namespace: ESAPIX.DVH
   syntax:
     content: public static ResultType GetFailedResult(PriorityType priority)
+    content.vb: Public Shared Function GetFailedResult(priority As PriorityType) As ResultType
     parameters:
     - id: priority
       type: PriorityType
     return:
       type: ResultType
-    content.vb: Public Shared Function GetFailedResult(priority As PriorityType) As ResultType
   overload: ESAPIX.DVH.PriorityConverter.GetFailedResult*
   modifiers.csharp:
   - public

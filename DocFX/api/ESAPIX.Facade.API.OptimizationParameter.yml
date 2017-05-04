@@ -98,10 +98,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationParameter(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
   modifiers.csharp:
   - public
@@ -127,10 +127,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationParameter.IsLive*
   modifiers.csharp:
   - public
@@ -158,10 +158,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationParameter.WriteXml*
   modifiers.csharp:
   - public
@@ -187,12 +187,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool Equals(object obj)
+    content.vb: Public Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
     return:
       type: System.Boolean
-    content.vb: Public Function Equals(obj As Object) As Boolean
   overload: ESAPIX.Facade.API.OptimizationParameter.Equals*
   modifiers.csharp:
   - public
@@ -218,9 +218,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int GetHashCode()
+    content.vb: Public Function GetHashCode As Integer
     return:
       type: System.Int32
-    content.vb: Public Function GetHashCode As Integer
   overload: ESAPIX.Facade.API.OptimizationParameter.GetHashCode*
   modifiers.csharp:
   - public

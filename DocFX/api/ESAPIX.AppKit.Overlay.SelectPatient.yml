@@ -39,8 +39,6 @@ items:
           Implements INotifyPropertyChanged
   inheritance:
   - System.Object
-  implements:
-  - INotifyPropertyChanged
   modifiers.csharp:
   - public
   - class
@@ -67,10 +65,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public SelectPatient(StandAloneContext app)
+    content.vb: Public Sub New(app As StandAloneContext)
     parameters:
     - id: app
       type: ESAPIX.AppKit.StandAloneContext
-    content.vb: Public Sub New(app As StandAloneContext)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.#ctor*
   modifiers.csharp:
   - public
@@ -96,10 +94,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public string Status { get; set; }
+    content.vb: Public Property Status As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Status As String
   overload: ESAPIX.AppKit.Overlay.SelectPatient.Status*
   modifiers.csharp:
   - public
@@ -127,10 +125,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public ObservableCollection<string> Courses { get; set; }
+    content.vb: Public Property Courses As ObservableCollection(Of String)
     parameters: []
     return:
       type: ObservableCollection{System.String}
-    content.vb: Public Property Courses As ObservableCollection(Of String)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.Courses*
   modifiers.csharp:
   - public
@@ -158,10 +156,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public ObservableCollection<string> PlanItems { get; set; }
+    content.vb: Public Property PlanItems As ObservableCollection(Of String)
     parameters: []
     return:
       type: ObservableCollection{System.String}
-    content.vb: Public Property PlanItems As ObservableCollection(Of String)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.PlanItems*
   modifiers.csharp:
   - public
@@ -189,10 +187,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public string SelectedCourse { get; set; }
+    content.vb: Public Property SelectedCourse As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SelectedCourse As String
   overload: ESAPIX.AppKit.Overlay.SelectPatient.SelectedCourse*
   modifiers.csharp:
   - public
@@ -220,10 +218,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public string SelectedPlanItem { get; set; }
+    content.vb: Public Property SelectedPlanItem As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SelectedPlanItem As String
   overload: ESAPIX.AppKit.Overlay.SelectPatient.SelectedPlanItem*
   modifiers.csharp:
   - public
@@ -251,9 +249,9 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public Task UpdatePatient()
+    content.vb: Public Function UpdatePatient As Task
     return:
       type: Task
-    content.vb: Public Function UpdatePatient As Task
   overload: ESAPIX.AppKit.Overlay.SelectPatient.UpdatePatient*
   modifiers.csharp:
   - public
@@ -279,9 +277,9 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public event PropertyChangedEventHandler PropertyChanged
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
     return:
       type: PropertyChangedEventHandler
-    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -306,10 +304,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: protected void OnPropertyChanged(string propertyName)
+    content.vb: Protected Sub OnPropertyChanged(propertyName As String)
     parameters:
     - id: propertyName
       type: System.String
-    content.vb: Protected Sub OnPropertyChanged(propertyName As String)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.OnPropertyChanged*
   modifiers.csharp:
   - protected
@@ -335,10 +333,10 @@ items:
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public DelegateCommand SearchCommand { get; set; }
+    content.vb: Public Property SearchCommand As DelegateCommand
     parameters: []
     return:
       type: DelegateCommand
-    content.vb: Public Property SearchCommand As DelegateCommand
   overload: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand*
   modifiers.csharp:
   - public
@@ -360,12 +358,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: INotifyPropertyChanged
-  commentId: '!:INotifyPropertyChanged'
-  isExternal: true
-  name: INotifyPropertyChanged
-  nameWithType: INotifyPropertyChanged
-  fullName: INotifyPropertyChanged
 - uid: System
   commentId: N:System
   isExternal: false

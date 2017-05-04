@@ -63,10 +63,10 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public MayoQuery Query { get; set; }
+    content.vb: Public Property Query As MayoQuery
     parameters: []
     return:
       type: ESAPIX.DVH.Query.MayoQuery
-    content.vb: Public Property Query As MayoQuery
   overload: ESAPIX.DVH.Query.MayoConstraint.Query*
   modifiers.csharp:
   - public
@@ -94,10 +94,10 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public Discriminator Discriminator { get; set; }
+    content.vb: Public Property Discriminator As Discriminator
     parameters: []
     return:
       type: ESAPIX.DVH.Query.Discriminator
-    content.vb: Public Property Discriminator As Discriminator
   overload: ESAPIX.DVH.Query.MayoConstraint.Discriminator*
   modifiers.csharp:
   - public
@@ -125,10 +125,10 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public double ConstraintValue { get; set; }
+    content.vb: Public Property ConstraintValue As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property ConstraintValue As Double
   overload: ESAPIX.DVH.Query.MayoConstraint.ConstraintValue*
   modifiers.csharp:
   - public
@@ -158,6 +158,7 @@ items:
   example: []
   syntax:
     content: public static MayoConstraint Read(string constraint)
+    content.vb: Public Shared Function Read(constraint As String) As MayoConstraint
     parameters:
     - id: constraint
       type: System.String
@@ -165,7 +166,6 @@ items:
     return:
       type: ESAPIX.DVH.Query.MayoConstraint
       description: ''
-    content.vb: Public Shared Function Read(constraint As String) As MayoConstraint
   overload: ESAPIX.DVH.Query.MayoConstraint.Read*
   modifiers.csharp:
   - public
@@ -195,10 +195,10 @@ items:
   example: []
   syntax:
     content: public string Write()
+    content.vb: Public Function Write As String
     return:
       type: System.String
       description: a string of the constraint
-    content.vb: Public Function Write As String
   overload: ESAPIX.DVH.Query.MayoConstraint.Write*
   modifiers.csharp:
   - public

@@ -21,10 +21,10 @@ items:
   namespace: ESAPIX.Logging
   syntax:
     content: public delegate void LogHandler(string toLog);
+    content.vb: Public Delegate Sub LogHandler(toLog As String)
     parameters:
     - id: toLog
       type: System.String
-    content.vb: Public Delegate Sub LogHandler(toLog As String)
   modifiers.csharp:
   - public
   - delegate

@@ -101,10 +101,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Slot(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Slot.#ctor*
   modifiers.csharp:
   - public
@@ -130,10 +130,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Slot.IsLive*
   modifiers.csharp:
   - public
@@ -161,10 +161,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int Number { get; set; }
+    content.vb: Public Property Number As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property Number As Integer
   overload: ESAPIX.Facade.API.Slot.Number*
   modifiers.csharp:
   - public
@@ -192,10 +192,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Slot.WriteXml*
   modifiers.csharp:
   - public

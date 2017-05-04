@@ -66,10 +66,10 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<string, string, dynamic> CreateApplicationFunc { get; set; }
+    content.vb: Public Shared Property CreateApplicationFunc As Func(Of String, String, Object)
     parameters: []
     return:
       type: System.Func{System.String,System.String,System.Object}
-    content.vb: Public Shared Property CreateApplicationFunc As Func(Of String, String, Object)
   overload: ESAPIX.Facade.StaticHelper.CreateApplicationFunc*
   modifiers.csharp:
   - public
@@ -99,10 +99,10 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }
+    content.vb: Public Shared Property SerializableObject_ClearSerializationHistoryAction As Action
     parameters: []
     return:
       type: System.Action
-    content.vb: Public Shared Property SerializableObject_ClearSerializationHistoryAction As Action
   overload: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction*
   modifiers.csharp:
   - public
@@ -132,10 +132,10 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic> DoseValue_UndefinedDoseFunc { get; set; }
+    content.vb: Public Shared Property DoseValue_UndefinedDoseFunc As Func(Of Object)
     parameters: []
     return:
       type: System.Func{System.Object}
-    content.vb: Public Shared Property DoseValue_UndefinedDoseFunc As Func(Of Object)
   overload: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc*
   modifiers.csharp:
   - public
@@ -165,10 +165,10 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; }
+    content.vb: Public Shared Property VVector_DistanceFunc As Func(Of Object, Object, Double)
     parameters: []
     return:
       type: System.Func{System.Object,System.Object,System.Double}
-    content.vb: Public Shared Property VVector_DistanceFunc As Func(Of Object, Object, Double)
   overload: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc*
   modifiers.csharp:
   - public
@@ -198,6 +198,7 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static Application Application_CreateApplication(string username, string password)
+    content.vb: Public Shared Function Application_CreateApplication(username As String, password As String) As Application
     parameters:
     - id: username
       type: System.String
@@ -205,7 +206,6 @@ items:
       type: System.String
     return:
       type: Application
-    content.vb: Public Shared Function Application_CreateApplication(username As String, password As String) As Application
   overload: ESAPIX.Facade.StaticHelper.Application_CreateApplication*
   modifiers.csharp:
   - public
@@ -261,9 +261,9 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static DoseValue DoseValue_UndefinedDose()
+    content.vb: Public Shared Function DoseValue_UndefinedDose As DoseValue
     return:
       type: DoseValue
-    content.vb: Public Shared Function DoseValue_UndefinedDose As DoseValue
   overload: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose*
   modifiers.csharp:
   - public
@@ -291,6 +291,7 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static double VVector_Distance(dynamic client1, dynamic client2)
+    content.vb: Public Shared Function VVector_Distance(client1 As Object, client2 As Object) As Double
     parameters:
     - id: client1
       type: System.Object
@@ -298,7 +299,6 @@ items:
       type: System.Object
     return:
       type: System.Double
-    content.vb: Public Shared Function VVector_Distance(client1 As Object, client2 As Object) As Double
   overload: ESAPIX.Facade.StaticHelper.VVector_Distance*
   modifiers.csharp:
   - public

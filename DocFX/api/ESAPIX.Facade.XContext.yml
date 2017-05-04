@@ -60,10 +60,10 @@ items:
   namespace: ESAPIX.Facade
   syntax:
     content: public static XContext Instance { get; }
+    content.vb: Public Shared ReadOnly Property Instance As XContext
     parameters: []
     return:
       type: ESAPIX.Facade.XContext
-    content.vb: Public Shared ReadOnly Property Instance As XContext
   overload: ESAPIX.Facade.XContext.Instance*
   modifiers.csharp:
   - public
@@ -95,10 +95,10 @@ items:
   example: []
   syntax:
     content: public IScriptContext CurrentContext { get; set; }
+    content.vb: Public Property CurrentContext As IScriptContext
     parameters: []
     return:
       type: ESAPIX.Interfaces.IScriptContext
-    content.vb: Public Property CurrentContext As IScriptContext
   overload: ESAPIX.Facade.XContext.CurrentContext*
   modifiers.csharp:
   - public

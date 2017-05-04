@@ -107,10 +107,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.StructureSet.#ctor*
   modifiers.csharp:
   - public
@@ -136,10 +136,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.StructureSet.IsLive*
   modifiers.csharp:
   - public
@@ -167,10 +167,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Structure> Structures { get; set; }
+    content.vb: Public Property Structures As IEnumerable(Of  Structure)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Structure}
-    content.vb: Public Property Structures As IEnumerable(Of  Structure)
   overload: ESAPIX.Facade.API.StructureSet.Structures*
   modifiers.csharp:
   - public
@@ -198,10 +198,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Image Image { get; set; }
+    content.vb: Public Property Image As Image
     parameters: []
     return:
       type: ESAPIX.Facade.API.Image
-    content.vb: Public Property Image As Image
   overload: ESAPIX.Facade.API.StructureSet.Image*
   modifiers.csharp:
   - public
@@ -229,10 +229,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
+    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.StructureSet.UID*
   modifiers.csharp:
   - public
@@ -260,10 +260,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.StructureSet.WriteXml*
   modifiers.csharp:
   - public
@@ -289,6 +289,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Structure AddStructure(string dicomType, string id)
+    content.vb: 'Public Function AddStructure(dicomType As String, id As String) As '
     parameters:
     - id: dicomType
       type: System.String
@@ -296,7 +297,6 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.Structure
-    content.vb: 'Public Function AddStructure(dicomType As String, id As String) As '
   overload: ESAPIX.Facade.API.StructureSet.AddStructure*
   modifiers.csharp:
   - public
@@ -322,6 +322,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanAddStructure(string dicomType, string id)
+    content.vb: Public Function CanAddStructure(dicomType As String, id As String) As Boolean
     parameters:
     - id: dicomType
       type: System.String
@@ -329,7 +330,6 @@ items:
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function CanAddStructure(dicomType As String, id As String) As Boolean
   overload: ESAPIX.Facade.API.StructureSet.CanAddStructure*
   modifiers.csharp:
   - public
@@ -355,12 +355,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanRemoveStructure(Structure structure)
+    content.vb: Public Function CanRemoveStructure(structure As  Structure) As Boolean
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
     return:
       type: System.Boolean
-    content.vb: Public Function CanRemoveStructure(structure As  Structure) As Boolean
   overload: ESAPIX.Facade.API.StructureSet.CanRemoveStructure*
   modifiers.csharp:
   - public
@@ -386,10 +386,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveStructure(Structure structure)
+    content.vb: Public Sub RemoveStructure(structure As  Structure)
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
-    content.vb: Public Sub RemoveStructure(structure As  Structure)
   overload: ESAPIX.Facade.API.StructureSet.RemoveStructure*
   modifiers.csharp:
   - public

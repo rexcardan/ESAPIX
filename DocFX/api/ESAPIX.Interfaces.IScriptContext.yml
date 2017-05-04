@@ -72,10 +72,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: string ApplicationName { get; }
+    content.vb: ReadOnly Property ApplicationName As String
     parameters: []
     return:
       type: System.String
-    content.vb: ReadOnly Property ApplicationName As String
   overload: ESAPIX.Interfaces.IScriptContext.ApplicationName*
   modifiers.csharp:
   - get
@@ -101,10 +101,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: BrachyPlanSetup BrachyPlanSetup { get; }
+    content.vb: ReadOnly Property BrachyPlanSetup As BrachyPlanSetup
     parameters: []
     return:
       type: BrachyPlanSetup
-    content.vb: ReadOnly Property BrachyPlanSetup As BrachyPlanSetup
   overload: ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup*
   modifiers.csharp:
   - get
@@ -130,10 +130,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; }
+    content.vb: ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
     parameters: []
     return:
       type: IEnumerable{BrachyPlanSetup}
-    content.vb: ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
   overload: ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope*
   modifiers.csharp:
   - get
@@ -159,10 +159,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: User CurrentUser { get; }
+    content.vb: ReadOnly Property CurrentUser As User
     parameters: []
     return:
       type: User
-    content.vb: ReadOnly Property CurrentUser As User
   overload: ESAPIX.Interfaces.IScriptContext.CurrentUser*
   modifiers.csharp:
   - get
@@ -188,10 +188,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: Course Course { get; }
+    content.vb: ReadOnly Property Course As Course
     parameters: []
     return:
       type: Course
-    content.vb: ReadOnly Property Course As Course
   overload: ESAPIX.Interfaces.IScriptContext.Course*
   modifiers.csharp:
   - get
@@ -217,10 +217,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: Image Image { get; }
+    content.vb: ReadOnly Property Image As Image
     parameters: []
     return:
       type: Image
-    content.vb: ReadOnly Property Image As Image
   overload: ESAPIX.Interfaces.IScriptContext.Image*
   modifiers.csharp:
   - get
@@ -246,10 +246,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: Patient Patient { get; }
+    content.vb: ReadOnly Property Patient As Patient
     parameters: []
     return:
       type: Patient
-    content.vb: ReadOnly Property Patient As Patient
   overload: ESAPIX.Interfaces.IScriptContext.Patient*
   modifiers.csharp:
   - get
@@ -275,10 +275,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: ExternalPlanSetup ExternalPlanSetup { get; }
+    content.vb: ReadOnly Property ExternalPlanSetup As ExternalPlanSetup
     parameters: []
     return:
       type: ExternalPlanSetup
-    content.vb: ReadOnly Property ExternalPlanSetup As ExternalPlanSetup
   overload: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup*
   modifiers.csharp:
   - get
@@ -304,10 +304,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
+    content.vb: ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
     parameters: []
     return:
       type: IEnumerable{ExternalPlanSetup}
-    content.vb: ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
   overload: ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope*
   modifiers.csharp:
   - get
@@ -333,10 +333,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: PlanSetup PlanSetup { get; }
+    content.vb: ReadOnly Property PlanSetup As PlanSetup
     parameters: []
     return:
       type: PlanSetup
-    content.vb: ReadOnly Property PlanSetup As PlanSetup
   overload: ESAPIX.Interfaces.IScriptContext.PlanSetup*
   modifiers.csharp:
   - get
@@ -362,10 +362,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<PlanSetup> PlansInScope { get; }
+    content.vb: ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
     parameters: []
     return:
       type: IEnumerable{PlanSetup}
-    content.vb: ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
   overload: ESAPIX.Interfaces.IScriptContext.PlansInScope*
   modifiers.csharp:
   - get
@@ -391,10 +391,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<PlanSum> PlanSumsInScope { get; }
+    content.vb: ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
     parameters: []
     return:
       type: IEnumerable{PlanSum}
-    content.vb: ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
   overload: ESAPIX.Interfaces.IScriptContext.PlanSumsInScope*
   modifiers.csharp:
   - get
@@ -420,10 +420,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: StructureSet StructureSet { get; }
+    content.vb: ReadOnly Property StructureSet As StructureSet
     parameters: []
     return:
       type: StructureSet
-    content.vb: ReadOnly Property StructureSet As StructureSet
   overload: ESAPIX.Interfaces.IScriptContext.StructureSet*
   modifiers.csharp:
   - get
@@ -451,10 +451,10 @@ items:
   example: []
   syntax:
     content: IVMSThread Thread { get; }
+    content.vb: ReadOnly Property Thread As IVMSThread
     parameters: []
     return:
       type: ESAPIX.Interfaces.IVMSThread
-    content.vb: ReadOnly Property Thread As IVMSThread
   overload: ESAPIX.Interfaces.IScriptContext.Thread*
   modifiers.csharp:
   - get
@@ -480,10 +480,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: Dispatcher UIDispatcher { get; set; }
+    content.vb: Property UIDispatcher As Dispatcher
     parameters: []
     return:
       type: Dispatcher
-    content.vb: Property UIDispatcher As Dispatcher
   overload: ESAPIX.Interfaces.IScriptContext.UIDispatcher*
   modifiers.csharp:
   - get
@@ -510,6 +510,7 @@ items:
   example: []
   syntax:
     content: T GetValue<T>(Func<IScriptContext, T> toExecute)
+    content.vb: Function GetValue(Of T)(toExecute As Func(Of IScriptContext, T)) As T
     parameters:
     - id: toExecute
       type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
@@ -520,7 +521,6 @@ items:
     return:
       type: '{T}'
       description: the value requested
-    content.vb: Function GetValue(Of T)(toExecute As Func(Of IScriptContext, T)) As T
   overload: ESAPIX.Interfaces.IScriptContext.GetValue*
   nameWithType.vb: IScriptContext.GetValue(Of T)(Func(Of IScriptContext, T))
   fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValue(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
@@ -547,6 +547,7 @@ items:
   example: []
   syntax:
     content: Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
+    content.vb: Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
     parameters:
     - id: toExecute
       type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
@@ -557,7 +558,6 @@ items:
     return:
       type: Task{{T}}
       description: a task of the value requested
-    content.vb: Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
   overload: ESAPIX.Interfaces.IScriptContext.GetValueAsync*
   nameWithType.vb: IScriptContext.GetValueAsync(Of T)(Func(Of IScriptContext, T))
   fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValueAsync(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
@@ -582,9 +582,9 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: event PatientChangedHandler PatientChanged
+    content.vb: Event PatientChanged As PatientChangedHandler
     return:
       type: PatientChangedHandler
-    content.vb: Event PatientChanged As PatientChangedHandler
 - uid: ESAPIX.Interfaces.IScriptContext.PlanSetupChanged
   commentId: E:ESAPIX.Interfaces.IScriptContext.PlanSetupChanged
   id: PlanSetupChanged
@@ -605,9 +605,9 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: event PlanSetupChangedHandler PlanSetupChanged
+    content.vb: Event PlanSetupChanged As PlanSetupChangedHandler
     return:
       type: PlanSetupChangedHandler
-    content.vb: Event PlanSetupChanged As PlanSetupChangedHandler
 - uid: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetupChanged
   commentId: E:ESAPIX.Interfaces.IScriptContext.ExternalPlanSetupChanged
   id: ExternalPlanSetupChanged
@@ -628,9 +628,9 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: event ExternalPlanSetupChangedHandler ExternalPlanSetupChanged
+    content.vb: Event ExternalPlanSetupChanged As ExternalPlanSetupChangedHandler
     return:
       type: ExternalPlanSetupChangedHandler
-    content.vb: Event ExternalPlanSetupChanged As ExternalPlanSetupChangedHandler
 - uid: ESAPIX.Interfaces.IScriptContext.BrachyPlanSetupChanged
   commentId: E:ESAPIX.Interfaces.IScriptContext.BrachyPlanSetupChanged
   id: BrachyPlanSetupChanged
@@ -651,9 +651,9 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: event PlanSetupChangedHandler BrachyPlanSetupChanged
+    content.vb: Event BrachyPlanSetupChanged As PlanSetupChangedHandler
     return:
       type: PlanSetupChangedHandler
-    content.vb: Event BrachyPlanSetupChanged As PlanSetupChangedHandler
 - uid: ESAPIX.Interfaces.IScriptContext.CourseChanged
   commentId: E:ESAPIX.Interfaces.IScriptContext.CourseChanged
   id: CourseChanged
@@ -674,9 +674,9 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: event CourseChangedHandler CourseChanged
+    content.vb: Event CourseChanged As CourseChangedHandler
     return:
       type: CourseChangedHandler
-    content.vb: Event CourseChanged As CourseChangedHandler
 references:
 - uid: ESAPIX.Interfaces
   commentId: N:ESAPIX.Interfaces

@@ -61,6 +61,10 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static IList<T> Swap<T>(this IList<T> list, int indexA, int indexB)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Swap(Of T)(list As IList(Of T), indexA As Integer, indexB As Integer) As IList(Of T)
     parameters:
     - id: list
       type: IList{{T}}
@@ -72,10 +76,6 @@ items:
     - id: T
     return:
       type: IList{{T}}
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function Swap(Of T)(list As IList(Of T), indexA As Integer, indexB As Integer) As IList(Of T)
   overload: ESAPIX.Extensions.ListExtensions.Swap*
   nameWithType.vb: ListExtensions.Swap(Of T)(IList(Of T), Int32, Int32)
   modifiers.csharp:

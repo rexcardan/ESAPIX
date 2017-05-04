@@ -87,10 +87,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string StructureName { get; set; }
+    content.vb: Public Property StructureName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property StructureName As String
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureName*
   modifiers.csharp:
   - public
@@ -118,10 +118,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public DoseValue ConstraintDose { get; set; }
+    content.vb: Public Property ConstraintDose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property ConstraintDose As DoseValue
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.ConstraintDose*
   modifiers.csharp:
   - public
@@ -151,10 +151,10 @@ items:
   example: []
   syntax:
     content: public double Dose { get; set; }
+    content.vb: Public Property Dose As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Dose As Double
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose*
   modifiers.csharp:
   - public
@@ -184,10 +184,10 @@ items:
   example: []
   syntax:
     content: public DoseValue.DoseUnit Unit { get; set; }
+    content.vb: Public Property Unit As DoseValue.DoseUnit
     parameters: []
     return:
       type: DoseValue.DoseUnit
-    content.vb: Public Property Unit As DoseValue.DoseUnit
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit*
   modifiers.csharp:
   - public
@@ -215,10 +215,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string[] StructureNames { get; }
+    content.vb: Public ReadOnly Property StructureNames As String()
     parameters: []
     return:
       type: System.String[]
-    content.vb: Public ReadOnly Property StructureNames As String()
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames*
   modifiers.csharp:
   - public
@@ -246,10 +246,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public virtual string Name { get; }
+    content.vb: Public Overridable ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Overridable ReadOnly Property Name As String
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.Name
@@ -281,10 +281,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string FullName { get; }
+    content.vb: Public ReadOnly Property FullName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property FullName As String
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.FullName
@@ -314,10 +314,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public PriorityType Priority { get; set; }
+    content.vb: Public Property Priority As PriorityType
     parameters: []
     return:
       type: ESAPIX.DVH.Constraints.PriorityType
-    content.vb: Public Property Priority As PriorityType
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority*
   implements:
   - ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
@@ -347,12 +347,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public abstract ConstraintResult Constrain(PlanningItem pi)
+    content.vb: Public MustOverride Function Constrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public MustOverride Function Constrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.Constrain*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
@@ -382,12 +382,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ConstraintResult CanConstrain(PlanningItem pi)
+    content.vb: Public Function CanConstrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Function CanConstrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.CanConstrain*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
@@ -415,9 +415,9 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ResultType GetFailedResultType()
+    content.vb: Public Function GetFailedResultType As ResultType
     return:
       type: ESAPIX.DVH.Constraints.ResultType
-    content.vb: Public Function GetFailedResultType As ResultType
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType*
   implements:
   - ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
@@ -447,6 +447,7 @@ items:
   example: []
   syntax:
     content: public DVHPoint[] GetMergedDVH(PlanningItem pi)
+    content.vb: Public Function GetMergedDVH(pi As PlanningItem) As DVHPoint()
     parameters:
     - id: pi
       type: PlanningItem
@@ -454,7 +455,6 @@ items:
     return:
       type: DVHPoint[]
       description: the DVH as an array of DVHPoint values
-    content.vb: Public Function GetMergedDVH(pi As PlanningItem) As DVHPoint()
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH*
   modifiers.csharp:
   - public
@@ -482,6 +482,7 @@ items:
   example: []
   syntax:
     content: public IEnumerable<Structure> GetStructures(PlanningItem pi)
+    content.vb: Public Function GetStructures(pi As PlanningItem) As IEnumerable(Of  Structure)
     parameters:
     - id: pi
       type: PlanningItem
@@ -489,7 +490,6 @@ items:
     return:
       type: IEnumerable{Structure}
       description: the collection of structures
-    content.vb: Public Function GetStructures(pi As PlanningItem) As IEnumerable(Of  Structure)
   overload: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures*
   modifiers.csharp:
   - public

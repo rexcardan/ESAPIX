@@ -63,6 +63,10 @@ items:
   example: []
   syntax:
     content: public static DVHPoint[] GetRelativeDVHCumulativeData(this PlanSum ps, Structure s, VolumePresentation vPres, double binWidth)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetRelativeDVHCumulativeData(ps As PlanSum, s As  Structure, vPres As VolumePresentation, binWidth As Double) As DVHPoint()
     parameters:
     - id: ps
       type: PlanSum
@@ -79,10 +83,6 @@ items:
     return:
       type: DVHPoint[]
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetRelativeDVHCumulativeData(ps As PlanSum, s As  Structure, vPres As VolumePresentation, binWidth As Double) As DVHPoint()
   overload: ESAPIX.Extensions.PlanSumExtensions.GetRelativeDVHCumulativeData*
   modifiers.csharp:
   - public

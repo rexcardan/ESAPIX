@@ -103,12 +103,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public StandAloneContext(Application app, IVMSThread thread)
+    content.vb: Public Sub New(app As Application, thread As IVMSThread)
     parameters:
     - id: app
       type: Application
     - id: thread
       type: ESAPIX.Interfaces.IVMSThread
-    content.vb: Public Sub New(app As Application, thread As IVMSThread)
   overload: ESAPIX.AppKit.StandAloneContext.#ctor*
   modifiers.csharp:
   - public
@@ -162,10 +162,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Course Course { get; }
+    content.vb: Public ReadOnly Property Course As Course
     parameters: []
     return:
       type: Course
-    content.vb: Public ReadOnly Property Course As Course
   overload: ESAPIX.AppKit.StandAloneContext.Course*
   implements:
   - ESAPIX.Interfaces.IScriptContext.Course
@@ -195,10 +195,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public User CurrentUser { get; }
+    content.vb: Public ReadOnly Property CurrentUser As User
     parameters: []
     return:
       type: User
-    content.vb: Public ReadOnly Property CurrentUser As User
   overload: ESAPIX.AppKit.StandAloneContext.CurrentUser*
   implements:
   - ESAPIX.Interfaces.IScriptContext.CurrentUser
@@ -228,10 +228,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Image Image { get; }
+    content.vb: Public ReadOnly Property Image As Image
     parameters: []
     return:
       type: Image
-    content.vb: Public ReadOnly Property Image As Image
   overload: ESAPIX.AppKit.StandAloneContext.Image*
   implements:
   - ESAPIX.Interfaces.IScriptContext.Image
@@ -261,10 +261,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Patient Patient { get; }
+    content.vb: Public ReadOnly Property Patient As Patient
     parameters: []
     return:
       type: Patient
-    content.vb: Public ReadOnly Property Patient As Patient
   overload: ESAPIX.AppKit.StandAloneContext.Patient*
   implements:
   - ESAPIX.Interfaces.IScriptContext.Patient
@@ -294,10 +294,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public PlanSetup PlanSetup { get; }
+    content.vb: Public ReadOnly Property PlanSetup As PlanSetup
     parameters: []
     return:
       type: PlanSetup
-    content.vb: Public ReadOnly Property PlanSetup As PlanSetup
   overload: ESAPIX.AppKit.StandAloneContext.PlanSetup*
   implements:
   - ESAPIX.Interfaces.IScriptContext.PlanSetup
@@ -327,10 +327,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public IEnumerable<PlanSetup> PlansInScope { get; }
+    content.vb: Public ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
     parameters: []
     return:
       type: IEnumerable{PlanSetup}
-    content.vb: Public ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
   overload: ESAPIX.AppKit.StandAloneContext.PlansInScope*
   implements:
   - ESAPIX.Interfaces.IScriptContext.PlansInScope
@@ -360,10 +360,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public IEnumerable<PlanSum> PlanSumsInScope { get; }
+    content.vb: Public ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
     parameters: []
     return:
       type: IEnumerable{PlanSum}
-    content.vb: Public ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
   overload: ESAPIX.AppKit.StandAloneContext.PlanSumsInScope*
   implements:
   - ESAPIX.Interfaces.IScriptContext.PlanSumsInScope
@@ -393,10 +393,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public StructureSet StructureSet { get; }
+    content.vb: Public ReadOnly Property StructureSet As StructureSet
     parameters: []
     return:
       type: StructureSet
-    content.vb: Public ReadOnly Property StructureSet As StructureSet
   overload: ESAPIX.AppKit.StandAloneContext.StructureSet*
   implements:
   - ESAPIX.Interfaces.IScriptContext.StructureSet
@@ -426,10 +426,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public IVMSThread Thread { get; }
+    content.vb: Public ReadOnly Property Thread As IVMSThread
     parameters: []
     return:
       type: ESAPIX.Interfaces.IVMSThread
-    content.vb: Public ReadOnly Property Thread As IVMSThread
   overload: ESAPIX.AppKit.StandAloneContext.Thread*
   implements:
   - ESAPIX.Interfaces.IScriptContext.Thread
@@ -459,10 +459,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Dispatcher UIDispatcher { get; set; }
+    content.vb: Public Property UIDispatcher As Dispatcher
     parameters: []
     return:
       type: Dispatcher
-    content.vb: Public Property UIDispatcher As Dispatcher
   overload: ESAPIX.AppKit.StandAloneContext.UIDispatcher*
   implements:
   - ESAPIX.Interfaces.IScriptContext.UIDispatcher
@@ -492,10 +492,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public string ApplicationName { get; set; }
+    content.vb: Public Property ApplicationName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ApplicationName As String
   overload: ESAPIX.AppKit.StandAloneContext.ApplicationName*
   implements:
   - ESAPIX.Interfaces.IScriptContext.ApplicationName
@@ -525,10 +525,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public BrachyPlanSetup BrachyPlanSetup { get; }
+    content.vb: Public ReadOnly Property BrachyPlanSetup As BrachyPlanSetup
     parameters: []
     return:
       type: BrachyPlanSetup
-    content.vb: Public ReadOnly Property BrachyPlanSetup As BrachyPlanSetup
   overload: ESAPIX.AppKit.StandAloneContext.BrachyPlanSetup*
   implements:
   - ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup
@@ -558,10 +558,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; }
+    content.vb: Public ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
     parameters: []
     return:
       type: IEnumerable{BrachyPlanSetup}
-    content.vb: Public ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
   overload: ESAPIX.AppKit.StandAloneContext.BrachyPlansInScope*
   implements:
   - ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope
@@ -591,10 +591,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public ExternalPlanSetup ExternalPlanSetup { get; }
+    content.vb: Public ReadOnly Property ExternalPlanSetup As ExternalPlanSetup
     parameters: []
     return:
       type: ExternalPlanSetup
-    content.vb: Public ReadOnly Property ExternalPlanSetup As ExternalPlanSetup
   overload: ESAPIX.AppKit.StandAloneContext.ExternalPlanSetup*
   implements:
   - ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup
@@ -624,10 +624,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
+    content.vb: Public ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
     parameters: []
     return:
       type: IEnumerable{ExternalPlanSetup}
-    content.vb: Public ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
   overload: ESAPIX.AppKit.StandAloneContext.ExternalPlansInScope*
   implements:
   - ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope
@@ -659,6 +659,7 @@ items:
   example: []
   syntax:
     content: public static StandAloneContext Create(string username, string password)
+    content.vb: Public Shared Function Create(username As String, password As String) As StandAloneContext
     parameters:
     - id: username
       type: System.String
@@ -669,7 +670,6 @@ items:
     return:
       type: ESAPIX.AppKit.StandAloneContext
       description: app context
-    content.vb: Public Shared Function Create(username As String, password As String) As StandAloneContext
   overload: ESAPIX.AppKit.StandAloneContext.Create*
   modifiers.csharp:
   - public
@@ -699,6 +699,7 @@ items:
   example: []
   syntax:
     content: public static StandAloneContext CreateSingleThread(string username, string password)
+    content.vb: Public Shared Function CreateSingleThread(username As String, password As String) As StandAloneContext
     parameters:
     - id: username
       type: System.String
@@ -709,7 +710,6 @@ items:
     return:
       type: ESAPIX.AppKit.StandAloneContext
       description: app context
-    content.vb: Public Shared Function CreateSingleThread(username As String, password As String) As StandAloneContext
   overload: ESAPIX.AppKit.StandAloneContext.CreateSingleThread*
   modifiers.csharp:
   - public
@@ -737,12 +737,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public bool SetPatient(string id)
+    content.vb: Public Function SetPatient(id As String) As Boolean
     parameters:
     - id: id
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function SetPatient(id As String) As Boolean
   overload: ESAPIX.AppKit.StandAloneContext.SetPatient*
   modifiers.csharp:
   - public
@@ -768,12 +768,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Task<bool> SetPatientAsync(string id)
+    content.vb: Public Function SetPatientAsync(id As String) As Task(Of Boolean)
     parameters:
     - id: id
       type: System.String
     return:
       type: Task{System.Boolean}
-    content.vb: Public Function SetPatientAsync(id As String) As Task(Of Boolean)
   overload: ESAPIX.AppKit.StandAloneContext.SetPatientAsync*
   modifiers.csharp:
   - public
@@ -799,12 +799,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public bool SetCourse(Course course)
+    content.vb: Public Function SetCourse(course As Course) As Boolean
     parameters:
     - id: course
       type: Course
     return:
       type: System.Boolean
-    content.vb: Public Function SetCourse(course As Course) As Boolean
   overload: ESAPIX.AppKit.StandAloneContext.SetCourse*
   modifiers.csharp:
   - public
@@ -830,12 +830,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public bool SetPlanSetup(PlanSetup plan)
+    content.vb: Public Function SetPlanSetup(plan As PlanSetup) As Boolean
     parameters:
     - id: plan
       type: PlanSetup
     return:
       type: System.Boolean
-    content.vb: Public Function SetPlanSetup(plan As PlanSetup) As Boolean
   overload: ESAPIX.AppKit.StandAloneContext.SetPlanSetup*
   modifiers.csharp:
   - public
@@ -861,12 +861,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public bool SetExternalPlanSetup(ExternalPlanSetup ex)
+    content.vb: Public Function SetExternalPlanSetup(ex As ExternalPlanSetup) As Boolean
     parameters:
     - id: ex
       type: ExternalPlanSetup
     return:
       type: System.Boolean
-    content.vb: Public Function SetExternalPlanSetup(ex As ExternalPlanSetup) As Boolean
   overload: ESAPIX.AppKit.StandAloneContext.SetExternalPlanSetup*
   modifiers.csharp:
   - public
@@ -892,12 +892,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public bool SetBrachyPlanSetup(BrachyPlanSetup bs)
+    content.vb: Public Function SetBrachyPlanSetup(bs As BrachyPlanSetup) As Boolean
     parameters:
     - id: bs
       type: BrachyPlanSetup
     return:
       type: System.Boolean
-    content.vb: Public Function SetBrachyPlanSetup(bs As BrachyPlanSetup) As Boolean
   overload: ESAPIX.AppKit.StandAloneContext.SetBrachyPlanSetup*
   modifiers.csharp:
   - public
@@ -949,9 +949,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public event StandAloneContext.PatientChangedHandler PatientChanged
+    content.vb: Public Event PatientChanged As StandAloneContext.PatientChangedHandler
     return:
       type: ESAPIX.AppKit.StandAloneContext.PatientChangedHandler
-    content.vb: Public Event PatientChanged As StandAloneContext.PatientChangedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -976,10 +976,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void OnPatientChanged(Patient p)
+    content.vb: Public Sub OnPatientChanged(p As Patient)
     parameters:
     - id: p
       type: Patient
-    content.vb: Public Sub OnPatientChanged(p As Patient)
   overload: ESAPIX.AppKit.StandAloneContext.OnPatientChanged*
   modifiers.csharp:
   - public
@@ -1005,9 +1005,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public event StandAloneContext.PlanSetupChangedHandler PlanSetupChanged
+    content.vb: Public Event PlanSetupChanged As StandAloneContext.PlanSetupChangedHandler
     return:
       type: ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
-    content.vb: Public Event PlanSetupChanged As StandAloneContext.PlanSetupChangedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1032,10 +1032,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void OnPlanSetupChanged(PlanSetup ps)
+    content.vb: Public Sub OnPlanSetupChanged(ps As PlanSetup)
     parameters:
     - id: ps
       type: PlanSetup
-    content.vb: Public Sub OnPlanSetupChanged(ps As PlanSetup)
   overload: ESAPIX.AppKit.StandAloneContext.OnPlanSetupChanged*
   modifiers.csharp:
   - public
@@ -1061,9 +1061,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public event StandAloneContext.ExternalPlanSetupChangedHandler ExternalPlanSetupChanged
+    content.vb: Public Event ExternalPlanSetupChanged As StandAloneContext.ExternalPlanSetupChangedHandler
     return:
       type: ESAPIX.AppKit.StandAloneContext.ExternalPlanSetupChangedHandler
-    content.vb: Public Event ExternalPlanSetupChanged As StandAloneContext.ExternalPlanSetupChangedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1088,10 +1088,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void OnExternalPlanSetupChanged(ExternalPlanSetup ps)
+    content.vb: Public Sub OnExternalPlanSetupChanged(ps As ExternalPlanSetup)
     parameters:
     - id: ps
       type: ExternalPlanSetup
-    content.vb: Public Sub OnExternalPlanSetupChanged(ps As ExternalPlanSetup)
   overload: ESAPIX.AppKit.StandAloneContext.OnExternalPlanSetupChanged*
   modifiers.csharp:
   - public
@@ -1117,9 +1117,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public event StandAloneContext.PlanSetupChangedHandler BrachyPlanSetupChanged
+    content.vb: Public Event BrachyPlanSetupChanged As StandAloneContext.PlanSetupChangedHandler
     return:
       type: ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
-    content.vb: Public Event BrachyPlanSetupChanged As StandAloneContext.PlanSetupChangedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1144,10 +1144,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void OnBrachyPlanSetupChanged(BrachyPlanSetup ps)
+    content.vb: Public Sub OnBrachyPlanSetupChanged(ps As BrachyPlanSetup)
     parameters:
     - id: ps
       type: BrachyPlanSetup
-    content.vb: Public Sub OnBrachyPlanSetupChanged(ps As BrachyPlanSetup)
   overload: ESAPIX.AppKit.StandAloneContext.OnBrachyPlanSetupChanged*
   modifiers.csharp:
   - public
@@ -1173,9 +1173,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public event StandAloneContext.CourseChangedHandler CourseChanged
+    content.vb: Public Event CourseChanged As StandAloneContext.CourseChangedHandler
     return:
       type: ESAPIX.AppKit.StandAloneContext.CourseChangedHandler
-    content.vb: Public Event CourseChanged As StandAloneContext.CourseChangedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1200,10 +1200,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void OnCourseChanged(Course c)
+    content.vb: Public Sub OnCourseChanged(c As Course)
     parameters:
     - id: c
       type: Course
-    content.vb: Public Sub OnCourseChanged(c As Course)
   overload: ESAPIX.AppKit.StandAloneContext.OnCourseChanged*
   modifiers.csharp:
   - public
@@ -1229,6 +1229,7 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
+    content.vb: Public Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
     parameters:
     - id: toExecute
       type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
@@ -1236,7 +1237,6 @@ items:
     - id: T
     return:
       type: Task{{T}}
-    content.vb: Public Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
   overload: ESAPIX.AppKit.StandAloneContext.GetValueAsync*
   implements:
   - ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,{T}})
@@ -1267,6 +1267,7 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public T GetValue<T>(Func<IScriptContext, T> toExecute)
+    content.vb: Public Function GetValue(Of T)(toExecute As Func(Of IScriptContext, T)) As T
     parameters:
     - id: toExecute
       type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
@@ -1274,7 +1275,6 @@ items:
     - id: T
     return:
       type: '{T}'
-    content.vb: Public Function GetValue(Of T)(toExecute As Func(Of IScriptContext, T)) As T
   overload: ESAPIX.AppKit.StandAloneContext.GetValue*
   implements:
   - ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,{T}})

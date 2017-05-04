@@ -63,13 +63,13 @@ items:
   example: []
   syntax:
     content: public static Window GetSplash(Assembly titleAssembly = null)
+    content.vb: Public Shared Function GetSplash(titleAssembly As Assembly = Nothing) As Window
     parameters:
     - id: titleAssembly
       type: Assembly
     return:
       type: Window
       description: the splash screen to show
-    content.vb: Public Shared Function GetSplash(titleAssembly As Assembly = Nothing) As Window
   overload: ESAPIX.AppKit.Splash.Splasher.GetSplash*
   modifiers.csharp:
   - public

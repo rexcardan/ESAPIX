@@ -99,12 +99,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public OrConstraint(IConstraint cst1, IConstraint cst2)
+    content.vb: Public Sub New(cst1 As IConstraint, cst2 As IConstraint)
     parameters:
     - id: cst1
       type: ESAPIX.DVH.Constraints.IConstraint
     - id: cst2
       type: ESAPIX.DVH.Constraints.IConstraint
-    content.vb: Public Sub New(cst1 As IConstraint, cst2 As IConstraint)
   overload: ESAPIX.DVH.Constraints.OrConstraint.#ctor*
   modifiers.csharp:
   - public
@@ -130,10 +130,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public IConstraint C1 { get; set; }
+    content.vb: Public Property C1 As IConstraint
     parameters: []
     return:
       type: ESAPIX.DVH.Constraints.IConstraint
-    content.vb: Public Property C1 As IConstraint
   overload: ESAPIX.DVH.Constraints.OrConstraint.C1*
   modifiers.csharp:
   - public
@@ -161,10 +161,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public IConstraint C2 { get; set; }
+    content.vb: Public Property C2 As IConstraint
     parameters: []
     return:
       type: ESAPIX.DVH.Constraints.IConstraint
-    content.vb: Public Property C2 As IConstraint
   overload: ESAPIX.DVH.Constraints.OrConstraint.C2*
   modifiers.csharp:
   - public
@@ -192,10 +192,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public PriorityType Priority { get; set; }
+    content.vb: Public Property Priority As PriorityType
     parameters: []
     return:
       type: ESAPIX.DVH.Constraints.PriorityType
-    content.vb: Public Property Priority As PriorityType
   overload: ESAPIX.DVH.Constraints.OrConstraint.Priority*
   implements:
   - ESAPIX.DVH.Constraints.IPriorityConstraint.Priority
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string Name { get; }
+    content.vb: Public ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Name As String
   overload: ESAPIX.DVH.Constraints.OrConstraint.Name*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.Name
@@ -258,10 +258,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string FullName { get; }
+    content.vb: Public ReadOnly Property FullName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property FullName As String
   overload: ESAPIX.DVH.Constraints.OrConstraint.FullName*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.FullName
@@ -291,12 +291,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ConstraintResult CanConstrain(PlanningItem pi)
+    content.vb: Public Function CanConstrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Function CanConstrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.OrConstraint.CanConstrain*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
@@ -324,12 +324,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ConstraintResult Constrain(PlanningItem pi)
+    content.vb: Public Function Constrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Function Constrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.OrConstraint.Constrain*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
@@ -357,9 +357,9 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ResultType GetFailedResultType()
+    content.vb: Public Function GetFailedResultType As ResultType
     return:
       type: ESAPIX.DVH.Constraints.ResultType
-    content.vb: Public Function GetFailedResultType As ResultType
   overload: ESAPIX.DVH.Constraints.OrConstraint.GetFailedResultType*
   implements:
   - ESAPIX.DVH.Constraints.IPriorityConstraint.GetFailedResultType
@@ -387,9 +387,9 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
   overload: ESAPIX.DVH.Constraints.OrConstraint.ToString*
   modifiers.csharp:

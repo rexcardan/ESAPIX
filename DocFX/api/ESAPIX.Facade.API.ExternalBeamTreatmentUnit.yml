@@ -104,10 +104,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalBeamTreatmentUnit(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ExternalBeamTreatmentUnit.#ctor*
   modifiers.csharp:
   - public
@@ -133,10 +133,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.ExternalBeamTreatmentUnit.IsLive*
   modifiers.csharp:
   - public
@@ -164,10 +164,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineModel { get; set; }
+    content.vb: Public Property MachineModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineModel As String
   overload: ESAPIX.Facade.API.ExternalBeamTreatmentUnit.MachineModel*
   modifiers.csharp:
   - public
@@ -195,10 +195,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineModelName { get; set; }
+    content.vb: Public Property MachineModelName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineModelName As String
   overload: ESAPIX.Facade.API.ExternalBeamTreatmentUnit.MachineModelName*
   modifiers.csharp:
   - public
@@ -226,10 +226,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineScaleDisplayName { get; set; }
+    content.vb: Public Property MachineScaleDisplayName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineScaleDisplayName As String
   overload: ESAPIX.Facade.API.ExternalBeamTreatmentUnit.MachineScaleDisplayName*
   modifiers.csharp:
   - public
@@ -257,10 +257,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SourceAxisDistance { get; set; }
+    content.vb: Public Property SourceAxisDistance As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SourceAxisDistance As Double
   overload: ESAPIX.Facade.API.ExternalBeamTreatmentUnit.SourceAxisDistance*
   modifiers.csharp:
   - public
@@ -288,10 +288,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.ExternalBeamTreatmentUnit.WriteXml*
   modifiers.csharp:
   - public

@@ -27,11 +27,11 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: 'public class ScriptBootstrapper<T> : UnityBootstrapper where T : Window'
-    typeParameters:
-    - id: T
     content.vb: >-
       Public Class ScriptBootstrapper(Of T As Window)
           Inherits UnityBootstrapper
+    typeParameters:
+    - id: T
   inheritance:
   - System.Object
   nameWithType.vb: ScriptBootstrapper(Of T)
@@ -63,9 +63,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public Window _vmsWindow
+    content.vb: Public _vmsWindow As Window
     return:
       type: Window
-    content.vb: Public _vmsWindow As Window
   nameWithType.vb: ScriptBootstrapper(Of T)._vmsWindow
   modifiers.csharp:
   - public
@@ -92,12 +92,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public ScriptBootstrapper(PluginContext ctx, DispatcherFrame frame)
+    content.vb: Public Sub New(ctx As PluginContext, frame As DispatcherFrame)
     parameters:
     - id: ctx
       type: ESAPIX.AppKit.PluginContext
     - id: frame
       type: DispatcherFrame
-    content.vb: Public Sub New(ctx As PluginContext, frame As DispatcherFrame)
   overload: ESAPIX.AppKit.ScriptBootstrapper`1.#ctor*
   nameWithType.vb: ScriptBootstrapper(Of T).ScriptBootstrapper(PluginContext, DispatcherFrame)
   modifiers.csharp:
@@ -125,9 +125,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: protected override DependencyObject CreateShell()
+    content.vb: Protected Overrides Function CreateShell As DependencyObject
     return:
       type: DependencyObject
-    content.vb: Protected Overrides Function CreateShell As DependencyObject
   overload: ESAPIX.AppKit.ScriptBootstrapper`1.CreateShell*
   nameWithType.vb: ScriptBootstrapper(Of T).CreateShell()
   modifiers.csharp:
@@ -217,10 +217,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void Run(Func<Window> getSplash = null)
+    content.vb: Public Sub Run(getSplash As Func(Of Window) = Nothing)
     parameters:
     - id: getSplash
       type: System.Func{Window}
-    content.vb: Public Sub Run(getSplash As Func(Of Window) = Nothing)
   overload: ESAPIX.AppKit.ScriptBootstrapper`1.Run*
   nameWithType.vb: ScriptBootstrapper(Of T).Run(Func(Of Window))
   modifiers.csharp:

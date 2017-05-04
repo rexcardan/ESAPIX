@@ -82,6 +82,10 @@ items:
   example: []
   syntax:
     content: public static IEnumerable<Structure> GetStructures(this PlanningItem plan)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetStructures(plan As PlanningItem) As IEnumerable(Of  Structure)
     parameters:
     - id: plan
       type: PlanningItem
@@ -89,10 +93,6 @@ items:
     return:
       type: IEnumerable{Structure}
       description: the referenced structure set
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetStructures(plan As PlanningItem) As IEnumerable(Of  Structure)
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetStructures*
   modifiers.csharp:
   - public
@@ -123,6 +123,10 @@ items:
   example: []
   syntax:
     content: public static StructureSet GetStructureSet(this PlanningItem plan)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetStructureSet(plan As PlanningItem) As StructureSet
     parameters:
     - id: plan
       type: PlanningItem
@@ -130,10 +134,6 @@ items:
     return:
       type: StructureSet
       description: the referenced structure set
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetStructureSet(plan As PlanningItem) As StructureSet
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetStructureSet*
   modifiers.csharp:
   - public
@@ -164,6 +164,10 @@ items:
   example: []
   syntax:
     content: public static Image GetImage(this PlanningItem plan)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetImage(plan As PlanningItem) As Image
     parameters:
     - id: plan
       type: PlanningItem
@@ -171,10 +175,6 @@ items:
     return:
       type: Image
       description: the referenced structure set
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetImage(plan As PlanningItem) As Image
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetImage*
   modifiers.csharp:
   - public
@@ -205,6 +205,10 @@ items:
   example: []
   syntax:
     content: public static bool ContainsStructure(this PlanningItem plan, string structId, string regex = null)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ContainsStructure(plan As PlanningItem, structId As String, regex As String = Nothing) As Boolean
     parameters:
     - id: plan
       type: PlanningItem
@@ -218,10 +222,6 @@ items:
     return:
       type: System.Boolean
       description: "\nReturns true if the planning item references a structure set with the input structure id AND the structure is\ncontoured.\n"
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ContainsStructure(plan As PlanningItem, structId As String, regex As String = Nothing) As Boolean
   overload: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure*
   modifiers.csharp:
   - public
@@ -252,6 +252,7 @@ items:
   example: []
   syntax:
     content: public static Structure GetStructure(this PlanningItem plan, string structId, string regex = null)
+    content.vb: "<ExtensionAttribute>\nPublic Shared Function GetStructure(plan As PlanningItem, structId As String, regex As String = Nothing) As "
     parameters:
     - id: plan
       type: PlanningItem
@@ -261,7 +262,6 @@ items:
       type: System.String
     return:
       type: Structure
-    content.vb: "<ExtensionAttribute>\nPublic Shared Function GetStructure(plan As PlanningItem, structId As String, regex As String = Nothing) As "
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetStructure*
   modifiers.csharp:
   - public
@@ -290,15 +290,15 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double TotalPrescribedDoseGy(this PlanningItem pi)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function TotalPrescribedDoseGy(pi As PlanningItem) As Double
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function TotalPrescribedDoseGy(pi As PlanningItem) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.TotalPrescribedDoseGy*
   modifiers.csharp:
   - public
@@ -329,6 +329,10 @@ items:
   example: []
   syntax:
     content: public static DVHData GetDefaultDVHCumulativeData(this PlanningItem plan, Structure s, DoseValuePresentation dvp = null, VolumePresentation vp = null, double binWidth = 0.1)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDefaultDVHCumulativeData(plan As PlanningItem, s As  Structure, dvp As DoseValuePresentation = Nothing, vp As VolumePresentation = Nothing, binWidth As Double = 0.1) As DVHData
     parameters:
     - id: plan
       type: PlanningItem
@@ -342,10 +346,6 @@ items:
       type: System.Double
     return:
       type: DVHData
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDefaultDVHCumulativeData(plan As PlanningItem, s As  Structure, dvp As DoseValuePresentation = Nothing, vp As VolumePresentation = Nothing, binWidth As Double = 0.1) As DVHData
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData*
   modifiers.csharp:
   - public
@@ -376,6 +376,10 @@ items:
   example: []
   syntax:
     content: public static DVHPoint[] GetComplexDVH(this PlanningItem pi, IEnumerable<Structure> ss, VolumePresentation vPres, DoseValuePresentation dPres, double binWidth = 0.1)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplexDVH(pi As PlanningItem, ss As IEnumerable(Of  Structure), vPres As VolumePresentation, dPres As DoseValuePresentation, binWidth As Double = 0.1) As DVHPoint()
     parameters:
     - id: pi
       type: PlanningItem
@@ -395,10 +399,6 @@ items:
     return:
       type: DVHPoint[]
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetComplexDVH(pi As PlanningItem, ss As IEnumerable(Of  Structure), vPres As VolumePresentation, dPres As DoseValuePresentation, binWidth As Double = 0.1) As DVHPoint()
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH*
   nameWithType.vb: PlanningItemExtensions.GetComplexDVH(PlanningItem, IEnumerable(Of Structure), VolumePresentation, DoseValuePresentation, Double)
   modifiers.csharp:
@@ -432,6 +432,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseAtVolume(i As PlanningItem, s As  Structure, volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
     parameters:
     - id: i
       type: PlanningItem
@@ -451,10 +455,6 @@ items:
     return:
       type: DoseValue
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseAtVolume(i As PlanningItem, s As  Structure, volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume*
   modifiers.csharp:
   - public
@@ -485,6 +485,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue GetDoseAtVolume(this PlanningItem pi, IEnumerable<Structure> ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseAtVolume(pi As PlanningItem, ss As IEnumerable(Of  Structure), volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
     parameters:
     - id: pi
       type: PlanningItem
@@ -503,10 +507,6 @@ items:
     return:
       type: DoseValue
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseAtVolume(pi As PlanningItem, ss As IEnumerable(Of  Structure), volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume*
   nameWithType.vb: PlanningItemExtensions.GetDoseAtVolume(PlanningItem, IEnumerable(Of Structure), Double, VolumePresentation, DoseValuePresentation)
   modifiers.csharp:
@@ -540,6 +540,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, IEnumerable<Structure> ss, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseComplimentAtVolume(i As PlanningItem, ss As IEnumerable(Of  Structure), volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
     parameters:
     - id: i
       type: PlanningItem
@@ -559,10 +563,6 @@ items:
     return:
       type: DoseValue
       description: Return the coldspot dose for a given volume.
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseComplimentAtVolume(i As PlanningItem, ss As IEnumerable(Of  Structure), volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume*
   nameWithType.vb: PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem, IEnumerable(Of Structure), Double, VolumePresentation, DoseValuePresentation)
   modifiers.csharp:
@@ -596,6 +596,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume, VolumePresentation vPres, DoseValuePresentation dPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseComplimentAtVolume(i As PlanningItem, s As  Structure, volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
     parameters:
     - id: i
       type: PlanningItem
@@ -615,10 +619,6 @@ items:
     return:
       type: DoseValue
       description: Return the coldspot dose for a given volume.
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseComplimentAtVolume(i As PlanningItem, s As  Structure, volume As Double, vPres As VolumePresentation, dPres As DoseValuePresentation) As DoseValue
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume*
   modifiers.csharp:
   - public
@@ -649,6 +649,10 @@ items:
   example: []
   syntax:
     content: public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumeAtDose(pi As PlanningItem, s As  Structure, dv As DoseValue, vPres As VolumePresentation) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -665,10 +669,6 @@ items:
     return:
       type: System.Double
       description: the volume at the requested presentation
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetVolumeAtDose(pi As PlanningItem, s As  Structure, dv As DoseValue, vPres As VolumePresentation) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose*
   modifiers.csharp:
   - public
@@ -699,6 +699,10 @@ items:
   example: []
   syntax:
     content: public static double GetComplimentVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplimentVolumeAtDose(pi As PlanningItem, s As  Structure, dv As DoseValue, vPres As VolumePresentation) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -715,10 +719,6 @@ items:
     return:
       type: System.Double
       description: the volume at the requested presentation
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetComplimentVolumeAtDose(pi As PlanningItem, s As  Structure, dv As DoseValue, vPres As VolumePresentation) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose*
   modifiers.csharp:
   - public
@@ -749,6 +749,10 @@ items:
   example: []
   syntax:
     content: public static double GetComplimentVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv, VolumePresentation vPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetComplimentVolumeAtDose(pi As PlanningItem, ss As IEnumerable(Of  Structure), dv As DoseValue, vPres As VolumePresentation) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -765,10 +769,6 @@ items:
     return:
       type: System.Double
       description: the volume at the requested presentation
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetComplimentVolumeAtDose(pi As PlanningItem, ss As IEnumerable(Of  Structure), dv As DoseValue, vPres As VolumePresentation) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose*
   nameWithType.vb: PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
   modifiers.csharp:
@@ -802,6 +802,10 @@ items:
   example: []
   syntax:
     content: public static double GetVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv, VolumePresentation vPres)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumeAtDose(pi As PlanningItem, ss As IEnumerable(Of  Structure), dv As DoseValue, vPres As VolumePresentation) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -818,10 +822,6 @@ items:
     return:
       type: System.Double
       description: the volume at the requested presentation
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetVolumeAtDose(pi As PlanningItem, ss As IEnumerable(Of  Structure), dv As DoseValue, vPres As VolumePresentation) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose*
   nameWithType.vb: PlanningItemExtensions.GetVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
   modifiers.csharp:
@@ -853,6 +853,10 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, string mayoFormatQuery)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), mayoFormatQuery As String) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -862,10 +866,6 @@ items:
       type: System.String
     return:
       type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), mayoFormatQuery As String) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
   nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), String)
   modifiers.csharp:
@@ -897,6 +897,10 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double ExecuteQuery(this PlanningItem pi, Structure s, string mayoFormatQuery)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, mayoFormatQuery As String) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -906,10 +910,6 @@ items:
       type: System.String
     return:
       type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, mayoFormatQuery As String) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
   modifiers.csharp:
   - public
@@ -938,6 +938,10 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), query As MayoQuery) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -947,10 +951,6 @@ items:
       type: MayoQuery
     return:
       type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), query As MayoQuery) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
   nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), MayoQuery)
   modifiers.csharp:
@@ -982,6 +982,10 @@ items:
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double ExecuteQuery(this PlanningItem pi, Structure s, MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, query As MayoQuery) As Double
     parameters:
     - id: pi
       type: PlanningItem
@@ -991,10 +995,6 @@ items:
       type: MayoQuery
     return:
       type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, query As MayoQuery) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
   modifiers.csharp:
   - public

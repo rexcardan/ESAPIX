@@ -62,12 +62,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void Execute(dynamic context, Window window)
+    content.vb: Public Sub Execute(context As Object, window As Window)
     parameters:
     - id: context
       type: System.Object
     - id: window
       type: Window
-    content.vb: Public Sub Execute(context As Object, window As Window)
   overload: ESAPIX.AppKit.XScriptBase.Execute*
   modifiers.csharp:
   - public
@@ -93,12 +93,12 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public abstract void XExecute(PluginContext ctx, DispatcherFrame frame)
+    content.vb: Public MustOverride Sub XExecute(ctx As PluginContext, frame As DispatcherFrame)
     parameters:
     - id: ctx
       type: ESAPIX.AppKit.PluginContext
     - id: frame
       type: DispatcherFrame
-    content.vb: Public MustOverride Sub XExecute(ctx As PluginContext, frame As DispatcherFrame)
   overload: ESAPIX.AppKit.XScriptBase.XExecute*
   modifiers.csharp:
   - public
