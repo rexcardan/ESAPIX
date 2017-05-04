@@ -14,9 +14,9 @@ The Mayo format is broken down into the following components:
 4. Units Desired **Ud**
 
 They are ordered as :
-
+```cs
 QtQvQu[Ud]
-
+```
 ### Query Type
 The query type specifies the users interest in dose, volume, compliment dose, or compliment volume. The options are :
 * MinDose - minimum dose of the structure
@@ -36,10 +36,13 @@ D90%[Gy]
 ### Query Units
 Query units specifiy the units of the query value. This is not required for mean, min, and max dose. In the above example (D90%[Gy]), the unit is %. Supported units are :
 Dose Units
+
 * cGy
 * Gy
 * %
+
 Volume Units
+
 * %
 * cc
 
@@ -52,7 +55,7 @@ where the bracketed [%] specifies the desired return units. The bracket is also 
 
 ## Examples
 ```cs
-var ps = new PlanSetup(); //Assume we got a real one from
+var ps = new PlanSetup(); //Assume we got a real one from a patient
 var prostate = ps.StructureSet.Structures.First(s=>s.Id=="Prostate");
 //Max dose in gray to prostate
 var max = ps.ExecuteQuery(prostate, "MaxDose[Gy]");
