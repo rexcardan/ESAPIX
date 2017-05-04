@@ -77,8 +77,8 @@
 <li>Units Desired <strong>Ud</strong></li>
 </ol>
 <p>They are ordered as :</p>
-<p>QtQvQu[Ud]</p>
-<h3 id="query-type">Query Type</h3>
+<pre><code class="lang-cs">QtQvQu[Ud]
+</code></pre><h3 id="query-type">Query Type</h3>
 <p>The query type specifies the users interest in dose, volume, compliment dose, or compliment volume. The options are :</p>
 <ul>
 <li>MinDose - minimum dose of the structure</li>
@@ -98,8 +98,10 @@ Dose Units</p>
 <ul>
 <li>cGy</li>
 <li>Gy</li>
-<li>%
-Volume Units</li>
+<li>%</li>
+</ul>
+<p>Volume Units</p>
+<ul>
 <li>%</li>
 <li>cc</li>
 </ul>
@@ -108,7 +110,7 @@ Volume Units</li>
 <pre><code class="lang-cs">V95%[%]
 </code></pre><p>where the bracketed [%] specifies the desired return units. The bracket is also necessary.</p>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-cs">var ps = new PlanSetup(); //Assume we got a real one from
+<pre><code class="lang-cs">var ps = new PlanSetup(); //Assume we got a real one from a patient
 var prostate = ps.StructureSet.Structures.First(s=&gt;s.Id==&quot;Prostate&quot;);
 //Max dose in gray to prostate
 var max = ps.ExecuteQuery(prostate, &quot;MaxDose[Gy]&quot;);
