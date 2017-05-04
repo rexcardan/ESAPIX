@@ -8,7 +8,7 @@
     <title>Bootstrapping Your Plugin Script </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Bootstrapping Your Plugin Script ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.13.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -114,7 +114,7 @@ XScriptBase will also handle the window object (hides it) that is passed from Va
 </ul>
 <h3 id="xexecute">XExecute</h3>
 <p>This method is to let you know that Varian is not calling this method. ESAPIX is. This is where <strong>YOU</strong> will wire up your bootstrapper. The above example code should show the basics. There are only three lines required:</p>
-<pre><code class="lang-cs">    FacadeInitializer.Initialize();
+<pre><code class="lang-cs">     FacadeInitializer.Initialize();
         var bs = new ScriptBootstrapper&lt;MainView&gt;(ctx, frame);
         bs.Run(() =&gt; Splasher.GetSplash(this.GetType().Assembly));
 </code></pre><p>The <strong>ScriptBootstrapper</strong> needs the type of the first Window you want to show to the user. In this example, <em>MainView.xaml</em> is the window we will show. The Splasher.GetSplash just splashes the default splash included with ESAPIX.</p>

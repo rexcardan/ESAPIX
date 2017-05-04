@@ -8,7 +8,7 @@
     <title>Mayo Format and Querying </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Mayo Format and Querying ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.13.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,8 +67,58 @@
               <a href="https://github.com/rexcardan/ESAPIX/blob/master/DocFX/articles/mayoFormat.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="mayo-format-and-querying-dvh-metrics">Mayo Format and Querying DVH Metrics</h1>
               
-<h2 id="examples-needed">Examples Needed</h2>
+<p>The format of DVH queries supported in ESAPIX are defined in a <a href="https://www.ncbi.nlm.nih.gov/pubmed/26825250">paper by Mayo et al.</a>. Complex DVH queries can be consolidated into an abbreviated format which is described below.</p>
+<h2 id="format-overview">Format Overview</h2>
+<p>The Mayo format is broken down into the following components:</p>
+<ol>
+<li>Query Type <strong>Qt</strong></li>
+<li>Query Value <strong>Qv</strong> (if necessary)</li>
+<li>Query Units <strong>Qu</strong> (if necessary)</li>
+<li>Units Desired <strong>Ud</strong></li>
+</ol>
+<p>They are ordered as :</p>
+<p>QtQvQu[Ud]</p>
+<h3 id="query-type">Query Type</h3>
+<p>The query type specifies the users interest in dose, volume, compliment dose, or compliment volume. The options are :</p>
+<ul>
+<li>MinDose - minimum dose of the structure</li>
+<li>MeanDose - average dose of the structure</li>
+<li>MaxDose - maximum dose of the structure</li>
+<li>D - Dose at volume (treated dose). The dose at 95% volume will report the maximum dose which covers 95 % of the volume.</li>
+<li>V - Volume at dose (treated volume). The volume of 70 Gy will report the volume which recieved 70 Gy or more.</li>
+<li>DC - Dose compliment at volume (cold spot of a structure). The dose compliment at 2% will give the maximum dose in the coldest 2 % of a structure.</li>
+<li>CV - Compliment volume (spared volume). The compliment volume of 20 Gy will report the volume which recieved 20 Gy or less.</li>
+</ul>
+<h3 id="query-value">Query Value</h3>
+<p>The query value specifies the numerical point at which the query will take place. This is not required for mean, min, and max dose. If you were querying the dose in Gy to 90 percent of the volume, the query value would be 90. The written value would be</p>
+<pre><code class="lang-cs">D90%[Gy]
+</code></pre><h3 id="query-units">Query Units</h3>
+<p>Query units specifiy the units of the query value. This is not required for mean, min, and max dose. In the above example (D90%[Gy]), the unit is %. Supported units are :
+Dose Units</p>
+<ul>
+<li>cGy</li>
+<li>Gy</li>
+<li>%
+Volume Units</li>
+<li>%</li>
+<li>cc</li>
+</ul>
+<h3 id="units-desired">Units Desired</h3>
+<p>The units desired specifies the units in which you want the result returned. If you wanted the percent volume receiving 95 percent of prescribed dose, you would write :</p>
+<pre><code class="lang-cs">V95%[%]
+</code></pre><p>where the bracketed [%] specifies the desired return units. The bracket is also necessary.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-cs">var ps = new PlanSetup(); //Assume we got a real one from
+var prostate = ps.StructureSet.Structures.First(s=&gt;s.Id==&quot;Prostate&quot;);
+//Max dose in gray to prostate
+var max = ps.ExecuteQuery(prostate, &quot;MaxDose[Gy]&quot;);
 
+//You can also query from multiple structures simultaneously (equivalent to a boolean OR of both structure volumes)
+var leftParotid = ...
+var rightParotid = ...
+//Get the spared volume in cubic centimeters receiving less than 20 Gy from the combined parotid volumes
+var spared = ps.ExecuteQuery(new Structure[]{leftParotid, rightParotid}, &quot;CV20Gy[cc]&quot;);
+</code></pre>
             </article>
           </div>
           
