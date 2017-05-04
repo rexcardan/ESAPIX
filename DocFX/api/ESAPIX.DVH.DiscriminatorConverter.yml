@@ -60,12 +60,12 @@ items:
   namespace: ESAPIX.DVH
   syntax:
     content: public static Discriminator ReadDiscrimator(string discString)
+    content.vb: Public Shared Function ReadDiscrimator(discString As String) As Discriminator
     parameters:
     - id: discString
       type: System.String
     return:
       type: Discriminator
-    content.vb: Public Shared Function ReadDiscrimator(discString As String) As Discriminator
   overload: ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator*
   modifiers.csharp:
   - public
@@ -95,6 +95,7 @@ items:
   example: []
   syntax:
     content: public static string WriteDiscrimator(Discriminator disc)
+    content.vb: Public Shared Function WriteDiscrimator(disc As Discriminator) As String
     parameters:
     - id: disc
       type: Discriminator
@@ -102,7 +103,6 @@ items:
     return:
       type: System.String
       description: a string representation of the discriminator
-    content.vb: Public Shared Function WriteDiscrimator(disc As Discriminator) As String
   overload: ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator*
   modifiers.csharp:
   - public

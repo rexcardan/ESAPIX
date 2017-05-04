@@ -102,10 +102,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ScriptContext(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ScriptContext.#ctor*
   modifiers.csharp:
   - public
@@ -131,6 +131,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ScriptContext(object context, object user, string appName)
+    content.vb: Public Sub New(context As Object, user As Object, appName As String)
     parameters:
     - id: context
       type: System.Object
@@ -138,7 +139,6 @@ items:
       type: System.Object
     - id: appName
       type: System.String
-    content.vb: Public Sub New(context As Object, user As Object, appName As String)
   overload: ESAPIX.Facade.API.ScriptContext.#ctor*
   modifiers.csharp:
   - public
@@ -164,10 +164,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.ScriptContext.IsLive*
   modifiers.csharp:
   - public
@@ -195,10 +195,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public User CurrentUser { get; set; }
+    content.vb: Public Property CurrentUser As User
     parameters: []
     return:
       type: ESAPIX.Facade.API.User
-    content.vb: Public Property CurrentUser As User
   overload: ESAPIX.Facade.API.ScriptContext.CurrentUser*
   modifiers.csharp:
   - public
@@ -226,10 +226,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Course Course { get; set; }
+    content.vb: Public Property Course As Course
     parameters: []
     return:
       type: ESAPIX.Facade.API.Course
-    content.vb: Public Property Course As Course
   overload: ESAPIX.Facade.API.ScriptContext.Course*
   modifiers.csharp:
   - public
@@ -257,10 +257,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Image Image { get; set; }
+    content.vb: Public Property Image As Image
     parameters: []
     return:
       type: ESAPIX.Facade.API.Image
-    content.vb: Public Property Image As Image
   overload: ESAPIX.Facade.API.ScriptContext.Image*
   modifiers.csharp:
   - public
@@ -288,10 +288,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet StructureSet { get; set; }
+    content.vb: Public Property StructureSet As StructureSet
     parameters: []
     return:
       type: ESAPIX.Facade.API.StructureSet
-    content.vb: Public Property StructureSet As StructureSet
   overload: ESAPIX.Facade.API.ScriptContext.StructureSet*
   modifiers.csharp:
   - public
@@ -319,10 +319,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Patient Patient { get; set; }
+    content.vb: Public Property Patient As Patient
     parameters: []
     return:
       type: ESAPIX.Facade.API.Patient
-    content.vb: Public Property Patient As Patient
   overload: ESAPIX.Facade.API.ScriptContext.Patient*
   modifiers.csharp:
   - public
@@ -350,10 +350,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSetup PlanSetup { get; set; }
+    content.vb: Public Property PlanSetup As PlanSetup
     parameters: []
     return:
       type: ESAPIX.Facade.API.PlanSetup
-    content.vb: Public Property PlanSetup As PlanSetup
   overload: ESAPIX.Facade.API.ScriptContext.PlanSetup*
   modifiers.csharp:
   - public
@@ -381,10 +381,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalPlanSetup ExternalPlanSetup { get; set; }
+    content.vb: Public Property ExternalPlanSetup As ExternalPlanSetup
     parameters: []
     return:
       type: ESAPIX.Facade.API.ExternalPlanSetup
-    content.vb: Public Property ExternalPlanSetup As ExternalPlanSetup
   overload: ESAPIX.Facade.API.ScriptContext.ExternalPlanSetup*
   modifiers.csharp:
   - public
@@ -412,10 +412,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachyPlanSetup BrachyPlanSetup { get; set; }
+    content.vb: Public Property BrachyPlanSetup As BrachyPlanSetup
     parameters: []
     return:
       type: ESAPIX.Facade.API.BrachyPlanSetup
-    content.vb: Public Property BrachyPlanSetup As BrachyPlanSetup
   overload: ESAPIX.Facade.API.ScriptContext.BrachyPlanSetup*
   modifiers.csharp:
   - public
@@ -443,10 +443,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<PlanSetup> PlansInScope { get; set; }
+    content.vb: Public Property PlansInScope As IEnumerable(Of PlanSetup)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.PlanSetup}
-    content.vb: Public Property PlansInScope As IEnumerable(Of PlanSetup)
   overload: ESAPIX.Facade.API.ScriptContext.PlansInScope*
   modifiers.csharp:
   - public
@@ -474,10 +474,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; set; }
+    content.vb: Public Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
-    content.vb: Public Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
   overload: ESAPIX.Facade.API.ScriptContext.ExternalPlansInScope*
   modifiers.csharp:
   - public
@@ -505,10 +505,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; set; }
+    content.vb: Public Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
-    content.vb: Public Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
   overload: ESAPIX.Facade.API.ScriptContext.BrachyPlansInScope*
   modifiers.csharp:
   - public
@@ -536,10 +536,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<PlanSum> PlanSumsInScope { get; set; }
+    content.vb: Public Property PlanSumsInScope As IEnumerable(Of PlanSum)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.PlanSum}
-    content.vb: Public Property PlanSumsInScope As IEnumerable(Of PlanSum)
   overload: ESAPIX.Facade.API.ScriptContext.PlanSumsInScope*
   modifiers.csharp:
   - public
@@ -567,10 +567,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ApplicationName { get; set; }
+    content.vb: Public Property ApplicationName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ApplicationName As String
   overload: ESAPIX.Facade.API.ScriptContext.ApplicationName*
   modifiers.csharp:
   - public
@@ -598,10 +598,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string VersionInfo { get; set; }
+    content.vb: Public Property VersionInfo As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property VersionInfo As String
   overload: ESAPIX.Facade.API.ScriptContext.VersionInfo*
   modifiers.csharp:
   - public

@@ -56,10 +56,10 @@ items:
   namespace: ESAPIX.AppKit.Splash
   syntax:
     content: public SplashScreen(string softLabel = "")
+    content.vb: Public Sub New(softLabel As String = "")
     parameters:
     - id: softLabel
       type: System.String
-    content.vb: Public Sub New(softLabel As String = "")
   overload: ESAPIX.AppKit.Splash.SplashScreen.#ctor*
   modifiers.csharp:
   - public

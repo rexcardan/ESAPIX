@@ -111,10 +111,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSum(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.PlanSum.#ctor*
   modifiers.csharp:
   - public
@@ -140,10 +140,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.PlanSum.IsLive*
   modifiers.csharp:
   - public
@@ -171,10 +171,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Course Course { get; set; }
+    content.vb: Public Property Course As Course
     parameters: []
     return:
       type: ESAPIX.Facade.API.Course
-    content.vb: Public Property Course As Course
   overload: ESAPIX.Facade.API.PlanSum.Course*
   modifiers.csharp:
   - public
@@ -202,10 +202,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<PlanSumComponent> PlanSumComponents { get; set; }
+    content.vb: Public Property PlanSumComponents As IEnumerable(Of PlanSumComponent)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.PlanSumComponent}
-    content.vb: Public Property PlanSumComponents As IEnumerable(Of PlanSumComponent)
   overload: ESAPIX.Facade.API.PlanSum.PlanSumComponents*
   modifiers.csharp:
   - public
@@ -233,10 +233,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet StructureSet { get; set; }
+    content.vb: Public Property StructureSet As StructureSet
     parameters: []
     return:
       type: ESAPIX.Facade.API.StructureSet
-    content.vb: Public Property StructureSet As StructureSet
   overload: ESAPIX.Facade.API.PlanSum.StructureSet*
   modifiers.csharp:
   - public
@@ -264,10 +264,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<PlanSetup> PlanSetups { get; set; }
+    content.vb: Public Property PlanSetups As IEnumerable(Of PlanSetup)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.PlanSetup}
-    content.vb: Public Property PlanSetups As IEnumerable(Of PlanSetup)
   overload: ESAPIX.Facade.API.PlanSum.PlanSetups*
   modifiers.csharp:
   - public
@@ -295,10 +295,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.PlanSum.WriteXml*
   modifiers.csharp:
   - public
@@ -324,12 +324,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSumOperation GetPlanSumOperation(PlanSetup planSetupInPlanSum)
+    content.vb: Public Function GetPlanSumOperation(planSetupInPlanSum As PlanSetup) As PlanSumOperation
     parameters:
     - id: planSetupInPlanSum
       type: ESAPIX.Facade.API.PlanSetup
     return:
       type: PlanSumOperation
-    content.vb: Public Function GetPlanSumOperation(planSetupInPlanSum As PlanSetup) As PlanSumOperation
   overload: ESAPIX.Facade.API.PlanSum.GetPlanSumOperation*
   modifiers.csharp:
   - public
@@ -355,12 +355,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double GetPlanWeight(PlanSetup planSetupInPlanSum)
+    content.vb: Public Function GetPlanWeight(planSetupInPlanSum As PlanSetup) As Double
     parameters:
     - id: planSetupInPlanSum
       type: ESAPIX.Facade.API.PlanSetup
     return:
       type: System.Double
-    content.vb: Public Function GetPlanWeight(planSetupInPlanSum As PlanSetup) As Double
   overload: ESAPIX.Facade.API.PlanSum.GetPlanWeight*
   modifiers.csharp:
   - public

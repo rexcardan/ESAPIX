@@ -110,10 +110,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Catheter(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Catheter.#ctor*
   modifiers.csharp:
   - public
@@ -139,10 +139,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Catheter.IsLive*
   modifiers.csharp:
   - public
@@ -170,10 +170,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ApplicatorLength { get; set; }
+    content.vb: Public Property ApplicatorLength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property ApplicatorLength As Double
   overload: ESAPIX.Facade.API.Catheter.ApplicatorLength*
   modifiers.csharp:
   - public
@@ -201,10 +201,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int BrachySolidApplicatorPartID { get; set; }
+    content.vb: Public Property BrachySolidApplicatorPartID As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property BrachySolidApplicatorPartID As Integer
   overload: ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID*
   modifiers.csharp:
   - public
@@ -232,10 +232,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int ChannelNumber { get; set; }
+    content.vb: Public Property ChannelNumber As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property ChannelNumber As Integer
   overload: ESAPIX.Facade.API.Catheter.ChannelNumber*
   modifiers.csharp:
   - public
@@ -263,10 +263,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Color Color { get; set; }
+    content.vb: Public Property Color As Windows.Media.Color
     parameters: []
     return:
       type: System.Windows.Media.Color
-    content.vb: Public Property Color As Windows.Media.Color
   overload: ESAPIX.Facade.API.Catheter.Color*
   modifiers.csharp:
   - public
@@ -294,10 +294,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector[] Shape { get; set; }
+    content.vb: Public Property Shape As VVector()
     parameters: []
     return:
       type: VVector[]
-    content.vb: Public Property Shape As VVector()
   overload: ESAPIX.Facade.API.Catheter.Shape*
   modifiers.csharp:
   - public
@@ -325,10 +325,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<SourcePosition> SourcePositions { get; set; }
+    content.vb: Public Property SourcePositions As IEnumerable(Of SourcePosition)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.SourcePosition}
-    content.vb: Public Property SourcePositions As IEnumerable(Of SourcePosition)
   overload: ESAPIX.Facade.API.Catheter.SourcePositions*
   modifiers.csharp:
   - public
@@ -356,10 +356,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double StepSize { get; set; }
+    content.vb: Public Property StepSize As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property StepSize As Double
   overload: ESAPIX.Facade.API.Catheter.StepSize*
   modifiers.csharp:
   - public
@@ -387,10 +387,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachyTreatmentUnit TreatmentUnit { get; set; }
+    content.vb: Public Property TreatmentUnit As BrachyTreatmentUnit
     parameters: []
     return:
       type: ESAPIX.Facade.API.BrachyTreatmentUnit
-    content.vb: Public Property TreatmentUnit As BrachyTreatmentUnit
   overload: ESAPIX.Facade.API.Catheter.TreatmentUnit*
   modifiers.csharp:
   - public
@@ -418,10 +418,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Catheter.WriteXml*
   modifiers.csharp:
   - public
@@ -447,12 +447,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double GetSourcePosCenterDistanceFromTip(SourcePosition sourcePosition)
+    content.vb: Public Function GetSourcePosCenterDistanceFromTip(sourcePosition As SourcePosition) As Double
     parameters:
     - id: sourcePosition
       type: ESAPIX.Facade.API.SourcePosition
     return:
       type: System.Double
-    content.vb: Public Function GetSourcePosCenterDistanceFromTip(sourcePosition As SourcePosition) As Double
   overload: ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip*
   modifiers.csharp:
   - public
@@ -478,9 +478,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double GetTotalDwellTime()
+    content.vb: Public Function GetTotalDwellTime As Double
     return:
       type: System.Double
-    content.vb: Public Function GetTotalDwellTime As Double
   overload: ESAPIX.Facade.API.Catheter.GetTotalDwellTime*
   modifiers.csharp:
   - public

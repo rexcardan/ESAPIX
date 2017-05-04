@@ -109,10 +109,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Series(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Series.#ctor*
   modifiers.csharp:
   - public
@@ -138,10 +138,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Series.IsLive*
   modifiers.csharp:
   - public
@@ -169,10 +169,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string FOR { get; set; }
+    content.vb: Public Property FOR As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property FOR As String
   overload: ESAPIX.Facade.API.Series.FOR*
   modifiers.csharp:
   - public
@@ -200,10 +200,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Image> Images { get; set; }
+    content.vb: Public Property Images As IEnumerable(Of Image)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Image}
-    content.vb: Public Property Images As IEnumerable(Of Image)
   overload: ESAPIX.Facade.API.Series.Images*
   modifiers.csharp:
   - public
@@ -231,10 +231,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceId { get; set; }
+    content.vb: Public Property ImagingDeviceId As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ImagingDeviceId As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceId*
   modifiers.csharp:
   - public
@@ -262,10 +262,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceManufacturer { get; set; }
+    content.vb: Public Property ImagingDeviceManufacturer As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ImagingDeviceManufacturer As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
   modifiers.csharp:
   - public
@@ -293,10 +293,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceModel { get; set; }
+    content.vb: Public Property ImagingDeviceModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ImagingDeviceModel As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceModel*
   modifiers.csharp:
   - public
@@ -324,10 +324,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceSerialNo { get; set; }
+    content.vb: Public Property ImagingDeviceSerialNo As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ImagingDeviceSerialNo As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
   modifiers.csharp:
   - public
@@ -355,10 +355,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SeriesModality Modality { get; set; }
+    content.vb: Public Property Modality As SeriesModality
     parameters: []
     return:
       type: SeriesModality
-    content.vb: Public Property Modality As SeriesModality
   overload: ESAPIX.Facade.API.Series.Modality*
   modifiers.csharp:
   - public
@@ -386,10 +386,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Study Study { get; set; }
+    content.vb: Public Property Study As Study
     parameters: []
     return:
       type: ESAPIX.Facade.API.Study
-    content.vb: Public Property Study As Study
   overload: ESAPIX.Facade.API.Series.Study*
   modifiers.csharp:
   - public
@@ -417,10 +417,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
+    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.Series.UID*
   modifiers.csharp:
   - public
@@ -448,10 +448,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Series.WriteXml*
   modifiers.csharp:
   - public

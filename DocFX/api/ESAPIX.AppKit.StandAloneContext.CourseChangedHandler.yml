@@ -21,10 +21,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void CourseChangedHandler(Course c);
+    content.vb: Public Delegate Sub CourseChangedHandler(c As Course)
     parameters:
     - id: c
       type: Course
-    content.vb: Public Delegate Sub CourseChangedHandler(c As Course)
   modifiers.csharp:
   - public
   - delegate

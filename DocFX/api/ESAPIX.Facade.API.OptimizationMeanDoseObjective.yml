@@ -99,10 +99,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationMeanDoseObjective(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.#ctor*
   modifiers.csharp:
   - public
@@ -128,10 +128,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.IsLive*
   modifiers.csharp:
   - public
@@ -159,10 +159,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue Dose { get; set; }
+    content.vb: Public Property Dose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property Dose As DoseValue
   overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Dose*
   modifiers.csharp:
   - public
@@ -190,10 +190,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Priority { get; set; }
+    content.vb: Public Property Priority As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Priority As Double
   overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.Priority*
   modifiers.csharp:
   - public
@@ -221,10 +221,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationMeanDoseObjective.WriteXml*
   modifiers.csharp:
   - public

@@ -80,12 +80,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override ConstraintResult Constrain(PlanningItem pi)
+    content.vb: Public Overrides Function Constrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Overrides Function Constrain(pi As PlanningItem) As ConstraintResult
   overridden: ESAPIX.DVH.Constraints.DoseStructureConstraint.Constrain(PlanningItem)
   overload: ESAPIX.DVH.Constraints.MinMeanDoseConstraint.Constrain*
   modifiers.csharp:
@@ -114,9 +114,9 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
   overload: ESAPIX.DVH.Constraints.MinMeanDoseConstraint.ToString*
   modifiers.csharp:

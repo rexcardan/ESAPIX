@@ -97,10 +97,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Isodose(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Isodose.#ctor*
   modifiers.csharp:
   - public
@@ -126,10 +126,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Isodose.IsLive*
   modifiers.csharp:
   - public
@@ -157,10 +157,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Color Color { get; set; }
+    content.vb: Public Property Color As Windows.Media.Color
     parameters: []
     return:
       type: System.Windows.Media.Color
-    content.vb: Public Property Color As Windows.Media.Color
   overload: ESAPIX.Facade.API.Isodose.Color*
   modifiers.csharp:
   - public
@@ -188,10 +188,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue Level { get; set; }
+    content.vb: Public Property Level As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property Level As DoseValue
   overload: ESAPIX.Facade.API.Isodose.Level*
   modifiers.csharp:
   - public
@@ -219,10 +219,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
     parameters: []
     return:
       type: System.Windows.Media.Media3D.MeshGeometry3D
-    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
   overload: ESAPIX.Facade.API.Isodose.MeshGeometry*
   modifiers.csharp:
   - public
@@ -250,10 +250,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Isodose.WriteXml*
   modifiers.csharp:
   - public

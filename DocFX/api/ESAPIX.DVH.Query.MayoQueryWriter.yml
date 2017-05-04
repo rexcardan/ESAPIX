@@ -59,12 +59,12 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static string Write(MayoQuery query)
+    content.vb: Public Shared Function Write(query As MayoQuery) As String
     parameters:
     - id: query
       type: ESAPIX.DVH.Query.MayoQuery
     return:
       type: System.String
-    content.vb: Public Shared Function Write(query As MayoQuery) As String
   overload: ESAPIX.DVH.Query.MayoQueryWriter.Write*
   modifiers.csharp:
   - public

@@ -35,8 +35,6 @@ items:
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
-  implements:
-  - IEnumerable{ESAPIX.Facade.API.ControlPoint}
   inheritedMembers:
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
@@ -100,10 +98,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ControlPointCollection(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
   modifiers.csharp:
   - public
@@ -129,10 +127,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.ControlPointCollection.IsLive*
   modifiers.csharp:
   - public
@@ -160,12 +158,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ControlPoint this[int index] { get; set; }
+    content.vb: Public Property Item(index As Integer) As ControlPoint
     parameters:
     - id: index
       type: System.Int32
     return:
       type: ESAPIX.Facade.API.ControlPoint
-    content.vb: Public Property Item(index As Integer) As ControlPoint
   overload: ESAPIX.Facade.API.ControlPointCollection.Item*
   nameWithType.vb: ControlPointCollection.Item(Int32)
   modifiers.csharp:
@@ -196,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int Count { get; set; }
+    content.vb: Public Property Count As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property Count As Integer
   overload: ESAPIX.Facade.API.ControlPointCollection.Count*
   modifiers.csharp:
   - public
@@ -227,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.ControlPointCollection.WriteXml*
   modifiers.csharp:
   - public
@@ -256,9 +254,9 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerator<ControlPoint> GetEnumerator()
+    content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
     return:
       type: IEnumerator{ESAPIX.Facade.API.ControlPoint}
-    content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
   overload: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
   modifiers.csharp:
   - public
@@ -285,47 +283,6 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
-- uid: IEnumerable{ESAPIX.Facade.API.ControlPoint}
-  commentId: '!:IEnumerable{ESAPIX.Facade.API.ControlPoint}'
-  definition: IEnumerable`1
-  name: IEnumerable<ControlPoint>
-  nameWithType: IEnumerable<ControlPoint>
-  fullName: IEnumerable<ESAPIX.Facade.API.ControlPoint>
-  nameWithType.vb: IEnumerable(Of ControlPoint)
-  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.ControlPoint)
-  name.vb: IEnumerable(Of ControlPoint)
-  spec.csharp:
-  - uid: IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: IEnumerable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: ESAPIX.Facade.API.ControlPoint
-    name: ControlPoint
-    nameWithType: ControlPoint
-    fullName: ESAPIX.Facade.API.ControlPoint
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: IEnumerable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: ESAPIX.Facade.API.ControlPoint
-    name: ControlPoint
-    nameWithType: ControlPoint
-    fullName: ESAPIX.Facade.API.ControlPoint
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -708,44 +665,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: IEnumerable`1
-  isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullName.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
-  spec.csharp:
-  - uid: IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: IEnumerable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: IEnumerable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: ESAPIX.Facade.API.ControlPointCollection.#ctor*
   commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.#ctor
   isExternal: false

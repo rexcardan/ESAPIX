@@ -90,10 +90,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.CalculationResult.#ctor*
   modifiers.csharp:
   - public
@@ -119,10 +119,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.CalculationResult.IsLive*
   modifiers.csharp:
   - public
@@ -150,10 +150,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool Success { get; set; }
+    content.vb: Public Property Success As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property Success As Boolean
   overload: ESAPIX.Facade.API.CalculationResult.Success*
   modifiers.csharp:
   - public

@@ -103,10 +103,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ControlPoint(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ControlPoint.#ctor*
   modifiers.csharp:
   - public
@@ -132,10 +132,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.ControlPoint.IsLive*
   modifiers.csharp:
   - public
@@ -163,10 +163,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double CollimatorAngle { get; set; }
+    content.vb: Public Property CollimatorAngle As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property CollimatorAngle As Double
   overload: ESAPIX.Facade.API.ControlPoint.CollimatorAngle*
   modifiers.csharp:
   - public
@@ -194,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double GantryAngle { get; set; }
+    content.vb: Public Property GantryAngle As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property GantryAngle As Double
   overload: ESAPIX.Facade.API.ControlPoint.GantryAngle*
   modifiers.csharp:
   - public
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VRect<double> JawPositions { get; set; }
+    content.vb: Public Property JawPositions As VRect(Of Double)
     parameters: []
     return:
       type: VRect{System.Double}
-    content.vb: Public Property JawPositions As VRect(Of Double)
   overload: ESAPIX.Facade.API.ControlPoint.JawPositions*
   modifiers.csharp:
   - public
@@ -256,10 +256,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public float[, ] LeafPositions { get; set; }
+    content.vb: Public Property LeafPositions As Single(,)
     parameters: []
     return:
       type: System.Single[,]
-    content.vb: Public Property LeafPositions As Single(,)
   overload: ESAPIX.Facade.API.ControlPoint.LeafPositions*
   modifiers.csharp:
   - public
@@ -287,10 +287,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MetersetWeight { get; set; }
+    content.vb: Public Property MetersetWeight As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MetersetWeight As Double
   overload: ESAPIX.Facade.API.ControlPoint.MetersetWeight*
   modifiers.csharp:
   - public
@@ -318,10 +318,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PatientSupportAngle { get; set; }
+    content.vb: Public Property PatientSupportAngle As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property PatientSupportAngle As Double
   overload: ESAPIX.Facade.API.ControlPoint.PatientSupportAngle*
   modifiers.csharp:
   - public
@@ -349,10 +349,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double TableTopLateralPosition { get; set; }
+    content.vb: Public Property TableTopLateralPosition As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property TableTopLateralPosition As Double
   overload: ESAPIX.Facade.API.ControlPoint.TableTopLateralPosition*
   modifiers.csharp:
   - public
@@ -380,10 +380,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double TableTopLongitudinalPosition { get; set; }
+    content.vb: Public Property TableTopLongitudinalPosition As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property TableTopLongitudinalPosition As Double
   overload: ESAPIX.Facade.API.ControlPoint.TableTopLongitudinalPosition*
   modifiers.csharp:
   - public
@@ -411,10 +411,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double TableTopVerticalPosition { get; set; }
+    content.vb: Public Property TableTopVerticalPosition As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property TableTopVerticalPosition As Double
   overload: ESAPIX.Facade.API.ControlPoint.TableTopVerticalPosition*
   modifiers.csharp:
   - public
@@ -442,10 +442,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.ControlPoint.WriteXml*
   modifiers.csharp:
   - public

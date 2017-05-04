@@ -55,10 +55,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: int ThreadId { get; }
+    content.vb: ReadOnly Property ThreadId As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: ReadOnly Property ThreadId As Integer
   overload: ESAPIX.Interfaces.IVMSThread.ThreadId*
   modifiers.csharp:
   - get
@@ -84,12 +84,12 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: Task InvokeAsync(Action action)
+    content.vb: Function InvokeAsync(action As Action) As Task
     parameters:
     - id: action
       type: System.Action
     return:
       type: Task
-    content.vb: Function InvokeAsync(action As Action) As Task
   overload: ESAPIX.Interfaces.IVMSThread.InvokeAsync*
 - uid: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
   commentId: M:ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
@@ -111,10 +111,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: void Invoke(Action action)
+    content.vb: Sub Invoke(action As Action)
     parameters:
     - id: action
       type: System.Action
-    content.vb: Sub Invoke(action As Action)
   overload: ESAPIX.Interfaces.IVMSThread.Invoke*
 references:
 - uid: ESAPIX.Interfaces

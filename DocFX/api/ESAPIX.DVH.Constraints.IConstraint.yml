@@ -52,10 +52,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: string Name { get; }
+    content.vb: ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-    content.vb: ReadOnly Property Name As String
   overload: ESAPIX.DVH.Constraints.IConstraint.Name*
   modifiers.csharp:
   - get
@@ -81,10 +81,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: string FullName { get; }
+    content.vb: ReadOnly Property FullName As String
     parameters: []
     return:
       type: System.String
-    content.vb: ReadOnly Property FullName As String
   overload: ESAPIX.DVH.Constraints.IConstraint.FullName*
   modifiers.csharp:
   - get
@@ -110,12 +110,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: ConstraintResult Constrain(PlanningItem pi)
+    content.vb: Function Constrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Function Constrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.IConstraint.Constrain*
 - uid: ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
   commentId: M:ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
@@ -137,12 +137,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: ConstraintResult CanConstrain(PlanningItem pi)
+    content.vb: Function CanConstrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Function CanConstrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.IConstraint.CanConstrain*
 references:
 - uid: ESAPIX.DVH.Constraints

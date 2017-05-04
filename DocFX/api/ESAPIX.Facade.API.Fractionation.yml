@@ -105,10 +105,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Fractionation(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Fractionation.#ctor*
   modifiers.csharp:
   - public
@@ -134,10 +134,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Fractionation.IsLive*
   modifiers.csharp:
   - public
@@ -165,10 +165,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
+    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Fractionation.CreationDateTime*
   modifiers.csharp:
   - public
@@ -196,10 +196,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue DosePerFractionInPrimaryRefPoint { get; set; }
+    content.vb: Public Property DosePerFractionInPrimaryRefPoint As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property DosePerFractionInPrimaryRefPoint As DoseValue
   overload: ESAPIX.Facade.API.Fractionation.DosePerFractionInPrimaryRefPoint*
   modifiers.csharp:
   - public
@@ -227,10 +227,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int ? NumberOfFractions { get; set; }
+    content.vb: Public Property NumberOfFractions As Integer?
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-    content.vb: Public Property NumberOfFractions As Integer?
   overload: ESAPIX.Facade.API.Fractionation.NumberOfFractions*
   modifiers.csharp:
   - public
@@ -258,10 +258,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue PrescribedDosePerFraction { get; set; }
+    content.vb: Public Property PrescribedDosePerFraction As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property PrescribedDosePerFraction As DoseValue
   overload: ESAPIX.Facade.API.Fractionation.PrescribedDosePerFraction*
   modifiers.csharp:
   - public
@@ -289,10 +289,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Fractionation.WriteXml*
   modifiers.csharp:
   - public
@@ -318,6 +318,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetPrescription(int numberOfFractions, DoseValue prescribedDosePerFraction, double prescribedPercentage)
+    content.vb: Public Sub SetPrescription(numberOfFractions As Integer, prescribedDosePerFraction As DoseValue, prescribedPercentage As Double)
     parameters:
     - id: numberOfFractions
       type: System.Int32
@@ -325,7 +326,6 @@ items:
       type: DoseValue
     - id: prescribedPercentage
       type: System.Double
-    content.vb: Public Sub SetPrescription(numberOfFractions As Integer, prescribedDosePerFraction As DoseValue, prescribedPercentage As Double)
   overload: ESAPIX.Facade.API.Fractionation.SetPrescription*
   modifiers.csharp:
   - public

@@ -49,10 +49,10 @@ items:
   namespace: ESAPIX.Interfaces
   syntax:
     content: string Hash { get; set; }
+    content.vb: Property Hash As String
     parameters: []
     return:
       type: System.String
-    content.vb: Property Hash As String
   overload: ESAPIX.Interfaces.ISecureStorable.Hash*
   modifiers.csharp:
   - get

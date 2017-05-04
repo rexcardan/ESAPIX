@@ -87,6 +87,7 @@ items:
   namespace: ESAPIX.Bootstrapper
   syntax:
     content: public Application GenerateFacadeApp(string username, string password)
+    content.vb: Public Function GenerateFacadeApp(username As String, password As String) As Application
     parameters:
     - id: username
       type: System.String
@@ -94,7 +95,6 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.Application
-    content.vb: Public Function GenerateFacadeApp(username As String, password As String) As Application
   overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp*
   modifiers.csharp:
   - public
@@ -120,6 +120,7 @@ items:
   namespace: ESAPIX.Bootstrapper
   syntax:
     content: public PluginContext GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext sc, Window w)
+    content.vb: Public Function GenerateFacadeScriptContext(sc As VMS.TPS.Common.Model.API.ScriptContext, w As Window) As PluginContext
     parameters:
     - id: sc
       type: VMS.TPS.Common.Model.API.ScriptContext
@@ -127,7 +128,6 @@ items:
       type: Window
     return:
       type: PluginContext
-    content.vb: Public Function GenerateFacadeScriptContext(sc As VMS.TPS.Common.Model.API.ScriptContext, w As Window) As PluginContext
   overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext*
   modifiers.csharp:
   - public

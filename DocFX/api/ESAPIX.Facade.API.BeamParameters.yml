@@ -93,10 +93,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BeamParameters(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.BeamParameters.#ctor*
   modifiers.csharp:
   - public
@@ -122,10 +122,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.BeamParameters.IsLive*
   modifiers.csharp:
   - public
@@ -153,10 +153,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<ControlPointParameters> ControlPoints { get; set; }
+    content.vb: Public Property ControlPoints As IEnumerable(Of ControlPointParameters)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
-    content.vb: Public Property ControlPoints As IEnumerable(Of ControlPointParameters)
   overload: ESAPIX.Facade.API.BeamParameters.ControlPoints*
   modifiers.csharp:
   - public
@@ -184,10 +184,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public GantryDirection GantryDirection { get; set; }
+    content.vb: Public Property GantryDirection As GantryDirection
     parameters: []
     return:
       type: GantryDirection
-    content.vb: Public Property GantryDirection As GantryDirection
   overload: ESAPIX.Facade.API.BeamParameters.GantryDirection*
   modifiers.csharp:
   - public
@@ -215,10 +215,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector Isocenter { get; set; }
+    content.vb: Public Property Isocenter As VVector
     parameters: []
     return:
       type: VVector
-    content.vb: Public Property Isocenter As VVector
   overload: ESAPIX.Facade.API.BeamParameters.Isocenter*
   modifiers.csharp:
   - public
@@ -246,10 +246,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double WeightFactor { get; set; }
+    content.vb: Public Property WeightFactor As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property WeightFactor As Double
   overload: ESAPIX.Facade.API.BeamParameters.WeightFactor*
   modifiers.csharp:
   - public
@@ -277,10 +277,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetAllLeafPositions(float[, ] leafPositions)
+    content.vb: Public Sub SetAllLeafPositions(leafPositions As Single(,))
     parameters:
     - id: leafPositions
       type: System.Single[,]
-    content.vb: Public Sub SetAllLeafPositions(leafPositions As Single(,))
   overload: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions*
   nameWithType.vb: BeamParameters.SetAllLeafPositions(Single(,))
   modifiers.csharp:
@@ -309,10 +309,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetJawPositions(VRect<double> positions)
+    content.vb: Public Sub SetJawPositions(positions As VRect(Of Double))
     parameters:
     - id: positions
       type: VRect{System.Double}
-    content.vb: Public Sub SetJawPositions(positions As VRect(Of Double))
   overload: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
   nameWithType.vb: BeamParameters.SetJawPositions(VRect(Of Double))
   modifiers.csharp:

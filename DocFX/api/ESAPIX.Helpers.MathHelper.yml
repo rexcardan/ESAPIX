@@ -60,6 +60,7 @@ items:
   namespace: ESAPIX.Helpers
   syntax:
     content: public static double Interpolate(double x1, double x3, double y1, double y3, double x2)
+    content.vb: Public Shared Function Interpolate(x1 As Double, x3 As Double, y1 As Double, y3 As Double, x2 As Double) As Double
     parameters:
     - id: x1
       type: System.Double
@@ -73,7 +74,6 @@ items:
       type: System.Double
     return:
       type: System.Double
-    content.vb: Public Shared Function Interpolate(x1 As Double, x3 As Double, y1 As Double, y3 As Double, x2 As Double) As Double
   overload: ESAPIX.Helpers.MathHelper.Interpolate*
   modifiers.csharp:
   - public

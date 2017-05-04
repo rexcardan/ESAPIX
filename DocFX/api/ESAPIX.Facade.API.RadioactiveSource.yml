@@ -105,10 +105,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public RadioactiveSource(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.RadioactiveSource.#ctor*
   modifiers.csharp:
   - public
@@ -134,10 +134,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.RadioactiveSource.IsLive*
   modifiers.csharp:
   - public
@@ -165,10 +165,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CalibrationDate { get; set; }
+    content.vb: Public Property CalibrationDate As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CalibrationDate As Date?
   overload: ESAPIX.Facade.API.RadioactiveSource.CalibrationDate*
   modifiers.csharp:
   - public
@@ -196,10 +196,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool NominalActivity { get; set; }
+    content.vb: Public Property NominalActivity As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property NominalActivity As Boolean
   overload: ESAPIX.Facade.API.RadioactiveSource.NominalActivity*
   modifiers.csharp:
   - public
@@ -227,10 +227,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public RadioactiveSourceModel RadioactiveSourceModel { get; set; }
+    content.vb: Public Property RadioactiveSourceModel As RadioactiveSourceModel
     parameters: []
     return:
       type: ESAPIX.Facade.API.RadioactiveSourceModel
-    content.vb: Public Property RadioactiveSourceModel As RadioactiveSourceModel
   overload: ESAPIX.Facade.API.RadioactiveSource.RadioactiveSourceModel*
   modifiers.csharp:
   - public
@@ -258,10 +258,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SerialNumber { get; set; }
+    content.vb: Public Property SerialNumber As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SerialNumber As String
   overload: ESAPIX.Facade.API.RadioactiveSource.SerialNumber*
   modifiers.csharp:
   - public
@@ -289,10 +289,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Strength { get; set; }
+    content.vb: Public Property Strength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Strength As Double
   overload: ESAPIX.Facade.API.RadioactiveSource.Strength*
   modifiers.csharp:
   - public
@@ -320,10 +320,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.RadioactiveSource.WriteXml*
   modifiers.csharp:
   - public

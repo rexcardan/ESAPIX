@@ -103,10 +103,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PatientSummary(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.PatientSummary.#ctor*
   modifiers.csharp:
   - public
@@ -132,10 +132,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.PatientSummary.IsLive*
   modifiers.csharp:
   - public
@@ -163,10 +163,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
+    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.PatientSummary.CreationDateTime*
   modifiers.csharp:
   - public
@@ -194,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? DateOfBirth { get; set; }
+    content.vb: Public Property DateOfBirth As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property DateOfBirth As Date?
   overload: ESAPIX.Facade.API.PatientSummary.DateOfBirth*
   modifiers.csharp:
   - public
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string FirstName { get; set; }
+    content.vb: Public Property FirstName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property FirstName As String
   overload: ESAPIX.Facade.API.PatientSummary.FirstName*
   modifiers.csharp:
   - public
@@ -256,10 +256,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
+    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.PatientSummary.Id*
   modifiers.csharp:
   - public
@@ -287,10 +287,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id2 { get; set; }
+    content.vb: Public Property Id2 As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id2 As String
   overload: ESAPIX.Facade.API.PatientSummary.Id2*
   modifiers.csharp:
   - public
@@ -318,10 +318,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string LastName { get; set; }
+    content.vb: Public Property LastName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property LastName As String
   overload: ESAPIX.Facade.API.PatientSummary.LastName*
   modifiers.csharp:
   - public
@@ -349,10 +349,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MiddleName { get; set; }
+    content.vb: Public Property MiddleName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MiddleName As String
   overload: ESAPIX.Facade.API.PatientSummary.MiddleName*
   modifiers.csharp:
   - public
@@ -380,10 +380,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Sex { get; set; }
+    content.vb: Public Property Sex As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Sex As String
   overload: ESAPIX.Facade.API.PatientSummary.Sex*
   modifiers.csharp:
   - public
@@ -411,10 +411,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SSN { get; set; }
+    content.vb: Public Property SSN As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SSN As String
   overload: ESAPIX.Facade.API.PatientSummary.SSN*
   modifiers.csharp:
   - public
@@ -442,10 +442,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.PatientSummary.WriteXml*
   modifiers.csharp:
   - public

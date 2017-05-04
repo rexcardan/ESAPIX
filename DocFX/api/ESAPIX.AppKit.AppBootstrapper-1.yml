@@ -26,11 +26,11 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: 'public class AppBootstrapper<T> : UnityBootstrapper where T : Window'
-    typeParameters:
-    - id: T
     content.vb: >-
       Public Class AppBootstrapper(Of T As Window)
           Inherits UnityBootstrapper
+    typeParameters:
+    - id: T
   inheritance:
   - System.Object
   nameWithType.vb: AppBootstrapper(Of T)
@@ -62,6 +62,7 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
+    content.vb: Public Sub New(vmsUsername As String, vmsPassword As String, singleThread As Boolean = False)
     parameters:
     - id: vmsUsername
       type: System.String
@@ -69,7 +70,6 @@ items:
       type: System.String
     - id: singleThread
       type: System.Boolean
-    content.vb: Public Sub New(vmsUsername As String, vmsPassword As String, singleThread As Boolean = False)
   overload: ESAPIX.AppKit.AppBootstrapper`1.#ctor*
   nameWithType.vb: AppBootstrapper(Of T).AppBootstrapper(String, String, Boolean)
   modifiers.csharp:
@@ -97,9 +97,9 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: protected override DependencyObject CreateShell()
+    content.vb: Protected Overrides Function CreateShell As DependencyObject
     return:
       type: DependencyObject
-    content.vb: Protected Overrides Function CreateShell As DependencyObject
   overload: ESAPIX.AppKit.AppBootstrapper`1.CreateShell*
   nameWithType.vb: AppBootstrapper(Of T).CreateShell()
   modifiers.csharp:
@@ -189,10 +189,10 @@ items:
   namespace: ESAPIX.AppKit
   syntax:
     content: public void Run(Func<Window> getSplash = null)
+    content.vb: Public Sub Run(getSplash As Func(Of Window) = Nothing)
     parameters:
     - id: getSplash
       type: System.Func{Window}
-    content.vb: Public Sub Run(getSplash As Func(Of Window) = Nothing)
   overload: ESAPIX.AppKit.AppBootstrapper`1.Run*
   nameWithType.vb: AppBootstrapper(Of T).Run(Func(Of Window))
   modifiers.csharp:

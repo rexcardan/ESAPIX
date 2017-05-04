@@ -101,10 +101,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationEUDObjective(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
   modifiers.csharp:
   - public
@@ -130,10 +130,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive*
   modifiers.csharp:
   - public
@@ -161,10 +161,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue Dose { get; set; }
+    content.vb: Public Property Dose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property Dose As DoseValue
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
   modifiers.csharp:
   - public
@@ -192,10 +192,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationObjectiveOperator Operator { get; set; }
+    content.vb: Public Property Operator As OptimizationObjectiveOperator
     parameters: []
     return:
       type: OptimizationObjectiveOperator
-    content.vb: Public Property Operator As OptimizationObjectiveOperator
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
   modifiers.csharp:
   - public
@@ -223,10 +223,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ParameterA { get; set; }
+    content.vb: Public Property ParameterA As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property ParameterA As Double
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
   modifiers.csharp:
   - public
@@ -254,10 +254,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Priority { get; set; }
+    content.vb: Public Property Priority As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Priority As Double
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Priority*
   modifiers.csharp:
   - public
@@ -285,10 +285,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml*
   modifiers.csharp:
   - public

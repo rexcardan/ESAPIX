@@ -63,9 +63,9 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public const string UnitsDesired = "\\[(cc|%|(c?Gy))\\]"
+    content.vb: Public Const UnitsDesired As String = "\[(cc|%|(c?Gy))\]"
     return:
       type: System.String
-    content.vb: Public Const UnitsDesired As String = "\[(cc|%|(c?Gy))\]"
   modifiers.csharp:
   - public
   - const
@@ -92,9 +92,9 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public const string QueryType = "^(V|CV|DC|D|Mean|Max|Min)"
+    content.vb: Public Const QueryType As String = "^(V|CV|DC|D|Mean|Max|Min)"
     return:
       type: System.String
-    content.vb: Public Const QueryType As String = "^(V|CV|DC|D|Mean|Max|Min)"
   modifiers.csharp:
   - public
   - const
@@ -121,9 +121,9 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public const string QueryValue = "\\d+(\\.?)(\\d+)?"
+    content.vb: Public Const QueryValue As String = "\d+(\.?)(\d+)?"
     return:
       type: System.String
-    content.vb: Public Const QueryValue As String = "\d+(\.?)(\d+)?"
   modifiers.csharp:
   - public
   - const
@@ -150,9 +150,9 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public const string QueryUnits = "((cc)|%|(c?Gy))"
+    content.vb: Public Const QueryUnits As String = "((cc)|%|(c?Gy))"
     return:
       type: System.String
-    content.vb: Public Const QueryUnits As String = "((cc)|%|(c?Gy))"
   modifiers.csharp:
   - public
   - const
@@ -179,9 +179,9 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static string Valid
+    content.vb: Public Shared Valid As String
     return:
       type: System.String
-    content.vb: Public Shared Valid As String
   modifiers.csharp:
   - public
   - static

@@ -103,10 +103,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DVHData(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.DVHData.#ctor*
   modifiers.csharp:
   - public
@@ -132,10 +132,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.DVHData.IsLive*
   modifiers.csharp:
   - public
@@ -163,10 +163,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Coverage { get; set; }
+    content.vb: Public Property Coverage As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Coverage As Double
   overload: ESAPIX.Facade.API.DVHData.Coverage*
   modifiers.csharp:
   - public
@@ -194,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DVHPoint[] CurveData { get; set; }
+    content.vb: Public Property CurveData As DVHPoint()
     parameters: []
     return:
       type: DVHPoint[]
-    content.vb: Public Property CurveData As DVHPoint()
   overload: ESAPIX.Facade.API.DVHData.CurveData*
   modifiers.csharp:
   - public
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue MaxDose { get; set; }
+    content.vb: Public Property MaxDose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property MaxDose As DoseValue
   overload: ESAPIX.Facade.API.DVHData.MaxDose*
   modifiers.csharp:
   - public
@@ -256,10 +256,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue MeanDose { get; set; }
+    content.vb: Public Property MeanDose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property MeanDose As DoseValue
   overload: ESAPIX.Facade.API.DVHData.MeanDose*
   modifiers.csharp:
   - public
@@ -287,10 +287,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue MedianDose { get; set; }
+    content.vb: Public Property MedianDose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property MedianDose As DoseValue
   overload: ESAPIX.Facade.API.DVHData.MedianDose*
   modifiers.csharp:
   - public
@@ -318,10 +318,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue MinDose { get; set; }
+    content.vb: Public Property MinDose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property MinDose As DoseValue
   overload: ESAPIX.Facade.API.DVHData.MinDose*
   modifiers.csharp:
   - public
@@ -349,10 +349,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SamplingCoverage { get; set; }
+    content.vb: Public Property SamplingCoverage As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SamplingCoverage As Double
   overload: ESAPIX.Facade.API.DVHData.SamplingCoverage*
   modifiers.csharp:
   - public
@@ -380,10 +380,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double StdDev { get; set; }
+    content.vb: Public Property StdDev As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property StdDev As Double
   overload: ESAPIX.Facade.API.DVHData.StdDev*
   modifiers.csharp:
   - public
@@ -411,10 +411,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Volume { get; set; }
+    content.vb: Public Property Volume As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Volume As Double
   overload: ESAPIX.Facade.API.DVHData.Volume*
   modifiers.csharp:
   - public
@@ -442,10 +442,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.DVHData.WriteXml*
   modifiers.csharp:
   - public

@@ -152,10 +152,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSetup(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.PlanSetup.#ctor*
   modifiers.csharp:
   - public
@@ -181,10 +181,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.PlanSetup.IsLive*
   modifiers.csharp:
   - public
@@ -212,10 +212,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSetupApprovalStatus ApprovalStatus { get; set; }
+    content.vb: Public Property ApprovalStatus As PlanSetupApprovalStatus
     parameters: []
     return:
       type: PlanSetupApprovalStatus
-    content.vb: Public Property ApprovalStatus As PlanSetupApprovalStatus
   overload: ESAPIX.Facade.API.PlanSetup.ApprovalStatus*
   modifiers.csharp:
   - public
@@ -243,10 +243,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Beam> Beams { get; set; }
+    content.vb: Public Property Beams As IEnumerable(Of Beam)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Beam}
-    content.vb: Public Property Beams As IEnumerable(Of Beam)
   overload: ESAPIX.Facade.API.PlanSetup.Beams*
   modifiers.csharp:
   - public
@@ -274,10 +274,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Course Course { get; set; }
+    content.vb: Public Property Course As Course
     parameters: []
     return:
       type: ESAPIX.Facade.API.Course
-    content.vb: Public Property Course As Course
   overload: ESAPIX.Facade.API.PlanSetup.Course*
   modifiers.csharp:
   - public
@@ -305,10 +305,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string CreationUserName { get; set; }
+    content.vb: Public Property CreationUserName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property CreationUserName As String
   overload: ESAPIX.Facade.API.PlanSetup.CreationUserName*
   modifiers.csharp:
   - public
@@ -336,10 +336,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<EstimatedDVH> DVHEstimates { get; set; }
+    content.vb: Public Property DVHEstimates As IEnumerable(Of EstimatedDVH)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.EstimatedDVH}
-    content.vb: Public Property DVHEstimates As IEnumerable(Of EstimatedDVH)
   overload: ESAPIX.Facade.API.PlanSetup.DVHEstimates*
   modifiers.csharp:
   - public
@@ -367,10 +367,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ElectronCalculationModel { get; set; }
+    content.vb: Public Property ElectronCalculationModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ElectronCalculationModel As String
   overload: ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel*
   modifiers.csharp:
   - public
@@ -398,10 +398,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Dictionary<string, string> ElectronCalculationOptions { get; set; }
+    content.vb: Public Property ElectronCalculationOptions As Dictionary(Of String, String)
     parameters: []
     return:
       type: Dictionary{System.String,System.String}
-    content.vb: Public Property ElectronCalculationOptions As Dictionary(Of String, String)
   overload: ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions*
   modifiers.csharp:
   - public
@@ -429,10 +429,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsDoseValid { get; set; }
+    content.vb: Public Property IsDoseValid As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsDoseValid As Boolean
   overload: ESAPIX.Facade.API.PlanSetup.IsDoseValid*
   modifiers.csharp:
   - public
@@ -460,10 +460,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsTreated { get; set; }
+    content.vb: Public Property IsTreated As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsTreated As Boolean
   overload: ESAPIX.Facade.API.PlanSetup.IsTreated*
   modifiers.csharp:
   - public
@@ -491,10 +491,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationSetup OptimizationSetup { get; set; }
+    content.vb: Public Property OptimizationSetup As OptimizationSetup
     parameters: []
     return:
       type: ESAPIX.Facade.API.OptimizationSetup
-    content.vb: Public Property OptimizationSetup As OptimizationSetup
   overload: ESAPIX.Facade.API.PlanSetup.OptimizationSetup*
   modifiers.csharp:
   - public
@@ -522,10 +522,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PhotonCalculationModel { get; set; }
+    content.vb: Public Property PhotonCalculationModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PhotonCalculationModel As String
   overload: ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel*
   modifiers.csharp:
   - public
@@ -553,10 +553,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Dictionary<string, string> PhotonCalculationOptions { get; set; }
+    content.vb: Public Property PhotonCalculationOptions As Dictionary(Of String, String)
     parameters: []
     return:
       type: Dictionary{System.String,System.String}
-    content.vb: Public Property PhotonCalculationOptions As Dictionary(Of String, String)
   overload: ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions*
   modifiers.csharp:
   - public
@@ -584,10 +584,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PlanIntent { get; set; }
+    content.vb: Public Property PlanIntent As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PlanIntent As String
   overload: ESAPIX.Facade.API.PlanSetup.PlanIntent*
   modifiers.csharp:
   - public
@@ -615,10 +615,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PlanningApprovalDate { get; set; }
+    content.vb: Public Property PlanningApprovalDate As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PlanningApprovalDate As String
   overload: ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate*
   modifiers.csharp:
   - public
@@ -646,10 +646,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PlanningApprover { get; set; }
+    content.vb: Public Property PlanningApprover As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PlanningApprover As String
   overload: ESAPIX.Facade.API.PlanSetup.PlanningApprover*
   modifiers.csharp:
   - public
@@ -677,10 +677,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PlanNormalizationMethod { get; set; }
+    content.vb: Public Property PlanNormalizationMethod As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PlanNormalizationMethod As String
   overload: ESAPIX.Facade.API.PlanSetup.PlanNormalizationMethod*
   modifiers.csharp:
   - public
@@ -708,10 +708,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector PlanNormalizationPoint { get; set; }
+    content.vb: Public Property PlanNormalizationPoint As VVector
     parameters: []
     return:
       type: VVector
-    content.vb: Public Property PlanNormalizationPoint As VVector
   overload: ESAPIX.Facade.API.PlanSetup.PlanNormalizationPoint*
   modifiers.csharp:
   - public
@@ -739,10 +739,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanType PlanType { get; set; }
+    content.vb: Public Property PlanType As PlanType
     parameters: []
     return:
       type: PlanType
-    content.vb: Public Property PlanType As PlanType
   overload: ESAPIX.Facade.API.PlanSetup.PlanType*
   modifiers.csharp:
   - public
@@ -770,10 +770,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PrescribedPercentage { get; set; }
+    content.vb: Public Property PrescribedPercentage As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property PrescribedPercentage As Double
   overload: ESAPIX.Facade.API.PlanSetup.PrescribedPercentage*
   modifiers.csharp:
   - public
@@ -801,10 +801,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ReferencePoint PrimaryReferencePoint { get; set; }
+    content.vb: Public Property PrimaryReferencePoint As ReferencePoint
     parameters: []
     return:
       type: ESAPIX.Facade.API.ReferencePoint
-    content.vb: Public Property PrimaryReferencePoint As ReferencePoint
   overload: ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint*
   modifiers.csharp:
   - public
@@ -832,10 +832,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ProtocolID { get; set; }
+    content.vb: Public Property ProtocolID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ProtocolID As String
   overload: ESAPIX.Facade.API.PlanSetup.ProtocolID*
   modifiers.csharp:
   - public
@@ -863,10 +863,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ProtocolPhaseID { get; set; }
+    content.vb: Public Property ProtocolPhaseID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ProtocolPhaseID As String
   overload: ESAPIX.Facade.API.PlanSetup.ProtocolPhaseID*
   modifiers.csharp:
   - public
@@ -894,10 +894,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ProtonCalculationModel { get; set; }
+    content.vb: Public Property ProtonCalculationModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ProtonCalculationModel As String
   overload: ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel*
   modifiers.csharp:
   - public
@@ -925,10 +925,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Dictionary<string, string> ProtonCalculationOptions { get; set; }
+    content.vb: Public Property ProtonCalculationOptions As Dictionary(Of String, String)
     parameters: []
     return:
       type: Dictionary{System.String,System.String}
-    content.vb: Public Property ProtonCalculationOptions As Dictionary(Of String, String)
   overload: ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions*
   modifiers.csharp:
   - public
@@ -956,10 +956,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Series Series { get; set; }
+    content.vb: Public Property Series As Series
     parameters: []
     return:
       type: ESAPIX.Facade.API.Series
-    content.vb: Public Property Series As Series
   overload: ESAPIX.Facade.API.PlanSetup.Series*
   modifiers.csharp:
   - public
@@ -987,10 +987,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SeriesUID { get; set; }
+    content.vb: Public Property SeriesUID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SeriesUID As String
   overload: ESAPIX.Facade.API.PlanSetup.SeriesUID*
   modifiers.csharp:
   - public
@@ -1018,10 +1018,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet StructureSet { get; set; }
+    content.vb: Public Property StructureSet As StructureSet
     parameters: []
     return:
       type: ESAPIX.Facade.API.StructureSet
-    content.vb: Public Property StructureSet As StructureSet
   overload: ESAPIX.Facade.API.PlanSetup.StructureSet*
   modifiers.csharp:
   - public
@@ -1049,10 +1049,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string TargetVolumeID { get; set; }
+    content.vb: Public Property TargetVolumeID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property TargetVolumeID As String
   overload: ESAPIX.Facade.API.PlanSetup.TargetVolumeID*
   modifiers.csharp:
   - public
@@ -1080,10 +1080,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue TotalPrescribedDose { get; set; }
+    content.vb: Public Property TotalPrescribedDose As DoseValue
     parameters: []
     return:
       type: DoseValue
-    content.vb: Public Property TotalPrescribedDose As DoseValue
   overload: ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose*
   modifiers.csharp:
   - public
@@ -1111,10 +1111,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string TreatmentApprovalDate { get; set; }
+    content.vb: Public Property TreatmentApprovalDate As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property TreatmentApprovalDate As String
   overload: ESAPIX.Facade.API.PlanSetup.TreatmentApprovalDate*
   modifiers.csharp:
   - public
@@ -1142,10 +1142,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string TreatmentApprover { get; set; }
+    content.vb: Public Property TreatmentApprover As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property TreatmentApprover As String
   overload: ESAPIX.Facade.API.PlanSetup.TreatmentApprover*
   modifiers.csharp:
   - public
@@ -1173,10 +1173,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PatientOrientation TreatmentOrientation { get; set; }
+    content.vb: Public Property TreatmentOrientation As PatientOrientation
     parameters: []
     return:
       type: PatientOrientation
-    content.vb: Public Property TreatmentOrientation As PatientOrientation
   overload: ESAPIX.Facade.API.PlanSetup.TreatmentOrientation*
   modifiers.csharp:
   - public
@@ -1204,10 +1204,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
+    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.PlanSetup.UID*
   modifiers.csharp:
   - public
@@ -1235,10 +1235,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Fractionation UniqueFractionation { get; set; }
+    content.vb: Public Property UniqueFractionation As Fractionation
     parameters: []
     return:
       type: ESAPIX.Facade.API.Fractionation
-    content.vb: Public Property UniqueFractionation As Fractionation
   overload: ESAPIX.Facade.API.PlanSetup.UniqueFractionation*
   modifiers.csharp:
   - public
@@ -1266,10 +1266,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSetup VerifiedPlan { get; set; }
+    content.vb: Public Property VerifiedPlan As PlanSetup
     parameters: []
     return:
       type: ESAPIX.Facade.API.PlanSetup
-    content.vb: Public Property VerifiedPlan As PlanSetup
   overload: ESAPIX.Facade.API.PlanSetup.VerifiedPlan*
   modifiers.csharp:
   - public
@@ -1297,10 +1297,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
+    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.PlanSetup.Id*
   modifiers.csharp:
   - public
@@ -1328,10 +1328,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PlanNormalizationValue { get; set; }
+    content.vb: Public Property PlanNormalizationValue As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property PlanNormalizationValue As Double
   overload: ESAPIX.Facade.API.PlanSetup.PlanNormalizationValue*
   modifiers.csharp:
   - public
@@ -1359,10 +1359,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.PlanSetup.WriteXml*
   modifiers.csharp:
   - public
@@ -1388,10 +1388,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void ClearCalculationModel(CalculationType calculationType)
+    content.vb: Public Sub ClearCalculationModel(calculationType As CalculationType)
     parameters:
     - id: calculationType
       type: CalculationType
-    content.vb: Public Sub ClearCalculationModel(calculationType As CalculationType)
   overload: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel*
   modifiers.csharp:
   - public
@@ -1417,12 +1417,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string GetCalculationModel(CalculationType calculationType)
+    content.vb: Public Function GetCalculationModel(calculationType As CalculationType) As String
     parameters:
     - id: calculationType
       type: CalculationType
     return:
       type: System.String
-    content.vb: Public Function GetCalculationModel(calculationType As CalculationType) As String
   overload: ESAPIX.Facade.API.PlanSetup.GetCalculationModel*
   modifiers.csharp:
   - public
@@ -1448,6 +1448,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool GetCalculationOption(string calculationModel, string optionName, out string optionValue)
+    content.vb: Public Function GetCalculationOption(calculationModel As String, optionName As String, ByRef optionValue As String) As Boolean
     parameters:
     - id: calculationModel
       type: System.String
@@ -1457,7 +1458,6 @@ items:
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function GetCalculationOption(calculationModel As String, optionName As String, ByRef optionValue As String) As Boolean
   overload: ESAPIX.Facade.API.PlanSetup.GetCalculationOption*
   nameWithType.vb: PlanSetup.GetCalculationOption(String, String, ByRef String)
   modifiers.csharp:
@@ -1486,12 +1486,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Dictionary<string, string> GetCalculationOptions(string calculationModel)
+    content.vb: Public Function GetCalculationOptions(calculationModel As String) As Dictionary(Of String, String)
     parameters:
     - id: calculationModel
       type: System.String
     return:
       type: Dictionary{System.String,System.String}
-    content.vb: Public Function GetCalculationOptions(calculationModel As String) As Dictionary(Of String, String)
   overload: ESAPIX.Facade.API.PlanSetup.GetCalculationOptions*
   modifiers.csharp:
   - public
@@ -1517,6 +1517,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue GetDoseAtVolume(Structure structure, double volume, VolumePresentation volumePresentation, DoseValuePresentation requestedDosePresentation)
+    content.vb: Public Function GetDoseAtVolume(structure As  Structure, volume As Double, volumePresentation As VolumePresentation, requestedDosePresentation As DoseValuePresentation) As DoseValue
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
@@ -1528,7 +1529,6 @@ items:
       type: DoseValuePresentation
     return:
       type: DoseValue
-    content.vb: Public Function GetDoseAtVolume(structure As  Structure, volume As Double, volumePresentation As VolumePresentation, requestedDosePresentation As DoseValuePresentation) As DoseValue
   overload: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume*
   modifiers.csharp:
   - public
@@ -1554,6 +1554,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double GetVolumeAtDose(Structure structure, DoseValue dose, VolumePresentation requestedVolumePresentation)
+    content.vb: Public Function GetVolumeAtDose(structure As  Structure, dose As DoseValue, requestedVolumePresentation As VolumePresentation) As Double
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
@@ -1563,7 +1564,6 @@ items:
       type: VolumePresentation
     return:
       type: System.Double
-    content.vb: Public Function GetVolumeAtDose(structure As  Structure, dose As DoseValue, requestedVolumePresentation As VolumePresentation) As Double
   overload: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose*
   modifiers.csharp:
   - public
@@ -1589,12 +1589,12 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetCalculationModel(CalculationType calculationType, string model)
+    content.vb: Public Sub SetCalculationModel(calculationType As CalculationType, model As String)
     parameters:
     - id: calculationType
       type: CalculationType
     - id: model
       type: System.String
-    content.vb: Public Sub SetCalculationModel(calculationType As CalculationType, model As String)
   overload: ESAPIX.Facade.API.PlanSetup.SetCalculationModel*
   modifiers.csharp:
   - public
@@ -1620,6 +1620,7 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool SetCalculationOption(string calculationModel, string optionName, string optionValue)
+    content.vb: Public Function SetCalculationOption(calculationModel As String, optionName As String, optionValue As String) As Boolean
     parameters:
     - id: calculationModel
       type: System.String
@@ -1629,7 +1630,6 @@ items:
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function SetCalculationOption(calculationModel As String, optionName As String, optionValue As String) As Boolean
   overload: ESAPIX.Facade.API.PlanSetup.SetCalculationOption*
   modifiers.csharp:
   - public

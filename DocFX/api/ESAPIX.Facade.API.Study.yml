@@ -103,10 +103,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Study(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Study.#ctor*
   modifiers.csharp:
   - public
@@ -132,10 +132,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Study.IsLive*
   modifiers.csharp:
   - public
@@ -163,10 +163,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
+    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Study.CreationDateTime*
   modifiers.csharp:
   - public
@@ -194,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Series> Series { get; set; }
+    content.vb: Public Property Series As IEnumerable(Of Series)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Series}
-    content.vb: Public Property Series As IEnumerable(Of Series)
   overload: ESAPIX.Facade.API.Study.Series*
   modifiers.csharp:
   - public
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
+    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.Study.UID*
   modifiers.csharp:
   - public
@@ -256,10 +256,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Study.WriteXml*
   modifiers.csharp:
   - public

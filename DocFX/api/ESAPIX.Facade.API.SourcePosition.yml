@@ -104,10 +104,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SourcePosition(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.SourcePosition.#ctor*
   modifiers.csharp:
   - public
@@ -133,10 +133,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.SourcePosition.IsLive*
   modifiers.csharp:
   - public
@@ -164,10 +164,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DwellTime { get; set; }
+    content.vb: Public Property DwellTime As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property DwellTime As Double
   overload: ESAPIX.Facade.API.SourcePosition.DwellTime*
   modifiers.csharp:
   - public
@@ -195,10 +195,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public RadioactiveSource RadioactiveSource { get; set; }
+    content.vb: Public Property RadioactiveSource As RadioactiveSource
     parameters: []
     return:
       type: ESAPIX.Facade.API.RadioactiveSource
-    content.vb: Public Property RadioactiveSource As RadioactiveSource
   overload: ESAPIX.Facade.API.SourcePosition.RadioactiveSource*
   modifiers.csharp:
   - public
@@ -226,10 +226,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double[, ] Transform { get; set; }
+    content.vb: Public Property Transform As Double(,)
     parameters: []
     return:
       type: System.Double[,]
-    content.vb: Public Property Transform As Double(,)
   overload: ESAPIX.Facade.API.SourcePosition.Transform*
   modifiers.csharp:
   - public
@@ -257,10 +257,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector Translation { get; set; }
+    content.vb: Public Property Translation As VVector
     parameters: []
     return:
       type: VVector
-    content.vb: Public Property Translation As VVector
   overload: ESAPIX.Facade.API.SourcePosition.Translation*
   modifiers.csharp:
   - public
@@ -288,10 +288,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.SourcePosition.WriteXml*
   modifiers.csharp:
   - public

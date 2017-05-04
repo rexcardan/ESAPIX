@@ -26,10 +26,10 @@ items:
   example: []
   syntax:
     content: public class SecureStorage<T>
+    content.vb: Public Class SecureStorage(Of T)
     typeParameters:
     - id: T
       description: ''
-    content.vb: Public Class SecureStorage(Of T)
   inheritance:
   - System.Object
   inheritedMembers:
@@ -71,10 +71,10 @@ items:
   example: []
   syntax:
     content: public T Storage { get; set; }
+    content.vb: Public Property Storage As T
     parameters: []
     return:
       type: '{T}'
-    content.vb: Public Property Storage As T
   overload: ESAPIX.AppKit.Data.SecureStorage`1.Storage*
   nameWithType.vb: SecureStorage(Of T).Storage
   modifiers.csharp:
@@ -106,10 +106,10 @@ items:
   example: []
   syntax:
     content: public string Hash { get; set; }
+    content.vb: Public Property Hash As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Hash As String
   overload: ESAPIX.AppKit.Data.SecureStorage`1.Hash*
   nameWithType.vb: SecureStorage(Of T).Hash
   modifiers.csharp:
@@ -141,10 +141,10 @@ items:
   example: []
   syntax:
     content: public bool IsTampered { get; set; }
+    content.vb: Public Property IsTampered As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsTampered As Boolean
   overload: ESAPIX.AppKit.Data.SecureStorage`1.IsTampered*
   nameWithType.vb: SecureStorage(Of T).IsTampered
   modifiers.csharp:

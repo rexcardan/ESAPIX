@@ -101,10 +101,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationIMRTBeamParameter(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.#ctor*
   modifiers.csharp:
   - public
@@ -130,10 +130,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive*
   modifiers.csharp:
   - public
@@ -161,10 +161,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam Beam { get; set; }
+    content.vb: Public Property Beam As Beam
     parameters: []
     return:
       type: ESAPIX.Facade.API.Beam
-    content.vb: Public Property Beam As Beam
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Beam*
   modifiers.csharp:
   - public
@@ -192,10 +192,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string BeamId { get; set; }
+    content.vb: Public Property BeamId As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property BeamId As String
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.BeamId*
   modifiers.csharp:
   - public
@@ -223,10 +223,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool Excluded { get; set; }
+    content.vb: Public Property Excluded As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property Excluded As Boolean
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Excluded*
   modifiers.csharp:
   - public
@@ -254,10 +254,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool FixedJaws { get; set; }
+    content.vb: Public Property FixedJaws As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property FixedJaws As Boolean
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.FixedJaws*
   modifiers.csharp:
   - public
@@ -285,10 +285,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SmoothX { get; set; }
+    content.vb: Public Property SmoothX As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SmoothX As Double
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.SmoothX*
   modifiers.csharp:
   - public
@@ -316,10 +316,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SmoothY { get; set; }
+    content.vb: Public Property SmoothY As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SmoothY As Double
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.SmoothY*
   modifiers.csharp:
   - public
@@ -347,10 +347,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.WriteXml*
   modifiers.csharp:
   - public

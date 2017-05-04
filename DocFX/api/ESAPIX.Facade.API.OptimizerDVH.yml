@@ -89,10 +89,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerDVH(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
   modifiers.csharp:
   - public
@@ -118,10 +118,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizerDVH.IsLive*
   modifiers.csharp:
   - public
@@ -149,10 +149,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DVHPoint[] CurveData { get; set; }
+    content.vb: Public Property CurveData As DVHPoint()
     parameters: []
     return:
       type: DVHPoint[]
-    content.vb: Public Property CurveData As DVHPoint()
   overload: ESAPIX.Facade.API.OptimizerDVH.CurveData*
   modifiers.csharp:
   - public
@@ -180,10 +180,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Structure Structure { get; set; }
+    content.vb: 'Public Property Structure As '
     parameters: []
     return:
       type: ESAPIX.Facade.API.Structure
-    content.vb: 'Public Property Structure As '
   overload: ESAPIX.Facade.API.OptimizerDVH.Structure*
   modifiers.csharp:
   - public

@@ -89,10 +89,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public double Volume { get; set; }
+    content.vb: Public Property Volume As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Volume As Double
   overload: ESAPIX.DVH.Constraints.ComplimentDoseAtVolumeConstraint.Volume*
   modifiers.csharp:
   - public
@@ -120,10 +120,10 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public VolumePresentation VolumeType { get; set; }
+    content.vb: Public Property VolumeType As VolumePresentation
     parameters: []
     return:
       type: VolumePresentation
-    content.vb: Public Property VolumeType As VolumePresentation
   overload: ESAPIX.DVH.Constraints.ComplimentDoseAtVolumeConstraint.VolumeType*
   modifiers.csharp:
   - public
@@ -153,10 +153,10 @@ items:
   example: []
   syntax:
     content: public virtual Func<DoseValue, ResultType> PassingFunc { get; set; }
+    content.vb: Public Overridable Property PassingFunc As Func(Of DoseValue, ResultType)
     parameters: []
     return:
       type: System.Func{DoseValue,ESAPIX.DVH.Constraints.ResultType}
-    content.vb: Public Overridable Property PassingFunc As Func(Of DoseValue, ResultType)
   overload: ESAPIX.DVH.Constraints.ComplimentDoseAtVolumeConstraint.PassingFunc*
   modifiers.csharp:
   - public
@@ -188,6 +188,7 @@ items:
   example: []
   syntax:
     content: public DoseValue GetDoseComplimentAtVolume(PlanningItem pi)
+    content.vb: Public Function GetDoseComplimentAtVolume(pi As PlanningItem) As DoseValue
     parameters:
     - id: pi
       type: PlanningItem
@@ -195,7 +196,6 @@ items:
     return:
       type: DoseValue
       description: the dose value at the volume of this constraint
-    content.vb: Public Function GetDoseComplimentAtVolume(pi As PlanningItem) As DoseValue
   overload: ESAPIX.DVH.Constraints.ComplimentDoseAtVolumeConstraint.GetDoseComplimentAtVolume*
   modifiers.csharp:
   - public
@@ -221,12 +221,12 @@ items:
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override ConstraintResult Constrain(PlanningItem pi)
+    content.vb: Public Overrides Function Constrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Overrides Function Constrain(pi As PlanningItem) As ConstraintResult
   overridden: ESAPIX.DVH.Constraints.DoseStructureConstraint.Constrain(PlanningItem)
   overload: ESAPIX.DVH.Constraints.ComplimentDoseAtVolumeConstraint.Constrain*
   modifiers.csharp:

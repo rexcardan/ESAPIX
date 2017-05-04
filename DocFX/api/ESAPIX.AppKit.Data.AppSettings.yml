@@ -63,10 +63,10 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public Dictionary<string, object> Settings { get; set; }
+    content.vb: Public Property Settings As Dictionary(Of String, Object)
     parameters: []
     return:
       type: Dictionary{System.String,System.Object}
-    content.vb: Public Property Settings As Dictionary(Of String, Object)
   overload: ESAPIX.AppKit.Data.AppSettings.Settings*
   modifiers.csharp:
   - public
@@ -94,12 +94,12 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public static AppSettings Load(string settingsPath = "")
+    content.vb: Public Shared Function Load(settingsPath As String = "") As AppSettings
     parameters:
     - id: settingsPath
       type: System.String
     return:
       type: ESAPIX.AppKit.Data.AppSettings
-    content.vb: Public Shared Function Load(settingsPath As String = "") As AppSettings
   overload: ESAPIX.AppKit.Data.AppSettings.Load*
   modifiers.csharp:
   - public
@@ -127,12 +127,12 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public bool Save(string settingsPath = "")
+    content.vb: Public Function Save(settingsPath As String = "") As Boolean
     parameters:
     - id: settingsPath
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function Save(settingsPath As String = "") As Boolean
   overload: ESAPIX.AppKit.Data.AppSettings.Save*
   modifiers.csharp:
   - public
@@ -158,6 +158,7 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public T Get<T>(string key)
+    content.vb: Public Function Get(Of T)(key As String) As T
     parameters:
     - id: key
       type: System.String
@@ -165,7 +166,6 @@ items:
     - id: T
     return:
       type: '{T}'
-    content.vb: Public Function Get(Of T)(key As String) As T
   overload: ESAPIX.AppKit.Data.AppSettings.Get*
   nameWithType.vb: AppSettings.Get(Of T)(String)
   modifiers.csharp:
@@ -194,12 +194,12 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public void Set(string key, object value)
+    content.vb: Public Sub Set(key As String, value As Object)
     parameters:
     - id: key
       type: System.String
     - id: value
       type: System.Object
-    content.vb: Public Sub Set(key As String, value As Object)
   overload: ESAPIX.AppKit.Data.AppSettings.Set*
   modifiers.csharp:
   - public

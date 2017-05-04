@@ -36,9 +36,9 @@ items:
   example: []
   syntax:
     content: public abstract class AbstractStringDataStore<T>
+    content.vb: Public MustInherit Class AbstractStringDataStore(Of T)
     typeParameters:
     - id: T
-    content.vb: Public MustInherit Class AbstractStringDataStore(Of T)
   inheritance:
   - System.Object
   derivedClasses:
@@ -82,6 +82,7 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public AbstractStringDataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "")
+    content.vb: Public Sub New(fileExtension As String, fileNamingMethod As Func(Of T, String), storePath As String = "")
     parameters:
     - id: fileExtension
       type: System.String
@@ -89,7 +90,6 @@ items:
       type: System.Func{{T},System.String}
     - id: storePath
       type: System.String
-    content.vb: Public Sub New(fileExtension As String, fileNamingMethod As Func(Of T, String), storePath As String = "")
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.#ctor*
   nameWithType.vb: AbstractStringDataStore(Of T).AbstractStringDataStore(String, Func(Of T, String), String)
   modifiers.csharp:
@@ -118,10 +118,10 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public string DataPath { get; }
+    content.vb: Public ReadOnly Property DataPath As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property DataPath As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath*
   nameWithType.vb: AbstractStringDataStore(Of T).DataPath
   modifiers.csharp:
@@ -153,6 +153,7 @@ items:
   example: []
   syntax:
     content: public abstract string Serialize(T toSerialize)
+    content.vb: Public MustOverride Function Serialize(toSerialize As T) As String
     parameters:
     - id: toSerialize
       type: '{T}'
@@ -160,7 +161,6 @@ items:
     return:
       type: System.String
       description: ''
-    content.vb: Public MustOverride Function Serialize(toSerialize As T) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize*
   nameWithType.vb: AbstractStringDataStore(Of T).Serialize(T)
   modifiers.csharp:
@@ -192,6 +192,7 @@ items:
   example: []
   syntax:
     content: public abstract string Serialize(SecureStorage<T> toSerialize)
+    content.vb: Public MustOverride Function Serialize(toSerialize As SecureStorage(Of T)) As String
     parameters:
     - id: toSerialize
       type: ESAPIX.AppKit.Data.SecureStorage{{T}}
@@ -199,7 +200,6 @@ items:
     return:
       type: System.String
       description: ''
-    content.vb: Public MustOverride Function Serialize(toSerialize As SecureStorage(Of T)) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize*
   nameWithType.vb: AbstractStringDataStore(Of T).Serialize(SecureStorage(Of T))
   modifiers.csharp:
@@ -232,6 +232,7 @@ items:
   example: []
   syntax:
     content: public abstract SecureStorage<T> Deserialize(string serial)
+    content.vb: Public MustOverride Function Deserialize(serial As String) As SecureStorage(Of T)
     parameters:
     - id: serial
       type: System.String
@@ -239,7 +240,6 @@ items:
     return:
       type: ESAPIX.AppKit.Data.SecureStorage{{T}}
       description: ''
-    content.vb: Public MustOverride Function Deserialize(serial As String) As SecureStorage(Of T)
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize*
   nameWithType.vb: AbstractStringDataStore(Of T).Deserialize(String)
   modifiers.csharp:
@@ -271,13 +271,13 @@ items:
   example: []
   syntax:
     content: public bool Save(T storageObject)
+    content.vb: Public Function Save(storageObject As T) As Boolean
     parameters:
     - id: storageObject
       type: '{T}'
     return:
       type: System.Boolean
       description: bool indicating success
-    content.vb: Public Function Save(storageObject As T) As Boolean
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save*
   nameWithType.vb: AbstractStringDataStore(Of T).Save(T)
   modifiers.csharp:
@@ -307,10 +307,10 @@ items:
   example: []
   syntax:
     content: public IEnumerable<T> LoadAll()
+    content.vb: Public Function LoadAll As IEnumerable(Of T)
     return:
       type: IEnumerable{{T}}
       description: bool indicating success
-    content.vb: Public Function LoadAll As IEnumerable(Of T)
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll*
   nameWithType.vb: AbstractStringDataStore(Of T).LoadAll()
   modifiers.csharp:
@@ -340,10 +340,10 @@ items:
   example: []
   syntax:
     content: public List<SecureStorage<T>> LoadAllSecure()
+    content.vb: Public Function LoadAllSecure As List(Of SecureStorage(Of T))
     return:
       type: List{ESAPIX.AppKit.Data.SecureStorage{{T}}}
       description: bool indicating success
-    content.vb: Public Function LoadAllSecure As List(Of SecureStorage(Of T))
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure*
   nameWithType.vb: AbstractStringDataStore(Of T).LoadAllSecure()
   modifiers.csharp:
@@ -373,10 +373,10 @@ items:
   example: []
   syntax:
     content: public bool DeleteAll()
+    content.vb: Public Function DeleteAll As Boolean
     return:
       type: System.Boolean
       description: bool indicating success
-    content.vb: Public Function DeleteAll As Boolean
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll*
   nameWithType.vb: AbstractStringDataStore(Of T).DeleteAll()
   modifiers.csharp:
@@ -404,10 +404,10 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public void Delete(T toDelete)
+    content.vb: Public Sub Delete(toDelete As T)
     parameters:
     - id: toDelete
       type: '{T}'
-    content.vb: Public Sub Delete(toDelete As T)
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete*
   nameWithType.vb: AbstractStringDataStore(Of T).Delete(T)
   modifiers.csharp:
@@ -437,13 +437,13 @@ items:
   example: []
   syntax:
     content: public string GetSavePath(T objectToSave)
+    content.vb: Public Function GetSavePath(objectToSave As T) As String
     parameters:
     - id: objectToSave
       type: '{T}'
     return:
       type: System.String
       description: ''
-    content.vb: Public Function GetSavePath(objectToSave As T) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath*
   nameWithType.vb: AbstractStringDataStore(Of T).GetSavePath(T)
   modifiers.csharp:
@@ -473,6 +473,7 @@ items:
   example: []
   syntax:
     content: public static byte[] GetHash(string inputString)
+    content.vb: Public Shared Function GetHash(inputString As String) As Byte()
     parameters:
     - id: inputString
       type: System.String
@@ -480,7 +481,6 @@ items:
     return:
       type: System.Byte[]
       description: ''
-    content.vb: Public Shared Function GetHash(inputString As String) As Byte()
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash*
   nameWithType.vb: AbstractStringDataStore(Of T).GetHash(String)
   modifiers.csharp:
@@ -512,6 +512,7 @@ items:
   example: []
   syntax:
     content: public static string GetHashString(string inputString)
+    content.vb: Public Shared Function GetHashString(inputString As String) As String
     parameters:
     - id: inputString
       type: System.String
@@ -519,7 +520,6 @@ items:
     return:
       type: System.String
       description: ''
-    content.vb: Public Shared Function GetHashString(inputString As String) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString*
   nameWithType.vb: AbstractStringDataStore(Of T).GetHashString(String)
   modifiers.csharp:

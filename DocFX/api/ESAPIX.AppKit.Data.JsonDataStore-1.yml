@@ -25,11 +25,11 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: 'public class JsonDataStore<T> : AbstractStringDataStore<T>'
-    typeParameters:
-    - id: T
     content.vb: >-
       Public Class JsonDataStore(Of T)
           Inherits AbstractStringDataStore(Of T)
+    typeParameters:
+    - id: T
   inheritance:
   - System.Object
   - ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}
@@ -79,6 +79,7 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public JsonDataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "")
+    content.vb: Public Sub New(fileExtension As String, fileNamingMethod As Func(Of T, String), storePath As String = "")
     parameters:
     - id: fileExtension
       type: System.String
@@ -86,7 +87,6 @@ items:
       type: System.Func{{T},System.String}
     - id: storePath
       type: System.String
-    content.vb: Public Sub New(fileExtension As String, fileNamingMethod As Func(Of T, String), storePath As String = "")
   overload: ESAPIX.AppKit.Data.JsonDataStore`1.#ctor*
   nameWithType.vb: JsonDataStore(Of T).JsonDataStore(String, Func(Of T, String), String)
   modifiers.csharp:
@@ -115,12 +115,12 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public override SecureStorage<T> Deserialize(string serial)
+    content.vb: Public Overrides Function Deserialize(serial As String) As SecureStorage(Of T)
     parameters:
     - id: serial
       type: System.String
     return:
       type: ESAPIX.AppKit.Data.SecureStorage{{T}}
-    content.vb: Public Overrides Function Deserialize(serial As String) As SecureStorage(Of T)
   overridden: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Deserialize(System.String)
   overload: ESAPIX.AppKit.Data.JsonDataStore`1.Deserialize*
   nameWithType.vb: JsonDataStore(Of T).Deserialize(String)
@@ -151,12 +151,12 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public override string Serialize(SecureStorage<T> toSerialize)
+    content.vb: Public Overrides Function Serialize(toSerialize As SecureStorage(Of T)) As String
     parameters:
     - id: toSerialize
       type: ESAPIX.AppKit.Data.SecureStorage{{T}}
     return:
       type: System.String
-    content.vb: Public Overrides Function Serialize(toSerialize As SecureStorage(Of T)) As String
   overridden: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Serialize(ESAPIX.AppKit.Data.SecureStorage{{T}})
   overload: ESAPIX.AppKit.Data.JsonDataStore`1.Serialize*
   nameWithType.vb: JsonDataStore(Of T).Serialize(SecureStorage(Of T))
@@ -188,12 +188,12 @@ items:
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public override string Serialize(T toSerialize)
+    content.vb: Public Overrides Function Serialize(toSerialize As T) As String
     parameters:
     - id: toSerialize
       type: '{T}'
     return:
       type: System.String
-    content.vb: Public Overrides Function Serialize(toSerialize As T) As String
   overridden: ESAPIX.AppKit.Data.AbstractStringDataStore{{T}}.Serialize({T})
   overload: ESAPIX.AppKit.Data.JsonDataStore`1.Serialize*
   nameWithType.vb: JsonDataStore(Of T).Serialize(T)

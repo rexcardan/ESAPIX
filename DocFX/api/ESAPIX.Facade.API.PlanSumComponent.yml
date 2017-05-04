@@ -103,10 +103,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSumComponent(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.PlanSumComponent.#ctor*
   modifiers.csharp:
   - public
@@ -132,10 +132,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.PlanSumComponent.IsLive*
   modifiers.csharp:
   - public
@@ -163,10 +163,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PlanSetupId { get; set; }
+    content.vb: Public Property PlanSetupId As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PlanSetupId As String
   overload: ESAPIX.Facade.API.PlanSumComponent.PlanSetupId*
   modifiers.csharp:
   - public
@@ -194,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSumOperation PlanSumOperation { get; set; }
+    content.vb: Public Property PlanSumOperation As PlanSumOperation
     parameters: []
     return:
       type: PlanSumOperation
-    content.vb: Public Property PlanSumOperation As PlanSumOperation
   overload: ESAPIX.Facade.API.PlanSumComponent.PlanSumOperation*
   modifiers.csharp:
   - public
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PlanWeight { get; set; }
+    content.vb: Public Property PlanWeight As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property PlanWeight As Double
   overload: ESAPIX.Facade.API.PlanSumComponent.PlanWeight*
   modifiers.csharp:
   - public
@@ -256,10 +256,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.PlanSumComponent.WriteXml*
   modifiers.csharp:
   - public

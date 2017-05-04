@@ -68,6 +68,7 @@ items:
   example: []
   syntax:
     content: public static MayoQuery Read(string query)
+    content.vb: Public Shared Function Read(query As String) As MayoQuery
     parameters:
     - id: query
       type: System.String
@@ -75,7 +76,6 @@ items:
     return:
       type: ESAPIX.DVH.Query.MayoQuery
       description: the MayoQuery condensed object for programmatic use
-    content.vb: Public Shared Function Read(query As String) As MayoQuery
   overload: ESAPIX.DVH.Query.MayoQueryReader.Read*
   modifiers.csharp:
   - public
@@ -105,6 +105,7 @@ items:
   example: []
   syntax:
     content: public static double ReadQueryValue(string query)
+    content.vb: Public Shared Function ReadQueryValue(query As String) As Double
     parameters:
     - id: query
       type: System.String
@@ -112,7 +113,6 @@ items:
     return:
       type: System.Double
       description: the numerical queried value, the x in Dxcc[Gy]
-    content.vb: Public Shared Function ReadQueryValue(query As String) As Double
   overload: ESAPIX.DVH.Query.MayoQueryReader.ReadQueryValue*
   modifiers.csharp:
   - public
@@ -140,12 +140,12 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static bool IsValid(string query)
+    content.vb: Public Shared Function IsValid(query As String) As Boolean
     parameters:
     - id: query
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Shared Function IsValid(query As String) As Boolean
   overload: ESAPIX.DVH.Query.MayoQueryReader.IsValid*
   modifiers.csharp:
   - public
@@ -173,12 +173,12 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static QueryType ReadQueryType(string query)
+    content.vb: Public Shared Function ReadQueryType(query As String) As QueryType
     parameters:
     - id: query
       type: System.String
     return:
       type: ESAPIX.DVH.Query.QueryType
-    content.vb: Public Shared Function ReadQueryType(query As String) As QueryType
   overload: ESAPIX.DVH.Query.MayoQueryReader.ReadQueryType*
   modifiers.csharp:
   - public
@@ -206,12 +206,12 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static Units ReadQueryUnits(string query)
+    content.vb: Public Shared Function ReadQueryUnits(query As String) As Units
     parameters:
     - id: query
       type: System.String
     return:
       type: ESAPIX.DVH.Query.Units
-    content.vb: Public Shared Function ReadQueryUnits(query As String) As Units
   overload: ESAPIX.DVH.Query.MayoQueryReader.ReadQueryUnits*
   modifiers.csharp:
   - public
@@ -239,12 +239,12 @@ items:
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static Units ReadUnitsDesired(string query)
+    content.vb: Public Shared Function ReadUnitsDesired(query As String) As Units
     parameters:
     - id: query
       type: System.String
     return:
       type: ESAPIX.DVH.Query.Units
-    content.vb: Public Shared Function ReadUnitsDesired(query As String) As Units
   overload: ESAPIX.DVH.Query.MayoQueryReader.ReadUnitsDesired*
   modifiers.csharp:
   - public

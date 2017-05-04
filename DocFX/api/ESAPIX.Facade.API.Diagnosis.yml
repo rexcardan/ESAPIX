@@ -103,10 +103,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Diagnosis(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Diagnosis.#ctor*
   modifiers.csharp:
   - public
@@ -132,10 +132,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Diagnosis.IsLive*
   modifiers.csharp:
   - public
@@ -163,10 +163,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ClinicalDescription { get; set; }
+    content.vb: Public Property ClinicalDescription As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ClinicalDescription As String
   overload: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
   modifiers.csharp:
   - public
@@ -194,10 +194,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Code { get; set; }
+    content.vb: Public Property Code As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Code As String
   overload: ESAPIX.Facade.API.Diagnosis.Code*
   modifiers.csharp:
   - public
@@ -225,10 +225,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string CodeTable { get; set; }
+    content.vb: Public Property CodeTable As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property CodeTable As String
   overload: ESAPIX.Facade.API.Diagnosis.CodeTable*
   modifiers.csharp:
   - public
@@ -256,10 +256,10 @@ items:
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Diagnosis.WriteXml*
   modifiers.csharp:
   - public
