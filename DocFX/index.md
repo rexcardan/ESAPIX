@@ -10,6 +10,7 @@ Welcome to the [ESAPIX library](https://github.com/rexcardan/ESAPIX/) homepage. 
 ## Getting Started
 * [Supercharging Plugins](articles/scriptBootstrapping.md)
 * [Supercharging WPF Applications](articles/standAloneBootstrapping.md)
+* [YouTube Video Tutorials](articles/videoTutorials.md)
 
 ## Features
 
@@ -29,7 +30,7 @@ Facades are wrappers around the Varian classes which smooth out rough edges for 
 Checkout @facades.md to learn more.
 
 ### IScriptContext Interface
-IScriptContext is a technique used by ESAPIX to abstract the difference between standalone applications and plugin applications. You can build one app that runs whichever way you want, which is great for developement. One of the challenges with developing plugin applications is the need to debug it. IScriptContext is ESAPIX's solution to the problem. Watch a tutorial on how to use IScriptContext [here](https://www.youtube.com/watch?v=6LXhqgt0jT4).
+IScriptContext is a technique used by ESAPIX to abstract the difference between standalone applications and plugin applications. You can build one app that runs whichever way you want, which is great for development. One of the challenges with developing plugin applications is the need to debug it. IScriptContext is ESAPIX's solution to the problem. Watch a tutorial on how to use IScriptContext [here](https://www.youtube.com/watch?v=6LXhqgt0jT4).
 
 ### Robust DVH Constraint Help
 ESAPIX has a lot of code dedicated to helping evaluate DVH metrics. You have the @mayoFormat.md at your disposal to do some complex queries quickly and evaluate the things which are most important.

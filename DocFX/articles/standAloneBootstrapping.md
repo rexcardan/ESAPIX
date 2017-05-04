@@ -1,6 +1,6 @@
 ---
 uid: standAloneBootstrapping.md
-title: Bootstrapping Your Stand Alone App
+title: Bootstrapping Stand Alone App
 ---
 
 # Bootstrapping Your Stand Alone App
