@@ -13,6 +13,7 @@ items:
   - ESAPIX.Facade.API.Catheter.Color
   - ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip(ESAPIX.Facade.API.SourcePosition)
   - ESAPIX.Facade.API.Catheter.GetTotalDwellTime
+  - ESAPIX.Facade.API.Catheter.IsLive
   - ESAPIX.Facade.API.Catheter.Shape
   - ESAPIX.Facade.API.Catheter.SourcePositions
   - ESAPIX.Facade.API.Catheter.StepSize
@@ -28,7 +29,7 @@ items:
   source:
     id: Catheter
     path: ''
-    startLine: 6640
+    startLine: 7259
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -77,7 +78,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6642
+    startLine: 7261
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -103,21 +104,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6643
+    startLine: 7266
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Catheter(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Catheter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Catheter.IsLive
+  commentId: P:ESAPIX.Facade.API.Catheter.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Catheter
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Catheter.IsLive
+  fullName: ESAPIX.Facade.API.Catheter.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 7271
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.Catheter.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Catheter.ApplicatorLength
   commentId: P:ESAPIX.Facade.API.Catheter.ApplicatorLength
   id: ApplicatorLength
@@ -132,16 +164,16 @@ items:
   source:
     id: ApplicatorLength
     path: ''
-    startLine: 6644
+    startLine: 7276
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ApplicatorLength { get; set; }
+    content.vb: Public Property ApplicatorLength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property ApplicatorLength As Double
   overload: ESAPIX.Facade.API.Catheter.ApplicatorLength*
   modifiers.csharp:
   - public
@@ -163,16 +195,16 @@ items:
   source:
     id: BrachySolidApplicatorPartID
     path: ''
-    startLine: 6657
+    startLine: 7293
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int BrachySolidApplicatorPartID { get; set; }
+    content.vb: Public Property BrachySolidApplicatorPartID As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property BrachySolidApplicatorPartID As Integer
   overload: ESAPIX.Facade.API.Catheter.BrachySolidApplicatorPartID*
   modifiers.csharp:
   - public
@@ -194,16 +226,16 @@ items:
   source:
     id: ChannelNumber
     path: ''
-    startLine: 6670
+    startLine: 7313
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int ChannelNumber { get; set; }
+    content.vb: Public Property ChannelNumber As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property ChannelNumber As Integer
   overload: ESAPIX.Facade.API.Catheter.ChannelNumber*
   modifiers.csharp:
   - public
@@ -225,16 +257,16 @@ items:
   source:
     id: Color
     path: ''
-    startLine: 6683
+    startLine: 7330
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Color Color { get; set; }
+    content.vb: Public Property Color As Windows.Media.Color
     parameters: []
     return:
       type: System.Windows.Media.Color
-    content.vb: Public Property Color As Windows.Media.Color
   overload: ESAPIX.Facade.API.Catheter.Color*
   modifiers.csharp:
   - public
@@ -256,16 +288,16 @@ items:
   source:
     id: Shape
     path: ''
-    startLine: 6696
+    startLine: 7350
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector[] Shape { get; set; }
+    content.vb: Public Property Shape As VVector()
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.VVector[]
-    content.vb: Public Property Shape As VVector()
+      type: VVector[]
   overload: ESAPIX.Facade.API.Catheter.Shape*
   modifiers.csharp:
   - public
@@ -287,23 +319,23 @@ items:
   source:
     id: SourcePositions
     path: ''
-    startLine: 6709
+    startLine: 7365
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<SourcePosition> SourcePositions { get; }
+    content: public IEnumerable<SourcePosition> SourcePositions { get; set; }
+    content.vb: Public Property SourcePositions As IEnumerable(Of SourcePosition)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.SourcePosition}
-    content.vb: Public ReadOnly Property SourcePositions As IEnumerable(Of SourcePosition)
+      type: IEnumerable{ESAPIX.Facade.API.SourcePosition}
   overload: ESAPIX.Facade.API.Catheter.SourcePositions*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Catheter.StepSize
   commentId: P:ESAPIX.Facade.API.Catheter.StepSize
   id: StepSize
@@ -318,16 +350,16 @@ items:
   source:
     id: StepSize
     path: ''
-    startLine: 6735
+    startLine: 7403
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double StepSize { get; set; }
+    content.vb: Public Property StepSize As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property StepSize As Double
   overload: ESAPIX.Facade.API.Catheter.StepSize*
   modifiers.csharp:
   - public
@@ -349,16 +381,16 @@ items:
   source:
     id: TreatmentUnit
     path: ''
-    startLine: 6748
+    startLine: 7418
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachyTreatmentUnit TreatmentUnit { get; set; }
+    content.vb: Public Property TreatmentUnit As BrachyTreatmentUnit
     parameters: []
     return:
       type: ESAPIX.Facade.API.BrachyTreatmentUnit
-    content.vb: Public Property TreatmentUnit As BrachyTreatmentUnit
   overload: ESAPIX.Facade.API.Catheter.TreatmentUnit*
   modifiers.csharp:
   - public
@@ -380,16 +412,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6761
+    startLine: 7439
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Catheter.WriteXml*
   modifiers.csharp:
   - public
@@ -409,18 +441,18 @@ items:
   source:
     id: GetSourcePosCenterDistanceFromTip
     path: ''
-    startLine: 6770
+    startLine: 7445
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double GetSourcePosCenterDistanceFromTip(SourcePosition sourcePosition)
+    content.vb: Public Function GetSourcePosCenterDistanceFromTip(sourcePosition As SourcePosition) As Double
     parameters:
     - id: sourcePosition
       type: ESAPIX.Facade.API.SourcePosition
     return:
       type: System.Double
-    content.vb: Public Function GetSourcePosCenterDistanceFromTip(sourcePosition As SourcePosition) As Double
   overload: ESAPIX.Facade.API.Catheter.GetSourcePosCenterDistanceFromTip*
   modifiers.csharp:
   - public
@@ -440,15 +472,15 @@ items:
   source:
     id: GetTotalDwellTime
     path: ''
-    startLine: 6777
+    startLine: 7455
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double GetTotalDwellTime()
+    content.vb: Public Function GetTotalDwellTime As Double
     return:
       type: System.Double
-    content.vb: Public Function GetTotalDwellTime As Double
   overload: ESAPIX.Facade.API.Catheter.GetTotalDwellTime*
   modifiers.csharp:
   - public
@@ -899,6 +931,19 @@ references:
   name: Catheter
   nameWithType: Catheter.Catheter
   fullName: ESAPIX.Facade.API.Catheter.Catheter
+- uid: ESAPIX.Facade.API.Catheter.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Catheter.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Catheter.IsLive
+  fullName: ESAPIX.Facade.API.Catheter.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Catheter.ApplicatorLength*
   commentId: Overload:ESAPIX.Facade.API.Catheter.ApplicatorLength
   isExternal: false
@@ -948,26 +993,28 @@ references:
   name: Shape
   nameWithType: Catheter.Shape
   fullName: ESAPIX.Facade.API.Catheter.Shape
-- uid: ESAPIX.Facade.Types.VVector[]
+- uid: VVector[]
   name: VVector[]
   nameWithType: VVector[]
-  fullName: ESAPIX.Facade.Types.VVector[]
+  fullName: VVector[]
   nameWithType.vb: VVector()
-  fullName.vb: ESAPIX.Facade.Types.VVector()
+  fullName.vb: VVector()
   name.vb: VVector()
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.VVector
+  - uid: VVector
     name: VVector
     nameWithType: VVector
-    fullName: ESAPIX.Facade.Types.VVector
+    fullName: VVector
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
@@ -977,21 +1024,20 @@ references:
   name: SourcePositions
   nameWithType: Catheter.SourcePositions
   fullName: ESAPIX.Facade.API.Catheter.SourcePositions
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.SourcePosition}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.SourcePosition}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.SourcePosition}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.SourcePosition}'
+  definition: IEnumerable`1
   name: IEnumerable<SourcePosition>
   nameWithType: IEnumerable<SourcePosition>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.SourcePosition>
+  fullName: IEnumerable<ESAPIX.Facade.API.SourcePosition>
   nameWithType.vb: IEnumerable(Of SourcePosition)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.SourcePosition)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.SourcePosition)
   name.vb: IEnumerable(Of SourcePosition)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1004,10 +1050,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1019,51 +1065,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.Catheter.StepSize*
   commentId: Overload:ESAPIX.Facade.API.Catheter.StepSize
   isExternal: false

@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.Wedge.#ctor
   - ESAPIX.Facade.API.Wedge.#ctor(System.Object)
   - ESAPIX.Facade.API.Wedge.Direction
+  - ESAPIX.Facade.API.Wedge.IsLive
   - ESAPIX.Facade.API.Wedge.WedgeAngle
   - ESAPIX.Facade.API.Wedge.WriteXml(System.Xml.XmlWriter)
   langs:
@@ -20,7 +21,7 @@ items:
   source:
     id: Wedge
     path: ''
-    startLine: 13164
+    startLine: 16200
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -71,7 +72,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13166
+    startLine: 16202
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,21 +98,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13167
+    startLine: 16207
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Wedge(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Wedge.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Wedge.IsLive
+  commentId: P:ESAPIX.Facade.API.Wedge.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Wedge
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Wedge.IsLive
+  fullName: ESAPIX.Facade.API.Wedge.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 16212
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.Wedge.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Wedge.Direction
   commentId: P:ESAPIX.Facade.API.Wedge.Direction
   id: Direction
@@ -126,16 +158,16 @@ items:
   source:
     id: Direction
     path: ''
-    startLine: 13168
+    startLine: 16217
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Direction { get; set; }
+    content.vb: Public Property Direction As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Direction As Double
   overload: ESAPIX.Facade.API.Wedge.Direction*
   modifiers.csharp:
   - public
@@ -157,16 +189,16 @@ items:
   source:
     id: WedgeAngle
     path: ''
-    startLine: 13181
+    startLine: 16232
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double WedgeAngle { get; set; }
+    content.vb: Public Property WedgeAngle As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property WedgeAngle As Double
   overload: ESAPIX.Facade.API.Wedge.WedgeAngle*
   modifiers.csharp:
   - public
@@ -188,16 +220,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 13194
+    startLine: 16247
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Wedge.WriteXml*
   modifiers.csharp:
   - public
@@ -662,6 +694,19 @@ references:
   name: Wedge
   nameWithType: Wedge.Wedge
   fullName: ESAPIX.Facade.API.Wedge.Wedge
+- uid: ESAPIX.Facade.API.Wedge.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Wedge.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Wedge.IsLive
+  fullName: ESAPIX.Facade.API.Wedge.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Wedge.Direction*
   commentId: Overload:ESAPIX.Facade.API.Wedge.Direction
   isExternal: false

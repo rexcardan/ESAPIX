@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.OptimizerDVH.#ctor
   - ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizerDVH.CurveData
+  - ESAPIX.Facade.API.OptimizerDVH.IsLive
   - ESAPIX.Facade.API.OptimizerDVH.Structure
   langs:
   - csharp
@@ -19,7 +20,7 @@ items:
   source:
     id: OptimizerDVH
     path: ''
-    startLine: 9910
+    startLine: 11707
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -56,7 +57,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9913
+    startLine: 11711
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -82,21 +83,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9914
+    startLine: 11716
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerDVH(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizerDVH.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 11721
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.OptimizerDVH.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizerDVH.CurveData
   commentId: P:ESAPIX.Facade.API.OptimizerDVH.CurveData
   id: CurveData
@@ -111,16 +143,16 @@ items:
   source:
     id: CurveData
     path: ''
-    startLine: 9915
+    startLine: 11726
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DVHPoint[] CurveData { get; set; }
+    content.vb: Public Property CurveData As DVHPoint()
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.DVHPoint[]
-    content.vb: Public Property CurveData As DVHPoint()
+      type: DVHPoint[]
   overload: ESAPIX.Facade.API.OptimizerDVH.CurveData*
   modifiers.csharp:
   - public
@@ -142,16 +174,16 @@ items:
   source:
     id: Structure
     path: ''
-    startLine: 9928
+    startLine: 11743
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Structure Structure { get; set; }
+    content.vb: 'Public Property Structure As '
     parameters: []
     return:
       type: ESAPIX.Facade.API.Structure
-    content.vb: 'Public Property Structure As '
   overload: ESAPIX.Facade.API.OptimizerDVH.Structure*
   modifiers.csharp:
   - public
@@ -464,32 +496,47 @@ references:
   name: OptimizerDVH
   nameWithType: OptimizerDVH.OptimizerDVH
   fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH
+- uid: ESAPIX.Facade.API.OptimizerDVH.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerDVH.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: OptimizerDVH.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerDVH.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizerDVH.CurveData*
   commentId: Overload:ESAPIX.Facade.API.OptimizerDVH.CurveData
   isExternal: false
   name: CurveData
   nameWithType: OptimizerDVH.CurveData
   fullName: ESAPIX.Facade.API.OptimizerDVH.CurveData
-- uid: ESAPIX.Facade.Types.DVHPoint[]
+- uid: DVHPoint[]
   name: DVHPoint[]
   nameWithType: DVHPoint[]
-  fullName: ESAPIX.Facade.Types.DVHPoint[]
+  fullName: DVHPoint[]
   nameWithType.vb: DVHPoint()
-  fullName.vb: ESAPIX.Facade.Types.DVHPoint()
+  fullName.vb: DVHPoint()
   name.vb: DVHPoint()
   spec.csharp:
-  - uid: ESAPIX.Facade.Types.DVHPoint
+  - uid: DVHPoint
     name: DVHPoint
     nameWithType: DVHPoint
-    fullName: ESAPIX.Facade.Types.DVHPoint
+    fullName: DVHPoint
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: ESAPIX.Facade.Types.DVHPoint
+  - uid: DVHPoint
     name: DVHPoint
     nameWithType: DVHPoint
-    fullName: ESAPIX.Facade.Types.DVHPoint
+    fullName: DVHPoint
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()

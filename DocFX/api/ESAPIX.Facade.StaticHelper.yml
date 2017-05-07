@@ -23,7 +23,7 @@ items:
   source:
     id: StaticHelper
     path: ''
-    startLine: 4351
+    startLine: 4263
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
@@ -60,17 +60,116 @@ items:
   source:
     id: CreateApplicationFunc
     path: ''
-    startLine: 4354
+    startLine: 4266
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<string, string, dynamic> CreateApplicationFunc { get; set; }
+    content.vb: Public Shared Property CreateApplicationFunc As Func(Of String, String, Object)
     parameters: []
     return:
       type: System.Func{System.String,System.String,System.Object}
-    content.vb: Public Shared Property CreateApplicationFunc As Func(Of String, String, Object)
   overload: ESAPIX.Facade.StaticHelper.CreateApplicationFunc*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  commentId: P:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  id: SerializableObject_ClearSerializationHistoryAction
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: SerializableObject_ClearSerializationHistoryAction
+  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
+  type: Property
+  source:
+    id: SerializableObject_ClearSerializationHistoryAction
+    path: ''
+    startLine: 4269
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }
+    content.vb: Public Shared Property SerializableObject_ClearSerializationHistoryAction As Action
+    parameters: []
+    return:
+      type: System.Action
+  overload: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  commentId: P:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  id: DoseValue_UndefinedDoseFunc
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: DoseValue_UndefinedDoseFunc
+  nameWithType: StaticHelper.DoseValue_UndefinedDoseFunc
+  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
+  type: Property
+  source:
+    id: DoseValue_UndefinedDoseFunc
+    path: ''
+    startLine: 4272
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Func<dynamic> DoseValue_UndefinedDoseFunc { get; set; }
+    content.vb: Public Shared Property DoseValue_UndefinedDoseFunc As Func(Of Object)
+    parameters: []
+    return:
+      type: System.Func{System.Object}
+  overload: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  commentId: P:ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  id: VVector_DistanceFunc
+  parent: ESAPIX.Facade.StaticHelper
+  langs:
+  - csharp
+  - vb
+  name: VVector_DistanceFunc
+  nameWithType: StaticHelper.VVector_DistanceFunc
+  fullName: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
+  type: Property
+  source:
+    id: VVector_DistanceFunc
+    path: ''
+    startLine: 4275
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade
+  syntax:
+    content: public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; }
+    content.vb: Public Shared Property VVector_DistanceFunc As Func(Of Object, Object, Double)
+    parameters: []
+    return:
+      type: System.Func{System.Object,System.Object,System.Double}
+  overload: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc*
   modifiers.csharp:
   - public
   - static
@@ -93,12 +192,13 @@ items:
   source:
     id: Application_CreateApplication
     path: ''
-    startLine: 4355
+    startLine: 4278
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Application Application_CreateApplication(string username, string password)
+    content.vb: Public Shared Function Application_CreateApplication(username As String, password As String) As Application
     parameters:
     - id: username
       type: System.String
@@ -106,44 +206,10 @@ items:
       type: System.String
     return:
       type: Application
-    content.vb: Public Shared Function Application_CreateApplication(username As String, password As String) As Application
   overload: ESAPIX.Facade.StaticHelper.Application_CreateApplication*
   modifiers.csharp:
   - public
   - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
-  commentId: P:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
-  id: SerializableObject_ClearSerializationHistoryAction
-  parent: ESAPIX.Facade.StaticHelper
-  langs:
-  - csharp
-  - vb
-  name: SerializableObject_ClearSerializationHistoryAction
-  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistoryAction
-  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
-  type: Property
-  source:
-    id: SerializableObject_ClearSerializationHistoryAction
-    path: ''
-    startLine: 4369
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade
-  syntax:
-    content: public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }
-    parameters: []
-    return:
-      type: System.Action
-    content.vb: Public Shared Property SerializableObject_ClearSerializationHistoryAction As Action
-  overload: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction*
-  modifiers.csharp:
-  - public
-  - static
-  - get
-  - set
   modifiers.vb:
   - Public
   - Shared
@@ -161,7 +227,7 @@ items:
   source:
     id: SerializableObject_ClearSerializationHistory
     path: ''
-    startLine: 4370
+    startLine: 4293
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
@@ -172,39 +238,6 @@ items:
   modifiers.csharp:
   - public
   - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
-  commentId: P:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
-  id: DoseValue_UndefinedDoseFunc
-  parent: ESAPIX.Facade.StaticHelper
-  langs:
-  - csharp
-  - vb
-  name: DoseValue_UndefinedDoseFunc
-  nameWithType: StaticHelper.DoseValue_UndefinedDoseFunc
-  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
-  type: Property
-  source:
-    id: DoseValue_UndefinedDoseFunc
-    path: ''
-    startLine: 4379
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade
-  syntax:
-    content: public static Func<dynamic> DoseValue_UndefinedDoseFunc { get; set; }
-    parameters: []
-    return:
-      type: System.Func{System.Object}
-    content.vb: Public Shared Property DoseValue_UndefinedDoseFunc As Func(Of Object)
-  overload: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc*
-  modifiers.csharp:
-  - public
-  - static
-  - get
-  - set
   modifiers.vb:
   - Public
   - Shared
@@ -222,52 +255,19 @@ items:
   source:
     id: DoseValue_UndefinedDose
     path: ''
-    startLine: 4380
+    startLine: 4301
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static DoseValue DoseValue_UndefinedDose()
+    content.vb: Public Shared Function DoseValue_UndefinedDose As DoseValue
     return:
       type: DoseValue
-    content.vb: Public Shared Function DoseValue_UndefinedDose As DoseValue
   overload: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose*
   modifiers.csharp:
   - public
   - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
-  commentId: P:ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
-  id: VVector_DistanceFunc
-  parent: ESAPIX.Facade.StaticHelper
-  langs:
-  - csharp
-  - vb
-  name: VVector_DistanceFunc
-  nameWithType: StaticHelper.VVector_DistanceFunc
-  fullName: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
-  type: Property
-  source:
-    id: VVector_DistanceFunc
-    path: ''
-    startLine: 4388
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade
-  syntax:
-    content: public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; }
-    parameters: []
-    return:
-      type: System.Func{System.Object,System.Object,System.Double}
-    content.vb: Public Shared Property VVector_DistanceFunc As Func(Of Object, Object, Double)
-  overload: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc*
-  modifiers.csharp:
-  - public
-  - static
-  - get
-  - set
   modifiers.vb:
   - Public
   - Shared
@@ -285,12 +285,13 @@ items:
   source:
     id: VVector_Distance
     path: ''
-    startLine: 4389
+    startLine: 4306
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static double VVector_Distance(dynamic client1, dynamic client2)
+    content.vb: Public Shared Function VVector_Distance(client1 As Object, client2 As Object) As Double
     parameters:
     - id: client1
       type: System.Object
@@ -298,7 +299,6 @@ items:
       type: System.Object
     return:
       type: System.Double
-    content.vb: Public Shared Function VVector_Distance(client1 As Object, client2 As Object) As Double
   overload: ESAPIX.Facade.StaticHelper.VVector_Distance*
   modifiers.csharp:
   - public
@@ -744,24 +744,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.StaticHelper.Application_CreateApplication*
-  commentId: Overload:ESAPIX.Facade.StaticHelper.Application_CreateApplication
-  isExternal: false
-  name: Application_CreateApplication
-  nameWithType: StaticHelper.Application_CreateApplication
-  fullName: ESAPIX.Facade.StaticHelper.Application_CreateApplication
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: Application
-  isExternal: true
-  name: Application
-  nameWithType: Application
-  fullName: Application
 - uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction*
   commentId: Overload:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction
   isExternal: false
@@ -775,12 +757,6 @@ references:
   name: Action
   nameWithType: Action
   fullName: System.Action
-- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory*
-  commentId: Overload:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
-  isExternal: false
-  name: SerializableObject_ClearSerializationHistory
-  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistory
-  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
 - uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc*
   commentId: Overload:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc
   isExternal: false
@@ -864,17 +840,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose*
-  commentId: Overload:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
-  isExternal: false
-  name: DoseValue_UndefinedDose
-  nameWithType: StaticHelper.DoseValue_UndefinedDose
-  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
-- uid: DoseValue
-  isExternal: true
-  name: DoseValue
-  nameWithType: DoseValue
-  fullName: DoseValue
 - uid: ESAPIX.Facade.StaticHelper.VVector_DistanceFunc*
   commentId: Overload:ESAPIX.Facade.StaticHelper.VVector_DistanceFunc
   isExternal: false
@@ -945,6 +910,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.StaticHelper.Application_CreateApplication*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.Application_CreateApplication
+  isExternal: false
+  name: Application_CreateApplication
+  nameWithType: StaticHelper.Application_CreateApplication
+  fullName: ESAPIX.Facade.StaticHelper.Application_CreateApplication
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Application
+  isExternal: true
+  name: Application
+  nameWithType: Application
+  fullName: Application
+- uid: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
+  isExternal: false
+  name: SerializableObject_ClearSerializationHistory
+  nameWithType: StaticHelper.SerializableObject_ClearSerializationHistory
+  fullName: ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory
+- uid: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose*
+  commentId: Overload:ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
+  isExternal: false
+  name: DoseValue_UndefinedDose
+  nameWithType: StaticHelper.DoseValue_UndefinedDose
+  fullName: ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose
+- uid: DoseValue
+  isExternal: true
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: DoseValue
 - uid: ESAPIX.Facade.StaticHelper.VVector_Distance*
   commentId: Overload:ESAPIX.Facade.StaticHelper.VVector_Distance
   isExternal: false

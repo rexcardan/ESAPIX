@@ -20,7 +20,7 @@ items:
   source:
     id: AppSettings
     path: ''
-    startLine: 912
+    startLine: 904
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -57,16 +57,16 @@ items:
   source:
     id: Settings
     path: ''
-    startLine: 914
+    startLine: 906
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public Dictionary<string, object> Settings { get; set; }
+    content.vb: Public Property Settings As Dictionary(Of String, Object)
     parameters: []
     return:
-      type: System.Collections.Generic.Dictionary{System.String,System.Object}
-    content.vb: Public Property Settings As Dictionary(Of String, Object)
+      type: Dictionary{System.String,System.Object}
   overload: ESAPIX.AppKit.Data.AppSettings.Settings*
   modifiers.csharp:
   - public
@@ -88,18 +88,18 @@ items:
   source:
     id: Load
     path: ''
-    startLine: 916
+    startLine: 908
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public static AppSettings Load(string settingsPath = "")
+    content.vb: Public Shared Function Load(settingsPath As String = "") As AppSettings
     parameters:
     - id: settingsPath
       type: System.String
     return:
       type: ESAPIX.AppKit.Data.AppSettings
-    content.vb: Public Shared Function Load(settingsPath As String = "") As AppSettings
   overload: ESAPIX.AppKit.Data.AppSettings.Load*
   modifiers.csharp:
   - public
@@ -121,18 +121,18 @@ items:
   source:
     id: Save
     path: ''
-    startLine: 930
+    startLine: 919
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public bool Save(string settingsPath = "")
+    content.vb: Public Function Save(settingsPath As String = "") As Boolean
     parameters:
     - id: settingsPath
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function Save(settingsPath As String = "") As Boolean
   overload: ESAPIX.AppKit.Data.AppSettings.Save*
   modifiers.csharp:
   - public
@@ -152,12 +152,13 @@ items:
   source:
     id: Get
     path: ''
-    startLine: 947
+    startLine: 936
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public T Get<T>(string key)
+    content.vb: Public Function Get(Of T)(key As String) As T
     parameters:
     - id: key
       type: System.String
@@ -165,7 +166,6 @@ items:
     - id: T
     return:
       type: '{T}'
-    content.vb: Public Function Get(Of T)(key As String) As T
   overload: ESAPIX.AppKit.Data.AppSettings.Get*
   nameWithType.vb: AppSettings.Get(Of T)(String)
   modifiers.csharp:
@@ -188,18 +188,18 @@ items:
   source:
     id: Set
     path: ''
-    startLine: 963
+    startLine: 946
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public void Set(string key, object value)
+    content.vb: Public Sub Set(key As String, value As Object)
     parameters:
     - id: key
       type: System.String
     - id: value
       type: System.Object
-    content.vb: Public Sub Set(key As String, value As Object)
   overload: ESAPIX.AppKit.Data.AppSettings.Set*
   modifiers.csharp:
   - public
@@ -510,21 +510,20 @@ references:
   name: Settings
   nameWithType: AppSettings.Settings
   fullName: ESAPIX.AppKit.Data.AppSettings.Settings
-- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Dictionary`2
+- uid: Dictionary{System.String,System.Object}
+  commentId: '!:Dictionary{System.String,System.Object}'
+  definition: Dictionary`2
   name: Dictionary<String, Object>
   nameWithType: Dictionary<String, Object>
-  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  fullName: Dictionary<System.String, System.Object>
   nameWithType.vb: Dictionary(Of String, Object)
-  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  fullName.vb: Dictionary(Of System.String, System.Object)
   name.vb: Dictionary(Of String, Object)
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -546,10 +545,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -570,63 +569,56 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.Dictionary`2
-  commentId: T:System.Collections.Generic.Dictionary`2
+- uid: Dictionary`2
   isExternal: true
-  name: Dictionary<TKey, TValue>
-  nameWithType: Dictionary<TKey, TValue>
-  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
-  nameWithType.vb: Dictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
-  name.vb: Dictionary(Of TKey, TValue)
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.AppKit.Data.AppSettings.Load*
   commentId: Overload:ESAPIX.AppKit.Data.AppSettings.Load
   isExternal: false

@@ -17,7 +17,7 @@ items:
   source:
     id: Logger
     path: ''
-    startLine: 15436
+    startLine: 16736
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Logging
@@ -54,15 +54,15 @@ items:
   source:
     id: LogRequested
     path: ''
-    startLine: 15440
+    startLine: 16740
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Logging
   syntax:
     content: public event Logger.LogHandler LogRequested
+    content.vb: Public Event LogRequested As Logger.LogHandler
     return:
       type: ESAPIX.Logging.Logger.LogHandler
-    content.vb: Public Event LogRequested As Logger.LogHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -81,18 +81,18 @@ items:
   source:
     id: Log
     path: ''
-    startLine: 15442
+    startLine: 16742
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Logging
   syntax:
     content: public void Log(string toLogMessage, params object[] args)
+    content.vb: Public Sub Log(toLogMessage As String, ParamArray args As Object())
     parameters:
     - id: toLogMessage
       type: System.String
     - id: args
       type: System.Object[]
-    content.vb: Public Sub Log(toLogMessage As String, ParamArray args As Object())
   overload: ESAPIX.Logging.Logger.Log*
   nameWithType.vb: Logger.Log(String, Object())
   modifiers.csharp:

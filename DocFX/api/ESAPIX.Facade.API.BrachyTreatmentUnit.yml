@@ -10,6 +10,7 @@ items:
   - ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   - ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution
   - ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource
+  - ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
   - ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface
   - ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel
   - ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel
@@ -35,7 +36,7 @@ items:
   source:
     id: BrachyTreatmentUnit
     path: ''
-    startLine: 6372
+    startLine: 6883
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -84,7 +85,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6374
+    startLine: 6885
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -110,21 +111,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6375
+    startLine: 6890
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachyTreatmentUnit(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BrachyTreatmentUnit
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BrachyTreatmentUnit.IsLive
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 6895
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   commentId: P:ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   id: DoseRateMode
@@ -139,16 +171,16 @@ items:
   source:
     id: DoseRateMode
     path: ''
-    startLine: 6376
+    startLine: 6900
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string DoseRateMode { get; set; }
+    content.vb: Public Property DoseRateMode As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property DoseRateMode As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode*
   modifiers.csharp:
   - public
@@ -170,16 +202,16 @@ items:
   source:
     id: DwellTimeResolution
     path: ''
-    startLine: 6389
+    startLine: 6917
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DwellTimeResolution { get; set; }
+    content.vb: Public Property DwellTimeResolution As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property DwellTimeResolution As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.DwellTimeResolution*
   modifiers.csharp:
   - public
@@ -201,16 +233,16 @@ items:
   source:
     id: MachineInterface
     path: ''
-    startLine: 6402
+    startLine: 6934
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineInterface { get; set; }
+    content.vb: Public Property MachineInterface As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineInterface As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineInterface*
   modifiers.csharp:
   - public
@@ -232,16 +264,16 @@ items:
   source:
     id: MachineModel
     path: ''
-    startLine: 6415
+    startLine: 6951
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineModel { get; set; }
+    content.vb: Public Property MachineModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineModel As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MachineModel*
   modifiers.csharp:
   - public
@@ -263,16 +295,16 @@ items:
   source:
     id: MaxDwellTimePerChannel
     path: ''
-    startLine: 6428
+    startLine: 6968
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaxDwellTimePerChannel { get; set; }
+    content.vb: Public Property MaxDwellTimePerChannel As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaxDwellTimePerChannel As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerChannel*
   modifiers.csharp:
   - public
@@ -294,16 +326,16 @@ items:
   source:
     id: MaxDwellTimePerPos
     path: ''
-    startLine: 6441
+    startLine: 6986
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaxDwellTimePerPos { get; set; }
+    content.vb: Public Property MaxDwellTimePerPos As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaxDwellTimePerPos As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerPos*
   modifiers.csharp:
   - public
@@ -325,16 +357,16 @@ items:
   source:
     id: MaxDwellTimePerTreatment
     path: ''
-    startLine: 6454
+    startLine: 7003
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaxDwellTimePerTreatment { get; set; }
+    content.vb: Public Property MaxDwellTimePerTreatment As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaxDwellTimePerTreatment As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaxDwellTimePerTreatment*
   modifiers.csharp:
   - public
@@ -356,16 +388,16 @@ items:
   source:
     id: MaximumChannelLength
     path: ''
-    startLine: 6467
+    startLine: 7023
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaximumChannelLength { get; set; }
+    content.vb: Public Property MaximumChannelLength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaximumChannelLength As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumChannelLength*
   modifiers.csharp:
   - public
@@ -387,16 +419,16 @@ items:
   source:
     id: MaximumDwellPositionsPerChannel
     path: ''
-    startLine: 6480
+    startLine: 7040
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int MaximumDwellPositionsPerChannel { get; set; }
+    content.vb: Public Property MaximumDwellPositionsPerChannel As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property MaximumDwellPositionsPerChannel As Integer
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumDwellPositionsPerChannel*
   modifiers.csharp:
   - public
@@ -418,16 +450,16 @@ items:
   source:
     id: MaximumStepSize
     path: ''
-    startLine: 6493
+    startLine: 7060
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MaximumStepSize { get; set; }
+    content.vb: Public Property MaximumStepSize As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MaximumStepSize As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MaximumStepSize*
   modifiers.csharp:
   - public
@@ -449,16 +481,16 @@ items:
   source:
     id: MinimumChannelLength
     path: ''
-    startLine: 6506
+    startLine: 7077
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MinimumChannelLength { get; set; }
+    content.vb: Public Property MinimumChannelLength As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MinimumChannelLength As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumChannelLength*
   modifiers.csharp:
   - public
@@ -480,16 +512,16 @@ items:
   source:
     id: MinimumStepSize
     path: ''
-    startLine: 6519
+    startLine: 7094
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MinimumStepSize { get; set; }
+    content.vb: Public Property MinimumStepSize As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property MinimumStepSize As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.MinimumStepSize*
   modifiers.csharp:
   - public
@@ -511,16 +543,16 @@ items:
   source:
     id: NumberOfChannels
     path: ''
-    startLine: 6532
+    startLine: 7111
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int NumberOfChannels { get; set; }
+    content.vb: Public Property NumberOfChannels As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property NumberOfChannels As Integer
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.NumberOfChannels*
   modifiers.csharp:
   - public
@@ -542,16 +574,16 @@ items:
   source:
     id: SourceCenterOffsetFromTip
     path: ''
-    startLine: 6545
+    startLine: 7128
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SourceCenterOffsetFromTip { get; set; }
+    content.vb: Public Property SourceCenterOffsetFromTip As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SourceCenterOffsetFromTip As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceCenterOffsetFromTip*
   modifiers.csharp:
   - public
@@ -573,16 +605,16 @@ items:
   source:
     id: SourceMovementType
     path: ''
-    startLine: 6558
+    startLine: 7148
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SourceMovementType { get; set; }
+    content.vb: Public Property SourceMovementType As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SourceMovementType As String
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.SourceMovementType*
   modifiers.csharp:
   - public
@@ -604,16 +636,16 @@ items:
   source:
     id: StepSizeResolution
     path: ''
-    startLine: 6571
+    startLine: 7165
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double StepSizeResolution { get; set; }
+    content.vb: Public Property StepSizeResolution As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property StepSizeResolution As Double
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.StepSizeResolution*
   modifiers.csharp:
   - public
@@ -635,16 +667,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6584
+    startLine: 7182
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.WriteXml*
   modifiers.csharp:
   - public
@@ -664,15 +696,15 @@ items:
   source:
     id: GetActiveRadioactiveSource
     path: ''
-    startLine: 6593
+    startLine: 7188
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public RadioactiveSource GetActiveRadioactiveSource()
+    content.vb: Public Function GetActiveRadioactiveSource As RadioactiveSource
     return:
       type: ESAPIX.Facade.API.RadioactiveSource
-    content.vb: Public Function GetActiveRadioactiveSource As RadioactiveSource
   overload: ESAPIX.Facade.API.BrachyTreatmentUnit.GetActiveRadioactiveSource*
   modifiers.csharp:
   - public
@@ -1123,6 +1155,19 @@ references:
   name: BrachyTreatmentUnit
   nameWithType: BrachyTreatmentUnit.BrachyTreatmentUnit
   fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.BrachyTreatmentUnit
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: BrachyTreatmentUnit.IsLive
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode*
   commentId: Overload:ESAPIX.Facade.API.BrachyTreatmentUnit.DoseRateMode
   isExternal: false

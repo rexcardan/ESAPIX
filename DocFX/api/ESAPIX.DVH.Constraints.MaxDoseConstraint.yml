@@ -17,7 +17,7 @@ items:
   source:
     id: MaxDoseConstraint
     path: ''
-    startLine: 2173
+    startLine: 2174
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -36,16 +36,16 @@ items:
   inheritedMembers:
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureName
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.ConstraintDose
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.CanConstrain(PlanningItem)
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetStructures(PlanningItem)
-  - ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
@@ -72,18 +72,18 @@ items:
   source:
     id: Constrain
     path: ''
-    startLine: 2175
+    startLine: 2176
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override ConstraintResult Constrain(PlanningItem pi)
+    content.vb: Public Overrides Function Constrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Overrides Function Constrain(pi As PlanningItem) As ConstraintResult
   overridden: ESAPIX.DVH.Constraints.DoseStructureConstraint.Constrain(PlanningItem)
   overload: ESAPIX.DVH.Constraints.MaxDoseConstraint.Constrain*
   modifiers.csharp:
@@ -106,15 +106,15 @@ items:
   source:
     id: ToString
     path: ''
-    startLine: 2190
+    startLine: 2193
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
   overload: ESAPIX.DVH.Constraints.MaxDoseConstraint.ToString*
   modifiers.csharp:
@@ -172,20 +172,6 @@ references:
   name: ConstraintDose
   nameWithType: DoseStructureConstraint.ConstraintDose
   fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.ConstraintDose
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  isExternal: false
-  name: Name
-  nameWithType: DoseStructureConstraint.Name
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  isExternal: false
-  name: FullName
-  nameWithType: DoseStructureConstraint.FullName
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
   commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Dose
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
@@ -200,6 +186,27 @@ references:
   name: Unit
   nameWithType: DoseStructureConstraint.Unit
   fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Unit
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  isExternal: false
+  name: StructureNames
+  nameWithType: DoseStructureConstraint.StructureNames
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  isExternal: false
+  name: Name
+  nameWithType: DoseStructureConstraint.Name
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.Name
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
+  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
+  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
+  isExternal: false
+  name: FullName
+  nameWithType: DoseStructureConstraint.FullName
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.FullName
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.Priority
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
@@ -246,13 +253,35 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
-  commentId: P:ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
   isExternal: false
-  name: StructureNames
-  nameWithType: DoseStructureConstraint.StructureNames
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.StructureNames
+  name: GetFailedResultType()
+  nameWithType: DoseStructureConstraint.GetFailedResultType()
+  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType()
+  spec.csharp:
+  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+    name: GetFailedResultType
+    nameWithType: DoseStructureConstraint.GetFailedResultType
+    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+    name: GetFailedResultType
+    nameWithType: DoseStructureConstraint.GetFailedResultType
+    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetMergedDVH(PlanningItem)
   parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
@@ -328,35 +357,6 @@ references:
     nameWithType: PlanningItem
     fullName: PlanningItem
     isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  commentId: M:ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  parent: ESAPIX.DVH.Constraints.DoseStructureConstraint
-  isExternal: false
-  name: GetFailedResultType()
-  nameWithType: DoseStructureConstraint.GetFailedResultType()
-  fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType()
-  spec.csharp:
-  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-    name: GetFailedResultType
-    nameWithType: DoseStructureConstraint.GetFailedResultType
-    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-    name: GetFailedResultType
-    nameWithType: DoseStructureConstraint.GetFailedResultType
-    fullName: ESAPIX.DVH.Constraints.DoseStructureConstraint.GetFailedResultType
-  - name: (
-    nameWithType: (
-    fullName: (
   - name: )
     nameWithType: )
     fullName: )

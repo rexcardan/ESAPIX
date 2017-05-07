@@ -8,7 +8,8 @@ items:
   - ESAPIX.Facade.API.SegmentVolume.#ctor
   - ESAPIX.Facade.API.SegmentVolume.#ctor(System.Object)
   - ESAPIX.Facade.API.SegmentVolume.And(ESAPIX.Facade.API.SegmentVolume)
-  - ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+  - ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
+  - ESAPIX.Facade.API.SegmentVolume.IsLive
   - ESAPIX.Facade.API.SegmentVolume.Margin(System.Double)
   - ESAPIX.Facade.API.SegmentVolume.Not
   - ESAPIX.Facade.API.SegmentVolume.Or(ESAPIX.Facade.API.SegmentVolume)
@@ -25,7 +26,7 @@ items:
   source:
     id: SegmentVolume
     path: ''
-    startLine: 12163
+    startLine: 14859
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12165
+    startLine: 14861
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,21 +95,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12166
+    startLine: 14866
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.SegmentVolume.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.SegmentVolume.IsLive
+  commentId: P:ESAPIX.Facade.API.SegmentVolume.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.SegmentVolume
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: SegmentVolume.IsLive
+  fullName: ESAPIX.Facade.API.SegmentVolume.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 14871
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.SegmentVolume.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.SegmentVolume.WriteXml(System.Xml.XmlWriter)
   commentId: M:ESAPIX.Facade.API.SegmentVolume.WriteXml(System.Xml.XmlWriter)
   id: WriteXml(System.Xml.XmlWriter)
@@ -123,16 +155,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 12167
+    startLine: 14876
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.SegmentVolume.WriteXml*
   modifiers.csharp:
   - public
@@ -152,49 +184,49 @@ items:
   source:
     id: And
     path: ''
-    startLine: 12176
+    startLine: 14882
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume And(SegmentVolume other)
+    content.vb: Public Function And(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function And(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.SegmentVolume.And*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
-  commentId: M:ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
-  id: AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+- uid: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
+  commentId: M:ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
+  id: AsymmetricMargin(AxisAlignedMargins)
   parent: ESAPIX.Facade.API.SegmentVolume
   langs:
   - csharp
   - vb
   name: AsymmetricMargin(AxisAlignedMargins)
   nameWithType: SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
-  fullName: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(ESAPIX.Facade.Types.AxisAlignedMargins)
+  fullName: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin(AxisAlignedMargins)
   type: Method
   source:
     id: AsymmetricMargin
     path: ''
-    startLine: 12183
+    startLine: 14892
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
+    content.vb: Public Function AsymmetricMargin(margins As AxisAlignedMargins) As SegmentVolume
     parameters:
     - id: margins
-      type: ESAPIX.Facade.Types.AxisAlignedMargins
+      type: AxisAlignedMargins
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function AsymmetricMargin(margins As AxisAlignedMargins) As SegmentVolume
   overload: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin*
   modifiers.csharp:
   - public
@@ -214,18 +246,18 @@ items:
   source:
     id: Margin
     path: ''
-    startLine: 12190
+    startLine: 14902
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Margin(double marginInMM)
+    content.vb: Public Function Margin(marginInMM As Double) As SegmentVolume
     parameters:
     - id: marginInMM
       type: System.Double
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Margin(marginInMM As Double) As SegmentVolume
   overload: ESAPIX.Facade.API.SegmentVolume.Margin*
   modifiers.csharp:
   - public
@@ -245,15 +277,15 @@ items:
   source:
     id: Not
     path: ''
-    startLine: 12197
+    startLine: 14912
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Not()
+    content.vb: Public Function Not As SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Not As SegmentVolume
   overload: ESAPIX.Facade.API.SegmentVolume.Not*
   modifiers.csharp:
   - public
@@ -273,18 +305,18 @@ items:
   source:
     id: Or
     path: ''
-    startLine: 12204
+    startLine: 14919
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Or(SegmentVolume other)
+    content.vb: Public Function Or(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Or(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.SegmentVolume.Or*
   modifiers.csharp:
   - public
@@ -304,18 +336,18 @@ items:
   source:
     id: Sub
     path: ''
-    startLine: 12211
+    startLine: 14929
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Sub(SegmentVolume other)
+    content.vb: Public Function Sub(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Sub(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.SegmentVolume.Sub*
   modifiers.csharp:
   - public
@@ -335,18 +367,18 @@ items:
   source:
     id: Xor
     path: ''
-    startLine: 12218
+    startLine: 14939
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SegmentVolume Xor(SegmentVolume other)
+    content.vb: Public Function Xor(other As SegmentVolume) As SegmentVolume
     parameters:
     - id: other
       type: ESAPIX.Facade.API.SegmentVolume
     return:
       type: ESAPIX.Facade.API.SegmentVolume
-    content.vb: Public Function Xor(other As SegmentVolume) As SegmentVolume
   overload: ESAPIX.Facade.API.SegmentVolume.Xor*
   modifiers.csharp:
   - public
@@ -761,6 +793,19 @@ references:
   name: SegmentVolume
   nameWithType: SegmentVolume.SegmentVolume
   fullName: ESAPIX.Facade.API.SegmentVolume.SegmentVolume
+- uid: ESAPIX.Facade.API.SegmentVolume.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.SegmentVolume.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: SegmentVolume.IsLive
+  fullName: ESAPIX.Facade.API.SegmentVolume.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.SegmentVolume.WriteXml*
   commentId: Overload:ESAPIX.Facade.API.SegmentVolume.WriteXml
   isExternal: false
@@ -791,19 +836,11 @@ references:
   name: AsymmetricMargin
   nameWithType: SegmentVolume.AsymmetricMargin
   fullName: ESAPIX.Facade.API.SegmentVolume.AsymmetricMargin
-- uid: ESAPIX.Facade.Types.AxisAlignedMargins
-  commentId: T:ESAPIX.Facade.Types.AxisAlignedMargins
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: AxisAlignedMargins
+  isExternal: true
   name: AxisAlignedMargins
   nameWithType: AxisAlignedMargins
-  fullName: ESAPIX.Facade.Types.AxisAlignedMargins
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: AxisAlignedMargins
 - uid: ESAPIX.Facade.API.SegmentVolume.Margin*
   commentId: Overload:ESAPIX.Facade.API.SegmentVolume.Margin
   isExternal: false

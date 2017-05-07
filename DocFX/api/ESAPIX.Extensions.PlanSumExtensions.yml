@@ -16,7 +16,7 @@ items:
   source:
     id: PlanSumExtensions
     path: ''
-    startLine: 3979
+    startLine: 3942
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -55,14 +55,18 @@ items:
   source:
     id: GetRelativeDVHCumulativeData
     path: ''
-    startLine: 3990
+    startLine: 3954
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
-  summary: "\nThis method exists to guess the prescription of a plan sum by summing all plan setup prescribed doses and generating a\nrelative dvh curve. Can't technically do relative dose with plan sum...but let's try to do it anyway\n"
+  summary: "\nThis method exists to guess the prescription of a plan sum by summing all plan setup prescribed doses and\ngenerating a\nrelative dvh curve. Can't technically do relative dose with plan sum...but let's try to do it anyway\n"
   example: []
   syntax:
     content: public static DVHPoint[] GetRelativeDVHCumulativeData(this PlanSum ps, Structure s, VolumePresentation vPres, double binWidth)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetRelativeDVHCumulativeData(ps As PlanSum, s As  Structure, vPres As VolumePresentation, binWidth As Double) As DVHPoint()
     parameters:
     - id: ps
       type: PlanSum
@@ -79,10 +83,6 @@ items:
     return:
       type: DVHPoint[]
       description: ''
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetRelativeDVHCumulativeData(ps As PlanSum, s As  Structure, vPres As VolumePresentation, binWidth As Double) As DVHPoint()
   overload: ESAPIX.Extensions.PlanSumExtensions.GetRelativeDVHCumulativeData*
   modifiers.csharp:
   - public

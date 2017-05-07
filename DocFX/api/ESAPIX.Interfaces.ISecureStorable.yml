@@ -16,7 +16,7 @@ items:
   source:
     id: ISecureStorable
     path: ''
-    startLine: 15404
+    startLine: 16712
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -43,16 +43,16 @@ items:
   source:
     id: Hash
     path: ''
-    startLine: 15406
+    startLine: 16714
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: string Hash { get; set; }
+    content.vb: Property Hash As String
     parameters: []
     return:
       type: System.String
-    content.vb: Property Hash As String
   overload: ESAPIX.Interfaces.ISecureStorable.Hash*
   modifiers.csharp:
   - get

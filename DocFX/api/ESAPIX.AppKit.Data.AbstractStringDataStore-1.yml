@@ -28,7 +28,7 @@ items:
   source:
     id: AbstractStringDataStore
     path: ''
-    startLine: 678
+    startLine: 677
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -36,9 +36,9 @@ items:
   example: []
   syntax:
     content: public abstract class AbstractStringDataStore<T>
+    content.vb: Public MustInherit Class AbstractStringDataStore(Of T)
     typeParameters:
     - id: T
-    content.vb: Public MustInherit Class AbstractStringDataStore(Of T)
   inheritance:
   - System.Object
   derivedClasses:
@@ -76,12 +76,13 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 684
+    startLine: 682
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public AbstractStringDataStore(string fileExtension, Func<T, string> fileNamingMethod, string storePath = "")
+    content.vb: Public Sub New(fileExtension As String, fileNamingMethod As Func(Of T, String), storePath As String = "")
     parameters:
     - id: fileExtension
       type: System.String
@@ -89,7 +90,6 @@ items:
       type: System.Func{{T},System.String}
     - id: storePath
       type: System.String
-    content.vb: Public Sub New(fileExtension As String, fileNamingMethod As Func(Of T, String), storePath As String = "")
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.#ctor*
   nameWithType.vb: AbstractStringDataStore(Of T).AbstractStringDataStore(String, Func(Of T, String), String)
   modifiers.csharp:
@@ -98,6 +98,39 @@ items:
   - Public
   fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).AbstractStringDataStore(System.String, System.Func(Of T, System.String), System.String)
   name.vb: AbstractStringDataStore(String, Func(Of T, String), String)
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
+  commentId: P:ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
+  id: DataPath
+  parent: ESAPIX.AppKit.Data.AbstractStringDataStore`1
+  langs:
+  - csharp
+  - vb
+  name: DataPath
+  nameWithType: AbstractStringDataStore<T>.DataPath
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DataPath
+  type: Property
+  source:
+    id: DataPath
+    path: ''
+    startLine: 695
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Data
+  syntax:
+    content: public string DataPath { get; }
+    content.vb: Public ReadOnly Property DataPath As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath*
+  nameWithType.vb: AbstractStringDataStore(Of T).DataPath
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DataPath
 - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
   commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize(`0)
   id: Serialize(`0)
@@ -120,6 +153,7 @@ items:
   example: []
   syntax:
     content: public abstract string Serialize(T toSerialize)
+    content.vb: Public MustOverride Function Serialize(toSerialize As T) As String
     parameters:
     - id: toSerialize
       type: '{T}'
@@ -127,7 +161,6 @@ items:
     return:
       type: System.String
       description: ''
-    content.vb: Public MustOverride Function Serialize(toSerialize As T) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize*
   nameWithType.vb: AbstractStringDataStore(Of T).Serialize(T)
   modifiers.csharp:
@@ -159,6 +192,7 @@ items:
   example: []
   syntax:
     content: public abstract string Serialize(SecureStorage<T> toSerialize)
+    content.vb: Public MustOverride Function Serialize(toSerialize As SecureStorage(Of T)) As String
     parameters:
     - id: toSerialize
       type: ESAPIX.AppKit.Data.SecureStorage{{T}}
@@ -166,7 +200,6 @@ items:
     return:
       type: System.String
       description: ''
-    content.vb: Public MustOverride Function Serialize(toSerialize As SecureStorage(Of T)) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize*
   nameWithType.vb: AbstractStringDataStore(Of T).Serialize(SecureStorage(Of T))
   modifiers.csharp:
@@ -199,6 +232,7 @@ items:
   example: []
   syntax:
     content: public abstract SecureStorage<T> Deserialize(string serial)
+    content.vb: Public MustOverride Function Deserialize(serial As String) As SecureStorage(Of T)
     parameters:
     - id: serial
       type: System.String
@@ -206,7 +240,6 @@ items:
     return:
       type: ESAPIX.AppKit.Data.SecureStorage{{T}}
       description: ''
-    content.vb: Public MustOverride Function Deserialize(serial As String) As SecureStorage(Of T)
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Deserialize*
   nameWithType.vb: AbstractStringDataStore(Of T).Deserialize(String)
   modifiers.csharp:
@@ -216,39 +249,6 @@ items:
   - Public
   - MustOverride
   fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Deserialize(System.String)
-- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
-  commentId: P:ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
-  id: DataPath
-  parent: ESAPIX.AppKit.Data.AbstractStringDataStore`1
-  langs:
-  - csharp
-  - vb
-  name: DataPath
-  nameWithType: AbstractStringDataStore<T>.DataPath
-  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DataPath
-  type: Property
-  source:
-    id: DataPath
-    path: ''
-    startLine: 718
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.AppKit.Data
-  syntax:
-    content: public string DataPath { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property DataPath As String
-  overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath*
-  nameWithType.vb: AbstractStringDataStore(Of T).DataPath
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DataPath
 - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
   commentId: M:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save(`0)
   id: Save(`0)
@@ -263,7 +263,7 @@ items:
   source:
     id: Save
     path: ''
-    startLine: 744
+    startLine: 742
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -271,13 +271,13 @@ items:
   example: []
   syntax:
     content: public bool Save(T storageObject)
+    content.vb: Public Function Save(storageObject As T) As Boolean
     parameters:
     - id: storageObject
       type: '{T}'
     return:
       type: System.Boolean
       description: bool indicating success
-    content.vb: Public Function Save(storageObject As T) As Boolean
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save*
   nameWithType.vb: AbstractStringDataStore(Of T).Save(T)
   modifiers.csharp:
@@ -299,7 +299,7 @@ items:
   source:
     id: LoadAll
     path: ''
-    startLine: 759
+    startLine: 757
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -307,10 +307,10 @@ items:
   example: []
   syntax:
     content: public IEnumerable<T> LoadAll()
-    return:
-      type: System.Collections.Generic.IEnumerable{{T}}
-      description: bool indicating success
     content.vb: Public Function LoadAll As IEnumerable(Of T)
+    return:
+      type: IEnumerable{{T}}
+      description: bool indicating success
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAll*
   nameWithType.vb: AbstractStringDataStore(Of T).LoadAll()
   modifiers.csharp:
@@ -332,7 +332,7 @@ items:
   source:
     id: LoadAllSecure
     path: ''
-    startLine: 772
+    startLine: 770
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -340,10 +340,10 @@ items:
   example: []
   syntax:
     content: public List<SecureStorage<T>> LoadAllSecure()
-    return:
-      type: System.Collections.Generic.List{ESAPIX.AppKit.Data.SecureStorage{{T}}}
-      description: bool indicating success
     content.vb: Public Function LoadAllSecure As List(Of SecureStorage(Of T))
+    return:
+      type: List{ESAPIX.AppKit.Data.SecureStorage{{T}}}
+      description: bool indicating success
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure*
   nameWithType.vb: AbstractStringDataStore(Of T).LoadAllSecure()
   modifiers.csharp:
@@ -365,7 +365,7 @@ items:
   source:
     id: DeleteAll
     path: ''
-    startLine: 792
+    startLine: 790
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -373,10 +373,10 @@ items:
   example: []
   syntax:
     content: public bool DeleteAll()
+    content.vb: Public Function DeleteAll As Boolean
     return:
       type: System.Boolean
       description: bool indicating success
-    content.vb: Public Function DeleteAll As Boolean
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DeleteAll*
   nameWithType.vb: AbstractStringDataStore(Of T).DeleteAll()
   modifiers.csharp:
@@ -398,16 +398,16 @@ items:
   source:
     id: Delete
     path: ''
-    startLine: 808
+    startLine: 804
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public void Delete(T toDelete)
+    content.vb: Public Sub Delete(toDelete As T)
     parameters:
     - id: toDelete
       type: '{T}'
-    content.vb: Public Sub Delete(toDelete As T)
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Delete*
   nameWithType.vb: AbstractStringDataStore(Of T).Delete(T)
   modifiers.csharp:
@@ -429,7 +429,7 @@ items:
   source:
     id: GetSavePath
     path: ''
-    startLine: 849
+    startLine: 843
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -437,13 +437,13 @@ items:
   example: []
   syntax:
     content: public string GetSavePath(T objectToSave)
+    content.vb: Public Function GetSavePath(objectToSave As T) As String
     parameters:
     - id: objectToSave
       type: '{T}'
     return:
       type: System.String
       description: ''
-    content.vb: Public Function GetSavePath(objectToSave As T) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetSavePath*
   nameWithType.vb: AbstractStringDataStore(Of T).GetSavePath(T)
   modifiers.csharp:
@@ -465,7 +465,7 @@ items:
   source:
     id: GetHash
     path: ''
-    startLine: 877
+    startLine: 871
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -473,6 +473,7 @@ items:
   example: []
   syntax:
     content: public static byte[] GetHash(string inputString)
+    content.vb: Public Shared Function GetHash(inputString As String) As Byte()
     parameters:
     - id: inputString
       type: System.String
@@ -480,7 +481,6 @@ items:
     return:
       type: System.Byte[]
       description: ''
-    content.vb: Public Shared Function GetHash(inputString As String) As Byte()
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHash*
   nameWithType.vb: AbstractStringDataStore(Of T).GetHash(String)
   modifiers.csharp:
@@ -504,7 +504,7 @@ items:
   source:
     id: GetHashString
     path: ''
-    startLine: 888
+    startLine: 882
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -512,6 +512,7 @@ items:
   example: []
   syntax:
     content: public static string GetHashString(string inputString)
+    content.vb: Public Shared Function GetHashString(inputString As String) As String
     parameters:
     - id: inputString
       type: System.String
@@ -519,7 +520,6 @@ items:
     return:
       type: System.String
       description: ''
-    content.vb: Public Shared Function GetHashString(inputString As String) As String
   overload: ESAPIX.AppKit.Data.AbstractStringDataStore`1.GetHashString*
   nameWithType.vb: AbstractStringDataStore(Of T).GetHashString(String)
   modifiers.csharp:
@@ -950,6 +950,14 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath*
+  commentId: Overload:ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
+  isExternal: false
+  name: DataPath
+  nameWithType: AbstractStringDataStore<T>.DataPath
+  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DataPath
+  nameWithType.vb: AbstractStringDataStore(Of T).DataPath
+  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DataPath
 - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize*
   commentId: Overload:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Serialize
   isExternal: false
@@ -1052,14 +1060,6 @@ references:
   fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.Deserialize
   nameWithType.vb: AbstractStringDataStore(Of T).Deserialize
   fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).Deserialize
-- uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath*
-  commentId: Overload:ESAPIX.AppKit.Data.AbstractStringDataStore`1.DataPath
-  isExternal: false
-  name: DataPath
-  nameWithType: AbstractStringDataStore<T>.DataPath
-  fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.DataPath
-  nameWithType.vb: AbstractStringDataStore(Of T).DataPath
-  fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).DataPath
 - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save*
   commentId: Overload:ESAPIX.AppKit.Data.AbstractStringDataStore`1.Save
   isExternal: false
@@ -1083,21 +1083,20 @@ references:
   fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAll
   nameWithType.vb: AbstractStringDataStore(Of T).LoadAll
   fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAll
-- uid: System.Collections.Generic.IEnumerable{{T}}
-  commentId: T:System.Collections.Generic.IEnumerable{`0}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{{T}}
+  commentId: '!:IEnumerable{`0}'
+  definition: IEnumerable`1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
+  fullName: IEnumerable<T>
   nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  fullName.vb: IEnumerable(Of T)
   name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1109,10 +1108,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1123,51 +1122,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure*
   commentId: Overload:ESAPIX.AppKit.Data.AbstractStringDataStore`1.LoadAllSecure
   isExternal: false
@@ -1176,21 +1168,20 @@ references:
   fullName: ESAPIX.AppKit.Data.AbstractStringDataStore<T>.LoadAllSecure
   nameWithType.vb: AbstractStringDataStore(Of T).LoadAllSecure
   fullName.vb: ESAPIX.AppKit.Data.AbstractStringDataStore(Of T).LoadAllSecure
-- uid: System.Collections.Generic.List{ESAPIX.AppKit.Data.SecureStorage{{T}}}
-  commentId: T:System.Collections.Generic.List{ESAPIX.AppKit.Data.SecureStorage{`0}}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{ESAPIX.AppKit.Data.SecureStorage{{T}}}
+  commentId: '!:List{ESAPIX.AppKit.Data.SecureStorage{`0}}'
+  definition: List`1
   name: List<SecureStorage<T>>
   nameWithType: List<SecureStorage<T>>
-  fullName: System.Collections.Generic.List<ESAPIX.AppKit.Data.SecureStorage<T>>
+  fullName: List<ESAPIX.AppKit.Data.SecureStorage<T>>
   nameWithType.vb: List(Of SecureStorage(Of T))
-  fullName.vb: System.Collections.Generic.List(Of ESAPIX.AppKit.Data.SecureStorage(Of T))
+  fullName.vb: List(Of ESAPIX.AppKit.Data.SecureStorage(Of T))
   name.vb: List(Of SecureStorage(Of T))
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -1212,10 +1203,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1236,42 +1227,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )

@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.Slot.#ctor
   - ESAPIX.Facade.API.Slot.#ctor(System.Object)
+  - ESAPIX.Facade.API.Slot.IsLive
   - ESAPIX.Facade.API.Slot.Number
   - ESAPIX.Facade.API.Slot.WriteXml(System.Xml.XmlWriter)
   langs:
@@ -19,7 +20,7 @@ items:
   source:
     id: Slot
     path: ''
-    startLine: 12435
+    startLine: 15231
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12437
+    startLine: 15233
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,21 +95,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12438
+    startLine: 15238
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Slot(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Slot.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Slot.IsLive
+  commentId: P:ESAPIX.Facade.API.Slot.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Slot
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Slot.IsLive
+  fullName: ESAPIX.Facade.API.Slot.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 15243
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.Slot.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Slot.Number
   commentId: P:ESAPIX.Facade.API.Slot.Number
   id: Number
@@ -123,16 +155,16 @@ items:
   source:
     id: Number
     path: ''
-    startLine: 12439
+    startLine: 15248
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int Number { get; set; }
+    content.vb: Public Property Number As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property Number As Integer
   overload: ESAPIX.Facade.API.Slot.Number*
   modifiers.csharp:
   - public
@@ -154,16 +186,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 12452
+    startLine: 15263
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Slot.WriteXml*
   modifiers.csharp:
   - public
@@ -614,6 +646,19 @@ references:
   name: Slot
   nameWithType: Slot.Slot
   fullName: ESAPIX.Facade.API.Slot.Slot
+- uid: ESAPIX.Facade.API.Slot.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Slot.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Slot.IsLive
+  fullName: ESAPIX.Facade.API.Slot.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Slot.Number*
   commentId: Overload:ESAPIX.Facade.API.Slot.Number
   isExternal: false

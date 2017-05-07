@@ -15,16 +15,16 @@ items:
   source:
     id: LogHandler
     path: ''
-    startLine: 15438
+    startLine: 16738
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Logging
   syntax:
     content: public delegate void LogHandler(string toLog);
+    content.vb: Public Delegate Sub LogHandler(toLog As String)
     parameters:
     - id: toLog
       type: System.String
-    content.vb: Public Delegate Sub LogHandler(toLog As String)
   modifiers.csharp:
   - public
   - delegate

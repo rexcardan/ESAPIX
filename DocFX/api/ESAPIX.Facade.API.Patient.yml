@@ -8,7 +8,7 @@ items:
   - ESAPIX.Facade.API.Patient.#ctor
   - ESAPIX.Facade.API.Patient.#ctor(System.Object)
   - ESAPIX.Facade.API.Patient.AddCourse
-  - ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  - ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
   - ESAPIX.Facade.API.Patient.BeginModifications
   - ESAPIX.Facade.API.Patient.CanAddCourse
   - ESAPIX.Facade.API.Patient.CanAddEmptyPhantom(System.String@)
@@ -25,6 +25,7 @@ items:
   - ESAPIX.Facade.API.Patient.HasModifiedData
   - ESAPIX.Facade.API.Patient.Hospital
   - ESAPIX.Facade.API.Patient.Id2
+  - ESAPIX.Facade.API.Patient.IsLive
   - ESAPIX.Facade.API.Patient.LastName
   - ESAPIX.Facade.API.Patient.MiddleName
   - ESAPIX.Facade.API.Patient.PrimaryOncologistId
@@ -46,7 +47,7 @@ items:
   source:
     id: Patient
     path: ''
-    startLine: 10087
+    startLine: 11990
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,7 +96,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10089
+    startLine: 11992
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -121,21 +122,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10090
+    startLine: 11997
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Patient(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Patient.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Patient.IsLive
+  commentId: P:ESAPIX.Facade.API.Patient.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Patient
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Patient.IsLive
+  fullName: ESAPIX.Facade.API.Patient.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 12002
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.Patient.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Patient.Courses
   commentId: P:ESAPIX.Facade.API.Patient.Courses
   id: Courses
@@ -150,23 +182,23 @@ items:
   source:
     id: Courses
     path: ''
-    startLine: 10091
+    startLine: 12007
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<Course> Courses { get; }
+    content: public IEnumerable<Course> Courses { get; set; }
+    content.vb: Public Property Courses As IEnumerable(Of Course)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Course}
-    content.vb: Public ReadOnly Property Courses As IEnumerable(Of Course)
+      type: IEnumerable{ESAPIX.Facade.API.Course}
   overload: ESAPIX.Facade.API.Patient.Courses*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Patient.CreationDateTime
   commentId: P:ESAPIX.Facade.API.Patient.CreationDateTime
   id: CreationDateTime
@@ -181,16 +213,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 10117
+    startLine: 12045
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
+    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Patient.CreationDateTime*
   modifiers.csharp:
   - public
@@ -212,16 +244,16 @@ items:
   source:
     id: DateOfBirth
     path: ''
-    startLine: 10130
+    startLine: 12062
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? DateOfBirth { get; set; }
+    content.vb: Public Property DateOfBirth As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property DateOfBirth As Date?
   overload: ESAPIX.Facade.API.Patient.DateOfBirth*
   modifiers.csharp:
   - public
@@ -243,16 +275,16 @@ items:
   source:
     id: FirstName
     path: ''
-    startLine: 10143
+    startLine: 12079
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string FirstName { get; set; }
+    content.vb: Public Property FirstName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property FirstName As String
   overload: ESAPIX.Facade.API.Patient.FirstName*
   modifiers.csharp:
   - public
@@ -274,16 +306,16 @@ items:
   source:
     id: HasModifiedData
     path: ''
-    startLine: 10156
+    startLine: 12094
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool HasModifiedData { get; set; }
+    content.vb: Public Property HasModifiedData As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property HasModifiedData As Boolean
   overload: ESAPIX.Facade.API.Patient.HasModifiedData*
   modifiers.csharp:
   - public
@@ -305,16 +337,16 @@ items:
   source:
     id: Hospital
     path: ''
-    startLine: 10169
+    startLine: 12111
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Hospital Hospital { get; set; }
+    content.vb: Public Property Hospital As Hospital
     parameters: []
     return:
       type: ESAPIX.Facade.API.Hospital
-    content.vb: Public Property Hospital As Hospital
   overload: ESAPIX.Facade.API.Patient.Hospital*
   modifiers.csharp:
   - public
@@ -336,16 +368,16 @@ items:
   source:
     id: Id2
     path: ''
-    startLine: 10182
+    startLine: 12130
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id2 { get; set; }
+    content.vb: Public Property Id2 As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id2 As String
   overload: ESAPIX.Facade.API.Patient.Id2*
   modifiers.csharp:
   - public
@@ -367,16 +399,16 @@ items:
   source:
     id: LastName
     path: ''
-    startLine: 10195
+    startLine: 12145
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string LastName { get; set; }
+    content.vb: Public Property LastName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property LastName As String
   overload: ESAPIX.Facade.API.Patient.LastName*
   modifiers.csharp:
   - public
@@ -398,16 +430,16 @@ items:
   source:
     id: MiddleName
     path: ''
-    startLine: 10208
+    startLine: 12160
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MiddleName { get; set; }
+    content.vb: Public Property MiddleName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MiddleName As String
   overload: ESAPIX.Facade.API.Patient.MiddleName*
   modifiers.csharp:
   - public
@@ -429,16 +461,16 @@ items:
   source:
     id: PrimaryOncologistId
     path: ''
-    startLine: 10221
+    startLine: 12175
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PrimaryOncologistId { get; set; }
+    content.vb: Public Property PrimaryOncologistId As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property PrimaryOncologistId As String
   overload: ESAPIX.Facade.API.Patient.PrimaryOncologistId*
   modifiers.csharp:
   - public
@@ -460,23 +492,23 @@ items:
   source:
     id: Registrations
     path: ''
-    startLine: 10234
+    startLine: 12192
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<Registration> Registrations { get; }
+    content: public IEnumerable<Registration> Registrations { get; set; }
+    content.vb: Public Property Registrations As IEnumerable(Of Registration)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Registration}
-    content.vb: Public ReadOnly Property Registrations As IEnumerable(Of Registration)
+      type: IEnumerable{ESAPIX.Facade.API.Registration}
   overload: ESAPIX.Facade.API.Patient.Registrations*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Patient.Sex
   commentId: P:ESAPIX.Facade.API.Patient.Sex
   id: Sex
@@ -491,16 +523,16 @@ items:
   source:
     id: Sex
     path: ''
-    startLine: 10260
+    startLine: 12230
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Sex { get; set; }
+    content.vb: Public Property Sex As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Sex As String
   overload: ESAPIX.Facade.API.Patient.Sex*
   modifiers.csharp:
   - public
@@ -522,16 +554,16 @@ items:
   source:
     id: SSN
     path: ''
-    startLine: 10273
+    startLine: 12245
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SSN { get; set; }
+    content.vb: Public Property SSN As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SSN As String
   overload: ESAPIX.Facade.API.Patient.SSN*
   modifiers.csharp:
   - public
@@ -553,23 +585,23 @@ items:
   source:
     id: StructureSets
     path: ''
-    startLine: 10286
+    startLine: 12260
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<StructureSet> StructureSets { get; }
+    content: public IEnumerable<StructureSet> StructureSets { get; set; }
+    content.vb: Public Property StructureSets As IEnumerable(Of StructureSet)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.StructureSet}
-    content.vb: Public ReadOnly Property StructureSets As IEnumerable(Of StructureSet)
+      type: IEnumerable{ESAPIX.Facade.API.StructureSet}
   overload: ESAPIX.Facade.API.Patient.StructureSets*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Patient.Studies
   commentId: P:ESAPIX.Facade.API.Patient.Studies
   id: Studies
@@ -584,23 +616,23 @@ items:
   source:
     id: Studies
     path: ''
-    startLine: 10312
+    startLine: 12298
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public IEnumerable<Study> Studies { get; }
+    content: public IEnumerable<Study> Studies { get; set; }
+    content.vb: Public Property Studies As IEnumerable(Of Study)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Study}
-    content.vb: Public ReadOnly Property Studies As IEnumerable(Of Study)
+      type: IEnumerable{ESAPIX.Facade.API.Study}
   overload: ESAPIX.Facade.API.Patient.Studies*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Patient.WriteXml(System.Xml.XmlWriter)
   commentId: M:ESAPIX.Facade.API.Patient.WriteXml(System.Xml.XmlWriter)
   id: WriteXml(System.Xml.XmlWriter)
@@ -615,16 +647,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 10338
+    startLine: 12336
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Patient.WriteXml*
   modifiers.csharp:
   - public
@@ -644,45 +676,46 @@ items:
   source:
     id: AddCourse
     path: ''
-    startLine: 10347
+    startLine: 12342
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Course AddCourse()
+    content.vb: Public Function AddCourse As Course
     return:
       type: ESAPIX.Facade.API.Course
-    content.vb: Public Function AddCourse As Course
   overload: ESAPIX.Facade.API.Patient.AddCourse*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
-  commentId: M:ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
-  id: AddEmptyPhantom(System.String,ESAPIX.Facade.Types.PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+- uid: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  commentId: M:ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String,PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
+  id: AddEmptyPhantom(System.String,PatientOrientation,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Double)
   parent: ESAPIX.Facade.API.Patient
   langs:
   - csharp
   - vb
   name: AddEmptyPhantom(String, PatientOrientation, Int32, Int32, Double, Double, Int32, Double)
   nameWithType: Patient.AddEmptyPhantom(String, PatientOrientation, Int32, Int32, Double, Double, Int32, Double)
-  fullName: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String, ESAPIX.Facade.Types.PatientOrientation, System.Int32, System.Int32, System.Double, System.Double, System.Int32, System.Double)
+  fullName: ESAPIX.Facade.API.Patient.AddEmptyPhantom(System.String, PatientOrientation, System.Int32, System.Int32, System.Double, System.Double, System.Int32, System.Double)
   type: Method
   source:
     id: AddEmptyPhantom
     path: ''
-    startLine: 10354
+    startLine: 12349
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet AddEmptyPhantom(string imageId, PatientOrientation orientation, int xSizePixel, int ySizePixel, double widthMM, double heightMM, int nrOfPlanes, double planeSepMM)
+    content.vb: Public Function AddEmptyPhantom(imageId As String, orientation As PatientOrientation, xSizePixel As Integer, ySizePixel As Integer, widthMM As Double, heightMM As Double, nrOfPlanes As Integer, planeSepMM As Double) As StructureSet
     parameters:
     - id: imageId
       type: System.String
     - id: orientation
-      type: ESAPIX.Facade.Types.PatientOrientation
+      type: PatientOrientation
     - id: xSizePixel
       type: System.Int32
     - id: ySizePixel
@@ -697,7 +730,6 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.StructureSet
-    content.vb: Public Function AddEmptyPhantom(imageId As String, orientation As PatientOrientation, xSizePixel As Integer, ySizePixel As Integer, widthMM As Double, heightMM As Double, nrOfPlanes As Integer, planeSepMM As Double) As StructureSet
   overload: ESAPIX.Facade.API.Patient.AddEmptyPhantom*
   modifiers.csharp:
   - public
@@ -717,7 +749,7 @@ items:
   source:
     id: BeginModifications
     path: ''
-    startLine: 10361
+    startLine: 12361
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -743,15 +775,15 @@ items:
   source:
     id: CanAddCourse
     path: ''
-    startLine: 10370
+    startLine: 12367
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanAddCourse()
+    content.vb: Public Function CanAddCourse As Boolean
     return:
       type: System.Boolean
-    content.vb: Public Function CanAddCourse As Boolean
   overload: ESAPIX.Facade.API.Patient.CanAddCourse*
   modifiers.csharp:
   - public
@@ -771,18 +803,18 @@ items:
   source:
     id: CanAddEmptyPhantom
     path: ''
-    startLine: 10377
+    startLine: 12374
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanAddEmptyPhantom(out string errorMessage)
+    content.vb: Public Function CanAddEmptyPhantom(ByRef errorMessage As String) As Boolean
     parameters:
     - id: errorMessage
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function CanAddEmptyPhantom(ByRef errorMessage As String) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom*
   nameWithType.vb: Patient.CanAddEmptyPhantom(ByRef String)
   modifiers.csharp:
@@ -805,12 +837,13 @@ items:
   source:
     id: CanCopyImageFromOtherPatient
     path: ''
-    startLine: 10386
+    startLine: 12386
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanCopyImageFromOtherPatient(Study targetStudy, string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId, out string errorMessage)
+    content.vb: Public Function CanCopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String, ByRef errorMessage As String) As Boolean
     parameters:
     - id: targetStudy
       type: ESAPIX.Facade.API.Study
@@ -824,7 +857,6 @@ items:
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function CanCopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String, ByRef errorMessage As String) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient*
   nameWithType.vb: Patient.CanCopyImageFromOtherPatient(Study, String, String, String, ByRef String)
   modifiers.csharp:
@@ -847,15 +879,15 @@ items:
   source:
     id: CanModifyData
     path: ''
-    startLine: 10395
+    startLine: 12400
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanModifyData()
+    content.vb: Public Function CanModifyData As Boolean
     return:
       type: System.Boolean
-    content.vb: Public Function CanModifyData As Boolean
   overload: ESAPIX.Facade.API.Patient.CanModifyData*
   modifiers.csharp:
   - public
@@ -875,18 +907,18 @@ items:
   source:
     id: CanRemoveCourse
     path: ''
-    startLine: 10402
+    startLine: 12407
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanRemoveCourse(Course course)
+    content.vb: Public Function CanRemoveCourse(course As Course) As Boolean
     parameters:
     - id: course
       type: ESAPIX.Facade.API.Course
     return:
       type: System.Boolean
-    content.vb: Public Function CanRemoveCourse(course As Course) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanRemoveCourse*
   modifiers.csharp:
   - public
@@ -906,12 +938,13 @@ items:
   source:
     id: CanRemoveEmptyPhantom
     path: ''
-    startLine: 10409
+    startLine: 12417
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanRemoveEmptyPhantom(StructureSet structureset, out string errorMessage)
+    content.vb: Public Function CanRemoveEmptyPhantom(structureset As StructureSet, ByRef errorMessage As String) As Boolean
     parameters:
     - id: structureset
       type: ESAPIX.Facade.API.StructureSet
@@ -919,7 +952,6 @@ items:
       type: System.String
     return:
       type: System.Boolean
-    content.vb: Public Function CanRemoveEmptyPhantom(structureset As StructureSet, ByRef errorMessage As String) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom*
   nameWithType.vb: Patient.CanRemoveEmptyPhantom(StructureSet, ByRef String)
   modifiers.csharp:
@@ -942,12 +974,13 @@ items:
   source:
     id: CopyImageFromOtherPatient
     path: ''
-    startLine: 10418
+    startLine: 12429
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet CopyImageFromOtherPatient(string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId)
+    content.vb: Public Function CopyImageFromOtherPatient(otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
     parameters:
     - id: otherPatientId
       type: System.String
@@ -957,7 +990,6 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.StructureSet
-    content.vb: Public Function CopyImageFromOtherPatient(otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
   overload: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient*
   modifiers.csharp:
   - public
@@ -977,12 +1009,13 @@ items:
   source:
     id: CopyImageFromOtherPatient
     path: ''
-    startLine: 10425
+    startLine: 12441
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet CopyImageFromOtherPatient(Study targetStudy, string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId)
+    content.vb: Public Function CopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
     parameters:
     - id: targetStudy
       type: ESAPIX.Facade.API.Study
@@ -994,7 +1027,6 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.StructureSet
-    content.vb: Public Function CopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
   overload: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient*
   modifiers.csharp:
   - public
@@ -1014,16 +1046,16 @@ items:
   source:
     id: RemoveCourse
     path: ''
-    startLine: 10432
+    startLine: 12453
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveCourse(Course course)
+    content.vb: Public Sub RemoveCourse(course As Course)
     parameters:
     - id: course
       type: ESAPIX.Facade.API.Course
-    content.vb: Public Sub RemoveCourse(course As Course)
   overload: ESAPIX.Facade.API.Patient.RemoveCourse*
   modifiers.csharp:
   - public
@@ -1043,16 +1075,16 @@ items:
   source:
     id: RemoveEmptyPhantom
     path: ''
-    startLine: 10441
+    startLine: 12459
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveEmptyPhantom(StructureSet structureset)
+    content.vb: Public Sub RemoveEmptyPhantom(structureset As StructureSet)
     parameters:
     - id: structureset
       type: ESAPIX.Facade.API.StructureSet
-    content.vb: Public Sub RemoveEmptyPhantom(structureset As StructureSet)
   overload: ESAPIX.Facade.API.Patient.RemoveEmptyPhantom*
   modifiers.csharp:
   - public
@@ -1503,27 +1535,39 @@ references:
   name: Patient
   nameWithType: Patient.Patient
   fullName: ESAPIX.Facade.API.Patient.Patient
+- uid: ESAPIX.Facade.API.Patient.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Patient.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Patient.IsLive
+  fullName: ESAPIX.Facade.API.Patient.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Patient.Courses*
   commentId: Overload:ESAPIX.Facade.API.Patient.Courses
   isExternal: false
   name: Courses
   nameWithType: Patient.Courses
   fullName: ESAPIX.Facade.API.Patient.Courses
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Course}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Course}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.Course}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.Course}'
+  definition: IEnumerable`1
   name: IEnumerable<Course>
   nameWithType: IEnumerable<Course>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Course>
+  fullName: IEnumerable<ESAPIX.Facade.API.Course>
   nameWithType.vb: IEnumerable(Of Course)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Course)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.Course)
   name.vb: IEnumerable(Of Course)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1536,10 +1580,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1551,51 +1595,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Facade.API.Patient.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.Patient.CreationDateTime
   isExternal: false
@@ -1710,13 +1747,6 @@ references:
   name: HasModifiedData
   nameWithType: Patient.HasModifiedData
   fullName: ESAPIX.Facade.API.Patient.HasModifiedData
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Patient.Hospital*
   commentId: Overload:ESAPIX.Facade.API.Patient.Hospital
   isExternal: false
@@ -1760,21 +1790,20 @@ references:
   name: Registrations
   nameWithType: Patient.Registrations
   fullName: ESAPIX.Facade.API.Patient.Registrations
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Registration}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Registration}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.Registration}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.Registration}'
+  definition: IEnumerable`1
   name: IEnumerable<Registration>
   nameWithType: IEnumerable<Registration>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Registration>
+  fullName: IEnumerable<ESAPIX.Facade.API.Registration>
   nameWithType.vb: IEnumerable(Of Registration)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Registration)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.Registration)
   name.vb: IEnumerable(Of Registration)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1787,10 +1816,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1820,21 +1849,20 @@ references:
   name: StructureSets
   nameWithType: Patient.StructureSets
   fullName: ESAPIX.Facade.API.Patient.StructureSets
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.StructureSet}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.StructureSet}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.StructureSet}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.StructureSet}'
+  definition: IEnumerable`1
   name: IEnumerable<StructureSet>
   nameWithType: IEnumerable<StructureSet>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.StructureSet>
+  fullName: IEnumerable<ESAPIX.Facade.API.StructureSet>
   nameWithType.vb: IEnumerable(Of StructureSet)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.StructureSet)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.StructureSet)
   name.vb: IEnumerable(Of StructureSet)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1847,10 +1875,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1868,21 +1896,20 @@ references:
   name: Studies
   nameWithType: Patient.Studies
   fullName: ESAPIX.Facade.API.Patient.Studies
-- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Study}
-  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.Study}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ESAPIX.Facade.API.Study}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.Study}'
+  definition: IEnumerable`1
   name: IEnumerable<Study>
   nameWithType: IEnumerable<Study>
-  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.Study>
+  fullName: IEnumerable<ESAPIX.Facade.API.Study>
   nameWithType.vb: IEnumerable(Of Study)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.Study)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.Study)
   name.vb: IEnumerable(Of Study)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1895,10 +1922,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1940,13 +1967,11 @@ references:
   name: AddEmptyPhantom
   nameWithType: Patient.AddEmptyPhantom
   fullName: ESAPIX.Facade.API.Patient.AddEmptyPhantom
-- uid: ESAPIX.Facade.Types.PatientOrientation
-  commentId: T:ESAPIX.Facade.Types.PatientOrientation
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: PatientOrientation
+  isExternal: true
   name: PatientOrientation
   nameWithType: PatientOrientation
-  fullName: ESAPIX.Facade.Types.PatientOrientation
+  fullName: PatientOrientation
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -1968,12 +1993,6 @@ references:
   name: StructureSet
   nameWithType: StructureSet
   fullName: ESAPIX.Facade.API.StructureSet
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
 - uid: ESAPIX.Facade.API.Patient.BeginModifications*
   commentId: Overload:ESAPIX.Facade.API.Patient.BeginModifications
   isExternal: false

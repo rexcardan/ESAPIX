@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.Isodose.#ctor
   - ESAPIX.Facade.API.Isodose.#ctor(System.Object)
   - ESAPIX.Facade.API.Isodose.Color
+  - ESAPIX.Facade.API.Isodose.IsLive
   - ESAPIX.Facade.API.Isodose.Level
   - ESAPIX.Facade.API.Isodose.MeshGeometry
   - ESAPIX.Facade.API.Isodose.WriteXml(System.Xml.XmlWriter)
@@ -21,7 +22,7 @@ items:
   source:
     id: Isodose
     path: ''
-    startLine: 9057
+    startLine: 10551
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -64,7 +65,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9059
+    startLine: 10553
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -90,21 +91,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9060
+    startLine: 10558
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Isodose(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Isodose.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.Isodose.IsLive
+  commentId: P:ESAPIX.Facade.API.Isodose.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: Isodose.IsLive
+  fullName: ESAPIX.Facade.API.Isodose.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 10563
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.Isodose.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.Isodose.Color
   commentId: P:ESAPIX.Facade.API.Isodose.Color
   id: Color
@@ -119,16 +151,16 @@ items:
   source:
     id: Color
     path: ''
-    startLine: 9061
+    startLine: 10568
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Color Color { get; set; }
+    content.vb: Public Property Color As Windows.Media.Color
     parameters: []
     return:
       type: System.Windows.Media.Color
-    content.vb: Public Property Color As Windows.Media.Color
   overload: ESAPIX.Facade.API.Isodose.Color*
   modifiers.csharp:
   - public
@@ -150,16 +182,16 @@ items:
   source:
     id: Level
     path: ''
-    startLine: 9074
+    startLine: 10588
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue Level { get; set; }
+    content.vb: Public Property Level As DoseValue
     parameters: []
     return:
-      type: ESAPIX.Facade.Types.DoseValue
-    content.vb: Public Property Level As DoseValue
+      type: DoseValue
   overload: ESAPIX.Facade.API.Isodose.Level*
   modifiers.csharp:
   - public
@@ -181,16 +213,16 @@ items:
   source:
     id: MeshGeometry
     path: ''
-    startLine: 9087
+    startLine: 10603
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
     parameters: []
     return:
       type: System.Windows.Media.Media3D.MeshGeometry3D
-    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
   overload: ESAPIX.Facade.API.Isodose.MeshGeometry*
   modifiers.csharp:
   - public
@@ -212,16 +244,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9100
+    startLine: 10623
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Isodose.WriteXml*
   modifiers.csharp:
   - public
@@ -636,6 +668,19 @@ references:
   name: Isodose
   nameWithType: Isodose.Isodose
   fullName: ESAPIX.Facade.API.Isodose.Isodose
+- uid: ESAPIX.Facade.API.Isodose.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.Isodose.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: Isodose.IsLive
+  fullName: ESAPIX.Facade.API.Isodose.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Isodose.Color*
   commentId: Overload:ESAPIX.Facade.API.Isodose.Color
   isExternal: false
@@ -653,19 +698,11 @@ references:
   name: Level
   nameWithType: Isodose.Level
   fullName: ESAPIX.Facade.API.Isodose.Level
-- uid: ESAPIX.Facade.Types.DoseValue
-  commentId: T:ESAPIX.Facade.Types.DoseValue
-  parent: ESAPIX.Facade.Types
-  isExternal: false
+- uid: DoseValue
+  isExternal: true
   name: DoseValue
   nameWithType: DoseValue
-  fullName: ESAPIX.Facade.Types.DoseValue
-- uid: ESAPIX.Facade.Types
-  commentId: N:ESAPIX.Facade.Types
-  isExternal: false
-  name: ESAPIX.Facade.Types
-  nameWithType: ESAPIX.Facade.Types
-  fullName: ESAPIX.Facade.Types
+  fullName: DoseValue
 - uid: ESAPIX.Facade.API.Isodose.MeshGeometry*
   commentId: Overload:ESAPIX.Facade.API.Isodose.MeshGeometry
   isExternal: false

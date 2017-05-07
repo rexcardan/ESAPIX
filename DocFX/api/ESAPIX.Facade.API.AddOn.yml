@@ -8,6 +8,7 @@ items:
   - ESAPIX.Facade.API.AddOn.#ctor
   - ESAPIX.Facade.API.AddOn.#ctor(System.Object)
   - ESAPIX.Facade.API.AddOn.CreationDateTime
+  - ESAPIX.Facade.API.AddOn.IsLive
   - ESAPIX.Facade.API.AddOn.WriteXml(System.Xml.XmlWriter)
   langs:
   - csharp
@@ -19,7 +20,7 @@ items:
   source:
     id: AddOn
     path: ''
-    startLine: 4727
+    startLine: 4653
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -73,7 +74,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4729
+    startLine: 4655
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -99,21 +100,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4730
+    startLine: 4660
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public AddOn(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.AddOn.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.AddOn.IsLive
+  commentId: P:ESAPIX.Facade.API.AddOn.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.AddOn
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: AddOn.IsLive
+  fullName: ESAPIX.Facade.API.AddOn.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 4665
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.AddOn.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.AddOn.CreationDateTime
   commentId: P:ESAPIX.Facade.API.AddOn.CreationDateTime
   id: CreationDateTime
@@ -128,16 +160,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 4731
+    startLine: 4670
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
+    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.AddOn.CreationDateTime*
   modifiers.csharp:
   - public
@@ -159,16 +191,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 4744
+    startLine: 4687
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.AddOn.WriteXml*
   modifiers.csharp:
   - public
@@ -619,6 +651,19 @@ references:
   name: AddOn
   nameWithType: AddOn.AddOn
   fullName: ESAPIX.Facade.API.AddOn.AddOn
+- uid: ESAPIX.Facade.API.AddOn.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.AddOn.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: AddOn.IsLive
+  fullName: ESAPIX.Facade.API.AddOn.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.AddOn.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.AddOn.CreationDateTime
   isExternal: false

@@ -7,20 +7,26 @@ items:
   children:
   - ESAPIX.Interfaces.IScriptContext.ApplicationName
   - ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup
+  - ESAPIX.Interfaces.IScriptContext.BrachyPlanSetupChanged
   - ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope
   - ESAPIX.Interfaces.IScriptContext.Course
+  - ESAPIX.Interfaces.IScriptContext.CourseChanged
   - ESAPIX.Interfaces.IScriptContext.CurrentUser
   - ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup
+  - ESAPIX.Interfaces.IScriptContext.ExternalPlanSetupChanged
   - ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope
   - ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
   - ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
   - ESAPIX.Interfaces.IScriptContext.Image
   - ESAPIX.Interfaces.IScriptContext.Patient
+  - ESAPIX.Interfaces.IScriptContext.PatientChanged
   - ESAPIX.Interfaces.IScriptContext.PlanSetup
+  - ESAPIX.Interfaces.IScriptContext.PlanSetupChanged
   - ESAPIX.Interfaces.IScriptContext.PlansInScope
   - ESAPIX.Interfaces.IScriptContext.PlanSumsInScope
   - ESAPIX.Interfaces.IScriptContext.StructureSet
   - ESAPIX.Interfaces.IScriptContext.Thread
+  - ESAPIX.Interfaces.IScriptContext.UIDispatcher
   langs:
   - csharp
   - vb
@@ -31,11 +37,11 @@ items:
   source:
     id: IScriptContext
     path: ''
-    startLine: 15345
+    startLine: 16647
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
-  summary: "\nThe common interface for use in standalone and plugin applications. It exposes properties that found in a the \"ScriptContext\" class\n"
+  summary: "\nThe common interface for use in standalone and plugin applications. It exposes properties that found in a the\n\"ScriptContext\" class\n"
   example: []
   syntax:
     content: public interface IScriptContext
@@ -60,16 +66,16 @@ items:
   source:
     id: ApplicationName
     path: ''
-    startLine: 15347
+    startLine: 16649
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: string ApplicationName { get; }
+    content.vb: ReadOnly Property ApplicationName As String
     parameters: []
     return:
       type: System.String
-    content.vb: ReadOnly Property ApplicationName As String
   overload: ESAPIX.Interfaces.IScriptContext.ApplicationName*
   modifiers.csharp:
   - get
@@ -89,16 +95,16 @@ items:
   source:
     id: BrachyPlanSetup
     path: ''
-    startLine: 15349
+    startLine: 16651
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: BrachyPlanSetup BrachyPlanSetup { get; }
+    content.vb: ReadOnly Property BrachyPlanSetup As BrachyPlanSetup
     parameters: []
     return:
       type: BrachyPlanSetup
-    content.vb: ReadOnly Property BrachyPlanSetup As BrachyPlanSetup
   overload: ESAPIX.Interfaces.IScriptContext.BrachyPlanSetup*
   modifiers.csharp:
   - get
@@ -118,16 +124,16 @@ items:
   source:
     id: BrachyPlansInScope
     path: ''
-    startLine: 15351
+    startLine: 16653
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; }
+    content.vb: ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{BrachyPlanSetup}
-    content.vb: ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
+      type: IEnumerable{BrachyPlanSetup}
   overload: ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope*
   modifiers.csharp:
   - get
@@ -147,16 +153,16 @@ items:
   source:
     id: CurrentUser
     path: ''
-    startLine: 15353
+    startLine: 16655
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: User CurrentUser { get; }
+    content.vb: ReadOnly Property CurrentUser As User
     parameters: []
     return:
       type: User
-    content.vb: ReadOnly Property CurrentUser As User
   overload: ESAPIX.Interfaces.IScriptContext.CurrentUser*
   modifiers.csharp:
   - get
@@ -176,16 +182,16 @@ items:
   source:
     id: Course
     path: ''
-    startLine: 15355
+    startLine: 16657
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: Course Course { get; }
+    content.vb: ReadOnly Property Course As Course
     parameters: []
     return:
       type: Course
-    content.vb: ReadOnly Property Course As Course
   overload: ESAPIX.Interfaces.IScriptContext.Course*
   modifiers.csharp:
   - get
@@ -205,16 +211,16 @@ items:
   source:
     id: Image
     path: ''
-    startLine: 15357
+    startLine: 16659
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: Image Image { get; }
+    content.vb: ReadOnly Property Image As Image
     parameters: []
     return:
       type: Image
-    content.vb: ReadOnly Property Image As Image
   overload: ESAPIX.Interfaces.IScriptContext.Image*
   modifiers.csharp:
   - get
@@ -234,16 +240,16 @@ items:
   source:
     id: Patient
     path: ''
-    startLine: 15359
+    startLine: 16661
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: Patient Patient { get; }
+    content.vb: ReadOnly Property Patient As Patient
     parameters: []
     return:
       type: Patient
-    content.vb: ReadOnly Property Patient As Patient
   overload: ESAPIX.Interfaces.IScriptContext.Patient*
   modifiers.csharp:
   - get
@@ -263,16 +269,16 @@ items:
   source:
     id: ExternalPlanSetup
     path: ''
-    startLine: 15361
+    startLine: 16663
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: ExternalPlanSetup ExternalPlanSetup { get; }
+    content.vb: ReadOnly Property ExternalPlanSetup As ExternalPlanSetup
     parameters: []
     return:
       type: ExternalPlanSetup
-    content.vb: ReadOnly Property ExternalPlanSetup As ExternalPlanSetup
   overload: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup*
   modifiers.csharp:
   - get
@@ -292,16 +298,16 @@ items:
   source:
     id: ExternalPlansInScope
     path: ''
-    startLine: 15363
+    startLine: 16665
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
+    content.vb: ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{ExternalPlanSetup}
-    content.vb: ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
+      type: IEnumerable{ExternalPlanSetup}
   overload: ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope*
   modifiers.csharp:
   - get
@@ -321,16 +327,16 @@ items:
   source:
     id: PlanSetup
     path: ''
-    startLine: 15365
+    startLine: 16667
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: PlanSetup PlanSetup { get; }
+    content.vb: ReadOnly Property PlanSetup As PlanSetup
     parameters: []
     return:
       type: PlanSetup
-    content.vb: ReadOnly Property PlanSetup As PlanSetup
   overload: ESAPIX.Interfaces.IScriptContext.PlanSetup*
   modifiers.csharp:
   - get
@@ -350,16 +356,16 @@ items:
   source:
     id: PlansInScope
     path: ''
-    startLine: 15367
+    startLine: 16669
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<PlanSetup> PlansInScope { get; }
+    content.vb: ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{PlanSetup}
-    content.vb: ReadOnly Property PlansInScope As IEnumerable(Of PlanSetup)
+      type: IEnumerable{PlanSetup}
   overload: ESAPIX.Interfaces.IScriptContext.PlansInScope*
   modifiers.csharp:
   - get
@@ -379,16 +385,16 @@ items:
   source:
     id: PlanSumsInScope
     path: ''
-    startLine: 15369
+    startLine: 16671
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: IEnumerable<PlanSum> PlanSumsInScope { get; }
+    content.vb: ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{PlanSum}
-    content.vb: ReadOnly Property PlanSumsInScope As IEnumerable(Of PlanSum)
+      type: IEnumerable{PlanSum}
   overload: ESAPIX.Interfaces.IScriptContext.PlanSumsInScope*
   modifiers.csharp:
   - get
@@ -408,16 +414,16 @@ items:
   source:
     id: StructureSet
     path: ''
-    startLine: 15371
+    startLine: 16673
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: StructureSet StructureSet { get; }
+    content.vb: ReadOnly Property StructureSet As StructureSet
     parameters: []
     return:
       type: StructureSet
-    content.vb: ReadOnly Property StructureSet As StructureSet
   overload: ESAPIX.Interfaces.IScriptContext.StructureSet*
   modifiers.csharp:
   - get
@@ -437,7 +443,7 @@ items:
   source:
     id: Thread
     path: ''
-    startLine: 15376
+    startLine: 16678
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -445,15 +451,43 @@ items:
   example: []
   syntax:
     content: IVMSThread Thread { get; }
+    content.vb: ReadOnly Property Thread As IVMSThread
     parameters: []
     return:
       type: ESAPIX.Interfaces.IVMSThread
-    content.vb: ReadOnly Property Thread As IVMSThread
   overload: ESAPIX.Interfaces.IScriptContext.Thread*
   modifiers.csharp:
   - get
   modifiers.vb:
   - ReadOnly
+- uid: ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  commentId: P:ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  id: UIDispatcher
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: UIDispatcher
+  nameWithType: IScriptContext.UIDispatcher
+  fullName: ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  type: Property
+  source:
+    id: UIDispatcher
+    path: ''
+    startLine: 16680
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: Dispatcher UIDispatcher { get; set; }
+    content.vb: Property UIDispatcher As Dispatcher
+    parameters: []
+    return:
+      type: Dispatcher
+  overload: ESAPIX.Interfaces.IScriptContext.UIDispatcher*
+  modifiers.csharp:
+  - get
+  - set
 - uid: ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
   commentId: M:ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
   id: GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
@@ -468,7 +502,7 @@ items:
   source:
     id: GetValue
     path: ''
-    startLine: 15384
+    startLine: 16687
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -476,6 +510,7 @@ items:
   example: []
   syntax:
     content: T GetValue<T>(Func<IScriptContext, T> toExecute)
+    content.vb: Function GetValue(Of T)(toExecute As Func(Of IScriptContext, T)) As T
     parameters:
     - id: toExecute
       type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
@@ -486,7 +521,6 @@ items:
     return:
       type: '{T}'
       description: the value requested
-    content.vb: Function GetValue(Of T)(toExecute As Func(Of IScriptContext, T)) As T
   overload: ESAPIX.Interfaces.IScriptContext.GetValue*
   nameWithType.vb: IScriptContext.GetValue(Of T)(Func(Of IScriptContext, T))
   fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValue(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
@@ -505,7 +539,7 @@ items:
   source:
     id: GetValueAsync
     path: ''
-    startLine: 15392
+    startLine: 16695
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -513,6 +547,7 @@ items:
   example: []
   syntax:
     content: Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
+    content.vb: Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
     parameters:
     - id: toExecute
       type: System.Func{ESAPIX.Interfaces.IScriptContext,{T}}
@@ -521,13 +556,127 @@ items:
     - id: T
       description: the type of value to be returned
     return:
-      type: System.Threading.Tasks.Task{{T}}
+      type: Task{{T}}
       description: a task of the value requested
-    content.vb: Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
   overload: ESAPIX.Interfaces.IScriptContext.GetValueAsync*
   nameWithType.vb: IScriptContext.GetValueAsync(Of T)(Func(Of IScriptContext, T))
   fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValueAsync(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
   name.vb: GetValueAsync(Of T)(Func(Of IScriptContext, T))
+- uid: ESAPIX.Interfaces.IScriptContext.PatientChanged
+  commentId: E:ESAPIX.Interfaces.IScriptContext.PatientChanged
+  id: PatientChanged
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: PatientChanged
+  nameWithType: IScriptContext.PatientChanged
+  fullName: ESAPIX.Interfaces.IScriptContext.PatientChanged
+  type: Event
+  source:
+    id: PatientChanged
+    path: ''
+    startLine: 16700
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: event PatientChangedHandler PatientChanged
+    content.vb: Event PatientChanged As PatientChangedHandler
+    return:
+      type: PatientChangedHandler
+- uid: ESAPIX.Interfaces.IScriptContext.PlanSetupChanged
+  commentId: E:ESAPIX.Interfaces.IScriptContext.PlanSetupChanged
+  id: PlanSetupChanged
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: PlanSetupChanged
+  nameWithType: IScriptContext.PlanSetupChanged
+  fullName: ESAPIX.Interfaces.IScriptContext.PlanSetupChanged
+  type: Event
+  source:
+    id: PlanSetupChanged
+    path: ''
+    startLine: 16702
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: event PlanSetupChangedHandler PlanSetupChanged
+    content.vb: Event PlanSetupChanged As PlanSetupChangedHandler
+    return:
+      type: PlanSetupChangedHandler
+- uid: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetupChanged
+  commentId: E:ESAPIX.Interfaces.IScriptContext.ExternalPlanSetupChanged
+  id: ExternalPlanSetupChanged
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: ExternalPlanSetupChanged
+  nameWithType: IScriptContext.ExternalPlanSetupChanged
+  fullName: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetupChanged
+  type: Event
+  source:
+    id: ExternalPlanSetupChanged
+    path: ''
+    startLine: 16703
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: event ExternalPlanSetupChangedHandler ExternalPlanSetupChanged
+    content.vb: Event ExternalPlanSetupChanged As ExternalPlanSetupChangedHandler
+    return:
+      type: ExternalPlanSetupChangedHandler
+- uid: ESAPIX.Interfaces.IScriptContext.BrachyPlanSetupChanged
+  commentId: E:ESAPIX.Interfaces.IScriptContext.BrachyPlanSetupChanged
+  id: BrachyPlanSetupChanged
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetupChanged
+  nameWithType: IScriptContext.BrachyPlanSetupChanged
+  fullName: ESAPIX.Interfaces.IScriptContext.BrachyPlanSetupChanged
+  type: Event
+  source:
+    id: BrachyPlanSetupChanged
+    path: ''
+    startLine: 16704
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: event PlanSetupChangedHandler BrachyPlanSetupChanged
+    content.vb: Event BrachyPlanSetupChanged As PlanSetupChangedHandler
+    return:
+      type: PlanSetupChangedHandler
+- uid: ESAPIX.Interfaces.IScriptContext.CourseChanged
+  commentId: E:ESAPIX.Interfaces.IScriptContext.CourseChanged
+  id: CourseChanged
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: CourseChanged
+  nameWithType: IScriptContext.CourseChanged
+  fullName: ESAPIX.Interfaces.IScriptContext.CourseChanged
+  type: Event
+  source:
+    id: CourseChanged
+    path: ''
+    startLine: 16705
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: event CourseChangedHandler CourseChanged
+    content.vb: Event CourseChanged As CourseChangedHandler
+    return:
+      type: CourseChangedHandler
 references:
 - uid: ESAPIX.Interfaces
   commentId: N:ESAPIX.Interfaces
@@ -571,21 +720,20 @@ references:
   name: BrachyPlansInScope
   nameWithType: IScriptContext.BrachyPlansInScope
   fullName: ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope
-- uid: System.Collections.Generic.IEnumerable{BrachyPlanSetup}
-  commentId: T:System.Collections.Generic.IEnumerable{BrachyPlanSetup}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{BrachyPlanSetup}
+  commentId: '!:IEnumerable{BrachyPlanSetup}'
+  definition: IEnumerable`1
   name: IEnumerable<BrachyPlanSetup>
   nameWithType: IEnumerable<BrachyPlanSetup>
-  fullName: System.Collections.Generic.IEnumerable<BrachyPlanSetup>
+  fullName: IEnumerable<BrachyPlanSetup>
   nameWithType.vb: IEnumerable(Of BrachyPlanSetup)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of BrachyPlanSetup)
+  fullName.vb: IEnumerable(Of BrachyPlanSetup)
   name.vb: IEnumerable(Of BrachyPlanSetup)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -599,10 +747,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -615,51 +763,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Interfaces.IScriptContext.CurrentUser*
   commentId: Overload:ESAPIX.Interfaces.IScriptContext.CurrentUser
   isExternal: false
@@ -721,21 +862,20 @@ references:
   name: ExternalPlansInScope
   nameWithType: IScriptContext.ExternalPlansInScope
   fullName: ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope
-- uid: System.Collections.Generic.IEnumerable{ExternalPlanSetup}
-  commentId: T:System.Collections.Generic.IEnumerable{ExternalPlanSetup}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{ExternalPlanSetup}
+  commentId: '!:IEnumerable{ExternalPlanSetup}'
+  definition: IEnumerable`1
   name: IEnumerable<ExternalPlanSetup>
   nameWithType: IEnumerable<ExternalPlanSetup>
-  fullName: System.Collections.Generic.IEnumerable<ExternalPlanSetup>
+  fullName: IEnumerable<ExternalPlanSetup>
   nameWithType.vb: IEnumerable(Of ExternalPlanSetup)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of ExternalPlanSetup)
+  fullName.vb: IEnumerable(Of ExternalPlanSetup)
   name.vb: IEnumerable(Of ExternalPlanSetup)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -749,10 +889,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -782,21 +922,20 @@ references:
   name: PlansInScope
   nameWithType: IScriptContext.PlansInScope
   fullName: ESAPIX.Interfaces.IScriptContext.PlansInScope
-- uid: System.Collections.Generic.IEnumerable{PlanSetup}
-  commentId: T:System.Collections.Generic.IEnumerable{PlanSetup}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{PlanSetup}
+  commentId: '!:IEnumerable{PlanSetup}'
+  definition: IEnumerable`1
   name: IEnumerable<PlanSetup>
   nameWithType: IEnumerable<PlanSetup>
-  fullName: System.Collections.Generic.IEnumerable<PlanSetup>
+  fullName: IEnumerable<PlanSetup>
   nameWithType.vb: IEnumerable(Of PlanSetup)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of PlanSetup)
+  fullName.vb: IEnumerable(Of PlanSetup)
   name.vb: IEnumerable(Of PlanSetup)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -810,10 +949,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -832,21 +971,20 @@ references:
   name: PlanSumsInScope
   nameWithType: IScriptContext.PlanSumsInScope
   fullName: ESAPIX.Interfaces.IScriptContext.PlanSumsInScope
-- uid: System.Collections.Generic.IEnumerable{PlanSum}
-  commentId: T:System.Collections.Generic.IEnumerable{PlanSum}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{PlanSum}
+  commentId: '!:IEnumerable{PlanSum}'
+  definition: IEnumerable`1
   name: IEnumerable<PlanSum>
   nameWithType: IEnumerable<PlanSum>
-  fullName: System.Collections.Generic.IEnumerable<PlanSum>
+  fullName: IEnumerable<PlanSum>
   nameWithType.vb: IEnumerable(Of PlanSum)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of PlanSum)
+  fullName.vb: IEnumerable(Of PlanSum)
   name.vb: IEnumerable(Of PlanSum)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -860,10 +998,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -900,6 +1038,17 @@ references:
   name: IVMSThread
   nameWithType: IVMSThread
   fullName: ESAPIX.Interfaces.IVMSThread
+- uid: ESAPIX.Interfaces.IScriptContext.UIDispatcher*
+  commentId: Overload:ESAPIX.Interfaces.IScriptContext.UIDispatcher
+  isExternal: false
+  name: UIDispatcher
+  nameWithType: IScriptContext.UIDispatcher
+  fullName: ESAPIX.Interfaces.IScriptContext.UIDispatcher
+- uid: Dispatcher
+  isExternal: true
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: Dispatcher
 - uid: ESAPIX.Interfaces.IScriptContext.GetValue*
   commentId: Overload:ESAPIX.Interfaces.IScriptContext.GetValue
   isExternal: false
@@ -1028,21 +1177,20 @@ references:
   name: GetValueAsync
   nameWithType: IScriptContext.GetValueAsync
   fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync
-- uid: System.Threading.Tasks.Task{{T}}
-  commentId: T:System.Threading.Tasks.Task{``0}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
+- uid: Task{{T}}
+  commentId: '!:Task{``0}'
+  definition: Task`1
   name: Task<T>
   nameWithType: Task<T>
-  fullName: System.Threading.Tasks.Task<T>
+  fullName: Task<T>
   nameWithType.vb: Task(Of T)
-  fullName.vb: System.Threading.Tasks.Task(Of T)
+  fullName.vb: Task(Of T)
   name.vb: Task(Of T)
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: <
     nameWithType: <
@@ -1054,10 +1202,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1068,48 +1216,64 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
+- uid: Task`1
   isExternal: true
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: false
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+- uid: PatientChangedHandler
+  commentId: '!:PatientChangedHandler'
+  isExternal: true
+  name: PatientChangedHandler
+  nameWithType: PatientChangedHandler
+  fullName: PatientChangedHandler
+- uid: PlanSetupChangedHandler
+  isExternal: true
+  name: PlanSetupChangedHandler
+  nameWithType: PlanSetupChangedHandler
+  fullName: PlanSetupChangedHandler
+- uid: ExternalPlanSetupChangedHandler
+  commentId: '!:ExternalPlanSetupChangedHandler'
+  isExternal: true
+  name: ExternalPlanSetupChangedHandler
+  nameWithType: ExternalPlanSetupChangedHandler
+  fullName: ExternalPlanSetupChangedHandler
+- uid: CourseChangedHandler
+  commentId: '!:CourseChangedHandler'
+  isExternal: true
+  name: CourseChangedHandler
+  nameWithType: CourseChangedHandler
+  fullName: CourseChangedHandler

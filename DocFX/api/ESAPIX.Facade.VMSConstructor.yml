@@ -44,7 +44,7 @@ items:
   source:
     id: VMSConstructor
     path: ''
-    startLine: 4413
+    startLine: 4329
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
@@ -83,15 +83,15 @@ items:
   source:
     id: ConstructScriptContextFunc0
     path: ''
-    startLine: 4415
+    startLine: 4331
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<object, object, string, dynamic> ConstructScriptContextFunc0
+    content.vb: Public Shared ConstructScriptContextFunc0 As Func(Of Object, Object, String, Object)
     return:
       type: System.Func{System.Object,System.Object,System.String,System.Object}
-    content.vb: Public Shared ConstructScriptContextFunc0 As Func(Of Object, Object, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -112,15 +112,15 @@ items:
   source:
     id: ConstructVVectorFunc0
     path: ''
-    startLine: 4424
+    startLine: 4332
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<double, double, double, dynamic> ConstructVVectorFunc0
+    content.vb: Public Shared ConstructVVectorFunc0 As Func(Of Double, Double, Double, Object)
     return:
       type: System.Func{System.Double,System.Double,System.Double,System.Object}
-    content.vb: Public Shared ConstructVVectorFunc0 As Func(Of Double, Double, Double, Object)
   modifiers.csharp:
   - public
   - static
@@ -141,15 +141,15 @@ items:
   source:
     id: ConstructAxisAlignedMarginsFunc0
     path: ''
-    startLine: 4433
+    startLine: 4335
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, double, double, double, double, double, double, dynamic> ConstructAxisAlignedMarginsFunc0
+    content.vb: Public Shared ConstructAxisAlignedMarginsFunc0 As Func(Of Object, Double, Double, Double, Double, Double, Double, Object)
     return:
       type: System.Func{System.Object,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Object}
-    content.vb: Public Shared ConstructAxisAlignedMarginsFunc0 As Func(Of Object, Double, Double, Double, Double, Double, Double, Object)
   modifiers.csharp:
   - public
   - static
@@ -170,15 +170,15 @@ items:
   source:
     id: ConstructStructureCodeInfoFunc0
     path: ''
-    startLine: 4442
+    startLine: 4337
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<string, string, dynamic> ConstructStructureCodeInfoFunc0
+    content.vb: Public Shared ConstructStructureCodeInfoFunc0 As Func(Of String, String, Object)
     return:
       type: System.Func{System.String,System.String,System.Object}
-    content.vb: Public Shared ConstructStructureCodeInfoFunc0 As Func(Of String, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -199,15 +199,15 @@ items:
   source:
     id: ConstructSegmentProfileFunc0
     path: ''
-    startLine: 4451
+    startLine: 4338
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic, BitArray, dynamic> ConstructSegmentProfileFunc0
-    return:
-      type: System.Func{System.Object,System.Object,System.Collections.BitArray,System.Object}
     content.vb: Public Shared ConstructSegmentProfileFunc0 As Func(Of Object, Object, BitArray, Object)
+    return:
+      type: System.Func{System.Object,System.Object,BitArray,System.Object}
   modifiers.csharp:
   - public
   - static
@@ -228,15 +228,15 @@ items:
   source:
     id: ConstructSegmentProfilePointFunc0
     path: ''
-    startLine: 4460
+    startLine: 4339
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, bool, dynamic> ConstructSegmentProfilePointFunc0
+    content.vb: Public Shared ConstructSegmentProfilePointFunc0 As Func(Of Object, Boolean, Object)
     return:
       type: System.Func{System.Object,System.Boolean,System.Object}
-    content.vb: Public Shared ConstructSegmentProfilePointFunc0 As Func(Of Object, Boolean, Object)
   modifiers.csharp:
   - public
   - static
@@ -257,15 +257,15 @@ items:
   source:
     id: ConstructDoseValueFunc0
     path: ''
-    startLine: 4469
+    startLine: 4340
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<double, string, dynamic> ConstructDoseValueFunc0
+    content.vb: Public Shared ConstructDoseValueFunc0 As Func(Of Double, String, Object)
     return:
       type: System.Func{System.Double,System.String,System.Object}
-    content.vb: Public Shared ConstructDoseValueFunc0 As Func(Of Double, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -286,15 +286,15 @@ items:
   source:
     id: ConstructDoseValueFunc1
     path: ''
-    startLine: 4478
+    startLine: 4341
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<double, dynamic, dynamic> ConstructDoseValueFunc1
+    content.vb: Public Shared ConstructDoseValueFunc1 As Func(Of Double, Object, Object)
     return:
       type: System.Func{System.Double,System.Object,System.Object}
-    content.vb: Public Shared ConstructDoseValueFunc1 As Func(Of Double, Object, Object)
   modifiers.csharp:
   - public
   - static
@@ -315,15 +315,15 @@ items:
   source:
     id: ConstructLineProfileFunc0
     path: ''
-    startLine: 4487
+    startLine: 4342
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic, double[], dynamic> ConstructLineProfileFunc0
+    content.vb: Public Shared ConstructLineProfileFunc0 As Func(Of Object, Object, Double(), Object)
     return:
       type: System.Func{System.Object,System.Object,System.Double[],System.Object}
-    content.vb: Public Shared ConstructLineProfileFunc0 As Func(Of Object, Object, Double(), Object)
   modifiers.csharp:
   - public
   - static
@@ -344,15 +344,15 @@ items:
   source:
     id: ConstructProfilePointFunc0
     path: ''
-    startLine: 4496
+    startLine: 4343
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, double, dynamic> ConstructProfilePointFunc0
+    content.vb: Public Shared ConstructProfilePointFunc0 As Func(Of Object, Double, Object)
     return:
       type: System.Func{System.Object,System.Double,System.Object}
-    content.vb: Public Shared ConstructProfilePointFunc0 As Func(Of Object, Double, Object)
   modifiers.csharp:
   - public
   - static
@@ -373,15 +373,15 @@ items:
   source:
     id: ConstructDoseProfileFunc0
     path: ''
-    startLine: 4505
+    startLine: 4344
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic, double[], dynamic, dynamic> ConstructDoseProfileFunc0
+    content.vb: Public Shared ConstructDoseProfileFunc0 As Func(Of Object, Object, Double(), Object, Object)
     return:
       type: System.Func{System.Object,System.Object,System.Double[],System.Object,System.Object}
-    content.vb: Public Shared ConstructDoseProfileFunc0 As Func(Of Object, Object, Double(), Object, Object)
   modifiers.csharp:
   - public
   - static
@@ -402,15 +402,15 @@ items:
   source:
     id: ConstructDVHPointFunc0
     path: ''
-    startLine: 4514
+    startLine: 4345
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, double, string, dynamic> ConstructDVHPointFunc0
+    content.vb: Public Shared ConstructDVHPointFunc0 As Func(Of Object, Double, String, Object)
     return:
       type: System.Func{System.Object,System.Double,System.String,System.Object}
-    content.vb: Public Shared ConstructDVHPointFunc0 As Func(Of Object, Double, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -431,15 +431,15 @@ items:
   source:
     id: ConstructVRectFunc0
     path: ''
-    startLine: 4523
+    startLine: 4346
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic, dynamic, dynamic, dynamic> ConstructVRectFunc0
+    content.vb: Public Shared ConstructVRectFunc0 As Func(Of Object, Object, Object, Object, Object)
     return:
       type: System.Func{System.Object,System.Object,System.Object,System.Object,System.Object}
-    content.vb: Public Shared ConstructVRectFunc0 As Func(Of Object, Object, Object, Object, Object)
   modifiers.csharp:
   - public
   - static
@@ -460,15 +460,15 @@ items:
   source:
     id: ConstructMetersetValueFunc0
     path: ''
-    startLine: 4532
+    startLine: 4347
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<double, dynamic, dynamic> ConstructMetersetValueFunc0
+    content.vb: Public Shared ConstructMetersetValueFunc0 As Func(Of Double, Object, Object)
     return:
       type: System.Func{System.Double,System.Object,System.Object}
-    content.vb: Public Shared ConstructMetersetValueFunc0 As Func(Of Double, Object, Object)
   modifiers.csharp:
   - public
   - static
@@ -489,15 +489,15 @@ items:
   source:
     id: ConstructFluenceFunc0
     path: ''
-    startLine: 4541
+    startLine: 4348
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<float[, ], double, double, dynamic> ConstructFluenceFunc0
+    content.vb: Public Shared ConstructFluenceFunc0 As Func(Of Single(,), Double, Double, Object)
     return:
       type: System.Func{System.Single[0:,0:],System.Double,System.Double,System.Object}
-    content.vb: Public Shared ConstructFluenceFunc0 As Func(Of Single(,), Double, Double, Object)
   modifiers.csharp:
   - public
   - static
@@ -518,15 +518,15 @@ items:
   source:
     id: ConstructFluenceFunc1
     path: ''
-    startLine: 4550
+    startLine: 4349
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<float[, ], double, double, string, dynamic> ConstructFluenceFunc1
+    content.vb: Public Shared ConstructFluenceFunc1 As Func(Of Single(,), Double, Double, String, Object)
     return:
       type: System.Func{System.Single[0:,0:],System.Double,System.Double,System.String,System.Object}
-    content.vb: Public Shared ConstructFluenceFunc1 As Func(Of Single(,), Double, Double, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -547,15 +547,15 @@ items:
   source:
     id: ConstructImageProfileFunc0
     path: ''
-    startLine: 4559
+    startLine: 4350
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic, double[], string, dynamic> ConstructImageProfileFunc0
+    content.vb: Public Shared ConstructImageProfileFunc0 As Func(Of Object, Object, Double(), String, Object)
     return:
       type: System.Func{System.Object,System.Object,System.Double[],System.String,System.Object}
-    content.vb: Public Shared ConstructImageProfileFunc0 As Func(Of Object, Object, Double(), String, Object)
   modifiers.csharp:
   - public
   - static
@@ -576,15 +576,15 @@ items:
   source:
     id: ConstructLMCVOptionsFunc0
     path: ''
-    startLine: 4568
+    startLine: 4351
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<bool, dynamic> ConstructLMCVOptionsFunc0
+    content.vb: Public Shared ConstructLMCVOptionsFunc0 As Func(Of Boolean, Object)
     return:
       type: System.Func{System.Boolean,System.Object}
-    content.vb: Public Shared ConstructLMCVOptionsFunc0 As Func(Of Boolean, Object)
   modifiers.csharp:
   - public
   - static
@@ -605,15 +605,15 @@ items:
   source:
     id: ConstructSmartLMCOptionsFunc0
     path: ''
-    startLine: 4577
+    startLine: 4352
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<bool, bool, dynamic> ConstructSmartLMCOptionsFunc0
+    content.vb: Public Shared ConstructSmartLMCOptionsFunc0 As Func(Of Boolean, Boolean, Object)
     return:
       type: System.Func{System.Boolean,System.Boolean,System.Object}
-    content.vb: Public Shared ConstructSmartLMCOptionsFunc0 As Func(Of Boolean, Boolean, Object)
   modifiers.csharp:
   - public
   - static
@@ -634,15 +634,15 @@ items:
   source:
     id: ConstructLMCMSSOptionsFunc0
     path: ''
-    startLine: 4586
+    startLine: 4353
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<int, dynamic> ConstructLMCMSSOptionsFunc0
+    content.vb: Public Shared ConstructLMCMSSOptionsFunc0 As Func(Of Integer, Object)
     return:
       type: System.Func{System.Int32,System.Object}
-    content.vb: Public Shared ConstructLMCMSSOptionsFunc0 As Func(Of Integer, Object)
   modifiers.csharp:
   - public
   - static
@@ -663,15 +663,15 @@ items:
   source:
     id: ConstructOptimizationOptionsIMRTFunc0
     path: ''
-    startLine: 4595
+    startLine: 4354
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<int, dynamic, int, dynamic, string, dynamic> ConstructOptimizationOptionsIMRTFunc0
+    content.vb: Public Shared ConstructOptimizationOptionsIMRTFunc0 As Func(Of Integer, Object, Integer, Object, String, Object)
     return:
       type: System.Func{System.Int32,System.Object,System.Int32,System.Object,System.String,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsIMRTFunc0 As Func(Of Integer, Object, Integer, Object, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -692,15 +692,15 @@ items:
   source:
     id: ConstructOptimizationOptionsIMRTFunc1
     path: ''
-    startLine: 4604
+    startLine: 4356
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<int, dynamic, dynamic, dynamic, string, dynamic> ConstructOptimizationOptionsIMRTFunc1
+    content.vb: Public Shared ConstructOptimizationOptionsIMRTFunc1 As Func(Of Integer, Object, Object, Object, String, Object)
     return:
       type: System.Func{System.Int32,System.Object,System.Object,System.Object,System.String,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsIMRTFunc1 As Func(Of Integer, Object, Object, Object, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -721,15 +721,15 @@ items:
   source:
     id: ConstructOptimizationOptionsIMRTFunc2
     path: ''
-    startLine: 4613
+    startLine: 4359
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<int, dynamic, dynamic, string, dynamic> ConstructOptimizationOptionsIMRTFunc2
+    content.vb: Public Shared ConstructOptimizationOptionsIMRTFunc2 As Func(Of Integer, Object, Object, String, Object)
     return:
       type: System.Func{System.Int32,System.Object,System.Object,System.String,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsIMRTFunc2 As Func(Of Integer, Object, Object, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -750,15 +750,15 @@ items:
   source:
     id: ConstructOptimizationOptionsVMATFunc0
     path: ''
-    startLine: 4622
+    startLine: 4360
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, string, dynamic> ConstructOptimizationOptionsVMATFunc0
+    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc0 As Func(Of Object, String, Object)
     return:
       type: System.Func{System.Object,System.String,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc0 As Func(Of Object, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -779,15 +779,15 @@ items:
   source:
     id: ConstructOptimizationOptionsVMATFunc1
     path: ''
-    startLine: 4631
+    startLine: 4361
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, string, dynamic> ConstructOptimizationOptionsVMATFunc1
+    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc1 As Func(Of Object, String, Object)
     return:
       type: System.Func{System.Object,System.String,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc1 As Func(Of Object, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -808,15 +808,15 @@ items:
   source:
     id: ConstructOptimizationOptionsVMATFunc2
     path: ''
-    startLine: 4640
+    startLine: 4362
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<int, string, dynamic> ConstructOptimizationOptionsVMATFunc2
+    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc2 As Func(Of Integer, String, Object)
     return:
       type: System.Func{System.Int32,System.String,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc2 As Func(Of Integer, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -837,15 +837,15 @@ items:
   source:
     id: ConstructOptimizationOptionsVMATFunc3
     path: ''
-    startLine: 4649
+    startLine: 4363
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic, int, string, dynamic> ConstructOptimizationOptionsVMATFunc3
+    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc3 As Func(Of Object, Object, Integer, String, Object)
     return:
       type: System.Func{System.Object,System.Object,System.Int32,System.String,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc3 As Func(Of Object, Object, Integer, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -866,15 +866,15 @@ items:
   source:
     id: ConstructOptimizationOptionsVMATFunc4
     path: ''
-    startLine: 4658
+    startLine: 4364
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<dynamic, dynamic> ConstructOptimizationOptionsVMATFunc4
+    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc4 As Func(Of Object, Object)
     return:
       type: System.Func{System.Object,System.Object}
-    content.vb: Public Shared ConstructOptimizationOptionsVMATFunc4 As Func(Of Object, Object)
   modifiers.csharp:
   - public
   - static
@@ -895,15 +895,15 @@ items:
   source:
     id: ConstructExternalBeamMachineParametersFunc0
     path: ''
-    startLine: 4667
+    startLine: 4366
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade
   syntax:
     content: public static Func<string, string, int, string, string, dynamic> ConstructExternalBeamMachineParametersFunc0
+    content.vb: Public Shared ConstructExternalBeamMachineParametersFunc0 As Func(Of String, String, Integer, String, String, Object)
     return:
       type: System.Func{System.String,System.String,System.Int32,System.String,System.String,System.Object}
-    content.vb: Public Shared ConstructExternalBeamMachineParametersFunc0 As Func(Of String, String, Integer, String, String, Object)
   modifiers.csharp:
   - public
   - static
@@ -1856,15 +1856,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Func{System.Object,System.Object,System.Collections.BitArray,System.Object}
-  commentId: T:System.Func{System.Object,System.Object,System.Collections.BitArray,System.Object}
+- uid: System.Func{System.Object,System.Object,BitArray,System.Object}
+  commentId: T:System.Func{System.Object,System.Object,BitArray,System.Object}
   parent: System
   definition: System.Func`4
   name: Func<Object, Object, BitArray, Object>
   nameWithType: Func<Object, Object, BitArray, Object>
-  fullName: System.Func<System.Object, System.Object, System.Collections.BitArray, System.Object>
+  fullName: System.Func<System.Object, System.Object, BitArray, System.Object>
   nameWithType.vb: Func(Of , , BitArray, )
-  fullName.vb: System.Func(Of , , System.Collections.BitArray, )
+  fullName.vb: System.Func(Of , , BitArray, )
   name.vb: Func(Of , , BitArray, )
   spec.csharp:
   - uid: System.Func`4
@@ -1889,10 +1889,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Collections.BitArray
+  - uid: BitArray
     name: BitArray
     nameWithType: BitArray
-    fullName: System.Collections.BitArray
+    fullName: BitArray
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1919,10 +1919,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Collections.BitArray
+  - uid: BitArray
     name: BitArray
     nameWithType: BitArray
-    fullName: System.Collections.BitArray
+    fullName: BitArray
     isExternal: true
   - name: ', '
     nameWithType: ', '

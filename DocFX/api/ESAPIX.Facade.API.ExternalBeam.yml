@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.ExternalBeam.#ctor
   - ESAPIX.Facade.API.ExternalBeam.#ctor(System.Object)
+  - ESAPIX.Facade.API.ExternalBeam.IsLive
   - ESAPIX.Facade.API.ExternalBeam.MachineModel
   - ESAPIX.Facade.API.ExternalBeam.MachineModelName
   - ESAPIX.Facade.API.ExternalBeam.MachineScaleDisplayName
@@ -22,7 +23,7 @@ items:
   source:
     id: ExternalBeam
     path: ''
-    startLine: 8074
+    startLine: 9207
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -71,7 +72,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8076
+    startLine: 9209
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,21 +98,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8077
+    startLine: 9214
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalBeam(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ExternalBeam.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.ExternalBeam.IsLive
+  commentId: P:ESAPIX.Facade.API.ExternalBeam.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ExternalBeam
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ExternalBeam.IsLive
+  fullName: ESAPIX.Facade.API.ExternalBeam.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 9219
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.ExternalBeam.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.ExternalBeam.SourceAxisDistance
   commentId: P:ESAPIX.Facade.API.ExternalBeam.SourceAxisDistance
   id: SourceAxisDistance
@@ -126,16 +158,16 @@ items:
   source:
     id: SourceAxisDistance
     path: ''
-    startLine: 8078
+    startLine: 9224
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SourceAxisDistance { get; set; }
+    content.vb: Public Property SourceAxisDistance As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property SourceAxisDistance As Double
   overload: ESAPIX.Facade.API.ExternalBeam.SourceAxisDistance*
   modifiers.csharp:
   - public
@@ -157,16 +189,16 @@ items:
   source:
     id: MachineModel
     path: ''
-    startLine: 8091
+    startLine: 9241
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineModel { get; set; }
+    content.vb: Public Property MachineModel As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineModel As String
   overload: ESAPIX.Facade.API.ExternalBeam.MachineModel*
   modifiers.csharp:
   - public
@@ -188,16 +220,16 @@ items:
   source:
     id: MachineModelName
     path: ''
-    startLine: 8104
+    startLine: 9258
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineModelName { get; set; }
+    content.vb: Public Property MachineModelName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineModelName As String
   overload: ESAPIX.Facade.API.ExternalBeam.MachineModelName*
   modifiers.csharp:
   - public
@@ -219,16 +251,16 @@ items:
   source:
     id: MachineScaleDisplayName
     path: ''
-    startLine: 8117
+    startLine: 9275
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MachineScaleDisplayName { get; set; }
+    content.vb: Public Property MachineScaleDisplayName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MachineScaleDisplayName As String
   overload: ESAPIX.Facade.API.ExternalBeam.MachineScaleDisplayName*
   modifiers.csharp:
   - public
@@ -250,16 +282,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 8130
+    startLine: 9295
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.ExternalBeam.WriteXml*
   modifiers.csharp:
   - public
@@ -710,6 +742,19 @@ references:
   name: ExternalBeam
   nameWithType: ExternalBeam.ExternalBeam
   fullName: ESAPIX.Facade.API.ExternalBeam.ExternalBeam
+- uid: ESAPIX.Facade.API.ExternalBeam.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.ExternalBeam.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: ExternalBeam.IsLive
+  fullName: ESAPIX.Facade.API.ExternalBeam.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.ExternalBeam.SourceAxisDistance*
   commentId: Overload:ESAPIX.Facade.API.ExternalBeam.SourceAxisDistance
   isExternal: false

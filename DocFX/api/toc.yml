@@ -28,8 +28,6 @@
     name: StandAloneContext.PlanSetupChangedHandler
   - uid: ESAPIX.AppKit.XScriptBase
     name: XScriptBase
-  - uid: ESAPIX.AppKit.XScriptMultithreadBase
-    name: XScriptMultithreadBase
 - uid: ESAPIX.AppKit.Data
   name: ESAPIX.AppKit.Data
   items:
@@ -155,10 +153,14 @@
     name: DoseExtensions
   - uid: ESAPIX.Extensions.DVHDataExtensions
     name: DVHDataExtensions
+  - uid: ESAPIX.Extensions.ExpandoExtensions
+    name: ExpandoExtensions
   - uid: ESAPIX.Extensions.ImageExtensions
     name: ImageExtensions
   - uid: ESAPIX.Extensions.ListExtensions
     name: ListExtensions
+  - uid: ESAPIX.Extensions.PatientExtensions
+    name: PatientExtensions
   - uid: ESAPIX.Extensions.PlanningItemExtensions
     name: PlanningItemExtensions
   - uid: ESAPIX.Extensions.PlanSetupExtensions
@@ -185,8 +187,8 @@
 - uid: ESAPIX.Facade
   name: ESAPIX.Facade
   items:
-  - uid: ESAPIX.Facade.ArrayHelper
-    name: ArrayHelper
+  - uid: ESAPIX.Facade.DefaultHelper
+    name: DefaultHelper
   - uid: ESAPIX.Facade.StaticHelper
     name: StaticHelper
   - uid: ESAPIX.Facade.VMSConstructor
@@ -340,92 +342,15 @@
     name: User
   - uid: ESAPIX.Facade.API.Wedge
     name: Wedge
-- uid: ESAPIX.Facade.Types
-  name: ESAPIX.Facade.Types
+- uid: ESAPIX.Facade.Serialization
+  name: ESAPIX.Facade.Serialization
   items:
-  - uid: ESAPIX.Facade.Types.AxisAlignedMargins
-    name: AxisAlignedMargins
-  - uid: ESAPIX.Facade.Types.BlockType
-    name: BlockType
-  - uid: ESAPIX.Facade.Types.CalculationType
-    name: CalculationType
-  - uid: ESAPIX.Facade.Types.DoseProfile
-    name: DoseProfile
-  - uid: ESAPIX.Facade.Types.DoseValue
-    name: DoseValue
-  - uid: ESAPIX.Facade.Types.DoseValue.DoseUnit
-    name: DoseValue.DoseUnit
-  - uid: ESAPIX.Facade.Types.DoseValuePresentation
-    name: DoseValuePresentation
-  - uid: ESAPIX.Facade.Types.DosimeterUnit
-    name: DosimeterUnit
-  - uid: ESAPIX.Facade.Types.DVHEstimateType
-    name: DVHEstimateType
-  - uid: ESAPIX.Facade.Types.DVHPoint
-    name: DVHPoint
-  - uid: ESAPIX.Facade.Types.ExternalBeamMachineParameters
-    name: ExternalBeamMachineParameters
-  - uid: ESAPIX.Facade.Types.Fluence
-    name: Fluence
-  - uid: ESAPIX.Facade.Types.GantryDirection
-    name: GantryDirection
-  - uid: ESAPIX.Facade.Types.ImageProfile
-    name: ImageProfile
-  - uid: ESAPIX.Facade.Types.LineProfile
-    name: LineProfile
-  - uid: ESAPIX.Facade.Types.LMCMSSOptions
-    name: LMCMSSOptions
-  - uid: ESAPIX.Facade.Types.LMCVOptions
-    name: LMCVOptions
-  - uid: ESAPIX.Facade.Types.MetersetValue
-    name: MetersetValue
-  - uid: ESAPIX.Facade.Types.MLCPlanType
-    name: MLCPlanType
-  - uid: ESAPIX.Facade.Types.OptimizationConvergenceOption
-    name: OptimizationConvergenceOption
-  - uid: ESAPIX.Facade.Types.OptimizationIntermediateDoseOption
-    name: OptimizationIntermediateDoseOption
-  - uid: ESAPIX.Facade.Types.OptimizationObjectiveOperator
-    name: OptimizationObjectiveOperator
-  - uid: ESAPIX.Facade.Types.OptimizationOption
-    name: OptimizationOption
-  - uid: ESAPIX.Facade.Types.OptimizationOptionsBase
-    name: OptimizationOptionsBase
-  - uid: ESAPIX.Facade.Types.OptimizationOptionsIMRT
-    name: OptimizationOptionsIMRT
-  - uid: ESAPIX.Facade.Types.OptimizationOptionsVMAT
-    name: OptimizationOptionsVMAT
-  - uid: ESAPIX.Facade.Types.PatientOrientation
-    name: PatientOrientation
-  - uid: ESAPIX.Facade.Types.PlanSetupApprovalStatus
-    name: PlanSetupApprovalStatus
-  - uid: ESAPIX.Facade.Types.PlanSumOperation
-    name: PlanSumOperation
-  - uid: ESAPIX.Facade.Types.PlanType
-    name: PlanType
-  - uid: ESAPIX.Facade.Types.ProfilePoint
-    name: ProfilePoint
-  - uid: ESAPIX.Facade.Types.SegmentProfile
-    name: SegmentProfile
-  - uid: ESAPIX.Facade.Types.SegmentProfilePoint
-    name: SegmentProfilePoint
-  - uid: ESAPIX.Facade.Types.SeriesModality
-    name: SeriesModality
-  - uid: ESAPIX.Facade.Types.SetupTechnique
-    name: SetupTechnique
-  - uid: ESAPIX.Facade.Types.SmartLMCOptions
-    name: SmartLMCOptions
-  - uid: ESAPIX.Facade.Types.StructureCodeInfo
-    name: StructureCodeInfo
-  - uid: ESAPIX.Facade.Types.StructureMarginGeometry
-    name: StructureMarginGeometry
-  - uid: ESAPIX.Facade.Types.VolumePresentation
-    name: VolumePresentation
-  - uid: ESAPIX.Facade.Types.VRect`1
-    name: VRect<T>
-    name.vb: VRect(Of T)
-  - uid: ESAPIX.Facade.Types.VVector
-    name: VVector
+  - uid: ESAPIX.Facade.Serialization.FacadeSerializer
+    name: FacadeSerializer
+  - uid: ESAPIX.Facade.Serialization.IEnumerableJsonConverter
+    name: IEnumerableJsonConverter
+  - uid: ESAPIX.Facade.Serialization.InfiniteLoopResolver
+    name: InfiniteLoopResolver
 - uid: ESAPIX.Helpers
   name: ESAPIX.Helpers
   items:
@@ -437,9 +362,8 @@
     name: MagicStrings.VolumeUnits
   - uid: ESAPIX.Helpers.MathHelper
     name: MathHelper
-  - uid: ESAPIX.Helpers.StorageBinder`1
-    name: StorageBinder<T>
-    name.vb: StorageBinder(Of T)
+  - uid: ESAPIX.Helpers.SerializationHelper
+    name: SerializationHelper
   - uid: ESAPIX.Helpers.XamlAssemblyLoader
     name: XamlAssemblyLoader
 - uid: ESAPIX.Interfaces
@@ -460,3 +384,8 @@
     name: Logger.LogHandler
   - uid: ESAPIX.Logging.LogStrings
     name: LogStrings
+- uid: ESAPIX_TESTS.Helpers
+  name: ESAPIX_TESTS.Helpers
+  items:
+  - uid: ESAPIX_TESTS.Helpers.SerializationHelperTests
+    name: SerializationHelperTests

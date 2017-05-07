@@ -11,6 +11,7 @@ items:
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml(System.Xml.XmlWriter)
@@ -24,7 +25,7 @@ items:
   source:
     id: OptimizationNormalTissueParameter
     path: ''
-    startLine: 9424
+    startLine: 11041
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9426
+    startLine: 11043
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,21 +95,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9427
+    startLine: 11048
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationNormalTissueParameter(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizationNormalTissueParameter.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 11053
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
   commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
   id: DistanceFromTargetBorderInMM
@@ -123,16 +155,16 @@ items:
   source:
     id: DistanceFromTargetBorderInMM
     path: ''
-    startLine: 9428
+    startLine: 11058
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DistanceFromTargetBorderInMM { get; set; }
+    content.vb: Public Property DistanceFromTargetBorderInMM As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property DistanceFromTargetBorderInMM As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
   modifiers.csharp:
   - public
@@ -154,16 +186,16 @@ items:
   source:
     id: EndDosePercentage
     path: ''
-    startLine: 9441
+    startLine: 11078
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double EndDosePercentage { get; set; }
+    content.vb: Public Property EndDosePercentage As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property EndDosePercentage As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage*
   modifiers.csharp:
   - public
@@ -185,16 +217,16 @@ items:
   source:
     id: FallOff
     path: ''
-    startLine: 9454
+    startLine: 11095
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double FallOff { get; set; }
+    content.vb: Public Property FallOff As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property FallOff As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff*
   modifiers.csharp:
   - public
@@ -216,16 +248,16 @@ items:
   source:
     id: IsAutomatic
     path: ''
-    startLine: 9467
+    startLine: 11110
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsAutomatic { get; set; }
+    content.vb: Public Property IsAutomatic As Boolean
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsAutomatic As Boolean
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic*
   modifiers.csharp:
   - public
@@ -247,16 +279,16 @@ items:
   source:
     id: Priority
     path: ''
-    startLine: 9480
+    startLine: 11125
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Priority { get; set; }
+    content.vb: Public Property Priority As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property Priority As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
   modifiers.csharp:
   - public
@@ -278,16 +310,16 @@ items:
   source:
     id: StartDosePercentage
     path: ''
-    startLine: 9493
+    startLine: 11140
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double StartDosePercentage { get; set; }
+    content.vb: Public Property StartDosePercentage As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property StartDosePercentage As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage*
   modifiers.csharp:
   - public
@@ -309,16 +341,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9506
+    startLine: 11157
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml*
   modifiers.csharp:
   - public
@@ -736,6 +768,19 @@ references:
   name: OptimizationNormalTissueParameter
   nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter
   fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: OptimizationNormalTissueParameter.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
   commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
   isExternal: false
@@ -767,13 +812,6 @@ references:
   name: IsAutomatic
   nameWithType: OptimizationNormalTissueParameter.IsAutomatic
   fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
   commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
   isExternal: false

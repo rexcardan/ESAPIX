@@ -22,7 +22,7 @@ items:
   source:
     id: StructureNameConstraint
     path: ''
-    startLine: 2700
+    startLine: 2677
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
@@ -64,16 +64,16 @@ items:
   source:
     id: Regex
     path: ''
-    startLine: 2702
+    startLine: 2679
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string Regex { get; set; }
+    content.vb: Public Property Regex As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Regex As String
   overload: ESAPIX.DVH.Constraints.StructureNameConstraint.Regex*
   modifiers.csharp:
   - public
@@ -95,16 +95,16 @@ items:
   source:
     id: StructureName
     path: ''
-    startLine: 2703
+    startLine: 2680
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string StructureName { get; set; }
+    content.vb: Public Property StructureName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property StructureName As String
   overload: ESAPIX.DVH.Constraints.StructureNameConstraint.StructureName*
   modifiers.csharp:
   - public
@@ -126,16 +126,16 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 2704
+    startLine: 2681
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string Name { get; }
+    content.vb: Public ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Name As String
   overload: ESAPIX.DVH.Constraints.StructureNameConstraint.Name*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.Name
@@ -159,16 +159,16 @@ items:
   source:
     id: FullName
     path: ''
-    startLine: 2705
+    startLine: 2682
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public string FullName { get; }
+    content.vb: Public ReadOnly Property FullName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property FullName As String
   overload: ESAPIX.DVH.Constraints.StructureNameConstraint.FullName*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.FullName
@@ -192,18 +192,18 @@ items:
   source:
     id: CanConstrain
     path: ''
-    startLine: 2707
+    startLine: 2684
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ConstraintResult CanConstrain(PlanningItem pi)
+    content.vb: Public Function CanConstrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Function CanConstrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.StructureNameConstraint.CanConstrain*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.CanConstrain(PlanningItem)
@@ -225,18 +225,18 @@ items:
   source:
     id: Constrain
     path: ''
-    startLine: 2720
+    startLine: 2697
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public ConstraintResult Constrain(PlanningItem pi)
+    content.vb: Public Function Constrain(pi As PlanningItem) As ConstraintResult
     parameters:
     - id: pi
       type: PlanningItem
     return:
       type: ESAPIX.DVH.Constraints.ConstraintResult
-    content.vb: Public Function Constrain(pi As PlanningItem) As ConstraintResult
   overload: ESAPIX.DVH.Constraints.StructureNameConstraint.Constrain*
   implements:
   - ESAPIX.DVH.Constraints.IConstraint.Constrain(PlanningItem)
@@ -258,15 +258,15 @@ items:
   source:
     id: ToString
     path: ''
-    startLine: 2739
+    startLine: 2716
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Constraints
   syntax:
     content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
   overload: ESAPIX.DVH.Constraints.StructureNameConstraint.ToString*
   modifiers.csharp:

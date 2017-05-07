@@ -23,7 +23,7 @@ items:
   source:
     id: AppComThread
     path: ''
-    startLine: 123
+    startLine: 110
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -65,55 +65,21 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 125
+    startLine: 117
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public AppComThread(bool useNewThread = true)
+    content.vb: Public Sub New(useNewThread As Boolean = True)
     parameters:
     - id: useNewThread
       type: System.Boolean
-    content.vb: Public Sub New(useNewThread As Boolean = True)
   overload: ESAPIX.AppKit.AppComThread.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate,System.Object[])
-  commentId: M:ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate,System.Object[])
-  id: BeginInvoke(System.Delegate,System.Object[])
-  parent: ESAPIX.AppKit.AppComThread
-  langs:
-  - csharp
-  - vb
-  name: BeginInvoke(Delegate, Object[])
-  nameWithType: AppComThread.BeginInvoke(Delegate, Object[])
-  fullName: ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate, System.Object[])
-  type: Method
-  source:
-    id: BeginInvoke
-    path: ''
-    startLine: 151
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.AppKit
-  syntax:
-    content: public void BeginInvoke(Delegate dlg, params object[] args)
-    parameters:
-    - id: dlg
-      type: System.Delegate
-    - id: args
-      type: System.Object[]
-    content.vb: Public Sub BeginInvoke(dlg As  Delegate, ParamArray args As Object())
-  overload: ESAPIX.AppKit.AppComThread.BeginInvoke*
-  nameWithType.vb: AppComThread.BeginInvoke(Delegate, Object())
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-  fullName.vb: ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate, System.Object())
-  name.vb: BeginInvoke(Delegate, Object())
 - uid: ESAPIX.AppKit.AppComThread.InvokeAsync(System.Action)
   commentId: M:ESAPIX.AppKit.AppComThread.InvokeAsync(System.Action)
   id: InvokeAsync(System.Action)
@@ -128,18 +94,18 @@ items:
   source:
     id: InvokeAsync
     path: ''
-    startLine: 157
+    startLine: 151
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public Task InvokeAsync(Action action)
+    content.vb: Public Function InvokeAsync(action As Action) As Task
     parameters:
     - id: action
       type: System.Action
     return:
-      type: System.Threading.Tasks.Task
-    content.vb: Public Function InvokeAsync(action As Action) As Task
+      type: Task
   overload: ESAPIX.AppKit.AppComThread.InvokeAsync*
   implements:
   - ESAPIX.Interfaces.IVMSThread.InvokeAsync(System.Action)
@@ -161,16 +127,16 @@ items:
   source:
     id: Invoke
     path: ''
-    startLine: 166
+    startLine: 160
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public void Invoke(Action action)
+    content.vb: Public Sub Invoke(action As Action)
     parameters:
     - id: action
       type: System.Action
-    content.vb: Public Sub Invoke(action As Action)
   overload: ESAPIX.AppKit.AppComThread.Invoke*
   implements:
   - ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
@@ -178,75 +144,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.AppKit.AppComThread.Invoke(System.Delegate,System.Object[])
-  commentId: M:ESAPIX.AppKit.AppComThread.Invoke(System.Delegate,System.Object[])
-  id: Invoke(System.Delegate,System.Object[])
-  parent: ESAPIX.AppKit.AppComThread
-  langs:
-  - csharp
-  - vb
-  name: Invoke(Delegate, Object[])
-  nameWithType: AppComThread.Invoke(Delegate, Object[])
-  fullName: ESAPIX.AppKit.AppComThread.Invoke(System.Delegate, System.Object[])
-  type: Method
-  source:
-    id: Invoke
-    path: ''
-    startLine: 172
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.AppKit
-  syntax:
-    content: public object Invoke(Delegate dlg, params object[] args)
-    parameters:
-    - id: dlg
-      type: System.Delegate
-    - id: args
-      type: System.Object[]
-    return:
-      type: System.Object
-    content.vb: Public Function Invoke(dlg As  Delegate, ParamArray args As Object()) As Object
-  overload: ESAPIX.AppKit.AppComThread.Invoke*
-  nameWithType.vb: AppComThread.Invoke(Delegate, Object())
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-  fullName.vb: ESAPIX.AppKit.AppComThread.Invoke(System.Delegate, System.Object())
-  name.vb: Invoke(Delegate, Object())
-- uid: ESAPIX.AppKit.AppComThread.Initialize(System.Object,System.EventArgs)
-  commentId: M:ESAPIX.AppKit.AppComThread.Initialize(System.Object,System.EventArgs)
-  id: Initialize(System.Object,System.EventArgs)
-  parent: ESAPIX.AppKit.AppComThread
-  langs:
-  - csharp
-  - vb
-  name: Initialize(Object, EventArgs)
-  nameWithType: AppComThread.Initialize(Object, EventArgs)
-  fullName: ESAPIX.AppKit.AppComThread.Initialize(System.Object, System.EventArgs)
-  type: Method
-  source:
-    id: Initialize
-    path: ''
-    startLine: 179
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.AppKit
-  syntax:
-    content: protected virtual void Initialize(object sender, EventArgs e)
-    parameters:
-    - id: sender
-      type: System.Object
-    - id: e
-      type: System.EventArgs
-    content.vb: Protected Overridable Sub Initialize(sender As Object, e As EventArgs)
-  overload: ESAPIX.AppKit.AppComThread.Initialize*
-  modifiers.csharp:
-  - protected
-  - virtual
-  modifiers.vb:
-  - Protected
-  - Overridable
 - uid: ESAPIX.AppKit.AppComThread.Dispose
   commentId: M:ESAPIX.AppKit.AppComThread.Dispose
   id: Dispose
@@ -261,7 +158,7 @@ items:
   source:
     id: Dispose
     path: ''
-    startLine: 186
+    startLine: 166
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -289,16 +186,16 @@ items:
   source:
     id: ThreadId
     path: ''
-    startLine: 199
+    startLine: 175
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public int ThreadId { get; }
+    content.vb: Public ReadOnly Property ThreadId As Integer
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property ThreadId As Integer
   overload: ESAPIX.AppKit.AppComThread.ThreadId*
   implements:
   - ESAPIX.Interfaces.IVMSThread.ThreadId
@@ -308,6 +205,109 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate,System.Object[])
+  commentId: M:ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate,System.Object[])
+  id: BeginInvoke(System.Delegate,System.Object[])
+  parent: ESAPIX.AppKit.AppComThread
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(Delegate, Object[])
+  nameWithType: AppComThread.BeginInvoke(Delegate, Object[])
+  fullName: ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate, System.Object[])
+  type: Method
+  source:
+    id: BeginInvoke
+    path: ''
+    startLine: 177
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public void BeginInvoke(Delegate dlg, params object[] args)
+    content.vb: Public Sub BeginInvoke(dlg As  Delegate, ParamArray args As Object())
+    parameters:
+    - id: dlg
+      type: System.Delegate
+    - id: args
+      type: System.Object[]
+  overload: ESAPIX.AppKit.AppComThread.BeginInvoke*
+  nameWithType.vb: AppComThread.BeginInvoke(Delegate, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.AppComThread.BeginInvoke(System.Delegate, System.Object())
+  name.vb: BeginInvoke(Delegate, Object())
+- uid: ESAPIX.AppKit.AppComThread.Invoke(System.Delegate,System.Object[])
+  commentId: M:ESAPIX.AppKit.AppComThread.Invoke(System.Delegate,System.Object[])
+  id: Invoke(System.Delegate,System.Object[])
+  parent: ESAPIX.AppKit.AppComThread
+  langs:
+  - csharp
+  - vb
+  name: Invoke(Delegate, Object[])
+  nameWithType: AppComThread.Invoke(Delegate, Object[])
+  fullName: ESAPIX.AppKit.AppComThread.Invoke(System.Delegate, System.Object[])
+  type: Method
+  source:
+    id: Invoke
+    path: ''
+    startLine: 183
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: public object Invoke(Delegate dlg, params object[] args)
+    content.vb: Public Function Invoke(dlg As  Delegate, ParamArray args As Object()) As Object
+    parameters:
+    - id: dlg
+      type: System.Delegate
+    - id: args
+      type: System.Object[]
+    return:
+      type: System.Object
+  overload: ESAPIX.AppKit.AppComThread.Invoke*
+  nameWithType.vb: AppComThread.Invoke(Delegate, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.AppKit.AppComThread.Invoke(System.Delegate, System.Object())
+  name.vb: Invoke(Delegate, Object())
+- uid: ESAPIX.AppKit.AppComThread.Initialize(System.Object,System.EventArgs)
+  commentId: M:ESAPIX.AppKit.AppComThread.Initialize(System.Object,System.EventArgs)
+  id: Initialize(System.Object,System.EventArgs)
+  parent: ESAPIX.AppKit.AppComThread
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Object, EventArgs)
+  nameWithType: AppComThread.Initialize(Object, EventArgs)
+  fullName: ESAPIX.AppKit.AppComThread.Initialize(System.Object, System.EventArgs)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 191
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit
+  syntax:
+    content: protected virtual void Initialize(object sender, EventArgs e)
+    content.vb: Protected Overridable Sub Initialize(sender As Object, e As EventArgs)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.EventArgs
+  overload: ESAPIX.AppKit.AppComThread.Initialize*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 references:
 - uid: ESAPIX.AppKit
   commentId: N:ESAPIX.AppKit
@@ -640,44 +640,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: ESAPIX.AppKit.AppComThread.BeginInvoke*
-  commentId: Overload:ESAPIX.AppKit.AppComThread.BeginInvoke
-  isExternal: false
-  name: BeginInvoke
-  nameWithType: AppComThread.BeginInvoke
-  fullName: ESAPIX.AppKit.AppComThread.BeginInvoke
-- uid: System.Delegate
-  commentId: T:System.Delegate
-  parent: System
-  isExternal: true
-  name: Delegate
-  nameWithType: Delegate
-  fullName: System.Delegate
-- uid: System.Object[]
-  name: Object[]
-  nameWithType: Object[]
-  fullName: System.Object[]
-  nameWithType.vb: Object()
-  fullName.vb: System.Object()
-  name.vb: Object()
-  spec.csharp:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
 - uid: ESAPIX.AppKit.AppComThread.InvokeAsync*
   commentId: Overload:ESAPIX.AppKit.AppComThread.InvokeAsync
   isExternal: false
@@ -730,19 +692,11 @@ references:
   name: Action
   nameWithType: Action
   fullName: System.Action
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
+- uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: false
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  fullName: Task
 - uid: ESAPIX.AppKit.AppComThread.Invoke*
   commentId: Overload:ESAPIX.AppKit.AppComThread.Invoke
   isExternal: false
@@ -788,19 +742,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.AppKit.AppComThread.Initialize*
-  commentId: Overload:ESAPIX.AppKit.AppComThread.Initialize
-  isExternal: false
-  name: Initialize
-  nameWithType: AppComThread.Initialize
-  fullName: ESAPIX.AppKit.AppComThread.Initialize
-- uid: System.EventArgs
-  commentId: T:System.EventArgs
-  parent: System
-  isExternal: true
-  name: EventArgs
-  nameWithType: EventArgs
-  fullName: System.EventArgs
 - uid: ESAPIX.AppKit.AppComThread.Dispose*
   commentId: Overload:ESAPIX.AppKit.AppComThread.Dispose
   isExternal: false
@@ -858,3 +799,54 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: ESAPIX.AppKit.AppComThread.BeginInvoke*
+  commentId: Overload:ESAPIX.AppKit.AppComThread.BeginInvoke
+  isExternal: false
+  name: BeginInvoke
+  nameWithType: AppComThread.BeginInvoke
+  fullName: ESAPIX.AppKit.AppComThread.BeginInvoke
+- uid: System.Delegate
+  commentId: T:System.Delegate
+  parent: System
+  isExternal: true
+  name: Delegate
+  nameWithType: Delegate
+  fullName: System.Delegate
+- uid: System.Object[]
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: ESAPIX.AppKit.AppComThread.Initialize*
+  commentId: Overload:ESAPIX.AppKit.AppComThread.Initialize
+  isExternal: false
+  name: Initialize
+  nameWithType: AppComThread.Initialize
+  fullName: ESAPIX.AppKit.AppComThread.Initialize
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs

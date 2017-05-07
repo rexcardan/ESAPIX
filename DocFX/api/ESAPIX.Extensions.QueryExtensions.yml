@@ -8,7 +8,7 @@ items:
   - ESAPIX.Extensions.QueryExtensions.GetDosePresentation(MayoQuery)
   - ESAPIX.Extensions.QueryExtensions.GetDoseUnit(MayoQuery)
   - ESAPIX.Extensions.QueryExtensions.GetVolumePresentation(MayoQuery)
-  - ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
+  - ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,IEnumerable{Structure})
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   source:
     id: QueryExtensions
     path: ''
-    startLine: 4015
+    startLine: 3980
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -45,9 +45,9 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
-  commentId: M:ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
-  id: RunQuery(MayoQuery,PlanningItem,System.Collections.Generic.IEnumerable{Structure})
+- uid: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,IEnumerable{Structure})
+  commentId: M:ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery,PlanningItem,IEnumerable{Structure})
+  id: RunQuery(MayoQuery,PlanningItem,IEnumerable{Structure})
   isExtensionMethod: true
   parent: ESAPIX.Extensions.QueryExtensions
   langs:
@@ -55,30 +55,30 @@ items:
   - vb
   name: RunQuery(MayoQuery, PlanningItem, IEnumerable<Structure>)
   nameWithType: QueryExtensions.RunQuery(MayoQuery, PlanningItem, IEnumerable<Structure>)
-  fullName: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery, PlanningItem, System.Collections.Generic.IEnumerable<Structure>)
+  fullName: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery, PlanningItem, IEnumerable<Structure>)
   type: Method
   source:
     id: RunQuery
     path: ''
-    startLine: 4017
+    startLine: 3982
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double RunQuery(this MayoQuery query, PlanningItem pi, IEnumerable<Structure> ss)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RunQuery(query As MayoQuery, pi As PlanningItem, ss As IEnumerable(Of  Structure)) As Double
     parameters:
     - id: query
       type: MayoQuery
     - id: pi
       type: PlanningItem
     - id: ss
-      type: System.Collections.Generic.IEnumerable{Structure}
+      type: IEnumerable{Structure}
     return:
       type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function RunQuery(query As MayoQuery, pi As PlanningItem, ss As IEnumerable(Of  Structure)) As Double
   overload: ESAPIX.Extensions.QueryExtensions.RunQuery*
   nameWithType.vb: QueryExtensions.RunQuery(MayoQuery, PlanningItem, IEnumerable(Of Structure))
   modifiers.csharp:
@@ -87,7 +87,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery, PlanningItem, System.Collections.Generic.IEnumerable(Of Structure))
+  fullName.vb: ESAPIX.Extensions.QueryExtensions.RunQuery(MayoQuery, PlanningItem, IEnumerable(Of Structure))
   name.vb: RunQuery(MayoQuery, PlanningItem, IEnumerable(Of Structure))
 - uid: ESAPIX.Extensions.QueryExtensions.GetDosePresentation(MayoQuery)
   commentId: M:ESAPIX.Extensions.QueryExtensions.GetDosePresentation(MayoQuery)
@@ -104,7 +104,7 @@ items:
   source:
     id: GetDosePresentation
     path: ''
-    startLine: 4041
+    startLine: 4006
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -112,6 +112,10 @@ items:
   example: []
   syntax:
     content: public static DoseValuePresentation GetDosePresentation(this MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDosePresentation(query As MayoQuery) As DoseValuePresentation
     parameters:
     - id: query
       type: MayoQuery
@@ -119,10 +123,6 @@ items:
     return:
       type: DoseValuePresentation
       description: the dose value presentation of the query
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDosePresentation(query As MayoQuery) As DoseValuePresentation
   overload: ESAPIX.Extensions.QueryExtensions.GetDosePresentation*
   modifiers.csharp:
   - public
@@ -145,7 +145,7 @@ items:
   source:
     id: GetDoseUnit
     path: ''
-    startLine: 4073
+    startLine: 4032
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -153,6 +153,10 @@ items:
   example: []
   syntax:
     content: public static DoseValue.DoseUnit GetDoseUnit(this MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseUnit(query As MayoQuery) As DoseValue.DoseUnit
     parameters:
     - id: query
       type: MayoQuery
@@ -160,10 +164,6 @@ items:
     return:
       type: DoseValue.DoseUnit
       description: the dose value presentation of the query
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseUnit(query As MayoQuery) As DoseValue.DoseUnit
   overload: ESAPIX.Extensions.QueryExtensions.GetDoseUnit*
   modifiers.csharp:
   - public
@@ -186,7 +186,7 @@ items:
   source:
     id: GetVolumePresentation
     path: ''
-    startLine: 4105
+    startLine: 4058
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -194,6 +194,10 @@ items:
   example: []
   syntax:
     content: public static VolumePresentation GetVolumePresentation(this MayoQuery query)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVolumePresentation(query As MayoQuery) As VolumePresentation
     parameters:
     - id: query
       type: MayoQuery
@@ -201,10 +205,6 @@ items:
     return:
       type: VolumePresentation
       description: the volume presentation of the query
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetVolumePresentation(query As MayoQuery) As VolumePresentation
   overload: ESAPIX.Extensions.QueryExtensions.GetVolumePresentation*
   modifiers.csharp:
   - public
@@ -527,21 +527,20 @@ references:
   name: PlanningItem
   nameWithType: PlanningItem
   fullName: PlanningItem
-- uid: System.Collections.Generic.IEnumerable{Structure}
-  commentId: T:System.Collections.Generic.IEnumerable{Structure}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable{Structure}
+  commentId: '!:IEnumerable{Structure}'
+  definition: IEnumerable`1
   name: IEnumerable<Structure>
   nameWithType: IEnumerable<Structure>
-  fullName: System.Collections.Generic.IEnumerable<Structure>
+  fullName: IEnumerable<Structure>
   nameWithType.vb: IEnumerable(Of Structure)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of Structure)
+  fullName.vb: IEnumerable(Of Structure)
   name.vb: IEnumerable(Of Structure)
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -555,10 +554,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -578,51 +577,44 @@ references:
   name: Double
   nameWithType: Double
   fullName: System.Double
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
+- uid: IEnumerable`1
   isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
+  - uid: IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: ESAPIX.Extensions.QueryExtensions.GetDosePresentation*
   commentId: Overload:ESAPIX.Extensions.QueryExtensions.GetDosePresentation
   isExternal: false

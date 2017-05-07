@@ -5,8 +5,8 @@ items:
   id: XScriptBase
   parent: ESAPIX.AppKit
   children:
-  - ESAPIX.AppKit.XScriptBase.Execute(ScriptContext,Window)
-  - ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,Window)
+  - ESAPIX.AppKit.XScriptBase.Execute(System.Object,Window)
+  - ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,DispatcherFrame)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     id: XScriptBase
     path: ''
-    startLine: 610
+    startLine: 627
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
@@ -42,63 +42,63 @@ items:
   - Public
   - MustInherit
   - Class
-- uid: ESAPIX.AppKit.XScriptBase.Execute(ScriptContext,Window)
-  commentId: M:ESAPIX.AppKit.XScriptBase.Execute(ScriptContext,Window)
-  id: Execute(ScriptContext,Window)
+- uid: ESAPIX.AppKit.XScriptBase.Execute(System.Object,Window)
+  commentId: M:ESAPIX.AppKit.XScriptBase.Execute(System.Object,Window)
+  id: Execute(System.Object,Window)
   parent: ESAPIX.AppKit.XScriptBase
   langs:
   - csharp
   - vb
-  name: Execute(ScriptContext, Window)
-  nameWithType: XScriptBase.Execute(ScriptContext, Window)
-  fullName: ESAPIX.AppKit.XScriptBase.Execute(ScriptContext, Window)
+  name: Execute(Object, Window)
+  nameWithType: XScriptBase.Execute(Object, Window)
+  fullName: ESAPIX.AppKit.XScriptBase.Execute(System.Object, Window)
   type: Method
   source:
     id: Execute
     path: ''
-    startLine: 612
+    startLine: 629
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
-    content: public void Execute(ScriptContext context, Window window)
+    content: public void Execute(dynamic context, Window window)
+    content.vb: Public Sub Execute(context As Object, window As Window)
     parameters:
     - id: context
-      type: ScriptContext
+      type: System.Object
     - id: window
       type: Window
-    content.vb: Public Sub Execute(context As ScriptContext, window As Window)
   overload: ESAPIX.AppKit.XScriptBase.Execute*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,Window)
-  commentId: M:ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,Window)
-  id: XExecute(ESAPIX.AppKit.PluginContext,Window)
+- uid: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,DispatcherFrame)
+  commentId: M:ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext,DispatcherFrame)
+  id: XExecute(ESAPIX.AppKit.PluginContext,DispatcherFrame)
   parent: ESAPIX.AppKit.XScriptBase
   langs:
   - csharp
   - vb
-  name: XExecute(PluginContext, Window)
-  nameWithType: XScriptBase.XExecute(PluginContext, Window)
-  fullName: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext, Window)
+  name: XExecute(PluginContext, DispatcherFrame)
+  nameWithType: XScriptBase.XExecute(PluginContext, DispatcherFrame)
+  fullName: ESAPIX.AppKit.XScriptBase.XExecute(ESAPIX.AppKit.PluginContext, DispatcherFrame)
   type: Method
   source:
     id: XExecute
     path: ''
-    startLine: 618
+    startLine: 656
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
-    content: public abstract void XExecute(PluginContext ctx, Window w)
+    content: public abstract void XExecute(PluginContext ctx, DispatcherFrame frame)
+    content.vb: Public MustOverride Sub XExecute(ctx As PluginContext, frame As DispatcherFrame)
     parameters:
     - id: ctx
       type: ESAPIX.AppKit.PluginContext
-    - id: w
-      type: Window
-    content.vb: Public MustOverride Sub XExecute(ctx As PluginContext, w As Window)
+    - id: frame
+      type: DispatcherFrame
   overload: ESAPIX.AppKit.XScriptBase.XExecute*
   modifiers.csharp:
   - public
@@ -411,11 +411,6 @@ references:
   name: Execute
   nameWithType: XScriptBase.Execute
   fullName: ESAPIX.AppKit.XScriptBase.Execute
-- uid: ScriptContext
-  isExternal: true
-  name: ScriptContext
-  nameWithType: ScriptContext
-  fullName: ScriptContext
 - uid: Window
   isExternal: true
   name: Window
@@ -434,3 +429,8 @@ references:
   name: PluginContext
   nameWithType: PluginContext
   fullName: ESAPIX.AppKit.PluginContext
+- uid: DispatcherFrame
+  isExternal: true
+  name: DispatcherFrame
+  nameWithType: DispatcherFrame
+  fullName: DispatcherFrame

@@ -13,6 +13,7 @@ items:
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.IsLive
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.ToString
   - ESAPIX.Facade.API.ApiDataObject.WriteXml(System.Xml.XmlWriter)
@@ -26,7 +27,7 @@ items:
   source:
     id: ApiDataObject
     path: ''
-    startLine: 4788
+    startLine: 4740
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -101,7 +102,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4790
+    startLine: 4742
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -127,21 +128,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4791
+    startLine: 4747
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ApiDataObject(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.IsLive
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ApiDataObject.IsLive
+  fullName: ESAPIX.Facade.API.ApiDataObject.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 4752
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.ApiDataObject.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   id: Id
@@ -156,16 +188,16 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 4792
+    startLine: 4757
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
+    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.ApiDataObject.Id*
   modifiers.csharp:
   - public
@@ -187,16 +219,16 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 4805
+    startLine: 4772
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Name { get; set; }
+    content.vb: Public Property Name As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Name As String
   overload: ESAPIX.Facade.API.ApiDataObject.Name*
   modifiers.csharp:
   - public
@@ -218,16 +250,16 @@ items:
   source:
     id: Comment
     path: ''
-    startLine: 4818
+    startLine: 4787
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Comment { get; set; }
+    content.vb: Public Property Comment As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Comment As String
   overload: ESAPIX.Facade.API.ApiDataObject.Comment*
   modifiers.csharp:
   - public
@@ -249,16 +281,16 @@ items:
   source:
     id: HistoryUserName
     path: ''
-    startLine: 4831
+    startLine: 4802
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string HistoryUserName { get; set; }
+    content.vb: Public Property HistoryUserName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property HistoryUserName As String
   overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserName*
   modifiers.csharp:
   - public
@@ -280,16 +312,16 @@ items:
   source:
     id: HistoryDateTime
     path: ''
-    startLine: 4844
+    startLine: 4819
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime HistoryDateTime { get; set; }
+    content.vb: Public Property HistoryDateTime As Date
     parameters: []
     return:
       type: System.DateTime
-    content.vb: Public Property HistoryDateTime As Date
   overload: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime*
   modifiers.csharp:
   - public
@@ -311,15 +343,15 @@ items:
   source:
     id: ToString
     path: ''
-    startLine: 4857
+    startLine: 4836
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ToString()
+    content.vb: Public Function ToString As String
     return:
       type: System.String
-    content.vb: Public Function ToString As String
   overload: ESAPIX.Facade.API.ApiDataObject.ToString*
   modifiers.csharp:
   - public
@@ -339,16 +371,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 4864
+    startLine: 4843
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.ApiDataObject.WriteXml*
   modifiers.csharp:
   - public
@@ -368,18 +400,18 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 4873
+    startLine: 4849
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool Equals(object obj)
+    content.vb: Public Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
     return:
       type: System.Boolean
-    content.vb: Public Function Equals(obj As Object) As Boolean
   overload: ESAPIX.Facade.API.ApiDataObject.Equals*
   modifiers.csharp:
   - public
@@ -399,15 +431,15 @@ items:
   source:
     id: GetHashCode
     path: ''
-    startLine: 4880
+    startLine: 4856
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int GetHashCode()
+    content.vb: Public Function GetHashCode As Integer
     return:
       type: System.Int32
-    content.vb: Public Function GetHashCode As Integer
   overload: ESAPIX.Facade.API.ApiDataObject.GetHashCode*
   modifiers.csharp:
   - public
@@ -719,6 +751,19 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject.ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject
+- uid: ESAPIX.Facade.API.ApiDataObject.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: ApiDataObject.IsLive
+  fullName: ESAPIX.Facade.API.ApiDataObject.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.ApiDataObject.Id*
   commentId: Overload:ESAPIX.Facade.API.ApiDataObject.Id
   isExternal: false
@@ -786,13 +831,6 @@ references:
   name: Equals
   nameWithType: ApiDataObject.Equals
   fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode*
   commentId: Overload:ESAPIX.Facade.API.ApiDataObject.GetHashCode
   isExternal: false

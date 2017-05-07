@@ -8,9 +8,9 @@ items:
   - ESAPIX.AppKit.Overlay.SelectPatient.#ctor(ESAPIX.AppKit.StandAloneContext)
   - ESAPIX.AppKit.Overlay.SelectPatient.Courses
   - ESAPIX.AppKit.Overlay.SelectPatient.OnPropertyChanged(System.String)
-  - ESAPIX.AppKit.Overlay.SelectPatient.PatientId
   - ESAPIX.AppKit.Overlay.SelectPatient.PlanItems
   - ESAPIX.AppKit.Overlay.SelectPatient.PropertyChanged
+  - ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
   - ESAPIX.AppKit.Overlay.SelectPatient.SelectedCourse
   - ESAPIX.AppKit.Overlay.SelectPatient.SelectedPlanItem
   - ESAPIX.AppKit.Overlay.SelectPatient.Status
@@ -25,7 +25,7 @@ items:
   source:
     id: SelectPatient
     path: ''
-    startLine: 1147
+    startLine: 1115
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
@@ -39,8 +39,6 @@ items:
           Implements INotifyPropertyChanged
   inheritance:
   - System.Object
-  implements:
-  - INotifyPropertyChanged
   modifiers.csharp:
   - public
   - class
@@ -61,50 +59,19 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1151
+    startLine: 1119
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public SelectPatient(StandAloneContext app)
+    content.vb: Public Sub New(app As StandAloneContext)
     parameters:
     - id: app
       type: ESAPIX.AppKit.StandAloneContext
-    content.vb: Public Sub New(app As StandAloneContext)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.#ctor*
   modifiers.csharp:
   - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  commentId: P:ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  id: PatientId
-  parent: ESAPIX.AppKit.Overlay.SelectPatient
-  langs:
-  - csharp
-  - vb
-  name: PatientId
-  nameWithType: SelectPatient.PatientId
-  fullName: ESAPIX.AppKit.Overlay.SelectPatient.PatientId
-  type: Property
-  source:
-    id: PatientId
-    path: ''
-    startLine: 1164
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.AppKit.Overlay
-  syntax:
-    content: public string PatientId { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property PatientId As String
-  overload: ESAPIX.AppKit.Overlay.SelectPatient.PatientId*
-  modifiers.csharp:
-  - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: ESAPIX.AppKit.Overlay.SelectPatient.Status
@@ -121,16 +88,16 @@ items:
   source:
     id: Status
     path: ''
-    startLine: 1165
+    startLine: 1136
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public string Status { get; set; }
+    content.vb: Public Property Status As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Status As String
   overload: ESAPIX.AppKit.Overlay.SelectPatient.Status*
   modifiers.csharp:
   - public
@@ -152,16 +119,16 @@ items:
   source:
     id: Courses
     path: ''
-    startLine: 1166
+    startLine: 1137
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public ObservableCollection<string> Courses { get; set; }
+    content.vb: Public Property Courses As ObservableCollection(Of String)
     parameters: []
     return:
       type: ObservableCollection{System.String}
-    content.vb: Public Property Courses As ObservableCollection(Of String)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.Courses*
   modifiers.csharp:
   - public
@@ -183,16 +150,16 @@ items:
   source:
     id: PlanItems
     path: ''
-    startLine: 1167
+    startLine: 1138
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public ObservableCollection<string> PlanItems { get; set; }
+    content.vb: Public Property PlanItems As ObservableCollection(Of String)
     parameters: []
     return:
       type: ObservableCollection{System.String}
-    content.vb: Public Property PlanItems As ObservableCollection(Of String)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.PlanItems*
   modifiers.csharp:
   - public
@@ -214,16 +181,16 @@ items:
   source:
     id: SelectedCourse
     path: ''
-    startLine: 1171
+    startLine: 1142
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public string SelectedCourse { get; set; }
+    content.vb: Public Property SelectedCourse As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SelectedCourse As String
   overload: ESAPIX.AppKit.Overlay.SelectPatient.SelectedCourse*
   modifiers.csharp:
   - public
@@ -245,16 +212,16 @@ items:
   source:
     id: SelectedPlanItem
     path: ''
-    startLine: 1207
+    startLine: 1178
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public string SelectedPlanItem { get; set; }
+    content.vb: Public Property SelectedPlanItem As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SelectedPlanItem As String
   overload: ESAPIX.AppKit.Overlay.SelectPatient.SelectedPlanItem*
   modifiers.csharp:
   - public
@@ -276,15 +243,15 @@ items:
   source:
     id: UpdatePatient
     path: ''
-    startLine: 1230
+    startLine: 1195
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public Task UpdatePatient()
-    return:
-      type: System.Threading.Tasks.Task
     content.vb: Public Function UpdatePatient As Task
+    return:
+      type: Task
   overload: ESAPIX.AppKit.Overlay.SelectPatient.UpdatePatient*
   modifiers.csharp:
   - public
@@ -304,15 +271,15 @@ items:
   source:
     id: PropertyChanged
     path: ''
-    startLine: 1268
+    startLine: 1258
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: public event PropertyChangedEventHandler PropertyChanged
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
     return:
       type: PropertyChangedEventHandler
-    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -331,21 +298,52 @@ items:
   source:
     id: OnPropertyChanged
     path: ''
-    startLine: 1270
+    startLine: 1260
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Overlay
   syntax:
     content: protected void OnPropertyChanged(string propertyName)
+    content.vb: Protected Sub OnPropertyChanged(propertyName As String)
     parameters:
     - id: propertyName
       type: System.String
-    content.vb: Protected Sub OnPropertyChanged(propertyName As String)
   overload: ESAPIX.AppKit.Overlay.SelectPatient.OnPropertyChanged*
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
+- uid: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  commentId: P:ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  id: SearchCommand
+  parent: ESAPIX.AppKit.Overlay.SelectPatient
+  langs:
+  - csharp
+  - vb
+  name: SearchCommand
+  nameWithType: SelectPatient.SearchCommand
+  fullName: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  type: Property
+  source:
+    id: SearchCommand
+    path: ''
+    startLine: 1282
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.AppKit.Overlay
+  syntax:
+    content: public DelegateCommand SearchCommand { get; set; }
+    content.vb: Public Property SearchCommand As DelegateCommand
+    parameters: []
+    return:
+      type: DelegateCommand
+  overload: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: ESAPIX.AppKit.Overlay
   commentId: N:ESAPIX.AppKit.Overlay
@@ -360,12 +358,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: INotifyPropertyChanged
-  commentId: '!:INotifyPropertyChanged'
-  isExternal: true
-  name: INotifyPropertyChanged
-  nameWithType: INotifyPropertyChanged
-  fullName: INotifyPropertyChanged
 - uid: System
   commentId: N:System
   isExternal: false
@@ -391,12 +383,12 @@ references:
   name: ESAPIX.AppKit
   nameWithType: ESAPIX.AppKit
   fullName: ESAPIX.AppKit
-- uid: ESAPIX.AppKit.Overlay.SelectPatient.PatientId*
-  commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.PatientId
+- uid: ESAPIX.AppKit.Overlay.SelectPatient.Status*
+  commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.Status
   isExternal: false
-  name: PatientId
-  nameWithType: SelectPatient.PatientId
-  fullName: ESAPIX.AppKit.Overlay.SelectPatient.PatientId
+  name: Status
+  nameWithType: SelectPatient.Status
+  fullName: ESAPIX.AppKit.Overlay.SelectPatient.Status
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -404,12 +396,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: ESAPIX.AppKit.Overlay.SelectPatient.Status*
-  commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.Status
-  isExternal: false
-  name: Status
-  nameWithType: SelectPatient.Status
-  fullName: ESAPIX.AppKit.Overlay.SelectPatient.Status
 - uid: ESAPIX.AppKit.Overlay.SelectPatient.Courses*
   commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.Courses
   isExternal: false
@@ -521,19 +507,11 @@ references:
   name: UpdatePatient
   nameWithType: SelectPatient.UpdatePatient
   fullName: ESAPIX.AppKit.Overlay.SelectPatient.UpdatePatient
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
+- uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: false
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  fullName: Task
 - uid: PropertyChangedEventHandler
   commentId: '!:PropertyChangedEventHandler'
   isExternal: true
@@ -546,3 +524,15 @@ references:
   name: OnPropertyChanged
   nameWithType: SelectPatient.OnPropertyChanged
   fullName: ESAPIX.AppKit.Overlay.SelectPatient.OnPropertyChanged
+- uid: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand*
+  commentId: Overload:ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+  isExternal: false
+  name: SearchCommand
+  nameWithType: SelectPatient.SearchCommand
+  fullName: ESAPIX.AppKit.Overlay.SelectPatient.SearchCommand
+- uid: DelegateCommand
+  commentId: '!:DelegateCommand'
+  isExternal: true
+  name: DelegateCommand
+  nameWithType: DelegateCommand
+  fullName: DelegateCommand

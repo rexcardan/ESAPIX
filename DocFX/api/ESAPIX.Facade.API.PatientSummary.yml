@@ -12,6 +12,7 @@ items:
   - ESAPIX.Facade.API.PatientSummary.FirstName
   - ESAPIX.Facade.API.PatientSummary.Id
   - ESAPIX.Facade.API.PatientSummary.Id2
+  - ESAPIX.Facade.API.PatientSummary.IsLive
   - ESAPIX.Facade.API.PatientSummary.LastName
   - ESAPIX.Facade.API.PatientSummary.MiddleName
   - ESAPIX.Facade.API.PatientSummary.Sex
@@ -27,7 +28,7 @@ items:
   source:
     id: PatientSummary
     path: ''
-    startLine: 10461
+    startLine: 12478
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -70,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10463
+    startLine: 12480
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,21 +97,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10464
+    startLine: 12485
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PatientSummary(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.PatientSummary.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.PatientSummary.IsLive
+  commentId: P:ESAPIX.Facade.API.PatientSummary.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.PatientSummary
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: PatientSummary.IsLive
+  fullName: ESAPIX.Facade.API.PatientSummary.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 12490
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.PatientSummary.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.PatientSummary.CreationDateTime
   commentId: P:ESAPIX.Facade.API.PatientSummary.CreationDateTime
   id: CreationDateTime
@@ -125,16 +157,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 10465
+    startLine: 12495
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
+    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.PatientSummary.CreationDateTime*
   modifiers.csharp:
   - public
@@ -156,16 +188,16 @@ items:
   source:
     id: DateOfBirth
     path: ''
-    startLine: 10478
+    startLine: 12512
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? DateOfBirth { get; set; }
+    content.vb: Public Property DateOfBirth As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
-    content.vb: Public Property DateOfBirth As Date?
   overload: ESAPIX.Facade.API.PatientSummary.DateOfBirth*
   modifiers.csharp:
   - public
@@ -187,16 +219,16 @@ items:
   source:
     id: FirstName
     path: ''
-    startLine: 10491
+    startLine: 12529
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string FirstName { get; set; }
+    content.vb: Public Property FirstName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property FirstName As String
   overload: ESAPIX.Facade.API.PatientSummary.FirstName*
   modifiers.csharp:
   - public
@@ -218,16 +250,16 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 10504
+    startLine: 12544
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
+    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.PatientSummary.Id*
   modifiers.csharp:
   - public
@@ -249,16 +281,16 @@ items:
   source:
     id: Id2
     path: ''
-    startLine: 10517
+    startLine: 12559
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id2 { get; set; }
+    content.vb: Public Property Id2 As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Id2 As String
   overload: ESAPIX.Facade.API.PatientSummary.Id2*
   modifiers.csharp:
   - public
@@ -280,16 +312,16 @@ items:
   source:
     id: LastName
     path: ''
-    startLine: 10530
+    startLine: 12574
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string LastName { get; set; }
+    content.vb: Public Property LastName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property LastName As String
   overload: ESAPIX.Facade.API.PatientSummary.LastName*
   modifiers.csharp:
   - public
@@ -311,16 +343,16 @@ items:
   source:
     id: MiddleName
     path: ''
-    startLine: 10543
+    startLine: 12589
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MiddleName { get; set; }
+    content.vb: Public Property MiddleName As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property MiddleName As String
   overload: ESAPIX.Facade.API.PatientSummary.MiddleName*
   modifiers.csharp:
   - public
@@ -342,16 +374,16 @@ items:
   source:
     id: Sex
     path: ''
-    startLine: 10556
+    startLine: 12604
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Sex { get; set; }
+    content.vb: Public Property Sex As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Sex As String
   overload: ESAPIX.Facade.API.PatientSummary.Sex*
   modifiers.csharp:
   - public
@@ -373,16 +405,16 @@ items:
   source:
     id: SSN
     path: ''
-    startLine: 10569
+    startLine: 12619
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SSN { get; set; }
+    content.vb: Public Property SSN As String
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SSN As String
   overload: ESAPIX.Facade.API.PatientSummary.SSN*
   modifiers.csharp:
   - public
@@ -404,16 +436,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 10582
+    startLine: 12634
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.PatientSummary.WriteXml*
   modifiers.csharp:
   - public
@@ -828,6 +860,19 @@ references:
   name: PatientSummary
   nameWithType: PatientSummary.PatientSummary
   fullName: ESAPIX.Facade.API.PatientSummary.PatientSummary
+- uid: ESAPIX.Facade.API.PatientSummary.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.PatientSummary.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: PatientSummary.IsLive
+  fullName: ESAPIX.Facade.API.PatientSummary.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.PatientSummary.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.PatientSummary.CreationDateTime
   isExternal: false

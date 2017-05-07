@@ -7,6 +7,7 @@ items:
   children:
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml(System.Xml.XmlWriter)
@@ -20,7 +21,7 @@ items:
   source:
     id: OptimizationPointCloudParameter
     path: ''
-    startLine: 9628
+    startLine: 11308
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -64,7 +65,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9630
+    startLine: 11310
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -90,21 +91,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9631
+    startLine: 11315
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationPointCloudParameter(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizationPointCloudParameter.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 11320
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   commentId: P:ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   id: PointResolutionInMM
@@ -119,16 +151,16 @@ items:
   source:
     id: PointResolutionInMM
     path: ''
-    startLine: 9632
+    startLine: 11325
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PointResolutionInMM { get; set; }
+    content.vb: Public Property PointResolutionInMM As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property PointResolutionInMM As Double
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM*
   modifiers.csharp:
   - public
@@ -150,16 +182,16 @@ items:
   source:
     id: Structure
     path: ''
-    startLine: 9645
+    startLine: 11342
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Structure Structure { get; set; }
+    content.vb: 'Public Property Structure As '
     parameters: []
     return:
       type: ESAPIX.Facade.API.Structure
-    content.vb: 'Public Property Structure As '
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure*
   modifiers.csharp:
   - public
@@ -181,16 +213,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9658
+    startLine: 11361
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml*
   modifiers.csharp:
   - public
@@ -608,6 +640,19 @@ references:
   name: OptimizationPointCloudParameter
   nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter
   fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: OptimizationPointCloudParameter.IsLive
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM*
   commentId: Overload:ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   isExternal: false

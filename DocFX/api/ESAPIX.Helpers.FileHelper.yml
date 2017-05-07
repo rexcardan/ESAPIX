@@ -21,7 +21,7 @@ items:
   source:
     id: FileHelper
     path: ''
-    startLine: 15126
+    startLine: 16480
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Helpers
@@ -58,7 +58,7 @@ items:
   source:
     id: ChooseFile
     path: ''
-    startLine: 15132
+    startLine: 16486
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Helpers
@@ -66,10 +66,10 @@ items:
   example: []
   syntax:
     content: public static string ChooseFile()
+    content.vb: Public Shared Function ChooseFile As String
     return:
       type: System.String
       description: the path to the file chosen or null for no file selected
-    content.vb: Public Shared Function ChooseFile As String
   overload: ESAPIX.Helpers.FileHelper.ChooseFile*
   modifiers.csharp:
   - public
@@ -91,7 +91,7 @@ items:
   source:
     id: ChooseFolder
     path: ''
-    startLine: 15156
+    startLine: 16510
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Helpers
@@ -99,10 +99,10 @@ items:
   example: []
   syntax:
     content: public static string ChooseFolder()
+    content.vb: Public Shared Function ChooseFolder As String
     return:
       type: System.String
       description: the path to the folder chosen or null for no folder selected
-    content.vb: Public Shared Function ChooseFolder As String
   overload: ESAPIX.Helpers.FileHelper.ChooseFolder*
   modifiers.csharp:
   - public
@@ -124,16 +124,16 @@ items:
   source:
     id: LaunchFile
     path: ''
-    startLine: 15166
+    startLine: 16518
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Helpers
   syntax:
     content: public static void LaunchFile(string path)
+    content.vb: Public Shared Sub LaunchFile(path As String)
     parameters:
     - id: path
       type: System.String
-    content.vb: Public Shared Sub LaunchFile(path As String)
   overload: ESAPIX.Helpers.FileHelper.LaunchFile*
   modifiers.csharp:
   - public
@@ -155,16 +155,16 @@ items:
   source:
     id: LaunchPDFInBrowser
     path: ''
-    startLine: 15178
+    startLine: 16530
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Helpers
   syntax:
     content: public static void LaunchPDFInBrowser(string pdfPath)
+    content.vb: Public Shared Sub LaunchPDFInBrowser(pdfPath As String)
     parameters:
     - id: pdfPath
       type: System.String
-    content.vb: Public Shared Sub LaunchPDFInBrowser(pdfPath As String)
   overload: ESAPIX.Helpers.FileHelper.LaunchPDFInBrowser*
   modifiers.csharp:
   - public
@@ -186,16 +186,16 @@ items:
   source:
     id: SaveFile
     path: ''
-    startLine: 15190
+    startLine: 16542
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Helpers
   syntax:
     content: public static void SaveFile(string originalFilePath)
+    content.vb: Public Shared Sub SaveFile(originalFilePath As String)
     parameters:
     - id: originalFilePath
       type: System.String
-    content.vb: Public Shared Sub SaveFile(originalFilePath As String)
   overload: ESAPIX.Helpers.FileHelper.SaveFile*
   modifiers.csharp:
   - public
@@ -217,7 +217,7 @@ items:
   source:
     id: RemoveIllegalCharacters
     path: ''
-    startLine: 15215
+    startLine: 16567
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Helpers
@@ -225,6 +225,7 @@ items:
   example: []
   syntax:
     content: public static string RemoveIllegalCharacters(string fileName)
+    content.vb: Public Shared Function RemoveIllegalCharacters(fileName As String) As String
     parameters:
     - id: fileName
       type: System.String
@@ -232,7 +233,6 @@ items:
     return:
       type: System.String
       description: the appropriate filename decontaminated
-    content.vb: Public Shared Function RemoveIllegalCharacters(fileName As String) As String
   overload: ESAPIX.Helpers.FileHelper.RemoveIllegalCharacters*
   modifiers.csharp:
   - public

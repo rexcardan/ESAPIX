@@ -21,7 +21,7 @@ items:
   source:
     id: MayoQuery
     path: ''
-    startLine: 2863
+    startLine: 2837
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
@@ -57,16 +57,16 @@ items:
   source:
     id: QueryType
     path: ''
-    startLine: 2865
+    startLine: 2839
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public QueryType QueryType { get; set; }
+    content.vb: Public Property QueryType As QueryType
     parameters: []
     return:
       type: ESAPIX.DVH.Query.QueryType
-    content.vb: Public Property QueryType As QueryType
   overload: ESAPIX.DVH.Query.MayoQuery.QueryType*
   modifiers.csharp:
   - public
@@ -88,16 +88,16 @@ items:
   source:
     id: QueryUnits
     path: ''
-    startLine: 2866
+    startLine: 2840
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public Units QueryUnits { get; set; }
+    content.vb: Public Property QueryUnits As Units
     parameters: []
     return:
       type: ESAPIX.DVH.Query.Units
-    content.vb: Public Property QueryUnits As Units
   overload: ESAPIX.DVH.Query.MayoQuery.QueryUnits*
   modifiers.csharp:
   - public
@@ -119,16 +119,16 @@ items:
   source:
     id: QueryValue
     path: ''
-    startLine: 2867
+    startLine: 2841
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public double QueryValue { get; set; }
+    content.vb: Public Property QueryValue As Double
     parameters: []
     return:
       type: System.Double
-    content.vb: Public Property QueryValue As Double
   overload: ESAPIX.DVH.Query.MayoQuery.QueryValue*
   modifiers.csharp:
   - public
@@ -150,16 +150,16 @@ items:
   source:
     id: UnitsDesired
     path: ''
-    startLine: 2868
+    startLine: 2842
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public Units UnitsDesired { get; set; }
+    content.vb: Public Property UnitsDesired As Units
     parameters: []
     return:
       type: ESAPIX.DVH.Query.Units
-    content.vb: Public Property UnitsDesired As Units
   overload: ESAPIX.DVH.Query.MayoQuery.UnitsDesired*
   modifiers.csharp:
   - public
@@ -181,15 +181,15 @@ items:
   source:
     id: ToString
     path: ''
-    startLine: 2870
+    startLine: 2844
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
   overload: ESAPIX.DVH.Query.MayoQuery.ToString*
   modifiers.csharp:
@@ -212,18 +212,18 @@ items:
   source:
     id: Read
     path: ''
-    startLine: 2875
+    startLine: 2849
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH.Query
   syntax:
     content: public static MayoQuery Read(string query)
+    content.vb: Public Shared Function Read(query As String) As MayoQuery
     parameters:
     - id: query
       type: System.String
     return:
       type: ESAPIX.DVH.Query.MayoQuery
-    content.vb: Public Shared Function Read(query As String) As MayoQuery
   overload: ESAPIX.DVH.Query.MayoQuery.Read*
   modifiers.csharp:
   - public

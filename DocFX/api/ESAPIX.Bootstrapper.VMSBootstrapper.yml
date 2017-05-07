@@ -18,7 +18,7 @@ items:
   source:
     id: VMSBootstrapper
     path: ''
-    startLine: 15666
+    startLine: 16952
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
@@ -55,7 +55,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 15668
+    startLine: 16954
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
@@ -81,12 +81,13 @@ items:
   source:
     id: GenerateFacadeApp
     path: ''
-    startLine: 15669
+    startLine: 16959
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
   syntax:
     content: public Application GenerateFacadeApp(string username, string password)
+    content.vb: Public Function GenerateFacadeApp(username As String, password As String) As Application
     parameters:
     - id: username
       type: System.String
@@ -94,7 +95,6 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.Application
-    content.vb: Public Function GenerateFacadeApp(username As String, password As String) As Application
   overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp*
   modifiers.csharp:
   - public
@@ -114,12 +114,13 @@ items:
   source:
     id: GenerateFacadeScriptContext
     path: ''
-    startLine: 15674
+    startLine: 16964
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
   syntax:
     content: public PluginContext GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext sc, Window w)
+    content.vb: Public Function GenerateFacadeScriptContext(sc As VMS.TPS.Common.Model.API.ScriptContext, w As Window) As PluginContext
     parameters:
     - id: sc
       type: VMS.TPS.Common.Model.API.ScriptContext
@@ -127,7 +128,6 @@ items:
       type: Window
     return:
       type: PluginContext
-    content.vb: Public Function GenerateFacadeScriptContext(sc As VMS.TPS.Common.Model.API.ScriptContext, w As Window) As PluginContext
   overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext*
   modifiers.csharp:
   - public

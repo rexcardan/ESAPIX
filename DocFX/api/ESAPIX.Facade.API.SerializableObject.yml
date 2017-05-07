@@ -9,6 +9,7 @@ items:
   - ESAPIX.Facade.API.SerializableObject.#ctor(System.Object)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   - ESAPIX.Facade.API.SerializableObject.GetSchema
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
   - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   langs:
@@ -21,7 +22,7 @@ items:
   source:
     id: SerializableObject
     path: ''
-    startLine: 12236
+    startLine: 14960
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -72,7 +73,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12239
+    startLine: 14964
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -98,21 +99,52 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12240
+    startLine: 14969
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SerializableObject(dynamic client)
+    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
-    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.SerializableObject.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 14974
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    content.vb: Public ReadOnly Property IsLive As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+  overload: ESAPIX.Facade.API.SerializableObject.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   id: GetSchema
@@ -127,15 +159,15 @@ items:
   source:
     id: GetSchema
     path: ''
-    startLine: 12241
+    startLine: 14979
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Xml.Schema.XmlSchema GetSchema()
+    content.vb: Public Function GetSchema As Xml.Schema.XmlSchema
     return:
       type: System.Xml.Schema.XmlSchema
-    content.vb: Public Function GetSchema As Xml.Schema.XmlSchema
   overload: ESAPIX.Facade.API.SerializableObject.GetSchema*
   modifiers.csharp:
   - public
@@ -155,16 +187,16 @@ items:
   source:
     id: ReadXml
     path: ''
-    startLine: 12248
+    startLine: 14986
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void ReadXml(Xml.XmlReader reader)
+    content.vb: Public Sub ReadXml(reader As Xml.XmlReader)
     parameters:
     - id: reader
       type: System.Xml.XmlReader
-    content.vb: Public Sub ReadXml(reader As Xml.XmlReader)
   overload: ESAPIX.Facade.API.SerializableObject.ReadXml*
   modifiers.csharp:
   - public
@@ -184,16 +216,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 12257
+    startLine: 14992
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.SerializableObject.WriteXml*
   modifiers.csharp:
   - public
@@ -213,7 +245,7 @@ items:
   source:
     id: ClearSerializationHistory
     path: ''
-    startLine: 12266
+    startLine: 14998
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -532,6 +564,19 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject.SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject.SerializableObject
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive*
+  commentId: Overload:ESAPIX.Facade.API.SerializableObject.IsLive
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema*
   commentId: Overload:ESAPIX.Facade.API.SerializableObject.GetSchema
   isExternal: false
@@ -539,6 +584,7 @@ references:
   nameWithType: SerializableObject.GetSchema
   fullName: ESAPIX.Facade.API.SerializableObject.GetSchema
 - uid: System.Xml.Schema.XmlSchema
+  commentId: '!:System.Xml.Schema.XmlSchema'
   isExternal: true
   name: Xml.Schema.XmlSchema
   nameWithType: Xml.Schema.XmlSchema
@@ -550,6 +596,7 @@ references:
   nameWithType: SerializableObject.ReadXml
   fullName: ESAPIX.Facade.API.SerializableObject.ReadXml
 - uid: System.Xml.XmlReader
+  commentId: '!:System.Xml.XmlReader'
   isExternal: true
   name: Xml.XmlReader
   nameWithType: Xml.XmlReader
