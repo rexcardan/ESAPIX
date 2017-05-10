@@ -37,6 +37,32 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
+        /// Get beams from even a plan sum
+        /// </summary>
+        /// <param name="pi"></param>
+        /// <returns></returns>
+        public static IEnumerable<Beam> GetBeams(this PlanningItem pi)
+        {
+            if (pi is PlanSetup)
+            {
+                foreach (var beam in (pi as PlanSetup).Beams)
+                {
+                    yield return beam;
+                }
+            }
+            else if (pi is PlanSum)
+            {
+                foreach (var ps in (pi as PlanSum).PlanSetups)
+                {
+                    foreach (var beam in ps.Beams)
+                    {
+                        yield return beam;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         ///     Returns the structure set from the planning item. Removes the need to cast to plan or plan sum.
         /// </summary>
         /// <param name="plan">the planning item</param>
