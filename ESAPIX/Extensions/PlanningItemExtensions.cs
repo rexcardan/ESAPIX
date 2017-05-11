@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using ESAPIX.DVH.Query;
+using ESAPIX.Constraints.DVH.Query;
 using ESAPIX.Facade.API;
 using VMS.TPS.Common.Model.Types;
 

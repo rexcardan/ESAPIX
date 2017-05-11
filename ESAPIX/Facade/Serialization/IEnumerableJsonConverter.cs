@@ -6,6 +6,8 @@ using System.Linq;
 using ESAPIX.Facade.API;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using VMS.TPS.Common.Model.Types;
+using System.Diagnostics;
 
 #endregion
 
@@ -36,7 +38,12 @@ namespace ESAPIX.Facade.Serialization
             typeof(IEnumerable<SeedCollection>),
             typeof(IEnumerable<ControlPointParameters>),
             typeof(IEnumerable<PatientSummary>),
-            typeof(IEnumerable<Structure>)
+            typeof(IEnumerable<Structure>),
+            typeof(IEnumerable<OptimizationObjective>),
+            typeof(IEnumerable<OptimizationParameter>),
+            typeof(IEnumerable<StructureCodeInfo>),
+             typeof(IEnumerable<Isodose>),
+            typeof(IEnumerable<string>)
         };
 
         public override bool CanRead
@@ -62,31 +69,54 @@ namespace ESAPIX.Facade.Serialization
             JsonSerializer serializer)
         {
             var typ = objectType.GenericTypeArguments.FirstOrDefault();
+
             if (typ != null)
                 if (objectType != typeof(string))
                 {
                     var listGenericType = typeof(List<>);
 
                     var listType = listGenericType.MakeGenericType(typ);
+
+                    try { Activator.CreateInstance(listType); }
+                    catch (Exception e)
+                    {
+                        Debug.WriteLine($"Can't create type {listType}");
+                    }
                     dynamic list = Activator.CreateInstance(listType);
 
-                    JArray.Load(reader)
-                        .Select(i =>
-                        {
-                            dynamic ins = Activator.CreateInstance(typ);
-                            JsonConvert.PopulateObject(i.ToString(), ins, new JsonSerializerSettings
-                            {
-                                Converters = new List<JsonConverter> {this}
-                            });
-                            return ins;
-                        })
+                    try
+                    {
+                        JArray.Load(reader).Select(i => { return Populate(i, typ); })
                         .ToList()
-                        .ForEach(i => { list.Add(i); });
-
+                        .ForEach(i =>
+                        {
+                            list.Add(i);
+                        });
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.WriteLine(e);
+                        reader.Skip();
+                    }
                     return list;
                 }
 
             return existingValue;
+        }
+
+        private dynamic Populate(JToken i, Type typ)
+        {
+            if (typ == typeof(String))
+            {
+                var value = i.Value<string>();
+                return value;
+            }
+            else
+            {
+                dynamic ins = Activator.CreateInstance(typ);
+                JsonConvert.PopulateObject(i.ToString(), ins, FacadeSerializer.DeserializeSettings);
+                return ins;
+            }
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

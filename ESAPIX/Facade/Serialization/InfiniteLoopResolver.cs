@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Diagnostics;
 
 #endregion
 
@@ -17,9 +18,8 @@ namespace ESAPIX.Facade.Serialization
     {
         protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
         {
-            Console.WriteLine(type.Name);
+            Debug.WriteLine(type.Name);
             var excludingNames = new List<string>();
-            excludingNames.Add("MeshGeometry");
             switch (type.Name)
             {
                 case "Course":

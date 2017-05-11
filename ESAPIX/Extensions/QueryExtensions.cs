@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-using ESAPIX.DVH.Query;
+using ESAPIX.Constraints.DVH.Query;
 using ESAPIX.Facade.API;
 using VMS.TPS.Common.Model.Types;
 

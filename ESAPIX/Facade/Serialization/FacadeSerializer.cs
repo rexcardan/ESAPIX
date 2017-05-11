@@ -17,7 +17,7 @@ namespace ESAPIX.Facade.Serialization
                 return new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,
-                    Converters = new List<JsonConverter> {new IEnumerableJsonConverter()}
+                    Converters = new List<JsonConverter> {new IEnumerableJsonConverter(), new MeshGeometryConverter()}
                 };
             }
         }

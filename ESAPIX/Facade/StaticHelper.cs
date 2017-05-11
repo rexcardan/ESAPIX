@@ -24,9 +24,9 @@ namespace ESAPIX.Facade
         public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; } =
             (v1, v2) => { return double.NaN; };
 
-        public static Application Application_CreateApplication(string username, string password)
+        public static Application Application_CreateApplication(string username, string password, bool useCurrentThread = false)
         {
-            var thread = new AppComThread();
+            var thread = new AppComThread(!useCurrentThread);
             Application xapp = null;
             thread.Invoke(() =>
             {

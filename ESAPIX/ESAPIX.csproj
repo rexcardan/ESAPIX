@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppKit\AppBootstrapper.cs" />
+    <Compile Include="AppKit\ConsoleSyncContext.cs" />
     <Compile Include="AppKit\Data\AbstractStringDataStore.cs" />
     <Compile Include="AppKit\Data\AppSettings.cs" />
     <Compile Include="AppKit\Data\JsonDataStore.cs" />
@@ -113,44 +114,45 @@
     <Compile Include="AppKit\Splash\SplashScreen.xaml.cs">
       <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DVH\Constraints\ComplimentDoseAtVolumeConstraint.cs" />
-    <Compile Include="DVH\Constraints\ComplimentVolumeAtDoseConstraint.cs" />
-    <Compile Include="DVH\Constraints\ConstraintResult.cs" />
-    <Compile Include="DVH\Constraints\DoseAtVolumeConstraint.cs" />
-    <Compile Include="DVH\Constraints\DoseStructureConstraint.cs" />
-    <Compile Include="DVH\Constraints\IConstraint.cs" />
-    <Compile Include="DVH\Constraints\IPriorityConstraint.cs" />
-    <Compile Include="DVH\Constraints\MaxComplimentDoseAtVolumeConstraint.cs" />
-    <Compile Include="DVH\Constraints\MaxComplimentVolumeAtDose.cs" />
-    <Compile Include="DVH\Constraints\MaxDoseAtVolConstraint.cs" />
-    <Compile Include="DVH\Constraints\MaxDoseConstraint.cs" />
-    <Compile Include="DVH\Constraints\MaxMeanDoseConstraint.cs" />
-    <Compile Include="DVH\Constraints\MaxVolAtDoseConstraint.cs" />
-    <Compile Include="DVH\Constraints\MinComplimentDoseAtVolumeConstraint.cs" />
-    <Compile Include="DVH\Constraints\MinComplimentVolumeAtDose.cs" />
-    <Compile Include="DVH\Constraints\MinDoseAtVolConstraint.cs" />
-    <Compile Include="DVH\Constraints\MinDoseConstraint.cs" />
-    <Compile Include="DVH\Constraints\MinMeanDoseConstraint.cs" />
-    <Compile Include="DVH\Constraints\MinVolAtDoseConstraint.cs" />
-    <Compile Include="DVH\Constraints\NFractionConstraint.cs" />
-    <Compile Include="DVH\Constraints\OrConstraint.cs" />
-    <Compile Include="DVH\Constraints\PriorityType.cs" />
-    <Compile Include="DVH\Constraints\ResultType.cs" />
-    <Compile Include="DVH\Constraints\StructureNameConstraint.cs" />
-    <Compile Include="DVH\Constraints\VolumeAtDoseConstraint.cs" />
-    <Compile Include="DVH\DiscriminatorConverter.cs" />
-    <Compile Include="DVH\MayoConstraintConverter.cs" />
-    <Compile Include="DVH\PriorityConverter.cs" />
+    <Compile Include="Constraints\AbstractPlanQualityConstraint.cs" />
+    <Compile Include="Constraints\DVH\ComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\ComplimentVolumeAtDoseConstraint.cs" />
+    <Compile Include="Constraints\ConstraintResult.cs" />
+    <Compile Include="Constraints\DVH\DoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\DoseStructureConstraint.cs" />
+    <Compile Include="Constraints\IConstraint.cs" />
+    <Compile Include="Constraints\IPriorityConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxComplimentVolumeAtDose.cs" />
+    <Compile Include="Constraints\DVH\MaxDoseAtVolConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxMeanDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxVolAtDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinComplimentVolumeAtDose.cs" />
+    <Compile Include="Constraints\DVH\MinDoseAtVolConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinMeanDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinVolAtDoseConstraint.cs" />
+    <Compile Include="Constraints\NFractionConstraint.cs" />
+    <Compile Include="Constraints\OrConstraint.cs" />
+    <Compile Include="Constraints\PriorityType.cs" />
+    <Compile Include="Constraints\ResultType.cs" />
+    <Compile Include="Constraints\StructureNameConstraint.cs" />
+    <Compile Include="Constraints\DVH\VolumeAtDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\Query\DiscriminatorConverter.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoConstraintConverter.cs" />
+    <Compile Include="Constraints\PriorityConverter.cs" />
     <Compile Include="Extensions\ExpandoExtensions.cs" />
     <Compile Include="Extensions\QueryExtensions.cs" />
-    <Compile Include="DVH\Query\Discriminator.cs" />
-    <Compile Include="DVH\Query\MayoConstraint.cs" />
-    <Compile Include="DVH\Query\MayoQuery.cs" />
-    <Compile Include="DVH\Query\MayoQueryReader.cs" />
-    <Compile Include="DVH\Query\MayoQueryWriter.cs" />
-    <Compile Include="DVH\Query\MayoRegex.cs" />
-    <Compile Include="DVH\Query\QueryType.cs" />
-    <Compile Include="DVH\Query\Units.cs" />
+    <Compile Include="Constraints\DVH\Query\Discriminator.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoConstraint.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoQuery.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoQueryReader.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoQueryWriter.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoRegex.cs" />
+    <Compile Include="Constraints\DVH\Query\QueryType.cs" />
+    <Compile Include="Constraints\DVH\Query\Units.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Extensions\DoseExtensions.cs" />
     <Compile Include="Extensions\DVHDataExtensions.cs" />
@@ -236,8 +238,10 @@
     <Compile Include="Facade\API\User.cs" />
     <Compile Include="Facade\API\Wedge.cs" />
     <Compile Include="Facade\DefaultHelper.cs" />
+    <Compile Include="Facade\ExpandoGetter.cs" />
     <Compile Include="Facade\Serialization\FacadeSerializer.cs" />
     <Compile Include="Facade\Serialization\InfiniteLoopResolver.cs" />
+    <Compile Include="Facade\Serialization\MeshGeometryConverter.cs" />
     <Compile Include="Facade\StaticHelper.cs" />
     <Compile Include="Facade\VMSConstructor.cs" />
     <Compile Include="Helpers\FileHelper.cs" />
@@ -247,7 +251,6 @@
     <Compile Include="AppKit\ScriptComThread.cs" />
     <Compile Include="AppKit\AppComThread.cs" />
     <Compile Include="AppKit\Data\StorageHelper.cs" />
-    <Compile Include="Facade\Serialization\SerializationHelper.cs" />
     <Compile Include="Helpers\XamlAssemblyLoader.cs" />
     <Compile Include="Interfaces\IScriptContext.cs" />
     <Compile Include="Interfaces\ISecureStorable.cs" />
@@ -256,6 +259,11 @@
     <Compile Include="Logging\LogStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Facade\XContext.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -279,6 +287,13 @@
     <Resource Include="Resources\uabcode.jpg" />
     <Resource Include="Resources\uabdistort.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

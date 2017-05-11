@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESAPIX.Interfaces;
+using System.Diagnostics;
 
 #endregion
 
@@ -22,6 +23,10 @@ namespace ESAPIX.AppKit
             if (!useNewThread)
             {
                 thread = Thread.CurrentThread;
+                if (SynchronizationContext.Current == null)
+                {
+                    SynchronizationContext.SetSynchronizationContext(new ConsoleSyncContext());
+                }
                 ctx = SynchronizationContext.Current;
             }
             else
@@ -38,6 +43,7 @@ namespace ESAPIX.AppKit
                         }
                         catch (Exception e)
                         {
+                            Debug.Write(e.ToString());
                             MessageBox.Show($"VMS Thread crashed : \n{e.ToString()}");
                         }
 
@@ -53,17 +59,30 @@ namespace ESAPIX.AppKit
 
         public async Task InvokeAsync(Action action)
         {
-            await Task.Run(() =>
+            var task = Task.Run(() =>
             {
                 Delegate del = action;
                 return Invoke(del);
             });
+            await task;
+            if (task.Exception != null)
+            {
+                Debug.Write(task.Exception.ToString());
+                throw task.Exception;
+            }
         }
 
         public void Invoke(Action action)
         {
-            Delegate del = action;
-            Invoke(del);
+            try
+            {
+                Delegate del = action;
+                Invoke(del);
+            }
+            catch (Exception e)
+            {
+                Debug.Write(e.ToString());
+            }
         }
 
         public void Dispose()
