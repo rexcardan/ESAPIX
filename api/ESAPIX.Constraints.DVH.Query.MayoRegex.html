@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StaticHelper
+    <title>Class MayoRegex
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StaticHelper
+    <meta name="title" content="Class MayoRegex
    ">
     <meta name="generator" content="docfx 2.16.0.499">
     
@@ -69,7 +69,7 @@
               
               
               
-              <h1 id="" data-uid="ESAPIX.Facade.StaticHelper">Class StaticHelper
+              <h1 id="" data-uid="ESAPIX.Constraints.DVH.Query.MayoRegex">Class MayoRegex
               </h1>
               <div class="markdown level0 summary"></div>
               <div class="markdown level0 conceptual"></div>
@@ -82,7 +82,7 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">StaticHelper</span></div>
+                  <div class="level1"><span class="xref">MayoRegex</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -108,173 +108,72 @@
                   <span class="xref">System.Object.MemberwiseClone()</span>
                 </div>
               </div>
-              <h6><strong>Namespace</strong>:ESAPIX.Facade</h6>
+              <h6><strong>Namespace</strong>:ESAPIX.Constraints.DVH.Query</h6>
               <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class StaticHelper</code></pre>
+                <pre><code class="lang-csharp hljs">public class MayoRegex</code></pre>
               </div>
-              <h3 id="properties">Properties
+              <h3 id="fields">Fields
               </h3>
               
               
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.CreateApplicationFunc">CreateApplicationFunc</h4>
+              <h4 id="fields" data-uid="ESAPIX.Constraints.DVH.Query.MayoRegex.QueryType">QueryType</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;string, string, dynamic&gt; CreateApplicationFunc { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public const string QueryType = &quot;^(V|CV|DC|D|Mean|Max|Min)&quot;</code></pre>
               </div>
-              <h5 class="propertyValue">Property Value</h5>
+              <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
                     <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc">DoseValue_UndefinedDoseFunc</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;dynamic&gt; DoseValue_UndefinedDoseFunc { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction">SerializableObject_ClearSerializationHistoryAction</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Action</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.VVector_DistanceFunc">VVector_DistanceFunc</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;dynamic, dynamic, double&gt; VVector_DistanceFunc { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>, <span class="xref">System.Double</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String,System.Boolean)">Application_CreateApplication(String, String, Boolean)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Application Application_CreateApplication(string username, string password, bool useCurrentThread = false)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>username</em></td>
                     <td></td>
                   </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="fields" data-uid="ESAPIX.Constraints.DVH.Query.MayoRegex.QueryUnits">QueryUnits</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const string QueryUnits = &quot;((cc)|%|(c?Gy))&quot;</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>password</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td><em>useCurrentThread</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Application</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose">DoseValue_UndefinedDose()</h4>
+              <h4 id="fields" data-uid="ESAPIX.Constraints.DVH.Query.MayoRegex.QueryValue">QueryValue</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static DoseValue DoseValue_UndefinedDose()</code></pre>
+                <pre><code class="lang-csharp hljs">public const string QueryValue = &quot;\\d+(\\.?)(\\d+)?&quot;</code></pre>
               </div>
-              <h5 class="returns">Returns</h5>
+              <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -284,52 +183,45 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">DoseValue</span></td>
+                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory">SerializableObject_ClearSerializationHistory()</h4>
+              <h4 id="fields" data-uid="ESAPIX.Constraints.DVH.Query.MayoRegex.UnitsDesired">UnitsDesired</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void SerializableObject_ClearSerializationHistory()</code></pre>
+                <pre><code class="lang-csharp hljs">public const string UnitsDesired = &quot;\\[(cc|%|(c?Gy))\\]&quot;</code></pre>
               </div>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.VVector_Distance(System.Object,System.Object)">VVector_Distance(Object, Object)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double VVector_Distance(dynamic client1, dynamic client2)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
+              <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
                     <th>Type</th>
-                    <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>client1</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>client2</em></td>
+                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="returns">Returns</h5>
+              
+              
+              <h4 id="fields" data-uid="ESAPIX.Constraints.DVH.Query.MayoRegex.Valid">Valid</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string Valid</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -339,7 +231,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>

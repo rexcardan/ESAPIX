@@ -381,6 +381,50 @@ contoured.</p>
               </table>
               
               
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetBeams(PlanningItem)">GetBeams(PlanningItem)</h4>
+              <div class="markdown level1 summary"><p>Get beams from even a plan sum by iterating over plans in plansum</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Beam&gt; GetBeams(this PlanningItem pi)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td><p>the planning item containing beams</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Beam</span>&gt;</td>
+                    <td><p>the beams from the plan(s)</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)">GetComplexDVH(PlanningItem, IEnumerable&lt;Structure&gt;, VolumePresentation, DoseValuePresentation, Double)</h4>
               <div class="markdown level1 summary"><p>The &quot;complex&quot; dvh in this case, is 1. Allows for plan sums to have relative dose, by adding prescriptions to
 determine a

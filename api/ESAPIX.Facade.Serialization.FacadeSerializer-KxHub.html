@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StaticHelper
+    <title>Class FacadeSerializer
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StaticHelper
+    <meta name="title" content="Class FacadeSerializer
    ">
     <meta name="generator" content="docfx 2.16.0.499">
     
@@ -69,7 +69,7 @@
               
               
               
-              <h1 id="" data-uid="ESAPIX.Facade.StaticHelper">Class StaticHelper
+              <h1 id="" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer">Class FacadeSerializer
               </h1>
               <div class="markdown level0 summary"></div>
               <div class="markdown level0 conceptual"></div>
@@ -82,7 +82,7 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">StaticHelper</span></div>
+                  <div class="level1"><span class="xref">FacadeSerializer</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -108,22 +108,22 @@
                   <span class="xref">System.Object.MemberwiseClone()</span>
                 </div>
               </div>
-              <h6><strong>Namespace</strong>:ESAPIX.Facade</h6>
+              <h6><strong>Namespace</strong>:ESAPIX.Facade.Serialization</h6>
               <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class StaticHelper</code></pre>
+                <pre><code class="lang-csharp hljs">public class FacadeSerializer</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
               
               
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.CreateApplicationFunc">CreateApplicationFunc</h4>
+              <h4 id="properties" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.DeserializeSettings">DeserializeSettings</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;string, string, dynamic&gt; CreateApplicationFunc { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public static JsonSerializerSettings DeserializeSettings { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -135,19 +135,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+                    <td><span class="xref">JsonSerializerSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               
               
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc">DoseValue_UndefinedDoseFunc</h4>
+              <h4 id="properties" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.SerializeSettings">SerializeSettings</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;dynamic&gt; DoseValue_UndefinedDoseFunc { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public static JsonSerializerSettings SerializeSettings { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -159,55 +159,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction">SerializableObject_ClearSerializationHistoryAction</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Action</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.VVector_DistanceFunc">VVector_DistanceFunc</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;dynamic, dynamic, double&gt; VVector_DistanceFunc { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>, <span class="xref">System.Double</span>&gt;</td>
+                    <td><span class="xref">JsonSerializerSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -216,12 +168,12 @@
               </h3>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String,System.Boolean)">Application_CreateApplication(String, String, Boolean)</h4>
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.DeserializePatient(System.String)">DeserializePatient(String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Application Application_CreateApplication(string username, string password, bool useCurrentThread = false)</code></pre>
+                <pre><code class="lang-csharp hljs">public static Patient DeserializePatient(string jsonPatient)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -235,17 +187,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>username</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>password</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td><em>useCurrentThread</em></td>
+                    <td><em>jsonPatient</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -260,52 +202,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Application</span></td>
+                    <td><span class="xref">Patient</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose">DoseValue_UndefinedDose()</h4>
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.DeserializePlan(System.String)">DeserializePlan(String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static DoseValue DoseValue_UndefinedDose()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">DoseValue</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory">SerializableObject_ClearSerializationHistory()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void SerializableObject_ClearSerializationHistory()</code></pre>
-              </div>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.VVector_Distance(System.Object,System.Object)">VVector_Distance(Object, Object)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double VVector_Distance(dynamic client1, dynamic client2)</code></pre>
+                <pre><code class="lang-csharp hljs">public static PlanSetup DeserializePlan(string jsonPlan)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +227,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>client1</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>client2</em></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jsonPlan</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -339,7 +243,89 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="xref">PlanSetup</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.SerializePatient(Patient)">SerializePatient(Patient)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string SerializePatient(Patient patient)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Patient</span></td>
+                    <td><em>patient</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.SerializePlan(PlanSetup)">SerializePlan(PlanSetup)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string SerializePlan(PlanSetup plan)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanSetup</span></td>
+                    <td><em>plan</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>

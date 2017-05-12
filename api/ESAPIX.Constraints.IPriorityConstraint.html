@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace ESAPIX.Helpers
+    <title>Interface IPriorityConstraint
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace ESAPIX.Helpers
+    <meta name="title" content="Interface IPriorityConstraint
    ">
     <meta name="generator" content="docfx 2.16.0.499">
     
@@ -67,31 +67,98 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
-              <h1 id="" data-uid="ESAPIX.Helpers">Namespace ESAPIX.Helpers
+              
+              
+              <h1 id="" data-uid="ESAPIX.Constraints.IPriorityConstraint">Interface IPriorityConstraint
               </h1>
               <div class="markdown level0 summary"></div>
               <div class="markdown level0 conceptual"></div>
-              <div class="markdown level0 remarks"></div>
               <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
               <!-- API Ad -->
               <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
               <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
               </script>
-                <h3 id="classes">Classes
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.Name</a>
+                </div>
+                <div>
+                  <a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.FullName</a>
+                </div>
+                <div>
+                  <a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.Constrain(PlanningItem)</a>
+                </div>
+                <div>
+                  <a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.CanConstrain(PlanningItem)</a>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:ESAPIX.Constraints</h6>
+              <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
+              <h5 id="_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public interface IPriorityConstraint : IConstraint</code></pre>
+              </div>
+              <h3 id="properties">Properties
               </h3>
-                  <h4><a class="xref" href="ESAPIX.Helpers.FileHelper.html">FileHelper</a></h4>
-                  <section></section>
-                  <h4><a class="xref" href="ESAPIX.Helpers.MagicStrings.html">MagicStrings</a></h4>
-                  <section><p>Class that holds constant strings from the Eclipse Scripting API</p>
-</section>
-                  <h4><a class="xref" href="ESAPIX.Helpers.MagicStrings.VolumeUnits.html">MagicStrings.VolumeUnits</a></h4>
-                  <section></section>
-                  <h4><a class="xref" href="ESAPIX.Helpers.MathHelper.html">MathHelper</a></h4>
-                  <section></section>
-                  <h4><a class="xref" href="ESAPIX.Helpers.XamlAssemblyLoader.html">XamlAssemblyLoader</a></h4>
-                  <section></section>
-            </article>
+              
+              
+              <h4 id="properties" data-uid="ESAPIX.Constraints.IPriorityConstraint.Priority">Priority</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">PriorityType Priority { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="ESAPIX.Constraints.PriorityType.html">PriorityType</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Constraints.IPriorityConstraint.GetFailedResultType">GetFailedResultType()</h4>
+              <div class="markdown level1 summary"><p>The result type associated with this priority level</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">ResultType GetFailedResultType()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="ESAPIX.Constraints.ResultType.html">ResultType</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- API Ad -->
+              <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>            </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

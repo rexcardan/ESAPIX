@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StaticHelper
+    <title>Class DoseStructureConstraint
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StaticHelper
+    <meta name="title" content="Class DoseStructureConstraint
    ">
     <meta name="generator" content="docfx 2.16.0.499">
     
@@ -69,7 +69,7 @@
               
               
               
-              <h1 id="" data-uid="ESAPIX.Facade.StaticHelper">Class StaticHelper
+              <h1 id="" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint">Class DoseStructureConstraint
               </h1>
               <div class="markdown level0 summary"></div>
               <div class="markdown level0 conceptual"></div>
@@ -82,7 +82,7 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">StaticHelper</span></div>
+                  <div class="level1"><span class="xref">DoseStructureConstraint</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -108,173 +108,24 @@
                   <span class="xref">System.Object.MemberwiseClone()</span>
                 </div>
               </div>
-              <h6><strong>Namespace</strong>:ESAPIX.Facade</h6>
+              <h6><strong>Namespace</strong>:ESAPIX.Constraints.DVH</h6>
               <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class StaticHelper</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract class DoseStructureConstraint : IPriorityConstraint, IConstraint</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
               
               
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.CreateApplicationFunc">CreateApplicationFunc</h4>
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.ConstraintDose">ConstraintDose</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;string, string, dynamic&gt; CreateApplicationFunc { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public DoseValue ConstraintDose { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDoseFunc">DoseValue_UndefinedDoseFunc</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;dynamic&gt; DoseValue_UndefinedDoseFunc { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction">SerializableObject_ClearSerializationHistoryAction</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Action</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.VVector_DistanceFunc">VVector_DistanceFunc</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;dynamic, dynamic, double&gt; VVector_DistanceFunc { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>, <span class="xref">System.Double</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String,System.Boolean)">Application_CreateApplication(String, String, Boolean)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Application Application_CreateApplication(string username, string password, bool useCurrentThread = false)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>username</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>password</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td><em>useCurrentThread</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Application</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.DoseValue_UndefinedDose">DoseValue_UndefinedDose()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static DoseValue DoseValue_UndefinedDose()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -291,21 +142,190 @@
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistory">SerializableObject_ClearSerializationHistory()</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.Dose">Dose</h4>
+              <div class="markdown level1 summary"><p>The dose value component of the constraint dose - Used for text storage</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void SerializableObject_ClearSerializationHistory()</code></pre>
+                <pre><code class="lang-csharp hljs">public double Dose { get; set; }</code></pre>
               </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.VVector_Distance(System.Object,System.Object)">VVector_Distance(Object, Object)</h4>
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.FullName">FullName</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double VVector_Distance(dynamic client1, dynamic client2)</code></pre>
+                <pre><code class="lang-csharp hljs">public string FullName { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.FullName</a></div>
+              
+              
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.Name">Name</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string Name { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.Name</a></div>
+              
+              
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.Priority">Priority</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public PriorityType Priority { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="ESAPIX.Constraints.PriorityType.html">PriorityType</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="ESAPIX.Constraints.IPriorityConstraint.html">IPriorityConstraint.Priority</a></div>
+              
+              
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.StructureName">StructureName</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string StructureName { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.StructureNames">StructureNames</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string[] StructureNames { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="properties" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.Unit">Unit</h4>
+              <div class="markdown level1 summary"><p>The dose unit component of the constraint dose - Used for text storage</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DoseValue.DoseUnit Unit { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DoseValue.DoseUnit</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.CanConstrain(PlanningItem)">CanConstrain(PlanningItem)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ConstraintResult CanConstrain(PlanningItem pi)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +338,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>client1</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>client2</em></td>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -339,8 +354,167 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Double</span></td>
+                    <td><a class="xref" href="ESAPIX.Constraints.ConstraintResult.html">ConstraintResult</a></td>
                     <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.CanConstrain(PlanningItem)</a></div>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.Constrain(PlanningItem)">Constrain(PlanningItem)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract ConstraintResult Constrain(PlanningItem pi)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="ESAPIX.Constraints.ConstraintResult.html">ConstraintResult</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.Constrain(PlanningItem)</a></div>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.GetFailedResultType">GetFailedResultType()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ResultType GetFailedResultType()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="ESAPIX.Constraints.ResultType.html">ResultType</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="ESAPIX.Constraints.IPriorityConstraint.html">IPriorityConstraint.GetFailedResultType()</a></div>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.GetMergedDVH(PlanningItem)">GetMergedDVH(PlanningItem)</h4>
+              <div class="markdown level1 summary"><p>Merges cumulative DVHs into one DVH based on absolute volume</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DVHPoint[] GetMergedDVH(PlanningItem pi)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td><p>the planning item containing the dose to query</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DVHPoint</span>[]</td>
+                    <td><p>the DVH as an array of DVHPoint values</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Constraints.DVH.DoseStructureConstraint.GetStructures(PlanningItem)">GetStructures(PlanningItem)</h4>
+              <div class="markdown level1 summary"><p>Returns the structures in the planning item from the structure names property</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;Structure&gt; GetStructures(PlanningItem pi)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td><p>the planning item to query</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><p>the collection of structures</p>
+</td>
                   </tr>
                 </tbody>
               </table>
