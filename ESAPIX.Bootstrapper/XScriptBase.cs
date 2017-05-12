@@ -1,13 +1,12 @@
-﻿using ESAPIX.AppKit;
-using ESAPIX.Facade;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region
+
 using System.Windows;
 using System.Windows.Threading;
+using ESAPIX.AppKit;
+using ESAPIX.Facade;
 using VMS.TPS.Common.Model.API;
+
+#endregion
 
 namespace ESAPIX.Bootstrapper
 {
@@ -15,7 +14,7 @@ namespace ESAPIX.Bootstrapper
     {
         public void Execute(ScriptContext context, Window window)
         {
-            var scriptContext = new ESAPIX.Facade.API.ScriptContext(context);
+            var scriptContext = new Facade.API.ScriptContext(context);
             //When hooked up to bootstrapper (comment out otherwise)
             FacadeInitializer.Initialize();
             //Get this window barely visible so that when it does show, it isn't ugly ;)

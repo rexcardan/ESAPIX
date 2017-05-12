@@ -6,6 +6,7 @@ items:
   children:
   - ESAPIX.AppKit.AppBootstrapper`1
   - ESAPIX.AppKit.AppComThread
+  - ESAPIX.AppKit.ConsoleSyncContext
   - ESAPIX.AppKit.PluginContext
   - ESAPIX.AppKit.ScriptBootstrapper`1
   - ESAPIX.AppKit.ScriptComThread
@@ -15,7 +16,6 @@ items:
   - ESAPIX.AppKit.StandAloneContext.ExternalPlanSetupChangedHandler
   - ESAPIX.AppKit.StandAloneContext.PatientChangedHandler
   - ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
-  - ESAPIX.AppKit.XScriptBase
   langs:
   - csharp
   - vb
@@ -69,6 +69,12 @@ references:
   name: AppComThread
   nameWithType: AppComThread
   fullName: ESAPIX.AppKit.AppComThread
+- uid: ESAPIX.AppKit.ConsoleSyncContext
+  commentId: T:ESAPIX.AppKit.ConsoleSyncContext
+  isExternal: false
+  name: ConsoleSyncContext
+  nameWithType: ConsoleSyncContext
+  fullName: ESAPIX.AppKit.ConsoleSyncContext
 - uid: ESAPIX.AppKit.PluginContext
   commentId: T:ESAPIX.AppKit.PluginContext
   parent: ESAPIX.AppKit
@@ -160,12 +166,6 @@ references:
   name: StandAloneContext.CourseChangedHandler
   nameWithType: StandAloneContext.CourseChangedHandler
   fullName: ESAPIX.AppKit.StandAloneContext.CourseChangedHandler
-- uid: ESAPIX.AppKit.XScriptBase
-  commentId: T:ESAPIX.AppKit.XScriptBase
-  isExternal: false
-  name: XScriptBase
-  nameWithType: XScriptBase
-  fullName: ESAPIX.AppKit.XScriptBase
 - uid: ESAPIX.AppKit
   commentId: N:ESAPIX.AppKit
   isExternal: false

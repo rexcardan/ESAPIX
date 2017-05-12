@@ -27,7 +27,7 @@ items:
   source:
     id: BrachyPlanSetup
     path: ''
-    startLine: 6420
+    startLine: 6516
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -126,7 +126,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6422
+    startLine: 6518
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -152,16 +152,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6427
+    startLine: 6523
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachyPlanSetup(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
   modifiers.csharp:
   - public
@@ -181,16 +181,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 6432
+    startLine: 6528
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.BrachyPlanSetup.IsLive*
   modifiers.csharp:
   - public
@@ -212,16 +212,16 @@ items:
   source:
     id: ApplicationSetupType
     path: ''
-    startLine: 6437
+    startLine: 6533
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ApplicationSetupType { get; set; }
-    content.vb: Public Property ApplicationSetupType As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ApplicationSetupType As String
   overload: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType*
   modifiers.csharp:
   - public
@@ -243,16 +243,16 @@ items:
   source:
     id: Catheters
     path: ''
-    startLine: 6454
+    startLine: 6550
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Catheter> Catheters { get; set; }
-    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
   overload: ESAPIX.Facade.API.BrachyPlanSetup.Catheters*
   modifiers.csharp:
   - public
@@ -274,16 +274,16 @@ items:
   source:
     id: NumberOfPdrPulses
     path: ''
-    startLine: 6492
+    startLine: 6588
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int ? NumberOfPdrPulses { get; set; }
-    content.vb: Public Property NumberOfPdrPulses As Integer?
     parameters: []
     return:
       type: System.Nullable{System.Int32}
+    content.vb: Public Property NumberOfPdrPulses As Integer?
   overload: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses*
   modifiers.csharp:
   - public
@@ -305,16 +305,16 @@ items:
   source:
     id: PdrPulseInterval
     path: ''
-    startLine: 6509
+    startLine: 6605
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ? PdrPulseInterval { get; set; }
-    content.vb: Public Property PdrPulseInterval As Double?
     parameters: []
     return:
       type: System.Nullable{System.Double}
+    content.vb: Public Property PdrPulseInterval As Double?
   overload: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval*
   modifiers.csharp:
   - public
@@ -336,16 +336,16 @@ items:
   source:
     id: SeedCollections
     path: ''
-    startLine: 6526
+    startLine: 6622
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<SeedCollection> SeedCollections { get; set; }
-    content.vb: Public Property SeedCollections As IEnumerable(Of SeedCollection)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.SeedCollection}
+    content.vb: Public Property SeedCollections As IEnumerable(Of SeedCollection)
   overload: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections*
   modifiers.csharp:
   - public
@@ -367,16 +367,16 @@ items:
   source:
     id: SolidApplicators
     path: ''
-    startLine: 6564
+    startLine: 6660
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<BrachySolidApplicator> SolidApplicators { get; set; }
-    content.vb: Public Property SolidApplicators As IEnumerable(Of BrachySolidApplicator)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.BrachySolidApplicator}
+    content.vb: Public Property SolidApplicators As IEnumerable(Of BrachySolidApplicator)
   overload: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators*
   modifiers.csharp:
   - public
@@ -398,16 +398,16 @@ items:
   source:
     id: TreatmentDateTime
     path: ''
-    startLine: 6602
+    startLine: 6698
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? TreatmentDateTime { get; set; }
-    content.vb: Public Property TreatmentDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property TreatmentDateTime As Date?
   overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime*
   modifiers.csharp:
   - public
@@ -429,16 +429,16 @@ items:
   source:
     id: TreatmentTechnique
     path: ''
-    startLine: 6619
+    startLine: 6715
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string TreatmentTechnique { get; set; }
-    content.vb: Public Property TreatmentTechnique As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property TreatmentTechnique As String
   overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique*
   modifiers.csharp:
   - public
@@ -460,16 +460,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6636
+    startLine: 6732
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.BrachyPlanSetup.WriteXml*
   modifiers.csharp:
   - public

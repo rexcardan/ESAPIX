@@ -7,6 +7,8 @@
     name.vb: AppBootstrapper(Of T)
   - uid: ESAPIX.AppKit.AppComThread
     name: AppComThread
+  - uid: ESAPIX.AppKit.ConsoleSyncContext
+    name: ConsoleSyncContext
   - uid: ESAPIX.AppKit.PluginContext
     name: PluginContext
   - uid: ESAPIX.AppKit.ScriptBootstrapper`1
@@ -26,8 +28,6 @@
     name: StandAloneContext.PatientChangedHandler
   - uid: ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
     name: StandAloneContext.PlanSetupChangedHandler
-  - uid: ESAPIX.AppKit.XScriptBase
-    name: XScriptBase
 - uid: ESAPIX.AppKit.Data
   name: ESAPIX.AppKit.Data
   items:
@@ -63,6 +63,89 @@
     name: FacadeInitializer
   - uid: ESAPIX.Bootstrapper.VMSBootstrapper
     name: VMSBootstrapper
+  - uid: ESAPIX.Bootstrapper.XScriptBase
+    name: XScriptBase
+- uid: ESAPIX.Constraints
+  name: ESAPIX.Constraints
+  items:
+  - uid: ESAPIX.Constraints.AbstractPlanQualityConstraint
+    name: AbstractPlanQualityConstraint
+  - uid: ESAPIX.Constraints.AbstractPlanQualityConstraint.StatusUpdateHandler
+    name: AbstractPlanQualityConstraint.StatusUpdateHandler
+  - uid: ESAPIX.Constraints.ConstraintResult
+    name: ConstraintResult
+  - uid: ESAPIX.Constraints.IConstraint
+    name: IConstraint
+  - uid: ESAPIX.Constraints.IPriorityConstraint
+    name: IPriorityConstraint
+  - uid: ESAPIX.Constraints.NFractionConstraint
+    name: NFractionConstraint
+  - uid: ESAPIX.Constraints.OrConstraint
+    name: OrConstraint
+  - uid: ESAPIX.Constraints.PriorityConverter
+    name: PriorityConverter
+  - uid: ESAPIX.Constraints.PriorityType
+    name: PriorityType
+  - uid: ESAPIX.Constraints.ResultType
+    name: ResultType
+  - uid: ESAPIX.Constraints.StructureNameConstraint
+    name: StructureNameConstraint
+- uid: ESAPIX.Constraints.DVH
+  name: ESAPIX.Constraints.DVH
+  items:
+  - uid: ESAPIX.Constraints.DVH.ComplimentDoseAtVolumeConstraint
+    name: ComplimentDoseAtVolumeConstraint
+  - uid: ESAPIX.Constraints.DVH.ComplimentVolumeAtDoseConstraint
+    name: ComplimentVolumeAtDoseConstraint
+  - uid: ESAPIX.Constraints.DVH.DoseAtVolumeConstraint
+    name: DoseAtVolumeConstraint
+  - uid: ESAPIX.Constraints.DVH.DoseStructureConstraint
+    name: DoseStructureConstraint
+  - uid: ESAPIX.Constraints.DVH.MaxComplimentDoseAtVolumeConstraint
+    name: MaxComplimentDoseAtVolumeConstraint
+  - uid: ESAPIX.Constraints.DVH.MaxComplimentVolumeAtDose
+    name: MaxComplimentVolumeAtDose
+  - uid: ESAPIX.Constraints.DVH.MaxDoseAtVolConstraint
+    name: MaxDoseAtVolConstraint
+  - uid: ESAPIX.Constraints.DVH.MaxDoseConstraint
+    name: MaxDoseConstraint
+  - uid: ESAPIX.Constraints.DVH.MaxMeanDoseConstraint
+    name: MaxMeanDoseConstraint
+  - uid: ESAPIX.Constraints.DVH.MaxVolAtDoseConstraint
+    name: MaxVolAtDoseConstraint
+  - uid: ESAPIX.Constraints.DVH.MinComplimentDoseAtVolumeConstraint
+    name: MinComplimentDoseAtVolumeConstraint
+  - uid: ESAPIX.Constraints.DVH.MinComplimentVolumeAtDose
+    name: MinComplimentVolumeAtDose
+  - uid: ESAPIX.Constraints.DVH.MinDoseAtVolConstraint
+    name: MinDoseAtVolConstraint
+  - uid: ESAPIX.Constraints.DVH.MinDoseConstraint
+    name: MinDoseConstraint
+  - uid: ESAPIX.Constraints.DVH.MinMeanDoseConstraint
+    name: MinMeanDoseConstraint
+  - uid: ESAPIX.Constraints.DVH.MinVolAtDoseConstraint
+    name: MinVolAtDoseConstraint
+  - uid: ESAPIX.Constraints.DVH.VolumeAtDoseConstraint
+    name: VolumeAtDoseConstraint
+- uid: ESAPIX.Constraints.DVH.Query
+  name: ESAPIX.Constraints.DVH.Query
+  items:
+  - uid: ESAPIX.Constraints.DVH.Query.Discriminator
+    name: Discriminator
+  - uid: ESAPIX.Constraints.DVH.Query.MayoConstraint
+    name: MayoConstraint
+  - uid: ESAPIX.Constraints.DVH.Query.MayoQuery
+    name: MayoQuery
+  - uid: ESAPIX.Constraints.DVH.Query.MayoQueryReader
+    name: MayoQueryReader
+  - uid: ESAPIX.Constraints.DVH.Query.MayoQueryWriter
+    name: MayoQueryWriter
+  - uid: ESAPIX.Constraints.DVH.Query.MayoRegex
+    name: MayoRegex
+  - uid: ESAPIX.Constraints.DVH.Query.QueryType
+    name: QueryType
+  - uid: ESAPIX.Constraints.DVH.Query.Units
+    name: Units
 - uid: ESAPIX.DVH
   name: ESAPIX.DVH
   items:
@@ -70,80 +153,6 @@
     name: DiscriminatorConverter
   - uid: ESAPIX.DVH.MayoConstraintConverter
     name: MayoConstraintConverter
-  - uid: ESAPIX.DVH.PriorityConverter
-    name: PriorityConverter
-- uid: ESAPIX.DVH.Constraints
-  name: ESAPIX.DVH.Constraints
-  items:
-  - uid: ESAPIX.DVH.Constraints.ComplimentDoseAtVolumeConstraint
-    name: ComplimentDoseAtVolumeConstraint
-  - uid: ESAPIX.DVH.Constraints.ComplimentVolumeAtDoseConstraint
-    name: ComplimentVolumeAtDoseConstraint
-  - uid: ESAPIX.DVH.Constraints.ConstraintResult
-    name: ConstraintResult
-  - uid: ESAPIX.DVH.Constraints.DoseAtVolumeConstraint
-    name: DoseAtVolumeConstraint
-  - uid: ESAPIX.DVH.Constraints.DoseStructureConstraint
-    name: DoseStructureConstraint
-  - uid: ESAPIX.DVH.Constraints.IConstraint
-    name: IConstraint
-  - uid: ESAPIX.DVH.Constraints.IPriorityConstraint
-    name: IPriorityConstraint
-  - uid: ESAPIX.DVH.Constraints.MaxComplimentDoseAtVolumeConstraint
-    name: MaxComplimentDoseAtVolumeConstraint
-  - uid: ESAPIX.DVH.Constraints.MaxComplimentVolumeAtDose
-    name: MaxComplimentVolumeAtDose
-  - uid: ESAPIX.DVH.Constraints.MaxDoseAtVolConstraint
-    name: MaxDoseAtVolConstraint
-  - uid: ESAPIX.DVH.Constraints.MaxDoseConstraint
-    name: MaxDoseConstraint
-  - uid: ESAPIX.DVH.Constraints.MaxMeanDoseConstraint
-    name: MaxMeanDoseConstraint
-  - uid: ESAPIX.DVH.Constraints.MaxVolAtDoseConstraint
-    name: MaxVolAtDoseConstraint
-  - uid: ESAPIX.DVH.Constraints.MinComplimentDoseAtVolumeConstraint
-    name: MinComplimentDoseAtVolumeConstraint
-  - uid: ESAPIX.DVH.Constraints.MinComplimentVolumeAtDose
-    name: MinComplimentVolumeAtDose
-  - uid: ESAPIX.DVH.Constraints.MinDoseAtVolConstraint
-    name: MinDoseAtVolConstraint
-  - uid: ESAPIX.DVH.Constraints.MinDoseConstraint
-    name: MinDoseConstraint
-  - uid: ESAPIX.DVH.Constraints.MinMeanDoseConstraint
-    name: MinMeanDoseConstraint
-  - uid: ESAPIX.DVH.Constraints.MinVolAtDoseConstraint
-    name: MinVolAtDoseConstraint
-  - uid: ESAPIX.DVH.Constraints.NFractionConstraint
-    name: NFractionConstraint
-  - uid: ESAPIX.DVH.Constraints.OrConstraint
-    name: OrConstraint
-  - uid: ESAPIX.DVH.Constraints.PriorityType
-    name: PriorityType
-  - uid: ESAPIX.DVH.Constraints.ResultType
-    name: ResultType
-  - uid: ESAPIX.DVH.Constraints.StructureNameConstraint
-    name: StructureNameConstraint
-  - uid: ESAPIX.DVH.Constraints.VolumeAtDoseConstraint
-    name: VolumeAtDoseConstraint
-- uid: ESAPIX.DVH.Query
-  name: ESAPIX.DVH.Query
-  items:
-  - uid: ESAPIX.DVH.Query.Discriminator
-    name: Discriminator
-  - uid: ESAPIX.DVH.Query.MayoConstraint
-    name: MayoConstraint
-  - uid: ESAPIX.DVH.Query.MayoQuery
-    name: MayoQuery
-  - uid: ESAPIX.DVH.Query.MayoQueryReader
-    name: MayoQueryReader
-  - uid: ESAPIX.DVH.Query.MayoQueryWriter
-    name: MayoQueryWriter
-  - uid: ESAPIX.DVH.Query.MayoRegex
-    name: MayoRegex
-  - uid: ESAPIX.DVH.Query.QueryType
-    name: QueryType
-  - uid: ESAPIX.DVH.Query.Units
-    name: Units
 - uid: ESAPIX.Extensions
   name: ESAPIX.Extensions
   items:
@@ -189,6 +198,8 @@
   items:
   - uid: ESAPIX.Facade.DefaultHelper
     name: DefaultHelper
+  - uid: ESAPIX.Facade.ExpandoGetter
+    name: ExpandoGetter
   - uid: ESAPIX.Facade.StaticHelper
     name: StaticHelper
   - uid: ESAPIX.Facade.VMSConstructor
@@ -351,6 +362,15 @@
     name: IEnumerableJsonConverter
   - uid: ESAPIX.Facade.Serialization.InfiniteLoopResolver
     name: InfiniteLoopResolver
+  - uid: ESAPIX.Facade.Serialization.MeshGeometryConverter
+    name: MeshGeometryConverter
+  - uid: ESAPIX.Facade.Serialization.SerializedMethod
+    name: SerializedMethod
+- uid: ESAPIX.Facade.Tests
+  name: ESAPIX.Facade.Tests
+  items:
+  - uid: ESAPIX.Facade.Tests.ExpandoGetterTests
+    name: ExpandoGetterTests
 - uid: ESAPIX.Helpers
   name: ESAPIX.Helpers
   items:
@@ -362,8 +382,6 @@
     name: MagicStrings.VolumeUnits
   - uid: ESAPIX.Helpers.MathHelper
     name: MathHelper
-  - uid: ESAPIX.Helpers.SerializationHelper
-    name: SerializationHelper
   - uid: ESAPIX.Helpers.XamlAssemblyLoader
     name: XamlAssemblyLoader
 - uid: ESAPIX.Interfaces
@@ -384,8 +402,20 @@
     name: Logger.LogHandler
   - uid: ESAPIX.Logging.LogStrings
     name: LogStrings
+- uid: ESAPIX.OfflineObjects
+  name: ESAPIX.OfflineObjects
+  items:
+  - uid: ESAPIX.OfflineObjects.Samples
+    name: Samples
 - uid: ESAPIX_TESTS.Helpers
   name: ESAPIX_TESTS.Helpers
   items:
+  - uid: ESAPIX_TESTS.Helpers.OfflineObjectsTests
+    name: OfflineObjectsTests
   - uid: ESAPIX_TESTS.Helpers.SerializationHelperTests
     name: SerializationHelperTests
+- uid: ESAPIXTests.Facade.Serialization
+  name: ESAPIXTests.Facade.Serialization
+  items:
+  - uid: ESAPIXTests.Facade.Serialization.FacadeSerializerTests
+    name: FacadeSerializerTests

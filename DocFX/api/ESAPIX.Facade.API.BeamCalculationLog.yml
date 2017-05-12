@@ -21,7 +21,7 @@ items:
   source:
     id: BeamCalculationLog
     path: ''
-    startLine: 5936
+    startLine: 6032
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -64,7 +64,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5938
+    startLine: 6034
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -90,16 +90,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5943
+    startLine: 6039
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BeamCalculationLog(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.BeamCalculationLog.#ctor*
   modifiers.csharp:
   - public
@@ -119,16 +119,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 5948
+    startLine: 6044
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.BeamCalculationLog.IsLive*
   modifiers.csharp:
   - public
@@ -150,16 +150,16 @@ items:
   source:
     id: Category
     path: ''
-    startLine: 5953
+    startLine: 6049
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Category { get; set; }
-    content.vb: Public Property Category As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Category As String
   overload: ESAPIX.Facade.API.BeamCalculationLog.Category*
   modifiers.csharp:
   - public
@@ -181,16 +181,16 @@ items:
   source:
     id: MessageLines
     path: ''
-    startLine: 5968
+    startLine: 6064
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<string> MessageLines { get; set; }
-    content.vb: Public Property MessageLines As IEnumerable(Of String)
     parameters: []
     return:
       type: IEnumerable{System.String}
+    content.vb: Public Property MessageLines As IEnumerable(Of String)
   overload: ESAPIX.Facade.API.BeamCalculationLog.MessageLines*
   modifiers.csharp:
   - public
@@ -212,16 +212,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6006
+    startLine: 6102
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.BeamCalculationLog.WriteXml*
   modifiers.csharp:
   - public

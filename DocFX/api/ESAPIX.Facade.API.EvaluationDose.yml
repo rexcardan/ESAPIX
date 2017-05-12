@@ -20,7 +20,7 @@ items:
   source:
     id: EvaluationDose
     path: ''
-    startLine: 9166
+    startLine: 9262
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -90,7 +90,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9168
+    startLine: 9264
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -116,16 +116,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9173
+    startLine: 9269
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public EvaluationDose(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.EvaluationDose.#ctor*
   modifiers.csharp:
   - public
@@ -145,16 +145,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 9178
+    startLine: 9274
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.EvaluationDose.IsLive*
   modifiers.csharp:
   - public
@@ -176,16 +176,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9183
+    startLine: 9279
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.EvaluationDose.WriteXml*
   modifiers.csharp:
   - public
@@ -205,18 +205,18 @@ items:
   source:
     id: SetVoxels
     path: ''
-    startLine: 9189
+    startLine: 9285
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetVoxels(int planeIndex, int[, ] values)
-    content.vb: Public Sub SetVoxels(planeIndex As Integer, values As Integer(,))
     parameters:
     - id: planeIndex
       type: System.Int32
     - id: values
       type: System.Int32[,]
+    content.vb: Public Sub SetVoxels(planeIndex As Integer, values As Integer(,))
   overload: ESAPIX.Facade.API.EvaluationDose.SetVoxels*
   nameWithType.vb: EvaluationDose.SetVoxels(Int32, Int32(,))
   modifiers.csharp:

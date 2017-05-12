@@ -40,7 +40,7 @@ items:
   source:
     id: Dose
     path: ''
-    startLine: 8492
+    startLine: 8588
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -93,7 +93,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8494
+    startLine: 8590
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -119,16 +119,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8499
+    startLine: 8595
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Dose(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Dose.#ctor*
   modifiers.csharp:
   - public
@@ -148,16 +148,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 8504
+    startLine: 8600
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Dose.IsLive*
   modifiers.csharp:
   - public
@@ -179,16 +179,16 @@ items:
   source:
     id: DoseMax3D
     path: ''
-    startLine: 8509
+    startLine: 8605
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue DoseMax3D { get; set; }
-    content.vb: Public Property DoseMax3D As DoseValue
     parameters: []
     return:
       type: DoseValue
+    content.vb: Public Property DoseMax3D As DoseValue
   overload: ESAPIX.Facade.API.Dose.DoseMax3D*
   modifiers.csharp:
   - public
@@ -210,16 +210,16 @@ items:
   source:
     id: DoseMax3DLocation
     path: ''
-    startLine: 8524
+    startLine: 8620
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector DoseMax3DLocation { get; set; }
-    content.vb: Public Property DoseMax3DLocation As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property DoseMax3DLocation As VVector
   overload: ESAPIX.Facade.API.Dose.DoseMax3DLocation*
   modifiers.csharp:
   - public
@@ -241,16 +241,16 @@ items:
   source:
     id: Isodoses
     path: ''
-    startLine: 8541
+    startLine: 8637
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Isodose> Isodoses { get; set; }
-    content.vb: Public Property Isodoses As IEnumerable(Of Isodose)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Isodose}
+    content.vb: Public Property Isodoses As IEnumerable(Of Isodose)
   overload: ESAPIX.Facade.API.Dose.Isodoses*
   modifiers.csharp:
   - public
@@ -272,16 +272,16 @@ items:
   source:
     id: Origin
     path: ''
-    startLine: 8579
+    startLine: 8675
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector Origin { get; set; }
-    content.vb: Public Property Origin As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property Origin As VVector
   overload: ESAPIX.Facade.API.Dose.Origin*
   modifiers.csharp:
   - public
@@ -303,16 +303,16 @@ items:
   source:
     id: Series
     path: ''
-    startLine: 8594
+    startLine: 8690
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Series Series { get; set; }
-    content.vb: Public Property Series As Series
     parameters: []
     return:
       type: ESAPIX.Facade.API.Series
+    content.vb: Public Property Series As Series
   overload: ESAPIX.Facade.API.Dose.Series*
   modifiers.csharp:
   - public
@@ -334,16 +334,16 @@ items:
   source:
     id: SeriesUID
     path: ''
-    startLine: 8613
+    startLine: 8709
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SeriesUID { get; set; }
-    content.vb: Public Property SeriesUID As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property SeriesUID As String
   overload: ESAPIX.Facade.API.Dose.SeriesUID*
   modifiers.csharp:
   - public
@@ -365,16 +365,16 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 8628
+    startLine: 8724
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
-    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.Dose.UID*
   modifiers.csharp:
   - public
@@ -396,16 +396,16 @@ items:
   source:
     id: XDirection
     path: ''
-    startLine: 8643
+    startLine: 8739
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector XDirection { get; set; }
-    content.vb: Public Property XDirection As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property XDirection As VVector
   overload: ESAPIX.Facade.API.Dose.XDirection*
   modifiers.csharp:
   - public
@@ -427,16 +427,16 @@ items:
   source:
     id: XRes
     path: ''
-    startLine: 8658
+    startLine: 8754
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double XRes { get; set; }
-    content.vb: Public Property XRes As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property XRes As Double
   overload: ESAPIX.Facade.API.Dose.XRes*
   modifiers.csharp:
   - public
@@ -458,16 +458,16 @@ items:
   source:
     id: XSize
     path: ''
-    startLine: 8673
+    startLine: 8769
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int XSize { get; set; }
-    content.vb: Public Property XSize As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property XSize As Integer
   overload: ESAPIX.Facade.API.Dose.XSize*
   modifiers.csharp:
   - public
@@ -489,16 +489,16 @@ items:
   source:
     id: YDirection
     path: ''
-    startLine: 8688
+    startLine: 8784
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector YDirection { get; set; }
-    content.vb: Public Property YDirection As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property YDirection As VVector
   overload: ESAPIX.Facade.API.Dose.YDirection*
   modifiers.csharp:
   - public
@@ -520,16 +520,16 @@ items:
   source:
     id: YRes
     path: ''
-    startLine: 8703
+    startLine: 8799
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double YRes { get; set; }
-    content.vb: Public Property YRes As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property YRes As Double
   overload: ESAPIX.Facade.API.Dose.YRes*
   modifiers.csharp:
   - public
@@ -551,16 +551,16 @@ items:
   source:
     id: YSize
     path: ''
-    startLine: 8718
+    startLine: 8814
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int YSize { get; set; }
-    content.vb: Public Property YSize As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property YSize As Integer
   overload: ESAPIX.Facade.API.Dose.YSize*
   modifiers.csharp:
   - public
@@ -582,16 +582,16 @@ items:
   source:
     id: ZDirection
     path: ''
-    startLine: 8733
+    startLine: 8829
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector ZDirection { get; set; }
-    content.vb: Public Property ZDirection As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property ZDirection As VVector
   overload: ESAPIX.Facade.API.Dose.ZDirection*
   modifiers.csharp:
   - public
@@ -613,16 +613,16 @@ items:
   source:
     id: ZRes
     path: ''
-    startLine: 8748
+    startLine: 8844
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ZRes { get; set; }
-    content.vb: Public Property ZRes As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property ZRes As Double
   overload: ESAPIX.Facade.API.Dose.ZRes*
   modifiers.csharp:
   - public
@@ -644,16 +644,16 @@ items:
   source:
     id: ZSize
     path: ''
-    startLine: 8763
+    startLine: 8859
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int ZSize { get; set; }
-    content.vb: Public Property ZSize As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property ZSize As Integer
   overload: ESAPIX.Facade.API.Dose.ZSize*
   modifiers.csharp:
   - public
@@ -675,16 +675,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 8778
+    startLine: 8874
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Dose.WriteXml*
   modifiers.csharp:
   - public
@@ -704,13 +704,12 @@ items:
   source:
     id: GetDoseProfile
     path: ''
-    startLine: 8784
+    startLine: 8880
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseProfile GetDoseProfile(VVector start, VVector stop, double[] preallocatedBuffer)
-    content.vb: Public Function GetDoseProfile(start As VVector, stop As VVector, preallocatedBuffer As Double()) As DoseProfile
     parameters:
     - id: start
       type: VVector
@@ -720,6 +719,7 @@ items:
       type: System.Double[]
     return:
       type: DoseProfile
+    content.vb: Public Function GetDoseProfile(start As VVector, stop As VVector, preallocatedBuffer As Double()) As DoseProfile
   overload: ESAPIX.Facade.API.Dose.GetDoseProfile*
   nameWithType.vb: Dose.GetDoseProfile(VVector, VVector, Double())
   modifiers.csharp:
@@ -742,18 +742,18 @@ items:
   source:
     id: GetDoseToPoint
     path: ''
-    startLine: 8794
+    startLine: 8890
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue GetDoseToPoint(VVector at)
-    content.vb: Public Function GetDoseToPoint(at As VVector) As DoseValue
     parameters:
     - id: at
       type: VVector
     return:
       type: DoseValue
+    content.vb: Public Function GetDoseToPoint(at As VVector) As DoseValue
   overload: ESAPIX.Facade.API.Dose.GetDoseToPoint*
   modifiers.csharp:
   - public
@@ -773,18 +773,18 @@ items:
   source:
     id: GetVoxels
     path: ''
-    startLine: 8801
+    startLine: 8897
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void GetVoxels(int planeIndex, int[, ] preallocatedBuffer)
-    content.vb: Public Sub GetVoxels(planeIndex As Integer, preallocatedBuffer As Integer(,))
     parameters:
     - id: planeIndex
       type: System.Int32
     - id: preallocatedBuffer
       type: System.Int32[,]
+    content.vb: Public Sub GetVoxels(planeIndex As Integer, preallocatedBuffer As Integer(,))
   overload: ESAPIX.Facade.API.Dose.GetVoxels*
   nameWithType.vb: Dose.GetVoxels(Int32, Int32(,))
   modifiers.csharp:
@@ -807,18 +807,18 @@ items:
   source:
     id: SetVoxels
     path: ''
-    startLine: 8807
+    startLine: 8903
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void SetVoxels(int planeIndex, int[, ] values)
-    content.vb: Public Sub SetVoxels(planeIndex As Integer, values As Integer(,))
     parameters:
     - id: planeIndex
       type: System.Int32
     - id: values
       type: System.Int32[,]
+    content.vb: Public Sub SetVoxels(planeIndex As Integer, values As Integer(,))
   overload: ESAPIX.Facade.API.Dose.SetVoxels*
   nameWithType.vb: Dose.SetVoxels(Int32, Int32(,))
   modifiers.csharp:
@@ -841,18 +841,18 @@ items:
   source:
     id: VoxelToDoseValue
     path: ''
-    startLine: 8813
+    startLine: 8909
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue VoxelToDoseValue(int voxelValue)
-    content.vb: Public Function VoxelToDoseValue(voxelValue As Integer) As DoseValue
     parameters:
     - id: voxelValue
       type: System.Int32
     return:
       type: DoseValue
+    content.vb: Public Function VoxelToDoseValue(voxelValue As Integer) As DoseValue
   overload: ESAPIX.Facade.API.Dose.VoxelToDoseValue*
   modifiers.csharp:
   - public

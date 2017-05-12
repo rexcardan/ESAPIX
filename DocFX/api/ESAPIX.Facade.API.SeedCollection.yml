@@ -21,7 +21,7 @@ items:
   source:
     id: SeedCollection
     path: ''
-    startLine: 14766
+    startLine: 14862
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -70,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14768
+    startLine: 14864
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,16 +96,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14773
+    startLine: 14869
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SeedCollection(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.SeedCollection.#ctor*
   modifiers.csharp:
   - public
@@ -125,16 +125,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 14778
+    startLine: 14874
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.SeedCollection.IsLive*
   modifiers.csharp:
   - public
@@ -156,16 +156,16 @@ items:
   source:
     id: Color
     path: ''
-    startLine: 14783
+    startLine: 14879
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Windows.Media.Color Color { get; set; }
-    content.vb: Public Property Color As Windows.Media.Color
     parameters: []
     return:
       type: System.Windows.Media.Color
+    content.vb: Public Property Color As Windows.Media.Color
   overload: ESAPIX.Facade.API.SeedCollection.Color*
   modifiers.csharp:
   - public
@@ -187,16 +187,16 @@ items:
   source:
     id: SourcePositions
     path: ''
-    startLine: 14803
+    startLine: 14899
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<SourcePosition> SourcePositions { get; set; }
-    content.vb: Public Property SourcePositions As IEnumerable(Of SourcePosition)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.SourcePosition}
+    content.vb: Public Property SourcePositions As IEnumerable(Of SourcePosition)
   overload: ESAPIX.Facade.API.SeedCollection.SourcePositions*
   modifiers.csharp:
   - public
@@ -218,16 +218,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 14841
+    startLine: 14937
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.SeedCollection.WriteXml*
   modifiers.csharp:
   - public

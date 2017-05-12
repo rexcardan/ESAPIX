@@ -30,7 +30,7 @@ items:
   source:
     id: RadioactiveSourceModel
     path: ''
-    startLine: 14005
+    startLine: 14101
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -79,7 +79,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14007
+    startLine: 14103
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -105,16 +105,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14012
+    startLine: 14108
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public RadioactiveSourceModel(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.#ctor*
   modifiers.csharp:
   - public
@@ -134,16 +134,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 14017
+    startLine: 14113
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.IsLive*
   modifiers.csharp:
   - public
@@ -165,16 +165,16 @@ items:
   source:
     id: ActiveSize
     path: ''
-    startLine: 14022
+    startLine: 14118
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector ActiveSize { get; set; }
-    content.vb: Public Property ActiveSize As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property ActiveSize As VVector
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.ActiveSize*
   modifiers.csharp:
   - public
@@ -196,16 +196,16 @@ items:
   source:
     id: ActivityConversionFactor
     path: ''
-    startLine: 14037
+    startLine: 14133
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ActivityConversionFactor { get; set; }
-    content.vb: Public Property ActivityConversionFactor As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property ActivityConversionFactor As Double
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.ActivityConversionFactor*
   modifiers.csharp:
   - public
@@ -227,16 +227,16 @@ items:
   source:
     id: CalculationModel
     path: ''
-    startLine: 14057
+    startLine: 14153
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string CalculationModel { get; set; }
-    content.vb: Public Property CalculationModel As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property CalculationModel As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.CalculationModel*
   modifiers.csharp:
   - public
@@ -258,16 +258,16 @@ items:
   source:
     id: DoseRateConstant
     path: ''
-    startLine: 14074
+    startLine: 14170
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DoseRateConstant { get; set; }
-    content.vb: Public Property DoseRateConstant As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property DoseRateConstant As Double
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.DoseRateConstant*
   modifiers.csharp:
   - public
@@ -289,16 +289,16 @@ items:
   source:
     id: HalfLife
     path: ''
-    startLine: 14091
+    startLine: 14187
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double HalfLife { get; set; }
-    content.vb: Public Property HalfLife As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property HalfLife As Double
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.HalfLife*
   modifiers.csharp:
   - public
@@ -320,16 +320,16 @@ items:
   source:
     id: LiteratureReference
     path: ''
-    startLine: 14106
+    startLine: 14202
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string LiteratureReference { get; set; }
-    content.vb: Public Property LiteratureReference As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property LiteratureReference As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.LiteratureReference*
   modifiers.csharp:
   - public
@@ -351,16 +351,16 @@ items:
   source:
     id: Manufacturer
     path: ''
-    startLine: 14123
+    startLine: 14219
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Manufacturer { get; set; }
-    content.vb: Public Property Manufacturer As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Manufacturer As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.Manufacturer*
   modifiers.csharp:
   - public
@@ -382,16 +382,16 @@ items:
   source:
     id: SourceType
     path: ''
-    startLine: 14140
+    startLine: 14236
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SourceType { get; set; }
-    content.vb: Public Property SourceType As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property SourceType As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.SourceType*
   modifiers.csharp:
   - public
@@ -413,16 +413,16 @@ items:
   source:
     id: Status
     path: ''
-    startLine: 14155
+    startLine: 14251
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Status { get; set; }
-    content.vb: Public Property Status As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Status As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.Status*
   modifiers.csharp:
   - public
@@ -444,16 +444,16 @@ items:
   source:
     id: StatusDate
     path: ''
-    startLine: 14170
+    startLine: 14266
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? StatusDate { get; set; }
-    content.vb: Public Property StatusDate As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property StatusDate As Date?
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.StatusDate*
   modifiers.csharp:
   - public
@@ -475,16 +475,16 @@ items:
   source:
     id: StatusUserName
     path: ''
-    startLine: 14187
+    startLine: 14283
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string StatusUserName { get; set; }
-    content.vb: Public Property StatusUserName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property StatusUserName As String
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.StatusUserName*
   modifiers.csharp:
   - public
@@ -506,16 +506,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 14204
+    startLine: 14300
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.RadioactiveSourceModel.WriteXml*
   modifiers.csharp:
   - public

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using ESAPIX.Facade.API;
-using ESAPIX.Facade.Serialization;
-using ESAPIX.Helpers;
+﻿#region
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
+
+#endregion
 
 namespace ESAPIX_TESTS.Helpers
 {
@@ -16,13 +12,11 @@ namespace ESAPIX_TESTS.Helpers
         [TestMethod]
         public void TestDeserializePlan()
         {
-          
         }
 
         [TestMethod]
         public void TestDeserializeBeam()
         {
-          
         }
     }
 }

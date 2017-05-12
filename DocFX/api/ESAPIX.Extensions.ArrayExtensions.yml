@@ -16,7 +16,7 @@ items:
   source:
     id: ArrayExtensions
     path: ''
-    startLine: 3045
+    startLine: 3094
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -54,13 +54,12 @@ items:
   source:
     id: Flatten
     path: ''
-    startLine: 3047
+    startLine: 3096
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
     content: public static T[] Flatten<T>(T[, ] array)
-    content.vb: Public Shared Function Flatten(Of T)(array As T(,)) As T()
     parameters:
     - id: array
       type: '{T}[,]'
@@ -68,6 +67,7 @@ items:
     - id: T
     return:
       type: '{T}[]'
+    content.vb: Public Shared Function Flatten(Of T)(array As T(,)) As T()
   overload: ESAPIX.Extensions.ArrayExtensions.Flatten*
   nameWithType.vb: ArrayExtensions.Flatten(Of T)(T(,))
   modifiers.csharp:

@@ -22,7 +22,7 @@ items:
   source:
     id: Diagnosis
     path: ''
-    startLine: 8407
+    startLine: 8503
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -71,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8409
+    startLine: 8505
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,16 +97,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8414
+    startLine: 8510
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Diagnosis(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Diagnosis.#ctor*
   modifiers.csharp:
   - public
@@ -126,16 +126,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 8419
+    startLine: 8515
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Diagnosis.IsLive*
   modifiers.csharp:
   - public
@@ -157,16 +157,16 @@ items:
   source:
     id: ClinicalDescription
     path: ''
-    startLine: 8424
+    startLine: 8520
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ClinicalDescription { get; set; }
-    content.vb: Public Property ClinicalDescription As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ClinicalDescription As String
   overload: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
   modifiers.csharp:
   - public
@@ -188,16 +188,16 @@ items:
   source:
     id: Code
     path: ''
-    startLine: 8441
+    startLine: 8537
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Code { get; set; }
-    content.vb: Public Property Code As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Code As String
   overload: ESAPIX.Facade.API.Diagnosis.Code*
   modifiers.csharp:
   - public
@@ -219,16 +219,16 @@ items:
   source:
     id: CodeTable
     path: ''
-    startLine: 8456
+    startLine: 8552
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string CodeTable { get; set; }
-    content.vb: Public Property CodeTable As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property CodeTable As String
   overload: ESAPIX.Facade.API.Diagnosis.CodeTable*
   modifiers.csharp:
   - public
@@ -250,16 +250,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 8471
+    startLine: 8567
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Diagnosis.WriteXml*
   modifiers.csharp:
   - public

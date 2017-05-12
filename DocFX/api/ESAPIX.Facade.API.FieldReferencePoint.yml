@@ -26,7 +26,7 @@ items:
   source:
     id: FieldReferencePoint
     path: ''
-    startLine: 9769
+    startLine: 9865
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -75,7 +75,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9771
+    startLine: 9867
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -101,16 +101,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9776
+    startLine: 9872
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public FieldReferencePoint(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
   modifiers.csharp:
   - public
@@ -130,16 +130,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 9781
+    startLine: 9877
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.FieldReferencePoint.IsLive*
   modifiers.csharp:
   - public
@@ -161,16 +161,16 @@ items:
   source:
     id: EffectiveDepth
     path: ''
-    startLine: 9786
+    startLine: 9882
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double EffectiveDepth { get; set; }
-    content.vb: Public Property EffectiveDepth As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property EffectiveDepth As Double
   overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
   modifiers.csharp:
   - public
@@ -192,16 +192,16 @@ items:
   source:
     id: FieldDose
     path: ''
-    startLine: 9803
+    startLine: 9899
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue FieldDose { get; set; }
-    content.vb: Public Property FieldDose As DoseValue
     parameters: []
     return:
       type: DoseValue
+    content.vb: Public Property FieldDose As DoseValue
   overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
   modifiers.csharp:
   - public
@@ -223,16 +223,16 @@ items:
   source:
     id: IsFieldDoseNominal
     path: ''
-    startLine: 9818
+    startLine: 9914
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsFieldDoseNominal { get; set; }
-    content.vb: Public Property IsFieldDoseNominal As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property IsFieldDoseNominal As Boolean
   overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
   modifiers.csharp:
   - public
@@ -254,16 +254,16 @@ items:
   source:
     id: IsPrimaryReferencePoint
     path: ''
-    startLine: 9835
+    startLine: 9931
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsPrimaryReferencePoint { get; set; }
-    content.vb: Public Property IsPrimaryReferencePoint As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property IsPrimaryReferencePoint As Boolean
   overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
   modifiers.csharp:
   - public
@@ -285,16 +285,16 @@ items:
   source:
     id: ReferencePoint
     path: ''
-    startLine: 9855
+    startLine: 9951
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ReferencePoint ReferencePoint { get; set; }
-    content.vb: Public Property ReferencePoint As ReferencePoint
     parameters: []
     return:
       type: ESAPIX.Facade.API.ReferencePoint
+    content.vb: Public Property ReferencePoint As ReferencePoint
   overload: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint*
   modifiers.csharp:
   - public
@@ -316,16 +316,16 @@ items:
   source:
     id: RefPointLocation
     path: ''
-    startLine: 9876
+    startLine: 9972
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector RefPointLocation { get; set; }
-    content.vb: Public Property RefPointLocation As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property RefPointLocation As VVector
   overload: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation*
   modifiers.csharp:
   - public
@@ -347,16 +347,16 @@ items:
   source:
     id: SSD
     path: ''
-    startLine: 9893
+    startLine: 9989
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SSD { get; set; }
-    content.vb: Public Property SSD As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property SSD As Double
   overload: ESAPIX.Facade.API.FieldReferencePoint.SSD*
   modifiers.csharp:
   - public
@@ -378,16 +378,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9908
+    startLine: 10004
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.FieldReferencePoint.WriteXml*
   modifiers.csharp:
   - public

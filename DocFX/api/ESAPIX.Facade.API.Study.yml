@@ -22,7 +22,7 @@ items:
   source:
     id: Study
     path: ''
-    startLine: 15977
+    startLine: 16073
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -71,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 15979
+    startLine: 16075
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,16 +97,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 15984
+    startLine: 16080
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Study(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Study.#ctor*
   modifiers.csharp:
   - public
@@ -126,16 +126,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 15989
+    startLine: 16085
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Study.IsLive*
   modifiers.csharp:
   - public
@@ -157,16 +157,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 15994
+    startLine: 16090
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
-    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Study.CreationDateTime*
   modifiers.csharp:
   - public
@@ -188,16 +188,16 @@ items:
   source:
     id: Series
     path: ''
-    startLine: 16011
+    startLine: 16107
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Series> Series { get; set; }
-    content.vb: Public Property Series As IEnumerable(Of Series)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Series}
+    content.vb: Public Property Series As IEnumerable(Of Series)
   overload: ESAPIX.Facade.API.Study.Series*
   modifiers.csharp:
   - public
@@ -219,16 +219,16 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 16049
+    startLine: 16145
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
-    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.Study.UID*
   modifiers.csharp:
   - public
@@ -250,16 +250,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 16064
+    startLine: 16160
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Study.WriteXml*
   modifiers.csharp:
   - public

@@ -25,7 +25,7 @@ items:
   source:
     id: Block
     path: ''
-    startLine: 6195
+    startLine: 6291
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -74,7 +74,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6197
+    startLine: 6293
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -100,16 +100,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6202
+    startLine: 6298
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Block(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Block.#ctor*
   modifiers.csharp:
   - public
@@ -129,16 +129,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 6207
+    startLine: 6303
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Block.IsLive*
   modifiers.csharp:
   - public
@@ -160,16 +160,16 @@ items:
   source:
     id: AddOnMaterial
     path: ''
-    startLine: 6212
+    startLine: 6308
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public AddOnMaterial AddOnMaterial { get; set; }
-    content.vb: Public Property AddOnMaterial As AddOnMaterial
     parameters: []
     return:
       type: ESAPIX.Facade.API.AddOnMaterial
+    content.vb: Public Property AddOnMaterial As AddOnMaterial
   overload: ESAPIX.Facade.API.Block.AddOnMaterial*
   modifiers.csharp:
   - public
@@ -191,16 +191,16 @@ items:
   source:
     id: IsDiverging
     path: ''
-    startLine: 6233
+    startLine: 6329
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsDiverging { get; set; }
-    content.vb: Public Property IsDiverging As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property IsDiverging As Boolean
   overload: ESAPIX.Facade.API.Block.IsDiverging*
   modifiers.csharp:
   - public
@@ -222,16 +222,16 @@ items:
   source:
     id: TransmissionFactor
     path: ''
-    startLine: 6248
+    startLine: 6344
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double TransmissionFactor { get; set; }
-    content.vb: Public Property TransmissionFactor As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property TransmissionFactor As Double
   overload: ESAPIX.Facade.API.Block.TransmissionFactor*
   modifiers.csharp:
   - public
@@ -253,16 +253,16 @@ items:
   source:
     id: Tray
     path: ''
-    startLine: 6265
+    startLine: 6361
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Tray Tray { get; set; }
-    content.vb: Public Property Tray As Tray
     parameters: []
     return:
       type: ESAPIX.Facade.API.Tray
+    content.vb: Public Property Tray As Tray
   overload: ESAPIX.Facade.API.Block.Tray*
   modifiers.csharp:
   - public
@@ -284,16 +284,16 @@ items:
   source:
     id: TrayTransmissionFactor
     path: ''
-    startLine: 6284
+    startLine: 6380
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double TrayTransmissionFactor { get; set; }
-    content.vb: Public Property TrayTransmissionFactor As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property TrayTransmissionFactor As Double
   overload: ESAPIX.Facade.API.Block.TrayTransmissionFactor*
   modifiers.csharp:
   - public
@@ -315,16 +315,16 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 6302
+    startLine: 6398
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BlockType Type { get; set; }
-    content.vb: Public Property Type As BlockType
     parameters: []
     return:
       type: BlockType
+    content.vb: Public Property Type As BlockType
   overload: ESAPIX.Facade.API.Block.Type*
   modifiers.csharp:
   - public
@@ -346,16 +346,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6317
+    startLine: 6413
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Block.WriteXml*
   modifiers.csharp:
   - public

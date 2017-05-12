@@ -15,16 +15,16 @@ items:
   source:
     id: PatientChangedHandler
     path: ''
-    startLine: 554
+    startLine: 613
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void PatientChangedHandler(Patient newPatient);
-    content.vb: Public Delegate Sub PatientChangedHandler(newPatient As Patient)
     parameters:
     - id: newPatient
       type: Patient
+    content.vb: Public Delegate Sub PatientChangedHandler(newPatient As Patient)
   modifiers.csharp:
   - public
   - delegate

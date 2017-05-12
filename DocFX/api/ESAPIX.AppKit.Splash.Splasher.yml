@@ -16,7 +16,7 @@ items:
   source:
     id: Splasher
     path: ''
-    startLine: 1299
+    startLine: 1315
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Splash
@@ -55,7 +55,7 @@ items:
   source:
     id: GetSplash
     path: ''
-    startLine: 1306
+    startLine: 1322
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Splash
@@ -63,13 +63,13 @@ items:
   example: []
   syntax:
     content: public static Window GetSplash(Assembly titleAssembly = null)
-    content.vb: Public Shared Function GetSplash(titleAssembly As Assembly = Nothing) As Window
     parameters:
     - id: titleAssembly
       type: Assembly
     return:
       type: Window
       description: the splash screen to show
+    content.vb: Public Shared Function GetSplash(titleAssembly As Assembly = Nothing) As Window
   overload: ESAPIX.AppKit.Splash.Splasher.GetSplash*
   modifiers.csharp:
   - public

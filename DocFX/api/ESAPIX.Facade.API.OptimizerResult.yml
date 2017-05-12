@@ -22,7 +22,7 @@ items:
   source:
     id: OptimizerResult
     path: ''
-    startLine: 11841
+    startLine: 11937
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -63,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11843
+    startLine: 11939
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -89,16 +89,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11848
+    startLine: 11944
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
   modifiers.csharp:
   - public
@@ -118,16 +118,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 11853
+    startLine: 11949
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizerResult.IsLive*
   modifiers.csharp:
   - public
@@ -149,16 +149,16 @@ items:
   source:
     id: StructureDVHs
     path: ''
-    startLine: 11858
+    startLine: 11954
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<OptimizerDVH> StructureDVHs { get; set; }
-    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
   overload: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
   modifiers.csharp:
   - public
@@ -180,16 +180,16 @@ items:
   source:
     id: StructureObjectiveValues
     path: ''
-    startLine: 11896
+    startLine: 11992
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues { get; set; }
-    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
   overload: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
   modifiers.csharp:
   - public
@@ -211,16 +211,16 @@ items:
   source:
     id: TotalObjectiveFunctionValue
     path: ''
-    startLine: 11934
+    startLine: 12030
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double TotalObjectiveFunctionValue { get; set; }
-    content.vb: Public Property TotalObjectiveFunctionValue As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property TotalObjectiveFunctionValue As Double
   overload: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
   modifiers.csharp:
   - public
@@ -242,16 +242,16 @@ items:
   source:
     id: NumberOfIMRTOptimizerIterations
     path: ''
-    startLine: 11954
+    startLine: 12050
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int NumberOfIMRTOptimizerIterations { get; set; }
-    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
   overload: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
   modifiers.csharp:
   - public

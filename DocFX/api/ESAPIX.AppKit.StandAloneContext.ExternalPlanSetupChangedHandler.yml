@@ -15,16 +15,16 @@ items:
   source:
     id: ExternalPlanSetupChangedHandler
     path: ''
-    startLine: 572
+    startLine: 631
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void ExternalPlanSetupChangedHandler(ExternalPlanSetup ps);
-    content.vb: Public Delegate Sub ExternalPlanSetupChangedHandler(ps As ExternalPlanSetup)
     parameters:
     - id: ps
       type: ExternalPlanSetup
+    content.vb: Public Delegate Sub ExternalPlanSetupChangedHandler(ps As ExternalPlanSetup)
   modifiers.csharp:
   - public
   - delegate

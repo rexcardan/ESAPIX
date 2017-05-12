@@ -15,16 +15,16 @@ items:
   source:
     id: CourseChangedHandler
     path: ''
-    startLine: 590
+    startLine: 649
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void CourseChangedHandler(Course c);
-    content.vb: Public Delegate Sub CourseChangedHandler(c As Course)
     parameters:
     - id: c
       type: Course
+    content.vb: Public Delegate Sub CourseChangedHandler(c As Course)
   modifiers.csharp:
   - public
   - delegate

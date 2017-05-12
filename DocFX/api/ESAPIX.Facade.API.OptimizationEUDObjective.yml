@@ -23,7 +23,7 @@ items:
   source:
     id: OptimizationEUDObjective
     path: ''
-    startLine: 10746
+    startLine: 10842
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -69,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10748
+    startLine: 10844
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,16 +95,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10753
+    startLine: 10849
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationEUDObjective(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
   modifiers.csharp:
   - public
@@ -124,16 +124,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 10758
+    startLine: 10854
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive*
   modifiers.csharp:
   - public
@@ -155,16 +155,16 @@ items:
   source:
     id: Dose
     path: ''
-    startLine: 10763
+    startLine: 10859
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue Dose { get; set; }
-    content.vb: Public Property Dose As DoseValue
     parameters: []
     return:
       type: DoseValue
+    content.vb: Public Property Dose As DoseValue
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
   modifiers.csharp:
   - public
@@ -186,16 +186,16 @@ items:
   source:
     id: Operator
     path: ''
-    startLine: 10778
+    startLine: 10874
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationObjectiveOperator Operator { get; set; }
-    content.vb: Public Property Operator As OptimizationObjectiveOperator
     parameters: []
     return:
       type: OptimizationObjectiveOperator
+    content.vb: Public Property Operator As OptimizationObjectiveOperator
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
   modifiers.csharp:
   - public
@@ -217,16 +217,16 @@ items:
   source:
     id: ParameterA
     path: ''
-    startLine: 10798
+    startLine: 10894
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ParameterA { get; set; }
-    content.vb: Public Property ParameterA As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property ParameterA As Double
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
   modifiers.csharp:
   - public
@@ -248,16 +248,16 @@ items:
   source:
     id: Priority
     path: ''
-    startLine: 10813
+    startLine: 10909
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Priority { get; set; }
-    content.vb: Public Property Priority As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property Priority As Double
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Priority*
   modifiers.csharp:
   - public
@@ -279,16 +279,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 10828
+    startLine: 10924
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml*
   modifiers.csharp:
   - public

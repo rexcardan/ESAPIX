@@ -34,7 +34,7 @@ items:
   source:
     id: Course
     path: ''
-    startLine: 8050
+    startLine: 8146
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -82,7 +82,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8052
+    startLine: 8148
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -108,16 +108,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8057
+    startLine: 8153
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Course(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Course.#ctor*
   modifiers.csharp:
   - public
@@ -137,16 +137,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 8062
+    startLine: 8158
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Course.IsLive*
   modifiers.csharp:
   - public
@@ -168,16 +168,16 @@ items:
   source:
     id: CompletedDateTime
     path: ''
-    startLine: 8067
+    startLine: 8163
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CompletedDateTime { get; set; }
-    content.vb: Public Property CompletedDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property CompletedDateTime As Date?
   overload: ESAPIX.Facade.API.Course.CompletedDateTime*
   modifiers.csharp:
   - public
@@ -199,16 +199,16 @@ items:
   source:
     id: Diagnoses
     path: ''
-    startLine: 8084
+    startLine: 8180
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Diagnosis> Diagnoses { get; set; }
-    content.vb: Public Property Diagnoses As IEnumerable(Of Diagnosis)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Diagnosis}
+    content.vb: Public Property Diagnoses As IEnumerable(Of Diagnosis)
   overload: ESAPIX.Facade.API.Course.Diagnoses*
   modifiers.csharp:
   - public
@@ -230,16 +230,16 @@ items:
   source:
     id: Intent
     path: ''
-    startLine: 8122
+    startLine: 8218
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Intent { get; set; }
-    content.vb: Public Property Intent As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Intent As String
   overload: ESAPIX.Facade.API.Course.Intent*
   modifiers.csharp:
   - public
@@ -261,16 +261,16 @@ items:
   source:
     id: Patient
     path: ''
-    startLine: 8137
+    startLine: 8233
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Patient Patient { get; set; }
-    content.vb: Public Property Patient As Patient
     parameters: []
     return:
       type: ESAPIX.Facade.API.Patient
+    content.vb: Public Property Patient As Patient
   overload: ESAPIX.Facade.API.Course.Patient*
   modifiers.csharp:
   - public
@@ -292,16 +292,16 @@ items:
   source:
     id: PlanSums
     path: ''
-    startLine: 8156
+    startLine: 8252
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<PlanSum> PlanSums { get; set; }
-    content.vb: Public Property PlanSums As IEnumerable(Of PlanSum)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.PlanSum}
+    content.vb: Public Property PlanSums As IEnumerable(Of PlanSum)
   overload: ESAPIX.Facade.API.Course.PlanSums*
   modifiers.csharp:
   - public
@@ -323,16 +323,16 @@ items:
   source:
     id: StartDateTime
     path: ''
-    startLine: 8194
+    startLine: 8290
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? StartDateTime { get; set; }
-    content.vb: Public Property StartDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property StartDateTime As Date?
   overload: ESAPIX.Facade.API.Course.StartDateTime*
   modifiers.csharp:
   - public
@@ -354,16 +354,16 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 8211
+    startLine: 8307
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id { get; set; }
-    content.vb: Public Property Id As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Id As String
   overload: ESAPIX.Facade.API.Course.Id*
   modifiers.csharp:
   - public
@@ -385,16 +385,16 @@ items:
   source:
     id: PlanSetups
     path: ''
-    startLine: 8226
+    startLine: 8322
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<PlanSetup> PlanSetups { get; set; }
-    content.vb: Public Property PlanSetups As IEnumerable(Of PlanSetup)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.PlanSetup}
+    content.vb: Public Property PlanSetups As IEnumerable(Of PlanSetup)
   overload: ESAPIX.Facade.API.Course.PlanSetups*
   modifiers.csharp:
   - public
@@ -416,16 +416,16 @@ items:
   source:
     id: ExternalPlanSetups
     path: ''
-    startLine: 8264
+    startLine: 8360
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<ExternalPlanSetup> ExternalPlanSetups { get; set; }
-    content.vb: Public Property ExternalPlanSetups As IEnumerable(Of ExternalPlanSetup)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.ExternalPlanSetup}
+    content.vb: Public Property ExternalPlanSetups As IEnumerable(Of ExternalPlanSetup)
   overload: ESAPIX.Facade.API.Course.ExternalPlanSetups*
   modifiers.csharp:
   - public
@@ -447,16 +447,16 @@ items:
   source:
     id: BrachyPlanSetups
     path: ''
-    startLine: 8302
+    startLine: 8398
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<BrachyPlanSetup> BrachyPlanSetups { get; set; }
-    content.vb: Public Property BrachyPlanSetups As IEnumerable(Of BrachyPlanSetup)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.BrachyPlanSetup}
+    content.vb: Public Property BrachyPlanSetups As IEnumerable(Of BrachyPlanSetup)
   overload: ESAPIX.Facade.API.Course.BrachyPlanSetups*
   modifiers.csharp:
   - public
@@ -478,16 +478,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 8340
+    startLine: 8436
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Course.WriteXml*
   modifiers.csharp:
   - public
@@ -507,18 +507,18 @@ items:
   source:
     id: AddExternalPlanSetup
     path: ''
-    startLine: 8346
+    startLine: 8442
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalPlanSetup AddExternalPlanSetup(StructureSet structureSet)
-    content.vb: Public Function AddExternalPlanSetup(structureSet As StructureSet) As ExternalPlanSetup
     parameters:
     - id: structureSet
       type: ESAPIX.Facade.API.StructureSet
     return:
       type: ESAPIX.Facade.API.ExternalPlanSetup
+    content.vb: Public Function AddExternalPlanSetup(structureSet As StructureSet) As ExternalPlanSetup
   overload: ESAPIX.Facade.API.Course.AddExternalPlanSetup*
   modifiers.csharp:
   - public
@@ -538,13 +538,12 @@ items:
   source:
     id: AddExternalPlanSetupAsVerificationPlan
     path: ''
-    startLine: 8356
+    startLine: 8452
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalPlanSetup AddExternalPlanSetupAsVerificationPlan(StructureSet structureSet, ExternalPlanSetup verifiedPlan)
-    content.vb: Public Function AddExternalPlanSetupAsVerificationPlan(structureSet As StructureSet, verifiedPlan As ExternalPlanSetup) As ExternalPlanSetup
     parameters:
     - id: structureSet
       type: ESAPIX.Facade.API.StructureSet
@@ -552,6 +551,7 @@ items:
       type: ESAPIX.Facade.API.ExternalPlanSetup
     return:
       type: ESAPIX.Facade.API.ExternalPlanSetup
+    content.vb: Public Function AddExternalPlanSetupAsVerificationPlan(structureSet As StructureSet, verifiedPlan As ExternalPlanSetup) As ExternalPlanSetup
   overload: ESAPIX.Facade.API.Course.AddExternalPlanSetupAsVerificationPlan*
   modifiers.csharp:
   - public
@@ -571,18 +571,18 @@ items:
   source:
     id: CanAddPlanSetup
     path: ''
-    startLine: 8369
+    startLine: 8465
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanAddPlanSetup(StructureSet structureSet)
-    content.vb: Public Function CanAddPlanSetup(structureSet As StructureSet) As Boolean
     parameters:
     - id: structureSet
       type: ESAPIX.Facade.API.StructureSet
     return:
       type: System.Boolean
+    content.vb: Public Function CanAddPlanSetup(structureSet As StructureSet) As Boolean
   overload: ESAPIX.Facade.API.Course.CanAddPlanSetup*
   modifiers.csharp:
   - public
@@ -602,18 +602,18 @@ items:
   source:
     id: CanRemovePlanSetup
     path: ''
-    startLine: 8379
+    startLine: 8475
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanRemovePlanSetup(PlanSetup planSetup)
-    content.vb: Public Function CanRemovePlanSetup(planSetup As PlanSetup) As Boolean
     parameters:
     - id: planSetup
       type: ESAPIX.Facade.API.PlanSetup
     return:
       type: System.Boolean
+    content.vb: Public Function CanRemovePlanSetup(planSetup As PlanSetup) As Boolean
   overload: ESAPIX.Facade.API.Course.CanRemovePlanSetup*
   modifiers.csharp:
   - public
@@ -633,16 +633,16 @@ items:
   source:
     id: RemovePlanSetup
     path: ''
-    startLine: 8389
+    startLine: 8485
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemovePlanSetup(PlanSetup planSetup)
-    content.vb: Public Sub RemovePlanSetup(planSetup As PlanSetup)
     parameters:
     - id: planSetup
       type: ESAPIX.Facade.API.PlanSetup
+    content.vb: Public Sub RemovePlanSetup(planSetup As PlanSetup)
   overload: ESAPIX.Facade.API.Course.RemovePlanSetup*
   modifiers.csharp:
   - public

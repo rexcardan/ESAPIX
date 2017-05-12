@@ -16,7 +16,7 @@ items:
   source:
     id: PlanSumExtensions
     path: ''
-    startLine: 3942
+    startLine: 4017
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -55,7 +55,7 @@ items:
   source:
     id: GetRelativeDVHCumulativeData
     path: ''
-    startLine: 3954
+    startLine: 4029
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -63,10 +63,6 @@ items:
   example: []
   syntax:
     content: public static DVHPoint[] GetRelativeDVHCumulativeData(this PlanSum ps, Structure s, VolumePresentation vPres, double binWidth)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetRelativeDVHCumulativeData(ps As PlanSum, s As  Structure, vPres As VolumePresentation, binWidth As Double) As DVHPoint()
     parameters:
     - id: ps
       type: PlanSum
@@ -83,6 +79,10 @@ items:
     return:
       type: DVHPoint[]
       description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetRelativeDVHCumulativeData(ps As PlanSum, s As  Structure, vPres As VolumePresentation, binWidth As Double) As DVHPoint()
   overload: ESAPIX.Extensions.PlanSumExtensions.GetRelativeDVHCumulativeData*
   modifiers.csharp:
   - public

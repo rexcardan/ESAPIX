@@ -26,7 +26,7 @@ items:
   source:
     id: DoseExtensions
     path: ''
-    startLine: 3065
+    startLine: 3114
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -65,7 +65,7 @@ items:
   source:
     id: GetDoseGy
     path: ''
-    startLine: 3072
+    startLine: 3121
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -73,10 +73,6 @@ items:
   example: []
   syntax:
     content: public static double GetDoseGy(this DoseValue dv)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseGy(dv As DoseValue) As Double
     parameters:
     - id: dv
       type: DoseValue
@@ -84,6 +80,10 @@ items:
     return:
       type: System.Double
       description: dose in units of gray
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseGy(dv As DoseValue) As Double
   overload: ESAPIX.Extensions.DoseExtensions.GetDoseGy*
   modifiers.csharp:
   - public
@@ -106,7 +106,7 @@ items:
   source:
     id: GetDoseGy
     path: ''
-    startLine: 3083
+    startLine: 3132
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -114,10 +114,6 @@ items:
   example: []
   syntax:
     content: public static double GetDoseGy(this DoseValue dv, double prescriptionDoseGy)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseGy(dv As DoseValue, prescriptionDoseGy As Double) As Double
     parameters:
     - id: dv
       type: DoseValue
@@ -128,6 +124,10 @@ items:
     return:
       type: System.Double
       description: the dose in gray
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseGy(dv As DoseValue, prescriptionDoseGy As Double) As Double
   overload: ESAPIX.Extensions.DoseExtensions.GetDoseGy*
   modifiers.csharp:
   - public
@@ -150,7 +150,7 @@ items:
   source:
     id: GetDoseCGy
     path: ''
-    startLine: 3097
+    startLine: 3146
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -158,10 +158,6 @@ items:
   example: []
   syntax:
     content: public static double GetDoseCGy(this DoseValue dv)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDoseCGy(dv As DoseValue) As Double
     parameters:
     - id: dv
       type: DoseValue
@@ -169,6 +165,10 @@ items:
     return:
       type: System.Double
       description: dose in units of centigray
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDoseCGy(dv As DoseValue) As Double
   overload: ESAPIX.Extensions.DoseExtensions.GetDoseCGy*
   modifiers.csharp:
   - public
@@ -191,7 +191,7 @@ items:
   source:
     id: GetPresentation
     path: ''
-    startLine: 3107
+    startLine: 3156
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -199,10 +199,6 @@ items:
   example: []
   syntax:
     content: public static DoseValuePresentation GetPresentation(this DoseValue dv)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetPresentation(dv As DoseValue) As DoseValuePresentation
     parameters:
     - id: dv
       type: DoseValue
@@ -210,6 +206,10 @@ items:
     return:
       type: DoseValuePresentation
       description: the dose value presentation corresponding to the units of the input dose
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPresentation(dv As DoseValue) As DoseValuePresentation
   overload: ESAPIX.Extensions.DoseExtensions.GetPresentation*
   modifiers.csharp:
   - public
@@ -232,7 +232,7 @@ items:
   source:
     id: GetDose
     path: ''
-    startLine: 3120
+    startLine: 3169
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -240,10 +240,6 @@ items:
   example: []
   syntax:
     content: public static double GetDose(this DoseValue dv, DoseValue.DoseUnit unit)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDose(dv As DoseValue, unit As DoseValue.DoseUnit) As Double
     parameters:
     - id: dv
       type: DoseValue
@@ -254,6 +250,10 @@ items:
     return:
       type: System.Double
       description: the dose in the desired units
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDose(dv As DoseValue, unit As DoseValue.DoseUnit) As Double
   overload: ESAPIX.Extensions.DoseExtensions.GetDose*
   modifiers.csharp:
   - public
@@ -276,7 +276,7 @@ items:
   source:
     id: LessThanOrEqualTo
     path: ''
-    startLine: 3139
+    startLine: 3188
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -284,10 +284,6 @@ items:
   example: []
   syntax:
     content: public static bool LessThanOrEqualTo(this DoseValue dv, DoseValue dv2)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function LessThanOrEqualTo(dv As DoseValue, dv2 As DoseValue) As Boolean
     parameters:
     - id: dv
       type: DoseValue
@@ -298,6 +294,10 @@ items:
     return:
       type: System.Boolean
       description: Returns true if value is less than or equal to input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function LessThanOrEqualTo(dv As DoseValue, dv2 As DoseValue) As Boolean
   overload: ESAPIX.Extensions.DoseExtensions.LessThanOrEqualTo*
   modifiers.csharp:
   - public
@@ -320,7 +320,7 @@ items:
   source:
     id: LessThan
     path: ''
-    startLine: 3150
+    startLine: 3199
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -328,10 +328,6 @@ items:
   example: []
   syntax:
     content: public static bool LessThan(this DoseValue dv, DoseValue dv2)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function LessThan(dv As DoseValue, dv2 As DoseValue) As Boolean
     parameters:
     - id: dv
       type: DoseValue
@@ -342,6 +338,10 @@ items:
     return:
       type: System.Boolean
       description: Returns true if value is less than input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function LessThan(dv As DoseValue, dv2 As DoseValue) As Boolean
   overload: ESAPIX.Extensions.DoseExtensions.LessThan*
   modifiers.csharp:
   - public
@@ -364,7 +364,7 @@ items:
   source:
     id: GreaterThan
     path: ''
-    startLine: 3161
+    startLine: 3210
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -372,10 +372,6 @@ items:
   example: []
   syntax:
     content: public static bool GreaterThan(this DoseValue dv, DoseValue dv2)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GreaterThan(dv As DoseValue, dv2 As DoseValue) As Boolean
     parameters:
     - id: dv
       type: DoseValue
@@ -386,6 +382,10 @@ items:
     return:
       type: System.Boolean
       description: Returns true if value is greater than input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GreaterThan(dv As DoseValue, dv2 As DoseValue) As Boolean
   overload: ESAPIX.Extensions.DoseExtensions.GreaterThan*
   modifiers.csharp:
   - public
@@ -408,7 +408,7 @@ items:
   source:
     id: GreaterThanOrEqualTo
     path: ''
-    startLine: 3172
+    startLine: 3221
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -416,10 +416,6 @@ items:
   example: []
   syntax:
     content: public static bool GreaterThanOrEqualTo(this DoseValue dv, DoseValue dv2)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GreaterThanOrEqualTo(dv As DoseValue, dv2 As DoseValue) As Boolean
     parameters:
     - id: dv
       type: DoseValue
@@ -430,6 +426,10 @@ items:
     return:
       type: System.Boolean
       description: Returns true if value is greater than or equal to input value
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GreaterThanOrEqualTo(dv As DoseValue, dv2 As DoseValue) As Boolean
   overload: ESAPIX.Extensions.DoseExtensions.GreaterThanOrEqualTo*
   modifiers.csharp:
   - public
@@ -452,16 +452,12 @@ items:
   source:
     id: Divide
     path: ''
-    startLine: 3198
+    startLine: 3247
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
     content: public static DoseValue Divide(this DoseValue numerator, DoseValue denominator)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function Divide(numerator As DoseValue, denominator As DoseValue) As DoseValue
     parameters:
     - id: numerator
       type: DoseValue
@@ -469,6 +465,10 @@ items:
       type: DoseValue
     return:
       type: DoseValue
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Divide(numerator As DoseValue, denominator As DoseValue) As DoseValue
   overload: ESAPIX.Extensions.DoseExtensions.Divide*
   modifiers.csharp:
   - public
@@ -491,16 +491,12 @@ items:
   source:
     id: Multiply
     path: ''
-    startLine: 3205
+    startLine: 3254
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
     content: public static DoseValue Multiply(this DoseValue val, DoseValue val2)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function Multiply(val As DoseValue, val2 As DoseValue) As DoseValue
     parameters:
     - id: val
       type: DoseValue
@@ -508,6 +504,10 @@ items:
       type: DoseValue
     return:
       type: DoseValue
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Multiply(val As DoseValue, val2 As DoseValue) As DoseValue
   overload: ESAPIX.Extensions.DoseExtensions.Multiply*
   modifiers.csharp:
   - public

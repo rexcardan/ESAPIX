@@ -23,7 +23,7 @@ items:
   source:
     id: PlanningItem
     path: ''
-    startLine: 12654
+    startLine: 12750
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -75,7 +75,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12656
+    startLine: 12752
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -101,16 +101,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 12661
+    startLine: 12757
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanningItem(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.PlanningItem.#ctor*
   modifiers.csharp:
   - public
@@ -130,16 +130,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 12666
+    startLine: 12762
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.PlanningItem.IsLive*
   modifiers.csharp:
   - public
@@ -161,16 +161,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 12671
+    startLine: 12767
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
-    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.PlanningItem.CreationDateTime*
   modifiers.csharp:
   - public
@@ -192,16 +192,16 @@ items:
   source:
     id: Dose
     path: ''
-    startLine: 12688
+    startLine: 12784
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanningItemDose Dose { get; set; }
-    content.vb: Public Property Dose As PlanningItemDose
     parameters: []
     return:
       type: ESAPIX.Facade.API.PlanningItemDose
+    content.vb: Public Property Dose As PlanningItemDose
   overload: ESAPIX.Facade.API.PlanningItem.Dose*
   modifiers.csharp:
   - public
@@ -223,16 +223,16 @@ items:
   source:
     id: DoseValuePresentation
     path: ''
-    startLine: 12707
+    startLine: 12803
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValuePresentation DoseValuePresentation { get; set; }
-    content.vb: Public Property DoseValuePresentation As DoseValuePresentation
     parameters: []
     return:
       type: DoseValuePresentation
+    content.vb: Public Property DoseValuePresentation As DoseValuePresentation
   overload: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
   modifiers.csharp:
   - public
@@ -254,16 +254,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 12727
+    startLine: 12823
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.PlanningItem.WriteXml*
   modifiers.csharp:
   - public
@@ -283,13 +283,12 @@ items:
   source:
     id: GetDVHCumulativeData
     path: ''
-    startLine: 12733
+    startLine: 12829
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DVHData GetDVHCumulativeData(Structure structure, DoseValuePresentation dosePresentation, VolumePresentation volumePresentation, double binWidth)
-    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As DoseValuePresentation, volumePresentation As VolumePresentation, binWidth As Double) As DVHData
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
@@ -301,6 +300,7 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.DVHData
+    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As DoseValuePresentation, volumePresentation As VolumePresentation, binWidth As Double) As DVHData
   overload: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
   modifiers.csharp:
   - public

@@ -16,7 +16,7 @@ items:
   source:
     id: MayoConstraintConverter
     path: ''
-    startLine: 1425
+    startLine: 2619
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH
@@ -56,13 +56,12 @@ items:
   source:
     id: ConvertToDVHConstraint
     path: ''
-    startLine: 1427
+    startLine: 2621
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH
   syntax:
     content: public static IConstraint ConvertToDVHConstraint(string structureName, PriorityType priority, MayoConstraint mc)
-    content.vb: Public Shared Function ConvertToDVHConstraint(structureName As String, priority As PriorityType, mc As MayoConstraint) As IConstraint
     parameters:
     - id: structureName
       type: System.String
@@ -72,6 +71,7 @@ items:
       type: MayoConstraint
     return:
       type: IConstraint
+    content.vb: Public Shared Function ConvertToDVHConstraint(structureName As String, priority As PriorityType, mc As MayoConstraint) As IConstraint
   overload: ESAPIX.DVH.MayoConstraintConverter.ConvertToDVHConstraint*
   modifiers.csharp:
   - public
@@ -392,6 +392,7 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: PriorityType
+  commentId: '!:PriorityType'
   isExternal: true
   name: PriorityType
   nameWithType: PriorityType

@@ -22,7 +22,7 @@ items:
   source:
     id: Compensator
     path: ''
-    startLine: 7474
+    startLine: 7570
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -71,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7476
+    startLine: 7572
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,16 +97,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7481
+    startLine: 7577
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Compensator(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Compensator.#ctor*
   modifiers.csharp:
   - public
@@ -126,16 +126,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 7486
+    startLine: 7582
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Compensator.IsLive*
   modifiers.csharp:
   - public
@@ -157,16 +157,16 @@ items:
   source:
     id: Material
     path: ''
-    startLine: 7491
+    startLine: 7587
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public AddOnMaterial Material { get; set; }
-    content.vb: Public Property Material As AddOnMaterial
     parameters: []
     return:
       type: ESAPIX.Facade.API.AddOnMaterial
+    content.vb: Public Property Material As AddOnMaterial
   overload: ESAPIX.Facade.API.Compensator.Material*
   modifiers.csharp:
   - public
@@ -188,16 +188,16 @@ items:
   source:
     id: Slot
     path: ''
-    startLine: 7512
+    startLine: 7608
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Slot Slot { get; set; }
-    content.vb: Public Property Slot As Slot
     parameters: []
     return:
       type: ESAPIX.Facade.API.Slot
+    content.vb: Public Property Slot As Slot
   overload: ESAPIX.Facade.API.Compensator.Slot*
   modifiers.csharp:
   - public
@@ -219,16 +219,16 @@ items:
   source:
     id: Tray
     path: ''
-    startLine: 7531
+    startLine: 7627
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Tray Tray { get; set; }
-    content.vb: Public Property Tray As Tray
     parameters: []
     return:
       type: ESAPIX.Facade.API.Tray
+    content.vb: Public Property Tray As Tray
   overload: ESAPIX.Facade.API.Compensator.Tray*
   modifiers.csharp:
   - public
@@ -250,16 +250,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 7550
+    startLine: 7646
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Compensator.WriteXml*
   modifiers.csharp:
   - public

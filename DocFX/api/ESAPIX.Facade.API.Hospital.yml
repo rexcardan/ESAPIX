@@ -21,7 +21,7 @@ items:
   source:
     id: Hospital
     path: ''
-    startLine: 10048
+    startLine: 10144
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -70,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10050
+    startLine: 10146
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,16 +96,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10055
+    startLine: 10151
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Hospital(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Hospital.#ctor*
   modifiers.csharp:
   - public
@@ -125,16 +125,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 10060
+    startLine: 10156
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Hospital.IsLive*
   modifiers.csharp:
   - public
@@ -156,16 +156,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 10065
+    startLine: 10161
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
-    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Hospital.CreationDateTime*
   modifiers.csharp:
   - public
@@ -187,16 +187,16 @@ items:
   source:
     id: Location
     path: ''
-    startLine: 10082
+    startLine: 10178
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Location { get; set; }
-    content.vb: Public Property Location As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Location As String
   overload: ESAPIX.Facade.API.Hospital.Location*
   modifiers.csharp:
   - public
@@ -218,16 +218,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 10097
+    startLine: 10193
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Hospital.WriteXml*
   modifiers.csharp:
   - public

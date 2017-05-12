@@ -19,7 +19,7 @@ items:
   source:
     id: Technique
     path: ''
-    startLine: 16081
+    startLine: 16177
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +68,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 16083
+    startLine: 16179
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,16 +94,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 16088
+    startLine: 16184
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Technique(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Technique.#ctor*
   modifiers.csharp:
   - public
@@ -123,16 +123,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 16093
+    startLine: 16189
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Technique.IsLive*
   modifiers.csharp:
   - public
@@ -154,16 +154,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 16098
+    startLine: 16194
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Technique.WriteXml*
   modifiers.csharp:
   - public

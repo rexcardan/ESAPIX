@@ -19,7 +19,7 @@ items:
   source:
     id: Applicator
     path: ''
-    startLine: 5011
+    startLine: 5107
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -70,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5013
+    startLine: 5109
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,16 +96,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5018
+    startLine: 5114
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Applicator(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Applicator.#ctor*
   modifiers.csharp:
   - public
@@ -125,16 +125,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 5023
+    startLine: 5119
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Applicator.IsLive*
   modifiers.csharp:
   - public
@@ -156,16 +156,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 5028
+    startLine: 5124
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Applicator.WriteXml*
   modifiers.csharp:
   - public

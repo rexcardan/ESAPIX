@@ -26,7 +26,7 @@ items:
   source:
     id: EstimatedDVH
     path: ''
-    startLine: 9011
+    startLine: 9107
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -75,7 +75,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9013
+    startLine: 9109
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -101,16 +101,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9018
+    startLine: 9114
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public EstimatedDVH(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.EstimatedDVH.#ctor*
   modifiers.csharp:
   - public
@@ -130,16 +130,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 9023
+    startLine: 9119
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.EstimatedDVH.IsLive*
   modifiers.csharp:
   - public
@@ -161,16 +161,16 @@ items:
   source:
     id: CurveData
     path: ''
-    startLine: 9028
+    startLine: 9124
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DVHPoint[] CurveData { get; set; }
-    content.vb: Public Property CurveData As DVHPoint()
     parameters: []
     return:
       type: DVHPoint[]
+    content.vb: Public Property CurveData As DVHPoint()
   overload: ESAPIX.Facade.API.EstimatedDVH.CurveData*
   modifiers.csharp:
   - public
@@ -192,16 +192,16 @@ items:
   source:
     id: PlanSetup
     path: ''
-    startLine: 9045
+    startLine: 9141
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSetup PlanSetup { get; set; }
-    content.vb: Public Property PlanSetup As PlanSetup
     parameters: []
     return:
       type: ESAPIX.Facade.API.PlanSetup
+    content.vb: Public Property PlanSetup As PlanSetup
   overload: ESAPIX.Facade.API.EstimatedDVH.PlanSetup*
   modifiers.csharp:
   - public
@@ -223,16 +223,16 @@ items:
   source:
     id: PlanSetupId
     path: ''
-    startLine: 9064
+    startLine: 9160
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PlanSetupId { get; set; }
-    content.vb: Public Property PlanSetupId As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property PlanSetupId As String
   overload: ESAPIX.Facade.API.EstimatedDVH.PlanSetupId*
   modifiers.csharp:
   - public
@@ -254,16 +254,16 @@ items:
   source:
     id: Structure
     path: ''
-    startLine: 9081
+    startLine: 9177
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Structure Structure { get; set; }
-    content.vb: 'Public Property Structure As '
     parameters: []
     return:
       type: ESAPIX.Facade.API.Structure
+    content.vb: 'Public Property Structure As '
   overload: ESAPIX.Facade.API.EstimatedDVH.Structure*
   modifiers.csharp:
   - public
@@ -285,16 +285,16 @@ items:
   source:
     id: StructureId
     path: ''
-    startLine: 9100
+    startLine: 9196
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string StructureId { get; set; }
-    content.vb: Public Property StructureId As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property StructureId As String
   overload: ESAPIX.Facade.API.EstimatedDVH.StructureId*
   modifiers.csharp:
   - public
@@ -316,16 +316,16 @@ items:
   source:
     id: TargetDoseLevel
     path: ''
-    startLine: 9117
+    startLine: 9213
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DoseValue TargetDoseLevel { get; set; }
-    content.vb: Public Property TargetDoseLevel As DoseValue
     parameters: []
     return:
       type: DoseValue
+    content.vb: Public Property TargetDoseLevel As DoseValue
   overload: ESAPIX.Facade.API.EstimatedDVH.TargetDoseLevel*
   modifiers.csharp:
   - public
@@ -347,16 +347,16 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 9134
+    startLine: 9230
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DVHEstimateType Type { get; set; }
-    content.vb: Public Property Type As DVHEstimateType
     parameters: []
     return:
       type: DVHEstimateType
+    content.vb: Public Property Type As DVHEstimateType
   overload: ESAPIX.Facade.API.EstimatedDVH.Type*
   modifiers.csharp:
   - public
@@ -378,16 +378,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9149
+    startLine: 9245
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.EstimatedDVH.WriteXml*
   modifiers.csharp:
   - public

@@ -19,7 +19,7 @@ items:
   source:
     id: AddOnMaterial
     path: ''
-    startLine: 4704
+    startLine: 4800
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -68,7 +68,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4706
+    startLine: 4802
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -94,16 +94,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4711
+    startLine: 4807
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public AddOnMaterial(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.AddOnMaterial.#ctor*
   modifiers.csharp:
   - public
@@ -123,16 +123,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 4716
+    startLine: 4812
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.AddOnMaterial.IsLive*
   modifiers.csharp:
   - public
@@ -154,16 +154,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 4721
+    startLine: 4817
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.AddOnMaterial.WriteXml*
   modifiers.csharp:
   - public

@@ -18,7 +18,7 @@ items:
   source:
     id: VMSBootstrapper
     path: ''
-    startLine: 16952
+    startLine: 17192
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
@@ -55,7 +55,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 16954
+    startLine: 17194
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
@@ -81,13 +81,12 @@ items:
   source:
     id: GenerateFacadeApp
     path: ''
-    startLine: 16959
+    startLine: 17199
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
   syntax:
     content: public Application GenerateFacadeApp(string username, string password)
-    content.vb: Public Function GenerateFacadeApp(username As String, password As String) As Application
     parameters:
     - id: username
       type: System.String
@@ -95,6 +94,7 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.Application
+    content.vb: Public Function GenerateFacadeApp(username As String, password As String) As Application
   overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeApp*
   modifiers.csharp:
   - public
@@ -114,13 +114,12 @@ items:
   source:
     id: GenerateFacadeScriptContext
     path: ''
-    startLine: 16964
+    startLine: 17204
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Bootstrapper
   syntax:
     content: public PluginContext GenerateFacadeScriptContext(VMS.TPS.Common.Model.API.ScriptContext sc, Window w)
-    content.vb: Public Function GenerateFacadeScriptContext(sc As VMS.TPS.Common.Model.API.ScriptContext, w As Window) As PluginContext
     parameters:
     - id: sc
       type: VMS.TPS.Common.Model.API.ScriptContext
@@ -128,6 +127,7 @@ items:
       type: Window
     return:
       type: PluginContext
+    content.vb: Public Function GenerateFacadeScriptContext(sc As VMS.TPS.Common.Model.API.ScriptContext, w As Window) As PluginContext
   overload: ESAPIX.Bootstrapper.VMSBootstrapper.GenerateFacadeScriptContext*
   modifiers.csharp:
   - public
@@ -482,7 +482,6 @@ references:
   nameWithType: Window
   fullName: Window
 - uid: PluginContext
-  commentId: '!:PluginContext'
   isExternal: true
   name: PluginContext
   nameWithType: PluginContext

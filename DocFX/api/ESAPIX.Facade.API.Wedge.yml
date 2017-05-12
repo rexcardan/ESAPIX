@@ -21,7 +21,7 @@ items:
   source:
     id: Wedge
     path: ''
-    startLine: 16200
+    startLine: 16296
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -72,7 +72,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 16202
+    startLine: 16298
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -98,16 +98,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 16207
+    startLine: 16303
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Wedge(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Wedge.#ctor*
   modifiers.csharp:
   - public
@@ -127,16 +127,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 16212
+    startLine: 16308
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Wedge.IsLive*
   modifiers.csharp:
   - public
@@ -158,16 +158,16 @@ items:
   source:
     id: Direction
     path: ''
-    startLine: 16217
+    startLine: 16313
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Direction { get; set; }
-    content.vb: Public Property Direction As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property Direction As Double
   overload: ESAPIX.Facade.API.Wedge.Direction*
   modifiers.csharp:
   - public
@@ -189,16 +189,16 @@ items:
   source:
     id: WedgeAngle
     path: ''
-    startLine: 16232
+    startLine: 16328
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double WedgeAngle { get; set; }
-    content.vb: Public Property WedgeAngle As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property WedgeAngle As Double
   overload: ESAPIX.Facade.API.Wedge.WedgeAngle*
   modifiers.csharp:
   - public
@@ -220,16 +220,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 16247
+    startLine: 16343
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Wedge.WriteXml*
   modifiers.csharp:
   - public

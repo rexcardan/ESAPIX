@@ -15,16 +15,16 @@ items:
   source:
     id: PlanSetupChangedHandler
     path: ''
-    startLine: 563
+    startLine: 622
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void PlanSetupChangedHandler(PlanSetup ps);
-    content.vb: Public Delegate Sub PlanSetupChangedHandler(ps As PlanSetup)
     parameters:
     - id: ps
       type: PlanSetup
+    content.vb: Public Delegate Sub PlanSetupChangedHandler(ps As PlanSetup)
   modifiers.csharp:
   - public
   - delegate

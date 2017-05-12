@@ -16,7 +16,7 @@ items:
   source:
     id: VVectorExtensions
     path: ''
-    startLine: 4231
+    startLine: 4306
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -55,16 +55,12 @@ items:
   source:
     id: DistanceTo
     path: ''
-    startLine: 4233
+    startLine: 4308
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
     content: public static double DistanceTo(this VVector vv, VVector v2)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function DistanceTo(vv As VVector, v2 As VVector) As Double
     parameters:
     - id: vv
       type: VVector
@@ -72,6 +68,10 @@ items:
       type: VVector
     return:
       type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DistanceTo(vv As VVector, v2 As VVector) As Double
   overload: ESAPIX.Extensions.VVectorExtensions.DistanceTo*
   modifiers.csharp:
   - public

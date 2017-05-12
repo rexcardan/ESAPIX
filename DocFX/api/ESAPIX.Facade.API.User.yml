@@ -20,7 +20,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 16150
+    startLine: 16246
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -69,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 16152
+    startLine: 16248
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,16 +95,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 16157
+    startLine: 16253
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public User(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.User.#ctor*
   modifiers.csharp:
   - public
@@ -124,16 +124,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 16162
+    startLine: 16258
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.User.IsLive*
   modifiers.csharp:
   - public
@@ -155,16 +155,16 @@ items:
   source:
     id: Language
     path: ''
-    startLine: 16167
+    startLine: 16263
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Language { get; set; }
-    content.vb: Public Property Language As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Language As String
   overload: ESAPIX.Facade.API.User.Language*
   modifiers.csharp:
   - public
@@ -186,16 +186,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 16182
+    startLine: 16278
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.User.WriteXml*
   modifiers.csharp:
   - public

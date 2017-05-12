@@ -20,7 +20,7 @@ items:
   source:
     id: StorageHelper
     path: ''
-    startLine: 1045
+    startLine: 1061
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -57,18 +57,18 @@ items:
   source:
     id: GetBasePath
     path: ''
-    startLine: 1052
+    startLine: 1068
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public static string GetBasePath(string storagePath = "")
-    content.vb: Public Shared Function GetBasePath(storagePath As String = "") As String
     parameters:
     - id: storagePath
       type: System.String
     return:
       type: System.String
+    content.vb: Public Shared Function GetBasePath(storagePath As String = "") As String
   overload: ESAPIX.AppKit.Data.StorageHelper.GetBasePath*
   modifiers.csharp:
   - public
@@ -90,16 +90,16 @@ items:
   source:
     id: CreateBasePathIfNotExists
     path: ''
-    startLine: 1059
+    startLine: 1075
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public static void CreateBasePathIfNotExists(string path)
-    content.vb: Public Shared Sub CreateBasePathIfNotExists(path As String)
     parameters:
     - id: path
       type: System.String
+    content.vb: Public Shared Sub CreateBasePathIfNotExists(path As String)
   overload: ESAPIX.AppKit.Data.StorageHelper.CreateBasePathIfNotExists*
   modifiers.csharp:
   - public
@@ -121,18 +121,18 @@ items:
   source:
     id: GetSettingsPath
     path: ''
-    startLine: 1066
+    startLine: 1082
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public static string GetSettingsPath(string settingsFileName = "")
-    content.vb: Public Shared Function GetSettingsPath(settingsFileName As String = "") As String
     parameters:
     - id: settingsFileName
       type: System.String
     return:
       type: System.String
+    content.vb: Public Shared Function GetSettingsPath(settingsFileName As String = "") As String
   overload: ESAPIX.AppKit.Data.StorageHelper.GetSettingsPath*
   modifiers.csharp:
   - public
@@ -154,7 +154,7 @@ items:
   source:
     id: CreateTempPathIfNotExists
     path: ''
-    startLine: 1074
+    startLine: 1090
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
@@ -182,15 +182,15 @@ items:
   source:
     id: GetTempStoragePath
     path: ''
-    startLine: 1081
+    startLine: 1097
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit.Data
   syntax:
     content: public static string GetTempStoragePath()
-    content.vb: Public Shared Function GetTempStoragePath As String
     return:
       type: System.String
+    content.vb: Public Shared Function GetTempStoragePath As String
   overload: ESAPIX.AppKit.Data.StorageHelper.GetTempStoragePath*
   modifiers.csharp:
   - public

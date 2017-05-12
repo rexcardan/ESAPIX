@@ -17,7 +17,7 @@ items:
   source:
     id: DiscriminatorConverter
     path: ''
-    startLine: 1370
+    startLine: 2512
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH
@@ -54,18 +54,18 @@ items:
   source:
     id: ReadDiscrimator
     path: ''
-    startLine: 1378
+    startLine: 2520
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH
   syntax:
     content: public static Discriminator ReadDiscrimator(string discString)
-    content.vb: Public Shared Function ReadDiscrimator(discString As String) As Discriminator
     parameters:
     - id: discString
       type: System.String
     return:
       type: Discriminator
+    content.vb: Public Shared Function ReadDiscrimator(discString As String) As Discriminator
   overload: ESAPIX.DVH.DiscriminatorConverter.ReadDiscrimator*
   modifiers.csharp:
   - public
@@ -87,7 +87,7 @@ items:
   source:
     id: WriteDiscrimator
     path: ''
-    startLine: 1397
+    startLine: 2539
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.DVH
@@ -95,7 +95,6 @@ items:
   example: []
   syntax:
     content: public static string WriteDiscrimator(Discriminator disc)
-    content.vb: Public Shared Function WriteDiscrimator(disc As Discriminator) As String
     parameters:
     - id: disc
       type: Discriminator
@@ -103,6 +102,7 @@ items:
     return:
       type: System.String
       description: a string representation of the discriminator
+    content.vb: Public Shared Function WriteDiscrimator(disc As Discriminator) As String
   overload: ESAPIX.DVH.DiscriminatorConverter.WriteDiscrimator*
   modifiers.csharp:
   - public

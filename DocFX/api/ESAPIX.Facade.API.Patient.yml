@@ -47,7 +47,7 @@ items:
   source:
     id: Patient
     path: ''
-    startLine: 11990
+    startLine: 12086
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,7 +96,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11992
+    startLine: 12088
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -122,16 +122,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11997
+    startLine: 12093
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Patient(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Patient.#ctor*
   modifiers.csharp:
   - public
@@ -151,16 +151,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 12002
+    startLine: 12098
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Patient.IsLive*
   modifiers.csharp:
   - public
@@ -182,16 +182,16 @@ items:
   source:
     id: Courses
     path: ''
-    startLine: 12007
+    startLine: 12103
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Course> Courses { get; set; }
-    content.vb: Public Property Courses As IEnumerable(Of Course)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Course}
+    content.vb: Public Property Courses As IEnumerable(Of Course)
   overload: ESAPIX.Facade.API.Patient.Courses*
   modifiers.csharp:
   - public
@@ -213,16 +213,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 12045
+    startLine: 12141
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
-    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Patient.CreationDateTime*
   modifiers.csharp:
   - public
@@ -244,16 +244,16 @@ items:
   source:
     id: DateOfBirth
     path: ''
-    startLine: 12062
+    startLine: 12158
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? DateOfBirth { get; set; }
-    content.vb: Public Property DateOfBirth As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property DateOfBirth As Date?
   overload: ESAPIX.Facade.API.Patient.DateOfBirth*
   modifiers.csharp:
   - public
@@ -275,16 +275,16 @@ items:
   source:
     id: FirstName
     path: ''
-    startLine: 12079
+    startLine: 12175
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string FirstName { get; set; }
-    content.vb: Public Property FirstName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property FirstName As String
   overload: ESAPIX.Facade.API.Patient.FirstName*
   modifiers.csharp:
   - public
@@ -306,16 +306,16 @@ items:
   source:
     id: HasModifiedData
     path: ''
-    startLine: 12094
+    startLine: 12190
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool HasModifiedData { get; set; }
-    content.vb: Public Property HasModifiedData As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property HasModifiedData As Boolean
   overload: ESAPIX.Facade.API.Patient.HasModifiedData*
   modifiers.csharp:
   - public
@@ -337,16 +337,16 @@ items:
   source:
     id: Hospital
     path: ''
-    startLine: 12111
+    startLine: 12207
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Hospital Hospital { get; set; }
-    content.vb: Public Property Hospital As Hospital
     parameters: []
     return:
       type: ESAPIX.Facade.API.Hospital
+    content.vb: Public Property Hospital As Hospital
   overload: ESAPIX.Facade.API.Patient.Hospital*
   modifiers.csharp:
   - public
@@ -368,16 +368,16 @@ items:
   source:
     id: Id2
     path: ''
-    startLine: 12130
+    startLine: 12226
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Id2 { get; set; }
-    content.vb: Public Property Id2 As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Id2 As String
   overload: ESAPIX.Facade.API.Patient.Id2*
   modifiers.csharp:
   - public
@@ -399,16 +399,16 @@ items:
   source:
     id: LastName
     path: ''
-    startLine: 12145
+    startLine: 12241
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string LastName { get; set; }
-    content.vb: Public Property LastName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property LastName As String
   overload: ESAPIX.Facade.API.Patient.LastName*
   modifiers.csharp:
   - public
@@ -430,16 +430,16 @@ items:
   source:
     id: MiddleName
     path: ''
-    startLine: 12160
+    startLine: 12256
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string MiddleName { get; set; }
-    content.vb: Public Property MiddleName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property MiddleName As String
   overload: ESAPIX.Facade.API.Patient.MiddleName*
   modifiers.csharp:
   - public
@@ -461,16 +461,16 @@ items:
   source:
     id: PrimaryOncologistId
     path: ''
-    startLine: 12175
+    startLine: 12271
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PrimaryOncologistId { get; set; }
-    content.vb: Public Property PrimaryOncologistId As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property PrimaryOncologistId As String
   overload: ESAPIX.Facade.API.Patient.PrimaryOncologistId*
   modifiers.csharp:
   - public
@@ -492,16 +492,16 @@ items:
   source:
     id: Registrations
     path: ''
-    startLine: 12192
+    startLine: 12288
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Registration> Registrations { get; set; }
-    content.vb: Public Property Registrations As IEnumerable(Of Registration)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Registration}
+    content.vb: Public Property Registrations As IEnumerable(Of Registration)
   overload: ESAPIX.Facade.API.Patient.Registrations*
   modifiers.csharp:
   - public
@@ -523,16 +523,16 @@ items:
   source:
     id: Sex
     path: ''
-    startLine: 12230
+    startLine: 12326
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Sex { get; set; }
-    content.vb: Public Property Sex As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Sex As String
   overload: ESAPIX.Facade.API.Patient.Sex*
   modifiers.csharp:
   - public
@@ -554,16 +554,16 @@ items:
   source:
     id: SSN
     path: ''
-    startLine: 12245
+    startLine: 12341
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SSN { get; set; }
-    content.vb: Public Property SSN As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property SSN As String
   overload: ESAPIX.Facade.API.Patient.SSN*
   modifiers.csharp:
   - public
@@ -585,16 +585,16 @@ items:
   source:
     id: StructureSets
     path: ''
-    startLine: 12260
+    startLine: 12356
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<StructureSet> StructureSets { get; set; }
-    content.vb: Public Property StructureSets As IEnumerable(Of StructureSet)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.StructureSet}
+    content.vb: Public Property StructureSets As IEnumerable(Of StructureSet)
   overload: ESAPIX.Facade.API.Patient.StructureSets*
   modifiers.csharp:
   - public
@@ -616,16 +616,16 @@ items:
   source:
     id: Studies
     path: ''
-    startLine: 12298
+    startLine: 12394
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Study> Studies { get; set; }
-    content.vb: Public Property Studies As IEnumerable(Of Study)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Study}
+    content.vb: Public Property Studies As IEnumerable(Of Study)
   overload: ESAPIX.Facade.API.Patient.Studies*
   modifiers.csharp:
   - public
@@ -647,16 +647,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 12336
+    startLine: 12432
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Patient.WriteXml*
   modifiers.csharp:
   - public
@@ -676,15 +676,15 @@ items:
   source:
     id: AddCourse
     path: ''
-    startLine: 12342
+    startLine: 12438
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Course AddCourse()
-    content.vb: Public Function AddCourse As Course
     return:
       type: ESAPIX.Facade.API.Course
+    content.vb: Public Function AddCourse As Course
   overload: ESAPIX.Facade.API.Patient.AddCourse*
   modifiers.csharp:
   - public
@@ -704,13 +704,12 @@ items:
   source:
     id: AddEmptyPhantom
     path: ''
-    startLine: 12349
+    startLine: 12445
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet AddEmptyPhantom(string imageId, PatientOrientation orientation, int xSizePixel, int ySizePixel, double widthMM, double heightMM, int nrOfPlanes, double planeSepMM)
-    content.vb: Public Function AddEmptyPhantom(imageId As String, orientation As PatientOrientation, xSizePixel As Integer, ySizePixel As Integer, widthMM As Double, heightMM As Double, nrOfPlanes As Integer, planeSepMM As Double) As StructureSet
     parameters:
     - id: imageId
       type: System.String
@@ -730,6 +729,7 @@ items:
       type: System.Double
     return:
       type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Function AddEmptyPhantom(imageId As String, orientation As PatientOrientation, xSizePixel As Integer, ySizePixel As Integer, widthMM As Double, heightMM As Double, nrOfPlanes As Integer, planeSepMM As Double) As StructureSet
   overload: ESAPIX.Facade.API.Patient.AddEmptyPhantom*
   modifiers.csharp:
   - public
@@ -749,7 +749,7 @@ items:
   source:
     id: BeginModifications
     path: ''
-    startLine: 12361
+    startLine: 12457
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -775,15 +775,15 @@ items:
   source:
     id: CanAddCourse
     path: ''
-    startLine: 12367
+    startLine: 12463
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanAddCourse()
-    content.vb: Public Function CanAddCourse As Boolean
     return:
       type: System.Boolean
+    content.vb: Public Function CanAddCourse As Boolean
   overload: ESAPIX.Facade.API.Patient.CanAddCourse*
   modifiers.csharp:
   - public
@@ -803,18 +803,18 @@ items:
   source:
     id: CanAddEmptyPhantom
     path: ''
-    startLine: 12374
+    startLine: 12470
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanAddEmptyPhantom(out string errorMessage)
-    content.vb: Public Function CanAddEmptyPhantom(ByRef errorMessage As String) As Boolean
     parameters:
     - id: errorMessage
       type: System.String
     return:
       type: System.Boolean
+    content.vb: Public Function CanAddEmptyPhantom(ByRef errorMessage As String) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanAddEmptyPhantom*
   nameWithType.vb: Patient.CanAddEmptyPhantom(ByRef String)
   modifiers.csharp:
@@ -837,13 +837,12 @@ items:
   source:
     id: CanCopyImageFromOtherPatient
     path: ''
-    startLine: 12386
+    startLine: 12482
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanCopyImageFromOtherPatient(Study targetStudy, string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId, out string errorMessage)
-    content.vb: Public Function CanCopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String, ByRef errorMessage As String) As Boolean
     parameters:
     - id: targetStudy
       type: ESAPIX.Facade.API.Study
@@ -857,6 +856,7 @@ items:
       type: System.String
     return:
       type: System.Boolean
+    content.vb: Public Function CanCopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String, ByRef errorMessage As String) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanCopyImageFromOtherPatient*
   nameWithType.vb: Patient.CanCopyImageFromOtherPatient(Study, String, String, String, ByRef String)
   modifiers.csharp:
@@ -879,15 +879,15 @@ items:
   source:
     id: CanModifyData
     path: ''
-    startLine: 12400
+    startLine: 12496
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanModifyData()
-    content.vb: Public Function CanModifyData As Boolean
     return:
       type: System.Boolean
+    content.vb: Public Function CanModifyData As Boolean
   overload: ESAPIX.Facade.API.Patient.CanModifyData*
   modifiers.csharp:
   - public
@@ -907,18 +907,18 @@ items:
   source:
     id: CanRemoveCourse
     path: ''
-    startLine: 12407
+    startLine: 12503
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanRemoveCourse(Course course)
-    content.vb: Public Function CanRemoveCourse(course As Course) As Boolean
     parameters:
     - id: course
       type: ESAPIX.Facade.API.Course
     return:
       type: System.Boolean
+    content.vb: Public Function CanRemoveCourse(course As Course) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanRemoveCourse*
   modifiers.csharp:
   - public
@@ -938,13 +938,12 @@ items:
   source:
     id: CanRemoveEmptyPhantom
     path: ''
-    startLine: 12417
+    startLine: 12513
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool CanRemoveEmptyPhantom(StructureSet structureset, out string errorMessage)
-    content.vb: Public Function CanRemoveEmptyPhantom(structureset As StructureSet, ByRef errorMessage As String) As Boolean
     parameters:
     - id: structureset
       type: ESAPIX.Facade.API.StructureSet
@@ -952,6 +951,7 @@ items:
       type: System.String
     return:
       type: System.Boolean
+    content.vb: Public Function CanRemoveEmptyPhantom(structureset As StructureSet, ByRef errorMessage As String) As Boolean
   overload: ESAPIX.Facade.API.Patient.CanRemoveEmptyPhantom*
   nameWithType.vb: Patient.CanRemoveEmptyPhantom(StructureSet, ByRef String)
   modifiers.csharp:
@@ -974,13 +974,12 @@ items:
   source:
     id: CopyImageFromOtherPatient
     path: ''
-    startLine: 12429
+    startLine: 12525
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet CopyImageFromOtherPatient(string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId)
-    content.vb: Public Function CopyImageFromOtherPatient(otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
     parameters:
     - id: otherPatientId
       type: System.String
@@ -990,6 +989,7 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Function CopyImageFromOtherPatient(otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
   overload: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient*
   modifiers.csharp:
   - public
@@ -1009,13 +1009,12 @@ items:
   source:
     id: CopyImageFromOtherPatient
     path: ''
-    startLine: 12441
+    startLine: 12537
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public StructureSet CopyImageFromOtherPatient(Study targetStudy, string otherPatientId, string otherPatientStudyId, string otherPatient3DImageId)
-    content.vb: Public Function CopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
     parameters:
     - id: targetStudy
       type: ESAPIX.Facade.API.Study
@@ -1027,6 +1026,7 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Function CopyImageFromOtherPatient(targetStudy As Study, otherPatientId As String, otherPatientStudyId As String, otherPatient3DImageId As String) As StructureSet
   overload: ESAPIX.Facade.API.Patient.CopyImageFromOtherPatient*
   modifiers.csharp:
   - public
@@ -1046,16 +1046,16 @@ items:
   source:
     id: RemoveCourse
     path: ''
-    startLine: 12453
+    startLine: 12549
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveCourse(Course course)
-    content.vb: Public Sub RemoveCourse(course As Course)
     parameters:
     - id: course
       type: ESAPIX.Facade.API.Course
+    content.vb: Public Sub RemoveCourse(course As Course)
   overload: ESAPIX.Facade.API.Patient.RemoveCourse*
   modifiers.csharp:
   - public
@@ -1075,16 +1075,16 @@ items:
   source:
     id: RemoveEmptyPhantom
     path: ''
-    startLine: 12459
+    startLine: 12555
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveEmptyPhantom(StructureSet structureset)
-    content.vb: Public Sub RemoveEmptyPhantom(structureset As StructureSet)
     parameters:
     - id: structureset
       type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Sub RemoveEmptyPhantom(structureset As StructureSet)
   overload: ESAPIX.Facade.API.Patient.RemoveEmptyPhantom*
   modifiers.csharp:
   - public

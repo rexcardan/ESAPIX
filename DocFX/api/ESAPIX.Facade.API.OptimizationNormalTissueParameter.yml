@@ -25,7 +25,7 @@ items:
   source:
     id: OptimizationNormalTissueParameter
     path: ''
-    startLine: 11041
+    startLine: 11137
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -69,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11043
+    startLine: 11139
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,16 +95,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11048
+    startLine: 11144
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationNormalTissueParameter(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
   modifiers.csharp:
   - public
@@ -124,16 +124,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 11053
+    startLine: 11149
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive*
   modifiers.csharp:
   - public
@@ -155,16 +155,16 @@ items:
   source:
     id: DistanceFromTargetBorderInMM
     path: ''
-    startLine: 11058
+    startLine: 11154
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double DistanceFromTargetBorderInMM { get; set; }
-    content.vb: Public Property DistanceFromTargetBorderInMM As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property DistanceFromTargetBorderInMM As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
   modifiers.csharp:
   - public
@@ -186,16 +186,16 @@ items:
   source:
     id: EndDosePercentage
     path: ''
-    startLine: 11078
+    startLine: 11174
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double EndDosePercentage { get; set; }
-    content.vb: Public Property EndDosePercentage As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property EndDosePercentage As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage*
   modifiers.csharp:
   - public
@@ -217,16 +217,16 @@ items:
   source:
     id: FallOff
     path: ''
-    startLine: 11095
+    startLine: 11191
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double FallOff { get; set; }
-    content.vb: Public Property FallOff As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property FallOff As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff*
   modifiers.csharp:
   - public
@@ -248,16 +248,16 @@ items:
   source:
     id: IsAutomatic
     path: ''
-    startLine: 11110
+    startLine: 11206
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsAutomatic { get; set; }
-    content.vb: Public Property IsAutomatic As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property IsAutomatic As Boolean
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic*
   modifiers.csharp:
   - public
@@ -279,16 +279,16 @@ items:
   source:
     id: Priority
     path: ''
-    startLine: 11125
+    startLine: 11221
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double Priority { get; set; }
-    content.vb: Public Property Priority As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property Priority As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
   modifiers.csharp:
   - public
@@ -310,16 +310,16 @@ items:
   source:
     id: StartDosePercentage
     path: ''
-    startLine: 11140
+    startLine: 11236
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double StartDosePercentage { get; set; }
-    content.vb: Public Property StartDosePercentage As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property StartDosePercentage As Double
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage*
   modifiers.csharp:
   - public
@@ -341,16 +341,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 11157
+    startLine: 11253
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml*
   modifiers.csharp:
   - public

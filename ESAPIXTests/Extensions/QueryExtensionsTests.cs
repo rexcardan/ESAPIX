@@ -1,21 +1,19 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ESAPIX.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ESAPIX.Facade.API;
+﻿#region
+
 using ESAPIX.Constraints.DVH.Query;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VMS.TPS.Common.Model.Types;
+
+#endregion
 
 namespace ESAPIX.Extensions.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class QueryExtensionsTests
     {
         #region DOSE PRESENTATION
-        [TestMethod()]
+
+        [TestMethod]
         public void GetDosePresentationTest1()
         {
             var query = MayoQuery.Read("D90%[cGy]");
@@ -24,7 +22,7 @@ namespace ESAPIX.Extensions.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetDosePresentationTest2()
         {
             var query = MayoQuery.Read("D90%[Gy]");
@@ -33,7 +31,7 @@ namespace ESAPIX.Extensions.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetDosePresentationTest3()
         {
             var query = MayoQuery.Read("V90Gy[cc]");
@@ -42,7 +40,7 @@ namespace ESAPIX.Extensions.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetDosePresentationTest4()
         {
             var query = MayoQuery.Read("V90%[cc]");
@@ -51,7 +49,7 @@ namespace ESAPIX.Extensions.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetDosePresentationTest5()
         {
             var query = MayoQuery.Read("Mean[cGy]");
@@ -59,10 +57,12 @@ namespace ESAPIX.Extensions.Tests
             var actual = query.GetDosePresentation();
             Assert.AreEqual(expected, actual);
         }
+
         #endregion
 
         #region DOSE UNIT
-        [TestMethod()]
+
+        [TestMethod]
         public void GetDoseUnitTest1()
         {
             var query = MayoQuery.Read("D90%[cGy]");
@@ -71,7 +71,7 @@ namespace ESAPIX.Extensions.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetDoseUnitTest2()
         {
             var query = MayoQuery.Read("D90%[Gy]");
@@ -80,7 +80,7 @@ namespace ESAPIX.Extensions.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetDoseUnitTest3()
         {
             var query = MayoQuery.Read("V90Gy[%]");
@@ -89,7 +89,7 @@ namespace ESAPIX.Extensions.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetDoseUnitTest4()
         {
             var query = MayoQuery.Read("Max[%]");
@@ -97,10 +97,12 @@ namespace ESAPIX.Extensions.Tests
             var actual = query.GetDoseUnit();
             Assert.AreEqual(expected, actual);
         }
+
         #endregion
 
         #region VOLUME PRESENTATION
-        [TestMethod()]
+
+        [TestMethod]
         public void GetVolumePresentationTest1()
         {
             var query = MayoQuery.Read("Max[%]");
@@ -108,7 +110,8 @@ namespace ESAPIX.Extensions.Tests
             var actual = query.GetVolumePresentation();
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod()]
+
+        [TestMethod]
         public void GetVolumePresentationTest2()
         {
             var query = MayoQuery.Read("D90%[cGy]");
@@ -116,7 +119,8 @@ namespace ESAPIX.Extensions.Tests
             var actual = query.GetVolumePresentation();
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod()]
+
+        [TestMethod]
         public void GetVolumePresentationTest3()
         {
             var query = MayoQuery.Read("V90%[cc]");
@@ -124,6 +128,7 @@ namespace ESAPIX.Extensions.Tests
             var actual = query.GetVolumePresentation();
             Assert.AreEqual(expected, actual);
         }
+
         #endregion
     }
 }

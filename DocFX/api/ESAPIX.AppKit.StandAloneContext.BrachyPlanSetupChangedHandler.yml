@@ -15,16 +15,16 @@ items:
   source:
     id: BrachyPlanSetupChangedHandler
     path: ''
-    startLine: 581
+    startLine: 640
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.AppKit
   syntax:
     content: public delegate void BrachyPlanSetupChangedHandler(BrachyPlanSetup ps);
-    content.vb: Public Delegate Sub BrachyPlanSetupChangedHandler(ps As BrachyPlanSetup)
     parameters:
     - id: ps
       type: BrachyPlanSetup
+    content.vb: Public Delegate Sub BrachyPlanSetupChangedHandler(ps As BrachyPlanSetup)
   modifiers.csharp:
   - public
   - delegate

@@ -20,7 +20,7 @@ items:
   source:
     id: Slot
     path: ''
-    startLine: 15231
+    startLine: 15327
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -69,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 15233
+    startLine: 15329
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,16 +95,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 15238
+    startLine: 15334
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Slot(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Slot.#ctor*
   modifiers.csharp:
   - public
@@ -124,16 +124,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 15243
+    startLine: 15339
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Slot.IsLive*
   modifiers.csharp:
   - public
@@ -155,16 +155,16 @@ items:
   source:
     id: Number
     path: ''
-    startLine: 15248
+    startLine: 15344
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int Number { get; set; }
-    content.vb: Public Property Number As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property Number As Integer
   overload: ESAPIX.Facade.API.Slot.Number*
   modifiers.csharp:
   - public
@@ -186,16 +186,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 15263
+    startLine: 15359
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Slot.WriteXml*
   modifiers.csharp:
   - public

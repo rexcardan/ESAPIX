@@ -25,7 +25,7 @@ items:
   source:
     id: Registration
     path: ''
-    startLine: 14258
+    startLine: 14354
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -74,7 +74,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14260
+    startLine: 14356
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -100,16 +100,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14265
+    startLine: 14361
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Registration(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Registration.#ctor*
   modifiers.csharp:
   - public
@@ -129,16 +129,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 14270
+    startLine: 14366
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Registration.IsLive*
   modifiers.csharp:
   - public
@@ -160,16 +160,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 14275
+    startLine: 14371
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
-    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Registration.CreationDateTime*
   modifiers.csharp:
   - public
@@ -191,16 +191,16 @@ items:
   source:
     id: RegisteredFOR
     path: ''
-    startLine: 14292
+    startLine: 14388
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string RegisteredFOR { get; set; }
-    content.vb: Public Property RegisteredFOR As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property RegisteredFOR As String
   overload: ESAPIX.Facade.API.Registration.RegisteredFOR*
   modifiers.csharp:
   - public
@@ -222,16 +222,16 @@ items:
   source:
     id: SourceFOR
     path: ''
-    startLine: 14309
+    startLine: 14405
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SourceFOR { get; set; }
-    content.vb: Public Property SourceFOR As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property SourceFOR As String
   overload: ESAPIX.Facade.API.Registration.SourceFOR*
   modifiers.csharp:
   - public
@@ -253,16 +253,16 @@ items:
   source:
     id: TransformationMatrix
     path: ''
-    startLine: 14324
+    startLine: 14420
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double[, ] TransformationMatrix { get; set; }
-    content.vb: Public Property TransformationMatrix As Double(,)
     parameters: []
     return:
       type: System.Double[,]
+    content.vb: Public Property TransformationMatrix As Double(,)
   overload: ESAPIX.Facade.API.Registration.TransformationMatrix*
   modifiers.csharp:
   - public
@@ -284,16 +284,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 14344
+    startLine: 14440
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Registration.WriteXml*
   modifiers.csharp:
   - public
@@ -313,18 +313,18 @@ items:
   source:
     id: InverseTransformPoint
     path: ''
-    startLine: 14350
+    startLine: 14446
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector InverseTransformPoint(VVector pt)
-    content.vb: Public Function InverseTransformPoint(pt As VVector) As VVector
     parameters:
     - id: pt
       type: VVector
     return:
       type: VVector
+    content.vb: Public Function InverseTransformPoint(pt As VVector) As VVector
   overload: ESAPIX.Facade.API.Registration.InverseTransformPoint*
   modifiers.csharp:
   - public
@@ -344,18 +344,18 @@ items:
   source:
     id: TransformPoint
     path: ''
-    startLine: 14357
+    startLine: 14453
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector TransformPoint(VVector pt)
-    content.vb: Public Function TransformPoint(pt As VVector) As VVector
     parameters:
     - id: pt
       type: VVector
     return:
       type: VVector
+    content.vb: Public Function TransformPoint(pt As VVector) As VVector
   overload: ESAPIX.Facade.API.Registration.TransformPoint*
   modifiers.csharp:
   - public

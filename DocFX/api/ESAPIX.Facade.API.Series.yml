@@ -28,7 +28,7 @@ items:
   source:
     id: Series
     path: ''
-    startLine: 15018
+    startLine: 15114
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -77,7 +77,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 15020
+    startLine: 15116
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -103,16 +103,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 15025
+    startLine: 15121
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Series(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Series.#ctor*
   modifiers.csharp:
   - public
@@ -132,16 +132,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 15030
+    startLine: 15126
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Series.IsLive*
   modifiers.csharp:
   - public
@@ -163,16 +163,16 @@ items:
   source:
     id: FOR
     path: ''
-    startLine: 15035
+    startLine: 15131
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string FOR { get; set; }
-    content.vb: Public Property FOR As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property FOR As String
   overload: ESAPIX.Facade.API.Series.FOR*
   modifiers.csharp:
   - public
@@ -194,16 +194,16 @@ items:
   source:
     id: Images
     path: ''
-    startLine: 15050
+    startLine: 15146
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Image> Images { get; set; }
-    content.vb: Public Property Images As IEnumerable(Of Image)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Image}
+    content.vb: Public Property Images As IEnumerable(Of Image)
   overload: ESAPIX.Facade.API.Series.Images*
   modifiers.csharp:
   - public
@@ -225,16 +225,16 @@ items:
   source:
     id: ImagingDeviceId
     path: ''
-    startLine: 15088
+    startLine: 15184
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceId { get; set; }
-    content.vb: Public Property ImagingDeviceId As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ImagingDeviceId As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceId*
   modifiers.csharp:
   - public
@@ -256,16 +256,16 @@ items:
   source:
     id: ImagingDeviceManufacturer
     path: ''
-    startLine: 15105
+    startLine: 15201
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceManufacturer { get; set; }
-    content.vb: Public Property ImagingDeviceManufacturer As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ImagingDeviceManufacturer As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
   modifiers.csharp:
   - public
@@ -287,16 +287,16 @@ items:
   source:
     id: ImagingDeviceModel
     path: ''
-    startLine: 15125
+    startLine: 15221
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceModel { get; set; }
-    content.vb: Public Property ImagingDeviceModel As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ImagingDeviceModel As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceModel*
   modifiers.csharp:
   - public
@@ -318,16 +318,16 @@ items:
   source:
     id: ImagingDeviceSerialNo
     path: ''
-    startLine: 15142
+    startLine: 15238
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ImagingDeviceSerialNo { get; set; }
-    content.vb: Public Property ImagingDeviceSerialNo As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ImagingDeviceSerialNo As String
   overload: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
   modifiers.csharp:
   - public
@@ -349,16 +349,16 @@ items:
   source:
     id: Modality
     path: ''
-    startLine: 15162
+    startLine: 15258
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public SeriesModality Modality { get; set; }
-    content.vb: Public Property Modality As SeriesModality
     parameters: []
     return:
       type: SeriesModality
+    content.vb: Public Property Modality As SeriesModality
   overload: ESAPIX.Facade.API.Series.Modality*
   modifiers.csharp:
   - public
@@ -380,16 +380,16 @@ items:
   source:
     id: Study
     path: ''
-    startLine: 15179
+    startLine: 15275
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Study Study { get; set; }
-    content.vb: Public Property Study As Study
     parameters: []
     return:
       type: ESAPIX.Facade.API.Study
+    content.vb: Public Property Study As Study
   overload: ESAPIX.Facade.API.Series.Study*
   modifiers.csharp:
   - public
@@ -411,16 +411,16 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 15198
+    startLine: 15294
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
-    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.Series.UID*
   modifiers.csharp:
   - public
@@ -442,16 +442,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 15213
+    startLine: 15309
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Series.WriteXml*
   modifiers.csharp:
   - public

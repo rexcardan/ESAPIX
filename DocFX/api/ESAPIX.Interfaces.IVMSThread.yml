@@ -18,7 +18,7 @@ items:
   source:
     id: IVMSThread
     path: ''
-    startLine: 16726
+    startLine: 16902
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -49,16 +49,16 @@ items:
   source:
     id: ThreadId
     path: ''
-    startLine: 16728
+    startLine: 16904
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: int ThreadId { get; }
-    content.vb: ReadOnly Property ThreadId As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: ReadOnly Property ThreadId As Integer
   overload: ESAPIX.Interfaces.IVMSThread.ThreadId*
   modifiers.csharp:
   - get
@@ -78,18 +78,18 @@ items:
   source:
     id: InvokeAsync
     path: ''
-    startLine: 16729
+    startLine: 16905
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: Task InvokeAsync(Action action)
-    content.vb: Function InvokeAsync(action As Action) As Task
     parameters:
     - id: action
       type: System.Action
     return:
       type: Task
+    content.vb: Function InvokeAsync(action As Action) As Task
   overload: ESAPIX.Interfaces.IVMSThread.InvokeAsync*
 - uid: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
   commentId: M:ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
@@ -105,16 +105,16 @@ items:
   source:
     id: Invoke
     path: ''
-    startLine: 16731
+    startLine: 16907
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
     content: void Invoke(Action action)
-    content.vb: Sub Invoke(action As Action)
     parameters:
     - id: action
       type: System.Action
+    content.vb: Sub Invoke(action As Action)
   overload: ESAPIX.Interfaces.IVMSThread.Invoke*
 references:
 - uid: ESAPIX.Interfaces

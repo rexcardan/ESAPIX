@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ESAPIX.Facade;
+using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.OfflineObjects
 {
@@ -15,7 +17,10 @@ namespace ESAPIX.OfflineObjects
         public static PlanSetup GetProstatePlanSetup()
         {
             var json = ASCIIEncoding.ASCII.GetString(Resources.plan);
-            return JsonConvert.DeserializeObject<PlanSetup>(json, FacadeSerializer.DeserializeSettings);
+            var ps = JsonConvert.DeserializeObject<PlanSetup>(json, FacadeSerializer.DeserializeSettings);
+            var client = ExpandoGetter.GetClient(ps);
+            return ps;
+            //ps.GetDoseAtVolume()
         }
     }
 }

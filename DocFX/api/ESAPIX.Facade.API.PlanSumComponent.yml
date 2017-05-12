@@ -22,7 +22,7 @@ items:
   source:
     id: PlanSumComponent
     path: ''
-    startLine: 13792
+    startLine: 13888
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -71,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13794
+    startLine: 13890
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,16 +97,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 13799
+    startLine: 13895
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSumComponent(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.PlanSumComponent.#ctor*
   modifiers.csharp:
   - public
@@ -126,16 +126,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 13804
+    startLine: 13900
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.PlanSumComponent.IsLive*
   modifiers.csharp:
   - public
@@ -157,16 +157,16 @@ items:
   source:
     id: PlanSetupId
     path: ''
-    startLine: 13809
+    startLine: 13905
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PlanSetupId { get; set; }
-    content.vb: Public Property PlanSetupId As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property PlanSetupId As String
   overload: ESAPIX.Facade.API.PlanSumComponent.PlanSetupId*
   modifiers.csharp:
   - public
@@ -188,16 +188,16 @@ items:
   source:
     id: PlanSumOperation
     path: ''
-    startLine: 13826
+    startLine: 13922
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PlanSumOperation PlanSumOperation { get; set; }
-    content.vb: Public Property PlanSumOperation As PlanSumOperation
     parameters: []
     return:
       type: PlanSumOperation
+    content.vb: Public Property PlanSumOperation As PlanSumOperation
   overload: ESAPIX.Facade.API.PlanSumComponent.PlanSumOperation*
   modifiers.csharp:
   - public
@@ -219,16 +219,16 @@ items:
   source:
     id: PlanWeight
     path: ''
-    startLine: 13846
+    startLine: 13942
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double PlanWeight { get; set; }
-    content.vb: Public Property PlanWeight As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property PlanWeight As Double
   overload: ESAPIX.Facade.API.PlanSumComponent.PlanWeight*
   modifiers.csharp:
   - public
@@ -250,16 +250,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 13861
+    startLine: 13957
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.PlanSumComponent.WriteXml*
   modifiers.csharp:
   - public

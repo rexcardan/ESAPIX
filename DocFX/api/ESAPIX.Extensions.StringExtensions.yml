@@ -16,7 +16,7 @@ items:
   source:
     id: StringExtensions
     path: ''
-    startLine: 4173
+    startLine: 4248
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -55,21 +55,21 @@ items:
   source:
     id: SplitOnWhiteSpace
     path: ''
-    startLine: 4175
+    startLine: 4250
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
     content: public static string[] SplitOnWhiteSpace(this string s)
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function SplitOnWhiteSpace(s As String) As String()
     parameters:
     - id: s
       type: System.String
     return:
       type: System.String[]
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SplitOnWhiteSpace(s As String) As String()
   overload: ESAPIX.Extensions.StringExtensions.SplitOnWhiteSpace*
   modifiers.csharp:
   - public

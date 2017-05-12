@@ -8,7 +8,7 @@ items:
   - ESAPIX.Facade.API.Application.#ctor
   - ESAPIX.Facade.API.Application.#ctor(System.Object)
   - ESAPIX.Facade.API.Application.ClosePatient
-  - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
   - ESAPIX.Facade.API.Application.CurrentUser
   - ESAPIX.Facade.API.Application.Dispose
   - ESAPIX.Facade.API.Application.IsLive
@@ -27,7 +27,7 @@ items:
   source:
     id: Application
     path: ''
-    startLine: 4877
+    startLine: 4973
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -70,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4879
+    startLine: 4975
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -96,16 +96,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4884
+    startLine: 4980
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Application(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Application.#ctor*
   modifiers.csharp:
   - public
@@ -125,16 +125,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 4889
+    startLine: 4985
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Application.IsLive*
   modifiers.csharp:
   - public
@@ -156,16 +156,16 @@ items:
   source:
     id: CurrentUser
     path: ''
-    startLine: 4894
+    startLine: 4990
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public User CurrentUser { get; set; }
-    content.vb: Public Property CurrentUser As User
     parameters: []
     return:
       type: ESAPIX.Facade.API.User
+    content.vb: Public Property CurrentUser As User
   overload: ESAPIX.Facade.API.Application.CurrentUser*
   modifiers.csharp:
   - public
@@ -187,16 +187,16 @@ items:
   source:
     id: PatientSummaries
     path: ''
-    startLine: 4913
+    startLine: 5009
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<PatientSummary> PatientSummaries { get; set; }
-    content.vb: Public Property PatientSummaries As IEnumerable(Of PatientSummary)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.PatientSummary}
+    content.vb: Public Property PatientSummaries As IEnumerable(Of PatientSummary)
   overload: ESAPIX.Facade.API.Application.PatientSummaries*
   modifiers.csharp:
   - public
@@ -204,34 +204,36 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
-  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
-  id: CreateApplication(System.String,System.String)
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
+  id: CreateApplication(System.String,System.String,System.Boolean)
   parent: ESAPIX.Facade.API.Application
   langs:
   - csharp
   - vb
-  name: CreateApplication(String, String)
-  nameWithType: Application.CreateApplication(String, String)
-  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String)
+  name: CreateApplication(String, String, Boolean)
+  nameWithType: Application.CreateApplication(String, String, Boolean)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String, System.Boolean)
   type: Method
   source:
     id: CreateApplication
     path: ''
-    startLine: 4951
+    startLine: 5047
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public static Application CreateApplication(string username, string password)
-    content.vb: Public Shared Function CreateApplication(username As String, password As String) As Application
+    content: public static Application CreateApplication(string username, string password, bool useCurrentThread = false)
     parameters:
     - id: username
       type: System.String
     - id: password
       type: System.String
+    - id: useCurrentThread
+      type: System.Boolean
     return:
       type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(username As String, password As String, useCurrentThread As Boolean = False) As Application
   overload: ESAPIX.Facade.API.Application.CreateApplication*
   modifiers.csharp:
   - public
@@ -253,18 +255,18 @@ items:
   source:
     id: OpenPatient
     path: ''
-    startLine: 4956
+    startLine: 5052
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Patient OpenPatient(PatientSummary patientSummary)
-    content.vb: Public Function OpenPatient(patientSummary As PatientSummary) As Patient
     parameters:
     - id: patientSummary
       type: ESAPIX.Facade.API.PatientSummary
     return:
       type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatient(patientSummary As PatientSummary) As Patient
   overload: ESAPIX.Facade.API.Application.OpenPatient*
   modifiers.csharp:
   - public
@@ -284,18 +286,18 @@ items:
   source:
     id: OpenPatientById
     path: ''
-    startLine: 4966
+    startLine: 5062
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Patient OpenPatientById(string id)
-    content.vb: Public Function OpenPatientById(id As String) As Patient
     parameters:
     - id: id
       type: System.String
     return:
       type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatientById(id As String) As Patient
   overload: ESAPIX.Facade.API.Application.OpenPatientById*
   modifiers.csharp:
   - public
@@ -315,7 +317,7 @@ items:
   source:
     id: ClosePatient
     path: ''
-    startLine: 4976
+    startLine: 5072
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -341,7 +343,7 @@ items:
   source:
     id: SaveModifications
     path: ''
-    startLine: 4982
+    startLine: 5078
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -367,7 +369,7 @@ items:
   source:
     id: Dispose
     path: ''
-    startLine: 4988
+    startLine: 5084
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -393,16 +395,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 4994
+    startLine: 5090
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Application.WriteXml*
   modifiers.csharp:
   - public

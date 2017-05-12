@@ -21,7 +21,7 @@ items:
   source:
     id: OptimizationParameter
     path: ''
-    startLine: 11259
+    startLine: 11355
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -66,7 +66,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11261
+    startLine: 11357
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -92,16 +92,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11266
+    startLine: 11362
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationParameter(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
   modifiers.csharp:
   - public
@@ -121,16 +121,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 11271
+    startLine: 11367
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationParameter.IsLive*
   modifiers.csharp:
   - public
@@ -152,16 +152,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 11276
+    startLine: 11372
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationParameter.WriteXml*
   modifiers.csharp:
   - public
@@ -181,18 +181,18 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 11282
+    startLine: 11378
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool Equals(object obj)
-    content.vb: Public Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
     return:
       type: System.Boolean
+    content.vb: Public Function Equals(obj As Object) As Boolean
   overload: ESAPIX.Facade.API.OptimizationParameter.Equals*
   modifiers.csharp:
   - public
@@ -212,15 +212,15 @@ items:
   source:
     id: GetHashCode
     path: ''
-    startLine: 11289
+    startLine: 11385
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int GetHashCode()
-    content.vb: Public Function GetHashCode As Integer
     return:
       type: System.Int32
+    content.vb: Public Function GetHashCode As Integer
   overload: ESAPIX.Facade.API.OptimizationParameter.GetHashCode*
   modifiers.csharp:
   - public

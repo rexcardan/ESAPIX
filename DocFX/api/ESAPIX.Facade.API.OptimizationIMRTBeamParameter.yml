@@ -25,7 +25,7 @@ items:
   source:
     id: OptimizationIMRTBeamParameter
     path: ''
-    startLine: 10846
+    startLine: 10942
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -69,7 +69,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10848
+    startLine: 10944
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,16 +95,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10853
+    startLine: 10949
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizationIMRTBeamParameter(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.#ctor*
   modifiers.csharp:
   - public
@@ -124,16 +124,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 10858
+    startLine: 10954
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.IsLive*
   modifiers.csharp:
   - public
@@ -155,16 +155,16 @@ items:
   source:
     id: Beam
     path: ''
-    startLine: 10863
+    startLine: 10959
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam Beam { get; set; }
-    content.vb: Public Property Beam As Beam
     parameters: []
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Property Beam As Beam
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Beam*
   modifiers.csharp:
   - public
@@ -186,16 +186,16 @@ items:
   source:
     id: BeamId
     path: ''
-    startLine: 10882
+    startLine: 10978
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string BeamId { get; set; }
-    content.vb: Public Property BeamId As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property BeamId As String
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.BeamId*
   modifiers.csharp:
   - public
@@ -217,16 +217,16 @@ items:
   source:
     id: Excluded
     path: ''
-    startLine: 10897
+    startLine: 10993
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool Excluded { get; set; }
-    content.vb: Public Property Excluded As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property Excluded As Boolean
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.Excluded*
   modifiers.csharp:
   - public
@@ -248,16 +248,16 @@ items:
   source:
     id: FixedJaws
     path: ''
-    startLine: 10912
+    startLine: 11008
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool FixedJaws { get; set; }
-    content.vb: Public Property FixedJaws As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property FixedJaws As Boolean
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.FixedJaws*
   modifiers.csharp:
   - public
@@ -279,16 +279,16 @@ items:
   source:
     id: SmoothX
     path: ''
-    startLine: 10927
+    startLine: 11023
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SmoothX { get; set; }
-    content.vb: Public Property SmoothX As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property SmoothX As Double
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.SmoothX*
   modifiers.csharp:
   - public
@@ -310,16 +310,16 @@ items:
   source:
     id: SmoothY
     path: ''
-    startLine: 10942
+    startLine: 11038
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double SmoothY { get; set; }
-    content.vb: Public Property SmoothY As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property SmoothY As Double
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.SmoothY*
   modifiers.csharp:
   - public
@@ -341,16 +341,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 10957
+    startLine: 11053
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.OptimizationIMRTBeamParameter.WriteXml*
   modifiers.csharp:
   - public

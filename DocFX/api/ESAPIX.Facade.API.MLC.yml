@@ -23,7 +23,7 @@ items:
   source:
     id: MLC
     path: ''
-    startLine: 10641
+    startLine: 10737
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -74,7 +74,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10643
+    startLine: 10739
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -100,16 +100,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10648
+    startLine: 10744
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public MLC(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.MLC.#ctor*
   modifiers.csharp:
   - public
@@ -129,16 +129,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 10653
+    startLine: 10749
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.MLC.IsLive*
   modifiers.csharp:
   - public
@@ -160,16 +160,16 @@ items:
   source:
     id: ManufacturerName
     path: ''
-    startLine: 10658
+    startLine: 10754
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ManufacturerName { get; set; }
-    content.vb: Public Property ManufacturerName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ManufacturerName As String
   overload: ESAPIX.Facade.API.MLC.ManufacturerName*
   modifiers.csharp:
   - public
@@ -191,16 +191,16 @@ items:
   source:
     id: MinDoseDynamicLeafGap
     path: ''
-    startLine: 10675
+    startLine: 10771
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double MinDoseDynamicLeafGap { get; set; }
-    content.vb: Public Property MinDoseDynamicLeafGap As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property MinDoseDynamicLeafGap As Double
   overload: ESAPIX.Facade.API.MLC.MinDoseDynamicLeafGap*
   modifiers.csharp:
   - public
@@ -222,16 +222,16 @@ items:
   source:
     id: Model
     path: ''
-    startLine: 10695
+    startLine: 10791
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Model { get; set; }
-    content.vb: Public Property Model As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Model As String
   overload: ESAPIX.Facade.API.MLC.Model*
   modifiers.csharp:
   - public
@@ -253,16 +253,16 @@ items:
   source:
     id: SerialNumber
     path: ''
-    startLine: 10710
+    startLine: 10806
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string SerialNumber { get; set; }
-    content.vb: Public Property SerialNumber As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property SerialNumber As String
   overload: ESAPIX.Facade.API.MLC.SerialNumber*
   modifiers.csharp:
   - public
@@ -284,16 +284,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 10727
+    startLine: 10823
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.MLC.WriteXml*
   modifiers.csharp:
   - public

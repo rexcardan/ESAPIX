@@ -46,7 +46,7 @@ items:
   source:
     id: Image
     path: ''
-    startLine: 10117
+    startLine: 10213
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -95,7 +95,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10119
+    startLine: 10215
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -121,16 +121,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10124
+    startLine: 10220
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Image(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.Image.#ctor*
   modifiers.csharp:
   - public
@@ -150,16 +150,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 10129
+    startLine: 10225
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.Image.IsLive*
   modifiers.csharp:
   - public
@@ -181,16 +181,16 @@ items:
   source:
     id: ContrastBolusAgentIngredientName
     path: ''
-    startLine: 10134
+    startLine: 10230
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ContrastBolusAgentIngredientName { get; set; }
-    content.vb: Public Property ContrastBolusAgentIngredientName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ContrastBolusAgentIngredientName As String
   overload: ESAPIX.Facade.API.Image.ContrastBolusAgentIngredientName*
   modifiers.csharp:
   - public
@@ -212,16 +212,16 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 10154
+    startLine: 10250
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public DateTime? CreationDateTime { get; set; }
-    content.vb: Public Property CreationDateTime As Date?
     parameters: []
     return:
       type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
   overload: ESAPIX.Facade.API.Image.CreationDateTime*
   modifiers.csharp:
   - public
@@ -243,16 +243,16 @@ items:
   source:
     id: DisplayUnit
     path: ''
-    startLine: 10171
+    startLine: 10267
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string DisplayUnit { get; set; }
-    content.vb: Public Property DisplayUnit As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property DisplayUnit As String
   overload: ESAPIX.Facade.API.Image.DisplayUnit*
   modifiers.csharp:
   - public
@@ -274,16 +274,16 @@ items:
   source:
     id: FOR
     path: ''
-    startLine: 10188
+    startLine: 10284
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string FOR { get; set; }
-    content.vb: Public Property FOR As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property FOR As String
   overload: ESAPIX.Facade.API.Image.FOR*
   modifiers.csharp:
   - public
@@ -305,16 +305,16 @@ items:
   source:
     id: HasUserOrigin
     path: ''
-    startLine: 10203
+    startLine: 10299
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool HasUserOrigin { get; set; }
-    content.vb: Public Property HasUserOrigin As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property HasUserOrigin As Boolean
   overload: ESAPIX.Facade.API.Image.HasUserOrigin*
   modifiers.csharp:
   - public
@@ -336,16 +336,16 @@ items:
   source:
     id: ImagingOrientation
     path: ''
-    startLine: 10220
+    startLine: 10316
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public PatientOrientation ImagingOrientation { get; set; }
-    content.vb: Public Property ImagingOrientation As PatientOrientation
     parameters: []
     return:
       type: PatientOrientation
+    content.vb: Public Property ImagingOrientation As PatientOrientation
   overload: ESAPIX.Facade.API.Image.ImagingOrientation*
   modifiers.csharp:
   - public
@@ -367,16 +367,16 @@ items:
   source:
     id: IsProcessed
     path: ''
-    startLine: 10240
+    startLine: 10336
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsProcessed { get; set; }
-    content.vb: Public Property IsProcessed As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public Property IsProcessed As Boolean
   overload: ESAPIX.Facade.API.Image.IsProcessed*
   modifiers.csharp:
   - public
@@ -398,16 +398,16 @@ items:
   source:
     id: Level
     path: ''
-    startLine: 10255
+    startLine: 10351
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int Level { get; set; }
-    content.vb: Public Property Level As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property Level As Integer
   overload: ESAPIX.Facade.API.Image.Level*
   modifiers.csharp:
   - public
@@ -429,16 +429,16 @@ items:
   source:
     id: Origin
     path: ''
-    startLine: 10270
+    startLine: 10366
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector Origin { get; set; }
-    content.vb: Public Property Origin As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property Origin As VVector
   overload: ESAPIX.Facade.API.Image.Origin*
   modifiers.csharp:
   - public
@@ -460,16 +460,16 @@ items:
   source:
     id: Series
     path: ''
-    startLine: 10285
+    startLine: 10381
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Series Series { get; set; }
-    content.vb: Public Property Series As Series
     parameters: []
     return:
       type: ESAPIX.Facade.API.Series
+    content.vb: Public Property Series As Series
   overload: ESAPIX.Facade.API.Image.Series*
   modifiers.csharp:
   - public
@@ -491,16 +491,16 @@ items:
   source:
     id: UserOrigin
     path: ''
-    startLine: 10304
+    startLine: 10400
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector UserOrigin { get; set; }
-    content.vb: Public Property UserOrigin As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property UserOrigin As VVector
   overload: ESAPIX.Facade.API.Image.UserOrigin*
   modifiers.csharp:
   - public
@@ -522,16 +522,16 @@ items:
   source:
     id: UserOriginComments
     path: ''
-    startLine: 10319
+    startLine: 10415
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UserOriginComments { get; set; }
-    content.vb: Public Property UserOriginComments As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property UserOriginComments As String
   overload: ESAPIX.Facade.API.Image.UserOriginComments*
   modifiers.csharp:
   - public
@@ -553,16 +553,16 @@ items:
   source:
     id: Window
     path: ''
-    startLine: 10336
+    startLine: 10432
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int Window { get; set; }
-    content.vb: Public Property Window As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property Window As Integer
   overload: ESAPIX.Facade.API.Image.Window*
   modifiers.csharp:
   - public
@@ -584,16 +584,16 @@ items:
   source:
     id: XDirection
     path: ''
-    startLine: 10351
+    startLine: 10447
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector XDirection { get; set; }
-    content.vb: Public Property XDirection As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property XDirection As VVector
   overload: ESAPIX.Facade.API.Image.XDirection*
   modifiers.csharp:
   - public
@@ -615,16 +615,16 @@ items:
   source:
     id: XRes
     path: ''
-    startLine: 10366
+    startLine: 10462
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double XRes { get; set; }
-    content.vb: Public Property XRes As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property XRes As Double
   overload: ESAPIX.Facade.API.Image.XRes*
   modifiers.csharp:
   - public
@@ -646,16 +646,16 @@ items:
   source:
     id: XSize
     path: ''
-    startLine: 10381
+    startLine: 10477
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int XSize { get; set; }
-    content.vb: Public Property XSize As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property XSize As Integer
   overload: ESAPIX.Facade.API.Image.XSize*
   modifiers.csharp:
   - public
@@ -677,16 +677,16 @@ items:
   source:
     id: YDirection
     path: ''
-    startLine: 10396
+    startLine: 10492
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector YDirection { get; set; }
-    content.vb: Public Property YDirection As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property YDirection As VVector
   overload: ESAPIX.Facade.API.Image.YDirection*
   modifiers.csharp:
   - public
@@ -708,16 +708,16 @@ items:
   source:
     id: YRes
     path: ''
-    startLine: 10411
+    startLine: 10507
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double YRes { get; set; }
-    content.vb: Public Property YRes As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property YRes As Double
   overload: ESAPIX.Facade.API.Image.YRes*
   modifiers.csharp:
   - public
@@ -739,16 +739,16 @@ items:
   source:
     id: YSize
     path: ''
-    startLine: 10426
+    startLine: 10522
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int YSize { get; set; }
-    content.vb: Public Property YSize As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property YSize As Integer
   overload: ESAPIX.Facade.API.Image.YSize*
   modifiers.csharp:
   - public
@@ -770,16 +770,16 @@ items:
   source:
     id: ZDirection
     path: ''
-    startLine: 10441
+    startLine: 10537
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector ZDirection { get; set; }
-    content.vb: Public Property ZDirection As VVector
     parameters: []
     return:
       type: VVector
+    content.vb: Public Property ZDirection As VVector
   overload: ESAPIX.Facade.API.Image.ZDirection*
   modifiers.csharp:
   - public
@@ -801,16 +801,16 @@ items:
   source:
     id: ZRes
     path: ''
-    startLine: 10456
+    startLine: 10552
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double ZRes { get; set; }
-    content.vb: Public Property ZRes As Double
     parameters: []
     return:
       type: System.Double
+    content.vb: Public Property ZRes As Double
   overload: ESAPIX.Facade.API.Image.ZRes*
   modifiers.csharp:
   - public
@@ -832,16 +832,16 @@ items:
   source:
     id: ZSize
     path: ''
-    startLine: 10471
+    startLine: 10567
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public int ZSize { get; set; }
-    content.vb: Public Property ZSize As Integer
     parameters: []
     return:
       type: System.Int32
+    content.vb: Public Property ZSize As Integer
   overload: ESAPIX.Facade.API.Image.ZSize*
   modifiers.csharp:
   - public
@@ -863,16 +863,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 10486
+    startLine: 10582
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.Image.WriteXml*
   modifiers.csharp:
   - public
@@ -892,13 +892,12 @@ items:
   source:
     id: DicomToUser
     path: ''
-    startLine: 10492
+    startLine: 10588
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector DicomToUser(VVector dicom, PlanSetup planSetup)
-    content.vb: Public Function DicomToUser(dicom As VVector, planSetup As PlanSetup) As VVector
     parameters:
     - id: dicom
       type: VVector
@@ -906,6 +905,7 @@ items:
       type: ESAPIX.Facade.API.PlanSetup
     return:
       type: VVector
+    content.vb: Public Function DicomToUser(dicom As VVector, planSetup As PlanSetup) As VVector
   overload: ESAPIX.Facade.API.Image.DicomToUser*
   modifiers.csharp:
   - public
@@ -925,13 +925,12 @@ items:
   source:
     id: GetImageProfile
     path: ''
-    startLine: 10502
+    startLine: 10598
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ImageProfile GetImageProfile(VVector start, VVector stop, double[] preallocatedBuffer)
-    content.vb: Public Function GetImageProfile(start As VVector, stop As VVector, preallocatedBuffer As Double()) As ImageProfile
     parameters:
     - id: start
       type: VVector
@@ -941,6 +940,7 @@ items:
       type: System.Double[]
     return:
       type: ImageProfile
+    content.vb: Public Function GetImageProfile(start As VVector, stop As VVector, preallocatedBuffer As Double()) As ImageProfile
   overload: ESAPIX.Facade.API.Image.GetImageProfile*
   nameWithType.vb: Image.GetImageProfile(VVector, VVector, Double())
   modifiers.csharp:
@@ -963,18 +963,18 @@ items:
   source:
     id: GetVoxels
     path: ''
-    startLine: 10512
+    startLine: 10608
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void GetVoxels(int planeIndex, int[, ] preallocatedBuffer)
-    content.vb: Public Sub GetVoxels(planeIndex As Integer, preallocatedBuffer As Integer(,))
     parameters:
     - id: planeIndex
       type: System.Int32
     - id: preallocatedBuffer
       type: System.Int32[,]
+    content.vb: Public Sub GetVoxels(planeIndex As Integer, preallocatedBuffer As Integer(,))
   overload: ESAPIX.Facade.API.Image.GetVoxels*
   nameWithType.vb: Image.GetVoxels(Int32, Int32(,))
   modifiers.csharp:
@@ -997,13 +997,12 @@ items:
   source:
     id: UserToDicom
     path: ''
-    startLine: 10518
+    startLine: 10614
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public VVector UserToDicom(VVector user, PlanSetup planSetup)
-    content.vb: Public Function UserToDicom(user As VVector, planSetup As PlanSetup) As VVector
     parameters:
     - id: user
       type: VVector
@@ -1011,6 +1010,7 @@ items:
       type: ESAPIX.Facade.API.PlanSetup
     return:
       type: VVector
+    content.vb: Public Function UserToDicom(user As VVector, planSetup As PlanSetup) As VVector
   overload: ESAPIX.Facade.API.Image.UserToDicom*
   modifiers.csharp:
   - public
@@ -1030,18 +1030,18 @@ items:
   source:
     id: VoxelToDisplayValue
     path: ''
-    startLine: 10528
+    startLine: 10624
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public double VoxelToDisplayValue(int voxelValue)
-    content.vb: Public Function VoxelToDisplayValue(voxelValue As Integer) As Double
     parameters:
     - id: voxelValue
       type: System.Int32
     return:
       type: System.Double
+    content.vb: Public Function VoxelToDisplayValue(voxelValue As Integer) As Double
   overload: ESAPIX.Facade.API.Image.VoxelToDisplayValue*
   modifiers.csharp:
   - public

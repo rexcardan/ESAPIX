@@ -47,7 +47,7 @@ items:
   source:
     id: ExternalPlanSetup
     path: ''
-    startLine: 9421
+    startLine: 9517
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -146,7 +146,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9423
+    startLine: 9519
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -172,16 +172,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9428
+    startLine: 9524
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public ExternalPlanSetup(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.ExternalPlanSetup.#ctor*
   modifiers.csharp:
   - public
@@ -201,16 +201,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 9433
+    startLine: 9529
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.ExternalPlanSetup.IsLive*
   modifiers.csharp:
   - public
@@ -232,16 +232,16 @@ items:
   source:
     id: DoseAsEvaluationDose
     path: ''
-    startLine: 9438
+    startLine: 9534
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public EvaluationDose DoseAsEvaluationDose { get; set; }
-    content.vb: Public Property DoseAsEvaluationDose As EvaluationDose
     parameters: []
     return:
       type: ESAPIX.Facade.API.EvaluationDose
+    content.vb: Public Property DoseAsEvaluationDose As EvaluationDose
   overload: ESAPIX.Facade.API.ExternalPlanSetup.DoseAsEvaluationDose*
   modifiers.csharp:
   - public
@@ -263,18 +263,18 @@ items:
   source:
     id: CalculateDoseWithPresetValues
     path: ''
-    startLine: 9459
+    startLine: 9555
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateDoseWithPresetValues(List<KeyValuePair<string, MetersetValue>> presetValues)
-    content.vb: Public Function CalculateDoseWithPresetValues(presetValues As List(Of KeyValuePair(Of String, MetersetValue))) As CalculationResult
     parameters:
     - id: presetValues
       type: List{KeyValuePair{System.String,MetersetValue}}
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateDoseWithPresetValues(presetValues As List(Of KeyValuePair(Of String, MetersetValue))) As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDoseWithPresetValues*
   nameWithType.vb: ExternalPlanSetup.CalculateDoseWithPresetValues(List(Of KeyValuePair(Of String, MetersetValue)))
   modifiers.csharp:
@@ -297,15 +297,15 @@ items:
   source:
     id: CalculateDose
     path: ''
-    startLine: 9469
+    startLine: 9565
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateDose()
-    content.vb: Public Function CalculateDose As CalculationResult
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateDose As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDose*
   modifiers.csharp:
   - public
@@ -325,15 +325,15 @@ items:
   source:
     id: CalculateLeafMotionsAndDose
     path: ''
-    startLine: 9479
+    startLine: 9575
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateLeafMotionsAndDose()
-    content.vb: Public Function CalculateLeafMotionsAndDose As CalculationResult
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateLeafMotionsAndDose As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotionsAndDose*
   modifiers.csharp:
   - public
@@ -353,15 +353,15 @@ items:
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 9489
+    startLine: 9585
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateLeafMotions()
-    content.vb: Public Function CalculateLeafMotions As CalculationResult
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateLeafMotions As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions*
   modifiers.csharp:
   - public
@@ -381,18 +381,18 @@ items:
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 9499
+    startLine: 9595
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateLeafMotions(LMCVOptions options)
-    content.vb: Public Function CalculateLeafMotions(options As LMCVOptions) As CalculationResult
     parameters:
     - id: options
       type: LMCVOptions
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateLeafMotions(options As LMCVOptions) As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions*
   modifiers.csharp:
   - public
@@ -412,18 +412,18 @@ items:
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 9509
+    startLine: 9605
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateLeafMotions(SmartLMCOptions options)
-    content.vb: Public Function CalculateLeafMotions(options As SmartLMCOptions) As CalculationResult
     parameters:
     - id: options
       type: SmartLMCOptions
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateLeafMotions(options As SmartLMCOptions) As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions*
   modifiers.csharp:
   - public
@@ -443,18 +443,18 @@ items:
   source:
     id: CalculateLeafMotions
     path: ''
-    startLine: 9519
+    startLine: 9615
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateLeafMotions(LMCMSSOptions options)
-    content.vb: Public Function CalculateLeafMotions(options As LMCMSSOptions) As CalculationResult
     parameters:
     - id: options
       type: LMCMSSOptions
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateLeafMotions(options As LMCMSSOptions) As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateLeafMotions*
   modifiers.csharp:
   - public
@@ -474,18 +474,18 @@ items:
   source:
     id: GetModelsForCalculationType
     path: ''
-    startLine: 9529
+    startLine: 9625
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<string> GetModelsForCalculationType(CalculationType calculationType)
-    content.vb: Public Function GetModelsForCalculationType(calculationType As CalculationType) As IEnumerable(Of String)
     parameters:
     - id: calculationType
       type: CalculationType
     return:
       type: IEnumerable{System.String}
+    content.vb: Public Function GetModelsForCalculationType(calculationType As CalculationType) As IEnumerable(Of String)
   overload: ESAPIX.Facade.API.ExternalPlanSetup.GetModelsForCalculationType*
   modifiers.csharp:
   - public
@@ -505,18 +505,18 @@ items:
   source:
     id: Optimize
     path: ''
-    startLine: 9539
+    startLine: 9635
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult Optimize(int maxIterations)
-    content.vb: Public Function Optimize(maxIterations As Integer) As OptimizerResult
     parameters:
     - id: maxIterations
       type: System.Int32
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function Optimize(maxIterations As Integer) As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.Optimize*
   modifiers.csharp:
   - public
@@ -536,13 +536,12 @@ items:
   source:
     id: Optimize
     path: ''
-    startLine: 9549
+    startLine: 9645
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption)
-    content.vb: Public Function Optimize(maxIterations As Integer, optimizationOption As OptimizationOption) As OptimizerResult
     parameters:
     - id: maxIterations
       type: System.Int32
@@ -550,6 +549,7 @@ items:
       type: OptimizationOption
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function Optimize(maxIterations As Integer, optimizationOption As OptimizationOption) As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.Optimize*
   modifiers.csharp:
   - public
@@ -569,13 +569,12 @@ items:
   source:
     id: Optimize
     path: ''
-    startLine: 9559
+    startLine: 9655
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption, string mlcId)
-    content.vb: Public Function Optimize(maxIterations As Integer, optimizationOption As OptimizationOption, mlcId As String) As OptimizerResult
     parameters:
     - id: maxIterations
       type: System.Int32
@@ -585,6 +584,7 @@ items:
       type: System.String
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function Optimize(maxIterations As Integer, optimizationOption As OptimizationOption, mlcId As String) As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.Optimize*
   modifiers.csharp:
   - public
@@ -604,15 +604,15 @@ items:
   source:
     id: Optimize
     path: ''
-    startLine: 9569
+    startLine: 9665
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult Optimize()
-    content.vb: Public Function Optimize As OptimizerResult
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function Optimize As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.Optimize*
   modifiers.csharp:
   - public
@@ -632,18 +632,18 @@ items:
   source:
     id: Optimize
     path: ''
-    startLine: 9579
+    startLine: 9675
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult Optimize(OptimizationOptionsIMRT options)
-    content.vb: Public Function Optimize(options As OptimizationOptionsIMRT) As OptimizerResult
     parameters:
     - id: options
       type: OptimizationOptionsIMRT
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function Optimize(options As OptimizationOptionsIMRT) As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.Optimize*
   modifiers.csharp:
   - public
@@ -663,18 +663,18 @@ items:
   source:
     id: OptimizeVMAT
     path: ''
-    startLine: 9589
+    startLine: 9685
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult OptimizeVMAT(string mlcId)
-    content.vb: Public Function OptimizeVMAT(mlcId As String) As OptimizerResult
     parameters:
     - id: mlcId
       type: System.String
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function OptimizeVMAT(mlcId As String) As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT*
   modifiers.csharp:
   - public
@@ -694,15 +694,15 @@ items:
   source:
     id: OptimizeVMAT
     path: ''
-    startLine: 9599
+    startLine: 9695
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult OptimizeVMAT()
-    content.vb: Public Function OptimizeVMAT As OptimizerResult
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function OptimizeVMAT As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT*
   modifiers.csharp:
   - public
@@ -722,18 +722,18 @@ items:
   source:
     id: OptimizeVMAT
     path: ''
-    startLine: 9609
+    startLine: 9705
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public OptimizerResult OptimizeVMAT(OptimizationOptionsVMAT options)
-    content.vb: Public Function OptimizeVMAT(options As OptimizationOptionsVMAT) As OptimizerResult
     parameters:
     - id: options
       type: OptimizationOptionsVMAT
     return:
       type: ESAPIX.Facade.API.OptimizerResult
+    content.vb: Public Function OptimizeVMAT(options As OptimizationOptionsVMAT) As OptimizerResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.OptimizeVMAT*
   modifiers.csharp:
   - public
@@ -753,13 +753,12 @@ items:
   source:
     id: CalculateDVHEstimates
     path: ''
-    startLine: 9619
+    startLine: 9715
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public CalculationResult CalculateDVHEstimates(string modelId, Dictionary<string, DoseValue> targetDoseLevels, Dictionary<string, string> structureMatches)
-    content.vb: Public Function CalculateDVHEstimates(modelId As String, targetDoseLevels As Dictionary(Of String, DoseValue), structureMatches As Dictionary(Of String, String)) As CalculationResult
     parameters:
     - id: modelId
       type: System.String
@@ -769,6 +768,7 @@ items:
       type: Dictionary{System.String,System.String}
     return:
       type: ESAPIX.Facade.API.CalculationResult
+    content.vb: Public Function CalculateDVHEstimates(modelId As String, targetDoseLevels As Dictionary(Of String, DoseValue), structureMatches As Dictionary(Of String, String)) As CalculationResult
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CalculateDVHEstimates*
   nameWithType.vb: ExternalPlanSetup.CalculateDVHEstimates(String, Dictionary(Of String, DoseValue), Dictionary(Of String, String))
   modifiers.csharp:
@@ -791,16 +791,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 9631
+    startLine: 9727
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.ExternalPlanSetup.WriteXml*
   modifiers.csharp:
   - public
@@ -820,13 +820,12 @@ items:
   source:
     id: AddArcBeam
     path: ''
-    startLine: 9637
+    startLine: 9733
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddArcBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddArcBeam(machineParameters As ExternalBeamMachineParameters, jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -846,6 +845,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddArcBeam(machineParameters As ExternalBeamMachineParameters, jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddArcBeam*
   nameWithType.vb: ExternalPlanSetup.AddArcBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
   modifiers.csharp:
@@ -868,13 +868,12 @@ items:
   source:
     id: AddConformalArcBeam
     path: ''
-    startLine: 9650
+    startLine: 9746
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddConformalArcBeam(ExternalBeamMachineParameters machineParameters, double collimatorAngle, int controlPointCount, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddConformalArcBeam(machineParameters As ExternalBeamMachineParameters, collimatorAngle As Double, controlPointCount As Integer, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -894,6 +893,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddConformalArcBeam(machineParameters As ExternalBeamMachineParameters, collimatorAngle As Double, controlPointCount As Integer, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddConformalArcBeam*
   modifiers.csharp:
   - public
@@ -913,13 +913,12 @@ items:
   source:
     id: AddMLCArcBeam
     path: ''
-    startLine: 9663
+    startLine: 9759
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddMLCArcBeam(ExternalBeamMachineParameters machineParameters, float[, ] leafPositions, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddMLCArcBeam(machineParameters As ExternalBeamMachineParameters, leafPositions As Single(,), jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -941,6 +940,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddMLCArcBeam(machineParameters As ExternalBeamMachineParameters, leafPositions As Single(,), jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCArcBeam*
   nameWithType.vb: ExternalPlanSetup.AddMLCArcBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
   modifiers.csharp:
@@ -963,13 +963,12 @@ items:
   source:
     id: AddMLCBeam
     path: ''
-    startLine: 9676
+    startLine: 9772
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddMLCBeam(ExternalBeamMachineParameters machineParameters, float[, ] leafPositions, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddMLCBeam(machineParameters As ExternalBeamMachineParameters, leafPositions As Single(,), jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -987,6 +986,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddMLCBeam(machineParameters As ExternalBeamMachineParameters, leafPositions As Single(,), jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddMLCBeam*
   nameWithType.vb: ExternalPlanSetup.AddMLCBeam(ExternalBeamMachineParameters, Single(,), VRect(Of Double), Double, Double, Double, VVector)
   modifiers.csharp:
@@ -1009,13 +1009,12 @@ items:
   source:
     id: AddMultipleStaticSegmentBeam
     path: ''
-    startLine: 9689
+    startLine: 9785
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddMultipleStaticSegmentBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -1031,6 +1030,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddMultipleStaticSegmentBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddMultipleStaticSegmentBeam*
   nameWithType.vb: ExternalPlanSetup.AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
   modifiers.csharp:
@@ -1053,13 +1053,12 @@ items:
   source:
     id: AddSlidingWindowBeam
     path: ''
-    startLine: 9702
+    startLine: 9798
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddSlidingWindowBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddSlidingWindowBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -1075,6 +1074,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddSlidingWindowBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddSlidingWindowBeam*
   nameWithType.vb: ExternalPlanSetup.AddSlidingWindowBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, VVector)
   modifiers.csharp:
@@ -1097,13 +1097,12 @@ items:
   source:
     id: AddStaticBeam
     path: ''
-    startLine: 9715
+    startLine: 9811
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddStaticBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddStaticBeam(machineParameters As ExternalBeamMachineParameters, jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -1119,6 +1118,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddStaticBeam(machineParameters As ExternalBeamMachineParameters, jawPositions As VRect(Of Double), collimatorAngle As Double, gantryAngle As Double, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddStaticBeam*
   nameWithType.vb: ExternalPlanSetup.AddStaticBeam(ExternalBeamMachineParameters, VRect(Of Double), Double, Double, Double, VVector)
   modifiers.csharp:
@@ -1141,13 +1141,12 @@ items:
   source:
     id: AddVMATBeam
     path: ''
-    startLine: 9727
+    startLine: 9823
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public Beam AddVMATBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
-    content.vb: Public Function AddVMATBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
     parameters:
     - id: machineParameters
       type: ExternalBeamMachineParameters
@@ -1167,6 +1166,7 @@ items:
       type: VVector
     return:
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Function AddVMATBeam(machineParameters As ExternalBeamMachineParameters, metersetWeights As IEnumerable(Of Double), collimatorAngle As Double, gantryAngle As Double, gantryStop As Double, gantryDirection As GantryDirection, patientSupportAngle As Double, isocenter As VVector) As Beam
   overload: ESAPIX.Facade.API.ExternalPlanSetup.AddVMATBeam*
   nameWithType.vb: ExternalPlanSetup.AddVMATBeam(ExternalBeamMachineParameters, IEnumerable(Of Double), Double, Double, Double, GantryDirection, Double, VVector)
   modifiers.csharp:
@@ -1189,15 +1189,15 @@ items:
   source:
     id: CreateEvaluationDose
     path: ''
-    startLine: 9740
+    startLine: 9836
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public EvaluationDose CreateEvaluationDose()
-    content.vb: Public Function CreateEvaluationDose As EvaluationDose
     return:
       type: ESAPIX.Facade.API.EvaluationDose
+    content.vb: Public Function CreateEvaluationDose As EvaluationDose
   overload: ESAPIX.Facade.API.ExternalPlanSetup.CreateEvaluationDose*
   modifiers.csharp:
   - public
@@ -1217,16 +1217,16 @@ items:
   source:
     id: RemoveBeam
     path: ''
-    startLine: 9750
+    startLine: 9846
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void RemoveBeam(Beam beam)
-    content.vb: Public Sub RemoveBeam(beam As Beam)
     parameters:
     - id: beam
       type: ESAPIX.Facade.API.Beam
+    content.vb: Public Sub RemoveBeam(beam As Beam)
   overload: ESAPIX.Facade.API.ExternalPlanSetup.RemoveBeam*
   modifiers.csharp:
   - public

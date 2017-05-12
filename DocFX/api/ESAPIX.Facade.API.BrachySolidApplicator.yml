@@ -30,7 +30,7 @@ items:
   source:
     id: BrachySolidApplicator
     path: ''
-    startLine: 6656
+    startLine: 6752
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -79,7 +79,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6658
+    startLine: 6754
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -105,16 +105,16 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6663
+    startLine: 6759
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public BrachySolidApplicator(dynamic client)
-    content.vb: Public Sub New(client As Object)
     parameters:
     - id: client
       type: System.Object
+    content.vb: Public Sub New(client As Object)
   overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
   modifiers.csharp:
   - public
@@ -134,16 +134,16 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 6668
+    startLine: 6764
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public bool IsLive { get; }
-    content.vb: Public ReadOnly Property IsLive As Boolean
     parameters: []
     return:
       type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
   overload: ESAPIX.Facade.API.BrachySolidApplicator.IsLive*
   modifiers.csharp:
   - public
@@ -165,16 +165,16 @@ items:
   source:
     id: ApplicatorSetName
     path: ''
-    startLine: 6673
+    startLine: 6769
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ApplicatorSetName { get; set; }
-    content.vb: Public Property ApplicatorSetName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ApplicatorSetName As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
   modifiers.csharp:
   - public
@@ -196,16 +196,16 @@ items:
   source:
     id: ApplicatorSetType
     path: ''
-    startLine: 6690
+    startLine: 6786
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string ApplicatorSetType { get; set; }
-    content.vb: Public Property ApplicatorSetType As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property ApplicatorSetType As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType*
   modifiers.csharp:
   - public
@@ -227,16 +227,16 @@ items:
   source:
     id: Category
     path: ''
-    startLine: 6707
+    startLine: 6803
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Category { get; set; }
-    content.vb: Public Property Category As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Category As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Category*
   modifiers.csharp:
   - public
@@ -258,16 +258,16 @@ items:
   source:
     id: Catheters
     path: ''
-    startLine: 6722
+    startLine: 6818
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerable<Catheter> Catheters { get; set; }
-    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
     parameters: []
     return:
       type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Catheters*
   modifiers.csharp:
   - public
@@ -289,16 +289,16 @@ items:
   source:
     id: Note
     path: ''
-    startLine: 6760
+    startLine: 6856
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Note { get; set; }
-    content.vb: Public Property Note As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Note As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Note*
   modifiers.csharp:
   - public
@@ -320,16 +320,16 @@ items:
   source:
     id: PartName
     path: ''
-    startLine: 6775
+    startLine: 6871
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PartName { get; set; }
-    content.vb: Public Property PartName As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property PartName As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.PartName*
   modifiers.csharp:
   - public
@@ -351,16 +351,16 @@ items:
   source:
     id: PartNumber
     path: ''
-    startLine: 6790
+    startLine: 6886
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string PartNumber { get; set; }
-    content.vb: Public Property PartNumber As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property PartNumber As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber*
   modifiers.csharp:
   - public
@@ -382,16 +382,16 @@ items:
   source:
     id: Summary
     path: ''
-    startLine: 6805
+    startLine: 6901
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Summary { get; set; }
-    content.vb: Public Property Summary As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Summary As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Summary*
   modifiers.csharp:
   - public
@@ -413,16 +413,16 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 6820
+    startLine: 6916
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string UID { get; set; }
-    content.vb: Public Property UID As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property UID As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.UID*
   modifiers.csharp:
   - public
@@ -444,16 +444,16 @@ items:
   source:
     id: Vendor
     path: ''
-    startLine: 6835
+    startLine: 6931
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Vendor { get; set; }
-    content.vb: Public Property Vendor As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Vendor As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Vendor*
   modifiers.csharp:
   - public
@@ -475,16 +475,16 @@ items:
   source:
     id: Version
     path: ''
-    startLine: 6850
+    startLine: 6946
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public string Version { get; set; }
-    content.vb: Public Property Version As String
     parameters: []
     return:
       type: System.String
+    content.vb: Public Property Version As String
   overload: ESAPIX.Facade.API.BrachySolidApplicator.Version*
   modifiers.csharp:
   - public
@@ -506,16 +506,16 @@ items:
   source:
     id: WriteXml
     path: ''
-    startLine: 6865
+    startLine: 6961
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public void WriteXml(Xml.XmlWriter writer)
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
+    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
   overload: ESAPIX.Facade.API.BrachySolidApplicator.WriteXml*
   modifiers.csharp:
   - public
