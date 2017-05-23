@@ -62,7 +62,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>C:\Users\REXNFX\Desktop\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>..\ESAPIX\lib\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -75,12 +75,6 @@
     <Compile Include="Samples.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ESAPIX\ESAPIX.csproj">
-      <Project>{3c5fdd1e-fc04-4c21-bbff-dfe3c584b729}</Project>
-      <Name>ESAPIX</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\plan.json" />
   </ItemGroup>
@@ -89,6 +83,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESAPIX\ESAPIX.csproj">
+      <Project>{3c5fdd1e-fc04-4c21-bbff-dfe3c584b729}</Project>
+      <Name>ESAPIX</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

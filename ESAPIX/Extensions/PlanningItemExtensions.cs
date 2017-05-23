@@ -236,7 +236,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseAtVolume(new[] {s}, volume, vPres, dPres);
+            return i.GetDoseAtVolume(new[] { s }, volume, vPres, dPres);
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseComplimentAtVolume(new[] {s}, volume, vPres, dPres);
+            return i.GetDoseComplimentAtVolume(new[] { s }, volume, vPres, dPres);
         }
 
         #endregion
@@ -313,7 +313,7 @@ namespace ESAPIX.Extensions
         public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
         {
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
             return dvhCurve.GetVolumeAtDose(dv);
         }
 
@@ -329,7 +329,7 @@ namespace ESAPIX.Extensions
             VolumePresentation vPres)
         {
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
             return dvhCurve.GetComplimentVolumeAtDose(dv);
         }
 
@@ -365,27 +365,44 @@ namespace ESAPIX.Extensions
 
         #region MAYO QUERIES
 
-        public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, string mayoFormatQuery)
+        public static double ExecuteQuery(this PlanningItem pi, string mayoFormatQuery, params Structure[] ss)
         {
             var query = MayoQuery.Read(mayoFormatQuery);
             return query.RunQuery(pi, ss);
         }
 
-        public static double ExecuteQuery(this PlanningItem pi, Structure s, string mayoFormatQuery)
-        {
-            var query = MayoQuery.Read(mayoFormatQuery);
-            return query.RunQuery(pi, new[] {s});
-        }
-
-        public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, MayoQuery query)
+        public static double ExecuteQuery(this PlanningItem pi, MayoQuery query, params Structure[] ss)
         {
             return query.RunQuery(pi, ss);
         }
 
-        public static double ExecuteQuery(this PlanningItem pi, Structure s, MayoQuery query)
+        public static double ExecuteQuery(this PlanningItem pi, string mayoFormatQuery, params string[] ss)
         {
-            return query.RunQuery(pi, new[] {s});
+            var query = MayoQuery.Read(mayoFormatQuery);
+            return ExecuteQuery(pi, query, ss);
         }
+
+        public static double ExecuteQuery(this PlanningItem pi, MayoQuery query, params string[] ss)
+        {
+            var structures = ss.Select(structId =>
+                {
+                    return new
+                    {
+                        Name = structId,
+                        Structure = pi.GetStructureSet()?.Structures?.FirstOrDefault(s => s.Id == structId)
+                    };
+                })
+            .ToArray();
+            if (structures.Any(s => s.Structure == null))
+            {
+                var names = structures.Where((s => s.Structure == null)).Select((s => s.Name)).ToArray();
+                throw new ArgumentNullException($"Structures : "+string.Join(", ", names)+ "could not be found.");
+            }
+            //All ok, run query
+            return query.RunQuery(pi, structures.Select((s=>s.Structure)));
+        }
+
+
 
         #endregion
     }
