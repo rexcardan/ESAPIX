@@ -5,14 +5,13 @@ using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Series : ApiDataObject
+    public class Series : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public Series()
         {
@@ -24,23 +23,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public string FOR
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("FOR") ? _client.FOR : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.FOR; });
+                    if (((ExpandoObject) _client).HasProperty("FOR"))
+                        return _client.FOR;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.FOR; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.FOR = value;
+                if (_client is ExpandoObject)
+                    _client.FOR = value;
             }
         }
 
@@ -51,34 +52,40 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("Images"))
-                        foreach (var item in _client.Images) yield return item;
-                    else yield break;
+                        foreach (var item in _client.Images)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.Images;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.Images;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = new Image();
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
-                                facade._client = vms;
-                        });
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
+                                if (vms != null)
+                                    facade._client = vms;
+                            }
+                        );
                         if (facade._client != null)
                             yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Images = value;
+                if (_client is ExpandoObject)
+                    _client.Images = value;
             }
         }
 
@@ -87,15 +94,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ImagingDeviceId")
-                        ? _client.ImagingDeviceId
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ImagingDeviceId; });
+                    if (((ExpandoObject) _client).HasProperty("ImagingDeviceId"))
+                        return _client.ImagingDeviceId;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ImagingDeviceId; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ImagingDeviceId = value;
+                if (_client is ExpandoObject)
+                    _client.ImagingDeviceId = value;
             }
         }
 
@@ -104,18 +116,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ImagingDeviceManufacturer")
-                        ? _client.ImagingDeviceManufacturer
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc =>
-                {
-                    return local._client.ImagingDeviceManufacturer;
-                });
+                    if (((ExpandoObject) _client).HasProperty("ImagingDeviceManufacturer"))
+                        return _client.ImagingDeviceManufacturer;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ImagingDeviceManufacturer; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ImagingDeviceManufacturer = value;
+                if (_client is ExpandoObject)
+                    _client.ImagingDeviceManufacturer = value;
             }
         }
 
@@ -124,15 +138,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ImagingDeviceModel")
-                        ? _client.ImagingDeviceModel
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ImagingDeviceModel; });
+                    if (((ExpandoObject) _client).HasProperty("ImagingDeviceModel"))
+                        return _client.ImagingDeviceModel;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ImagingDeviceModel; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ImagingDeviceModel = value;
+                if (_client is ExpandoObject)
+                    _client.ImagingDeviceModel = value;
             }
         }
 
@@ -141,18 +160,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ImagingDeviceSerialNo")
-                        ? _client.ImagingDeviceSerialNo
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc =>
-                {
-                    return local._client.ImagingDeviceSerialNo;
-                });
+                    if (((ExpandoObject) _client).HasProperty("ImagingDeviceSerialNo"))
+                        return _client.ImagingDeviceSerialNo;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ImagingDeviceSerialNo; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ImagingDeviceSerialNo = value;
+                if (_client is ExpandoObject)
+                    _client.ImagingDeviceSerialNo = value;
             }
         }
 
@@ -161,15 +182,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Modality")
-                        ? _client.Modality
-                        : default(SeriesModality);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<SeriesModality>(sc => { return local._client.Modality; });
+                    if (((ExpandoObject) _client).HasProperty("Modality"))
+                        return _client.Modality;
+                    else
+                        return default(SeriesModality);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Modality; }
+                    );
+                return default(SeriesModality);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Modality = value;
+                if (_client is ExpandoObject)
+                    _client.Modality = value;
             }
         }
 
@@ -178,17 +204,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Study") ? _client.Study : default(Study);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Study)) return default(Study);
-                    return new Study(local._client.Study);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Study"))
+                        return _client.Study;
+                    else
+                        return default(Study);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Study(_client.Study); }
+                    );
+                return default(Study);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Study = value;
+                if (_client is ExpandoObject)
+                    _client.Study = value;
             }
         }
 
@@ -197,20 +226,21 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("UID") ? _client.UID : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.UID; });
+                    if (((ExpandoObject) _client).HasProperty("UID"))
+                        return _client.UID;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.UID; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.UID = value;
+                if (_client is ExpandoObject)
+                    _client.UID = value;
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

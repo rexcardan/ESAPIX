@@ -4,14 +4,13 @@ using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Fractionation : ApiDataObject
+    public class Fractionation : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public Fractionation()
         {
@@ -23,25 +22,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public DateTime? CreationDateTime
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CreationDateTime")
-                        ? _client.CreationDateTime
-                        : default(DateTime?);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
+                    if (((ExpandoObject) _client).HasProperty("CreationDateTime"))
+                        return _client.CreationDateTime;
+                    else
+                        return default(DateTime?);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CreationDateTime; }
+                    );
+                return default(DateTime?);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.CreationDateTime = value;
+                if (_client is ExpandoObject)
+                    _client.CreationDateTime = value;
             }
         }
 
@@ -50,18 +49,21 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("DosePerFractionInPrimaryRefPoint")
-                        ? _client.DosePerFractionInPrimaryRefPoint
-                        : default(DoseValue);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DoseValue>(sc =>
-                {
-                    return local._client.DosePerFractionInPrimaryRefPoint;
-                });
+                    if (((ExpandoObject) _client).HasProperty("DosePerFractionInPrimaryRefPoint"))
+                        return _client.DosePerFractionInPrimaryRefPoint;
+                    else
+                        return default(DoseValue);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(
+                        sc => { return _client.DosePerFractionInPrimaryRefPoint; }
+                    );
+                return default(DoseValue);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.DosePerFractionInPrimaryRefPoint = value;
+                if (_client is ExpandoObject)
+                    _client.DosePerFractionInPrimaryRefPoint = value;
             }
         }
 
@@ -70,15 +72,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("NumberOfFractions")
-                        ? _client.NumberOfFractions
-                        : default(int?);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<int?>(sc => { return local._client.NumberOfFractions; });
+                    if (((ExpandoObject) _client).HasProperty("NumberOfFractions"))
+                        return _client.NumberOfFractions;
+                    else
+                        return default(int?);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.NumberOfFractions; }
+                    );
+                return default(int?);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.NumberOfFractions = value;
+                if (_client is ExpandoObject)
+                    _client.NumberOfFractions = value;
             }
         }
 
@@ -87,35 +94,36 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("PrescribedDosePerFraction")
-                        ? _client.PrescribedDosePerFraction
-                        : default(DoseValue);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DoseValue>(sc =>
-                {
-                    return local._client.PrescribedDosePerFraction;
-                });
+                    if (((ExpandoObject) _client).HasProperty("PrescribedDosePerFraction"))
+                        return _client.PrescribedDosePerFraction;
+                    else
+                        return default(DoseValue);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.PrescribedDosePerFraction; }
+                    );
+                return default(DoseValue);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PrescribedDosePerFraction = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.PrescribedDosePerFraction = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
         public void SetPrescription(int numberOfFractions, DoseValue prescribedDosePerFraction,
             double prescribedPercentage)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() =>
-            {
-                local._client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
-            });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        _client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
+                    }
+                );
+            else
+                _client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
         }
     }
 }

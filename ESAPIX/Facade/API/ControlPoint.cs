@@ -3,14 +3,13 @@
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class ControlPoint : SerializableObject
+    public class ControlPoint : SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
         public ControlPoint()
         {
@@ -22,25 +21,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public double CollimatorAngle
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CollimatorAngle")
-                        ? _client.CollimatorAngle
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.CollimatorAngle; });
+                    if (((ExpandoObject) _client).HasProperty("CollimatorAngle"))
+                        return _client.CollimatorAngle;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CollimatorAngle; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.CollimatorAngle = value;
+                if (_client is ExpandoObject)
+                    _client.CollimatorAngle = value;
             }
         }
 
@@ -49,15 +48,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("GantryAngle")
-                        ? _client.GantryAngle
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.GantryAngle; });
+                    if (((ExpandoObject) _client).HasProperty("GantryAngle"))
+                        return _client.GantryAngle;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.GantryAngle; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.GantryAngle = value;
+                if (_client is ExpandoObject)
+                    _client.GantryAngle = value;
             }
         }
 
@@ -66,15 +70,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("JawPositions")
-                        ? _client.JawPositions
-                        : default(VRect<double>);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<VRect<double>>(sc => { return local._client.JawPositions; });
+                    if (((ExpandoObject) _client).HasProperty("JawPositions"))
+                        return _client.JawPositions;
+                    else
+                        return default(VRect<double>);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.JawPositions; }
+                    );
+                return default(VRect<double>);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.JawPositions = value;
+                if (_client is ExpandoObject)
+                    _client.JawPositions = value;
             }
         }
 
@@ -83,15 +92,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("LeafPositions")
-                        ? _client.LeafPositions
-                        : default(float[,]);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<float[,]>(sc => { return local._client.LeafPositions; });
+                    if (((ExpandoObject) _client).HasProperty("LeafPositions"))
+                        return _client.LeafPositions;
+                    else
+                        return default(float[,]);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.LeafPositions; }
+                    );
+                return default(float[,]);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.LeafPositions = value;
+                if (_client is ExpandoObject)
+                    _client.LeafPositions = value;
             }
         }
 
@@ -100,15 +114,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MetersetWeight")
-                        ? _client.MetersetWeight
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.MetersetWeight; });
+                    if (((ExpandoObject) _client).HasProperty("MetersetWeight"))
+                        return _client.MetersetWeight;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MetersetWeight; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MetersetWeight = value;
+                if (_client is ExpandoObject)
+                    _client.MetersetWeight = value;
             }
         }
 
@@ -117,15 +136,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("PatientSupportAngle")
-                        ? _client.PatientSupportAngle
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.PatientSupportAngle; });
+                    if (((ExpandoObject) _client).HasProperty("PatientSupportAngle"))
+                        return _client.PatientSupportAngle;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.PatientSupportAngle; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PatientSupportAngle = value;
+                if (_client is ExpandoObject)
+                    _client.PatientSupportAngle = value;
             }
         }
 
@@ -134,18 +158,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("TableTopLateralPosition")
-                        ? _client.TableTopLateralPosition
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc =>
-                {
-                    return local._client.TableTopLateralPosition;
-                });
+                    if (((ExpandoObject) _client).HasProperty("TableTopLateralPosition"))
+                        return _client.TableTopLateralPosition;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TableTopLateralPosition; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.TableTopLateralPosition = value;
+                if (_client is ExpandoObject)
+                    _client.TableTopLateralPosition = value;
             }
         }
 
@@ -154,18 +180,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("TableTopLongitudinalPosition")
-                        ? _client.TableTopLongitudinalPosition
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc =>
-                {
-                    return local._client.TableTopLongitudinalPosition;
-                });
+                    if (((ExpandoObject) _client).HasProperty("TableTopLongitudinalPosition"))
+                        return _client.TableTopLongitudinalPosition;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TableTopLongitudinalPosition; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.TableTopLongitudinalPosition = value;
+                if (_client is ExpandoObject)
+                    _client.TableTopLongitudinalPosition = value;
             }
         }
 
@@ -174,25 +202,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("TableTopVerticalPosition")
-                        ? _client.TableTopVerticalPosition
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc =>
-                {
-                    return local._client.TableTopVerticalPosition;
-                });
+                    if (((ExpandoObject) _client).HasProperty("TableTopVerticalPosition"))
+                        return _client.TableTopVerticalPosition;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TableTopVerticalPosition; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.TableTopVerticalPosition = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.TableTopVerticalPosition = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

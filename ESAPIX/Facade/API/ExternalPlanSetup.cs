@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class ExternalPlanSetup : PlanSetup
+    public class ExternalPlanSetup : PlanSetup, System.Xml.Serialization.IXmlSerializable
     {
         public ExternalPlanSetup()
         {
@@ -23,327 +22,422 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public EvaluationDose DoseAsEvaluationDose
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("DoseAsEvaluationDose")
-                        ? _client.DoseAsEvaluationDose
-                        : default(EvaluationDose);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.DoseAsEvaluationDose)) return default(EvaluationDose);
-                    return new EvaluationDose(local._client.DoseAsEvaluationDose);
-                });
+                    if (((ExpandoObject) _client).HasProperty("DoseAsEvaluationDose"))
+                        return _client.DoseAsEvaluationDose;
+                    else
+                        return default(EvaluationDose);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            return new EvaluationDose(_client.DoseAsEvaluationDose);
+                        }
+                    );
+                return default(EvaluationDose);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.DoseAsEvaluationDose = value;
+                if (_client is ExpandoObject)
+                    _client.DoseAsEvaluationDose = value;
             }
         }
 
         public CalculationResult CalculateDoseWithPresetValues(List<KeyValuePair<string, MetersetValue>> presetValues)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(local._client.CalculateDoseWithPresetValues(presetValues));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new CalculationResult(_client.CalculateDoseWithPresetValues(presetValues));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateDoseWithPresetValues(presetValues);
         }
 
         public CalculationResult CalculateDose()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(local._client.CalculateDose());
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new CalculationResult(_client.CalculateDose()); }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateDose();
         }
 
         public CalculationResult CalculateLeafMotionsAndDose()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(local._client.CalculateLeafMotionsAndDose());
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new CalculationResult(_client.CalculateLeafMotionsAndDose());
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateLeafMotionsAndDose();
         }
 
         public CalculationResult CalculateLeafMotions()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(local._client.CalculateLeafMotions());
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new CalculationResult(_client.CalculateLeafMotions());
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateLeafMotions();
         }
 
         public CalculationResult CalculateLeafMotions(LMCVOptions options)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(local._client.CalculateLeafMotions(options));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new CalculationResult(_client.CalculateLeafMotions(options));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateLeafMotions(options);
         }
 
         public CalculationResult CalculateLeafMotions(SmartLMCOptions options)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(local._client.CalculateLeafMotions(options));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new CalculationResult(_client.CalculateLeafMotions(options));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateLeafMotions(options);
         }
 
         public CalculationResult CalculateLeafMotions(LMCMSSOptions options)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(local._client.CalculateLeafMotions(options));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new CalculationResult(_client.CalculateLeafMotions(options));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateLeafMotions(options);
         }
 
         public IEnumerable<string> GetModelsForCalculationType(CalculationType calculationType)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return local._client.GetModelsForCalculationType(calculationType);
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.GetModelsForCalculationType(calculationType);
+                    }
+                );
+                return vmsResult;
+            }
+            return (IEnumerable<string>) _client.GetModelsForCalculationType(calculationType);
         }
 
         public OptimizerResult Optimize(int maxIterations)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.Optimize(maxIterations));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new OptimizerResult(_client.Optimize(maxIterations));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.Optimize(maxIterations);
         }
 
         public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.Optimize(maxIterations, optimizationOption));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new OptimizerResult(_client.Optimize(maxIterations, optimizationOption));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.Optimize(maxIterations, optimizationOption);
         }
 
         public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption, string mlcId)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.Optimize(maxIterations, optimizationOption, mlcId));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new OptimizerResult(_client.Optimize(maxIterations, optimizationOption, mlcId));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.Optimize(maxIterations, optimizationOption, mlcId);
         }
 
         public OptimizerResult Optimize()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.Optimize());
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new OptimizerResult(_client.Optimize()); }
+                );
+                return vmsResult;
+            }
+            return _client.Optimize();
         }
 
         public OptimizerResult Optimize(OptimizationOptionsIMRT options)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.Optimize(options));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new OptimizerResult(_client.Optimize(options)); }
+                );
+                return vmsResult;
+            }
+            return _client.Optimize(options);
         }
 
         public OptimizerResult OptimizeVMAT(string mlcId)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.OptimizeVMAT(mlcId));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new OptimizerResult(_client.OptimizeVMAT(mlcId)); }
+                );
+                return vmsResult;
+            }
+            return _client.OptimizeVMAT(mlcId);
         }
 
         public OptimizerResult OptimizeVMAT()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.OptimizeVMAT());
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new OptimizerResult(_client.OptimizeVMAT()); }
+                );
+                return vmsResult;
+            }
+            return _client.OptimizeVMAT();
         }
 
         public OptimizerResult OptimizeVMAT(OptimizationOptionsVMAT options)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new OptimizerResult(local._client.OptimizeVMAT(options));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new OptimizerResult(_client.OptimizeVMAT(options)); }
+                );
+                return vmsResult;
+            }
+            return _client.OptimizeVMAT(options);
         }
 
         public CalculationResult CalculateDVHEstimates(string modelId, Dictionary<string, DoseValue> targetDoseLevels,
             Dictionary<string, string> structureMatches)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new CalculationResult(
-                    local._client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches));
-            });
-            return retVal;
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new CalculationResult(
+                            _client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches);
         }
 
         public Beam AddArcBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions,
             double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
             double patientSupportAngle, VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddArcBeam(machineParameters, jawPositions, collimatorAngle,
-                    gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddArcBeam(machineParameters, jawPositions, collimatorAngle,
+                            gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddArcBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, gantryStop,
+                gantryDirection, patientSupportAngle, isocenter);
         }
 
         public Beam AddConformalArcBeam(ExternalBeamMachineParameters machineParameters, double collimatorAngle,
             int controlPointCount, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
             double patientSupportAngle, VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddConformalArcBeam(machineParameters, collimatorAngle,
-                    controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddConformalArcBeam(machineParameters, collimatorAngle,
+                            controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle,
+                            isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddConformalArcBeam(machineParameters, collimatorAngle, controlPointCount, gantryAngle,
+                gantryStop, gantryDirection, patientSupportAngle, isocenter);
         }
 
         public Beam AddMLCArcBeam(ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
             VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop,
             GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions,
-                    collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions,
+                            collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle,
+                gantryStop, gantryDirection, patientSupportAngle, isocenter);
         }
 
         public Beam AddMLCBeam(ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
             VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle,
             VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddMLCBeam(machineParameters, leafPositions, jawPositions,
-                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddMLCBeam(machineParameters, leafPositions, jawPositions,
+                            collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddMLCBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle,
+                patientSupportAngle, isocenter);
         }
 
         public Beam AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters machineParameters,
             IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
             VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights,
-                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights,
+                            collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights, collimatorAngle,
+                gantryAngle, patientSupportAngle, isocenter);
         }
 
         public Beam AddSlidingWindowBeam(ExternalBeamMachineParameters machineParameters,
             IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
             VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddSlidingWindowBeam(machineParameters, metersetWeights,
-                    collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddSlidingWindowBeam(machineParameters, metersetWeights,
+                            collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddSlidingWindowBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle,
+                patientSupportAngle, isocenter);
         }
 
         public Beam AddStaticBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions,
             double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle,
-                    gantryAngle, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle,
+                            gantryAngle, patientSupportAngle, isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle,
+                patientSupportAngle, isocenter);
         }
 
         public Beam AddVMATBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights,
             double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
             double patientSupportAngle, VVector isocenter)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new Beam(local._client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle,
-                    gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Beam(_client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle,
+                            gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, gantryStop,
+                gantryDirection, patientSupportAngle, isocenter);
         }
 
         public EvaluationDose CreateEvaluationDose()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new EvaluationDose(local._client.CreateEvaluationDose());
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new EvaluationDose(_client.CreateEvaluationDose()); }
+                );
+                return vmsResult;
+            }
+            return _client.CreateEvaluationDose();
         }
 
         public void RemoveBeam(Beam beam)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.RemoveBeam(beam._client); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.RemoveBeam(beam._client); }
+                );
+            else
+                _client.RemoveBeam(beam);
         }
     }
 }

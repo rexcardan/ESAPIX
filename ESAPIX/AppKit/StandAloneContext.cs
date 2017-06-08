@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
 using System.Windows.Threading;
+using ESAPIX.Facade;
 
 #endregion
 
@@ -66,11 +67,10 @@ namespace ESAPIX.AppKit
         /// <param name="username">VMS username</param>
         /// <param name="password">VMS password</param>
         /// <returns>app context</returns>
-        public static StandAloneContext Create(string username, string password)
+        public static StandAloneContext Create(string username, string password, bool singleThread)
         {
-            var thread = new AppComThread();
-            Application app = null;
-            thread.Invoke(() => { app = Application.CreateApplication(username, password); });
+            Application app = Application.CreateApplication(username, password, singleThread);
+            var thread = XContext.Instance.CurrentContext.Thread;
             return new StandAloneContext(app, thread);
         }
 

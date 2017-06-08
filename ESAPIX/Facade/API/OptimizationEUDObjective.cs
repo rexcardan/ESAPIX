@@ -3,14 +3,13 @@
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationEUDObjective : OptimizationObjective
+    public class OptimizationEUDObjective : OptimizationObjective, System.Xml.Serialization.IXmlSerializable
     {
         public OptimizationEUDObjective()
         {
@@ -22,23 +21,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public DoseValue Dose
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Dose") ? _client.Dose : default(DoseValue);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.Dose; });
+                    if (((ExpandoObject) _client).HasProperty("Dose"))
+                        return _client.Dose;
+                    else
+                        return default(DoseValue);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Dose; }
+                    );
+                return default(DoseValue);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Dose = value;
+                if (_client is ExpandoObject)
+                    _client.Dose = value;
             }
         }
 
@@ -47,18 +48,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Operator")
-                        ? _client.Operator
-                        : default(OptimizationObjectiveOperator);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<OptimizationObjectiveOperator>(sc =>
-                {
-                    return local._client.Operator;
-                });
+                    if (((ExpandoObject) _client).HasProperty("Operator"))
+                        return _client.Operator;
+                    else
+                        return default(OptimizationObjectiveOperator);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Operator; }
+                    );
+                return default(OptimizationObjectiveOperator);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Operator = value;
+                if (_client is ExpandoObject)
+                    _client.Operator = value;
             }
         }
 
@@ -67,13 +70,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ParameterA") ? _client.ParameterA : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.ParameterA; });
+                    if (((ExpandoObject) _client).HasProperty("ParameterA"))
+                        return _client.ParameterA;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ParameterA; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ParameterA = value;
+                if (_client is ExpandoObject)
+                    _client.ParameterA = value;
             }
         }
 
@@ -82,20 +92,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Priority") ? _client.Priority : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Priority; });
+                    if (((ExpandoObject) _client).HasProperty("Priority"))
+                        return _client.Priority;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Priority; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Priority = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.Priority = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

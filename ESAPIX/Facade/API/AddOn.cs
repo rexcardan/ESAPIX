@@ -1,53 +1,67 @@
-#region
-
 using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
-
-#endregion
-
+using VMS.TPS.Common.Model.Types;
+using XC = ESAPIX.Facade.XContext;
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class AddOn : ApiDataObject
+    public class AddOn : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
+        public System.Nullable<System.DateTime> CreationDateTime
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("CreationDateTime"))
+                    {
+                        return _client.CreationDateTime;
+                    }
+                    else
+                    {
+                        return default (System.Nullable<System.DateTime>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.CreationDateTime;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Nullable<System.DateTime>);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.CreationDateTime = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public AddOn()
         {
-            _client = new ExpandoObject();
+            _client = (new ExpandoObject());
         }
 
         public AddOn(dynamic client)
         {
-            _client = client;
-        }
-
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
-        public DateTime? CreationDateTime
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CreationDateTime")
-                        ? _client.CreationDateTime
-                        : default(DateTime?);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
-            }
-            set
-            {
-                if (_client is ExpandoObject) _client.CreationDateTime = value;
-            }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            _client = (client);
         }
     }
 }

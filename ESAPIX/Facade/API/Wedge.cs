@@ -2,14 +2,13 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Wedge : AddOn
+    public class Wedge : AddOn, System.Xml.Serialization.IXmlSerializable
     {
         public Wedge()
         {
@@ -21,23 +20,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public double Direction
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Direction") ? _client.Direction : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Direction; });
+                    if (((ExpandoObject) _client).HasProperty("Direction"))
+                        return _client.Direction;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Direction; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Direction = value;
+                if (_client is ExpandoObject)
+                    _client.Direction = value;
             }
         }
 
@@ -46,20 +47,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("WedgeAngle") ? _client.WedgeAngle : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.WedgeAngle; });
+                    if (((ExpandoObject) _client).HasProperty("WedgeAngle"))
+                        return _client.WedgeAngle;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.WedgeAngle; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.WedgeAngle = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.WedgeAngle = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using ESAPIX.AppKit;
 using ESAPIX.AppKit.Overlay;
 using ESAPIX.Interfaces;
 using Microsoft.Practices.Unity;
@@ -12,7 +13,7 @@ using Prism.Unity;
 
 #endregion
 
-namespace ESAPIX.AppKit
+namespace ESAPIX.Bootstrapper
 {
     public class AppBootstrapper<T> : UnityBootstrapper where T : Window
     {
@@ -21,7 +22,8 @@ namespace ESAPIX.AppKit
 
         public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
         {
-            _ctx = StandAloneContext.Create(vmsUsername, vmsPassword);
+            FacadeInitializer.Initialize();
+            _ctx = StandAloneContext.Create(vmsUsername, vmsPassword, singleThread);
             _ea = new EventAggregator();
         }
 

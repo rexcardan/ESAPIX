@@ -2,14 +2,13 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Diagnosis : ApiDataObject
+    public class Diagnosis : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public Diagnosis()
         {
@@ -21,25 +20,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public string ClinicalDescription
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ClinicalDescription")
-                        ? _client.ClinicalDescription
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ClinicalDescription; });
+                    if (((ExpandoObject) _client).HasProperty("ClinicalDescription"))
+                        return _client.ClinicalDescription;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ClinicalDescription; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ClinicalDescription = value;
+                if (_client is ExpandoObject)
+                    _client.ClinicalDescription = value;
             }
         }
 
@@ -48,13 +47,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Code") ? _client.Code : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Code; });
+                    if (((ExpandoObject) _client).HasProperty("Code"))
+                        return _client.Code;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Code; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Code = value;
+                if (_client is ExpandoObject)
+                    _client.Code = value;
             }
         }
 
@@ -63,20 +69,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CodeTable") ? _client.CodeTable : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.CodeTable; });
+                    if (((ExpandoObject) _client).HasProperty("CodeTable"))
+                        return _client.CodeTable;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CodeTable; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.CodeTable = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.CodeTable = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

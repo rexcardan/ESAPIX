@@ -2,14 +2,13 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationPointCloudParameter : OptimizationParameter
+    public class OptimizationPointCloudParameter : OptimizationParameter, System.Xml.Serialization.IXmlSerializable
     {
         public OptimizationPointCloudParameter()
         {
@@ -21,25 +20,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public double PointResolutionInMM
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("PointResolutionInMM")
-                        ? _client.PointResolutionInMM
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.PointResolutionInMM; });
+                    if (((ExpandoObject) _client).HasProperty("PointResolutionInMM"))
+                        return _client.PointResolutionInMM;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.PointResolutionInMM; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PointResolutionInMM = value;
+                if (_client is ExpandoObject)
+                    _client.PointResolutionInMM = value;
             }
         }
 
@@ -48,24 +47,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Structure") ? _client.Structure : default(Structure);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Structure)) return default(Structure);
-                    return new Structure(local._client.Structure);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Structure"))
+                        return _client.Structure;
+                    else
+                        return default(Structure);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Structure(_client.Structure); }
+                    );
+                return default(Structure);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Structure = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.Structure = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

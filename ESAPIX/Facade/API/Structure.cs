@@ -5,15 +5,13 @@ using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
-using System.Windows.Media.Media3D;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Structure : ApiDataObject
+    public class Structure : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public Structure()
         {
@@ -25,25 +23,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public VVector CenterPoint
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CenterPoint")
-                        ? _client.CenterPoint
-                        : default(VVector);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.CenterPoint; });
+                    if (((ExpandoObject) _client).HasProperty("CenterPoint"))
+                        return _client.CenterPoint;
+                    else
+                        return default(VVector);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CenterPoint; }
+                    );
+                return default(VVector);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.CenterPoint = value;
+                if (_client is ExpandoObject)
+                    _client.CenterPoint = value;
             }
         }
 
@@ -52,18 +50,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Color")
-                        ? _client.Color
-                        : default(System.Windows.Media.Color);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>(sc =>
-                {
-                    return local._client.Color;
-                });
+                    if (((ExpandoObject) _client).HasProperty("Color"))
+                        return _client.Color;
+                    else
+                        return default(System.Windows.Media.Color);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Color; }
+                    );
+                return default(System.Windows.Media.Color);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Color = value;
+                if (_client is ExpandoObject)
+                    _client.Color = value;
             }
         }
 
@@ -72,13 +72,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("DicomType") ? _client.DicomType : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.DicomType; });
+                    if (((ExpandoObject) _client).HasProperty("DicomType"))
+                        return _client.DicomType;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.DicomType; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.DicomType = value;
+                if (_client is ExpandoObject)
+                    _client.DicomType = value;
             }
         }
 
@@ -87,13 +94,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("HasSegment") ? _client.HasSegment : default(bool);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.HasSegment; });
+                    if (((ExpandoObject) _client).HasProperty("HasSegment"))
+                        return _client.HasSegment;
+                    else
+                        return default(bool);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.HasSegment; }
+                    );
+                return default(bool);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.HasSegment = value;
+                if (_client is ExpandoObject)
+                    _client.HasSegment = value;
             }
         }
 
@@ -102,13 +116,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("IsEmpty") ? _client.IsEmpty : default(bool);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsEmpty; });
+                    if (((ExpandoObject) _client).HasProperty("IsEmpty"))
+                        return _client.IsEmpty;
+                    else
+                        return default(bool);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.IsEmpty; }
+                    );
+                return default(bool);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.IsEmpty = value;
+                if (_client is ExpandoObject)
+                    _client.IsEmpty = value;
             }
         }
 
@@ -117,15 +138,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("IsHighResolution")
-                        ? _client.IsHighResolution
-                        : default(bool);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsHighResolution; });
+                    if (((ExpandoObject) _client).HasProperty("IsHighResolution"))
+                        return _client.IsHighResolution;
+                    else
+                        return default(bool);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.IsHighResolution; }
+                    );
+                return default(bool);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.IsHighResolution = value;
+                if (_client is ExpandoObject)
+                    _client.IsHighResolution = value;
             }
         }
 
@@ -134,30 +160,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MeshGeometry")
-                        ? _client.MeshGeometry
-                        : default(System.Windows.Media.Media3D.MeshGeometry3D);
-                var local = this;
-                MeshGeometry3D mesh = new MeshGeometry3D();
-                Point3D[] points = new Point3D[0];
-                Vector3D[] normals = new Vector3D[0];
-                int[] indices = new int[0];
-
-                X.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    points = new Point3D[_client.MeshGeometry.Positions.Count];
-                    normals = new Vector3D[_client.MeshGeometry.Normals.Count];
-                    indices = new int[_client.MeshGeometry.TriangleIndices.Count];
-                    _client.MeshGeometry.Positions.CopyTo(points, 0);
-                    _client.MeshGeometry.Normals.CopyTo(normals, 0);
-                    _client.MeshGeometry.TriangleIndices.CopyTo(indices, 0);
-                });
-                mesh.Positions = new Point3DCollection(points);
-                return mesh;
+                    if (((ExpandoObject) _client).HasProperty("MeshGeometry"))
+                        return _client.MeshGeometry;
+                    else
+                        return default(System.Windows.Media.Media3D.MeshGeometry3D);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MeshGeometry; }
+                    );
+                return default(System.Windows.Media.Media3D.MeshGeometry3D);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MeshGeometry = value;
+                if (_client is ExpandoObject)
+                    _client.MeshGeometry = value;
             }
         }
 
@@ -166,13 +182,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ROINumber") ? _client.ROINumber : default(int);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<int>(sc => { return local._client.ROINumber; });
+                    if (((ExpandoObject) _client).HasProperty("ROINumber"))
+                        return _client.ROINumber;
+                    else
+                        return default(int);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ROINumber; }
+                    );
+                return default(int);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ROINumber = value;
+                if (_client is ExpandoObject)
+                    _client.ROINumber = value;
             }
         }
 
@@ -181,19 +204,21 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("SegmentVolume")
-                        ? _client.SegmentVolume
-                        : default(SegmentVolume);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.SegmentVolume)) return default(SegmentVolume);
-                    return new SegmentVolume(local._client.SegmentVolume);
-                });
+                    if (((ExpandoObject) _client).HasProperty("SegmentVolume"))
+                        return _client.SegmentVolume;
+                    else
+                        return default(SegmentVolume);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(
+                        sc => { return new SegmentVolume(_client.SegmentVolume); }
+                    );
+                return default(SegmentVolume);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.SegmentVolume = value;
+                if (_client is ExpandoObject)
+                    _client.SegmentVolume = value;
             }
         }
 
@@ -204,34 +229,38 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("StructureCodeInfos"))
-                        foreach (var item in _client.StructureCodeInfos) yield return item;
-                    else yield break;
+                        foreach (var item in _client.StructureCodeInfos)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.StructureCodeInfos;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.StructureCodeInfos;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = default(StructureCodeInfo);
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
                                 facade = (StructureCodeInfo) vms;
-                        });
-                        if (facade != null)
-                            yield return facade;
+                            }
+                        );
+                        yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.StructureCodeInfos = value;
+                if (_client is ExpandoObject)
+                    _client.StructureCodeInfos = value;
             }
         }
 
@@ -240,13 +269,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Volume") ? _client.Volume : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Volume; });
+                    if (((ExpandoObject) _client).HasProperty("Volume"))
+                        return _client.Volume;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Volume; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Volume = value;
+                if (_client is ExpandoObject)
+                    _client.Volume = value;
             }
         }
 
@@ -255,190 +291,250 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Id") ? _client.Id : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Id; });
+                    if (((ExpandoObject) _client).HasProperty("Id"))
+                        return _client.Id;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Id; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Id = value;
+                if (_client is ExpandoObject)
+                    _client.Id = value;
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
         public void AddContourOnImagePlane(VVector[] contour, int z)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.AddContourOnImagePlane(contour, z); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.AddContourOnImagePlane(contour, z); }
+                );
+            else
+                _client.AddContourOnImagePlane(contour, z);
         }
 
         public SegmentVolume And(SegmentVolume other)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new SegmentVolume(local._client.And(other._client));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new SegmentVolume(_client.And(other)); }
+                );
+                return vmsResult;
+            }
+            return _client.And(other);
         }
 
         public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new SegmentVolume(local._client.AsymmetricMargin(margins));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new SegmentVolume(_client.AsymmetricMargin(margins));
+                    }
+                );
+                return vmsResult;
+            }
+            return _client.AsymmetricMargin(margins);
         }
 
         public bool CanConvertToHighResolution()
         {
-            var local = this;
-            var retVal =
-                X.Instance.CurrentContext.GetValue(sc => { return local._client.CanConvertToHighResolution(); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return _client.CanConvertToHighResolution(); }
+                );
+                return vmsResult;
+            }
+            return (bool) _client.CanConvertToHighResolution();
         }
 
         public bool CanSetAssignedHU(out string errorMessage)
         {
-            var errorMessage_OUT = default(string);
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return local._client.CanSetAssignedHU(out errorMessage_OUT);
-            });
-            errorMessage = errorMessage_OUT;
-            return retVal;
+                var errorMessage_OUT = default(string);
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return _client.CanSetAssignedHU(out errorMessage_OUT); }
+                );
+                errorMessage = errorMessage_OUT;
+                return vmsResult;
+            }
+            return (bool) _client.CanSetAssignedHU(out errorMessage);
         }
 
         public void ClearAllContoursOnImagePlane(int z)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ClearAllContoursOnImagePlane(z); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.ClearAllContoursOnImagePlane(z); }
+                );
+            else
+                _client.ClearAllContoursOnImagePlane(z);
         }
 
         public void ConvertToHighResolution()
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ConvertToHighResolution(); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.ConvertToHighResolution(); }
+                );
+            else
+                _client.ConvertToHighResolution();
         }
 
         public bool GetAssignedHU(out double huValue)
         {
-            var huValue_OUT = default(double);
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return local._client.GetAssignedHU(out huValue_OUT);
-            });
-            huValue = huValue_OUT;
-            return retVal;
+                var huValue_OUT = default(double);
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return _client.GetAssignedHU(out huValue_OUT); }
+                );
+                huValue = huValue_OUT;
+                return vmsResult;
+            }
+            return (bool) _client.GetAssignedHU(out huValue);
         }
 
         public VVector[][] GetContoursOnImagePlane(int z)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetContoursOnImagePlane(z); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return _client.GetContoursOnImagePlane(z); }
+                );
+                return vmsResult;
+            }
+            return (VVector[][]) _client.GetContoursOnImagePlane(z);
         }
 
         public int GetNumberOfSeparateParts()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetNumberOfSeparateParts(); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return _client.GetNumberOfSeparateParts(); }
+                );
+                return vmsResult;
+            }
+            return (int) _client.GetNumberOfSeparateParts();
         }
 
         public SegmentProfile GetSegmentProfile(VVector start, VVector stop, BitArray preallocatedBuffer)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return local._client.GetSegmentProfile(start, stop, preallocatedBuffer);
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.GetSegmentProfile(start, stop, preallocatedBuffer);
+                    }
+                );
+                return vmsResult;
+            }
+            return (SegmentProfile) _client.GetSegmentProfile(start, stop, preallocatedBuffer);
         }
 
         public bool IsPointInsideSegment(VVector point)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return local._client.IsPointInsideSegment(point);
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return _client.IsPointInsideSegment(point); }
+                );
+                return vmsResult;
+            }
+            return (bool) _client.IsPointInsideSegment(point);
         }
 
         public SegmentVolume Margin(double marginInMM)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new SegmentVolume(local._client.Margin(marginInMM));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new SegmentVolume(_client.Margin(marginInMM)); }
+                );
+                return vmsResult;
+            }
+            return _client.Margin(marginInMM);
         }
 
         public SegmentVolume Not()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return new SegmentVolume(local._client.Not()); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return new SegmentVolume(_client.Not()); }
+                );
+                return vmsResult;
+            }
+            return _client.Not();
         }
 
         public SegmentVolume Or(SegmentVolume other)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new SegmentVolume(local._client.Or(other._client));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new SegmentVolume(_client.Or(other)); }
+                );
+                return vmsResult;
+            }
+            return _client.Or(other);
         }
 
         public bool ResetAssignedHU()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.ResetAssignedHU(); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return _client.ResetAssignedHU(); }
+                );
+                return vmsResult;
+            }
+            return (bool) _client.ResetAssignedHU();
         }
 
         public void SetAssignedHU(double huValue)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetAssignedHU(huValue); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.SetAssignedHU(huValue); }
+                );
+            else
+                _client.SetAssignedHU(huValue);
         }
 
         public SegmentVolume Sub(SegmentVolume other)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new SegmentVolume(local._client.Sub(other._client));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new SegmentVolume(_client.Sub(other)); }
+                );
+                return vmsResult;
+            }
+            return _client.Sub(other);
         }
 
         public void SubtractContourOnImagePlane(VVector[] contour, int z)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SubtractContourOnImagePlane(contour, z); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.SubtractContourOnImagePlane(contour, z); }
+                );
+            else
+                _client.SubtractContourOnImagePlane(contour, z);
         }
 
         public SegmentVolume Xor(SegmentVolume other)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc =>
+            if (XC.Instance.CurrentContext != null)
             {
-                return new SegmentVolume(local._client.Xor(other._client));
-            });
-            return retVal;
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new SegmentVolume(_client.Xor(other)); }
+                );
+                return vmsResult;
+            }
+            return _client.Xor(other);
         }
     }
 }

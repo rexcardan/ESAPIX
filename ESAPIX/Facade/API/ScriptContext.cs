@@ -5,10 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
-
 
 namespace ESAPIX.Facade.API
 {
@@ -28,12 +27,10 @@ namespace ESAPIX.Facade.API
 
         public ScriptContext(object context, object user, string appName)
         {
-            if (X.Instance.CurrentContext != null)
-                X.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client = VMSConstructor.ConstructScriptContext(context, user, appName);
-                });
-            else throw new Exception("There is no VMS Context to create the class");
+            if (XC.Instance.CurrentContext != null)
+                _client = VMSConstructor.ConstructScriptContextFunc0(context, user, appName);
+            else
+                throw new Exception("There is no VMS Context to create the class");
         }
 
         public bool IsLive
@@ -46,17 +43,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CurrentUser") ? _client.CurrentUser : default(User);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.CurrentUser)) return default(User);
-                    return new User(local._client.CurrentUser);
-                });
+                    if (((ExpandoObject) _client).HasProperty("CurrentUser"))
+                        return _client.CurrentUser;
+                    else
+                        return default(User);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new User(_client.CurrentUser); }
+                    );
+                return default(User);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.CurrentUser = value;
+                if (_client is ExpandoObject)
+                    _client.CurrentUser = value;
             }
         }
 
@@ -65,17 +65,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Course") ? _client.Course : default(Course);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Course)) return default(Course);
-                    return new Course(local._client.Course);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Course"))
+                        return _client.Course;
+                    else
+                        return default(Course);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Course(_client.Course); }
+                    );
+                return default(Course);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Course = value;
+                if (_client is ExpandoObject)
+                    _client.Course = value;
             }
         }
 
@@ -84,17 +87,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Image") ? _client.Image : default(Image);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Image)) return default(Image);
-                    return new Image(local._client.Image);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Image"))
+                        return _client.Image;
+                    else
+                        return default(Image);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Image(_client.Image); }
+                    );
+                return default(Image);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Image = value;
+                if (_client is ExpandoObject)
+                    _client.Image = value;
             }
         }
 
@@ -103,19 +109,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("StructureSet")
-                        ? _client.StructureSet
-                        : default(StructureSet);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.StructureSet)) return default(StructureSet);
-                    return new StructureSet(local._client.StructureSet);
-                });
+                    if (((ExpandoObject) _client).HasProperty("StructureSet"))
+                        return _client.StructureSet;
+                    else
+                        return default(StructureSet);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new StructureSet(_client.StructureSet); }
+                    );
+                return default(StructureSet);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.StructureSet = value;
+                if (_client is ExpandoObject)
+                    _client.StructureSet = value;
             }
         }
 
@@ -124,17 +131,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Patient") ? _client.Patient : default(Patient);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Patient)) return default(Patient);
-                    return new Patient(local._client.Patient);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Patient"))
+                        return _client.Patient;
+                    else
+                        return default(Patient);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Patient(_client.Patient); }
+                    );
+                return default(Patient);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Patient = value;
+                if (_client is ExpandoObject)
+                    _client.Patient = value;
             }
         }
 
@@ -143,17 +153,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("PlanSetup") ? _client.PlanSetup : default(PlanSetup);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.PlanSetup)) return default(PlanSetup);
-                    return new PlanSetup(local._client.PlanSetup);
-                });
+                    if (((ExpandoObject) _client).HasProperty("PlanSetup"))
+                        return _client.PlanSetup;
+                    else
+                        return default(PlanSetup);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new PlanSetup(_client.PlanSetup); }
+                    );
+                return default(PlanSetup);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PlanSetup = value;
+                if (_client is ExpandoObject)
+                    _client.PlanSetup = value;
             }
         }
 
@@ -162,19 +175,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ExternalPlanSetup")
-                        ? _client.ExternalPlanSetup
-                        : default(ExternalPlanSetup);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.ExternalPlanSetup)) return default(ExternalPlanSetup);
-                    return new ExternalPlanSetup(local._client.ExternalPlanSetup);
-                });
+                    if (((ExpandoObject) _client).HasProperty("ExternalPlanSetup"))
+                        return _client.ExternalPlanSetup;
+                    else
+                        return default(ExternalPlanSetup);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            return new ExternalPlanSetup(_client.ExternalPlanSetup);
+                        }
+                    );
+                return default(ExternalPlanSetup);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ExternalPlanSetup = value;
+                if (_client is ExpandoObject)
+                    _client.ExternalPlanSetup = value;
             }
         }
 
@@ -183,19 +200,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("BrachyPlanSetup")
-                        ? _client.BrachyPlanSetup
-                        : default(BrachyPlanSetup);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.BrachyPlanSetup)) return default(BrachyPlanSetup);
-                    return new BrachyPlanSetup(local._client.BrachyPlanSetup);
-                });
+                    if (((ExpandoObject) _client).HasProperty("BrachyPlanSetup"))
+                        return _client.BrachyPlanSetup;
+                    else
+                        return default(BrachyPlanSetup);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            return new BrachyPlanSetup(_client.BrachyPlanSetup);
+                        }
+                    );
+                return default(BrachyPlanSetup);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.BrachyPlanSetup = value;
+                if (_client is ExpandoObject)
+                    _client.BrachyPlanSetup = value;
             }
         }
 
@@ -206,34 +227,40 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("PlansInScope"))
-                        foreach (var item in _client.PlansInScope) yield return item;
-                    else yield break;
+                        foreach (var item in _client.PlansInScope)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.PlansInScope;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.PlansInScope;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = new PlanSetup();
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
-                                facade._client = vms;
-                        });
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
+                                if (vms != null)
+                                    facade._client = vms;
+                            }
+                        );
                         if (facade._client != null)
                             yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PlansInScope = value;
+                if (_client is ExpandoObject)
+                    _client.PlansInScope = value;
             }
         }
 
@@ -244,34 +271,40 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("ExternalPlansInScope"))
-                        foreach (var item in _client.ExternalPlansInScope) yield return item;
-                    else yield break;
+                        foreach (var item in _client.ExternalPlansInScope)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.ExternalPlansInScope;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.ExternalPlansInScope;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = new ExternalPlanSetup();
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
-                                facade._client = vms;
-                        });
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
+                                if (vms != null)
+                                    facade._client = vms;
+                            }
+                        );
                         if (facade._client != null)
                             yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ExternalPlansInScope = value;
+                if (_client is ExpandoObject)
+                    _client.ExternalPlansInScope = value;
             }
         }
 
@@ -282,34 +315,40 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("BrachyPlansInScope"))
-                        foreach (var item in _client.BrachyPlansInScope) yield return item;
-                    else yield break;
+                        foreach (var item in _client.BrachyPlansInScope)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.BrachyPlansInScope;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.BrachyPlansInScope;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = new BrachyPlanSetup();
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
-                                facade._client = vms;
-                        });
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
+                                if (vms != null)
+                                    facade._client = vms;
+                            }
+                        );
                         if (facade._client != null)
                             yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.BrachyPlansInScope = value;
+                if (_client is ExpandoObject)
+                    _client.BrachyPlansInScope = value;
             }
         }
 
@@ -320,34 +359,40 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("PlanSumsInScope"))
-                        foreach (var item in _client.PlanSumsInScope) yield return item;
-                    else yield break;
+                        foreach (var item in _client.PlanSumsInScope)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.PlanSumsInScope;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.PlanSumsInScope;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = new PlanSum();
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
-                                facade._client = vms;
-                        });
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
+                                if (vms != null)
+                                    facade._client = vms;
+                            }
+                        );
                         if (facade._client != null)
                             yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PlanSumsInScope = value;
+                if (_client is ExpandoObject)
+                    _client.PlanSumsInScope = value;
             }
         }
 
@@ -356,15 +401,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ApplicationName")
-                        ? _client.ApplicationName
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ApplicationName; });
+                    if (((ExpandoObject) _client).HasProperty("ApplicationName"))
+                        return _client.ApplicationName;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ApplicationName; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ApplicationName = value;
+                if (_client is ExpandoObject)
+                    _client.ApplicationName = value;
             }
         }
 
@@ -373,15 +423,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("VersionInfo")
-                        ? _client.VersionInfo
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.VersionInfo; });
+                    if (((ExpandoObject) _client).HasProperty("VersionInfo"))
+                        return _client.VersionInfo;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.VersionInfo; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.VersionInfo = value;
+                if (_client is ExpandoObject)
+                    _client.VersionInfo = value;
             }
         }
     }

@@ -3,14 +3,13 @@
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Block : ApiDataObject
+    public class Block : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public Block()
         {
@@ -22,29 +21,26 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public AddOnMaterial AddOnMaterial
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("AddOnMaterial")
-                        ? _client.AddOnMaterial
-                        : default(AddOnMaterial);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.AddOnMaterial)) return default(AddOnMaterial);
-                    return new AddOnMaterial(local._client.AddOnMaterial);
-                });
+                    if (((ExpandoObject) _client).HasProperty("AddOnMaterial"))
+                        return _client.AddOnMaterial;
+                    else
+                        return default(AddOnMaterial);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(
+                        sc => { return new AddOnMaterial(_client.AddOnMaterial); }
+                    );
+                return default(AddOnMaterial);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.AddOnMaterial = value;
+                if (_client is ExpandoObject)
+                    _client.AddOnMaterial = value;
             }
         }
 
@@ -53,13 +49,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("IsDiverging") ? _client.IsDiverging : default(bool);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsDiverging; });
+                    if (((ExpandoObject) _client).HasProperty("IsDiverging"))
+                        return _client.IsDiverging;
+                    else
+                        return default(bool);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.IsDiverging; }
+                    );
+                return default(bool);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.IsDiverging = value;
+                if (_client is ExpandoObject)
+                    _client.IsDiverging = value;
             }
         }
 
@@ -68,15 +71,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("TransmissionFactor")
-                        ? _client.TransmissionFactor
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.TransmissionFactor; });
+                    if (((ExpandoObject) _client).HasProperty("TransmissionFactor"))
+                        return _client.TransmissionFactor;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TransmissionFactor; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.TransmissionFactor = value;
+                if (_client is ExpandoObject)
+                    _client.TransmissionFactor = value;
             }
         }
 
@@ -85,17 +93,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Tray") ? _client.Tray : default(Tray);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Tray)) return default(Tray);
-                    return new Tray(local._client.Tray);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Tray"))
+                        return _client.Tray;
+                    else
+                        return default(Tray);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Tray(_client.Tray); }
+                    );
+                return default(Tray);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Tray = value;
+                if (_client is ExpandoObject)
+                    _client.Tray = value;
             }
         }
 
@@ -104,16 +115,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("TrayTransmissionFactor")
-                        ? _client.TrayTransmissionFactor
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(
-                    sc => { return local._client.TrayTransmissionFactor; });
+                    if (((ExpandoObject) _client).HasProperty("TrayTransmissionFactor"))
+                        return _client.TrayTransmissionFactor;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TrayTransmissionFactor; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.TrayTransmissionFactor = value;
+                if (_client is ExpandoObject)
+                    _client.TrayTransmissionFactor = value;
             }
         }
 
@@ -122,20 +137,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Type") ? _client.Type : default(BlockType);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<BlockType>(sc => { return local._client.Type; });
+                    if (((ExpandoObject) _client).HasProperty("Type"))
+                        return _client.Type;
+                    else
+                        return default(BlockType);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Type; }
+                    );
+                return default(BlockType);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Type = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.Type = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

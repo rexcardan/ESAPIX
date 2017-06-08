@@ -5,10 +5,9 @@ using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
-
 
 namespace ESAPIX.Facade.API
 {
@@ -38,34 +37,40 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("ControlPoints"))
-                        foreach (var item in _client.ControlPoints) yield return item;
-                    else yield break;
+                        foreach (var item in _client.ControlPoints)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.ControlPoints;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.ControlPoints;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = new ControlPointParameters();
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
-                                facade._client = vms;
-                        });
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
+                                if (vms != null)
+                                    facade._client = vms;
+                            }
+                        );
                         if (facade._client != null)
                             yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ControlPoints = value;
+                if (_client is ExpandoObject)
+                    _client.ControlPoints = value;
             }
         }
 
@@ -74,18 +79,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("GantryDirection")
-                        ? _client.GantryDirection
-                        : default(GantryDirection);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<GantryDirection>(sc =>
-                {
-                    return local._client.GantryDirection;
-                });
+                    if (((ExpandoObject) _client).HasProperty("GantryDirection"))
+                        return _client.GantryDirection;
+                    else
+                        return default(GantryDirection);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.GantryDirection; }
+                    );
+                return default(GantryDirection);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.GantryDirection = value;
+                if (_client is ExpandoObject)
+                    _client.GantryDirection = value;
             }
         }
 
@@ -94,13 +101,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Isocenter") ? _client.Isocenter : default(VVector);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<VVector>(sc => { return local._client.Isocenter; });
+                    if (((ExpandoObject) _client).HasProperty("Isocenter"))
+                        return _client.Isocenter;
+                    else
+                        return default(VVector);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Isocenter; }
+                    );
+                return default(VVector);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Isocenter = value;
+                if (_client is ExpandoObject)
+                    _client.Isocenter = value;
             }
         }
 
@@ -109,28 +123,39 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("WeightFactor")
-                        ? _client.WeightFactor
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.WeightFactor; });
+                    if (((ExpandoObject) _client).HasProperty("WeightFactor"))
+                        return _client.WeightFactor;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.WeightFactor; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.WeightFactor = value;
+                if (_client is ExpandoObject)
+                    _client.WeightFactor = value;
             }
         }
 
         public void SetAllLeafPositions(float[,] leafPositions)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetAllLeafPositions(leafPositions); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.SetAllLeafPositions(leafPositions); }
+                );
+            else
+                _client.SetAllLeafPositions(leafPositions);
         }
 
         public void SetJawPositions(VRect<double> positions)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetJawPositions(positions); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.SetJawPositions(positions); }
+                );
+            else
+                _client.SetJawPositions(positions);
         }
     }
 }

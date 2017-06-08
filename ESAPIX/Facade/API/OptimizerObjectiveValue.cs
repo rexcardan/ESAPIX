@@ -2,10 +2,9 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
-
 
 namespace ESAPIX.Facade.API
 {
@@ -33,17 +32,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Structure") ? _client.Structure : default(Structure);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Structure)) return default(Structure);
-                    return new Structure(local._client.Structure);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Structure"))
+                        return _client.Structure;
+                    else
+                        return default(Structure);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Structure(_client.Structure); }
+                    );
+                return default(Structure);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Structure = value;
+                if (_client is ExpandoObject)
+                    _client.Structure = value;
             }
         }
 
@@ -52,13 +54,22 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Value") ? _client.Value : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Value; });
+                    if (((ExpandoObject) _client).HasProperty("Value"))
+                        return _client.Value;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Value; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Value = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.Value = value;
+                }
             }
         }
     }

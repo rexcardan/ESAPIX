@@ -4,14 +4,13 @@ using System;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Registration : ApiDataObject
+    public class Registration : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public Registration()
         {
@@ -23,25 +22,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public DateTime? CreationDateTime
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CreationDateTime")
-                        ? _client.CreationDateTime
-                        : default(DateTime?);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DateTime?>(sc => { return local._client.CreationDateTime; });
+                    if (((ExpandoObject) _client).HasProperty("CreationDateTime"))
+                        return _client.CreationDateTime;
+                    else
+                        return default(DateTime?);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CreationDateTime; }
+                    );
+                return default(DateTime?);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.CreationDateTime = value;
+                if (_client is ExpandoObject)
+                    _client.CreationDateTime = value;
             }
         }
 
@@ -50,15 +49,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("RegisteredFOR")
-                        ? _client.RegisteredFOR
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.RegisteredFOR; });
+                    if (((ExpandoObject) _client).HasProperty("RegisteredFOR"))
+                        return _client.RegisteredFOR;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.RegisteredFOR; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.RegisteredFOR = value;
+                if (_client is ExpandoObject)
+                    _client.RegisteredFOR = value;
             }
         }
 
@@ -67,13 +71,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("SourceFOR") ? _client.SourceFOR : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SourceFOR; });
+                    if (((ExpandoObject) _client).HasProperty("SourceFOR"))
+                        return _client.SourceFOR;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.SourceFOR; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.SourceFOR = value;
+                if (_client is ExpandoObject)
+                    _client.SourceFOR = value;
             }
         }
 
@@ -82,39 +93,43 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("TransformationMatrix")
-                        ? _client.TransformationMatrix
-                        : default(double[,]);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double[,]>(sc =>
-                {
-                    return local._client.TransformationMatrix;
-                });
+                    if (((ExpandoObject) _client).HasProperty("TransformationMatrix"))
+                        return _client.TransformationMatrix;
+                    else
+                        return default(double[,]);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TransformationMatrix; }
+                    );
+                return default(double[,]);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.TransformationMatrix = value;
+                if (_client is ExpandoObject)
+                    _client.TransformationMatrix = value;
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
 
         public VVector InverseTransformPoint(VVector pt)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.InverseTransformPoint(pt); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return _client.InverseTransformPoint(pt); }
+                );
+                return vmsResult;
+            }
+            return (VVector) _client.InverseTransformPoint(pt);
         }
 
         public VVector TransformPoint(VVector pt)
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.TransformPoint(pt); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return _client.TransformPoint(pt); }
+                );
+                return vmsResult;
+            }
+            return (VVector) _client.TransformPoint(pt);
         }
     }
 }

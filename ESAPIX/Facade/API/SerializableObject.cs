@@ -1,14 +1,14 @@
 #region
 
+using System;
 using System.Dynamic;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class SerializableObject
+    public class SerializableObject : System.Xml.Serialization.IXmlSerializable
     {
         internal dynamic _client;
 
@@ -29,26 +29,44 @@ namespace ESAPIX.Facade.API
 
         public System.Xml.Schema.XmlSchema GetSchema()
         {
-            var local = this;
-            var retVal = X.Instance.CurrentContext.GetValue(sc => { return local._client.GetSchema(); });
-            return retVal;
+            if (XC.Instance.CurrentContext != null)
+            {
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return _client.GetSchema(); }
+                );
+                return vmsResult;
+            }
+            return (System.Xml.Schema.XmlSchema) _client.GetSchema();
         }
 
         public void ReadXml(System.Xml.XmlReader reader)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.ReadXml(reader); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.ReadXml(reader); }
+                );
+            else
+                _client.ReadXml(reader);
         }
 
         public void WriteXml(System.Xml.XmlWriter writer)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.WriteXml(writer); }
+                );
+            else
+                _client.WriteXml(writer);
         }
 
         public static void ClearSerializationHistory()
         {
-            StaticHelper.SerializableObject_ClearSerializationHistory();
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        StaticHelper.SerializableObject_ClearSerializationHistory();
+                    }
+                );
+            else
+                throw new Exception(
+                    "Cannot connect to VMS system. Static methods will not work without an active connection");
         }
     }
 }

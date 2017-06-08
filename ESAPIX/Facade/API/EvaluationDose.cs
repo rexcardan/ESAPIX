@@ -1,14 +1,13 @@
 #region
 
 using System.Dynamic;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class EvaluationDose : Dose
+    public class EvaluationDose : Dose, System.Xml.Serialization.IXmlSerializable
     {
         public EvaluationDose()
         {
@@ -20,21 +19,13 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
-        }
-
         public void SetVoxels(int planeIndex, int[,] values)
         {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.SetVoxels(planeIndex, values); });
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.SetVoxels(planeIndex, values); }
+                );
+            else
+                _client.SetVoxels(planeIndex, values);
         }
     }
 }

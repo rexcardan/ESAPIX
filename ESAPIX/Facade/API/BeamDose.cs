@@ -1,14 +1,13 @@
 #region
 
 using System.Dynamic;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class BeamDose : Dose
+    public class BeamDose : Dose, System.Xml.Serialization.IXmlSerializable
     {
         public BeamDose()
         {
@@ -18,17 +17,6 @@ namespace ESAPIX.Facade.API
         public BeamDose(dynamic client)
         {
             _client = client;
-        }
-
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

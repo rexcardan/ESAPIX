@@ -2,14 +2,13 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationNormalTissueParameter : OptimizationParameter
+    public class OptimizationNormalTissueParameter : OptimizationParameter, System.Xml.Serialization.IXmlSerializable
     {
         public OptimizationNormalTissueParameter()
         {
@@ -21,28 +20,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public double DistanceFromTargetBorderInMM
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("DistanceFromTargetBorderInMM")
-                        ? _client.DistanceFromTargetBorderInMM
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc =>
-                {
-                    return local._client.DistanceFromTargetBorderInMM;
-                });
+                    if (((ExpandoObject) _client).HasProperty("DistanceFromTargetBorderInMM"))
+                        return _client.DistanceFromTargetBorderInMM;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.DistanceFromTargetBorderInMM; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.DistanceFromTargetBorderInMM = value;
+                if (_client is ExpandoObject)
+                    _client.DistanceFromTargetBorderInMM = value;
             }
         }
 
@@ -51,15 +47,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("EndDosePercentage")
-                        ? _client.EndDosePercentage
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.EndDosePercentage; });
+                    if (((ExpandoObject) _client).HasProperty("EndDosePercentage"))
+                        return _client.EndDosePercentage;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.EndDosePercentage; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.EndDosePercentage = value;
+                if (_client is ExpandoObject)
+                    _client.EndDosePercentage = value;
             }
         }
 
@@ -68,13 +69,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("FallOff") ? _client.FallOff : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.FallOff; });
+                    if (((ExpandoObject) _client).HasProperty("FallOff"))
+                        return _client.FallOff;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.FallOff; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.FallOff = value;
+                if (_client is ExpandoObject)
+                    _client.FallOff = value;
             }
         }
 
@@ -83,13 +91,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("IsAutomatic") ? _client.IsAutomatic : default(bool);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<bool>(sc => { return local._client.IsAutomatic; });
+                    if (((ExpandoObject) _client).HasProperty("IsAutomatic"))
+                        return _client.IsAutomatic;
+                    else
+                        return default(bool);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.IsAutomatic; }
+                    );
+                return default(bool);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.IsAutomatic = value;
+                if (_client is ExpandoObject)
+                    _client.IsAutomatic = value;
             }
         }
 
@@ -98,13 +113,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Priority") ? _client.Priority : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.Priority; });
+                    if (((ExpandoObject) _client).HasProperty("Priority"))
+                        return _client.Priority;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Priority; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Priority = value;
+                if (_client is ExpandoObject)
+                    _client.Priority = value;
             }
         }
 
@@ -113,22 +135,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("StartDosePercentage")
-                        ? _client.StartDosePercentage
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.StartDosePercentage; });
+                    if (((ExpandoObject) _client).HasProperty("StartDosePercentage"))
+                        return _client.StartDosePercentage;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.StartDosePercentage; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.StartDosePercentage = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.StartDosePercentage = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

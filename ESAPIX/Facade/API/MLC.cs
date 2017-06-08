@@ -2,14 +2,13 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class MLC : AddOn
+    public class MLC : AddOn, System.Xml.Serialization.IXmlSerializable
     {
         public MLC()
         {
@@ -21,25 +20,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public string ManufacturerName
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("ManufacturerName")
-                        ? _client.ManufacturerName
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.ManufacturerName; });
+                    if (((ExpandoObject) _client).HasProperty("ManufacturerName"))
+                        return _client.ManufacturerName;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ManufacturerName; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.ManufacturerName = value;
+                if (_client is ExpandoObject)
+                    _client.ManufacturerName = value;
             }
         }
 
@@ -48,18 +47,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MinDoseDynamicLeafGap")
-                        ? _client.MinDoseDynamicLeafGap
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc =>
-                {
-                    return local._client.MinDoseDynamicLeafGap;
-                });
+                    if (((ExpandoObject) _client).HasProperty("MinDoseDynamicLeafGap"))
+                        return _client.MinDoseDynamicLeafGap;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MinDoseDynamicLeafGap; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MinDoseDynamicLeafGap = value;
+                if (_client is ExpandoObject)
+                    _client.MinDoseDynamicLeafGap = value;
             }
         }
 
@@ -68,13 +69,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Model") ? _client.Model : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Model; });
+                    if (((ExpandoObject) _client).HasProperty("Model"))
+                        return _client.Model;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Model; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Model = value;
+                if (_client is ExpandoObject)
+                    _client.Model = value;
             }
         }
 
@@ -83,22 +91,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("SerialNumber")
-                        ? _client.SerialNumber
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.SerialNumber; });
+                    if (((ExpandoObject) _client).HasProperty("SerialNumber"))
+                        return _client.SerialNumber;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.SerialNumber; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.SerialNumber = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.SerialNumber = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

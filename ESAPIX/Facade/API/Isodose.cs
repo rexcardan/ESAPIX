@@ -3,14 +3,13 @@
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class Isodose : SerializableObject
+    public class Isodose : SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
         public Isodose()
         {
@@ -22,28 +21,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public System.Windows.Media.Color Color
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Color")
-                        ? _client.Color
-                        : default(System.Windows.Media.Color);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Windows.Media.Color>(sc =>
-                {
-                    return local._client.Color;
-                });
+                    if (((ExpandoObject) _client).HasProperty("Color"))
+                        return _client.Color;
+                    else
+                        return default(System.Windows.Media.Color);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Color; }
+                    );
+                return default(System.Windows.Media.Color);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Color = value;
+                if (_client is ExpandoObject)
+                    _client.Color = value;
             }
         }
 
@@ -52,13 +48,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Level") ? _client.Level : default(DoseValue);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.Level; });
+                    if (((ExpandoObject) _client).HasProperty("Level"))
+                        return _client.Level;
+                    else
+                        return default(DoseValue);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Level; }
+                    );
+                return default(DoseValue);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Level = value;
+                if (_client is ExpandoObject)
+                    _client.Level = value;
             }
         }
 
@@ -67,25 +70,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MeshGeometry")
-                        ? _client.MeshGeometry
-                        : default(System.Windows.Media.Media3D.MeshGeometry3D);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<System.Windows.Media.Media3D.MeshGeometry3D>(sc =>
-                {
-                    return local._client.MeshGeometry;
-                });
+                    if (((ExpandoObject) _client).HasProperty("MeshGeometry"))
+                        return _client.MeshGeometry;
+                    else
+                        return default(System.Windows.Media.Media3D.MeshGeometry3D);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MeshGeometry; }
+                    );
+                return default(System.Windows.Media.Media3D.MeshGeometry3D);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MeshGeometry = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.MeshGeometry = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

@@ -2,14 +2,13 @@
 
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class ExternalBeamTreatmentUnit : ApiDataObject
+    public class ExternalBeamTreatmentUnit : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public ExternalBeamTreatmentUnit()
         {
@@ -21,25 +20,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public string MachineModel
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MachineModel")
-                        ? _client.MachineModel
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModel; });
+                    if (((ExpandoObject) _client).HasProperty("MachineModel"))
+                        return _client.MachineModel;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MachineModel; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MachineModel = value;
+                if (_client is ExpandoObject)
+                    _client.MachineModel = value;
             }
         }
 
@@ -48,15 +47,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MachineModelName")
-                        ? _client.MachineModelName
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.MachineModelName; });
+                    if (((ExpandoObject) _client).HasProperty("MachineModelName"))
+                        return _client.MachineModelName;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MachineModelName; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MachineModelName = value;
+                if (_client is ExpandoObject)
+                    _client.MachineModelName = value;
             }
         }
 
@@ -65,18 +69,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MachineScaleDisplayName")
-                        ? _client.MachineScaleDisplayName
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc =>
-                {
-                    return local._client.MachineScaleDisplayName;
-                });
+                    if (((ExpandoObject) _client).HasProperty("MachineScaleDisplayName"))
+                        return _client.MachineScaleDisplayName;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MachineScaleDisplayName; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MachineScaleDisplayName = value;
+                if (_client is ExpandoObject)
+                    _client.MachineScaleDisplayName = value;
             }
         }
 
@@ -85,22 +91,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("SourceAxisDistance")
-                        ? _client.SourceAxisDistance
-                        : default(double);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<double>(sc => { return local._client.SourceAxisDistance; });
+                    if (((ExpandoObject) _client).HasProperty("SourceAxisDistance"))
+                        return _client.SourceAxisDistance;
+                    else
+                        return default(double);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.SourceAxisDistance; }
+                    );
+                return default(double);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.SourceAxisDistance = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.SourceAxisDistance = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

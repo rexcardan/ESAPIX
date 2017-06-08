@@ -3,14 +3,13 @@
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class EstimatedDVH : ApiDataObject
+    public class EstimatedDVH : ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
         public EstimatedDVH()
         {
@@ -22,25 +21,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public DVHPoint[] CurveData
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("CurveData")
-                        ? _client.CurveData
-                        : default(DVHPoint[]);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DVHPoint[]>(sc => { return local._client.CurveData; });
+                    if (((ExpandoObject) _client).HasProperty("CurveData"))
+                        return _client.CurveData;
+                    else
+                        return default(DVHPoint[]);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CurveData; }
+                    );
+                return default(DVHPoint[]);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.CurveData = value;
+                if (_client is ExpandoObject)
+                    _client.CurveData = value;
             }
         }
 
@@ -49,17 +48,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("PlanSetup") ? _client.PlanSetup : default(PlanSetup);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.PlanSetup)) return default(PlanSetup);
-                    return new PlanSetup(local._client.PlanSetup);
-                });
+                    if (((ExpandoObject) _client).HasProperty("PlanSetup"))
+                        return _client.PlanSetup;
+                    else
+                        return default(PlanSetup);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new PlanSetup(_client.PlanSetup); }
+                    );
+                return default(PlanSetup);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PlanSetup = value;
+                if (_client is ExpandoObject)
+                    _client.PlanSetup = value;
             }
         }
 
@@ -68,15 +70,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("PlanSetupId")
-                        ? _client.PlanSetupId
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.PlanSetupId; });
+                    if (((ExpandoObject) _client).HasProperty("PlanSetupId"))
+                        return _client.PlanSetupId;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.PlanSetupId; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.PlanSetupId = value;
+                if (_client is ExpandoObject)
+                    _client.PlanSetupId = value;
             }
         }
 
@@ -85,17 +92,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Structure") ? _client.Structure : default(Structure);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue(sc =>
-                {
-                    if (DefaultHelper.IsDefault(local._client.Structure)) return default(Structure);
-                    return new Structure(local._client.Structure);
-                });
+                    if (((ExpandoObject) _client).HasProperty("Structure"))
+                        return _client.Structure;
+                    else
+                        return default(Structure);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new Structure(_client.Structure); }
+                    );
+                return default(Structure);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Structure = value;
+                if (_client is ExpandoObject)
+                    _client.Structure = value;
             }
         }
 
@@ -104,15 +114,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("StructureId")
-                        ? _client.StructureId
-                        : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.StructureId; });
+                    if (((ExpandoObject) _client).HasProperty("StructureId"))
+                        return _client.StructureId;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.StructureId; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.StructureId = value;
+                if (_client is ExpandoObject)
+                    _client.StructureId = value;
             }
         }
 
@@ -121,15 +136,20 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("TargetDoseLevel")
-                        ? _client.TargetDoseLevel
-                        : default(DoseValue);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DoseValue>(sc => { return local._client.TargetDoseLevel; });
+                    if (((ExpandoObject) _client).HasProperty("TargetDoseLevel"))
+                        return _client.TargetDoseLevel;
+                    else
+                        return default(DoseValue);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TargetDoseLevel; }
+                    );
+                return default(DoseValue);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.TargetDoseLevel = value;
+                if (_client is ExpandoObject)
+                    _client.TargetDoseLevel = value;
             }
         }
 
@@ -138,20 +158,23 @@ namespace ESAPIX.Facade.API
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Type") ? _client.Type : default(DVHEstimateType);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<DVHEstimateType>(sc => { return local._client.Type; });
+                    if (((ExpandoObject) _client).HasProperty("Type"))
+                        return _client.Type;
+                    else
+                        return default(DVHEstimateType);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Type; }
+                    );
+                return default(DVHEstimateType);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Type = value;
+                if (_client is ExpandoObject)
+                {
+                    _client.Type = value;
+                }
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }

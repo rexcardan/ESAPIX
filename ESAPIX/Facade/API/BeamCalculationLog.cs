@@ -4,14 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
-using X = ESAPIX.Facade.XContext;
+using XC = ESAPIX.Facade.XContext;
 
 #endregion
 
-
 namespace ESAPIX.Facade.API
 {
-    public class BeamCalculationLog : SerializableObject
+    public class BeamCalculationLog : SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
         public BeamCalculationLog()
         {
@@ -23,23 +22,25 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
         public string Category
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("Category") ? _client.Category : default(string);
-                var local = this;
-                return X.Instance.CurrentContext.GetValue<string>(sc => { return local._client.Category; });
+                    if (((ExpandoObject) _client).HasProperty("Category"))
+                        return _client.Category;
+                    else
+                        return default(string);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Category; }
+                    );
+                return default(string);
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.Category = value;
+                if (_client is ExpandoObject)
+                    _client.Category = value;
             }
         }
 
@@ -50,41 +51,39 @@ namespace ESAPIX.Facade.API
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("MessageLines"))
-                        foreach (var item in _client.MessageLines) yield return item;
-                    else yield break;
+                        foreach (var item in _client.MessageLines)
+                            yield return item;
+                    else
+                        yield break;
                 }
                 else
                 {
                     IEnumerator enumerator = null;
-                    X.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable) _client.MessageLines;
-                        enumerator = asEnum.GetEnumerator();
-                    });
-                    while (X.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var asEnum = (IEnumerable) _client.MessageLines;
+                            enumerator = asEnum.GetEnumerator();
+                        }
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
                         var facade = default(string);
-                        X.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var vms = enumerator.Current;
-                            if (vms != null)
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
                                 facade = (string) vms;
-                        });
-                        if (facade != null)
-                            yield return facade;
+                            }
+                        );
+                        yield return facade;
                     }
                 }
             }
+
             set
             {
-                if (_client is ExpandoObject) _client.MessageLines = value;
+                if (_client is ExpandoObject)
+                    _client.MessageLines = value;
             }
-        }
-
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            var local = this;
-            X.Instance.CurrentContext.Thread.Invoke(() => { local._client.WriteXml(writer); });
         }
     }
 }
