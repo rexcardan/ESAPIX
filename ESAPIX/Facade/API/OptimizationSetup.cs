@@ -155,8 +155,8 @@ namespace ESAPIX.Facade.API
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return new OptimizationIMRTBeamParameter(
-                            _client.AddBeamSpecificParameter(beam, smoothX, smoothY, fixedJaws));
+                        return new OptimizationIMRTBeamParameter(_client.AddBeamSpecificParameter(beam._client, smoothX,
+                            smoothY, fixedJaws));
                     }
                 );
                 return vmsResult;
@@ -171,8 +171,8 @@ namespace ESAPIX.Facade.API
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return new OptimizationEUDObjective(
-                            _client.AddEUDObjective(structure, objectiveOperator, dose, parameterA, priority));
+                        return new OptimizationEUDObjective(_client.AddEUDObjective(structure._client,
+                            objectiveOperator, dose, parameterA, priority));
                     }
                 );
                 return vmsResult;
@@ -187,7 +187,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
                         return new OptimizationMeanDoseObjective(
-                            _client.AddMeanDoseObjective(structure, dose, priority));
+                            _client.AddMeanDoseObjective(structure._client, dose, priority));
                     }
                 );
                 return vmsResult;
@@ -219,8 +219,8 @@ namespace ESAPIX.Facade.API
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return new OptimizationPointObjective(_client.AddPointObjective(structure, objectiveOperator,
-                            dose, volume, priority));
+                        return new OptimizationPointObjective(_client.AddPointObjective(structure._client,
+                            objectiveOperator, dose, volume, priority));
                     }
                 );
                 return vmsResult;
@@ -254,7 +254,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
                         return new OptimizationPointCloudParameter(
-                            _client.AddStructurePointCloudParameter(structure, pointResolutionInMM));
+                            _client.AddStructurePointCloudParameter(structure._client, pointResolutionInMM));
                     }
                 );
                 return vmsResult;

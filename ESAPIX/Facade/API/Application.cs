@@ -1,104 +1,83 @@
+#region
+
 using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.Dynamic;
 using ESAPIX.Extensions;
-using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-using Types = VMS.TPS.Common.Model.Types;
+
+#endregion
 
 namespace ESAPIX.Facade.API
 {
-    public class Application : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable, System.IDisposable
+    public class Application : SerializableObject, System.Xml.Serialization.IXmlSerializable, IDisposable
     {
-        public ESAPIX.Facade.API.User CurrentUser
+        public Application()
+        {
+            _client = new ExpandoObject();
+        }
+
+        public Application(dynamic client)
+        {
+            _client = client;
+        }
+
+        public User CurrentUser
         {
             get
             {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("CurrentUser"))
-                    {
+                if (_client is ExpandoObject)
+                    if (((ExpandoObject) _client).HasProperty("CurrentUser"))
                         return _client.CurrentUser;
-                    }
                     else
-                    {
-                        return default (ESAPIX.Facade.API.User);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new ESAPIX.Facade.API.User(_client.CurrentUser);
-                    }
-
+                        return default(User);
+                if (XC.Instance.CurrentContext != null)
+                    return XC.Instance.CurrentContext.GetValue(sc => { return new User(_client.CurrentUser); }
                     );
-                }
-                else
-                {
-                    return default (ESAPIX.Facade.API.User);
-                }
+                return default(User);
             }
 
             set
             {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.CurrentUser = (value);
-                }
-                else
-                {
-                }
+                if (_client is ExpandoObject)
+                    _client.CurrentUser = value;
             }
         }
 
-        public IEnumerable<ESAPIX.Facade.API.PatientSummary> PatientSummaries
+        public IEnumerable<PatientSummary> PatientSummaries
         {
             get
             {
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("PatientSummaries"))
-                    {
                         foreach (var item in _client.PatientSummaries)
-                        {
                             yield return item;
-                        }
-                    }
                     else
-                    {
                         yield break;
-                    }
                 }
                 else
                 {
                     IEnumerator enumerator = null;
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
-                    {
-                        var asEnum = (IEnumerable)_client.PatientSummaries;
-                        enumerator = asEnum.GetEnumerator();
-                    }
-
-                    );
-                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
-                    {
-                        var facade = new ESAPIX.Facade.API.PatientSummary();
-                        XC.Instance.CurrentContext.Thread.Invoke(() =>
                         {
-                            var vms = enumerator.Current;
-                            if (vms != null)
-                            {
-                                facade._client = vms;
-                            }
+                            var asEnum = (IEnumerable) _client.PatientSummaries;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
+                    );
+                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new PatientSummary();
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                            {
+                                var vms = enumerator.Current;
+                                if (vms != null)
+                                    facade._client = vms;
+                            }
                         );
                         if (facade._client != null)
-                        {
                             yield return facade;
-                        }
                     }
                 }
             }
@@ -110,106 +89,62 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public static ESAPIX.Facade.API.Application CreateApplication(System.String username, System.String password, bool singleThread = false)
+        public void Dispose()
         {
-            return StaticHelper.Application_CreateApplication(username, password, singleThread);
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.Dispose(); }
+                );
+            else
+                _client.Dispose();
         }
 
-        public ESAPIX.Facade.API.Patient OpenPatient(ESAPIX.Facade.API.PatientSummary patientSummary)
+        public static Application CreateApplication(string username, string password, bool useSingleThread=false)
         {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
-                {
-                    return new ESAPIX.Facade.API.Patient(_client.OpenPatient(patientSummary));
-                }
-
-                ));
-                return vmsResult;
-            }
-            else
-            {
-                return _client.OpenPatient(patientSummary);
-            }
+            return StaticHelper.Application_CreateApplication(username, password, useSingleThread);
         }
 
-        public ESAPIX.Facade.API.Patient OpenPatientById(System.String id)
+        public Patient OpenPatient(PatientSummary patientSummary)
         {
-            if ((XC.Instance.CurrentContext) != (null))
+            if (XC.Instance.CurrentContext != null)
             {
-                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
-                {
-                    return new ESAPIX.Facade.API.Patient(_client.OpenPatientById(id));
-                }
-
-                ));
+                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return new Patient(_client.OpenPatient(patientSummary._client));
+                    }
+                );
                 return vmsResult;
             }
-            else
+            return _client.OpenPatient(patientSummary);
+        }
+
+        public Patient OpenPatientById(string id)
+        {
+            if (XC.Instance.CurrentContext != null)
             {
-                return _client.OpenPatientById(id);
+                var vmsResult = XC.Instance.CurrentContext.GetValue(
+                    sc => { return new Patient(_client.OpenPatientById(id)); }
+                );
+                return vmsResult;
             }
+            return _client.OpenPatientById(id);
         }
 
         public void ClosePatient()
         {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                XC.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client.ClosePatient();
-                }
-
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.ClosePatient(); }
                 );
-            }
             else
-            {
                 _client.ClosePatient();
-            }
         }
 
         public void SaveModifications()
         {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                XC.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client.SaveModifications();
-                }
-
+            if (XC.Instance.CurrentContext != null)
+                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.SaveModifications(); }
                 );
-            }
             else
-            {
                 _client.SaveModifications();
-            }
-        }
-
-        public void Dispose()
-        {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                XC.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client.Dispose();
-                }
-
-                );
-            }
-            else
-            {
-                _client.Dispose();
-            }
-        }
-
-        public Application()
-        {
-            _client = (new ExpandoObject());
-        }
-
-        public Application(dynamic client)
-        {
-            _client = (client);
         }
     }
 }

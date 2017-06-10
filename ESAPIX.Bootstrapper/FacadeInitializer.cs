@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Dynamic;
-using ESAPIX.Extensions;
+using System;
 using ESAPIX.Facade;
 using V = VMS.TPS.Common.Model.API;
-using X= ESAPIX.Facade.API;
-using T = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Bootstrapper
 {

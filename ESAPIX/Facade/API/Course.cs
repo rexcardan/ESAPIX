@@ -359,7 +359,7 @@ namespace ESAPIX.Facade.API
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return new ExternalPlanSetup(_client.AddExternalPlanSetup(structureSet));
+                        return new ExternalPlanSetup(_client.AddExternalPlanSetup(structureSet._client));
                     }
                 );
                 return vmsResult;
@@ -375,7 +375,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
                         return new ExternalPlanSetup(
-                            _client.AddExternalPlanSetupAsVerificationPlan(structureSet, verifiedPlan));
+                            _client.AddExternalPlanSetupAsVerificationPlan(structureSet._client, verifiedPlan._client));
                     }
                 );
                 return vmsResult;

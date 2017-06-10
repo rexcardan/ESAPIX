@@ -25,7 +25,7 @@ namespace ESAPIX.Facade.API
             if (XC.Instance.CurrentContext != null)
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.And(other)); }
+                    sc => { return new SegmentVolume(_client.And(other._client)); }
                 );
                 return vmsResult;
             }
@@ -74,7 +74,7 @@ namespace ESAPIX.Facade.API
             if (XC.Instance.CurrentContext != null)
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.Or(other)); }
+                    sc => { return new SegmentVolume(_client.Or(other._client)); }
                 );
                 return vmsResult;
             }
@@ -86,7 +86,7 @@ namespace ESAPIX.Facade.API
             if (XC.Instance.CurrentContext != null)
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.Sub(other)); }
+                    sc => { return new SegmentVolume(_client.Sub(other._client)); }
                 );
                 return vmsResult;
             }
@@ -98,7 +98,7 @@ namespace ESAPIX.Facade.API
             if (XC.Instance.CurrentContext != null)
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.Xor(other)); }
+                    sc => { return new SegmentVolume(_client.Xor(other._client)); }
                 );
                 return vmsResult;
             }

@@ -585,7 +585,7 @@ namespace ESAPIX.Facade.API
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return new StructureSet(_client.CopyImageFromOtherPatient(targetStudy, otherPatientId,
+                        return new StructureSet(_client.CopyImageFromOtherPatient(targetStudy._client, otherPatientId,
                             otherPatientStudyId, otherPatient3DImageId));
                     }
                 );
