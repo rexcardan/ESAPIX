@@ -209,8 +209,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(SegmentVolume);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(
-                        sc => { return new SegmentVolume(_client.SegmentVolume); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.SegmentVolume != null)
+                                return new SegmentVolume(_client.SegmentVolume);
+                            return null;
+                        }
                     );
                 return default(SegmentVolume);
             }

@@ -34,7 +34,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Applicator);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Applicator(_client.Applicator); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Applicator != null)
+                                return new Applicator(_client.Applicator);
+                            return null;
+                        }
                     );
                 return default(Applicator);
             }
@@ -254,7 +259,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Compensator);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Compensator(_client.Compensator); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Compensator != null)
+                                return new Compensator(_client.Compensator);
+                            return null;
+                        }
                     );
                 return default(Compensator);
             }
@@ -278,7 +288,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new ControlPointCollection(_client.ControlPoints);
+                            if (_client.ControlPoints != null)
+                                return new ControlPointCollection(_client.ControlPoints);
+                            return null;
                         }
                     );
                 return default(ControlPointCollection);
@@ -323,7 +335,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(BeamDose);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new BeamDose(_client.Dose); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Dose != null)
+                                return new BeamDose(_client.Dose);
+                            return null;
+                        }
                     );
                 return default(BeamDose);
             }
@@ -543,7 +560,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(MLC);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new MLC(_client.MLC); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.MLC != null)
+                                return new MLC(_client.MLC);
+                            return null;
+                        }
                     );
                 return default(MLC);
             }
@@ -675,7 +697,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Image);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Image(_client.ReferenceImage); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.ReferenceImage != null)
+                                return new Image(_client.ReferenceImage);
+                            return null;
+                        }
                     );
                 return default(Image);
             }
@@ -763,7 +790,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Technique);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Technique(_client.Technique); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Technique != null)
+                                return new Technique(_client.Technique);
+                            return null;
+                        }
                     );
                 return default(Technique);
             }
@@ -853,7 +885,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new ExternalBeamTreatmentUnit(_client.TreatmentUnit);
+                            if (_client.TreatmentUnit != null)
+                                return new ExternalBeamTreatmentUnit(_client.TreatmentUnit);
+                            return null;
                         }
                     );
                 return default(ExternalBeamTreatmentUnit);
@@ -986,7 +1020,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(ExternalBeam);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new ExternalBeam(_client.ExternalBeam); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.ExternalBeam != null)
+                                return new ExternalBeam(_client.ExternalBeam);
+                            return null;
+                        }
                     );
                 return default(ExternalBeam);
             }

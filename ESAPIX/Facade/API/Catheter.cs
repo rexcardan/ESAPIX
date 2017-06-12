@@ -211,7 +211,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new BrachyTreatmentUnit(_client.TreatmentUnit);
+                            if (_client.TreatmentUnit != null)
+                                return new BrachyTreatmentUnit(_client.TreatmentUnit);
+                            return null;
                         }
                     );
                 return default(BrachyTreatmentUnit);

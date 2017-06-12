@@ -33,7 +33,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(User);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new User(_client.CurrentUser); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.CurrentUser != null)
+                                return new User(_client.CurrentUser);
+                            return null;
+                        }
                     );
                 return default(User);
             }
@@ -98,7 +103,7 @@ namespace ESAPIX.Facade.API
                 _client.Dispose();
         }
 
-        public static Application CreateApplication(string username, string password, bool useSingleThread=false)
+        public static Application CreateApplication(string username, string password, bool useSingleThread = false)
         {
             return StaticHelper.Application_CreateApplication(username, password, useSingleThread);
         }

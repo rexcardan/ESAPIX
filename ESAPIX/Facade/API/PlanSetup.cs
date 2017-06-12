@@ -99,7 +99,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Course);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Course(_client.Course); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Course != null)
+                                return new Course(_client.Course);
+                            return null;
+                        }
                     );
                 return default(Course);
             }
@@ -277,7 +282,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new OptimizationSetup(_client.OptimizationSetup);
+                            if (_client.OptimizationSetup != null)
+                                return new OptimizationSetup(_client.OptimizationSetup);
+                            return null;
                         }
                     );
                 return default(OptimizationSetup);
@@ -500,7 +507,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new ReferencePoint(_client.PrimaryReferencePoint);
+                            if (_client.PrimaryReferencePoint != null)
+                                return new ReferencePoint(_client.PrimaryReferencePoint);
+                            return null;
                         }
                     );
                 return default(ReferencePoint);
@@ -611,7 +620,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Series);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Series(_client.Series); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Series != null)
+                                return new Series(_client.Series);
+                            return null;
+                        }
                     );
                 return default(Series);
             }
@@ -655,7 +669,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(StructureSet);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new StructureSet(_client.StructureSet); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.StructureSet != null)
+                                return new StructureSet(_client.StructureSet);
+                            return null;
+                        }
                     );
                 return default(StructureSet);
             }
@@ -811,7 +830,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new Fractionation(_client.UniqueFractionation);
+                            if (_client.UniqueFractionation != null)
+                                return new Fractionation(_client.UniqueFractionation);
+                            return null;
                         }
                     );
                 return default(Fractionation);
@@ -834,7 +855,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(PlanSetup);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new PlanSetup(_client.VerifiedPlan); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.VerifiedPlan != null)
+                                return new PlanSetup(_client.VerifiedPlan);
+                            return null;
+                        }
                     );
                 return default(PlanSetup);
             }

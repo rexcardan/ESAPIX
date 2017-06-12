@@ -34,7 +34,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new EvaluationDose(_client.DoseAsEvaluationDose);
+                            if (_client.DoseAsEvaluationDose != null)
+                                return new EvaluationDose(_client.DoseAsEvaluationDose);
+                            return null;
                         }
                     );
                 return default(EvaluationDose);

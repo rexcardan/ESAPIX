@@ -209,7 +209,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Study);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Study(_client.Study); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Study != null)
+                                return new Study(_client.Study);
+                            return null;
+                        }
                     );
                 return default(Study);
             }

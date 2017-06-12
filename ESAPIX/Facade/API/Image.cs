@@ -231,7 +231,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Series);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Series(_client.Series); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Series != null)
+                                return new Series(_client.Series);
+                            return null;
+                        }
                     );
                 return default(Series);
             }

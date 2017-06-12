@@ -54,7 +54,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(PlanningItemDose);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new PlanningItemDose(_client.Dose); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Dose != null)
+                                return new PlanningItemDose(_client.Dose);
+                            return null;
+                        }
                     );
                 return default(PlanningItemDose);
             }

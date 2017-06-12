@@ -119,8 +119,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(ReferencePoint);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(
-                        sc => { return new ReferencePoint(_client.ReferencePoint); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.ReferencePoint != null)
+                                return new ReferencePoint(_client.ReferencePoint);
+                            return null;
+                        }
                     );
                 return default(ReferencePoint);
             }

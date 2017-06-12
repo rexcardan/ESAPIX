@@ -30,7 +30,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(AddOnMaterial);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new AddOnMaterial(_client.Material); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Material != null)
+                                return new AddOnMaterial(_client.Material);
+                            return null;
+                        }
                     );
                 return default(AddOnMaterial);
             }
@@ -52,7 +57,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Slot);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Slot(_client.Slot); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Slot != null)
+                                return new Slot(_client.Slot);
+                            return null;
+                        }
                     );
                 return default(Slot);
             }
@@ -74,7 +84,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Tray);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Tray(_client.Tray); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Tray != null)
+                                return new Tray(_client.Tray);
+                            return null;
+                        }
                     );
                 return default(Tray);
             }

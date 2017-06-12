@@ -33,7 +33,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(ControlPoint);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new ControlPoint(_client[index]); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client[index] != null)
+                                return new ControlPoint(_client[index]);
+                            return null;
+                        }
                     );
                 return default(ControlPoint);
             }

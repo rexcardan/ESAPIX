@@ -53,7 +53,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(PlanSetup);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new PlanSetup(_client.PlanSetup); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.PlanSetup != null)
+                                return new PlanSetup(_client.PlanSetup);
+                            return null;
+                        }
                     );
                 return default(PlanSetup);
             }
@@ -97,7 +102,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Structure);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Structure(_client.Structure); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Structure != null)
+                                return new Structure(_client.Structure);
+                            return null;
+                        }
                     );
                 return default(Structure);
             }

@@ -30,7 +30,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Beam);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Beam(_client.Beam); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Beam != null)
+                                return new Beam(_client.Beam);
+                            return null;
+                        }
                     );
                 return default(Beam);
             }

@@ -76,7 +76,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Image);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Image(_client.Image); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Image != null)
+                                return new Image(_client.Image);
+                            return null;
+                        }
                     );
                 return default(Image);
             }

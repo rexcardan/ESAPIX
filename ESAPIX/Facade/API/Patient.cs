@@ -166,7 +166,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Hospital);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Hospital(_client.Hospital); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Hospital != null)
+                                return new Hospital(_client.Hospital);
+                            return null;
+                        }
                     );
                 return default(Hospital);
             }

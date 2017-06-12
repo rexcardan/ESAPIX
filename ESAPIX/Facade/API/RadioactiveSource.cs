@@ -77,7 +77,9 @@ namespace ESAPIX.Facade.API
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
-                            return new RadioactiveSourceModel(_client.RadioactiveSourceModel);
+                            if (_client.RadioactiveSourceModel != null)
+                                return new RadioactiveSourceModel(_client.RadioactiveSourceModel);
+                            return null;
                         }
                     );
                 return default(RadioactiveSourceModel);

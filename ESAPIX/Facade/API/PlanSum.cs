@@ -33,7 +33,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(Course);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new Course(_client.Course); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.Course != null)
+                                return new Course(_client.Course);
+                            return null;
+                        }
                     );
                 return default(Course);
             }
@@ -99,7 +104,12 @@ namespace ESAPIX.Facade.API
                     else
                         return default(StructureSet);
                 if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return new StructureSet(_client.StructureSet); }
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                        {
+                            if (_client.StructureSet != null)
+                                return new StructureSet(_client.StructureSet);
+                            return null;
+                        }
                     );
                 return default(StructureSet);
             }
