@@ -1,0 +1,18 @@
+﻿<Window x:Class="$safeprojectname$.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:local="clr-namespace:$safeprojectname$.Views"
+        mc:Ignorable="d"
+        Title="MainView" Height="300" Width="300" Icon="../Resources/esapix.png">
+    <Grid>
+        <!--EXAMPLE DATA BIND-->
+        <TextBlock TextAlignment="Center" FontSize="14">
+            <Run Text="{Binding Username}" FontWeight="Bold" />
+            <Run Text=" is currently logged in"/>
+        </TextBlock>
+    </Grid>
+</Window>

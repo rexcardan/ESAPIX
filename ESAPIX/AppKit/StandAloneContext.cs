@@ -150,7 +150,7 @@ namespace ESAPIX.AppKit
 
         public void OnPatientChanged(Patient p)
         {
-            PatientChanged?.Invoke(p);
+            UIDispatcher.Invoke(() => PatientChanged?.Invoke(p));
         }
 
         public delegate void PlanSetupChangedHandler(PlanSetup ps);
@@ -159,7 +159,7 @@ namespace ESAPIX.AppKit
 
         public void OnPlanSetupChanged(PlanSetup ps)
         {
-            PlanSetupChanged?.Invoke(ps);
+            UIDispatcher.Invoke(() => PlanSetupChanged?.Invoke(ps));
         }
 
         public delegate void ExternalPlanSetupChangedHandler(ExternalPlanSetup ps);
@@ -168,7 +168,7 @@ namespace ESAPIX.AppKit
 
         public void OnExternalPlanSetupChanged(ExternalPlanSetup ps)
         {
-            ExternalPlanSetupChanged?.Invoke(ps);
+            UIDispatcher.Invoke(() => ExternalPlanSetupChanged?.Invoke(ps));
         }
 
         public delegate void BrachyPlanSetupChangedHandler(BrachyPlanSetup ps);
@@ -177,7 +177,7 @@ namespace ESAPIX.AppKit
 
         public void OnBrachyPlanSetupChanged(BrachyPlanSetup ps)
         {
-            BrachyPlanSetupChanged?.Invoke(ps);
+            UIDispatcher.Invoke(() => BrachyPlanSetupChanged?.Invoke(ps));
         }
 
         public delegate void CourseChangedHandler(Course c);
@@ -186,7 +186,7 @@ namespace ESAPIX.AppKit
 
         public void OnCourseChanged(Course c)
         {
-            CourseChanged?.Invoke(c);
+            UIDispatcher.Invoke(() => CourseChanged?.Invoke(c));
         }
 
         public async Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
