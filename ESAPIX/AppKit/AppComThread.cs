@@ -48,6 +48,7 @@ namespace ESAPIX.AppKit
                         }
 
                     });
+                    thread.Name = "ESAPIX Thread";
                     thread.IsBackground = true;
                     thread.SetApartmentState(ApartmentState.STA);
                     thread.Start();

@@ -164,7 +164,7 @@ namespace ESAPIX.Facade.API
                     return (_client as ExpandoObject).HasProperty("MeshGeometry")
                         ? _client.MeshGeometry
                         : default(System.Windows.Media.Media3D.MeshGeometry3D);
-                var local = this;
+
                 MeshGeometry3D mesh = new MeshGeometry3D();
                 Point3D[] points = new Point3D[0];
                 Vector3D[] normals = new Vector3D[0];

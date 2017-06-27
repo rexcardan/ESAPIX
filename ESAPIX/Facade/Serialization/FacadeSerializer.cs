@@ -29,7 +29,7 @@ namespace ESAPIX.Facade.Serialization
                 return new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,
-                    ContractResolver = new InfiniteLoopResolver()
+                    ContractResolver = new ESAPIContractResolver()
                 };
             }
         }

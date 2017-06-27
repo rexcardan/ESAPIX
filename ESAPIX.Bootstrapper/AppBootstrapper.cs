@@ -10,6 +10,8 @@ using ESAPIX.Interfaces;
 using Microsoft.Practices.Unity;
 using Prism.Events;
 using Prism.Unity;
+using Newtonsoft.Json;
+using System.IO;
 
 #endregion
 
@@ -17,7 +19,7 @@ namespace ESAPIX.Bootstrapper
 {
     public class AppBootstrapper<T> : UnityBootstrapper where T : Window
     {
-        private readonly StandAloneContext _ctx;
+        private IScriptContext _ctx;
         private readonly EventAggregator _ea;
 
         public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
@@ -25,6 +27,13 @@ namespace ESAPIX.Bootstrapper
             FacadeInitializer.Initialize();
             _ctx = StandAloneContext.Create(vmsUsername, vmsPassword, singleThread);
             _ea = new EventAggregator();
+        }
+
+        public void LoadOfflineContext(string jsonContextPath)
+        {
+            var json = File.ReadAllText(jsonContextPath);
+            var ctx = JsonConvert.DeserializeObject<OfflineContext>(json, Facade.Serialization.FacadeSerializer.DeserializeSettings);
+            _ctx = ctx;
         }
 
         protected override DependencyObject CreateShell()
@@ -47,7 +56,10 @@ namespace ESAPIX.Bootstrapper
             shell.Closed += (send, args) =>
             {
                 //Dispose ESAPI and shutdown app
-                _ctx.Dispose();
+                if(_ctx is StandAloneContext)
+                {
+                    (_ctx as StandAloneContext).Dispose();
+                }
                 Application.Current.Shutdown();
             };
 
@@ -76,13 +88,14 @@ namespace ESAPIX.Bootstrapper
         private void shell_ContentRendered(object sender, EventArgs e)
         {
             var shell = sender as Window;
-            if (shell != null)
+            if (shell != null && _ctx is StandAloneContext)
             {
+                var sac = _ctx as StandAloneContext;
                 var currentContent = (UIElement) shell.Content;
                 var stackPanel = new DockPanel();
                 stackPanel.VerticalAlignment = VerticalAlignment.Stretch;
                 shell.Content = stackPanel;
-                var selectPat = new SelectPatient(_ctx);
+                var selectPat = new SelectPatient(sac);
                 var selectPatContent = (FrameworkElement) selectPat.Content;
                 selectPatContent.DataContext = selectPat;
                 selectPat.Content = null;

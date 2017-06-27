@@ -103,6 +103,7 @@
     <Compile Include="AppKit\Data\AppSettings.cs" />
     <Compile Include="AppKit\Data\JsonDataStore.cs" />
     <Compile Include="AppKit\Data\SecureStorage.cs" />
+    <Compile Include="AppKit\OfflineContext.cs" />
     <Compile Include="AppKit\Overlay\SelectPatient.xaml.cs">
       <DependentUpon>SelectPatient.xaml</DependentUpon>
     </Compile>
@@ -237,10 +238,9 @@
     <Compile Include="Facade\API\Wedge.cs" />
     <Compile Include="Facade\DefaultHelper.cs" />
     <Compile Include="Facade\ExpandoGetter.cs" />
+    <Compile Include="Facade\Serialization\ESAPIContractResolver.cs" />
     <Compile Include="Facade\Serialization\FacadeSerializer.cs" />
-    <Compile Include="Facade\Serialization\InfiniteLoopResolver.cs" />
     <Compile Include="Facade\Serialization\MeshGeometryConverter.cs" />
-    <Compile Include="Facade\Serialization\SerializedMethod.cs" />
     <Compile Include="Facade\StaticHelper.cs" />
     <Compile Include="Facade\VMSConstructor.cs" />
     <Compile Include="Helpers\FileHelper.cs" />
