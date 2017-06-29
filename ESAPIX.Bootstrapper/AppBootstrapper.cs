@@ -12,6 +12,7 @@ using Prism.Events;
 using Prism.Unity;
 using Newtonsoft.Json;
 using System.IO;
+using ESAPIX.Facade.Serialization;
 
 #endregion
 
@@ -42,8 +43,7 @@ namespace ESAPIX.Bootstrapper
         public AppBootstrapper(string offlineContextPath)
         {
             FacadeInitializer.Initialize();
-            var json = File.ReadAllText(offlineContextPath);
-            var ctx = JsonConvert.DeserializeObject<OfflineContext>(json, Facade.Serialization.FacadeSerializer.DeserializeSettings);
+            var ctx = FacadeSerializer.DeserializeContext(offlineContextPath);
             ctx.Thread = new AppComThread();
             _ctx = ctx;
             _ea = new EventAggregator();

@@ -28,20 +28,20 @@ namespace ESAPIX.Facade.Serialization
                 case nameof(IScriptContext.ExternalPlanSetup):
                     excludingNames.Add(nameof(ExternalPlanSetup.Course));
                     break;
-                case "BrachyPlanSetup":
-                    excludingNames.Add("Course");
+                case nameof(IScriptContext.BrachyPlanSetup):
+                    excludingNames.Add(nameof(BrachyPlanSetup.Course));
                     break;
-                case "PlanSetup":
-                    excludingNames.Add("Course");
+                case nameof(IScriptContext.PlanSetup):
+                    excludingNames.Add(nameof(PlanSetup.Course));
                     break;
-                case "PlanSum":
-                    excludingNames.Add("Course");
+                case nameof(PlanSum):
+                    excludingNames.Add(nameof(PlanSum.Course));
                     break;
-                case "Image":
-                    excludingNames.Add("Series");
+                case nameof(Image.Series):
+                    excludingNames.Add(nameof(Series.Images));
                     break;
-                case "Series":
-                    excludingNames.Add("Study");
+                case nameof(Series.Study):
+                    excludingNames.Add(nameof(Study.Series));
                     break;
             }
 
@@ -59,9 +59,7 @@ namespace ESAPIX.Facade.Serialization
             }
 
             //IVMS Thread
-            excludingNames.Add(nameof(IVMSThread));
-            excludingNames.Add(nameof(AppComThread));
-            excludingNames.Add(nameof(ScriptComThread));
+            excludingNames.Add(nameof(IScriptContext.Thread));
 
             var props = base.CreateProperties(type, memberSerialization);
             return props.Where(p => !excludingNames.Contains(p.PropertyName)).ToList();

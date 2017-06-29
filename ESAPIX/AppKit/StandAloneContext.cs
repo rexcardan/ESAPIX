@@ -7,6 +7,7 @@ using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
 using System.Windows.Threading;
 using ESAPIX.Facade;
+using Newtonsoft.Json;
 
 #endregion
 
@@ -28,7 +29,7 @@ namespace ESAPIX.AppKit
 
         public void Dispose()
         {
-            _app.Dispose();
+            _app?.Dispose();
         }
 
         public Course Course { get; private set; }
@@ -47,7 +48,7 @@ namespace ESAPIX.AppKit
 
         public StructureSet StructureSet => PlanSetup?.StructureSet;
 
-        public IVMSThread Thread { get; }
+        public IVMSThread Thread { get; set; }
 
         public Dispatcher UIDispatcher { get; set; }
 
