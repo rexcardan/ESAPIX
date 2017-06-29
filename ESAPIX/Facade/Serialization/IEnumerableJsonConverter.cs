@@ -2,12 +2,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using ESAPIX.Facade.API;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using VMS.TPS.Common.Model.Types;
-using System.Diagnostics;
 
 #endregion
 
@@ -45,7 +45,7 @@ namespace ESAPIX.Facade.Serialization
             typeof(IEnumerable<Registration>),
             typeof(IEnumerable<OptimizationParameter>),
             typeof(IEnumerable<StructureCodeInfo>),
-             typeof(IEnumerable<Isodose>),
+            typeof(IEnumerable<Isodose>),
             typeof(IEnumerable<string>)
         };
 
@@ -80,7 +80,10 @@ namespace ESAPIX.Facade.Serialization
 
                     var listType = listGenericType.MakeGenericType(typ);
 
-                    try { Activator.CreateInstance(listType); }
+                    try
+                    {
+                        Activator.CreateInstance(listType);
+                    }
                     catch (Exception e)
                     {
                         Debug.WriteLine($"Can't create type {listType}");
@@ -89,12 +92,10 @@ namespace ESAPIX.Facade.Serialization
 
                     try
                     {
-                        JArray.Load(reader).Select(i => { return Populate(i, typ); })
-                        .ToList()
-                        .ForEach(i =>
-                        {
-                            list.Add(i);
-                        });
+                        JArray.Load(reader)
+                            .Select(i => { return Populate(i, typ); })
+                            .ToList()
+                            .ForEach(i => { list.Add(i); });
                     }
                     catch (Exception e)
                     {
@@ -109,17 +110,14 @@ namespace ESAPIX.Facade.Serialization
 
         private dynamic Populate(JToken i, Type typ)
         {
-            if (typ == typeof(String))
+            if (typ == typeof(string))
             {
                 var value = i.Value<string>();
                 return value;
             }
-            else
-            {
-                dynamic ins = Activator.CreateInstance(typ);
-                JsonConvert.PopulateObject(i.ToString(), ins, FacadeSerializer.DeserializeSettings);
-                return ins;
-            }
+            dynamic ins = Activator.CreateInstance(typ);
+            JsonConvert.PopulateObject(i.ToString(), ins, FacadeSerializer.DeserializeSettings);
+            return ins;
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

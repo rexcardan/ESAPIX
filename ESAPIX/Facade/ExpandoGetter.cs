@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ESAPIX.Facade
+﻿namespace ESAPIX.Facade
 {
     /// <summary>
     /// This class helps pull the ExpandoObject client if needed from a facade
@@ -13,7 +7,9 @@ namespace ESAPIX.Facade
     {
         public static dynamic GetClient(object o)
         {
-            var fieldInfo = o.GetType().GetField("_client", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            var fieldInfo = o.GetType()
+                .GetField("_client",
+                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             return fieldInfo?.GetValue(o);
         }
     }

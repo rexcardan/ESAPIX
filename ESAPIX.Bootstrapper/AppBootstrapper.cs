@@ -22,6 +22,12 @@ namespace ESAPIX.Bootstrapper
         private IScriptContext _ctx;
         private readonly EventAggregator _ea;
 
+        /// <summary>
+        /// Constructs a bootstrapper for standalone applications from a username, password
+        /// </summary>
+        /// <param name="vmsUsername">username for VMS access</param>
+        /// <param name="vmsPassword">password for VMS access</param>
+        /// <param name="singleThread">indicates whether or not to use a single thread (default is multithread)</param>
         public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
         {
             FacadeInitializer.Initialize();
@@ -29,11 +35,18 @@ namespace ESAPIX.Bootstrapper
             _ea = new EventAggregator();
         }
 
-        public void LoadOfflineContext(string jsonContextPath)
+        /// <summary>
+        /// Constructs a bootstrapper for standalone applications from a offline context json file
+        /// </summary>
+        /// <param name="offlineContextPath">the path to the offline context json file</param>
+        public AppBootstrapper(string offlineContextPath)
         {
-            var json = File.ReadAllText(jsonContextPath);
+            FacadeInitializer.Initialize();
+            var json = File.ReadAllText(offlineContextPath);
             var ctx = JsonConvert.DeserializeObject<OfflineContext>(json, Facade.Serialization.FacadeSerializer.DeserializeSettings);
+            ctx.Thread = new AppComThread();
             _ctx = ctx;
+            _ea = new EventAggregator();
         }
 
         protected override DependencyObject CreateShell()

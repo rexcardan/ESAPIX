@@ -1,14 +1,16 @@
-﻿using ESAPIX.AppKit;
+﻿#region
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Media.Media3D;
+using ESAPIX.AppKit;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
+
+#endregion
 
 namespace ESAPIX.Facade.Serialization
 {

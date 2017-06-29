@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Windows.Media;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
@@ -89,7 +90,7 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Windows.Media.Color Color
+        public Color Color
         {
             get
             {
@@ -97,11 +98,11 @@ namespace ESAPIX.Facade.API
                     if (((ExpandoObject) _client).HasProperty("Color"))
                         return _client.Color;
                     else
-                        return default(System.Windows.Media.Color);
+                        return default(Color);
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc => { return _client.Color; }
                     );
-                return default(System.Windows.Media.Color);
+                return default(Color);
             }
 
             set

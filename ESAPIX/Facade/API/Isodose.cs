@@ -1,10 +1,11 @@
 #region
 
 using System.Dynamic;
+using System.Windows.Media;
+using System.Windows.Media.Media3D;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-using System.Windows.Media.Media3D;
 
 #endregion
 
@@ -22,7 +23,7 @@ namespace ESAPIX.Facade.API
             _client = client;
         }
 
-        public System.Windows.Media.Color Color
+        public Color Color
         {
             get
             {
@@ -30,11 +31,11 @@ namespace ESAPIX.Facade.API
                     if (((ExpandoObject) _client).HasProperty("Color"))
                         return _client.Color;
                     else
-                        return default(System.Windows.Media.Color);
+                        return default(Color);
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc => { return _client.Color; }
                     );
-                return default(System.Windows.Media.Color);
+                return default(Color);
             }
 
             set
@@ -66,31 +67,37 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Windows.Media.Media3D.MeshGeometry3D MeshGeometry
+        public MeshGeometry3D MeshGeometry
         {
             get
             {
                 if (_client is ExpandoObject)
-                    return (_client as ExpandoObject).HasProperty("MeshGeometry")
-                        ? _client.MeshGeometry
-                        : default(System.Windows.Media.Media3D.MeshGeometry3D);
-
-                MeshGeometry3D mesh = new MeshGeometry3D();
-                Point3D[] points = new Point3D[0];
-                Vector3D[] normals = new Vector3D[0];
-                int[] indices = new int[0];
-
-                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    if (((ExpandoObject) _client).HasProperty("MeshGeometry"))
+                        return _client.MeshGeometry;
+                    else
+                        return default(MeshGeometry3D);
+                if (XC.Instance.CurrentContext != null)
                 {
-                    points = new Point3D[_client.MeshGeometry.Positions.Count];
-                    normals = new Vector3D[_client.MeshGeometry.Normals.Count];
-                    indices = new int[_client.MeshGeometry.TriangleIndices.Count];
-                    _client.MeshGeometry.Positions.CopyTo(points, 0);
-                    _client.MeshGeometry.Normals.CopyTo(normals, 0);
-                    _client.MeshGeometry.TriangleIndices.CopyTo(indices, 0);
-                });
-                mesh.Positions = new Point3DCollection(points);
-                return mesh;
+                    var mesh = new MeshGeometry3D();
+                    var points = new Point3D[] { };
+                    var normals = new Vector3D[] { };
+                    var indices = new int[] { };
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            points = new Point3D[_client.MeshGeometry.Positions.Count];
+                            normals = new Vector3D[_client.MeshGeometry.Normals.Count];
+                            indices = new int[_client.MeshGeometry.Normals.Count];
+                            _client.MeshGeometry.Positions.CopyTo(points, 0);
+                            _client.MeshGeometry.Normals.CopyTo(normals, 0);
+                            _client.MeshGeometry.TriangleIndices.CopyTo(indices, 0);
+                        }
+                    );
+                    mesh.Positions = new Point3DCollection(points);
+                    mesh.Normals = new Vector3DCollection(normals);
+                    mesh.TriangleIndices = new Int32Collection(indices);
+                    return mesh;
+                }
+                return default(MeshGeometry3D);
             }
 
             set

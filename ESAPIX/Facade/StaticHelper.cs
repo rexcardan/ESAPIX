@@ -12,7 +12,8 @@ namespace ESAPIX.Facade
     public class StaticHelper
     {
         //MUST SET BEFORE CALLING
-        public static Func<string, string, dynamic> Application_CreateApplicationFunc0 { get; set; } = (u, p) => { return null; };
+        public static Func<string, string, dynamic> Application_CreateApplicationFunc0 { get; set; } =
+            (u, p) => { return null; };
 
         //MUST SET BEFORE CALLING
         public static Action SerializableObject_ClearSerializationHistoryAction0 { get; set; } = () => { };
@@ -25,11 +26,9 @@ namespace ESAPIX.Facade
             (v1, v2) => { return double.NaN; };
 
         public static Application Application_CreateApplication(string username, string password,
-
             bool useCurrentThread = false)
 
         {
-
             var thread = new AppComThread(!useCurrentThread);
 
             Application xapp = null;
@@ -39,25 +38,19 @@ namespace ESAPIX.Facade
             thread.Invoke(() =>
 
             {
-
                 try
 
                 {
-
                     var vms = Application_CreateApplicationFunc0(username, password);
 
                     xapp = new Application(vms);
-
                 }
 
                 catch (Exception ex)
 
                 {
-
                     e = ex;
-
                 }
-
             });
 
             if (xapp == null)
@@ -71,7 +64,6 @@ namespace ESAPIX.Facade
             XContext.Instance.CurrentContext.UIDispatcher = System.Windows.Application.Current?.Dispatcher;
 
             return xapp;
-
         }
 
         public static void SerializableObject_ClearSerializationHistory()
