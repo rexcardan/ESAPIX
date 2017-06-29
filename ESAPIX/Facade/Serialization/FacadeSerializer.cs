@@ -43,7 +43,7 @@ namespace ESAPIX.Facade.Serialization
         public static void SerializeContext(IScriptContext ctx, string jsonPath)
         {
             var json = JsonConvert.SerializeObject(ctx, FacadeSerializer.SerializeSettings);
-            File.WriteAllText(@"C:\Users\vision\Desktop\fakeContext.json", json);
+            File.WriteAllText(jsonPath, json);
         }
 
         public static OfflineContext DeserializeContext(string jsonPath)

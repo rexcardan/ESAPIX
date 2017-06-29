@@ -11,6 +11,9 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\esapix.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,11 +56,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESAPIX, Version=1.2.1.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_13.6.1.2.1.0\lib\net45\ESAPIX.dll</HintPath>
+    <Reference Include="ESAPIX, Version=1.2.1.4, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\ESAPIX_13.6.1.2.1.4\lib\net45\ESAPIX.dll</HintPath>
     </Reference>
-    <Reference Include="ESAPIX.Bootstrapper, Version=1.2.1.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_Bootstrapper_13.6.1.2.1.0\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
+    <Reference Include="ESAPIX.Bootstrapper, Version=1.2.1.4, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\ESAPIX_Bootstrapper_13.6.1.2.1.4\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -99,7 +102,7 @@
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="VMS.TPS.Common.Model.Types, Version=13.6.30.20230, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_Bootstrapper_13.6.1.2.1.0\lib\net45\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>..\packages\ESAPIX_Bootstrapper_13.6.1.2.1.4\lib\net45\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
