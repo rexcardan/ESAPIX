@@ -8,7 +8,7 @@ using ESAPIX.AppKit;
 using System.Windows.Threading;
 using $safeprojectname$.Views;
 
-namespace $safeprojectname$
+namespace VMS.TPS
 {
     public class Script : XScriptBase
     {

@@ -56,8 +56,8 @@
     <ApplicationIcon>Resources\esapix.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
- <Reference Include="ESAPIX, Version=1.2.1.4, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_13.6.1.2.1.4\lib\net45\ESAPIX.dll</HintPath>
+    <Reference Include="ESAPIX, Version=1.2.1.4, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\ESAPIX_13.6.1.2.1.5\lib\net45\ESAPIX.dll</HintPath>
     </Reference>
     <Reference Include="ESAPIX.Bootstrapper, Version=1.2.1.4, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\ESAPIX_Bootstrapper_13.6.1.2.1.4\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
@@ -173,7 +173,7 @@
   <ItemGroup>
     <Resource Include="Resources\esapix.png" />
   </ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -182,4 +182,4 @@
   </Target>
   -->
 
- </Project>
+</Project>
