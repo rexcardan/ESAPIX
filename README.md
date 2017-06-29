@@ -11,6 +11,8 @@ To dive deeper, check out [more examples and API documentation](https://rexcarda
 ## WPF Application
 ### Video Tutorial
 [![Quick Startup ESAPIX](https://img.youtube.com/vi/qPVIR8Jxs94/0.jpg)](https://www.youtube.com/watch?v=qPVIR8Jxs94) 
+
+### Manual Method
 1. Create a new WPF project in Visual Studio. 
 2. Right click your project and select **Manage NuGet Packages...**
 3. Search for *"ESAPI"* and select Install the most recent ESAPIX library for your install (eg. ESAPIX_13.6 for Aria 13.6)
