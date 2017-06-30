@@ -24,6 +24,7 @@ namespace ESAPIX.Facade.Serialization
             // Load the JSON for the Result into a JObject
             JObject jo = JObject.Load(reader);
             double value = (double)jo["Dose"];
+
             // Load the JSON for the Result into a JObject
             JArray ja = JArray.Load(reader);
 
