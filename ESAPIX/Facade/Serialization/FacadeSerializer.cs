@@ -25,8 +25,10 @@ namespace ESAPIX.Facade.Serialization
                     Converters = new List<JsonConverter> {
                         new IEnumerableJsonConverter(),
                         new MeshGeometryConverter() ,
+                        new ProfilePointConverter(),
+                        new DoseProfileConverter(),
+                        new DVHPointConverter(),
                         new DoseValueConverter()},
-
                     ContractResolver = new ESAPIContractResolver()
                 };
             }
@@ -39,7 +41,8 @@ namespace ESAPIX.Facade.Serialization
                 return new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,
-                    ContractResolver = new ESAPIContractResolver()
+                    ContractResolver = new ESAPIContractResolver(),
+                    Converters = new List<JsonConverter> { new DoseProfileConverter() }
                 };
             }
         }
