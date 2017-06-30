@@ -190,6 +190,16 @@ namespace ESAPIX.Extensions
             return plan.GetDVHCumulativeData(s, dvp, vp, binWidth);
         }
 
+        ///     Enables a shorter method for doing a common task (getting the DVH from a structure). Requires only a structure id, Contains default values.
+        /// </summary>
+        public static DVHData GetDefaultDVHCumulativeData(this PlanningItem plan, string structureId,
+            DoseValuePresentation dvp = DoseValuePresentation.Absolute,
+            VolumePresentation vp = VolumePresentation.Relative, double binWidth = 0.1)
+        {
+            var s = plan.GetStructure(structureId);
+            return s != null ? plan.GetDVHCumulativeData(s, dvp, vp, binWidth) : null;
+        }
+
         /// <summary>
         ///     The "complex" dvh in this case, is 1. Allows for plan sums to have relative dose, by adding prescriptions to
         ///     determine a
@@ -396,10 +406,10 @@ namespace ESAPIX.Extensions
             if (structures.Any(s => s.Structure == null))
             {
                 var names = structures.Where((s => s.Structure == null)).Select((s => s.Name)).ToArray();
-                throw new ArgumentNullException($"Structures : "+string.Join(", ", names)+ "could not be found.");
+                throw new ArgumentNullException($"Structures : " + string.Join(", ", names) + "could not be found.");
             }
             //All ok, run query
-            return query.RunQuery(pi, structures.Select((s=>s.Structure)));
+            return query.RunQuery(pi, structures.Select((s => s.Structure)));
         }
 
 

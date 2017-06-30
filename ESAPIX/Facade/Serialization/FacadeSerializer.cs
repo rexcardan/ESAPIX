@@ -40,6 +40,18 @@ namespace ESAPIX.Facade.Serialization
             }
         }
 
+        public static void SerializeToFile(object o, string jsonPath)
+        {
+            var json = JsonConvert.SerializeObject(o, FacadeSerializer.SerializeSettings);
+            File.WriteAllText(jsonPath, json);
+        }
+
+        public static T DeserializeFromFile<T>(string jsonPath)
+        {
+            var json = File.ReadAllText(jsonPath);
+            return JsonConvert.DeserializeObject<T>(json, FacadeSerializer.SerializeSettings);
+        }
+
         public static void SerializeContext(IScriptContext ctx, string jsonPath)
         {
             var json = JsonConvert.SerializeObject(ctx, FacadeSerializer.SerializeSettings);
