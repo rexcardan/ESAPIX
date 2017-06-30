@@ -1,6 +1,8 @@
 ﻿#region
 
+using ESAPIX.Facade.Serialization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using VMS.TPS.Common.Model.Types;
 
 #endregion
 
@@ -10,9 +12,14 @@ namespace ESAPIXTests.Facade.Serialization
     public class FacadeSerializerTests
     {
         [TestMethod]
-        public void SerializePlanTest()
+        public void SerializeDeserializeDoseValue()
         {
-            Assert.Fail();
+            var doseValue = new DoseValue(25, DoseValue.DoseUnit.Gy);
+            var serialized = FacadeSerializer.Serialize(doseValue);
+
+            var deserialized = FacadeSerializer.Deserialize<DoseValue>(serialized);
+            Assert.AreEqual(deserialized.Dose, doseValue.Dose);
+            Assert.AreEqual(deserialized.Unit, doseValue.Unit);
         }
     }
 }

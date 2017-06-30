@@ -22,7 +22,11 @@ namespace ESAPIX.Facade.Serialization
                 return new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,
-                    Converters = new List<JsonConverter> { new IEnumerableJsonConverter(), new MeshGeometryConverter() },
+                    Converters = new List<JsonConverter> {
+                        new IEnumerableJsonConverter(),
+                        new MeshGeometryConverter() ,
+                        new DoseValueConverter()},
+
                     ContractResolver = new ESAPIContractResolver()
                 };
             }
@@ -40,33 +44,64 @@ namespace ESAPIX.Facade.Serialization
             }
         }
 
-        public static void SerializeToFile(object o, string jsonPath)
+        /// <summary>
+        /// Serialize to JSON string
+        /// </summary>
+        /// <param name="o">object to be serialized</param>
+        /// <returns>json string of object</returns>
+        public static string Serialize(object o)
         {
             var json = JsonConvert.SerializeObject(o, FacadeSerializer.SerializeSettings);
+            return json;
+        }
+
+        /// <summary>
+        /// Serialize to text file (json)
+        /// </summary>
+        /// <param name="o">object to be serialized</param>
+        /// <param name="jsonPath">file path to save object file</param>
+        public static void SerializeToFile(object o, string jsonPath)
+        {
+            var json = Serialize(o);
             File.WriteAllText(jsonPath, json);
         }
 
+        /// <summary>
+        /// Deserialize from JSON string
+        /// </summary>
+        /// <typeparam name="T">the type of object to be returned</typeparam>
+        /// <param name="json">json string of object</param>
+        /// <returns>object</returns>
+        public static T Deserialize<T>(string json)
+        {
+            return JsonConvert.DeserializeObject<T>(json, FacadeSerializer.DeserializeSettings);
+        }
+
+        /// <summary>
+        /// Deserialize from JSON string
+        /// </summary>
+        /// <typeparam name="T">the type of object to be returned</typeparam>
+        /// <param name="jsonPath">file path to save object file</param>
+        /// <returns>object</returns>
         public static T DeserializeFromFile<T>(string jsonPath)
         {
             var json = File.ReadAllText(jsonPath);
-            return JsonConvert.DeserializeObject<T>(json, FacadeSerializer.SerializeSettings);
+            return JsonConvert.DeserializeObject<T>(json, FacadeSerializer.DeserializeSettings);
         }
 
         public static void SerializeContext(IScriptContext ctx, string jsonPath)
         {
-            var json = JsonConvert.SerializeObject(ctx, FacadeSerializer.SerializeSettings);
-            File.WriteAllText(jsonPath, json);
+            SerializeToFile(ctx, jsonPath);
         }
 
         public static OfflineContext DeserializeContext(string jsonPath)
         {
-            var json = File.ReadAllText(jsonPath);
-            var ctx = JsonConvert.DeserializeObject<OfflineContext>(json, Facade.Serialization.FacadeSerializer.DeserializeSettings);
+            var ctx = DeserializeFromFile<OfflineContext>(jsonPath);
             //BRACHY
             if (ctx.BrachyPlanSetup != null) { ctx.BrachyPlanSetup.Course = ctx.Course; }
             if (ctx.BrachyPlansInScope != null)
             {
-                foreach(var ps in ctx.BrachyPlansInScope)
+                foreach (var ps in ctx.BrachyPlansInScope)
                 {
                     ps.Course = ctx.Course;
                 }
