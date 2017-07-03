@@ -54,6 +54,7 @@ namespace ESAPIXTests.Facade.Serialization
         {
             var v1 = new VVector(1, 2, 3);
             var v2 = new VVector(4, 5, 6);
+
             var dp = new DoseProfile(v1, v2, new double[] { 0.1, 0.2 }, DoseValue.DoseUnit.Percent);
             var serialized = FacadeSerializer.Serialize(dp);
 

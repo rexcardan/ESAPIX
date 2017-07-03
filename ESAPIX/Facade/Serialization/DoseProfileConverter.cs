@@ -23,10 +23,11 @@ namespace ESAPIX.Facade.Serialization
             
             // Load the JSON for the Result into a JObject
             JObject jo = JObject.Load(reader);
-            double value = (double)jo["Dose"];
+            var unitJO = (JValue)jo[nameof(DoseProfile.Unit)];
+            var unit = serializer.Deserialize<DoseUnit>(unitJO.CreateReader());
 
             // Load the JSON for the Result into a JObject
-            JArray ja = JArray.Load(reader);
+            var ja = JArray.Load(jo["Points"].CreateReader());
 
             var points = ja
                 .Select(j => serializer.Deserialize<ProfilePoint>(((JObject)j).CreateReader()))
@@ -38,7 +39,7 @@ namespace ESAPIX.Facade.Serialization
             var values = points.Select(p => p.Value).ToList();
 
             // Construct the Result object using the non-default constructor
-            DoseProfile dp = new DoseProfile(first.Position, second.Position - first.Position, values.ToArray(), DoseValue.DoseUnit.Gy);
+            DoseProfile dp = new DoseProfile(first.Position, second.Position - first.Position, values.ToArray(), unit);
 
             // Return the result
             return dp;
@@ -48,10 +49,14 @@ namespace ESAPIX.Facade.Serialization
         {
             var dp = value as DoseProfile;
             JProperty unitProperty = new JProperty(nameof(DoseProfile.Unit), dp.Unit);
-            JObject jo = new JObject();
-            jo.Add(unitProperty);
-            jo.Add(new JProperty("Points", dp));
-            jo.WriteTo(writer);
+            writer.WriteStartObject();
+            writer.WritePropertyName(nameof(DoseProfile.Unit));
+            serializer.Serialize(writer, dp.Unit);
+
+            writer.WritePropertyName("Points");
+            serializer.Serialize(writer, dp.ToArray());
+            writer.WriteEndObject();
+
         }
     }
 }
