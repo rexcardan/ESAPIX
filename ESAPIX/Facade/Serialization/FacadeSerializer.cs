@@ -28,6 +28,7 @@ namespace ESAPIX.Facade.Serialization
                         new ProfilePointConverter(),
                         new DoseProfileConverter(),
                         new DVHPointConverter(),
+                        new StructureCodeInfoConverter(),
                         new DoseValueConverter()},
                     ContractResolver = new ESAPIContractResolver()
                 };

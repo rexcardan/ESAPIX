@@ -103,7 +103,7 @@ namespace ESAPIX.Facade.API
                 _client.Dispose();
         }
 
-        public static Application CreateApplication(string username, string password, bool singleThread)
+        public static Application CreateApplication(string username, string password, bool singleThread=false)
         {
             return StaticHelper.Application_CreateApplication(username, password, singleThread);
         }

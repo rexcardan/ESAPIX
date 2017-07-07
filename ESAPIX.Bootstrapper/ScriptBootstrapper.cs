@@ -21,8 +21,6 @@ namespace ESAPIX.AppKit
 
         private readonly PluginContext _sc;
 
-        public Window _vmsWindow;
-
         public ScriptBootstrapper(PluginContext ctx, DispatcherFrame frame)
         {
             XamlAssemblyLoader.LoadAssemblies();
@@ -63,7 +61,11 @@ namespace ESAPIX.AppKit
                 }
                 catch(Exception e)
                 {
-                    MessageBox.Show(e.ToString());
+                    MessageBox.Show($"SCRIPT ERROR (Closing Thread) \n Exception Details : \n {e.ToString()}");
+                    _sc.Thread.Invoke(() =>
+                    {
+                        _frame.Continue = false;
+                    });
                 }
             });
             ui.SetApartmentState(ApartmentState.STA);

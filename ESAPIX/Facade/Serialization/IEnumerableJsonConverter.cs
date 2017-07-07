@@ -93,9 +93,12 @@ namespace ESAPIX.Facade.Serialization
                     try
                     {
                         JArray.Load(reader)
-                            .Select(i => { return Populate(i, typ); })
+                            .Select(i => (dynamic)serializer.Deserialize(((JObject)i).CreateReader(), typ))
                             .ToList()
-                            .ForEach(i => { list.Add(i); });
+                            .ForEach(i =>
+                            {
+                                list.Add(i);
+                            });
                     }
                     catch (Exception e)
                     {

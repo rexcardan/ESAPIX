@@ -23,6 +23,10 @@ namespace ESAPIX.AppKit
             if (!useNewThread)
             {
                 thread = Thread.CurrentThread;
+                if (thread.GetApartmentState() != ApartmentState.STA)
+                {
+                    throw new Exception("The current thread must be marked as STA. Cannot connect to ESAPI!");
+                }
                 if (SynchronizationContext.Current == null)
                 {
                     SynchronizationContext.SetSynchronizationContext(new ConsoleSyncContext());
