@@ -136,6 +136,10 @@ namespace ESAPIX.Extensions
         private static bool ContainsStructure(this PlanningItem plan, string structId, string regex, out Structure s)
         {
             s = null;
+            //Make sure structures not null
+            var structures = plan.GetStructures();
+            if (structures == null) { return false; }
+
             foreach (var struc in plan.GetStructures())
             {
                 var regexMatched = !string.IsNullOrEmpty(regex) &&
