@@ -136,7 +136,7 @@ namespace ESAPIX.Extensions
                                    Regex.IsMatch(struc.Id, regex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
                 if (0 == string.Compare(structId, struc.Id, true) || regexMatched) s = struc;
                 if (s != null)
-                    if (s.Volume > 0) return true;
+                    if (!s.IsEmpty) return true;
             }
             return false; //None found
         }

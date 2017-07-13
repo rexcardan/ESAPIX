@@ -135,8 +135,7 @@ namespace ESAPIX.Constraints
                 return this;
             }
             foreach (var dt in dicomTypes)
-                if (!structures.Any(s => s.DicomType == dt) ||
-                    !structures.FirstOrDefault(s => s.DicomType == dt).IsEmpty)
+                if (!structures.Any(s => s.DicomType == dt && !s.IsEmpty))
                 {
                     Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
                         $"Missing type {dt}, or {dt} structure is empty", string.Empty));
