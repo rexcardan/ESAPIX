@@ -64,22 +64,12 @@ namespace ESAPIX.Extensions
         public static IEnumerable<Beam> GetBeams(this PlanningItem pi)
         {
             if (pi is PlanSetup)
-            {
                 foreach (var beam in (pi as PlanSetup).Beams)
-                {
                     yield return beam;
-                }
-            }
             else if (pi is PlanSum)
-            {
                 foreach (var ps in (pi as PlanSum).PlanSetups)
-                {
-                    foreach (var beam in ps.Beams)
-                    {
-                        yield return beam;
-                    }
-                }
-            }
+                foreach (var beam in ps.Beams)
+                    yield return beam;
         }
 
         /// <summary>
@@ -138,7 +128,7 @@ namespace ESAPIX.Extensions
             s = null;
             //Make sure structures not null
             var structures = plan.GetStructures();
-            if (structures == null) { return false; }
+            if (structures == null) return false;
 
             foreach (var struc in plan.GetStructures())
             {
@@ -250,7 +240,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseAtVolume(new[] { s }, volume, vPres, dPres);
+            return i.GetDoseAtVolume(new[] {s}, volume, vPres, dPres);
         }
 
         /// <summary>
@@ -309,7 +299,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseComplimentAtVolume(new[] { s }, volume, vPres, dPres);
+            return i.GetDoseComplimentAtVolume(new[] {s}, volume, vPres, dPres);
         }
 
         #endregion
@@ -327,7 +317,7 @@ namespace ESAPIX.Extensions
         public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
         {
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
             return dvhCurve.GetVolumeAtDose(dv);
         }
 
@@ -343,7 +333,7 @@ namespace ESAPIX.Extensions
             VolumePresentation vPres)
         {
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
             return dvhCurve.GetComplimentVolumeAtDose(dv);
         }
 
@@ -406,17 +396,15 @@ namespace ESAPIX.Extensions
                         Structure = pi.GetStructureSet()?.Structures?.FirstOrDefault(s => s.Id == structId)
                     };
                 })
-            .ToArray();
+                .ToArray();
             if (structures.Any(s => s.Structure == null))
             {
-                var names = structures.Where((s => s.Structure == null)).Select((s => s.Name)).ToArray();
+                var names = structures.Where(s => s.Structure == null).Select(s => s.Name).ToArray();
                 throw new ArgumentNullException($"Structures : " + string.Join(", ", names) + "could not be found.");
             }
             //All ok, run query
-            return query.RunQuery(pi, structures.Select((s => s.Structure)));
+            return query.RunQuery(pi, structures.Select(s => s.Structure));
         }
-
-
 
         #endregion
     }

@@ -3,11 +3,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ESAPIX.Facade.API;
-using ESAPIX.Interfaces;
 using System.Windows.Threading;
 using ESAPIX.Facade;
-using Newtonsoft.Json;
+using ESAPIX.Facade.API;
+using ESAPIX.Interfaces;
 
 #endregion
 
@@ -68,9 +67,9 @@ namespace ESAPIX.AppKit
         /// <param name="username">VMS username</param>
         /// <param name="password">VMS password</param>
         /// <returns>app context</returns>
-        public static StandAloneContext Create(string username, string password, bool singleThread)
+        public static StandAloneContext Create(string username, string password, bool singleThread = false)
         {
-            Application app = Application.CreateApplication(username, password, singleThread);
+            var app = Application.CreateApplication(username, password, singleThread);
             var thread = XContext.Instance.CurrentContext.Thread;
             return new StandAloneContext(app, thread);
         }

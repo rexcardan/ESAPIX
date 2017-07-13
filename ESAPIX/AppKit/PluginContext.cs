@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
-using System.Windows.Threading;
 
 #endregion
 
@@ -18,10 +18,12 @@ namespace ESAPIX.AppKit
     public class PluginContext : IScriptContext
     {
         private readonly ScriptContext _ctx;
+        private readonly WeakReference _scriptReference;
 
         public PluginContext(ScriptContext ctx, Window w)
         {
             _ctx = ctx;
+            _scriptReference = new WeakReference(ctx._client);
             Thread = new ScriptComThread(w.Dispatcher);
         }
 
@@ -50,6 +52,11 @@ namespace ESAPIX.AppKit
         public IEnumerable<PlanSum> PlanSumsInScope => _ctx?.PlanSumsInScope;
 
         public StructureSet StructureSet => _ctx?.StructureSet;
+
+        public bool IsDisposed
+        {
+            get { return _scriptReference.IsAlive; }
+        }
 
         public IVMSThread Thread { get; }
 

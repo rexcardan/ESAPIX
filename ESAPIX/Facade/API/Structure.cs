@@ -176,7 +176,7 @@ namespace ESAPIX.Facade.API
                         {
                             points = new Point3D[_client.MeshGeometry.Positions.Count];
                             normals = new Vector3D[_client.MeshGeometry.Normals.Count];
-                            indices = new int[_client.MeshGeometry.Normals.Count];
+                            indices = new int[_client.MeshGeometry.TriangleIndices.Count];
                             _client.MeshGeometry.Positions.CopyTo(points, 0);
                             _client.MeshGeometry.Normals.CopyTo(normals, 0);
                             _client.MeshGeometry.TriangleIndices.CopyTo(indices, 0);

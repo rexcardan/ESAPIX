@@ -1,11 +1,11 @@
 #region
 
 using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESAPIX.Interfaces;
-using System.Diagnostics;
 
 #endregion
 
@@ -24,13 +24,9 @@ namespace ESAPIX.AppKit
             {
                 thread = Thread.CurrentThread;
                 if (thread.GetApartmentState() != ApartmentState.STA)
-                {
                     throw new Exception("The current thread must be marked as STA. Cannot connect to ESAPI!");
-                }
                 if (SynchronizationContext.Current == null)
-                {
                     SynchronizationContext.SetSynchronizationContext(new ConsoleSyncContext());
-                }
                 ctx = SynchronizationContext.Current;
             }
             else
@@ -41,16 +37,16 @@ namespace ESAPIX.AppKit
                     thread = new Thread(() =>
                     {
                         try
-                        {                         //Hack to initiate a windows message pump (keeps the thread alive) :(
+                        {
+                            //Hack to initiate a windows message pump (keeps the thread alive) :(
                             Application.Idle += Initialize;
                             Application.Run();
                         }
                         catch (Exception e)
                         {
                             Debug.Write(e.ToString());
-                            MessageBox.Show($"VMS Thread crashed : \n{e.ToString()}");
+                            MessageBox.Show($"VMS Thread crashed : \n{e}");
                         }
-
                     });
                     thread.Name = "ESAPIX Thread";
                     thread.IsBackground = true;

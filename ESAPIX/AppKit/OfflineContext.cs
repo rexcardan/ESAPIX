@@ -1,11 +1,12 @@
-﻿using ESAPIX.Facade.API;
-using ESAPIX.Interfaces;
-using Newtonsoft.Json;
+﻿#region
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using ESAPIX.Facade.API;
+using ESAPIX.Interfaces;
+
+#endregion
 
 namespace ESAPIX.AppKit
 {

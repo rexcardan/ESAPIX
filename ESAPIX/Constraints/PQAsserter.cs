@@ -1,20 +1,32 @@
-﻿using ESAPIX.Constraints;
-using ESAPIX.Extensions;
-using ESAPIX.Facade.API;
-using System;
+﻿#region
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ESAPIX.Extensions;
+using ESAPIX.Facade.API;
 using static ESAPIX.Constraints.ResultType;
+
+#endregion
 
 namespace ESAPIX.Constraints
 {
     public class PQAsserter
     {
-        public PQAsserter() { }
-
         public List<ConstraintResult> Results { get; set; } = new List<ConstraintResult>();
+
+        /// <summary>
+        /// Returns the cumulative result of all assertions. Will either return the first failing or a passing result
+        /// </summary>
+        public ConstraintResult CumulativeResult
+        {
+            get
+            {
+                //If there are any failures, return first one, otherwise return the first result (which will be passing)
+                return Results.Any(r => r.ResultType != PASSED)
+                    ? Results.FirstOrDefault(r => r.ResultType != PASSED)
+                    : Results.FirstOrDefault();
+            }
+        }
 
         /// <summary>
         /// Asserts contains image (not null)
@@ -24,13 +36,9 @@ namespace ESAPIX.Constraints
         public PQAsserter HasImage(PlanningItem pi)
         {
             if (pi.GetImage() == null)
-            {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No image", string.Empty));
-            }
             else
-            {
-                Results.Add(new ConstraintResult(null, ResultType.PASSED, string.Empty));
-            }
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty));
             return this;
         }
 
@@ -43,13 +51,9 @@ namespace ESAPIX.Constraints
         {
             // Check for structure set. If plan does not have a structure set, test is not applicable
             if (pi.GetStructures() == null)
-            {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set.", string.Empty));
-            }
             else
-            {
-                Results.Add(new ConstraintResult(null, ResultType.PASSED, string.Empty));
-            }
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty));
             return this;
         }
 
@@ -62,10 +66,8 @@ namespace ESAPIX.Constraints
         {
             // Check for structure set. If plan does not have a structure set, test is not applicable
             if (pi is PlanSum)
-            {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Must be plan setup only", string.Empty));
-            }
-            else { Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty)); }
+            else Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
 
             return this;
         }
@@ -78,20 +80,20 @@ namespace ESAPIX.Constraints
         public PQAsserter ContainsElectronFields(PlanningItem pi)
         {
             var isPlanSetup = IsPlanSetup(pi).Results.Last();
-            if (!isPlanSetup.IsSuccess) { Results.Add(isPlanSetup); return this; }
+            if (!isPlanSetup.IsSuccess)
+            {
+                Results.Add(isPlanSetup);
+                return this;
+            }
 
             var ps = pi as PlanSetup;
             var ens = ps.Beams.Select(b => b.EnergyModeDisplayName).ToList();
             var containsElectrons = ens.Any(e => e.EndsWith("E"));
 
             if (!containsElectrons)
-            {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Must contain electron fields", string.Empty));
-            }
             else
-            {
                 Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
-            }
             return this;
         }
 
@@ -108,17 +110,13 @@ namespace ESAPIX.Constraints
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
                 return this;
             }
-            else
-            {
-                foreach (var id in structureIds)
+            foreach (var id in structureIds)
+                if (!pi.ContainsStructure(id))
                 {
-                    if (!pi.ContainsStructure(id))
-                    {
-                        Results.Add(new ConstraintResult(null, NOT_APPLICABLE, $"Missing {id}, or {id} is empty", string.Empty));
-                        return this;
-                    }
+                    Results.Add(new ConstraintResult(null, NOT_APPLICABLE, $"Missing {id}, or {id} is empty",
+                        string.Empty));
+                    return this;
                 }
-            }
             Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
             return this;
         }
@@ -136,33 +134,16 @@ namespace ESAPIX.Constraints
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
                 return this;
             }
-            else
-            {
-                foreach (var dt in dicomTypes)
+            foreach (var dt in dicomTypes)
+                if (!structures.Any(s => s.DicomType == dt) ||
+                    !structures.FirstOrDefault(s => s.DicomType == dt).IsEmpty)
                 {
-                    if (!structures.Any(s => s.DicomType == dt) || !structures.FirstOrDefault(s => s.DicomType == dt).IsEmpty)
-                    {
-                        Results.Add(new ConstraintResult(null, NOT_APPLICABLE, $"Missing type {dt}, or {dt} structure is empty", string.Empty));
-                        return this;
-                    }
+                    Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+                        $"Missing type {dt}, or {dt} structure is empty", string.Empty));
+                    return this;
                 }
-            }
             Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
             return this;
-        }
-
-        /// <summary>
-        /// Returns the cumulative result of all assertions. Will either return the first failing or a passing result
-        /// </summary>
-        public ConstraintResult CumulativeResult
-        {
-            get
-            {
-                //If there are any failures, return first one, otherwise return the first result (which will be passing)
-                return Results.Any(r => r.ResultType != ResultType.PASSED) ?
-                    Results.FirstOrDefault(r => r.ResultType != PASSED) :
-                    Results.FirstOrDefault();
-            }
         }
     }
 }

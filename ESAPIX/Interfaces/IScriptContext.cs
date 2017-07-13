@@ -3,9 +3,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 using ESAPIX.Facade.API;
 using static ESAPIX.AppKit.StandAloneContext;
-using System.Windows.Threading;
 
 #endregion
 
@@ -49,6 +49,7 @@ namespace ESAPIX.Interfaces
         IVMSThread Thread { get; }
 
         Dispatcher UIDispatcher { get; set; }
+
         /// <summary>
         ///     Gets a value on the correct thread and returns it
         /// </summary>

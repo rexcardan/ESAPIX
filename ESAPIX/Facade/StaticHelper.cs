@@ -38,14 +38,13 @@ namespace ESAPIX.Facade
             thread.Invoke(() =>
 
             {
-
                 var vms = Application_CreateApplicationFunc0(username, password);
                 xapp = new Application(vms);
             });
-            if (ESAPIX.Facade.ExpandoGetter.GetClient(xapp) == null)
-            {
-                throw new Exception("App was not created. Make sure FacadeInitializer.Initialize() in ESAPIX.Bootstrapper is being called before invoking static methods", e);
-            }
+            if (ExpandoGetter.GetClient(xapp) == null)
+                throw new Exception(
+                    "App was not created. Make sure FacadeInitializer.Initialize() in ESAPIX.Bootstrapper is being called before invoking static methods",
+                    e);
             if (xapp == null)
 
                 throw new Exception("App was not created. Check to make sure the VMS dll references are correct.", e);

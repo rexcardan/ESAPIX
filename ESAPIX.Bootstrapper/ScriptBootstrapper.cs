@@ -44,7 +44,7 @@ namespace ESAPIX.AppKit
 
         protected override void InitializeShell()
         {
-            var shell = (Window) Shell;
+            var shell = (Window)Shell;
             _sc.UIDispatcher = shell.Dispatcher;
             shell.ShowDialog();
             _frame.Continue = false;
@@ -59,12 +59,14 @@ namespace ESAPIX.AppKit
                     if (getSplash != null) getSplash().ShowDialog();
                     base.Run();
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     MessageBox.Show($"SCRIPT ERROR (Closing Thread) \n Exception Details : \n {e.ToString()}");
                     _sc.Thread.Invoke(() =>
                     {
                         _frame.Continue = false;
+                        var main = (Window)this.Shell;
+                        if (main.IsActive) main.Close();
                     });
                 }
             });
