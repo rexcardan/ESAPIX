@@ -191,5 +191,61 @@ namespace ESAPIX.Constraints
                        $"Does not contain one: {string.Join(",", dicomTypes)}, or all are empty", string.Empty));
             return this;
         }
+
+        /// <summary>
+        /// Asserts the plan contains all fields of specified MLCPlanType
+        /// </summary>
+        /// <param name="mType">the MLC type which all beams must have</param>
+        /// <returns>the asserter object</returns>
+        public PQAsserter ContainsTreatmentBeamsByMLCPlanType(PlanningItem pi, VMS.TPS.Common.Model.Types.MLCPlanType mType)
+        {
+            var beams = pi.GetBeams();
+            if (beams == null || !beams.Any())
+            {
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+                     $"Does not contain any beams", string.Empty));
+                return this;
+            }
+            foreach (var beam in beams)
+            {
+                if (beam.MLCPlanType != mType)
+                {
+                    Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+                    $"Beam {beam.Id} is not of type {mType}", string.Empty));
+                    return this;
+                }
+            }
+            Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts the plan contains all fields of specified MLCPlanType
+        /// </summary>
+        /// <param name="mType">the MLC type which all beams must have</param>
+        /// <returns>the asserter object</returns>
+        public PQAsserter ContainsOneOrMoreTreatmentBeamsByMLCPlanType(PlanningItem pi, VMS.TPS.Common.Model.Types.MLCPlanType mType)
+        {
+            var beams = pi.GetBeams();
+            if (beams == null || !beams.Any())
+            {
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+                     $"Does not contain any beams", string.Empty));
+                return this;
+            }
+            foreach (var beam in beams)
+            {
+                if (beam.MLCPlanType == mType)
+                {
+                    Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+                    return this;
+                }
+            }
+
+            Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+                  $"No beam is not of type {mType}", string.Empty));
+            return this;
+
+        }
     }
 }
