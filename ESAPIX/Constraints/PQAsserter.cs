@@ -122,6 +122,30 @@ namespace ESAPIX.Constraints
         }
 
         /// <summary>
+        /// Asserts the plan contains at least one non emtpy structure with the structure id equal to the input ids
+        /// </summary>
+        /// <param name="structureIds">the ids required for the plan</param>
+        /// <returns>the asserter object</returns>
+        public PQAsserter ContainsOneOrMoreNonEmptyStructureById(PlanningItem pi, params string[] structureIds)
+        {
+            var structures = pi.GetStructures();
+            if (structures == null)
+            {
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
+                return this;
+            }
+            foreach (var id in structureIds)
+                if (pi.ContainsStructure(id))
+                {
+                    Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+                    return this;
+                }
+            Results.Add(new ConstraintResult(null, NOT_APPLICABLE, $"Does not contain one: {string.Join(",", structureIds)}, or all are empty",
+                         string.Empty));
+            return this;
+        }
+
+        /// <summary>
         /// Asserts the plan contains a non emtpy structure with the DICOM type equal to the input DICOM types
         /// </summary>
         /// <param name="dicomTypes">the required DICOM types for this plan</param>
@@ -142,6 +166,29 @@ namespace ESAPIX.Constraints
                     return this;
                 }
             Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts the plan contains at least one non emtpy structure with the DICOM type equal to the input DICOM types
+        /// </summary>
+        /// <param name="dicomTypes">the required DICOM types for this plan</param>
+        /// <returns>the asserter object</returns>
+        public PQAsserter ContainsOneOrMoreNonEmptyStructuresByDICOMType(PlanningItem pi, params string[] dicomTypes)
+        {
+            var structures = pi.GetStructures();
+            if (structures == null)
+            {
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
+                return this;
+            }
+            foreach (var dt in dicomTypes)
+                if (structures.Any(s => s.DicomType == dt && !s.IsEmpty))
+                {
+                    Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+                }
+            Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+                       $"Does not contain one: {string.Join(",", dicomTypes)}, or all are empty", string.Empty));
             return this;
         }
     }
