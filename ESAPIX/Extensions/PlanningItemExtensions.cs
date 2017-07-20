@@ -348,7 +348,8 @@ namespace ESAPIX.Extensions
         public static double GetComplimentVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv,
             VolumePresentation vPres)
         {
-            return ss.Sum(s => pi.GetComplimentVolumeAtDose(s, dv, vPres));
+            var vol = ss.Sum(s => pi.GetComplimentVolumeAtDose(s, dv, VolumePresentation.AbsoluteCm3));
+            return vPres == VolumePresentation.AbsoluteCm3 ? vol : vol / ss.Sum(s => s.Volume) * 100;
         }
 
         /// <summary>
@@ -362,7 +363,8 @@ namespace ESAPIX.Extensions
         public static double GetVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv,
             VolumePresentation vPres)
         {
-            return ss.Sum(s => pi.GetVolumeAtDose(s, dv, vPres));
+            var vol = ss.Sum(s => pi.GetVolumeAtDose(s, dv, VolumePresentation.AbsoluteCm3));
+            return vPres == VolumePresentation.AbsoluteCm3 ? vol : vol / ss.Sum(s => s.Volume)*100;
         }
 
         #endregion

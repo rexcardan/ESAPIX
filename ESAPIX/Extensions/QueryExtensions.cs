@@ -20,7 +20,7 @@ namespace ESAPIX.Extensions
             var dPres = query.GetDosePresentation();
             var vPres = query.GetVolumePresentation();
             var dvh = pi.GetComplexDVH(ss, vPres, dPres);
-
+            
             switch (query.QueryType)
             {
                 case QueryType.DOSE_AT_VOLUME: return QueryDose(dvh, query);
