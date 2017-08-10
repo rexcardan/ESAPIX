@@ -25,6 +25,7 @@
             public const string IRRAD_VOLUME = "IRRAD_VOLUME";
             public const string ORGAN = "ORGAN";
             public const string TREATED_VOLUME = "TREATED_VOLUME";
+            public const string EXTERNAL = "EXTERNAL";
         }
     }
 }
