@@ -20,6 +20,8 @@ namespace ESAPIX.Constraints
 
         [Description("N/A - MISSING STRUCTURE")] NOT_APPLICABLE_MISSING_STRUCTURE,
 
-        [Description("N/A - MISSING DOSE")] NOT_APPLICABLE_MISSING_DOSE
+        [Description("N/A - MISSING DOSE")] NOT_APPLICABLE_MISSING_DOSE,
+
+        [Description("INCONCLUSIVE")] INCONCLUSIVE
     }
 }
