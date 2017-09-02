@@ -93,6 +93,24 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
+        /// Returns the course from a planning item
+        /// </summary>
+        /// <param name="pi">the planning item inside the course</param>
+        /// <returns>the course for this planning item</returns>
+        public static Course GetCourse(this PlanningItem pi)
+        {
+            if (pi is PlanSetup)
+            {
+                return (pi as PlanSetup).Course;
+            }
+            else if (pi is PlanSum)
+            {
+                return (pi as PlanSum).Course;
+            }
+            return null;
+        }
+
+        /// <summary>
         ///     Returns true if the planning item references a structure set with the input structure id AND the structure is
         ///     contoured. Also allows a regex
         ///     expression to match to structure id.

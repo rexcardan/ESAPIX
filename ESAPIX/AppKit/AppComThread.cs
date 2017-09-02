@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESAPIX.Interfaces;
+using ESAPIX.Facade;
 
 #endregion
 
@@ -41,6 +42,7 @@ namespace ESAPIX.AppKit
                             //Hack to initiate a windows message pump (keeps the thread alive) :(
                             Application.Idle += Initialize;
                             Application.Run();
+                            Debug.WriteLine("ESAPIX Thread closing...");
                         }
                         catch (Exception e)
                         {
@@ -82,7 +84,10 @@ namespace ESAPIX.AppKit
             }
             catch (Exception e)
             {
-                Debug.Write(e.ToString());
+                XContext.Instance.CurrentContext.UIDispatcher.Invoke(() =>
+                {
+                    throw new Exception($"ESAPIX Thread tried and failed to invoke a method. See inner exception for details", e);
+                });
             }
         }
 

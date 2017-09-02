@@ -76,8 +76,9 @@ namespace ESAPIX.AppKit
 
         public bool SetPatient(string id)
         {
+            _app.ClosePatient();
             Patient = _app.OpenPatientById(id);
-            var found = Patient.IsLive;
+            var found = Patient!=null && Patient.IsLive;
             if (found)
                 OnPatientChanged(Patient);
             else
@@ -135,6 +136,11 @@ namespace ESAPIX.AppKit
         public void ClosePatient()
         {
             _app.ClosePatient();
+            this.Patient = null;
+            this.PlanSetup = null;
+            this.Course = null;
+            this.BrachyPlanSetup = null;
+            this.ExternalPlanSetup = null;
             OnPatientChanged(null);
             SetPlanSetup(null);
             SetCourse(null);
