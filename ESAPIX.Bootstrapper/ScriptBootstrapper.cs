@@ -9,6 +9,7 @@ using ESAPIX.Interfaces;
 using Microsoft.Practices.Unity;
 using Prism.Events;
 using Prism.Unity;
+using ESAPIX.AppKit.Exceptions;
 
 #endregion
 
@@ -46,8 +47,21 @@ namespace ESAPIX.AppKit
         {
             var shell = (Window)Shell;
             _sc.UIDispatcher = shell.Dispatcher;
+            shell.Dispatcher.UnhandledException += Dispatcher_UnhandledException;
             shell.ShowDialog();
             _frame.Continue = false;
+        }
+
+        private void Dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            if (e.Exception is ScriptException)
+            {
+                MessageBox.Show(e.Exception.InnerException.Message);
+            }
+            else
+            {
+                MessageBox.Show(e.Exception.GetRootException().Message);
+            }
         }
 
         public void Run(Func<Window> getSplash = null)
@@ -62,12 +76,10 @@ namespace ESAPIX.AppKit
                 catch (Exception e)
                 {
                     MessageBox.Show($"SCRIPT ERROR (Closing Thread) \n Exception Details : \n {e.ToString()}");
-                    _sc.Thread.Invoke(() =>
-                    {
-                        _frame.Continue = false;
-                        var main = (Window)this.Shell;
-                        if (main.IsActive) main.Close();
-                    });
+                    _frame.Continue = false;
+                    this.Shell.Dispatcher.UnhandledException -= Dispatcher_UnhandledException;
+                    var main = (Window)this.Shell;
+                    if (main.IsActive) main.Close();
                 }
             });
             ui.SetApartmentState(ApartmentState.STA);

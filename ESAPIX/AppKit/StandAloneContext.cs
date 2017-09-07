@@ -7,6 +7,7 @@ using System.Windows.Threading;
 using ESAPIX.Facade;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
+using ESAPIX.Logging;
 
 #endregion
 
@@ -24,6 +25,7 @@ namespace ESAPIX.AppKit
         {
             _app = app;
             Thread = thread ?? new AppComThread(false); //Same thread
+            Logger = new Logger();
         }
 
         public void Dispose()
@@ -60,6 +62,8 @@ namespace ESAPIX.AppKit
         public ExternalPlanSetup ExternalPlanSetup { get; private set; }
 
         public IEnumerable<ExternalPlanSetup> ExternalPlansInScope => Course?.ExternalPlanSetups;
+
+        public Logger Logger { get; private set; }
 
         /// <summary>
         ///     Creates a new application context and binds it to a new thread

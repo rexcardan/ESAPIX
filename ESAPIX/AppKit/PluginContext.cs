@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Threading;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
+using ESAPIX.Logging;
 
 #endregion
 
@@ -25,6 +26,7 @@ namespace ESAPIX.AppKit
             _ctx = ctx;
             _scriptReference = new WeakReference(ctx._client);
             Thread = new ScriptComThread(w.Dispatcher);
+            Logger = new Logger();
         }
 
         public string ApplicationName => _ctx?.ApplicationName;
@@ -76,11 +78,12 @@ namespace ESAPIX.AppKit
 
         public Dispatcher UIDispatcher { get; set; }
 
+        public Logger Logger { get; private set; }
+
         #region NOT USED
 
         //These will never get called
         public event StandAloneContext.PatientChangedHandler PatientChanged;
-
         public event StandAloneContext.PlanSetupChangedHandler PlanSetupChanged;
         public event StandAloneContext.ExternalPlanSetupChangedHandler ExternalPlanSetupChanged;
         public event StandAloneContext.PlanSetupChangedHandler BrachyPlanSetupChanged;

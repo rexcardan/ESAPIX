@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESAPIX.Interfaces;
 using ESAPIX.Facade;
+using System.Windows.Threading;
+using ESAPIX.AppKit.Exceptions;
 
 #endregion
 
@@ -59,7 +61,6 @@ namespace ESAPIX.AppKit
             }
         }
 
-
         public async Task InvokeAsync(Action action)
         {
             var task = Task.Run(() =>
@@ -70,8 +71,13 @@ namespace ESAPIX.AppKit
             await task;
             if (task.Exception != null)
             {
-                Debug.Write(task.Exception.ToString());
-                throw task.Exception;
+                var wrapped = new ScriptException(task.Exception);
+                XContext.Instance.CurrentContext.Logger.Log(wrapped.Message);
+                XContext.Instance.CurrentContext.Logger.Log(task.Exception.GetRootException().Message);
+                XContext.Instance.CurrentContext.UIDispatcher.Invoke(() =>
+                {
+                    throw wrapped;
+                });
             }
         }
 
@@ -84,9 +90,12 @@ namespace ESAPIX.AppKit
             }
             catch (Exception e)
             {
+                var wrapped = new ScriptException(e);
+                XContext.Instance.CurrentContext.Logger.Log(wrapped.Message);
+                XContext.Instance.CurrentContext.Logger.Log(e.GetRootException().Message);
                 XContext.Instance.CurrentContext.UIDispatcher.Invoke(() =>
                 {
-                    throw new Exception($"ESAPIX Thread tried and failed to invoke a method. See inner exception for details", e);
+                    throw wrapped;
                 });
             }
         }
@@ -110,8 +119,8 @@ namespace ESAPIX.AppKit
 
         public object Invoke(Delegate dlg, params object[] args)
         {
-            if (ctx == null) throw new ObjectDisposedException("VmsComThread");
             object result = null;
+            if (ctx == null) throw new ObjectDisposedException("VmsComThread");
             ctx.Send(_ => result = dlg.DynamicInvoke(null), null);
             return result;
         }

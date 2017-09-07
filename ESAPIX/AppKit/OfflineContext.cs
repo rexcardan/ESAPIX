@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
+using ESAPIX.Logging;
 
 #endregion
 
@@ -41,6 +42,8 @@ namespace ESAPIX.AppKit
         public IVMSThread Thread { get; set; }
 
         public System.Windows.Threading.Dispatcher UIDispatcher { get; set; }
+
+        public Logger Logger => throw new NotImplementedException();
 
         public event StandAloneContext.PatientChangedHandler PatientChanged;
         public event StandAloneContext.PlanSetupChangedHandler PlanSetupChanged;

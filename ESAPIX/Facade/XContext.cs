@@ -6,6 +6,10 @@ using ESAPIX.Interfaces;
 
 namespace ESAPIX.Facade
 {
+    /// <summary>
+    /// A singleton class which allows a contact point to find the current context (script or standalone) from within
+    /// any class or method. Call XContext.Instance.CurrentContext for current context.
+    /// </summary>
     public class XContext
     {
         private static readonly object syncRoot = new object();

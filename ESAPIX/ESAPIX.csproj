@@ -103,6 +103,7 @@
     <Compile Include="AppKit\Data\AppSettings.cs" />
     <Compile Include="AppKit\Data\JsonDataStore.cs" />
     <Compile Include="AppKit\Data\SecureStorage.cs" />
+    <Compile Include="AppKit\Exceptions\ScriptException.cs" />
     <Compile Include="AppKit\OfflineContext.cs" />
     <Compile Include="AppKit\Overlay\SelectPatient.xaml.cs">
       <DependentUpon>SelectPatient.xaml</DependentUpon>
@@ -303,6 +304,9 @@
   <ItemGroup>
     <Content Include="Resources\esapix.ico" />
     <Content Include="Resources\esapix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppKit\Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

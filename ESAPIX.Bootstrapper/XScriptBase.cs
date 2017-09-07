@@ -27,7 +27,14 @@ namespace ESAPIX.Bootstrapper
             var frame = new DispatcherFrame();
             XContext.Instance.CurrentContext = plugCtx;
             XExecute(plugCtx, frame);
+            Dispatcher.CurrentDispatcher.UnhandledException += CurrentDispatcher_UnhandledException;
             Dispatcher.PushFrame(frame);
+        }
+
+        private void CurrentDispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show($"SCRIPT ERROR : \n\n"+e.Exception.Message);
+            e.Handled = true;
         }
 
         #region WINDOW PLUMBING

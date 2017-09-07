@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Threading;
 using ESAPIX.Facade.API;
 using static ESAPIX.AppKit.StandAloneContext;
+using ESAPIX.Logging;
 
 #endregion
 
@@ -65,6 +66,8 @@ namespace ESAPIX.Interfaces
         /// <param name="toExecute">the function that assigns the value</param>
         /// <returns>a task of the value requested</returns>
         Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute);
+
+        Logger Logger { get; }
 
         #region EVENTS
 

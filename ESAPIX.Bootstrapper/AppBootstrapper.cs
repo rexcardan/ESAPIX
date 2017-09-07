@@ -13,6 +13,7 @@ using Prism.Unity;
 using Newtonsoft.Json;
 using System.IO;
 using ESAPIX.Facade.Serialization;
+using ESAPIX.AppKit.Exceptions;
 
 #endregion
 
@@ -66,6 +67,9 @@ namespace ESAPIX.Bootstrapper
         {
             var shell = (Window) Shell;
             _ctx.UIDispatcher = shell.Dispatcher;
+
+            //Needed to not crash app on multithreading exceptions
+            shell.Dispatcher.UnhandledException += Dispatcher_UnhandledException;
             shell.Closed += (send, args) =>
             {
                 //Dispose ESAPI and shutdown app
@@ -73,6 +77,7 @@ namespace ESAPIX.Bootstrapper
                 {
                     (_ctx as StandAloneContext).Dispose();
                 }
+                shell.Dispatcher.UnhandledException -= Dispatcher_UnhandledException;
                 Application.Current.Shutdown();
             };
 
@@ -81,6 +86,18 @@ namespace ESAPIX.Bootstrapper
             shell.MinWidth = 750;
             shell.ShowDialog();
             shell.ContentRendered -= shell_ContentRendered;
+        }
+
+        private void Dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            if(e.Exception is ScriptException)
+            {
+                MessageBox.Show(e.Exception.InnerException.Message);
+            }
+            else
+            {
+                MessageBox.Show(e.Exception.GetRootException().Message);
+            }
         }
 
         public void Run(Func<Window> getSplash = null)
