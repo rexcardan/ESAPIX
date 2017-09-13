@@ -56,6 +56,8 @@ namespace ESAPIX.Extensions
             return null;
         }
 
+
+
         /// <summary>
         /// Get beams from even a plan sum by iterating over plans in plansum
         /// </summary>
@@ -64,12 +66,22 @@ namespace ESAPIX.Extensions
         public static IEnumerable<Beam> GetBeams(this PlanningItem pi)
         {
             if (pi is PlanSetup)
-                foreach (var beam in (pi as PlanSetup).Beams)
+            {
+                foreach (var beam in (pi as PlanSetup).Beams
+                {
                     yield return beam;
+                }
+            }
             else if (pi is PlanSum)
+            {
                 foreach (var ps in (pi as PlanSum).PlanSetups)
-                foreach (var beam in ps.Beams)
-                    yield return beam;
+                {
+                    foreach (var beam in ps.Beams)
+                    {
+                        yield return beam;
+                    }
+                }
+            }
         }
 
         /// <summary>
