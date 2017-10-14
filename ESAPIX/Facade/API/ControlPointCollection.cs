@@ -15,7 +15,7 @@ namespace ESAPIX.Facade.API
     {
         public ControlPointCollection()
         {
-            _client = new ExpandoObject();
+            _client = new List<ControlPoint>();
         }
 
         public ControlPointCollection(dynamic client)
@@ -27,11 +27,9 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Item"))
+                if (_client is List<ControlPoint>)
                         return _client[index];
-                    else
-                        return default(ControlPoint);
+                 
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc =>
                         {
@@ -45,7 +43,7 @@ namespace ESAPIX.Facade.API
 
             set
             {
-                if (_client is ExpandoObject)
+                if (_client is List<ControlPoint>)
                     _client[index] = value;
             }
         }
@@ -54,11 +52,9 @@ namespace ESAPIX.Facade.API
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Count"))
+                if (_client is List<ControlPoint>)           
                         return _client.Count;
-                    else
-                        return default(int);
+
                 if (XC.Instance.CurrentContext != null)
                     return XC.Instance.CurrentContext.GetValue(sc => { return _client.Count; }
                     );
