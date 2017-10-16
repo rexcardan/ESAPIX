@@ -5,7 +5,6 @@ using System.Windows;
 using Prism.Interactivity;
 using Prism.Mvvm;
 using i = System.Windows.Interactivity;
-using x = Microsoft.Expression.Interactivity;
 
 #endregion
 
@@ -22,7 +21,6 @@ namespace ESAPIX.Helpers
             var action = new i.InvokeCommandAction();
             action.CommandName = "Loaded";
             var window = new Window();
-            x.VisualStateUtilities.GetVisualStateGroups(window);
             ViewModelLocator.SetAutoWireViewModel(window, false);
             var action2 = new InvokeCommandAction();
             action.CommandName = "Loaded";
