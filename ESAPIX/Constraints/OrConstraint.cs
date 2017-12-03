@@ -1,6 +1,7 @@
 ﻿#region
 
 using ESAPIX.Facade.API;
+using System;
 using static ESAPIX.Constraints.ResultType;
 
 #endregion
@@ -47,11 +48,13 @@ namespace ESAPIX.Constraints
 
         public ConstraintResult Constrain(PlanningItem pi)
         {
-            var c1passed = C1.Constrain(pi);
-            var c2passed = C2.Constrain(pi);
+            ConstraintResult c1passed = new ConstraintResult(C1,ResultType.ACTION_LEVEL_3, string.Empty);
+            ConstraintResult c2passed = new ConstraintResult(C1, ResultType.ACTION_LEVEL_3, string.Empty);
 
-            var passed = c1passed.IsSuccess && c1passed.IsSuccess ||
-                         c2passed.IsSuccess && c2passed.IsSuccess;
+            try { if (C1.CanConstrain(pi).IsSuccess){ c1passed = C1.Constrain(pi); } } catch(Exception e) { c1passed.Message = e.Message; }
+            try { if (C2.CanConstrain(pi).IsSuccess) { c2passed = C2.Constrain(pi); } } catch (Exception e) { c2passed.Message = e.Message; }
+
+            var passed = c1passed.IsSuccess  || c2passed.IsSuccess;
 
             var msg =
                 $"{(passed ? "One or both constraints passed" : "Neither constraint passed")} \n{c1passed.Message} \n{c2passed.Message}";
