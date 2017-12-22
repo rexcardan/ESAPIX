@@ -10,58 +10,28 @@ using Microsoft.Practices.Unity;
 using Prism.Events;
 using Prism.Unity;
 using ESAPIX.AppKit.Exceptions;
+using ESAPIX.Bootstrapper;
+using ESAPIX.AppKit;
 
 #endregion
 
-namespace ESAPIX.AppKit
+namespace ESAPIX.Bootstrapper
 {
-    public class ScriptBootstrapper<T> : UnityBootstrapper where T : Window
+    public class ScriptBootstrapper<T> : BootstrapperBase<T> where T : Window
     {
-        private readonly IEventAggregator _ea;
         private readonly DispatcherFrame _frame;
 
-        private readonly PluginContext _sc;
-
-        public ScriptBootstrapper(PluginContext ctx, DispatcherFrame frame)
+        public ScriptBootstrapper(PluginContext ctx, DispatcherFrame frame) : base()
         {
             XamlAssemblyLoader.LoadAssemblies();
-            _sc = ctx;
-            _ea = new EventAggregator();
+            _ctx = ctx;
             _frame = frame;
         }
 
-        protected override DependencyObject CreateShell()
+        protected override void CleanUp()
         {
-            return Container.Resolve<T>();
-        }
-
-        protected override void ConfigureContainer()
-        {
-            base.ConfigureContainer();
-            Container.RegisterInstance<IScriptContext>(_sc);
-            Container.RegisterInstance(_ea);
-            Container.RegisterInstance(Container);
-        }
-
-        protected override void InitializeShell()
-        {
-            var shell = (Window)Shell;
-            _sc.UIDispatcher = shell.Dispatcher;
-            shell.Dispatcher.UnhandledException += Dispatcher_UnhandledException;
-            shell.ShowDialog();
+            base.CleanUp();
             _frame.Continue = false;
-        }
-
-        private void Dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
-        {
-            if (e.Exception is ScriptException)
-            {
-                MessageBox.Show(e.Exception.InnerException.Message);
-            }
-            else
-            {
-                MessageBox.Show(e.Exception.GetRootException().Message);
-            }
         }
 
         public void Run(Func<Window> getSplash = null)
@@ -77,9 +47,10 @@ namespace ESAPIX.AppKit
                 {
                     MessageBox.Show($"SCRIPT ERROR (Closing Thread) \n Exception Details : \n {e.ToString()}");
                     _frame.Continue = false;
-                    this.Shell.Dispatcher.UnhandledException -= Dispatcher_UnhandledException;
+                    if (Shell?.Dispatcher != null)
+                        Shell.Dispatcher.UnhandledException -= Dispatcher_UnhandledException;
                     var main = (Window)this.Shell;
-                    if (main.IsActive) main.Close();
+                    if (main != null && main.IsActive) main.Close();
                 }
             });
             ui.SetApartmentState(ApartmentState.STA);

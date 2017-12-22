@@ -19,10 +19,8 @@ using ESAPIX.AppKit.Exceptions;
 
 namespace ESAPIX.Bootstrapper
 {
-    public class AppBootstrapper<T> : UnityBootstrapper where T : Window
+    public class AppBootstrapper<T> : BootstrapperBase<T> where T : Window
     {
-        protected IScriptContext _ctx;
-        private readonly EventAggregator _ea;
 
         /// <summary>
         /// Constructs a bootstrapper for standalone applications from a username, password
@@ -30,11 +28,10 @@ namespace ESAPIX.Bootstrapper
         /// <param name="vmsUsername">username for VMS access</param>
         /// <param name="vmsPassword">password for VMS access</param>
         /// <param name="singleThread">indicates whether or not to use a single thread (default is multithread)</param>
-        public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false)
+        public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false) : base()
         {
             FacadeInitializer.Initialize();
             _ctx = StandAloneContext.Create(vmsUsername, vmsPassword, singleThread);
-            _ea = new EventAggregator();
             _ctx.UIDispatcher = Dispatcher.CurrentDispatcher;
         }
 
@@ -42,64 +39,14 @@ namespace ESAPIX.Bootstrapper
         /// Constructs a bootstrapper for standalone applications from a offline context json file
         /// </summary>
         /// <param name="offlineContextPath">the path to the offline context json file</param>
-        public AppBootstrapper(string offlineContextPath)
+        public AppBootstrapper(string offlineContextPath) : base()
         {
             FacadeInitializer.Initialize();
             var ctx = FacadeSerializer.DeserializeContext(offlineContextPath);
             ctx.Thread = new AppComThread();
             _ctx = ctx;
-            _ea = new EventAggregator();
         }
 
-        protected override DependencyObject CreateShell()
-        {
-            return Container.Resolve<T>();
-        }
-
-        protected override void ConfigureContainer()
-        {
-            base.ConfigureContainer();
-            Container.RegisterInstance<IScriptContext>(_ctx);
-            Container.RegisterInstance<IEventAggregator>(_ea);
-            Container.RegisterInstance(Container);
-        }
-
-        protected override void InitializeShell()
-        {
-            var shell = (Window) Shell;
-            _ctx.UIDispatcher = shell.Dispatcher;
-
-            //Needed to not crash app on multithreading exceptions
-            shell.Dispatcher.UnhandledException += Dispatcher_UnhandledException;
-            shell.Closed += (send, args) =>
-            {
-                //Dispose ESAPI and shutdown app
-                if(_ctx is StandAloneContext)
-                {
-                    (_ctx as StandAloneContext).Dispose();
-                }
-                shell.Dispatcher.UnhandledException -= Dispatcher_UnhandledException;
-                Application.Current.Shutdown();
-            };
-
-            if (shell != null)
-                shell.ContentRendered += shell_ContentRendered;
-            shell.MinWidth = 750;
-            shell.ShowDialog();
-            shell.ContentRendered -= shell_ContentRendered;
-        }
-
-        private void Dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
-        {
-            if(e.Exception is ScriptException)
-            {
-                MessageBox.Show(e.Exception.InnerException.Message);
-            }
-            else
-            {
-                MessageBox.Show(e.Exception.GetRootException().Message);
-            }
-        }
 
         public void Run(Func<Window> getSplash = null)
         {
@@ -109,25 +56,23 @@ namespace ESAPIX.Bootstrapper
             base.Run();
         }
 
-        #region PLUMBING
-
         /// <summary>
-        ///     This method hijacks the application and injects a patient selector to mimick the script context of a normal plugin
+        /// This method will hijack the main window and place a patient selction toolbox
+        /// overlaid in the application
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void shell_ContentRendered(object sender, EventArgs e)
+        /// <param name="shell"></param>
+        protected override void OnContentRendered(Window shell)
         {
-            var shell = sender as Window;
-            if (shell != null && _ctx is StandAloneContext)
+            base.OnContentRendered(shell);
+            if (shell != null)
             {
                 var sac = _ctx as StandAloneContext;
-                var currentContent = (UIElement) shell.Content;
+                var currentContent = (UIElement)shell.Content;
                 var stackPanel = new DockPanel();
                 stackPanel.VerticalAlignment = VerticalAlignment.Stretch;
                 shell.Content = stackPanel;
                 var selectPat = new SelectPatient(sac);
-                var selectPatContent = (FrameworkElement) selectPat.Content;
+                var selectPatContent = (FrameworkElement)selectPat.Content;
                 selectPatContent.DataContext = selectPat;
                 selectPat.Content = null;
                 stackPanel.Children.Add(selectPatContent);
@@ -135,12 +80,17 @@ namespace ESAPIX.Bootstrapper
                 DockPanel.SetDock(selectPatContent, Dock.Top);
                 DockPanel.SetDock(currentContent, Dock.Top);
                 shell.Content = stackPanel;
-                shell.ContentRendered -= shell_ContentRendered;
             }
-            //Force foreground
-            shell.Activate();
         }
 
-        #endregion
+        protected override void CleanUp()
+        {
+            base.CleanUp();
+            //Dispose ESAPI and shutdown app
+            if (_ctx is StandAloneContext)
+            {
+                (_ctx as StandAloneContext).Dispose();
+            }
+        }
     }
 }
