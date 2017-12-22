@@ -21,7 +21,7 @@ namespace ESAPIX.Bootstrapper
 {
     public class AppBootstrapper<T> : UnityBootstrapper where T : Window
     {
-        private IScriptContext _ctx;
+        protected IScriptContext _ctx;
         private readonly EventAggregator _ea;
 
         /// <summary>
@@ -35,6 +35,7 @@ namespace ESAPIX.Bootstrapper
             FacadeInitializer.Initialize();
             _ctx = StandAloneContext.Create(vmsUsername, vmsPassword, singleThread);
             _ea = new EventAggregator();
+            _ctx.UIDispatcher = Dispatcher.CurrentDispatcher;
         }
 
         /// <summary>
@@ -136,6 +137,8 @@ namespace ESAPIX.Bootstrapper
                 shell.Content = stackPanel;
                 shell.ContentRendered -= shell_ContentRendered;
             }
+            //Force foreground
+            shell.Activate();
         }
 
         #endregion
