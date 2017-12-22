@@ -47,15 +47,6 @@ namespace ESAPIX.Bootstrapper
             _ctx = ctx;
         }
 
-
-        public void Run(Func<Window> getSplash = null)
-        {
-            if (getSplash != null)
-                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-                    new Action(() => { getSplash().ShowDialog(); }));
-            base.Run();
-        }
-
         /// <summary>
         /// This method will hijack the main window and place a patient selction toolbox
         /// overlaid in the application

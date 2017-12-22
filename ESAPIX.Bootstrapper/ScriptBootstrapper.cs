@@ -34,13 +34,13 @@ namespace ESAPIX.Bootstrapper
             _frame.Continue = false;
         }
 
-        public void Run(Func<Window> getSplash = null)
+        public new void Run()
         {
             var ui = new Thread(() =>
             {
                 try
                 {
-                    if (getSplash != null) getSplash().ShowDialog();
+                    if (Splash != null) Splash.ShowDialog();
                     base.Run();
                 }
                 catch (Exception e)

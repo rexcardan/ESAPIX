@@ -11,6 +11,7 @@ using ESAPIX.Interfaces;
 using ESAPIX.AppKit;
 using ESAPIX.AppKit.Exceptions;
 using System.Windows.Threading;
+using System.Threading;
 
 namespace ESAPIX.Bootstrapper
 {
@@ -18,6 +19,7 @@ namespace ESAPIX.Bootstrapper
     {
         protected IScriptContext _ctx;
         private EventAggregator _ea;
+        private ManualResetEvent mre = new ManualResetEvent(false); //For splash screen
 
         public BootstrapperBase()
         {
@@ -35,9 +37,10 @@ namespace ESAPIX.Bootstrapper
             Container.RegisterInstance<IScriptContext>(_ctx);
             Container.RegisterInstance<IEventAggregator>(_ea);
             Container.RegisterInstance(Container);
+            AdditionalRegistrations?.Invoke(Container);
         }
 
-        protected override void InitializeShell()
+        protected async override void InitializeShell()
         {
             var shell = (Window)Shell;
             _ctx.UIDispatcher = shell.Dispatcher;
@@ -55,15 +58,28 @@ namespace ESAPIX.Bootstrapper
             if (shell != null)
                 shell.ContentRendered += shell_ContentRendered;
 
+            //If there is a splash screen.Show it here
+            if (Splash != null)
+            {
+                Splash.Show();
+                Splash.Closing += (ob, args)=> { mre.Set(); } ;
+                await Task.Run(() => { mre.WaitOne(); });
+            }
+
             shell.ShowDialog();
             shell.ContentRendered -= shell_ContentRendered;
         }
+
+        protected Window Splash { get; set; }
 
         protected virtual void OnContentRendered(Window shell) { }
 
         protected virtual void CleanUp() { }
 
-
+        /// <summary>
+        /// Allows for registered services, views, etc with the UnityContainer
+        /// </summary>
+        public Action<IUnityContainer> AdditionalRegistrations { get; set; }
 
         #region PLUMBING
         /// <summary>
