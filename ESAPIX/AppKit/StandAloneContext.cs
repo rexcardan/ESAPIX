@@ -127,6 +127,11 @@ namespace ESAPIX.AppKit
             return ExternalPlanSetup != null;
         }
 
+        public void SetImage(Image im)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool SetBrachyPlanSetup(BrachyPlanSetup bs)
         {
             PlanSetup = bs;
@@ -152,9 +157,24 @@ namespace ESAPIX.AppKit
             SetExternalPlanSetup(null);
         }
 
+        public void SetPlansInScope(IEnumerable<PlanSetup> plans)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetExternalPlansInScope(IEnumerable<ExternalPlanSetup> plans)
+        {
+            throw new NotImplementedException();
+        }
+
         #region CONTEXT CHANGED EVENTS
 
         public delegate void PatientChangedHandler(Patient newPatient);
+
+        public void SetBrachyPlansInScope(IEnumerable<BrachyPlanSetup> plans)
+        {
+            throw new NotImplementedException();
+        }
 
         public event PatientChangedHandler PatientChanged;
 
