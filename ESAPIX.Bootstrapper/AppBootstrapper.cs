@@ -1,19 +1,11 @@
 ﻿#region
 
-using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
 using ESAPIX.AppKit;
 using ESAPIX.AppKit.Overlay;
-using ESAPIX.Interfaces;
-using Microsoft.Practices.Unity;
-using Prism.Events;
-using Prism.Unity;
-using Newtonsoft.Json;
-using System.IO;
 using ESAPIX.Facade.Serialization;
-using ESAPIX.AppKit.Exceptions;
 using ESAPIX.Bootstrapper.Helpers;
 using System.Linq;
 

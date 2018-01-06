@@ -1,18 +1,16 @@
-﻿using ESAPIX.AppKit;
-using ESAPIX.Bootstrapper.Helpers;
-using ESAPIX.Facade;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Threading;
 using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Bootstrapper
 {
+    /// <summary>
+    /// A script.cs file should be included in your WPF app which inherits from this class. Set the AppStartPath in the 
+    /// constructor. Pass the arguments to the AppBootstrapper.Run to preload the same context that was in Eclipse when 
+    /// launched
+    /// </summary>
     public class XScriptToFullAppBase
     {
         public string AppStartPath { get; set; }

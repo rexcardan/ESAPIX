@@ -1,14 +1,10 @@
 ﻿using Prism.Unity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Practices.Unity;
 using Prism.Events;
 using ESAPIX.Interfaces;
-using ESAPIX.AppKit;
 using ESAPIX.AppKit.Exceptions;
 using System.Windows.Threading;
 using System.Threading;

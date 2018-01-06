@@ -1,10 +1,6 @@
 ﻿using ESAPIX.Extensions;
 using ESAPIX.Facade.API;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VMS.TPS.Common.Model.Types;
 using static ESAPIX.Helpers.MagicStrings;
 

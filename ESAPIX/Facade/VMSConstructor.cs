@@ -1,7 +1,6 @@
 #region
 
 using System;
-using XC = ESAPIX.Facade.XContext;
 
 #endregion
 

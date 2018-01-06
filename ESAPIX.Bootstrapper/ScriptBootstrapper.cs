@@ -5,12 +5,6 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
 using ESAPIX.Helpers;
-using ESAPIX.Interfaces;
-using Microsoft.Practices.Unity;
-using Prism.Events;
-using Prism.Unity;
-using ESAPIX.AppKit.Exceptions;
-using ESAPIX.Bootstrapper;
 using ESAPIX.AppKit;
 
 #endregion
