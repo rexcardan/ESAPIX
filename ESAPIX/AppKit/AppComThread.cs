@@ -121,7 +121,7 @@ namespace ESAPIX.AppKit
         {
             object result = null;
             if (ctx == null) throw new ObjectDisposedException("VmsComThread");
-            ctx.Send(_ => result = dlg.DynamicInvoke(null), null);
+            ctx.Send(_ => result = dlg.DynamicInvoke(args), null);
             return result;
         }
 

@@ -25,6 +25,8 @@ namespace ESAPIX.AppKit
         {
             _app = app;
             Thread = thread ?? new AppComThread(false); //Same thread
+            //Defaults
+            CurrentUser = _app?.CurrentUser;
             Logger = new Logger();
         }
 
@@ -33,21 +35,21 @@ namespace ESAPIX.AppKit
             _app?.Dispose();
         }
 
-        public Course Course { get; private set; }
+        public Course Course { get; set; }
 
-        public User CurrentUser => _app?.CurrentUser;
+        public User CurrentUser { get; set; } 
 
-        public Image Image => PlanSetup?.StructureSet.Image;
+        public Image Image { get; set; }
 
-        public Patient Patient { get; private set; }
+        public Patient Patient { get; set; }
 
-        public PlanSetup PlanSetup { get; private set; }
+        public PlanSetup PlanSetup { get; set; }
 
-        public IEnumerable<PlanSetup> PlansInScope => Course?.PlanSetups;
+        public IEnumerable<PlanSetup> PlansInScope { get; set; } 
 
-        public IEnumerable<PlanSum> PlanSumsInScope => Course?.PlanSums;
+        public IEnumerable<PlanSum> PlanSumsInScope { get; set; }
 
-        public StructureSet StructureSet => PlanSetup?.StructureSet;
+        public StructureSet StructureSet { get; set; }
 
         public IVMSThread Thread { get; set; }
 
@@ -57,11 +59,11 @@ namespace ESAPIX.AppKit
 
         public BrachyPlanSetup BrachyPlanSetup { get; private set; }
 
-        public IEnumerable<BrachyPlanSetup> BrachyPlansInScope => Course?.BrachyPlanSetups;
+        public IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; set; }
 
         public ExternalPlanSetup ExternalPlanSetup { get; private set; }
 
-        public IEnumerable<ExternalPlanSetup> ExternalPlansInScope => Course?.ExternalPlanSetups;
+        public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; set; }
 
         public Logger Logger { get; private set; }
 
@@ -101,17 +103,27 @@ namespace ESAPIX.AppKit
             return found;
         }
 
-        public bool SetCourse(Course course)
+        public bool SetCourse(Course course, bool autoFillChildren = true)
         {
             Course = course;
+            if (autoFillChildren)
+            {
+                PlanSumsInScope = course?.PlanSums;
+                PlansInScope = course?.PlanSetups;
+            }
             //Notify
             OnCourseChanged(course);
             return Course != null;
         }
 
-        public bool SetPlanSetup(PlanSetup plan)
+        public bool SetPlanSetup(PlanSetup plan, bool autoFillChildren = true)
         {
             PlanSetup = plan;
+            if (autoFillChildren)
+            {
+                StructureSet = plan?.StructureSet;
+                Image = plan?. StructureSet?.Image;
+            }
             //Notify
             OnPlanSetupChanged(plan);
             return PlanSetup != null;
@@ -129,7 +141,7 @@ namespace ESAPIX.AppKit
 
         public void SetImage(Image im)
         {
-            throw new NotImplementedException();
+            Image = im;
         }
 
         public bool SetBrachyPlanSetup(BrachyPlanSetup bs)
@@ -159,12 +171,12 @@ namespace ESAPIX.AppKit
 
         public void SetPlansInScope(IEnumerable<PlanSetup> plans)
         {
-            throw new NotImplementedException();
+            PlansInScope = plans;
         }
 
         public void SetExternalPlansInScope(IEnumerable<ExternalPlanSetup> plans)
         {
-            throw new NotImplementedException();
+            ExternalPlansInScope = plans;
         }
 
         #region CONTEXT CHANGED EVENTS

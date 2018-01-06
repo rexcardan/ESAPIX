@@ -8,27 +8,27 @@ namespace ESAPIX.Bootstrapper.Helpers
 {
     public class ArgumentParser
     {
-        internal static string GetPatientId(string[] commandLineArgs)
+        public static string GetPatientId(string[] commandLineArgs)
         {
             return GetSingle(commandLineArgs, ArgumentKey.PatientId);
         }
 
-        internal static string GetPlanSetup(string[] commandLineArgs)
+        public static string GetPlanSetup(string[] commandLineArgs)
         {
             return GetSingle(commandLineArgs, ArgumentKey.PlanSetup);
         }
 
-        internal static string GetBrachyPlanSetup(string[] commandLineArgs)
+        public static string GetBrachyPlanSetup(string[] commandLineArgs)
         {
             return GetSingle(commandLineArgs, ArgumentKey.BrachyPlanSetup);
         }
 
-        internal static string GetExternalPlanSetup(string[] commandLineArgs)
+        public static string GetExternalPlanSetup(string[] commandLineArgs)
         {
             return GetSingle(commandLineArgs, ArgumentKey.ExternalPlanSetup);
         }
 
-        internal static (string,string) GetImage(string[] commandLineArgs)
+        public static (string,string) GetImage(string[] commandLineArgs)
         {
             var multiple = GetMultiple(commandLineArgs, ArgumentKey.Image);
             if(multiple!=null && multiple.Count() == 2)
@@ -38,47 +38,48 @@ namespace ESAPIX.Bootstrapper.Helpers
             return (string.Empty,string.Empty);
         }
 
-        internal static string GetCourseId(string[] commandLineArgs)
+        public static string GetCourseId(string[] commandLineArgs)
         {
             return GetSingle(commandLineArgs, ArgumentKey.Course);
         }
 
-        internal static List<string> GetPlansInScope(string[] commandLineArgs)
+        public static List<string> GetPlansInScope(string[] commandLineArgs)
         {
-            return GetMultiple(commandLineArgs, ArgumentKey.PlansInScope).ToList();
+            return GetMultiple(commandLineArgs, ArgumentKey.PlansInScope)?.ToList();
         }
 
-        internal static List<string> GetPlanSumsInScope(string[] commandLineArgs)
+        public static List<string> GetPlanSumsInScope(string[] commandLineArgs)
         {
-            return GetMultiple(commandLineArgs, ArgumentKey.PlanSumsInScope).ToList();
+            return GetMultiple(commandLineArgs, ArgumentKey.PlanSumsInScope)?.ToList();
         }
 
-        internal static List<string> GetExternalPlansInScope(string[] commandLineArgs)
+        public static List<string> GetExternalPlansInScope(string[] commandLineArgs)
         {
-            return GetMultiple(commandLineArgs, ArgumentKey.ExternalPlansInScope).ToList();
+            return GetMultiple(commandLineArgs, ArgumentKey.ExternalPlansInScope)?.ToList();
         }
 
-        internal static List<string> GetBrachyPlansInScope(string[] commandLineArgs)
+        public static List<string> GetBrachyPlansInScope(string[] commandLineArgs)
         {
-            return GetMultiple(commandLineArgs, ArgumentKey.BrachyPlansInScope).ToList();
+            return GetMultiple(commandLineArgs, ArgumentKey.BrachyPlansInScope)?.ToList();
         }
 
-        private static string GetSingle(string[] commandLineArgs, string key)
+        public static string GetSingle(string[] commandLineArgs, string key)
         {
             if (commandLineArgs.Contains(key))
             {
                 var index = commandLineArgs.ToList().IndexOf(key);
-                return commandLineArgs[index + 1];
+                var parts = commandLineArgs.Skip(index+1).TakeWhile(k => !k.StartsWith("-")).ToArray();
+                return string.Join(" ", parts);
             }
             return null;
         }
 
-        private static string[] GetMultiple(string[] commandLineArgs, string key)
+        public static string[] GetMultiple(string[] commandLineArgs, string key)
         {
             if (commandLineArgs.Contains(key))
             {
                 var index = commandLineArgs.ToList().IndexOf(key);
-                return commandLineArgs.Skip(index).TakeWhile(k => !k.StartsWith("-")).ToArray();
+                return commandLineArgs.Skip(index+1).TakeWhile(k => !k.StartsWith("-")).ToArray();
             }
             return null;
         }

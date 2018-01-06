@@ -36,11 +36,11 @@ namespace ESAPIX.Facade
             Exception e = null;
 
             thread.Invoke(() =>
-
             {
                 var vms = Application_CreateApplicationFunc0(username, password);
                 xapp = new Application(vms);
             });
+
             if (ExpandoGetter.GetClient(xapp) == null)
                 throw new Exception(
                     "App was not created. Make sure FacadeInitializer.Initialize() in ESAPIX.Bootstrapper is being called before invoking static methods",
