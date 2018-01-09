@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESAPIX.Interfaces;
 using ESAPIX.Facade;
-using System.Windows.Threading;
 using ESAPIX.AppKit.Exceptions;
 
 #endregion
