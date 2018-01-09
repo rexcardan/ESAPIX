@@ -1,5 +1,6 @@
 ﻿#region
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ESAPIX.Extensions;
@@ -26,6 +27,20 @@ namespace ESAPIX.Constraints
                     ? Results.FirstOrDefault(r => r.ResultType != PASSED)
                     : Results.FirstOrDefault();
             }
+        }
+
+        public PQAsserter ContainsValidFractionNum(PlanningItem pi)
+        {
+            int? numFx = 0;
+            if (pi is PlanSum)
+            {
+                numFx = (pi as PlanSum).PlanSetups.Sum(p => p.UniqueFractionation?.NumberOfFractions);
+            }
+            else
+                numFx = (pi as PlanSetup).UniqueFractionation?.NumberOfFractions;
+
+            Results.Add(new ConstraintResult(null, numFx!=null?ResultType.PASSED:ResultType.NOT_APPLICABLE, "Not valid fraction number", string.Empty));
+            return this;
         }
 
         /// <summary>

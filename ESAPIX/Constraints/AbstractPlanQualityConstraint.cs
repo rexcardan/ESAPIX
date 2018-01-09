@@ -8,7 +8,7 @@ namespace ESAPIX.Constraints
 {
     public abstract class AbstractPlanQualityConstraint : IConstraint
     {
-        public delegate void StatusUpdateHandler(string status);
+        public delegate void StatusUpdateHandler(double progress, string status);
 
         public virtual string Value { get; protected set; }
         public abstract string Name { get; }
@@ -24,9 +24,9 @@ namespace ESAPIX.Constraints
 
         public event StatusUpdateHandler StatusChanged;
 
-        public void OnStatusChanged(string status)
+        public void OnStatusChanged(double progress, string status)
         {
-            StatusChanged?.Invoke(status);
+            StatusChanged?.Invoke(progress, status);
         }
     }
 }

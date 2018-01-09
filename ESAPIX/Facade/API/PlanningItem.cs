@@ -100,8 +100,10 @@ namespace ESAPIX.Facade.API
             {
                 var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return new DVHData(_client.GetDVHCumulativeData(structure._client, dosePresentation,
-                            volumePresentation, binWidth));
+                        var fromClient = _client.GetDVHCumulativeData(structure._client, dosePresentation,
+                            volumePresentation, binWidth);
+                        if(fromClient == null) { return null; }
+                        return new DVHData(fromClient);
                     }
                 );
                 return vmsResult;

@@ -72,6 +72,25 @@ namespace ESAPIX.Extensions
                     yield return beam;
         }
 
+        public static IEnumerable<FieldReferencePoint> GetFieldReferencePointsCumulative(this PlanningItem pi)
+        {
+            var beams = pi.GetBeams();
+            var referencePointClusters = beams.SelectMany(b => b.FieldReferencePoints)
+                .GroupBy(frp => frp.ReferencePoint.Id);
+            foreach(var cluster in referencePointClusters)
+            {
+                var rp = new FieldReferencePoint();
+                rp.Name = cluster.First().Name;
+                rp.Id = cluster.Key;
+                rp.Comment = rp.Comment;
+                rp.HistoryDateTime = cluster.First().HistoryDateTime;
+                rp.HistoryUserName = cluster.First().HistoryUserName;
+                rp.EffectiveDepth = cluster.First().EffectiveDepth;
+                rp.FieldDose = new DoseValue(cluster.Sum(c => c.FieldDose.Dose), cluster.First().FieldDose.Unit);
+                yield return rp;
+            }
+        }
+
         /// <summary>
         ///     Returns the image from the planning item. Removes the need to cast to plan or plan sum.
         /// </summary>
