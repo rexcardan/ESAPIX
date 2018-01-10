@@ -1,108 +1,195 @@
-#region
-
+using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
+using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class SegmentVolume : SerializableObject, System.Xml.Serialization.IXmlSerializable
+    public class SegmentVolume : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
+        public ESAPIX.Facade.API.SegmentVolume And(ESAPIX.Facade.API.SegmentVolume other)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.And(other._client));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    {
+                        return default (ESAPIX.Facade.API.SegmentVolume);
+                    }
+
+                    return new ESAPIX.Facade.API.SegmentVolume(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.SegmentVolume)(_client.And(other));
+            }
+        }
+
+        public ESAPIX.Facade.API.SegmentVolume AsymmetricMargin(VMS.TPS.Common.Model.Types.AxisAlignedMargins margins)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AsymmetricMargin(margins));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    {
+                        return default (ESAPIX.Facade.API.SegmentVolume);
+                    }
+
+                    return new ESAPIX.Facade.API.SegmentVolume(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.SegmentVolume)(_client.AsymmetricMargin(margins));
+            }
+        }
+
+        public ESAPIX.Facade.API.SegmentVolume Margin(System.Double marginInMM)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Margin(marginInMM));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    {
+                        return default (ESAPIX.Facade.API.SegmentVolume);
+                    }
+
+                    return new ESAPIX.Facade.API.SegmentVolume(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.SegmentVolume)(_client.Margin(marginInMM));
+            }
+        }
+
+        public ESAPIX.Facade.API.SegmentVolume Not()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Not());
+                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    {
+                        return default (ESAPIX.Facade.API.SegmentVolume);
+                    }
+
+                    return new ESAPIX.Facade.API.SegmentVolume(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.SegmentVolume)(_client.Not());
+            }
+        }
+
+        public ESAPIX.Facade.API.SegmentVolume Or(ESAPIX.Facade.API.SegmentVolume other)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Or(other._client));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    {
+                        return default (ESAPIX.Facade.API.SegmentVolume);
+                    }
+
+                    return new ESAPIX.Facade.API.SegmentVolume(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.SegmentVolume)(_client.Or(other));
+            }
+        }
+
+        public ESAPIX.Facade.API.SegmentVolume Sub(ESAPIX.Facade.API.SegmentVolume other)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Sub(other._client));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    {
+                        return default (ESAPIX.Facade.API.SegmentVolume);
+                    }
+
+                    return new ESAPIX.Facade.API.SegmentVolume(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.SegmentVolume)(_client.Sub(other));
+            }
+        }
+
+        public ESAPIX.Facade.API.SegmentVolume Xor(ESAPIX.Facade.API.SegmentVolume other)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Xor(other._client));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    {
+                        return default (ESAPIX.Facade.API.SegmentVolume);
+                    }
+
+                    return new ESAPIX.Facade.API.SegmentVolume(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.SegmentVolume)(_client.Xor(other));
+            }
+        }
+
         public SegmentVolume()
         {
-            _client = new ExpandoObject();
+            _client = (new ExpandoObject());
         }
 
         public SegmentVolume(dynamic client)
         {
-            _client = client;
-        }
-
-        public SegmentVolume And(SegmentVolume other)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.And(other._client)); }
-                );
-                return vmsResult;
-            }
-            return _client.And(other);
-        }
-
-        public SegmentVolume AsymmetricMargin(AxisAlignedMargins margins)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new SegmentVolume(_client.AsymmetricMargin(margins));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AsymmetricMargin(margins);
-        }
-
-        public SegmentVolume Margin(double marginInMM)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.Margin(marginInMM)); }
-                );
-                return vmsResult;
-            }
-            return _client.Margin(marginInMM);
-        }
-
-        public SegmentVolume Not()
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return new SegmentVolume(_client.Not()); }
-                );
-                return vmsResult;
-            }
-            return _client.Not();
-        }
-
-        public SegmentVolume Or(SegmentVolume other)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.Or(other._client)); }
-                );
-                return vmsResult;
-            }
-            return _client.Or(other);
-        }
-
-        public SegmentVolume Sub(SegmentVolume other)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.Sub(other._client)); }
-                );
-                return vmsResult;
-            }
-            return _client.Sub(other);
-        }
-
-        public SegmentVolume Xor(SegmentVolume other)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new SegmentVolume(_client.Xor(other._client)); }
-                );
-                return vmsResult;
-            }
-            return _client.Xor(other);
+            _client = (client);
         }
     }
 }

@@ -1,114 +1,184 @@
-#region
-
 using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class PlanningItem : ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class PlanningItem : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
+        public System.Nullable<System.DateTime> CreationDateTime
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("CreationDateTime"))
+                    {
+                        return _client.CreationDateTime;
+                    }
+                    else
+                    {
+                        return default (System.Nullable<System.DateTime>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.CreationDateTime;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Nullable<System.DateTime>);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.CreationDateTime = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public ESAPIX.Facade.API.PlanningItemDose Dose
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Dose"))
+                    {
+                        return _client.Dose;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.PlanningItemDose);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.Dose) != (null))
+                        {
+                            return new ESAPIX.Facade.API.PlanningItemDose(_client.Dose);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.PlanningItemDose);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Dose = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.DoseValuePresentation DoseValuePresentation
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("DoseValuePresentation"))
+                    {
+                        return _client.DoseValuePresentation;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValuePresentation);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.DoseValuePresentation;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValuePresentation);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.DoseValuePresentation = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public ESAPIX.Facade.API.DVHData GetDVHCumulativeData(ESAPIX.Facade.API.Structure structure, VMS.TPS.Common.Model.Types.DoseValuePresentation dosePresentation, VMS.TPS.Common.Model.Types.VolumePresentation volumePresentation, System.Double binWidth)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.GetDVHCumulativeData(structure._client, dosePresentation, volumePresentation, binWidth));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.DVHData)))
+                    {
+                        return default (ESAPIX.Facade.API.DVHData);
+                    }
+
+                    return new ESAPIX.Facade.API.DVHData(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.DVHData)(_client.GetDVHCumulativeData(structure, dosePresentation, volumePresentation, binWidth));
+            }
+        }
+
         public PlanningItem()
         {
-            _client = new ExpandoObject();
+            _client = (new ExpandoObject());
         }
 
         public PlanningItem(dynamic client)
         {
-            _client = client;
-        }
-
-        public DateTime? CreationDateTime
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("CreationDateTime"))
-                        return _client.CreationDateTime;
-                    else
-                        return default(DateTime?);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CreationDateTime; }
-                    );
-                return default(DateTime?);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.CreationDateTime = value;
-            }
-        }
-
-        public PlanningItemDose Dose
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Dose"))
-                        return _client.Dose;
-                    else
-                        return default(PlanningItemDose);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                        {
-                            if (_client.Dose != null)
-                                return new PlanningItemDose(_client.Dose);
-                            return null;
-                        }
-                    );
-                return default(PlanningItemDose);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.Dose = value;
-            }
-        }
-
-        public DoseValuePresentation DoseValuePresentation
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("DoseValuePresentation"))
-                        return _client.DoseValuePresentation;
-                    else
-                        return default(DoseValuePresentation);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.DoseValuePresentation; }
-                    );
-                return default(DoseValuePresentation);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.DoseValuePresentation = value;
-            }
-        }
-
-        public DVHData GetDVHCumulativeData(Structure structure, DoseValuePresentation dosePresentation,
-            VolumePresentation volumePresentation, double binWidth)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        var fromClient = _client.GetDVHCumulativeData(structure._client, dosePresentation,
-                            volumePresentation, binWidth);
-                        if(fromClient == null) { return null; }
-                        return new DVHData(fromClient);
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.GetDVHCumulativeData(structure, dosePresentation, volumePresentation, binWidth);
+            _client = (client);
         }
     }
 }

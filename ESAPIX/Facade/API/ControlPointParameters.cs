@@ -1,231 +1,414 @@
-#region
-
+using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
     public class ControlPointParameters
     {
         internal dynamic _client;
+        public bool IsLive
+        {
+            get
+            {
+                return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject);
+            }
+        }
+
+        public System.Double CollimatorAngle
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("CollimatorAngle"))
+                    {
+                        return _client.CollimatorAngle;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.CollimatorAngle;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.CollimatorAngle = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double GantryAngle
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("GantryAngle"))
+                    {
+                        return _client.GantryAngle;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.GantryAngle;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.GantryAngle = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.VRect<System.Double> JawPositions
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("JawPositions"))
+                    {
+                        return _client.JawPositions;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.VRect<System.Double>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.JawPositions;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.VRect<System.Double>);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.JawPositions = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Single[,] LeafPositions
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("LeafPositions"))
+                    {
+                        return _client.LeafPositions;
+                    }
+                    else
+                    {
+                        return default (System.Single[,]);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.LeafPositions;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Single[,]);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.LeafPositions = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double MetersetWeight
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("MetersetWeight"))
+                    {
+                        return _client.MetersetWeight;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.MetersetWeight;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.MetersetWeight = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double PatientSupportAngle
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PatientSupportAngle"))
+                    {
+                        return _client.PatientSupportAngle;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PatientSupportAngle;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PatientSupportAngle = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double TableTopLateralPosition
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TableTopLateralPosition"))
+                    {
+                        return _client.TableTopLateralPosition;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TableTopLateralPosition;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TableTopLateralPosition = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double TableTopLongitudinalPosition
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TableTopLongitudinalPosition"))
+                    {
+                        return _client.TableTopLongitudinalPosition;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TableTopLongitudinalPosition;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TableTopLongitudinalPosition = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double TableTopVerticalPosition
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TableTopVerticalPosition"))
+                    {
+                        return _client.TableTopVerticalPosition;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TableTopVerticalPosition;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TableTopVerticalPosition = (value);
+                }
+                else
+                {
+                }
+            }
+        }
 
         public ControlPointParameters()
         {
-            _client = new ExpandoObject();
+            _client = (new ExpandoObject());
         }
 
         public ControlPointParameters(dynamic client)
         {
-            _client = client;
-        }
-
-        public bool IsLive
-        {
-            get { return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject); }
-        }
-
-        public double CollimatorAngle
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("CollimatorAngle"))
-                        return _client.CollimatorAngle;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CollimatorAngle; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.CollimatorAngle = value;
-            }
-        }
-
-        public double GantryAngle
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("GantryAngle"))
-                        return _client.GantryAngle;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.GantryAngle; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.GantryAngle = value;
-            }
-        }
-
-        public VRect<double> JawPositions
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("JawPositions"))
-                        return _client.JawPositions;
-                    else
-                        return default(VRect<double>);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.JawPositions; }
-                    );
-                return default(VRect<double>);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.JawPositions = value;
-            }
-        }
-
-        public float[,] LeafPositions
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("LeafPositions"))
-                        return _client.LeafPositions;
-                    else
-                        return default(float[,]);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.LeafPositions; }
-                    );
-                return default(float[,]);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.LeafPositions = value;
-            }
-        }
-
-        public double MetersetWeight
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("MetersetWeight"))
-                        return _client.MetersetWeight;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.MetersetWeight; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.MetersetWeight = value;
-            }
-        }
-
-        public double PatientSupportAngle
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("PatientSupportAngle"))
-                        return _client.PatientSupportAngle;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.PatientSupportAngle; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.PatientSupportAngle = value;
-            }
-        }
-
-        public double TableTopLateralPosition
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("TableTopLateralPosition"))
-                        return _client.TableTopLateralPosition;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TableTopLateralPosition; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.TableTopLateralPosition = value;
-            }
-        }
-
-        public double TableTopLongitudinalPosition
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("TableTopLongitudinalPosition"))
-                        return _client.TableTopLongitudinalPosition;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TableTopLongitudinalPosition; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.TableTopLongitudinalPosition = value;
-            }
-        }
-
-        public double TableTopVerticalPosition
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("TableTopVerticalPosition"))
-                        return _client.TableTopVerticalPosition;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TableTopVerticalPosition; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                {
-                    _client.TableTopVerticalPosition = value;
-                }
-            }
+            _client = (client);
         }
     }
 }

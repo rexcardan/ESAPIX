@@ -1,83 +1,106 @@
-#region
-
 using System;
-using System.Collections;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class BrachyPlanSetup : PlanSetup, System.Xml.Serialization.IXmlSerializable
+    public class BrachyPlanSetup : ESAPIX.Facade.API.PlanSetup, System.Xml.Serialization.IXmlSerializable
     {
-        public BrachyPlanSetup()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public BrachyPlanSetup(dynamic client)
-        {
-            _client = client;
-        }
-
-        public string ApplicationSetupType
+        public System.String ApplicationSetupType
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("ApplicationSetupType"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("ApplicationSetupType"))
+                    {
                         return _client.ApplicationSetupType;
+                    }
                     else
-                        return default(string);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ApplicationSetupType; }
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.ApplicationSetupType;
+                    }
+
                     );
-                return default(string);
+                }
+                else
+                {
+                    return default (System.String);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.ApplicationSetupType = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.ApplicationSetupType = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public IEnumerable<Catheter> Catheters
+        public IEnumerable<ESAPIX.Facade.API.Catheter> Catheters
         {
             get
             {
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("Catheters"))
+                    {
                         foreach (var item in _client.Catheters)
+                        {
                             yield return item;
+                        }
+                    }
                     else
+                    {
                         yield break;
+                    }
                 }
                 else
                 {
                     IEnumerator enumerator = null;
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var asEnum = (IEnumerable) _client.Catheters;
-                            enumerator = asEnum.GetEnumerator();
-                        }
-                    );
-                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
-                        var facade = new Catheter();
+                        var asEnum = (IEnumerable)_client.Catheters;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.Catheter();
                         XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
                             {
-                                var vms = enumerator.Current;
-                                if (vms != null)
-                                    facade._client = vms;
+                                facade._client = vms;
                             }
+                        }
+
                         );
                         if (facade._client != null)
+                        {
                             yield return facade;
+                        }
                     }
                 }
             }
@@ -89,83 +112,135 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public int? NumberOfPdrPulses
+        public System.Nullable<System.Int32> NumberOfPdrPulses
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("NumberOfPdrPulses"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("NumberOfPdrPulses"))
+                    {
                         return _client.NumberOfPdrPulses;
+                    }
                     else
-                        return default(int?);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.NumberOfPdrPulses; }
+                    {
+                        return default (System.Nullable<System.Int32>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.NumberOfPdrPulses;
+                    }
+
                     );
-                return default(int?);
+                }
+                else
+                {
+                    return default (System.Nullable<System.Int32>);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.NumberOfPdrPulses = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.NumberOfPdrPulses = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public double? PdrPulseInterval
+        public System.Nullable<System.Double> PdrPulseInterval
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("PdrPulseInterval"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PdrPulseInterval"))
+                    {
                         return _client.PdrPulseInterval;
+                    }
                     else
-                        return default(double?);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.PdrPulseInterval; }
+                    {
+                        return default (System.Nullable<System.Double>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PdrPulseInterval;
+                    }
+
                     );
-                return default(double?);
+                }
+                else
+                {
+                    return default (System.Nullable<System.Double>);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.PdrPulseInterval = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PdrPulseInterval = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public IEnumerable<SeedCollection> SeedCollections
+        public IEnumerable<ESAPIX.Facade.API.SeedCollection> SeedCollections
         {
             get
             {
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("SeedCollections"))
+                    {
                         foreach (var item in _client.SeedCollections)
+                        {
                             yield return item;
+                        }
+                    }
                     else
+                    {
                         yield break;
+                    }
                 }
                 else
                 {
                     IEnumerator enumerator = null;
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var asEnum = (IEnumerable) _client.SeedCollections;
-                            enumerator = asEnum.GetEnumerator();
-                        }
-                    );
-                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
-                        var facade = new SeedCollection();
+                        var asEnum = (IEnumerable)_client.SeedCollections;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.SeedCollection();
                         XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
                             {
-                                var vms = enumerator.Current;
-                                if (vms != null)
-                                    facade._client = vms;
+                                facade._client = vms;
                             }
+                        }
+
                         );
                         if (facade._client != null)
+                        {
                             yield return facade;
+                        }
                     }
                 }
             }
@@ -177,39 +252,51 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public IEnumerable<BrachySolidApplicator> SolidApplicators
+        public IEnumerable<ESAPIX.Facade.API.BrachySolidApplicator> SolidApplicators
         {
             get
             {
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("SolidApplicators"))
+                    {
                         foreach (var item in _client.SolidApplicators)
+                        {
                             yield return item;
+                        }
+                    }
                     else
+                    {
                         yield break;
+                    }
                 }
                 else
                 {
                     IEnumerator enumerator = null;
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var asEnum = (IEnumerable) _client.SolidApplicators;
-                            enumerator = asEnum.GetEnumerator();
-                        }
-                    );
-                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
-                        var facade = new BrachySolidApplicator();
+                        var asEnum = (IEnumerable)_client.SolidApplicators;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.BrachySolidApplicator();
                         XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
                             {
-                                var vms = enumerator.Current;
-                                if (vms != null)
-                                    facade._client = vms;
+                                facade._client = vms;
                             }
+                        }
+
                         );
                         if (facade._client != null)
+                        {
                             yield return facade;
+                        }
                     }
                 }
             }
@@ -221,48 +308,98 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public DateTime? TreatmentDateTime
+        public System.Nullable<System.DateTime> TreatmentDateTime
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("TreatmentDateTime"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TreatmentDateTime"))
+                    {
                         return _client.TreatmentDateTime;
+                    }
                     else
-                        return default(DateTime?);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TreatmentDateTime; }
+                    {
+                        return default (System.Nullable<System.DateTime>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TreatmentDateTime;
+                    }
+
                     );
-                return default(DateTime?);
+                }
+                else
+                {
+                    return default (System.Nullable<System.DateTime>);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.TreatmentDateTime = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TreatmentDateTime = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public string TreatmentTechnique
+        public System.String TreatmentTechnique
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("TreatmentTechnique"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TreatmentTechnique"))
+                    {
                         return _client.TreatmentTechnique;
+                    }
                     else
-                        return default(string);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.TreatmentTechnique; }
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TreatmentTechnique;
+                    }
+
                     );
-                return default(string);
+                }
+                else
+                {
+                    return default (System.String);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.TreatmentTechnique = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TreatmentTechnique = (value);
+                }
+                else
+                {
+                }
             }
+        }
+
+        public BrachyPlanSetup()
+        {
+            _client = (new ExpandoObject());
+        }
+
+        public BrachyPlanSetup(dynamic client)
+        {
+            _client = (client);
         }
     }
 }

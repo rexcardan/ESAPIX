@@ -1,47 +1,69 @@
-#region
-
+using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class Slot : ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class Slot : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
-        public Slot()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public Slot(dynamic client)
-        {
-            _client = client;
-        }
-
-        public int Number
+        public System.Int32 Number
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Number"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Number"))
+                    {
                         return _client.Number;
+                    }
                     else
-                        return default(int);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Number; }
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Number;
+                    }
+
                     );
-                return default(int);
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
+                if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Number = value;
+                    _client.Number = (value);
+                }
+                else
+                {
                 }
             }
+        }
+
+        public Slot()
+        {
+            _client = (new ExpandoObject());
+        }
+
+        public Slot(dynamic client)
+        {
+            _client = (client);
         }
     }
 }

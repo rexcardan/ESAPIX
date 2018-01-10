@@ -1,119 +1,202 @@
-#region
-
+using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class SourcePosition : ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class SourcePosition : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
+        public System.Double DwellTime
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("DwellTime"))
+                    {
+                        return _client.DwellTime;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.DwellTime;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.DwellTime = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public ESAPIX.Facade.API.RadioactiveSource RadioactiveSource
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("RadioactiveSource"))
+                    {
+                        return _client.RadioactiveSource;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.RadioactiveSource);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.RadioactiveSource) != (null))
+                        {
+                            return new ESAPIX.Facade.API.RadioactiveSource(_client.RadioactiveSource);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.RadioactiveSource);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.RadioactiveSource = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double[,] Transform
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Transform"))
+                    {
+                        return _client.Transform;
+                    }
+                    else
+                    {
+                        return default (System.Double[,]);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Transform;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double[,]);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Transform = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.VVector Translation
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Translation"))
+                    {
+                        return _client.Translation;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.VVector);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Translation;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.VVector);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Translation = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public SourcePosition()
         {
-            _client = new ExpandoObject();
+            _client = (new ExpandoObject());
         }
 
         public SourcePosition(dynamic client)
         {
-            _client = client;
-        }
-
-        public double DwellTime
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("DwellTime"))
-                        return _client.DwellTime;
-                    else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.DwellTime; }
-                    );
-                return default(double);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.DwellTime = value;
-            }
-        }
-
-        public RadioactiveSource RadioactiveSource
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("RadioactiveSource"))
-                        return _client.RadioactiveSource;
-                    else
-                        return default(RadioactiveSource);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                        {
-                            if (_client.RadioactiveSource != null)
-                                return new RadioactiveSource(_client.RadioactiveSource);
-                            return null;
-                        }
-                    );
-                return default(RadioactiveSource);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.RadioactiveSource = value;
-            }
-        }
-
-        public double[,] Transform
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Transform"))
-                        return _client.Transform;
-                    else
-                        return default(double[,]);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Transform; }
-                    );
-                return default(double[,]);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.Transform = value;
-            }
-        }
-
-        public VVector Translation
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Translation"))
-                        return _client.Translation;
-                    else
-                        return default(VVector);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Translation; }
-                    );
-                return default(VVector);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                {
-                    _client.Translation = value;
-                }
-            }
+            _client = (client);
         }
     }
 }

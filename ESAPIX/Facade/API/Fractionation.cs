@@ -1,129 +1,212 @@
-#region
-
 using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class Fractionation : ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class Fractionation : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
-        public Fractionation()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public Fractionation(dynamic client)
-        {
-            _client = client;
-        }
-
-        public DateTime? CreationDateTime
+        public System.Nullable<System.DateTime> CreationDateTime
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("CreationDateTime"))
-                        return _client.CreationDateTime;
-                    else
-                        return default(DateTime?);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.CreationDateTime; }
-                    );
-                return default(DateTime?);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.CreationDateTime = value;
-            }
-        }
-
-        public DoseValue DosePerFractionInPrimaryRefPoint
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("DosePerFractionInPrimaryRefPoint"))
-                        return _client.DosePerFractionInPrimaryRefPoint;
-                    else
-                        return default(DoseValue);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(
-                        sc => { return _client.DosePerFractionInPrimaryRefPoint; }
-                    );
-                return default(DoseValue);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.DosePerFractionInPrimaryRefPoint = value;
-            }
-        }
-
-        public int? NumberOfFractions
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("NumberOfFractions"))
-                        return _client.NumberOfFractions;
-                    else
-                        return default(int?);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.NumberOfFractions; }
-                    );
-                return default(int?);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.NumberOfFractions = value;
-            }
-        }
-
-        public DoseValue PrescribedDosePerFraction
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("PrescribedDosePerFraction"))
-                        return _client.PrescribedDosePerFraction;
-                    else
-                        return default(DoseValue);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.PrescribedDosePerFraction; }
-                    );
-                return default(DoseValue);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
+                if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.PrescribedDosePerFraction = value;
+                    if (((ExpandoObject)(_client)).HasProperty("CreationDateTime"))
+                    {
+                        return _client.CreationDateTime;
+                    }
+                    else
+                    {
+                        return default (System.Nullable<System.DateTime>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.CreationDateTime;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Nullable<System.DateTime>);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.CreationDateTime = (value);
+                }
+                else
+                {
                 }
             }
         }
 
-        public void SetPrescription(int numberOfFractions, DoseValue prescribedDosePerFraction,
-            double prescribedPercentage)
+        public VMS.TPS.Common.Model.Types.DoseValue DosePerFractionInPrimaryRefPoint
         {
-            if (XC.Instance.CurrentContext != null)
-                XC.Instance.CurrentContext.Thread.Invoke(() =>
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("DosePerFractionInPrimaryRefPoint"))
                     {
-                        _client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
+                        return _client.DosePerFractionInPrimaryRefPoint;
                     }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.DosePerFractionInPrimaryRefPoint;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.DosePerFractionInPrimaryRefPoint = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Nullable<System.Int32> NumberOfFractions
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("NumberOfFractions"))
+                    {
+                        return _client.NumberOfFractions;
+                    }
+                    else
+                    {
+                        return default (System.Nullable<System.Int32>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.NumberOfFractions;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Nullable<System.Int32>);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.NumberOfFractions = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.DoseValue PrescribedDosePerFraction
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PrescribedDosePerFraction"))
+                    {
+                        return _client.PrescribedDosePerFraction;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PrescribedDosePerFraction;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PrescribedDosePerFraction = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public void SetPrescription(System.Int32 numberOfFractions, VMS.TPS.Common.Model.Types.DoseValue prescribedDosePerFraction, System.Double prescribedPercentage)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
+                }
+
                 );
+            }
             else
+            {
                 _client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
+            }
+        }
+
+        public Fractionation()
+        {
+            _client = (new ExpandoObject());
+        }
+
+        public Fractionation(dynamic client)
+        {
+            _client = (client);
         }
     }
 }

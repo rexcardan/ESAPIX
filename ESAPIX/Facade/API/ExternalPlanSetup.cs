@@ -1,445 +1,717 @@
-#region
-
+using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class ExternalPlanSetup : PlanSetup, System.Xml.Serialization.IXmlSerializable
+    public class ExternalPlanSetup : ESAPIX.Facade.API.PlanSetup, System.Xml.Serialization.IXmlSerializable
     {
-        public ExternalPlanSetup()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public ExternalPlanSetup(dynamic client)
-        {
-            _client = client;
-        }
-
-        public EvaluationDose DoseAsEvaluationDose
+        public ESAPIX.Facade.API.EvaluationDose DoseAsEvaluationDose
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("DoseAsEvaluationDose"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("DoseAsEvaluationDose"))
+                    {
                         return _client.DoseAsEvaluationDose;
+                    }
                     else
-                        return default(EvaluationDose);
-                if (XC.Instance.CurrentContext != null)
+                    {
+                        return default (ESAPIX.Facade.API.EvaluationDose);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
                     return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.DoseAsEvaluationDose) != (null))
                         {
-                            if (_client.DoseAsEvaluationDose != null)
-                                return new EvaluationDose(_client.DoseAsEvaluationDose);
+                            return new ESAPIX.Facade.API.EvaluationDose(_client.DoseAsEvaluationDose);
+                        }
+                        else
+                        {
                             return null;
                         }
+                    }
+
                     );
-                return default(EvaluationDose);
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.EvaluationDose);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.DoseAsEvaluationDose = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.DoseAsEvaluationDose = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public CalculationResult CalculateDoseWithPresetValues(List<KeyValuePair<string, MetersetValue>> presetValues)
+        public ESAPIX.Facade.API.CalculationResult CalculateDoseWithPresetValues(System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String,VMS.TPS.Common.Model.Types.MetersetValue>> presetValues)
         {
-            if (XC.Instance.CurrentContext != null)
+            if ((XC.Instance.CurrentContext) != (null))
             {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateDoseWithPresetValues(presetValues));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
                     {
-                        return new CalculationResult(_client.CalculateDoseWithPresetValues(presetValues));
+                        return default (ESAPIX.Facade.API.CalculationResult);
                     }
-                );
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
                 return vmsResult;
             }
-            return _client.CalculateDoseWithPresetValues(presetValues);
-        }
-
-        public CalculationResult CalculateDose()
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new CalculationResult(_client.CalculateDose()); }
-                );
-                return vmsResult;
-            }
-            return _client.CalculateDose();
-        }
-
-        public CalculationResult CalculateLeafMotionsAndDose()
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new CalculationResult(_client.CalculateLeafMotionsAndDose());
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.CalculateLeafMotionsAndDose();
-        }
-
-        public CalculationResult CalculateLeafMotions()
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new CalculationResult(_client.CalculateLeafMotions());
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.CalculateLeafMotions();
-        }
-
-        public CalculationResult CalculateLeafMotions(LMCVOptions options)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new CalculationResult(_client.CalculateLeafMotions(options));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.CalculateLeafMotions(options);
-        }
-
-        public CalculationResult CalculateLeafMotions(SmartLMCOptions options)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new CalculationResult(_client.CalculateLeafMotions(options));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.CalculateLeafMotions(options);
-        }
-
-        public CalculationResult CalculateLeafMotions(LMCMSSOptions options)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new CalculationResult(_client.CalculateLeafMotions(options));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.CalculateLeafMotions(options);
-        }
-
-        public IEnumerable<string> GetModelsForCalculationType(CalculationType calculationType)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.GetModelsForCalculationType(calculationType);
-                    }
-                );
-                return vmsResult;
-            }
-            return (IEnumerable<string>) _client.GetModelsForCalculationType(calculationType);
-        }
-
-        public OptimizerResult Optimize(int maxIterations)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new OptimizerResult(_client.Optimize(maxIterations));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.Optimize(maxIterations);
-        }
-
-        public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new OptimizerResult(_client.Optimize(maxIterations, optimizationOption));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.Optimize(maxIterations, optimizationOption);
-        }
-
-        public OptimizerResult Optimize(int maxIterations, OptimizationOption optimizationOption, string mlcId)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new OptimizerResult(_client.Optimize(maxIterations, optimizationOption, mlcId));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.Optimize(maxIterations, optimizationOption, mlcId);
-        }
-
-        public OptimizerResult Optimize()
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new OptimizerResult(_client.Optimize()); }
-                );
-                return vmsResult;
-            }
-            return _client.Optimize();
-        }
-
-        public OptimizerResult Optimize(OptimizationOptionsIMRT options)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new OptimizerResult(_client.Optimize(options)); }
-                );
-                return vmsResult;
-            }
-            return _client.Optimize(options);
-        }
-
-        public OptimizerResult OptimizeVMAT(string mlcId)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new OptimizerResult(_client.OptimizeVMAT(mlcId)); }
-                );
-                return vmsResult;
-            }
-            return _client.OptimizeVMAT(mlcId);
-        }
-
-        public OptimizerResult OptimizeVMAT()
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new OptimizerResult(_client.OptimizeVMAT()); }
-                );
-                return vmsResult;
-            }
-            return _client.OptimizeVMAT();
-        }
-
-        public OptimizerResult OptimizeVMAT(OptimizationOptionsVMAT options)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new OptimizerResult(_client.OptimizeVMAT(options)); }
-                );
-                return vmsResult;
-            }
-            return _client.OptimizeVMAT(options);
-        }
-
-        public CalculationResult CalculateDVHEstimates(string modelId, Dictionary<string, DoseValue> targetDoseLevels,
-            Dictionary<string, string> structureMatches)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new CalculationResult(
-                            _client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches);
-        }
-
-        public Beam AddArcBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions,
-            double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
-            double patientSupportAngle, VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddArcBeam(machineParameters, jawPositions, collimatorAngle,
-                            gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddArcBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, gantryStop,
-                gantryDirection, patientSupportAngle, isocenter);
-        }
-
-        public Beam AddConformalArcBeam(ExternalBeamMachineParameters machineParameters, double collimatorAngle,
-            int controlPointCount, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
-            double patientSupportAngle, VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddConformalArcBeam(machineParameters, collimatorAngle,
-                            controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle,
-                            isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddConformalArcBeam(machineParameters, collimatorAngle, controlPointCount, gantryAngle,
-                gantryStop, gantryDirection, patientSupportAngle, isocenter);
-        }
-
-        public Beam AddMLCArcBeam(ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
-            VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double gantryStop,
-            GantryDirection gantryDirection, double patientSupportAngle, VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions,
-                            collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle,
-                gantryStop, gantryDirection, patientSupportAngle, isocenter);
-        }
-
-        public Beam AddMLCBeam(ExternalBeamMachineParameters machineParameters, float[,] leafPositions,
-            VRect<double> jawPositions, double collimatorAngle, double gantryAngle, double patientSupportAngle,
-            VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddMLCBeam(machineParameters, leafPositions, jawPositions,
-                            collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddMLCBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle,
-                patientSupportAngle, isocenter);
-        }
-
-        public Beam AddMultipleStaticSegmentBeam(ExternalBeamMachineParameters machineParameters,
-            IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
-            VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights,
-                            collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights, collimatorAngle,
-                gantryAngle, patientSupportAngle, isocenter);
-        }
-
-        public Beam AddSlidingWindowBeam(ExternalBeamMachineParameters machineParameters,
-            IEnumerable<double> metersetWeights, double collimatorAngle, double gantryAngle, double patientSupportAngle,
-            VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddSlidingWindowBeam(machineParameters, metersetWeights,
-                            collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddSlidingWindowBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle,
-                patientSupportAngle, isocenter);
-        }
-
-        public Beam AddStaticBeam(ExternalBeamMachineParameters machineParameters, VRect<double> jawPositions,
-            double collimatorAngle, double gantryAngle, double patientSupportAngle, VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle,
-                            gantryAngle, patientSupportAngle, isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle,
-                patientSupportAngle, isocenter);
-        }
-
-        public Beam AddVMATBeam(ExternalBeamMachineParameters machineParameters, IEnumerable<double> metersetWeights,
-            double collimatorAngle, double gantryAngle, double gantryStop, GantryDirection gantryDirection,
-            double patientSupportAngle, VVector isocenter)
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return new Beam(_client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle,
-                            gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-                    }
-                );
-                return vmsResult;
-            }
-            return _client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, gantryStop,
-                gantryDirection, patientSupportAngle, isocenter);
-        }
-
-        public EvaluationDose CreateEvaluationDose()
-        {
-            if (XC.Instance.CurrentContext != null)
-            {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(
-                    sc => { return new EvaluationDose(_client.CreateEvaluationDose()); }
-                );
-                return vmsResult;
-            }
-            return _client.CreateEvaluationDose();
-        }
-
-        public void RemoveBeam(Beam beam)
-        {
-            if (XC.Instance.CurrentContext != null)
-                XC.Instance.CurrentContext.Thread.Invoke(() => { _client.RemoveBeam(beam._client); }
-                );
             else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateDoseWithPresetValues(presetValues));
+            }
+        }
+
+        public ESAPIX.Facade.API.CalculationResult CalculateDose()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateDose());
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    {
+                        return default (ESAPIX.Facade.API.CalculationResult);
+                    }
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateDose());
+            }
+        }
+
+        public ESAPIX.Facade.API.CalculationResult CalculateLeafMotionsAndDose()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateLeafMotionsAndDose());
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    {
+                        return default (ESAPIX.Facade.API.CalculationResult);
+                    }
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateLeafMotionsAndDose());
+            }
+        }
+
+        public ESAPIX.Facade.API.CalculationResult CalculateLeafMotions()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateLeafMotions());
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    {
+                        return default (ESAPIX.Facade.API.CalculationResult);
+                    }
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateLeafMotions());
+            }
+        }
+
+        public ESAPIX.Facade.API.CalculationResult CalculateLeafMotions(VMS.TPS.Common.Model.Types.LMCVOptions options)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateLeafMotions(options));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    {
+                        return default (ESAPIX.Facade.API.CalculationResult);
+                    }
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateLeafMotions(options));
+            }
+        }
+
+        public ESAPIX.Facade.API.CalculationResult CalculateLeafMotions(VMS.TPS.Common.Model.Types.SmartLMCOptions options)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateLeafMotions(options));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    {
+                        return default (ESAPIX.Facade.API.CalculationResult);
+                    }
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateLeafMotions(options));
+            }
+        }
+
+        public ESAPIX.Facade.API.CalculationResult CalculateLeafMotions(VMS.TPS.Common.Model.Types.LMCMSSOptions options)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateLeafMotions(options));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    {
+                        return default (ESAPIX.Facade.API.CalculationResult);
+                    }
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateLeafMotions(options));
+            }
+        }
+
+        public System.Collections.Generic.IEnumerable<System.String> GetModelsForCalculationType(VMS.TPS.Common.Model.Types.CalculationType calculationType)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.GetModelsForCalculationType(calculationType));
+                    if ((fromClient) == (default (System.Collections.Generic.IEnumerable<System.String>)))
+                    {
+                        return default (System.Collections.Generic.IEnumerable<System.String>);
+                    }
+
+                    return (System.Collections.Generic.IEnumerable<System.String>)(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (System.Collections.Generic.IEnumerable<System.String>)(_client.GetModelsForCalculationType(calculationType));
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult Optimize(System.Int32 maxIterations)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Optimize(maxIterations));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.Optimize(maxIterations));
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult Optimize(System.Int32 maxIterations, VMS.TPS.Common.Model.Types.OptimizationOption optimizationOption)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Optimize(maxIterations, optimizationOption));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.Optimize(maxIterations, optimizationOption));
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult Optimize(System.Int32 maxIterations, VMS.TPS.Common.Model.Types.OptimizationOption optimizationOption, System.String mlcId)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Optimize(maxIterations, optimizationOption, mlcId));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.Optimize(maxIterations, optimizationOption, mlcId));
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult Optimize()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Optimize());
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.Optimize());
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult Optimize(VMS.TPS.Common.Model.Types.OptimizationOptionsIMRT options)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.Optimize(options));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.Optimize(options));
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult OptimizeVMAT(System.String mlcId)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.OptimizeVMAT(mlcId));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.OptimizeVMAT(mlcId));
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult OptimizeVMAT()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.OptimizeVMAT());
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.OptimizeVMAT());
+            }
+        }
+
+        public ESAPIX.Facade.API.OptimizerResult OptimizeVMAT(VMS.TPS.Common.Model.Types.OptimizationOptionsVMAT options)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.OptimizeVMAT(options));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    {
+                        return default (ESAPIX.Facade.API.OptimizerResult);
+                    }
+
+                    return new ESAPIX.Facade.API.OptimizerResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.OptimizerResult)(_client.OptimizeVMAT(options));
+            }
+        }
+
+        public ESAPIX.Facade.API.CalculationResult CalculateDVHEstimates(System.String modelId, System.Collections.Generic.Dictionary<System.String,VMS.TPS.Common.Model.Types.DoseValue> targetDoseLevels, System.Collections.Generic.Dictionary<System.String,System.String> structureMatches)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    {
+                        return default (ESAPIX.Facade.API.CalculationResult);
+                    }
+
+                    return new ESAPIX.Facade.API.CalculationResult(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.CalculationResult)(_client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddArcBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, VMS.TPS.Common.Model.Types.VRect<System.Double> jawPositions, System.Double collimatorAngle, System.Double gantryAngle, System.Double gantryStop, VMS.TPS.Common.Model.Types.GantryDirection gantryDirection, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddArcBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddArcBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddConformalArcBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, System.Double collimatorAngle, System.Int32 controlPointCount, System.Double gantryAngle, System.Double gantryStop, VMS.TPS.Common.Model.Types.GantryDirection gantryDirection, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddConformalArcBeam(machineParameters, collimatorAngle, controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddConformalArcBeam(machineParameters, collimatorAngle, controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddMLCArcBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, System.Single[,] leafPositions, VMS.TPS.Common.Model.Types.VRect<System.Double> jawPositions, System.Double collimatorAngle, System.Double gantryAngle, System.Double gantryStop, VMS.TPS.Common.Model.Types.GantryDirection gantryDirection, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddMLCBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, System.Single[,] leafPositions, VMS.TPS.Common.Model.Types.VRect<System.Double> jawPositions, System.Double collimatorAngle, System.Double gantryAngle, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddMLCBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddMLCBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddMultipleStaticSegmentBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, System.Collections.Generic.IEnumerable<System.Double> metersetWeights, System.Double collimatorAngle, System.Double gantryAngle, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddSlidingWindowBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, System.Collections.Generic.IEnumerable<System.Double> metersetWeights, System.Double collimatorAngle, System.Double gantryAngle, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddSlidingWindowBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddSlidingWindowBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddStaticBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, VMS.TPS.Common.Model.Types.VRect<System.Double> jawPositions, System.Double collimatorAngle, System.Double gantryAngle, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.Beam AddVMATBeam(VMS.TPS.Common.Model.Types.ExternalBeamMachineParameters machineParameters, System.Collections.Generic.IEnumerable<System.Double> metersetWeights, System.Double collimatorAngle, System.Double gantryAngle, System.Double gantryStop, VMS.TPS.Common.Model.Types.GantryDirection gantryDirection, System.Double patientSupportAngle, VMS.TPS.Common.Model.Types.VVector isocenter)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+
+                    return new ESAPIX.Facade.API.Beam(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.Beam)(_client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
+            }
+        }
+
+        public ESAPIX.Facade.API.EvaluationDose CreateEvaluationDose()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CreateEvaluationDose());
+                    if ((fromClient) == (default (ESAPIX.Facade.API.EvaluationDose)))
+                    {
+                        return default (ESAPIX.Facade.API.EvaluationDose);
+                    }
+
+                    return new ESAPIX.Facade.API.EvaluationDose(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (ESAPIX.Facade.API.EvaluationDose)(_client.CreateEvaluationDose());
+            }
+        }
+
+        public void RemoveBeam(ESAPIX.Facade.API.Beam beam)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client.RemoveBeam(beam._client);
+                }
+
+                );
+            }
+            else
+            {
                 _client.RemoveBeam(beam);
+            }
+        }
+
+        public ExternalPlanSetup()
+        {
+            _client = (new ExpandoObject());
+        }
+
+        public ExternalPlanSetup(dynamic client)
+        {
+            _client = (client);
         }
     }
 }

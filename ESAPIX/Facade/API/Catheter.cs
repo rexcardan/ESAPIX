@@ -1,172 +1,274 @@
-#region
-
-using System.Collections;
-using System.Collections.Generic;
-using System.Dynamic;
+using System;
+using System.Windows.Media.Media3D;
 using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
+using System.Dynamic;
 using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class Catheter : ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class Catheter : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
-        public Catheter()
-        {
-            _client = new ExpandoObject();
-        }
-
-        public Catheter(dynamic client)
-        {
-            _client = client;
-        }
-
-        public double ApplicatorLength
+        public System.Double ApplicatorLength
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("ApplicatorLength"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("ApplicatorLength"))
+                    {
                         return _client.ApplicatorLength;
+                    }
                     else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ApplicatorLength; }
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.ApplicatorLength;
+                    }
+
                     );
-                return default(double);
+                }
+                else
+                {
+                    return default (System.Double);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.ApplicatorLength = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.ApplicatorLength = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public int BrachySolidApplicatorPartID
+        public System.Int32 BrachySolidApplicatorPartID
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("BrachySolidApplicatorPartID"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("BrachySolidApplicatorPartID"))
+                    {
                         return _client.BrachySolidApplicatorPartID;
+                    }
                     else
-                        return default(int);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.BrachySolidApplicatorPartID; }
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.BrachySolidApplicatorPartID;
+                    }
+
                     );
-                return default(int);
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.BrachySolidApplicatorPartID = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.BrachySolidApplicatorPartID = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public int ChannelNumber
+        public System.Int32 ChannelNumber
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("ChannelNumber"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("ChannelNumber"))
+                    {
                         return _client.ChannelNumber;
+                    }
                     else
-                        return default(int);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.ChannelNumber; }
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.ChannelNumber;
+                    }
+
                     );
-                return default(int);
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.ChannelNumber = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.ChannelNumber = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public Color Color
+        public System.Windows.Media.Color Color
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Color"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Color"))
+                    {
                         return _client.Color;
+                    }
                     else
-                        return default(Color);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Color; }
+                    {
+                        return default (System.Windows.Media.Color);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Color;
+                    }
+
                     );
-                return default(Color);
+                }
+                else
+                {
+                    return default (System.Windows.Media.Color);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.Color = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Color = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public VVector[] Shape
+        public VMS.TPS.Common.Model.Types.VVector[] Shape
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Shape"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Shape"))
+                    {
                         return _client.Shape;
+                    }
                     else
-                        return default(VVector[]);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Shape; }
+                    {
+                        return default (VMS.TPS.Common.Model.Types.VVector[]);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Shape;
+                    }
+
                     );
-                return default(VVector[]);
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.VVector[]);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.Shape = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Shape = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public IEnumerable<SourcePosition> SourcePositions
+        public IEnumerable<ESAPIX.Facade.API.SourcePosition> SourcePositions
         {
             get
             {
                 if (_client is ExpandoObject)
                 {
                     if ((_client as ExpandoObject).HasProperty("SourcePositions"))
+                    {
                         foreach (var item in _client.SourcePositions)
+                        {
                             yield return item;
+                        }
+                    }
                     else
+                    {
                         yield break;
+                    }
                 }
                 else
                 {
                     IEnumerator enumerator = null;
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
-                        {
-                            var asEnum = (IEnumerable) _client.SourcePositions;
-                            enumerator = asEnum.GetEnumerator();
-                        }
-                    );
-                    while (XC.Instance.CurrentContext.GetValue(sc => enumerator.MoveNext()))
                     {
-                        var facade = new SourcePosition();
+                        var asEnum = (IEnumerable)_client.SourcePositions;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.SourcePosition();
                         XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
                             {
-                                var vms = enumerator.Current;
-                                if (vms != null)
-                                    facade._client = vms;
+                                facade._client = vms;
                             }
+                        }
+
                         );
                         if (facade._client != null)
+                        {
                             yield return facade;
+                        }
                     }
                 }
             }
@@ -178,78 +280,153 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public double StepSize
+        public System.Double StepSize
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("StepSize"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("StepSize"))
+                    {
                         return _client.StepSize;
+                    }
                     else
-                        return default(double);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.StepSize; }
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.StepSize;
+                    }
+
                     );
-                return default(double);
+                }
+                else
+                {
+                    return default (System.Double);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.StepSize = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.StepSize = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public BrachyTreatmentUnit TreatmentUnit
+        public ESAPIX.Facade.API.BrachyTreatmentUnit TreatmentUnit
         {
             get
             {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("TreatmentUnit"))
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TreatmentUnit"))
+                    {
                         return _client.TreatmentUnit;
+                    }
                     else
-                        return default(BrachyTreatmentUnit);
-                if (XC.Instance.CurrentContext != null)
+                    {
+                        return default (ESAPIX.Facade.API.BrachyTreatmentUnit);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
                     return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.TreatmentUnit) != (null))
                         {
-                            if (_client.TreatmentUnit != null)
-                                return new BrachyTreatmentUnit(_client.TreatmentUnit);
+                            return new ESAPIX.Facade.API.BrachyTreatmentUnit(_client.TreatmentUnit);
+                        }
+                        else
+                        {
                             return null;
                         }
+                    }
+
                     );
-                return default(BrachyTreatmentUnit);
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.BrachyTreatmentUnit);
+                }
             }
 
             set
             {
-                if (_client is ExpandoObject)
-                    _client.TreatmentUnit = value;
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TreatmentUnit = (value);
+                }
+                else
+                {
+                }
             }
         }
 
-        public double GetSourcePosCenterDistanceFromTip(SourcePosition sourcePosition)
+        public System.Double GetSourcePosCenterDistanceFromTip(ESAPIX.Facade.API.SourcePosition sourcePosition)
         {
-            if (XC.Instance.CurrentContext != null)
+            if ((XC.Instance.CurrentContext) != (null))
             {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc =>
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.GetSourcePosCenterDistanceFromTip(sourcePosition._client));
+                    if ((fromClient) == (default (System.Double)))
                     {
-                        return _client.GetSourcePosCenterDistanceFromTip(sourcePosition._client);
+                        return default (System.Double);
                     }
-                );
+
+                    return (System.Double)(fromClient);
+                }
+
+                ));
                 return vmsResult;
             }
-            return (double) _client.GetSourcePosCenterDistanceFromTip(sourcePosition);
+            else
+            {
+                return (System.Double)(_client.GetSourcePosCenterDistanceFromTip(sourcePosition));
+            }
         }
 
-        public double GetTotalDwellTime()
+        public System.Double GetTotalDwellTime()
         {
-            if (XC.Instance.CurrentContext != null)
+            if ((XC.Instance.CurrentContext) != (null))
             {
-                var vmsResult = XC.Instance.CurrentContext.GetValue(sc => { return _client.GetTotalDwellTime(); }
-                );
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.GetTotalDwellTime());
+                    if ((fromClient) == (default (System.Double)))
+                    {
+                        return default (System.Double);
+                    }
+
+                    return (System.Double)(fromClient);
+                }
+
+                ));
                 return vmsResult;
             }
-            return (double) _client.GetTotalDwellTime();
+            else
+            {
+                return (System.Double)(_client.GetTotalDwellTime());
+            }
+        }
+
+        public Catheter()
+        {
+            _client = (new ExpandoObject());
+        }
+
+        public Catheter(dynamic client)
+        {
+            _client = (client);
         }
     }
 }

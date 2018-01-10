@@ -1,106 +1,174 @@
-#region
-
+using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class Compensator : ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class Compensator : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
+        public ESAPIX.Facade.API.AddOnMaterial Material
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Material"))
+                    {
+                        return _client.Material;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.AddOnMaterial);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.Material) != (null))
+                        {
+                            return new ESAPIX.Facade.API.AddOnMaterial(_client.Material);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.AddOnMaterial);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Material = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public ESAPIX.Facade.API.Slot Slot
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Slot"))
+                    {
+                        return _client.Slot;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.Slot);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.Slot) != (null))
+                        {
+                            return new ESAPIX.Facade.API.Slot(_client.Slot);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.Slot);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Slot = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public ESAPIX.Facade.API.Tray Tray
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Tray"))
+                    {
+                        return _client.Tray;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.Tray);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.Tray) != (null))
+                        {
+                            return new ESAPIX.Facade.API.Tray(_client.Tray);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.Tray);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Tray = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public Compensator()
         {
-            _client = new ExpandoObject();
+            _client = (new ExpandoObject());
         }
 
         public Compensator(dynamic client)
         {
-            _client = client;
-        }
-
-        public AddOnMaterial Material
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Material"))
-                        return _client.Material;
-                    else
-                        return default(AddOnMaterial);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                        {
-                            if (_client.Material != null)
-                                return new AddOnMaterial(_client.Material);
-                            return null;
-                        }
-                    );
-                return default(AddOnMaterial);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.Material = value;
-            }
-        }
-
-        public Slot Slot
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Slot"))
-                        return _client.Slot;
-                    else
-                        return default(Slot);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                        {
-                            if (_client.Slot != null)
-                                return new Slot(_client.Slot);
-                            return null;
-                        }
-                    );
-                return default(Slot);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.Slot = value;
-            }
-        }
-
-        public Tray Tray
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Tray"))
-                        return _client.Tray;
-                    else
-                        return default(Tray);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                        {
-                            if (_client.Tray != null)
-                                return new Tray(_client.Tray);
-                            return null;
-                        }
-                    );
-                return default(Tray);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                {
-                    _client.Tray = value;
-                }
-            }
+            _client = (client);
         }
     }
 }

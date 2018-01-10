@@ -1,136 +1,237 @@
-#region
-
 using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using System.Dynamic;
 using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
-
-#endregion
+using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class ApiDataObject : SerializableObject, System.Xml.Serialization.IXmlSerializable
+    public class ApiDataObject : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
+        public System.String Id
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    {
+                        return _client.Id;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Id;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Id = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.String Name
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Name"))
+                    {
+                        return _client.Name;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Name;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Name = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.String Comment
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Comment"))
+                    {
+                        return _client.Comment;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Comment;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Comment = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.String HistoryUserName
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("HistoryUserName"))
+                    {
+                        return _client.HistoryUserName;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.HistoryUserName;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.HistoryUserName = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.DateTime HistoryDateTime
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("HistoryDateTime"))
+                    {
+                        return _client.HistoryDateTime;
+                    }
+                    else
+                    {
+                        return default (System.DateTime);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.HistoryDateTime;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.DateTime);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.HistoryDateTime = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public ApiDataObject()
         {
-            _client = new ExpandoObject();
+            _client = (new ExpandoObject());
         }
 
         public ApiDataObject(dynamic client)
         {
-            _client = client;
-        }
-
-        public string Id
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Id"))
-                        return _client.Id;
-                    else
-                        return default(string);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Id; }
-                    );
-                return default(string);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.Id = value;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Name"))
-                        return _client.Name;
-                    else
-                        return default(string);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Name; }
-                    );
-                return default(string);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.Name = value;
-            }
-        }
-
-        public string Comment
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("Comment"))
-                        return _client.Comment;
-                    else
-                        return default(string);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.Comment; }
-                    );
-                return default(string);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.Comment = value;
-            }
-        }
-
-        public string HistoryUserName
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("HistoryUserName"))
-                        return _client.HistoryUserName;
-                    else
-                        return default(string);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.HistoryUserName; }
-                    );
-                return default(string);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                    _client.HistoryUserName = value;
-            }
-        }
-
-        public DateTime HistoryDateTime
-        {
-            get
-            {
-                if (_client is ExpandoObject)
-                    if (((ExpandoObject) _client).HasProperty("HistoryDateTime"))
-                        return _client.HistoryDateTime;
-                    else
-                        return default(DateTime);
-                if (XC.Instance.CurrentContext != null)
-                    return XC.Instance.CurrentContext.GetValue(sc => { return _client.HistoryDateTime; }
-                    );
-                return default(DateTime);
-            }
-
-            set
-            {
-                if (_client is ExpandoObject)
-                {
-                    _client.HistoryDateTime = value;
-                }
-            }
+            _client = (client);
         }
     }
 }
