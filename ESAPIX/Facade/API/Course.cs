@@ -518,9 +518,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddExternalPlanSetup(structureSet._client));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.ExternalPlanSetup)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.ExternalPlanSetup);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.ExternalPlanSetup(fromClient);
@@ -542,9 +542,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddExternalPlanSetupAsVerificationPlan(structureSet._client, verifiedPlan._client));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.ExternalPlanSetup)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.ExternalPlanSetup);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.ExternalPlanSetup(fromClient);

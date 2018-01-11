@@ -70,9 +70,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateDoseWithPresetValues(presetValues));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -94,9 +94,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateDose());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -118,9 +118,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateLeafMotionsAndDose());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -142,9 +142,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateLeafMotions());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -166,9 +166,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateLeafMotions(options));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -190,9 +190,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateLeafMotions(options));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -214,9 +214,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateLeafMotions(options));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -262,9 +262,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Optimize(maxIterations));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -286,9 +286,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Optimize(maxIterations, optimizationOption));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -310,9 +310,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Optimize(maxIterations, optimizationOption, mlcId));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -334,9 +334,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Optimize());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -358,9 +358,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Optimize(options));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -382,9 +382,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.OptimizeVMAT(mlcId));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -406,9 +406,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.OptimizeVMAT());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -430,9 +430,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.OptimizeVMAT(options));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizerResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizerResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizerResult(fromClient);
@@ -454,9 +454,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateDVHEstimates(modelId, targetDoseLevels, structureMatches));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.CalculationResult)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.CalculationResult);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.CalculationResult(fromClient);
@@ -478,9 +478,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddArcBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -502,9 +502,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddConformalArcBeam(machineParameters, collimatorAngle, controlPointCount, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -526,9 +526,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddMLCArcBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -550,9 +550,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddMLCBeam(machineParameters, leafPositions, jawPositions, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -574,9 +574,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddMultipleStaticSegmentBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -598,9 +598,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddSlidingWindowBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -622,9 +622,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddStaticBeam(machineParameters, jawPositions, collimatorAngle, gantryAngle, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -646,9 +646,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddVMATBeam(machineParameters, metersetWeights, collimatorAngle, gantryAngle, gantryStop, gantryDirection, patientSupportAngle, isocenter));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Beam)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Beam);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Beam(fromClient);
@@ -670,9 +670,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CreateEvaluationDose());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.EvaluationDose)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.EvaluationDose);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.EvaluationDose(fromClient);

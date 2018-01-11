@@ -168,9 +168,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddStructure(dicomType, id));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Structure)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Structure);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Structure(fromClient);

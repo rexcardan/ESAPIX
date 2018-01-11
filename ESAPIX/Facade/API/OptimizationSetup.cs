@@ -175,9 +175,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddAutomaticNormalTissueObjective(priority));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizationNormalTissueParameter)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizationNormalTissueParameter);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizationNormalTissueParameter(fromClient);
@@ -199,9 +199,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddBeamSpecificParameter(beam._client, smoothX, smoothY, fixedJaws));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizationIMRTBeamParameter)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizationIMRTBeamParameter);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizationIMRTBeamParameter(fromClient);
@@ -223,9 +223,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddEUDObjective(structure._client, objectiveOperator, dose, parameterA, priority));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizationEUDObjective)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizationEUDObjective);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizationEUDObjective(fromClient);
@@ -247,9 +247,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddMeanDoseObjective(structure._client, dose, priority));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizationMeanDoseObjective)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizationMeanDoseObjective);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizationMeanDoseObjective(fromClient);
@@ -271,9 +271,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddNormalTissueObjective(priority, distanceFromTargetBorderInMM, startDosePercentage, endDosePercentage, fallOff));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizationNormalTissueParameter)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizationNormalTissueParameter);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizationNormalTissueParameter(fromClient);
@@ -295,9 +295,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddPointObjective(structure._client, objectiveOperator, dose, volume, priority));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizationPointObjective)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizationPointObjective);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizationPointObjective(fromClient);
@@ -353,9 +353,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddStructurePointCloudParameter(structure._client, pointResolutionInMM));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.OptimizationPointCloudParameter)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.OptimizationPointCloudParameter);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.OptimizationPointCloudParameter(fromClient);

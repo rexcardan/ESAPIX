@@ -1807,9 +1807,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetEditableParameters());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.BeamParameters)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.BeamParameters);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.BeamParameters(fromClient);

@@ -154,9 +154,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetDVHCumulativeData(structure._client, dosePresentation, volumePresentation, binWidth));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.DVHData)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.DVHData);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.DVHData(fromClient);

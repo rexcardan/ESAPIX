@@ -714,9 +714,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddCourse());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Course)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Course);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Course(fromClient);
@@ -738,9 +738,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddEmptyPhantom(imageId, orientation, xSizePixel, ySizePixel, widthMM, heightMM, nrOfPlanes, planeSepMM));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.StructureSet)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.StructureSet);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.StructureSet(fromClient);
@@ -929,9 +929,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CopyImageFromOtherPatient(otherPatientId, otherPatientStudyId, otherPatient3DImageId));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.StructureSet)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.StructureSet);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.StructureSet(fromClient);
@@ -953,9 +953,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CopyImageFromOtherPatient(targetStudy._client, otherPatientId, otherPatientStudyId, otherPatient3DImageId));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.StructureSet)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.StructureSet);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.StructureSet(fromClient);

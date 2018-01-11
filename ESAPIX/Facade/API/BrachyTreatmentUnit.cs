@@ -693,9 +693,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetActiveRadioactiveSource());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.RadioactiveSource)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.RadioactiveSource);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.RadioactiveSource(fromClient);

@@ -21,9 +21,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.And(other._client));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.SegmentVolume);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.SegmentVolume(fromClient);
@@ -45,9 +45,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AsymmetricMargin(margins));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.SegmentVolume);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.SegmentVolume(fromClient);
@@ -69,9 +69,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Margin(marginInMM));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.SegmentVolume);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.SegmentVolume(fromClient);
@@ -93,9 +93,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Not());
-                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.SegmentVolume);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.SegmentVolume(fromClient);
@@ -117,9 +117,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Or(other._client));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.SegmentVolume);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.SegmentVolume(fromClient);
@@ -141,9 +141,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Sub(other._client));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.SegmentVolume);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.SegmentVolume(fromClient);
@@ -165,9 +165,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.Xor(other._client));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.SegmentVolume)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.SegmentVolume);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.SegmentVolume(fromClient);

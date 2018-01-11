@@ -121,7 +121,7 @@ namespace ESAPIX.Facade.API
 
         public static ESAPIX.Facade.API.Application CreateApplication(System.String username, System.String password, bool useSingleThread = false)
         {
-            return StaticHelper.Application_CreateApplication(username, password, useSingleThread);
+            return StaticHelper.Application_CreateApplication(username, password,useSingleThread );
         }
 
         public ESAPIX.Facade.API.Patient OpenPatient(ESAPIX.Facade.API.PatientSummary patientSummary)
@@ -131,9 +131,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.OpenPatient(patientSummary._client));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Patient)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Patient);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Patient(fromClient);
@@ -155,9 +155,9 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.OpenPatientById(id));
-                    if ((fromClient) == (default (ESAPIX.Facade.API.Patient)))
+                    if ((fromClient) == (null))
                     {
-                        return default (ESAPIX.Facade.API.Patient);
+                        return null;
                     }
 
                     return new ESAPIX.Facade.API.Patient(fromClient);
