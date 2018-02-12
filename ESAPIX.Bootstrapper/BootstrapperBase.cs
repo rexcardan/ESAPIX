@@ -61,7 +61,7 @@ namespace ESAPIX.Bootstrapper
                 Splash.Closing += (ob, args)=> { mre.Set(); } ;
                 await Task.Run(() => { mre.WaitOne(); });
             }
-
+            InitializeModules();
             shell.ShowDialog();
             shell.ContentRendered -= shell_ContentRendered;
         }
