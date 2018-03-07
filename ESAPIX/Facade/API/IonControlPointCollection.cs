@@ -12,72 +12,30 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class OptimizationPointCloudParameter : ESAPIX.Facade.API.OptimizationParameter, System.Xml.Serialization.IXmlSerializable
+    public class IonControlPointCollection : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable, System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.IonControlPoint>, System.Collections.IEnumerable
     {
-        public System.Double PointResolutionInMM
+        public ESAPIX.Facade.API.IonControlPoint this[int index]
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("PointResolutionInMM"))
+                    if (((ExpandoObject)(_client)).HasProperty("Item"))
                     {
-                        return _client.PointResolutionInMM;
+                        return _client[index];
                     }
                     else
                     {
-                        return default (System.Double);
+                        return default (ESAPIX.Facade.API.IonControlPoint);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.PointResolutionInMM;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.Double);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.PointResolutionInMM = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public ESAPIX.Facade.API.Structure Structure
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("Structure"))
-                    {
-                        return _client.Structure;
-                    }
-                    else
-                    {
-                        return default (ESAPIX.Facade.API.Structure);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        if ((_client.Structure) != (null))
+                        if ((_client[index]) != (null))
                         {
-                            return new ESAPIX.Facade.API.Structure(_client.Structure);
+                            return new ESAPIX.Facade.API.IonControlPoint(_client[index]);
                         }
                         else
                         {
@@ -89,7 +47,7 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
-                    return default (ESAPIX.Facade.API.Structure);
+                    return default (ESAPIX.Facade.API.IonControlPoint);
                 }
             }
 
@@ -97,7 +55,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Structure = (value);
+                    _client[index] = (value);
                 }
                 else
                 {
@@ -105,12 +63,66 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public OptimizationPointCloudParameter()
+        public System.Int32 Count
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Count"))
+                    {
+                        return _client.Count;
+                    }
+                    else
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Count;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Count = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
+        }
+
+        public System.Collections.Generic.IEnumerator<ESAPIX.Facade.API.IonControlPoint> GetEnumerator()
+        {
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
+        }
+
+        public IonControlPointCollection()
         {
             _client = (new ExpandoObject());
         }
 
-        public OptimizationPointCloudParameter(dynamic client)
+        public IonControlPointCollection(dynamic client)
         {
             _client = (client);
         }

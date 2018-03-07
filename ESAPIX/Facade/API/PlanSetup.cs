@@ -14,6 +14,370 @@ namespace ESAPIX.Facade.API
 {
     public class PlanSetup : ESAPIX.Facade.API.PlanningItem, System.Xml.Serialization.IXmlSerializable
     {
+        public System.String Id
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    {
+                        return _client.Id;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Id;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Id = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double PlanNormalizationValue
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PlanNormalizationValue"))
+                    {
+                        return _client.PlanNormalizationValue;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PlanNormalizationValue;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PlanNormalizationValue = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public IEnumerable<ESAPIX.Facade.API.PlanUncertainty> PlanUncertainties
+        {
+            get
+            {
+                if (_client is ExpandoObject)
+                {
+                    if ((_client as ExpandoObject).HasProperty("PlanUncertainties"))
+                    {
+                        foreach (var item in _client.PlanUncertainties)
+                        {
+                            yield return item;
+                        }
+                    }
+                    else
+                    {
+                        yield break;
+                    }
+                }
+                else
+                {
+                    IEnumerator enumerator = null;
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var asEnum = (IEnumerable)_client.PlanUncertainties;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.PlanUncertainty();
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                            {
+                                facade._client = vms;
+                            }
+                        }
+
+                        );
+                        if (facade._client != null)
+                        {
+                            yield return facade;
+                        }
+                    }
+                }
+            }
+
+            set
+            {
+                if (_client is ExpandoObject)
+                    _client.PlanUncertainties = value;
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.DoseValue DosePerFractionInPrimaryRefPoint
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("DosePerFractionInPrimaryRefPoint"))
+                    {
+                        return _client.DosePerFractionInPrimaryRefPoint;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.DosePerFractionInPrimaryRefPoint;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.DosePerFractionInPrimaryRefPoint = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.DoseValue PrescribedDosePerFraction
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PrescribedDosePerFraction"))
+                    {
+                        return _client.PrescribedDosePerFraction;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PrescribedDosePerFraction;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PrescribedDosePerFraction = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double PrescribedPercentage
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PrescribedPercentage"))
+                    {
+                        return _client.PrescribedPercentage;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PrescribedPercentage;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PrescribedPercentage = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.DoseValue TotalPrescribedDose
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TotalPrescribedDose"))
+                    {
+                        return _client.TotalPrescribedDose;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TotalPrescribedDose;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TotalPrescribedDose = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public IEnumerable<ESAPIX.Facade.API.ApplicationScriptLog> ApplicationScriptLogs
+        {
+            get
+            {
+                if (_client is ExpandoObject)
+                {
+                    if ((_client as ExpandoObject).HasProperty("ApplicationScriptLogs"))
+                    {
+                        foreach (var item in _client.ApplicationScriptLogs)
+                        {
+                            yield return item;
+                        }
+                    }
+                    else
+                    {
+                        yield break;
+                    }
+                }
+                else
+                {
+                    IEnumerator enumerator = null;
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var asEnum = (IEnumerable)_client.ApplicationScriptLogs;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.ApplicationScriptLog();
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                            {
+                                facade._client = vms;
+                            }
+                        }
+
+                        );
+                        if (facade._client != null)
+                        {
+                            yield return facade;
+                        }
+                    }
+                }
+            }
+
+            set
+            {
+                if (_client is ExpandoObject)
+                    _client.ApplicationScriptLogs = value;
+            }
+        }
+
         public VMS.TPS.Common.Model.Types.PlanSetupApprovalStatus ApprovalStatus
         {
             get
@@ -196,6 +560,48 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.CreationUserName = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.DoseValue DosePerFraction
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("DosePerFraction"))
+                    {
+                        return _client.DosePerFraction;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.DosePerFraction;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.DosePerFraction = (value);
                 }
                 else
                 {
@@ -427,6 +833,48 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        public System.Nullable<System.Int32> NumberOfFractions
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("NumberOfFractions"))
+                    {
+                        return _client.NumberOfFractions;
+                    }
+                    else
+                    {
+                        return default (System.Nullable<System.Int32>);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.NumberOfFractions;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Nullable<System.Int32>);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.NumberOfFractions = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public ESAPIX.Facade.API.OptimizationSetup OptimizationSetup
         {
             get
@@ -602,6 +1050,48 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        public VMS.TPS.Common.Model.Types.DoseValue PlannedDosePerFraction
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PlannedDosePerFraction"))
+                    {
+                        return _client.PlannedDosePerFraction;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PlannedDosePerFraction;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PlannedDosePerFraction = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public System.String PlanningApprovalDate
         {
             get
@@ -679,6 +1169,48 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.PlanningApprover = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.String PlanningApproverDisplayName
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PlanningApproverDisplayName"))
+                    {
+                        return _client.PlanningApproverDisplayName;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PlanningApproverDisplayName;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PlanningApproverDisplayName = (value);
                 }
                 else
                 {
@@ -805,48 +1337,6 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.PlanType = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public System.Double PrescribedPercentage
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("PrescribedPercentage"))
-                    {
-                        return _client.PrescribedPercentage;
-                    }
-                    else
-                    {
-                        return default (System.Double);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.PrescribedPercentage;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.Double);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.PrescribedPercentage = (value);
                 }
                 else
                 {
@@ -1253,15 +1743,15 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public VMS.TPS.Common.Model.Types.DoseValue TotalPrescribedDose
+        public VMS.TPS.Common.Model.Types.DoseValue TotalDose
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("TotalPrescribedDose"))
+                    if (((ExpandoObject)(_client)).HasProperty("TotalDose"))
                     {
-                        return _client.TotalPrescribedDose;
+                        return _client.TotalDose;
                     }
                     else
                     {
@@ -1272,7 +1762,7 @@ namespace ESAPIX.Facade.API
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.TotalPrescribedDose;
+                        return _client.TotalDose;
                     }
 
                     );
@@ -1287,7 +1777,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.TotalPrescribedDose = (value);
+                    _client.TotalDose = (value);
                 }
                 else
                 {
@@ -1379,6 +1869,48 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        public System.String TreatmentApproverDisplayName
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TreatmentApproverDisplayName"))
+                    {
+                        return _client.TreatmentApproverDisplayName;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TreatmentApproverDisplayName;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TreatmentApproverDisplayName = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public VMS.TPS.Common.Model.Types.PatientOrientation TreatmentOrientation
         {
             get
@@ -1414,6 +1946,48 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.TreatmentOrientation = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double TreatmentPercentage
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("TreatmentPercentage"))
+                    {
+                        return _client.TreatmentPercentage;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.TreatmentPercentage;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.TreatmentPercentage = (value);
                 }
                 else
                 {
@@ -1463,55 +2037,6 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public ESAPIX.Facade.API.Fractionation UniqueFractionation
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("UniqueFractionation"))
-                    {
-                        return _client.UniqueFractionation;
-                    }
-                    else
-                    {
-                        return default (ESAPIX.Facade.API.Fractionation);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        if ((_client.UniqueFractionation) != (null))
-                        {
-                            return new ESAPIX.Facade.API.Fractionation(_client.UniqueFractionation);
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (ESAPIX.Facade.API.Fractionation);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.UniqueFractionation = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
         public ESAPIX.Facade.API.PlanSetup VerifiedPlan
         {
             get
@@ -1554,90 +2079,6 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.VerifiedPlan = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public System.String Id
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("Id"))
-                    {
-                        return _client.Id;
-                    }
-                    else
-                    {
-                        return default (System.String);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.Id;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.String);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.Id = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public System.Double PlanNormalizationValue
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("PlanNormalizationValue"))
-                    {
-                        return _client.PlanNormalizationValue;
-                    }
-                    else
-                    {
-                        return default (System.Double);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.PlanNormalizationValue;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.Double);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.PlanNormalizationValue = (value);
                 }
                 else
                 {
@@ -1736,54 +2177,6 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public VMS.TPS.Common.Model.Types.DoseValue GetDoseAtVolume(ESAPIX.Facade.API.Structure structure, System.Double volume, VMS.TPS.Common.Model.Types.VolumePresentation volumePresentation, VMS.TPS.Common.Model.Types.DoseValuePresentation requestedDosePresentation)
-        {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
-                {
-                    var fromClient = (_client.GetDoseAtVolume(structure._client, volume, volumePresentation, requestedDosePresentation));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.DoseValue)))
-                    {
-                        return default (VMS.TPS.Common.Model.Types.DoseValue);
-                    }
-
-                    return (VMS.TPS.Common.Model.Types.DoseValue)(fromClient);
-                }
-
-                ));
-                return vmsResult;
-            }
-            else
-            {
-                return (VMS.TPS.Common.Model.Types.DoseValue)(_client.GetDoseAtVolume(structure, volume, volumePresentation, requestedDosePresentation));
-            }
-        }
-
-        public System.Double GetVolumeAtDose(ESAPIX.Facade.API.Structure structure, VMS.TPS.Common.Model.Types.DoseValue dose, VMS.TPS.Common.Model.Types.VolumePresentation requestedVolumePresentation)
-        {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
-                {
-                    var fromClient = (_client.GetVolumeAtDose(structure._client, dose, requestedVolumePresentation));
-                    if ((fromClient) == (default (System.Double)))
-                    {
-                        return default (System.Double);
-                    }
-
-                    return (System.Double)(fromClient);
-                }
-
-                ));
-                return vmsResult;
-            }
-            else
-            {
-                return (System.Double)(_client.GetVolumeAtDose(structure, dose, requestedVolumePresentation));
-            }
-        }
-
         public void SetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType calculationType, System.String model)
         {
             if ((XC.Instance.CurrentContext) != (null))
@@ -1822,6 +2215,23 @@ namespace ESAPIX.Facade.API
             else
             {
                 return (System.Boolean)(_client.SetCalculationOption(calculationModel, optionName, optionValue));
+            }
+        }
+
+        public void SetPrescription(System.Int32 numberOfFractions, VMS.TPS.Common.Model.Types.DoseValue dosePerFraction, System.Double treatmentPercentage)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client.SetPrescription(numberOfFractions, dosePerFraction, treatmentPercentage);
+                }
+
+                );
+            }
+            else
+            {
+                _client.SetPrescription(numberOfFractions, dosePerFraction, treatmentPercentage);
             }
         }
 

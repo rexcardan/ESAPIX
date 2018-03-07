@@ -14,6 +14,132 @@ namespace ESAPIX.Facade.API
 {
     public class Beam : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
+        public System.String Id
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    {
+                        return _client.Id;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Id;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Id = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.MetersetValue Meterset
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Meterset"))
+                    {
+                        return _client.Meterset;
+                    }
+                    else
+                    {
+                        return default (VMS.TPS.Common.Model.Types.MetersetValue);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Meterset;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (VMS.TPS.Common.Model.Types.MetersetValue);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Meterset = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Int32 BeamNumber
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("BeamNumber"))
+                    {
+                        return _client.BeamNumber;
+                    }
+                    else
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.BeamNumber;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.BeamNumber = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public ESAPIX.Facade.API.Applicator Applicator
         {
             get
@@ -140,48 +266,6 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.AverageSSD = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public System.Int32 BeamNumber
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("BeamNumber"))
-                    {
-                        return _client.BeamNumber;
-                    }
-                    else
-                    {
-                        return default (System.Int32);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.BeamNumber;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.Int32);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.BeamNumber = (value);
                 }
                 else
                 {
@@ -1113,6 +1197,55 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        public ESAPIX.Facade.API.PlanSetup Plan
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Plan"))
+                    {
+                        return _client.Plan;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.PlanSetup);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.Plan) != (null))
+                        {
+                            return new ESAPIX.Facade.API.PlanSetup(_client.Plan);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.PlanSetup);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Plan = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public System.Double PlannedSSD
         {
             get
@@ -1624,139 +1757,6 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Id
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("Id"))
-                    {
-                        return _client.Id;
-                    }
-                    else
-                    {
-                        return default (System.String);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.Id;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.String);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.Id = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public VMS.TPS.Common.Model.Types.MetersetValue Meterset
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("Meterset"))
-                    {
-                        return _client.Meterset;
-                    }
-                    else
-                    {
-                        return default (VMS.TPS.Common.Model.Types.MetersetValue);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.Meterset;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (VMS.TPS.Common.Model.Types.MetersetValue);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.Meterset = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public ESAPIX.Facade.API.ExternalBeam ExternalBeam
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("ExternalBeam"))
-                    {
-                        return _client.ExternalBeam;
-                    }
-                    else
-                    {
-                        return default (ESAPIX.Facade.API.ExternalBeam);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        if ((_client.ExternalBeam) != (null))
-                        {
-                            return new ESAPIX.Facade.API.ExternalBeam(_client.ExternalBeam);
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (ESAPIX.Facade.API.ExternalBeam);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.ExternalBeam = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
         public void ApplyParameters(ESAPIX.Facade.API.BeamParameters beamParams)
         {
             if ((XC.Instance.CurrentContext) != (null))
@@ -1797,6 +1797,71 @@ namespace ESAPIX.Facade.API
             else
             {
                 return (System.Boolean)(_client.CanSetOptimalFluence(fluence, out message));
+            }
+        }
+
+        public System.Double CollimatorAngleToUser(System.Double val)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.CollimatorAngleToUser(val));
+                    if ((fromClient) == (default (System.Double)))
+                    {
+                        return default (System.Double);
+                    }
+
+                    return (System.Double)(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (System.Double)(_client.CollimatorAngleToUser(val));
+            }
+        }
+
+        public void FitCollimatorToStructure(VMS.TPS.Common.Model.Types.FitToStructureMargins margins, ESAPIX.Facade.API.Structure structure, System.Boolean useAsymmetricXJaws, System.Boolean useAsymmetricYJaws, System.Boolean optimizeCollimatorRotation)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client.FitCollimatorToStructure(margins, structure._client, useAsymmetricXJaws, useAsymmetricYJaws, optimizeCollimatorRotation);
+                }
+
+                );
+            }
+            else
+            {
+                _client.FitCollimatorToStructure(margins, structure, useAsymmetricXJaws, useAsymmetricYJaws, optimizeCollimatorRotation);
+            }
+        }
+
+        public System.Double GantryAngleToUser(System.Double val)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.GantryAngleToUser(val));
+                    if ((fromClient) == (default (System.Double)))
+                    {
+                        return default (System.Double);
+                    }
+
+                    return (System.Double)(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (System.Double)(_client.GantryAngleToUser(val));
             }
         }
 
@@ -1869,6 +1934,54 @@ namespace ESAPIX.Facade.API
             else
             {
                 return (VMS.TPS.Common.Model.Types.VVector)(_client.GetSourceLocation(gantryAngle));
+            }
+        }
+
+        public System.String JawPositionsToUserString(VMS.TPS.Common.Model.Types.VRect<System.Double> val)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.JawPositionsToUserString(val));
+                    if ((fromClient) == (default (System.String)))
+                    {
+                        return default (System.String);
+                    }
+
+                    return (System.String)(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (System.String)(_client.JawPositionsToUserString(val));
+            }
+        }
+
+        public System.Double PatientSupportAngleToUser(System.Double val)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.PatientSupportAngleToUser(val));
+                    if ((fromClient) == (default (System.Double)))
+                    {
+                        return default (System.Double);
+                    }
+
+                    return (System.Double)(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (System.Double)(_client.PatientSupportAngleToUser(val));
             }
         }
 

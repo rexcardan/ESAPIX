@@ -25,7 +25,7 @@ namespace ESAPIX.Bootstrapper
         public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false) : base()
         {
             FacadeInitializer.Initialize();
-            _ctx = StandAloneContext.Create(vmsUsername, vmsPassword, singleThread);
+            _ctx = StandAloneContext.Create(singleThread);
             _ctx.UIDispatcher = Dispatcher.CurrentDispatcher;
         }
 

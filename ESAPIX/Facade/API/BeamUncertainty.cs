@@ -12,35 +12,42 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class User : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
+    public class BeamUncertainty : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
-        public System.String Id
+        public ESAPIX.Facade.API.Beam Beam
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    if (((ExpandoObject)(_client)).HasProperty("Beam"))
                     {
-                        return _client.Id;
+                        return _client.Beam;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (ESAPIX.Facade.API.Beam);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Id;
+                        if ((_client.Beam) != (null))
+                        {
+                            return new ESAPIX.Facade.API.Beam(_client.Beam);
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (ESAPIX.Facade.API.Beam);
                 }
             }
 
@@ -48,7 +55,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Id = (value);
+                    _client.Beam = (value);
                 }
                 else
                 {
@@ -56,33 +63,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Language
+        public VMS.TPS.Common.Model.Types.BeamNumber BeamNumber
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Language"))
+                    if (((ExpandoObject)(_client)).HasProperty("BeamNumber"))
                     {
-                        return _client.Language;
+                        return _client.BeamNumber;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (VMS.TPS.Common.Model.Types.BeamNumber);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Language;
+                        return _client.BeamNumber;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (VMS.TPS.Common.Model.Types.BeamNumber);
                 }
             }
 
@@ -90,7 +97,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Language = (value);
+                    _client.BeamNumber = (value);
                 }
                 else
                 {
@@ -98,33 +105,40 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Name
+        public ESAPIX.Facade.API.Dose Dose
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Name"))
+                    if (((ExpandoObject)(_client)).HasProperty("Dose"))
                     {
-                        return _client.Name;
+                        return _client.Dose;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (ESAPIX.Facade.API.Dose);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Name;
+                        if ((_client.Dose) != (null))
+                        {
+                            return new ESAPIX.Facade.API.Dose(_client.Dose);
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (ESAPIX.Facade.API.Dose);
                 }
             }
 
@@ -132,7 +146,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Name = (value);
+                    _client.Dose = (value);
                 }
                 else
                 {
@@ -140,12 +154,12 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public User()
+        public BeamUncertainty()
         {
             _client = (new ExpandoObject());
         }
 
-        public User(dynamic client)
+        public BeamUncertainty(dynamic client)
         {
             _client = (client);
         }

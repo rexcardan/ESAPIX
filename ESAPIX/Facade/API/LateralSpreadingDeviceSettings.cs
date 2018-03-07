@@ -12,17 +12,17 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class ExternalBeam : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class LateralSpreadingDeviceSettings : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
-        public System.Double SourceAxisDistance
+        public System.Double IsocenterToLateralSpreadingDeviceDistance
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("SourceAxisDistance"))
+                    if (((ExpandoObject)(_client)).HasProperty("IsocenterToLateralSpreadingDeviceDistance"))
                     {
-                        return _client.SourceAxisDistance;
+                        return _client.IsocenterToLateralSpreadingDeviceDistance;
                     }
                     else
                     {
@@ -33,7 +33,7 @@ namespace ESAPIX.Facade.API
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.SourceAxisDistance;
+                        return _client.IsocenterToLateralSpreadingDeviceDistance;
                     }
 
                     );
@@ -48,7 +48,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.SourceAxisDistance = (value);
+                    _client.IsocenterToLateralSpreadingDeviceDistance = (value);
                 }
                 else
                 {
@@ -56,15 +56,15 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String MachineModel
+        public System.String LateralSpreadingDeviceSetting
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("MachineModel"))
+                    if (((ExpandoObject)(_client)).HasProperty("LateralSpreadingDeviceSetting"))
                     {
-                        return _client.MachineModel;
+                        return _client.LateralSpreadingDeviceSetting;
                     }
                     else
                     {
@@ -75,7 +75,7 @@ namespace ESAPIX.Facade.API
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.MachineModel;
+                        return _client.LateralSpreadingDeviceSetting;
                     }
 
                     );
@@ -90,7 +90,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.MachineModel = (value);
+                    _client.LateralSpreadingDeviceSetting = (value);
                 }
                 else
                 {
@@ -98,33 +98,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String MachineModelName
+        public System.Double LateralSpreadingDeviceWaterEquivalentThickness
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("MachineModelName"))
+                    if (((ExpandoObject)(_client)).HasProperty("LateralSpreadingDeviceWaterEquivalentThickness"))
                     {
-                        return _client.MachineModelName;
+                        return _client.LateralSpreadingDeviceWaterEquivalentThickness;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.MachineModelName;
+                        return _client.LateralSpreadingDeviceWaterEquivalentThickness;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Double);
                 }
             }
 
@@ -132,7 +132,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.MachineModelName = (value);
+                    _client.LateralSpreadingDeviceWaterEquivalentThickness = (value);
                 }
                 else
                 {
@@ -140,33 +140,40 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String MachineScaleDisplayName
+        public ESAPIX.Facade.API.LateralSpreadingDevice ReferencedLateralSpreadingDevice
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("MachineScaleDisplayName"))
+                    if (((ExpandoObject)(_client)).HasProperty("ReferencedLateralSpreadingDevice"))
                     {
-                        return _client.MachineScaleDisplayName;
+                        return _client.ReferencedLateralSpreadingDevice;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (ESAPIX.Facade.API.LateralSpreadingDevice);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.MachineScaleDisplayName;
+                        if ((_client.ReferencedLateralSpreadingDevice) != (null))
+                        {
+                            return new ESAPIX.Facade.API.LateralSpreadingDevice(_client.ReferencedLateralSpreadingDevice);
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (ESAPIX.Facade.API.LateralSpreadingDevice);
                 }
             }
 
@@ -174,7 +181,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.MachineScaleDisplayName = (value);
+                    _client.ReferencedLateralSpreadingDevice = (value);
                 }
                 else
                 {
@@ -182,12 +189,12 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public ExternalBeam()
+        public LateralSpreadingDeviceSettings()
         {
             _client = (new ExpandoObject());
         }
 
-        public ExternalBeam(dynamic client)
+        public LateralSpreadingDeviceSettings(dynamic client)
         {
             _client = (client);
         }

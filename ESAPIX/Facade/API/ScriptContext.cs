@@ -415,6 +415,55 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        public ESAPIX.Facade.API.IonPlanSetup IonPlanSetup
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("IonPlanSetup"))
+                    {
+                        return _client.IonPlanSetup;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.IonPlanSetup);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.IonPlanSetup) != (null))
+                        {
+                            return new ESAPIX.Facade.API.IonPlanSetup(_client.IonPlanSetup);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.IonPlanSetup);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.IonPlanSetup = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public IEnumerable<ESAPIX.Facade.API.PlanSetup> PlansInScope
         {
             get
@@ -580,6 +629,62 @@ namespace ESAPIX.Facade.API
             {
                 if (_client is ExpandoObject)
                     _client.BrachyPlansInScope = value;
+            }
+        }
+
+        public IEnumerable<ESAPIX.Facade.API.IonPlanSetup> IonPlansInScope
+        {
+            get
+            {
+                if (_client is ExpandoObject)
+                {
+                    if ((_client as ExpandoObject).HasProperty("IonPlansInScope"))
+                    {
+                        foreach (var item in _client.IonPlansInScope)
+                        {
+                            yield return item;
+                        }
+                    }
+                    else
+                    {
+                        yield break;
+                    }
+                }
+                else
+                {
+                    IEnumerator enumerator = null;
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var asEnum = (IEnumerable)_client.IonPlansInScope;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.IonPlanSetup();
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                            {
+                                facade._client = vms;
+                            }
+                        }
+
+                        );
+                        if (facade._client != null)
+                        {
+                            yield return facade;
+                        }
+                    }
+                }
+            }
+
+            set
+            {
+                if (_client is ExpandoObject)
+                    _client.IonPlansInScope = value;
             }
         }
 

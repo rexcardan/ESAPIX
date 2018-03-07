@@ -12,35 +12,51 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class User : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
+    public class IonControlPointPairCollection : System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.IonControlPointPair>, System.Collections.IEnumerable
     {
-        public System.String Id
+        internal dynamic _client;
+        public bool IsLive
+        {
+            get
+            {
+                return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject);
+            }
+        }
+
+        public ESAPIX.Facade.API.IonControlPointPair this[int index]
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    if (((ExpandoObject)(_client)).HasProperty("Item"))
                     {
-                        return _client.Id;
+                        return _client[index];
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (ESAPIX.Facade.API.IonControlPointPair);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Id;
+                        if ((_client[index]) != (null))
+                        {
+                            return new ESAPIX.Facade.API.IonControlPointPair(_client[index]);
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (ESAPIX.Facade.API.IonControlPointPair);
                 }
             }
 
@@ -48,7 +64,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Id = (value);
+                    _client[index] = (value);
                 }
                 else
                 {
@@ -56,33 +72,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Language
+        public System.Int32 Count
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Language"))
+                    if (((ExpandoObject)(_client)).HasProperty("Count"))
                     {
-                        return _client.Language;
+                        return _client.Count;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Int32);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Language;
+                        return _client.Count;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Int32);
                 }
             }
 
@@ -90,7 +106,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Language = (value);
+                    _client.Count = (value);
                 }
                 else
                 {
@@ -98,54 +114,24 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Name
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("Name"))
-                    {
-                        return _client.Name;
-                    }
-                    else
-                    {
-                        return default (System.String);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.Name;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.String);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.Name = (value);
-                }
-                else
-                {
-                }
-            }
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
         }
 
-        public User()
+        public System.Collections.Generic.IEnumerator<ESAPIX.Facade.API.IonControlPointPair> GetEnumerator()
+        {
+            for (var i = 0; i < Count; i++)
+                yield return this[i];
+        }
+
+        public IonControlPointPairCollection()
         {
             _client = (new ExpandoObject());
         }
 
-        public User(dynamic client)
+        public IonControlPointPairCollection(dynamic client)
         {
             _client = (client);
         }

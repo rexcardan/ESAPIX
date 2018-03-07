@@ -14,6 +14,48 @@ namespace ESAPIX.Facade.API
 {
     public class Structure : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
+        public System.String Id
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    {
+                        return _client.Id;
+                    }
+                    else
+                    {
+                        return default (System.String);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Id;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.String);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Id = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public VMS.TPS.Common.Model.Types.VVector CenterPoint
         {
             get
@@ -497,48 +539,6 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.Volume = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public System.String Id
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("Id"))
-                    {
-                        return _client.Id;
-                    }
-                    else
-                    {
-                        return default (System.String);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.Id;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.String);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.Id = (value);
                 }
                 else
                 {

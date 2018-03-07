@@ -73,9 +73,9 @@ namespace ESAPIX.AppKit
         /// <param name="username">VMS username</param>
         /// <param name="password">VMS password</param>
         /// <returns>app context</returns>
-        public static StandAloneContext Create(string username, string password, bool singleThread = false)
+        public static StandAloneContext Create(bool singleThread = false)
         {
-            var app = Application.CreateApplication(username, password, singleThread);
+            var app = Application.CreateApplication(singleThread);
             var thread = XContext.Instance.CurrentContext.Thread;
             return new StandAloneContext(app, thread);
         }
@@ -84,7 +84,7 @@ namespace ESAPIX.AppKit
         {
             _app.ClosePatient();
             Patient = _app.OpenPatientById(id);
-            var found = Patient!=null && Patient.IsLive;
+            var found = Patient != null;
             if (found)
                 OnPatientChanged(Patient);
             else

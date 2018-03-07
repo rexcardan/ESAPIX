@@ -119,9 +119,14 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public static ESAPIX.Facade.API.Application CreateApplication(System.String username, System.String password, bool useSingleThread = false)
+        public static ESAPIX.Facade.API.Application CreateApplication(System.String username, System.String password, bool useCurrentThread)
         {
-            return StaticHelper.Application_CreateApplication(username, password,useSingleThread );
+            return StaticHelper.Application_CreateApplication(useCurrentThread);
+        }
+
+        public static ESAPIX.Facade.API.Application CreateApplication(bool useCurrentThread)
+        {
+            return StaticHelper.Application_CreateApplication(useCurrentThread);
         }
 
         public ESAPIX.Facade.API.Patient OpenPatient(ESAPIX.Facade.API.PatientSummary patientSummary)

@@ -12,35 +12,35 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class User : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
+    public class IonSpotParameters : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
-        public System.String Id
+        public System.Single Weight
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    if (((ExpandoObject)(_client)).HasProperty("Weight"))
                     {
-                        return _client.Id;
+                        return _client.Weight;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Single);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Id;
+                        return _client.Weight;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Single);
                 }
             }
 
@@ -48,7 +48,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Id = (value);
+                    _client.Weight = (value);
                 }
                 else
                 {
@@ -56,33 +56,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Language
+        public System.Single X
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Language"))
+                    if (((ExpandoObject)(_client)).HasProperty("X"))
                     {
-                        return _client.Language;
+                        return _client.X;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Single);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Language;
+                        return _client.X;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Single);
                 }
             }
 
@@ -90,7 +90,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Language = (value);
+                    _client.X = (value);
                 }
                 else
                 {
@@ -98,33 +98,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Name
+        public System.Single Y
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Name"))
+                    if (((ExpandoObject)(_client)).HasProperty("Y"))
                     {
-                        return _client.Name;
+                        return _client.Y;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Single);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Name;
+                        return _client.Y;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Single);
                 }
             }
 
@@ -132,7 +132,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Name = (value);
+                    _client.Y = (value);
                 }
                 else
                 {
@@ -140,12 +140,12 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public User()
+        public IonSpotParameters()
         {
             _client = (new ExpandoObject());
         }
 
-        public User(dynamic client)
+        public IonSpotParameters(dynamic client)
         {
             _client = (client);
         }

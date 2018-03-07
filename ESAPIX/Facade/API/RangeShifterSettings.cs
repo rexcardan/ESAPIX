@@ -12,35 +12,35 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class Fractionation : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
+    public class RangeShifterSettings : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
-        public System.Nullable<System.DateTime> CreationDateTime
+        public System.Double IsocenterToRangeShifterDistance
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("CreationDateTime"))
+                    if (((ExpandoObject)(_client)).HasProperty("IsocenterToRangeShifterDistance"))
                     {
-                        return _client.CreationDateTime;
+                        return _client.IsocenterToRangeShifterDistance;
                     }
                     else
                     {
-                        return default (System.Nullable<System.DateTime>);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.CreationDateTime;
+                        return _client.IsocenterToRangeShifterDistance;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Nullable<System.DateTime>);
+                    return default (System.Double);
                 }
             }
 
@@ -48,7 +48,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.CreationDateTime = (value);
+                    _client.IsocenterToRangeShifterDistance = (value);
                 }
                 else
                 {
@@ -56,33 +56,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public VMS.TPS.Common.Model.Types.DoseValue DosePerFractionInPrimaryRefPoint
+        public System.String RangeShifterSetting
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("DosePerFractionInPrimaryRefPoint"))
+                    if (((ExpandoObject)(_client)).HasProperty("RangeShifterSetting"))
                     {
-                        return _client.DosePerFractionInPrimaryRefPoint;
+                        return _client.RangeShifterSetting;
                     }
                     else
                     {
-                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.DosePerFractionInPrimaryRefPoint;
+                        return _client.RangeShifterSetting;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    return default (System.String);
                 }
             }
 
@@ -90,7 +90,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.DosePerFractionInPrimaryRefPoint = (value);
+                    _client.RangeShifterSetting = (value);
                 }
                 else
                 {
@@ -98,33 +98,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Nullable<System.Int32> NumberOfFractions
+        public System.Double RangeShifterWaterEquivalentThickness
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("NumberOfFractions"))
+                    if (((ExpandoObject)(_client)).HasProperty("RangeShifterWaterEquivalentThickness"))
                     {
-                        return _client.NumberOfFractions;
+                        return _client.RangeShifterWaterEquivalentThickness;
                     }
                     else
                     {
-                        return default (System.Nullable<System.Int32>);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.NumberOfFractions;
+                        return _client.RangeShifterWaterEquivalentThickness;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Nullable<System.Int32>);
+                    return default (System.Double);
                 }
             }
 
@@ -132,7 +132,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.NumberOfFractions = (value);
+                    _client.RangeShifterWaterEquivalentThickness = (value);
                 }
                 else
                 {
@@ -140,33 +140,40 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public VMS.TPS.Common.Model.Types.DoseValue PrescribedDosePerFraction
+        public ESAPIX.Facade.API.RangeShifter ReferencedRangeShifter
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("PrescribedDosePerFraction"))
+                    if (((ExpandoObject)(_client)).HasProperty("ReferencedRangeShifter"))
                     {
-                        return _client.PrescribedDosePerFraction;
+                        return _client.ReferencedRangeShifter;
                     }
                     else
                     {
-                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                        return default (ESAPIX.Facade.API.RangeShifter);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.PrescribedDosePerFraction;
+                        if ((_client.ReferencedRangeShifter) != (null))
+                        {
+                            return new ESAPIX.Facade.API.RangeShifter(_client.ReferencedRangeShifter);
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                     );
                 }
                 else
                 {
-                    return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    return default (ESAPIX.Facade.API.RangeShifter);
                 }
             }
 
@@ -174,7 +181,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.PrescribedDosePerFraction = (value);
+                    _client.ReferencedRangeShifter = (value);
                 }
                 else
                 {
@@ -182,29 +189,12 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public void SetPrescription(System.Int32 numberOfFractions, VMS.TPS.Common.Model.Types.DoseValue prescribedDosePerFraction, System.Double prescribedPercentage)
-        {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                XC.Instance.CurrentContext.Thread.Invoke(() =>
-                {
-                    _client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
-                }
-
-                );
-            }
-            else
-            {
-                _client.SetPrescription(numberOfFractions, prescribedDosePerFraction, prescribedPercentage);
-            }
-        }
-
-        public Fractionation()
+        public RangeShifterSettings()
         {
             _client = (new ExpandoObject());
         }
 
-        public Fractionation(dynamic client)
+        public RangeShifterSettings(dynamic client)
         {
             _client = (client);
         }

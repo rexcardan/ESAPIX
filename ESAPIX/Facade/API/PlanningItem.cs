@@ -147,6 +147,62 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        public IEnumerable<ESAPIX.Facade.API.Structure> StructuresSelectedForDvh
+        {
+            get
+            {
+                if (_client is ExpandoObject)
+                {
+                    if ((_client as ExpandoObject).HasProperty("StructuresSelectedForDvh"))
+                    {
+                        foreach (var item in _client.StructuresSelectedForDvh)
+                        {
+                            yield return item;
+                        }
+                    }
+                    else
+                    {
+                        yield break;
+                    }
+                }
+                else
+                {
+                    IEnumerator enumerator = null;
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var asEnum = (IEnumerable)_client.StructuresSelectedForDvh;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.Structure();
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                            {
+                                facade._client = vms;
+                            }
+                        }
+
+                        );
+                        if (facade._client != null)
+                        {
+                            yield return facade;
+                        }
+                    }
+                }
+            }
+
+            set
+            {
+                if (_client is ExpandoObject)
+                    _client.StructuresSelectedForDvh = value;
+            }
+        }
+
         public ESAPIX.Facade.API.DVHData GetDVHCumulativeData(ESAPIX.Facade.API.Structure structure, VMS.TPS.Common.Model.Types.DoseValuePresentation dosePresentation, VMS.TPS.Common.Model.Types.VolumePresentation volumePresentation, System.Double binWidth)
         {
             if ((XC.Instance.CurrentContext) != (null))
@@ -168,6 +224,54 @@ namespace ESAPIX.Facade.API
             else
             {
                 return (ESAPIX.Facade.API.DVHData)(_client.GetDVHCumulativeData(structure, dosePresentation, volumePresentation, binWidth));
+            }
+        }
+
+        public VMS.TPS.Common.Model.Types.DoseValue GetDoseAtVolume(ESAPIX.Facade.API.Structure structure, System.Double volume, VMS.TPS.Common.Model.Types.VolumePresentation volumePresentation, VMS.TPS.Common.Model.Types.DoseValuePresentation requestedDosePresentation)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.GetDoseAtVolume(structure._client, volume, volumePresentation, requestedDosePresentation));
+                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.DoseValue)))
+                    {
+                        return default (VMS.TPS.Common.Model.Types.DoseValue);
+                    }
+
+                    return (VMS.TPS.Common.Model.Types.DoseValue)(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (VMS.TPS.Common.Model.Types.DoseValue)(_client.GetDoseAtVolume(structure, volume, volumePresentation, requestedDosePresentation));
+            }
+        }
+
+        public System.Double GetVolumeAtDose(ESAPIX.Facade.API.Structure structure, VMS.TPS.Common.Model.Types.DoseValue dose, VMS.TPS.Common.Model.Types.VolumePresentation requestedVolumePresentation)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+                {
+                    var fromClient = (_client.GetVolumeAtDose(structure._client, dose, requestedVolumePresentation));
+                    if ((fromClient) == (default (System.Double)))
+                    {
+                        return default (System.Double);
+                    }
+
+                    return (System.Double)(fromClient);
+                }
+
+                ));
+                return vmsResult;
+            }
+            else
+            {
+                return (System.Double)(_client.GetVolumeAtDose(structure, dose, requestedVolumePresentation));
             }
         }
 

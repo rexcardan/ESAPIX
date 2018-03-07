@@ -70,6 +70,62 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        public IEnumerable<ESAPIX.Facade.API.ApplicationScriptLog> ApplicationScriptLogs
+        {
+            get
+            {
+                if (_client is ExpandoObject)
+                {
+                    if ((_client as ExpandoObject).HasProperty("ApplicationScriptLogs"))
+                    {
+                        foreach (var item in _client.ApplicationScriptLogs)
+                        {
+                            yield return item;
+                        }
+                    }
+                    else
+                    {
+                        yield break;
+                    }
+                }
+                else
+                {
+                    IEnumerator enumerator = null;
+                    XC.Instance.CurrentContext.Thread.Invoke(() =>
+                    {
+                        var asEnum = (IEnumerable)_client.ApplicationScriptLogs;
+                        enumerator = asEnum.GetEnumerator();
+                    }
+
+                    );
+                    while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
+                    {
+                        var facade = new ESAPIX.Facade.API.ApplicationScriptLog();
+                        XC.Instance.CurrentContext.Thread.Invoke(() =>
+                        {
+                            var vms = enumerator.Current;
+                            if (vms != null)
+                            {
+                                facade._client = vms;
+                            }
+                        }
+
+                        );
+                        if (facade._client != null)
+                        {
+                            yield return facade;
+                        }
+                    }
+                }
+            }
+
+            set
+            {
+                if (_client is ExpandoObject)
+                    _client.ApplicationScriptLogs = value;
+            }
+        }
+
         public ESAPIX.Facade.API.Image Image
         {
             get
@@ -112,6 +168,55 @@ namespace ESAPIX.Facade.API
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
                     _client.Image = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public ESAPIX.Facade.API.Patient Patient
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Patient"))
+                    {
+                        return _client.Patient;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.Patient);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.Patient) != (null))
+                        {
+                            return new ESAPIX.Facade.API.Patient(_client.Patient);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.Patient);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Patient = (value);
                 }
                 else
                 {

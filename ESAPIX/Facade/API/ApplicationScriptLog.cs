@@ -12,44 +12,35 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class ControlPointParameters
+    public class ApplicationScriptLog : ESAPIX.Facade.API.ApiDataObject, System.Xml.Serialization.IXmlSerializable
     {
-        internal dynamic _client;
-        public bool IsLive
-        {
-            get
-            {
-                return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject);
-            }
-        }
-
-        public System.Double CollimatorAngle
+        public System.String CourseId
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("CollimatorAngle"))
+                    if (((ExpandoObject)(_client)).HasProperty("CourseId"))
                     {
-                        return _client.CollimatorAngle;
+                        return _client.CourseId;
                     }
                     else
                     {
-                        return default (System.Double);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.CollimatorAngle;
+                        return _client.CourseId;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Double);
+                    return default (System.String);
                 }
             }
 
@@ -57,7 +48,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.CollimatorAngle = (value);
+                    _client.CourseId = (value);
                 }
                 else
                 {
@@ -65,33 +56,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Double GantryAngle
+        public System.String PatientId
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("GantryAngle"))
+                    if (((ExpandoObject)(_client)).HasProperty("PatientId"))
                     {
-                        return _client.GantryAngle;
+                        return _client.PatientId;
                     }
                     else
                     {
-                        return default (System.Double);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.GantryAngle;
+                        return _client.PatientId;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Double);
+                    return default (System.String);
                 }
             }
 
@@ -99,7 +90,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.GantryAngle = (value);
+                    _client.PatientId = (value);
                 }
                 else
                 {
@@ -107,33 +98,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Int32 Index
+        public System.String PlanSetupId
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Index"))
+                    if (((ExpandoObject)(_client)).HasProperty("PlanSetupId"))
                     {
-                        return _client.Index;
+                        return _client.PlanSetupId;
                     }
                     else
                     {
-                        return default (System.Int32);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Index;
+                        return _client.PlanSetupId;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Int32);
+                    return default (System.String);
                 }
             }
 
@@ -141,7 +132,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Index = (value);
+                    _client.PlanSetupId = (value);
                 }
                 else
                 {
@@ -149,33 +140,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public VMS.TPS.Common.Model.Types.VRect<System.Double> JawPositions
+        public System.String PlanUID
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("JawPositions"))
+                    if (((ExpandoObject)(_client)).HasProperty("PlanUID"))
                     {
-                        return _client.JawPositions;
+                        return _client.PlanUID;
                     }
                     else
                     {
-                        return default (VMS.TPS.Common.Model.Types.VRect<System.Double>);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.JawPositions;
+                        return _client.PlanUID;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (VMS.TPS.Common.Model.Types.VRect<System.Double>);
+                    return default (System.String);
                 }
             }
 
@@ -183,7 +174,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.JawPositions = (value);
+                    _client.PlanUID = (value);
                 }
                 else
                 {
@@ -191,33 +182,40 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Single[,] LeafPositions
+        public ESAPIX.Facade.API.ApplicationScript Script
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("LeafPositions"))
+                    if (((ExpandoObject)(_client)).HasProperty("Script"))
                     {
-                        return _client.LeafPositions;
+                        return _client.Script;
                     }
                     else
                     {
-                        return default (System.Single[,]);
+                        return default (ESAPIX.Facade.API.ApplicationScript);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.LeafPositions;
+                        if ((_client.Script) != (null))
+                        {
+                            return new ESAPIX.Facade.API.ApplicationScript(_client.Script);
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Single[,]);
+                    return default (ESAPIX.Facade.API.ApplicationScript);
                 }
             }
 
@@ -225,7 +223,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.LeafPositions = (value);
+                    _client.Script = (value);
                 }
                 else
                 {
@@ -233,33 +231,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Double MetersetWeight
+        public System.String ScriptFullName
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("MetersetWeight"))
+                    if (((ExpandoObject)(_client)).HasProperty("ScriptFullName"))
                     {
-                        return _client.MetersetWeight;
+                        return _client.ScriptFullName;
                     }
                     else
                     {
-                        return default (System.Double);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.MetersetWeight;
+                        return _client.ScriptFullName;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Double);
+                    return default (System.String);
                 }
             }
 
@@ -267,7 +265,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.MetersetWeight = (value);
+                    _client.ScriptFullName = (value);
                 }
                 else
                 {
@@ -275,33 +273,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Double PatientSupportAngle
+        public System.String StructureSetId
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("PatientSupportAngle"))
+                    if (((ExpandoObject)(_client)).HasProperty("StructureSetId"))
                     {
-                        return _client.PatientSupportAngle;
+                        return _client.StructureSetId;
                     }
                     else
                     {
-                        return default (System.Double);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.PatientSupportAngle;
+                        return _client.StructureSetId;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Double);
+                    return default (System.String);
                 }
             }
 
@@ -309,7 +307,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.PatientSupportAngle = (value);
+                    _client.StructureSetId = (value);
                 }
                 else
                 {
@@ -317,33 +315,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Double TableTopLateralPosition
+        public System.String StructureSetUID
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("TableTopLateralPosition"))
+                    if (((ExpandoObject)(_client)).HasProperty("StructureSetUID"))
                     {
-                        return _client.TableTopLateralPosition;
+                        return _client.StructureSetUID;
                     }
                     else
                     {
-                        return default (System.Double);
+                        return default (System.String);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.TableTopLateralPosition;
+                        return _client.StructureSetUID;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.Double);
+                    return default (System.String);
                 }
             }
 
@@ -351,7 +349,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.TableTopLateralPosition = (value);
+                    _client.StructureSetUID = (value);
                 }
                 else
                 {
@@ -359,96 +357,12 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Double TableTopLongitudinalPosition
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("TableTopLongitudinalPosition"))
-                    {
-                        return _client.TableTopLongitudinalPosition;
-                    }
-                    else
-                    {
-                        return default (System.Double);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.TableTopLongitudinalPosition;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.Double);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.TableTopLongitudinalPosition = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public System.Double TableTopVerticalPosition
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("TableTopVerticalPosition"))
-                    {
-                        return _client.TableTopVerticalPosition;
-                    }
-                    else
-                    {
-                        return default (System.Double);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.TableTopVerticalPosition;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.Double);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.TableTopVerticalPosition = (value);
-                }
-                else
-                {
-                }
-            }
-        }
-
-        public ControlPointParameters()
+        public ApplicationScriptLog()
         {
             _client = (new ExpandoObject());
         }
 
-        public ControlPointParameters(dynamic client)
+        public ApplicationScriptLog(dynamic client)
         {
             _client = (client);
         }

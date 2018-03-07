@@ -12,35 +12,35 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    public class ApiDataObject : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
+    public class RangeModulatorSettings : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
-        public System.String Id
+        public System.Double IsocenterToRangeModulatorDistance
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Id"))
+                    if (((ExpandoObject)(_client)).HasProperty("IsocenterToRangeModulatorDistance"))
                     {
-                        return _client.Id;
+                        return _client.IsocenterToRangeModulatorDistance;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Id;
+                        return _client.IsocenterToRangeModulatorDistance;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Double);
                 }
             }
 
@@ -48,7 +48,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Id = (value);
+                    _client.IsocenterToRangeModulatorDistance = (value);
                 }
                 else
                 {
@@ -56,33 +56,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Name
+        public System.Double RangeModulatorGatingStartValue
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Name"))
+                    if (((ExpandoObject)(_client)).HasProperty("RangeModulatorGatingStartValue"))
                     {
-                        return _client.Name;
+                        return _client.RangeModulatorGatingStartValue;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Name;
+                        return _client.RangeModulatorGatingStartValue;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Double);
                 }
             }
 
@@ -90,7 +90,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Name = (value);
+                    _client.RangeModulatorGatingStartValue = (value);
                 }
                 else
                 {
@@ -98,33 +98,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String Comment
+        public System.Double RangeModulatorGatingStarWaterEquivalentThickness
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("Comment"))
+                    if (((ExpandoObject)(_client)).HasProperty("RangeModulatorGatingStarWaterEquivalentThickness"))
                     {
-                        return _client.Comment;
+                        return _client.RangeModulatorGatingStarWaterEquivalentThickness;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.Comment;
+                        return _client.RangeModulatorGatingStarWaterEquivalentThickness;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Double);
                 }
             }
 
@@ -132,7 +132,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.Comment = (value);
+                    _client.RangeModulatorGatingStarWaterEquivalentThickness = (value);
                 }
                 else
                 {
@@ -140,33 +140,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String HistoryUserName
+        public System.Double RangeModulatorGatingStopValue
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("HistoryUserName"))
+                    if (((ExpandoObject)(_client)).HasProperty("RangeModulatorGatingStopValue"))
                     {
-                        return _client.HistoryUserName;
+                        return _client.RangeModulatorGatingStopValue;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.HistoryUserName;
+                        return _client.RangeModulatorGatingStopValue;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Double);
                 }
             }
 
@@ -174,7 +174,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.HistoryUserName = (value);
+                    _client.RangeModulatorGatingStopValue = (value);
                 }
                 else
                 {
@@ -182,33 +182,33 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.String HistoryUserDisplayName
+        public System.Double RangeModulatorGatingStopWaterEquivalentThickness
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("HistoryUserDisplayName"))
+                    if (((ExpandoObject)(_client)).HasProperty("RangeModulatorGatingStopWaterEquivalentThickness"))
                     {
-                        return _client.HistoryUserDisplayName;
+                        return _client.RangeModulatorGatingStopWaterEquivalentThickness;
                     }
                     else
                     {
-                        return default (System.String);
+                        return default (System.Double);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.HistoryUserDisplayName;
+                        return _client.RangeModulatorGatingStopWaterEquivalentThickness;
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.String);
+                    return default (System.Double);
                 }
             }
 
@@ -216,7 +216,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.HistoryUserDisplayName = (value);
+                    _client.RangeModulatorGatingStopWaterEquivalentThickness = (value);
                 }
                 else
                 {
@@ -224,33 +224,40 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.DateTime HistoryDateTime
+        public ESAPIX.Facade.API.RangeModulator ReferencedRangeModulator
         {
             get
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    if (((ExpandoObject)(_client)).HasProperty("HistoryDateTime"))
+                    if (((ExpandoObject)(_client)).HasProperty("ReferencedRangeModulator"))
                     {
-                        return _client.HistoryDateTime;
+                        return _client.ReferencedRangeModulator;
                     }
                     else
                     {
-                        return default (System.DateTime);
+                        return default (ESAPIX.Facade.API.RangeModulator);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
                     return XC.Instance.CurrentContext.GetValue(sc =>
                     {
-                        return _client.HistoryDateTime;
+                        if ((_client.ReferencedRangeModulator) != (null))
+                        {
+                            return new ESAPIX.Facade.API.RangeModulator(_client.ReferencedRangeModulator);
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
 
                     );
                 }
                 else
                 {
-                    return default (System.DateTime);
+                    return default (ESAPIX.Facade.API.RangeModulator);
                 }
             }
 
@@ -258,7 +265,7 @@ namespace ESAPIX.Facade.API
             {
                 if ((_client) is System.Dynamic.ExpandoObject)
                 {
-                    _client.HistoryDateTime = (value);
+                    _client.ReferencedRangeModulator = (value);
                 }
                 else
                 {
@@ -266,12 +273,12 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public ApiDataObject()
+        public RangeModulatorSettings()
         {
             _client = (new ExpandoObject());
         }
 
-        public ApiDataObject(dynamic client)
+        public RangeModulatorSettings(dynamic client)
         {
             _client = (client);
         }

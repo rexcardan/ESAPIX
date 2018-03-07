@@ -14,6 +14,55 @@ namespace ESAPIX.Facade.API
 {
     public class BeamCalculationLog : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
+        public ESAPIX.Facade.API.Beam Beam
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Beam"))
+                    {
+                        return _client.Beam;
+                    }
+                    else
+                    {
+                        return default (ESAPIX.Facade.API.Beam);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        if ((_client.Beam) != (null))
+                        {
+                            return new ESAPIX.Facade.API.Beam(_client.Beam);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (ESAPIX.Facade.API.Beam);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Beam = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public System.String Category
         {
             get

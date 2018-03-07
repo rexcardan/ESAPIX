@@ -14,6 +14,48 @@ namespace ESAPIX.Facade.API
 {
     public class OptimizationSetup : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
     {
+        public System.Boolean UseJawTracking
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("UseJawTracking"))
+                    {
+                        return _client.UseJawTracking;
+                    }
+                    else
+                    {
+                        return default (System.Boolean);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.UseJawTracking;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Boolean);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.UseJawTracking = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
         public IEnumerable<ESAPIX.Facade.API.OptimizationObjective> Objectives
         {
             get
@@ -123,48 +165,6 @@ namespace ESAPIX.Facade.API
             {
                 if (_client is ExpandoObject)
                     _client.Parameters = value;
-            }
-        }
-
-        public System.Boolean UseJawTracking
-        {
-            get
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    if (((ExpandoObject)(_client)).HasProperty("UseJawTracking"))
-                    {
-                        return _client.UseJawTracking;
-                    }
-                    else
-                    {
-                        return default (System.Boolean);
-                    }
-                }
-                else if ((XC.Instance.CurrentContext) != (null))
-                {
-                    return XC.Instance.CurrentContext.GetValue(sc =>
-                    {
-                        return _client.UseJawTracking;
-                    }
-
-                    );
-                }
-                else
-                {
-                    return default (System.Boolean);
-                }
-            }
-
-            set
-            {
-                if ((_client) is System.Dynamic.ExpandoObject)
-                {
-                    _client.UseJawTracking = (value);
-                }
-                else
-                {
-                }
             }
         }
 
@@ -343,30 +343,6 @@ namespace ESAPIX.Facade.API
             else
             {
                 _client.RemoveParameter(parameter);
-            }
-        }
-
-        public ESAPIX.Facade.API.OptimizationPointCloudParameter AddStructurePointCloudParameter(ESAPIX.Facade.API.Structure structure, System.Double pointResolutionInMM)
-        {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
-                {
-                    var fromClient = (_client.AddStructurePointCloudParameter(structure._client, pointResolutionInMM));
-                    if ((fromClient) == (null))
-                    {
-                        return null;
-                    }
-
-                    return new ESAPIX.Facade.API.OptimizationPointCloudParameter(fromClient);
-                }
-
-                ));
-                return vmsResult;
-            }
-            else
-            {
-                return (ESAPIX.Facade.API.OptimizationPointCloudParameter)(_client.AddStructurePointCloudParameter(structure, pointResolutionInMM));
             }
         }
 

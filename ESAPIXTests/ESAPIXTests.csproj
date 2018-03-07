@@ -96,8 +96,9 @@
     </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
-    <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>..\ESAPIX\lib\VMS.TPS.Common.Model.Types.dll</HintPath>
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.0\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -126,10 +127,6 @@
     <ProjectReference Include="..\ESAPIX.Bootstrapper\ESAPIX.Bootstrapper.csproj">
       <Project>{26f9bb2a-80a4-44a5-a737-aac1042b1cc9}</Project>
       <Name>ESAPIX.Bootstrapper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ESAPIX.OfflineObjects\ESAPIX.OfflineObjects.csproj">
-      <Project>{dfd0a2d0-a5ab-4c9e-a021-26d47aa7e1f0}</Project>
-      <Name>ESAPIX.OfflineObjects</Name>
     </ProjectReference>
     <ProjectReference Include="..\ESAPIX\ESAPIX.csproj">
       <Project>{3c5fdd1e-fc04-4c21-bbff-dfe3c584b729}</Project>
