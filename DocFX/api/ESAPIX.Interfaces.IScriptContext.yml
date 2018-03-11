@@ -18,6 +18,7 @@ items:
   - ESAPIX.Interfaces.IScriptContext.GetValue``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
   - ESAPIX.Interfaces.IScriptContext.GetValueAsync``1(System.Func{ESAPIX.Interfaces.IScriptContext,``0})
   - ESAPIX.Interfaces.IScriptContext.Image
+  - ESAPIX.Interfaces.IScriptContext.Logger
   - ESAPIX.Interfaces.IScriptContext.Patient
   - ESAPIX.Interfaces.IScriptContext.PatientChanged
   - ESAPIX.Interfaces.IScriptContext.PlanSetup
@@ -37,7 +38,7 @@ items:
   source:
     id: IScriptContext
     path: ''
-    startLine: 16823
+    startLine: 164114
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -66,7 +67,7 @@ items:
   source:
     id: ApplicationName
     path: ''
-    startLine: 16825
+    startLine: 164117
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -95,7 +96,7 @@ items:
   source:
     id: BrachyPlanSetup
     path: ''
-    startLine: 16827
+    startLine: 164119
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -124,7 +125,7 @@ items:
   source:
     id: BrachyPlansInScope
     path: ''
-    startLine: 16829
+    startLine: 164121
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -135,122 +136,6 @@ items:
       type: IEnumerable{BrachyPlanSetup}
     content.vb: ReadOnly Property BrachyPlansInScope As IEnumerable(Of BrachyPlanSetup)
   overload: ESAPIX.Interfaces.IScriptContext.BrachyPlansInScope*
-  modifiers.csharp:
-  - get
-  modifiers.vb:
-  - ReadOnly
-- uid: ESAPIX.Interfaces.IScriptContext.CurrentUser
-  commentId: P:ESAPIX.Interfaces.IScriptContext.CurrentUser
-  id: CurrentUser
-  parent: ESAPIX.Interfaces.IScriptContext
-  langs:
-  - csharp
-  - vb
-  name: CurrentUser
-  nameWithType: IScriptContext.CurrentUser
-  fullName: ESAPIX.Interfaces.IScriptContext.CurrentUser
-  type: Property
-  source:
-    id: CurrentUser
-    path: ''
-    startLine: 16831
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Interfaces
-  syntax:
-    content: User CurrentUser { get; }
-    parameters: []
-    return:
-      type: User
-    content.vb: ReadOnly Property CurrentUser As User
-  overload: ESAPIX.Interfaces.IScriptContext.CurrentUser*
-  modifiers.csharp:
-  - get
-  modifiers.vb:
-  - ReadOnly
-- uid: ESAPIX.Interfaces.IScriptContext.Course
-  commentId: P:ESAPIX.Interfaces.IScriptContext.Course
-  id: Course
-  parent: ESAPIX.Interfaces.IScriptContext
-  langs:
-  - csharp
-  - vb
-  name: Course
-  nameWithType: IScriptContext.Course
-  fullName: ESAPIX.Interfaces.IScriptContext.Course
-  type: Property
-  source:
-    id: Course
-    path: ''
-    startLine: 16833
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Interfaces
-  syntax:
-    content: Course Course { get; }
-    parameters: []
-    return:
-      type: Course
-    content.vb: ReadOnly Property Course As Course
-  overload: ESAPIX.Interfaces.IScriptContext.Course*
-  modifiers.csharp:
-  - get
-  modifiers.vb:
-  - ReadOnly
-- uid: ESAPIX.Interfaces.IScriptContext.Image
-  commentId: P:ESAPIX.Interfaces.IScriptContext.Image
-  id: Image
-  parent: ESAPIX.Interfaces.IScriptContext
-  langs:
-  - csharp
-  - vb
-  name: Image
-  nameWithType: IScriptContext.Image
-  fullName: ESAPIX.Interfaces.IScriptContext.Image
-  type: Property
-  source:
-    id: Image
-    path: ''
-    startLine: 16835
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Interfaces
-  syntax:
-    content: Image Image { get; }
-    parameters: []
-    return:
-      type: Image
-    content.vb: ReadOnly Property Image As Image
-  overload: ESAPIX.Interfaces.IScriptContext.Image*
-  modifiers.csharp:
-  - get
-  modifiers.vb:
-  - ReadOnly
-- uid: ESAPIX.Interfaces.IScriptContext.Patient
-  commentId: P:ESAPIX.Interfaces.IScriptContext.Patient
-  id: Patient
-  parent: ESAPIX.Interfaces.IScriptContext
-  langs:
-  - csharp
-  - vb
-  name: Patient
-  nameWithType: IScriptContext.Patient
-  fullName: ESAPIX.Interfaces.IScriptContext.Patient
-  type: Property
-  source:
-    id: Patient
-    path: ''
-    startLine: 16837
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Interfaces
-  syntax:
-    content: Patient Patient { get; }
-    parameters: []
-    return:
-      type: Patient
-    content.vb: ReadOnly Property Patient As Patient
-  overload: ESAPIX.Interfaces.IScriptContext.Patient*
   modifiers.csharp:
   - get
   modifiers.vb:
@@ -269,7 +154,7 @@ items:
   source:
     id: ExternalPlanSetup
     path: ''
-    startLine: 16839
+    startLine: 164123
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -298,7 +183,7 @@ items:
   source:
     id: ExternalPlansInScope
     path: ''
-    startLine: 16841
+    startLine: 164125
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -309,6 +194,122 @@ items:
       type: IEnumerable{ExternalPlanSetup}
     content.vb: ReadOnly Property ExternalPlansInScope As IEnumerable(Of ExternalPlanSetup)
   overload: ESAPIX.Interfaces.IScriptContext.ExternalPlansInScope*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: ESAPIX.Interfaces.IScriptContext.CurrentUser
+  commentId: P:ESAPIX.Interfaces.IScriptContext.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: IScriptContext.CurrentUser
+  fullName: ESAPIX.Interfaces.IScriptContext.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 164127
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: User CurrentUser { get; }
+    parameters: []
+    return:
+      type: User
+    content.vb: ReadOnly Property CurrentUser As User
+  overload: ESAPIX.Interfaces.IScriptContext.CurrentUser*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: ESAPIX.Interfaces.IScriptContext.Course
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Course
+  id: Course
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: Course
+  nameWithType: IScriptContext.Course
+  fullName: ESAPIX.Interfaces.IScriptContext.Course
+  type: Property
+  source:
+    id: Course
+    path: ''
+    startLine: 164129
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: Course Course { get; }
+    parameters: []
+    return:
+      type: Course
+    content.vb: ReadOnly Property Course As Course
+  overload: ESAPIX.Interfaces.IScriptContext.Course*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: ESAPIX.Interfaces.IScriptContext.Image
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Image
+  id: Image
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: Image
+  nameWithType: IScriptContext.Image
+  fullName: ESAPIX.Interfaces.IScriptContext.Image
+  type: Property
+  source:
+    id: Image
+    path: ''
+    startLine: 164131
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: Image Image { get; }
+    parameters: []
+    return:
+      type: Image
+    content.vb: ReadOnly Property Image As Image
+  overload: ESAPIX.Interfaces.IScriptContext.Image*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: ESAPIX.Interfaces.IScriptContext.Patient
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Patient
+  id: Patient
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: Patient
+  nameWithType: IScriptContext.Patient
+  fullName: ESAPIX.Interfaces.IScriptContext.Patient
+  type: Property
+  source:
+    id: Patient
+    path: ''
+    startLine: 164133
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: Patient Patient { get; }
+    parameters: []
+    return:
+      type: Patient
+    content.vb: ReadOnly Property Patient As Patient
+  overload: ESAPIX.Interfaces.IScriptContext.Patient*
   modifiers.csharp:
   - get
   modifiers.vb:
@@ -327,7 +328,7 @@ items:
   source:
     id: PlanSetup
     path: ''
-    startLine: 16843
+    startLine: 164135
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -356,7 +357,7 @@ items:
   source:
     id: PlansInScope
     path: ''
-    startLine: 16845
+    startLine: 164137
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -385,7 +386,7 @@ items:
   source:
     id: PlanSumsInScope
     path: ''
-    startLine: 16847
+    startLine: 164139
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -414,7 +415,7 @@ items:
   source:
     id: StructureSet
     path: ''
-    startLine: 16849
+    startLine: 164150
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -443,7 +444,7 @@ items:
   source:
     id: Thread
     path: ''
-    startLine: 16854
+    startLine: 164155
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -474,7 +475,7 @@ items:
   source:
     id: UIDispatcher
     path: ''
-    startLine: 16856
+    startLine: 164157
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -502,7 +503,7 @@ items:
   source:
     id: GetValue
     path: ''
-    startLine: 16863
+    startLine: 164165
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -539,7 +540,7 @@ items:
   source:
     id: GetValueAsync
     path: ''
-    startLine: 16871
+    startLine: 164173
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -555,13 +556,42 @@ items:
     - id: T
       description: the type of value to be returned
     return:
-      type: Task{{T}}
+      type: System.Threading.Tasks.Task{{T}}
       description: a task of the value requested
     content.vb: Function GetValueAsync(Of T)(toExecute As Func(Of IScriptContext, T)) As Task(Of T)
   overload: ESAPIX.Interfaces.IScriptContext.GetValueAsync*
   nameWithType.vb: IScriptContext.GetValueAsync(Of T)(Func(Of IScriptContext, T))
   fullName.vb: ESAPIX.Interfaces.IScriptContext.GetValueAsync(Of T)(System.Func(Of ESAPIX.Interfaces.IScriptContext, T))
   name.vb: GetValueAsync(Of T)(Func(Of IScriptContext, T))
+- uid: ESAPIX.Interfaces.IScriptContext.Logger
+  commentId: P:ESAPIX.Interfaces.IScriptContext.Logger
+  id: Logger
+  parent: ESAPIX.Interfaces.IScriptContext
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: IScriptContext.Logger
+  fullName: ESAPIX.Interfaces.IScriptContext.Logger
+  type: Property
+  source:
+    id: Logger
+    path: ''
+    startLine: 164175
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Interfaces
+  syntax:
+    content: Logger Logger { get; }
+    parameters: []
+    return:
+      type: Logger
+    content.vb: ReadOnly Property Logger As Logger
+  overload: ESAPIX.Interfaces.IScriptContext.Logger*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: ESAPIX.Interfaces.IScriptContext.PatientChanged
   commentId: E:ESAPIX.Interfaces.IScriptContext.PatientChanged
   id: PatientChanged
@@ -576,7 +606,7 @@ items:
   source:
     id: PatientChanged
     path: ''
-    startLine: 16876
+    startLine: 164180
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -599,7 +629,7 @@ items:
   source:
     id: PlanSetupChanged
     path: ''
-    startLine: 16878
+    startLine: 164181
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -622,7 +652,7 @@ items:
   source:
     id: ExternalPlanSetupChanged
     path: ''
-    startLine: 16879
+    startLine: 164183
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -645,15 +675,15 @@ items:
   source:
     id: BrachyPlanSetupChanged
     path: ''
-    startLine: 16880
+    startLine: 164184
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
   syntax:
-    content: event PlanSetupChangedHandler BrachyPlanSetupChanged
+    content: event BrachyPlanSetupChangedHandler BrachyPlanSetupChanged
     return:
-      type: PlanSetupChangedHandler
-    content.vb: Event BrachyPlanSetupChanged As PlanSetupChangedHandler
+      type: BrachyPlanSetupChangedHandler
+    content.vb: Event BrachyPlanSetupChanged As BrachyPlanSetupChangedHandler
 - uid: ESAPIX.Interfaces.IScriptContext.CourseChanged
   commentId: E:ESAPIX.Interfaces.IScriptContext.CourseChanged
   id: CourseChanged
@@ -668,7 +698,7 @@ items:
   source:
     id: CourseChanged
     path: ''
-    startLine: 16881
+    startLine: 164186
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -801,50 +831,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Interfaces.IScriptContext.CurrentUser*
-  commentId: Overload:ESAPIX.Interfaces.IScriptContext.CurrentUser
-  isExternal: false
-  name: CurrentUser
-  nameWithType: IScriptContext.CurrentUser
-  fullName: ESAPIX.Interfaces.IScriptContext.CurrentUser
-- uid: User
-  isExternal: true
-  name: User
-  nameWithType: User
-  fullName: User
-- uid: ESAPIX.Interfaces.IScriptContext.Course*
-  commentId: Overload:ESAPIX.Interfaces.IScriptContext.Course
-  isExternal: false
-  name: Course
-  nameWithType: IScriptContext.Course
-  fullName: ESAPIX.Interfaces.IScriptContext.Course
-- uid: Course
-  isExternal: true
-  name: Course
-  nameWithType: Course
-  fullName: Course
-- uid: ESAPIX.Interfaces.IScriptContext.Image*
-  commentId: Overload:ESAPIX.Interfaces.IScriptContext.Image
-  isExternal: false
-  name: Image
-  nameWithType: IScriptContext.Image
-  fullName: ESAPIX.Interfaces.IScriptContext.Image
-- uid: Image
-  isExternal: true
-  name: Image
-  nameWithType: Image
-  fullName: Image
-- uid: ESAPIX.Interfaces.IScriptContext.Patient*
-  commentId: Overload:ESAPIX.Interfaces.IScriptContext.Patient
-  isExternal: false
-  name: Patient
-  nameWithType: IScriptContext.Patient
-  fullName: ESAPIX.Interfaces.IScriptContext.Patient
-- uid: Patient
-  isExternal: true
-  name: Patient
-  nameWithType: Patient
-  fullName: Patient
 - uid: ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup*
   commentId: Overload:ESAPIX.Interfaces.IScriptContext.ExternalPlanSetup
   isExternal: false
@@ -905,6 +891,50 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Interfaces.IScriptContext.CurrentUser*
+  commentId: Overload:ESAPIX.Interfaces.IScriptContext.CurrentUser
+  isExternal: false
+  name: CurrentUser
+  nameWithType: IScriptContext.CurrentUser
+  fullName: ESAPIX.Interfaces.IScriptContext.CurrentUser
+- uid: User
+  isExternal: true
+  name: User
+  nameWithType: User
+  fullName: User
+- uid: ESAPIX.Interfaces.IScriptContext.Course*
+  commentId: Overload:ESAPIX.Interfaces.IScriptContext.Course
+  isExternal: false
+  name: Course
+  nameWithType: IScriptContext.Course
+  fullName: ESAPIX.Interfaces.IScriptContext.Course
+- uid: Course
+  isExternal: true
+  name: Course
+  nameWithType: Course
+  fullName: Course
+- uid: ESAPIX.Interfaces.IScriptContext.Image*
+  commentId: Overload:ESAPIX.Interfaces.IScriptContext.Image
+  isExternal: false
+  name: Image
+  nameWithType: IScriptContext.Image
+  fullName: ESAPIX.Interfaces.IScriptContext.Image
+- uid: Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: ESAPIX.Interfaces.IScriptContext.Patient*
+  commentId: Overload:ESAPIX.Interfaces.IScriptContext.Patient
+  isExternal: false
+  name: Patient
+  nameWithType: IScriptContext.Patient
+  fullName: ESAPIX.Interfaces.IScriptContext.Patient
+- uid: Patient
+  isExternal: true
+  name: Patient
+  nameWithType: Patient
+  fullName: Patient
 - uid: ESAPIX.Interfaces.IScriptContext.PlanSetup*
   commentId: Overload:ESAPIX.Interfaces.IScriptContext.PlanSetup
   isExternal: false
@@ -1177,20 +1207,21 @@ references:
   name: GetValueAsync
   nameWithType: IScriptContext.GetValueAsync
   fullName: ESAPIX.Interfaces.IScriptContext.GetValueAsync
-- uid: Task{{T}}
-  commentId: '!:Task{``0}'
-  definition: Task`1
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
   name: Task<T>
   nameWithType: Task<T>
-  fullName: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
   nameWithType.vb: Task(Of T)
-  fullName.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
   name.vb: Task(Of T)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
@@ -1202,10 +1233,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1216,44 +1247,62 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task`1
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullName.vb: Task(Of )
-  name.vb: Task(Of )
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: ESAPIX.Interfaces.IScriptContext.Logger*
+  commentId: Overload:ESAPIX.Interfaces.IScriptContext.Logger
+  isExternal: false
+  name: Logger
+  nameWithType: IScriptContext.Logger
+  fullName: ESAPIX.Interfaces.IScriptContext.Logger
+- uid: Logger
+  isExternal: true
+  name: Logger
+  nameWithType: Logger
+  fullName: Logger
 - uid: PatientChangedHandler
   commentId: '!:PatientChangedHandler'
   isExternal: true
@@ -1261,6 +1310,7 @@ references:
   nameWithType: PatientChangedHandler
   fullName: PatientChangedHandler
 - uid: PlanSetupChangedHandler
+  commentId: '!:PlanSetupChangedHandler'
   isExternal: true
   name: PlanSetupChangedHandler
   nameWithType: PlanSetupChangedHandler
@@ -1271,6 +1321,12 @@ references:
   name: ExternalPlanSetupChangedHandler
   nameWithType: ExternalPlanSetupChangedHandler
   fullName: ExternalPlanSetupChangedHandler
+- uid: BrachyPlanSetupChangedHandler
+  commentId: '!:BrachyPlanSetupChangedHandler'
+  isExternal: true
+  name: BrachyPlanSetupChangedHandler
+  nameWithType: BrachyPlanSetupChangedHandler
+  fullName: BrachyPlanSetupChangedHandler
 - uid: CourseChangedHandler
   commentId: '!:CourseChangedHandler'
   isExternal: true

@@ -6,13 +6,35 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.SourcePosition.#ctor
+  - ESAPIX.Facade.API.SourcePosition.#ctor
+  - ESAPIX.Facade.API.SourcePosition.#ctor
+  - ESAPIX.Facade.API.SourcePosition.#ctor
+  - ESAPIX.Facade.API.SourcePosition.#ctor
+  - ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  - ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  - ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  - ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
   - ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
   - ESAPIX.Facade.API.SourcePosition.DwellTime
-  - ESAPIX.Facade.API.SourcePosition.IsLive
+  - ESAPIX.Facade.API.SourcePosition.DwellTime
+  - ESAPIX.Facade.API.SourcePosition.DwellTime
+  - ESAPIX.Facade.API.SourcePosition.DwellTime
+  - ESAPIX.Facade.API.SourcePosition.DwellTime
+  - ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  - ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  - ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  - ESAPIX.Facade.API.SourcePosition.RadioactiveSource
   - ESAPIX.Facade.API.SourcePosition.RadioactiveSource
   - ESAPIX.Facade.API.SourcePosition.Transform
+  - ESAPIX.Facade.API.SourcePosition.Transform
+  - ESAPIX.Facade.API.SourcePosition.Transform
+  - ESAPIX.Facade.API.SourcePosition.Transform
+  - ESAPIX.Facade.API.SourcePosition.Transform
   - ESAPIX.Facade.API.SourcePosition.Translation
-  - ESAPIX.Facade.API.SourcePosition.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.SourcePosition.Translation
+  - ESAPIX.Facade.API.SourcePosition.Translation
+  - ESAPIX.Facade.API.SourcePosition.Translation
+  - ESAPIX.Facade.API.SourcePosition.Translation
   langs:
   - csharp
   - vb
@@ -23,127 +45,40 @@ items:
   source:
     id: SourcePosition
     path: ''
-    startLine: 15378
+    startLine: 159120
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class SourcePosition : ApiDataObject'
+    content: 'public class SourcePosition : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class SourcePosition
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.SourcePosition.#ctor
-  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.SourcePosition
-  langs:
-  - csharp
-  - vb
-  name: SourcePosition()
-  nameWithType: SourcePosition.SourcePosition()
-  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 15380
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public SourcePosition()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.SourcePosition
-  langs:
-  - csharp
-  - vb
-  name: SourcePosition(Object)
-  nameWithType: SourcePosition.SourcePosition(Object)
-  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 15385
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public SourcePosition(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.SourcePosition.IsLive
-  commentId: P:ESAPIX.Facade.API.SourcePosition.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.SourcePosition
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: SourcePosition.IsLive
-  fullName: ESAPIX.Facade.API.SourcePosition.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 15390
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.SourcePosition.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.SourcePosition.DwellTime
   commentId: P:ESAPIX.Facade.API.SourcePosition.DwellTime
   id: DwellTime
@@ -158,7 +93,7 @@ items:
   source:
     id: DwellTime
     path: ''
-    startLine: 15395
+    startLine: 37095
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -189,7 +124,7 @@ items:
   source:
     id: RadioactiveSource
     path: ''
-    startLine: 15410
+    startLine: 37137
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -220,7 +155,7 @@ items:
   source:
     id: Transform
     path: ''
-    startLine: 15431
+    startLine: 37186
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -251,16 +186,16 @@ items:
   source:
     id: Translation
     path: ''
-    startLine: 15446
+    startLine: 37228
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public VVector Translation { get; set; }
+    content: public Common.Model.Types.VVector Translation { get; set; }
     parameters: []
     return:
-      type: VVector
-    content.vb: Public Property Translation As VVector
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Translation As Common.Model.Types.VVector
   overload: ESAPIX.Facade.API.SourcePosition.Translation*
   modifiers.csharp:
   - public
@@ -268,31 +203,773 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.SourcePosition.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.SourcePosition.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.SourcePosition
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: SourcePosition.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.SourcePosition.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: SourcePosition()
+  nameWithType: SourcePosition.SourcePosition()
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 15463
+    startLine: 37270
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public SourcePosition()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition(Object)
+  nameWithType: SourcePosition.SourcePosition(Object)
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 37275
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.SourcePosition.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.DwellTime
+  commentId: P:ESAPIX.Facade.API.SourcePosition.DwellTime
+  id: DwellTime
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: DwellTime
+  nameWithType: SourcePosition.DwellTime
+  fullName: ESAPIX.Facade.API.SourcePosition.DwellTime
+  type: Property
+  source:
+    id: DwellTime
+    path: ''
+    startLine: 64810
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DwellTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DwellTime As Double
+  overload: ESAPIX.Facade.API.SourcePosition.DwellTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  commentId: P:ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  id: RadioactiveSource
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: RadioactiveSource
+  nameWithType: SourcePosition.RadioactiveSource
+  fullName: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  type: Property
+  source:
+    id: RadioactiveSource
+    path: ''
+    startLine: 64852
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public RadioactiveSource RadioactiveSource { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.RadioactiveSource
+    content.vb: Public Property RadioactiveSource As RadioactiveSource
+  overload: ESAPIX.Facade.API.SourcePosition.RadioactiveSource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Transform
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Transform
+  id: Transform
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: SourcePosition.Transform
+  fullName: ESAPIX.Facade.API.SourcePosition.Transform
+  type: Property
+  source:
+    id: Transform
+    path: ''
+    startLine: 64901
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] Transform { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property Transform As Double(,)
+  overload: ESAPIX.Facade.API.SourcePosition.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Translation
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Translation
+  id: Translation
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Translation
+  nameWithType: SourcePosition.Translation
+  fullName: ESAPIX.Facade.API.SourcePosition.Translation
+  type: Property
+  source:
+    id: Translation
+    path: ''
+    startLine: 64943
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Translation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Translation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.SourcePosition.Translation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition()
+  nameWithType: SourcePosition.SourcePosition()
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 64985
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition(Object)
+  nameWithType: SourcePosition.SourcePosition(Object)
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 64990
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.DwellTime
+  commentId: P:ESAPIX.Facade.API.SourcePosition.DwellTime
+  id: DwellTime
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: DwellTime
+  nameWithType: SourcePosition.DwellTime
+  fullName: ESAPIX.Facade.API.SourcePosition.DwellTime
+  type: Property
+  source:
+    id: DwellTime
+    path: ''
+    startLine: 93475
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DwellTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DwellTime As Double
+  overload: ESAPIX.Facade.API.SourcePosition.DwellTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  commentId: P:ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  id: RadioactiveSource
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: RadioactiveSource
+  nameWithType: SourcePosition.RadioactiveSource
+  fullName: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  type: Property
+  source:
+    id: RadioactiveSource
+    path: ''
+    startLine: 93517
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public RadioactiveSource RadioactiveSource { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.RadioactiveSource
+    content.vb: Public Property RadioactiveSource As RadioactiveSource
+  overload: ESAPIX.Facade.API.SourcePosition.RadioactiveSource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Transform
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Transform
+  id: Transform
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: SourcePosition.Transform
+  fullName: ESAPIX.Facade.API.SourcePosition.Transform
+  type: Property
+  source:
+    id: Transform
+    path: ''
+    startLine: 93566
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] Transform { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property Transform As Double(,)
+  overload: ESAPIX.Facade.API.SourcePosition.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Translation
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Translation
+  id: Translation
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Translation
+  nameWithType: SourcePosition.Translation
+  fullName: ESAPIX.Facade.API.SourcePosition.Translation
+  type: Property
+  source:
+    id: Translation
+    path: ''
+    startLine: 93608
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Translation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Translation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.SourcePosition.Translation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition()
+  nameWithType: SourcePosition.SourcePosition()
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 93650
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition(Object)
+  nameWithType: SourcePosition.SourcePosition(Object)
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 93655
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.DwellTime
+  commentId: P:ESAPIX.Facade.API.SourcePosition.DwellTime
+  id: DwellTime
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: DwellTime
+  nameWithType: SourcePosition.DwellTime
+  fullName: ESAPIX.Facade.API.SourcePosition.DwellTime
+  type: Property
+  source:
+    id: DwellTime
+    path: ''
+    startLine: 125105
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DwellTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DwellTime As Double
+  overload: ESAPIX.Facade.API.SourcePosition.DwellTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  commentId: P:ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  id: RadioactiveSource
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: RadioactiveSource
+  nameWithType: SourcePosition.RadioactiveSource
+  fullName: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  type: Property
+  source:
+    id: RadioactiveSource
+    path: ''
+    startLine: 125147
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public RadioactiveSource RadioactiveSource { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.RadioactiveSource
+    content.vb: Public Property RadioactiveSource As RadioactiveSource
+  overload: ESAPIX.Facade.API.SourcePosition.RadioactiveSource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Transform
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Transform
+  id: Transform
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: SourcePosition.Transform
+  fullName: ESAPIX.Facade.API.SourcePosition.Transform
+  type: Property
+  source:
+    id: Transform
+    path: ''
+    startLine: 125196
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] Transform { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property Transform As Double(,)
+  overload: ESAPIX.Facade.API.SourcePosition.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Translation
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Translation
+  id: Translation
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Translation
+  nameWithType: SourcePosition.Translation
+  fullName: ESAPIX.Facade.API.SourcePosition.Translation
+  type: Property
+  source:
+    id: Translation
+    path: ''
+    startLine: 125238
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Translation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Translation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.SourcePosition.Translation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition()
+  nameWithType: SourcePosition.SourcePosition()
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 125280
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition(Object)
+  nameWithType: SourcePosition.SourcePosition(Object)
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 125285
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.DwellTime
+  commentId: P:ESAPIX.Facade.API.SourcePosition.DwellTime
+  id: DwellTime
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: DwellTime
+  nameWithType: SourcePosition.DwellTime
+  fullName: ESAPIX.Facade.API.SourcePosition.DwellTime
+  type: Property
+  source:
+    id: DwellTime
+    path: ''
+    startLine: 159122
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DwellTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DwellTime As Double
+  overload: ESAPIX.Facade.API.SourcePosition.DwellTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  commentId: P:ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  id: RadioactiveSource
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: RadioactiveSource
+  nameWithType: SourcePosition.RadioactiveSource
+  fullName: ESAPIX.Facade.API.SourcePosition.RadioactiveSource
+  type: Property
+  source:
+    id: RadioactiveSource
+    path: ''
+    startLine: 159164
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public RadioactiveSource RadioactiveSource { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.RadioactiveSource
+    content.vb: Public Property RadioactiveSource As RadioactiveSource
+  overload: ESAPIX.Facade.API.SourcePosition.RadioactiveSource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Transform
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Transform
+  id: Transform
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: SourcePosition.Transform
+  fullName: ESAPIX.Facade.API.SourcePosition.Transform
+  type: Property
+  source:
+    id: Transform
+    path: ''
+    startLine: 159213
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] Transform { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property Transform As Double(,)
+  overload: ESAPIX.Facade.API.SourcePosition.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.Translation
+  commentId: P:ESAPIX.Facade.API.SourcePosition.Translation
+  id: Translation
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: Translation
+  nameWithType: SourcePosition.Translation
+  fullName: ESAPIX.Facade.API.SourcePosition.Translation
+  type: Property
+  source:
+    id: Translation
+    path: ''
+    startLine: 159255
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Translation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Translation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.SourcePosition.Translation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition()
+  nameWithType: SourcePosition.SourcePosition()
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 159297
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.SourcePosition.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.SourcePosition
+  langs:
+  - csharp
+  - vb
+  name: SourcePosition(Object)
+  nameWithType: SourcePosition.SourcePosition(Object)
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 159302
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public SourcePosition(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.SourcePosition.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -325,6 +1002,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -360,103 +1042,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -525,6 +1124,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -554,207 +1192,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.SourcePosition.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.SourcePosition.#ctor
-  isExternal: false
-  name: SourcePosition
-  nameWithType: SourcePosition.SourcePosition
-  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition
-- uid: ESAPIX.Facade.API.SourcePosition.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.SourcePosition.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: SourcePosition.IsLive
-  fullName: ESAPIX.Facade.API.SourcePosition.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.SourcePosition.DwellTime*
   commentId: Overload:ESAPIX.Facade.API.SourcePosition.DwellTime
   isExternal: false
@@ -818,19 +1261,14 @@ references:
   name: Translation
   nameWithType: SourcePosition.Translation
   fullName: ESAPIX.Facade.API.SourcePosition.Translation
-- uid: VVector
+- uid: VMS.TPS.Common.Model.Types.VVector
   isExternal: true
-  name: VVector
-  nameWithType: VVector
-  fullName: VVector
-- uid: ESAPIX.Facade.API.SourcePosition.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.SourcePosition.WriteXml
+  name: Common.Model.Types.VVector
+  nameWithType: Common.Model.Types.VVector
+  fullName: VMS.TPS.Common.Model.Types.VVector
+- uid: ESAPIX.Facade.API.SourcePosition.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.SourcePosition.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: SourcePosition.WriteXml
-  fullName: ESAPIX.Facade.API.SourcePosition.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: SourcePosition
+  nameWithType: SourcePosition.SourcePosition
+  fullName: ESAPIX.Facade.API.SourcePosition.SourcePosition

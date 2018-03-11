@@ -6,18 +6,72 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Series.#ctor
+  - ESAPIX.Facade.API.Series.#ctor
+  - ESAPIX.Facade.API.Series.#ctor
+  - ESAPIX.Facade.API.Series.#ctor
+  - ESAPIX.Facade.API.Series.#ctor
+  - ESAPIX.Facade.API.Series.#ctor
+  - ESAPIX.Facade.API.Series.#ctor(System.Object)
+  - ESAPIX.Facade.API.Series.#ctor(System.Object)
+  - ESAPIX.Facade.API.Series.#ctor(System.Object)
+  - ESAPIX.Facade.API.Series.#ctor(System.Object)
+  - ESAPIX.Facade.API.Series.#ctor(System.Object)
   - ESAPIX.Facade.API.Series.#ctor(System.Object)
   - ESAPIX.Facade.API.Series.FOR
+  - ESAPIX.Facade.API.Series.FOR
+  - ESAPIX.Facade.API.Series.FOR
+  - ESAPIX.Facade.API.Series.FOR
+  - ESAPIX.Facade.API.Series.FOR
+  - ESAPIX.Facade.API.Series.FOR
+  - ESAPIX.Facade.API.Series.Images
+  - ESAPIX.Facade.API.Series.Images
+  - ESAPIX.Facade.API.Series.Images
+  - ESAPIX.Facade.API.Series.Images
+  - ESAPIX.Facade.API.Series.Images
   - ESAPIX.Facade.API.Series.Images
   - ESAPIX.Facade.API.Series.ImagingDeviceId
+  - ESAPIX.Facade.API.Series.ImagingDeviceId
+  - ESAPIX.Facade.API.Series.ImagingDeviceId
+  - ESAPIX.Facade.API.Series.ImagingDeviceId
+  - ESAPIX.Facade.API.Series.ImagingDeviceId
+  - ESAPIX.Facade.API.Series.ImagingDeviceId
+  - ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  - ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  - ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  - ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  - ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
   - ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
   - ESAPIX.Facade.API.Series.ImagingDeviceModel
+  - ESAPIX.Facade.API.Series.ImagingDeviceModel
+  - ESAPIX.Facade.API.Series.ImagingDeviceModel
+  - ESAPIX.Facade.API.Series.ImagingDeviceModel
+  - ESAPIX.Facade.API.Series.ImagingDeviceModel
+  - ESAPIX.Facade.API.Series.ImagingDeviceModel
   - ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
-  - ESAPIX.Facade.API.Series.IsLive
+  - ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  - ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  - ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  - ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  - ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
   - ESAPIX.Facade.API.Series.Modality
+  - ESAPIX.Facade.API.Series.Modality
+  - ESAPIX.Facade.API.Series.Modality
+  - ESAPIX.Facade.API.Series.Modality
+  - ESAPIX.Facade.API.Series.Modality
+  - ESAPIX.Facade.API.Series.Modality
+  - ESAPIX.Facade.API.Series.SetImagingDevice(System.String)
+  - ESAPIX.Facade.API.Series.Study
+  - ESAPIX.Facade.API.Series.Study
+  - ESAPIX.Facade.API.Series.Study
+  - ESAPIX.Facade.API.Series.Study
+  - ESAPIX.Facade.API.Series.Study
   - ESAPIX.Facade.API.Series.Study
   - ESAPIX.Facade.API.Series.UID
-  - ESAPIX.Facade.API.Series.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Series.UID
+  - ESAPIX.Facade.API.Series.UID
+  - ESAPIX.Facade.API.Series.UID
+  - ESAPIX.Facade.API.Series.UID
+  - ESAPIX.Facade.API.Series.UID
   langs:
   - csharp
   - vb
@@ -28,127 +82,257 @@ items:
   source:
     id: Series
     path: ''
-    startLine: 15114
+    startLine: 158608
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Series : ApiDataObject'
+    content: 'public class Series : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class Series
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.Series.#ctor
-  commentId: M:ESAPIX.Facade.API.Series.#ctor
-  id: '#ctor'
+- uid: ESAPIX.Facade.API.Series.UID
+  commentId: P:ESAPIX.Facade.API.Series.UID
+  id: UID
   parent: ESAPIX.Facade.API.Series
   langs:
   - csharp
   - vb
-  name: Series()
-  nameWithType: Series.Series()
-  fullName: ESAPIX.Facade.API.Series.Series()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 15116
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Series()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.Series.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Series.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.Series.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.Series
-  langs:
-  - csharp
-  - vb
-  name: Series(Object)
-  nameWithType: Series.Series(Object)
-  fullName: ESAPIX.Facade.API.Series.Series(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 15121
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Series(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.Series.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Series.IsLive
-  commentId: P:ESAPIX.Facade.API.Series.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Series
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Series.IsLive
-  fullName: ESAPIX.Facade.API.Series.IsLive
+  name: UID
+  nameWithType: Series.UID
+  fullName: ESAPIX.Facade.API.Series.UID
   type: Property
   source:
-    id: IsLive
+    id: UID
     path: ''
-    startLine: 15126
+    startLine: 14598
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public bool IsLive { get; }
+    content: public string UID { get; set; }
     parameters: []
     return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Series.IsLive*
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.Series.UID*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
+- uid: ESAPIX.Facade.API.Series.Modality
+  commentId: P:ESAPIX.Facade.API.Series.Modality
+  id: Modality
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Modality
+  nameWithType: Series.Modality
+  fullName: ESAPIX.Facade.API.Series.Modality
+  type: Property
+  source:
+    id: Modality
+    path: ''
+    startLine: 14640
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.SeriesModality Modality { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.SeriesModality
+    content.vb: Public Property Modality As Common.Model.Types.SeriesModality
+  overload: ESAPIX.Facade.API.Series.Modality*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceId
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceId
+  id: ImagingDeviceId
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceId
+  nameWithType: Series.ImagingDeviceId
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceId
+  type: Property
+  source:
+    id: ImagingDeviceId
+    path: ''
+    startLine: 14682
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceId As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceModel
+  id: ImagingDeviceModel
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceModel
+  nameWithType: Series.ImagingDeviceModel
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  type: Property
+  source:
+    id: ImagingDeviceModel
+    path: ''
+    startLine: 14724
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceModel As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  id: ImagingDeviceManufacturer
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceManufacturer
+  nameWithType: Series.ImagingDeviceManufacturer
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  type: Property
+  source:
+    id: ImagingDeviceManufacturer
+    path: ''
+    startLine: 14766
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceManufacturer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceManufacturer As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  id: ImagingDeviceSerialNo
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceSerialNo
+  nameWithType: Series.ImagingDeviceSerialNo
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  type: Property
+  source:
+    id: ImagingDeviceSerialNo
+    path: ''
+    startLine: 14808
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceSerialNo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceSerialNo As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Study
+  commentId: P:ESAPIX.Facade.API.Series.Study
+  id: Study
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Study
+  nameWithType: Series.Study
+  fullName: ESAPIX.Facade.API.Series.Study
+  type: Property
+  source:
+    id: Study
+    path: ''
+    startLine: 14850
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Study Study { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Study
+    content.vb: Public Property Study As Study
+  overload: ESAPIX.Facade.API.Series.Study*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: ESAPIX.Facade.API.Series.FOR
   commentId: P:ESAPIX.Facade.API.Series.FOR
   id: FOR
@@ -163,7 +347,7 @@ items:
   source:
     id: FOR
     path: ''
-    startLine: 15131
+    startLine: 14899
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -194,7 +378,124 @@ items:
   source:
     id: Images
     path: ''
-    startLine: 15146
+    startLine: 14941
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Image> Images { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Image}
+    content.vb: Public Property Images As IEnumerable(Of Image)
+  overload: ESAPIX.Facade.API.Series.Images*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor
+  commentId: M:ESAPIX.Facade.API.Series.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series()
+  nameWithType: Series.Series()
+  fullName: ESAPIX.Facade.API.Series.Series()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 14997
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Series.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series(Object)
+  nameWithType: Series.Series(Object)
+  fullName: ESAPIX.Facade.API.Series.Series(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 15002
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.FOR
+  commentId: P:ESAPIX.Facade.API.Series.FOR
+  id: FOR
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: FOR
+  nameWithType: Series.FOR
+  fullName: ESAPIX.Facade.API.Series.FOR
+  type: Property
+  source:
+    id: FOR
+    path: ''
+    startLine: 36600
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string FOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FOR As String
+  overload: ESAPIX.Facade.API.Series.FOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Images
+  commentId: P:ESAPIX.Facade.API.Series.Images
+  id: Images
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Images
+  nameWithType: Series.Images
+  fullName: ESAPIX.Facade.API.Series.Images
+  type: Property
+  source:
+    id: Images
+    path: ''
+    startLine: 36642
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -225,7 +526,7 @@ items:
   source:
     id: ImagingDeviceId
     path: ''
-    startLine: 15184
+    startLine: 36698
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -256,7 +557,7 @@ items:
   source:
     id: ImagingDeviceManufacturer
     path: ''
-    startLine: 15201
+    startLine: 36740
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -287,7 +588,7 @@ items:
   source:
     id: ImagingDeviceModel
     path: ''
-    startLine: 15221
+    startLine: 36782
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -318,7 +619,7 @@ items:
   source:
     id: ImagingDeviceSerialNo
     path: ''
-    startLine: 15238
+    startLine: 36824
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -349,16 +650,16 @@ items:
   source:
     id: Modality
     path: ''
-    startLine: 15258
+    startLine: 36866
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public SeriesModality Modality { get; set; }
+    content: public Common.Model.Types.SeriesModality Modality { get; set; }
     parameters: []
     return:
-      type: SeriesModality
-    content.vb: Public Property Modality As SeriesModality
+      type: VMS.TPS.Common.Model.Types.SeriesModality
+    content.vb: Public Property Modality As Common.Model.Types.SeriesModality
   overload: ESAPIX.Facade.API.Series.Modality*
   modifiers.csharp:
   - public
@@ -380,7 +681,7 @@ items:
   source:
     id: Study
     path: ''
-    startLine: 15275
+    startLine: 36908
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -411,7 +712,7 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 15294
+    startLine: 36957
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -428,31 +729,1422 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Series.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Series.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Series.#ctor
+  commentId: M:ESAPIX.Facade.API.Series.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.Series
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Series.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Series.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: Series()
+  nameWithType: Series.Series()
+  fullName: ESAPIX.Facade.API.Series.Series()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 15309
+    startLine: 36999
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public Series()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Series.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series(Object)
+  nameWithType: Series.Series(Object)
+  fullName: ESAPIX.Facade.API.Series.Series(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 37004
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Series.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.FOR
+  commentId: P:ESAPIX.Facade.API.Series.FOR
+  id: FOR
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: FOR
+  nameWithType: Series.FOR
+  fullName: ESAPIX.Facade.API.Series.FOR
+  type: Property
+  source:
+    id: FOR
+    path: ''
+    startLine: 64315
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string FOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FOR As String
+  overload: ESAPIX.Facade.API.Series.FOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Images
+  commentId: P:ESAPIX.Facade.API.Series.Images
+  id: Images
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Images
+  nameWithType: Series.Images
+  fullName: ESAPIX.Facade.API.Series.Images
+  type: Property
+  source:
+    id: Images
+    path: ''
+    startLine: 64357
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Image> Images { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Image}
+    content.vb: Public Property Images As IEnumerable(Of Image)
+  overload: ESAPIX.Facade.API.Series.Images*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceId
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceId
+  id: ImagingDeviceId
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceId
+  nameWithType: Series.ImagingDeviceId
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceId
+  type: Property
+  source:
+    id: ImagingDeviceId
+    path: ''
+    startLine: 64413
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceId As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  id: ImagingDeviceManufacturer
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceManufacturer
+  nameWithType: Series.ImagingDeviceManufacturer
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  type: Property
+  source:
+    id: ImagingDeviceManufacturer
+    path: ''
+    startLine: 64455
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceManufacturer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceManufacturer As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceModel
+  id: ImagingDeviceModel
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceModel
+  nameWithType: Series.ImagingDeviceModel
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  type: Property
+  source:
+    id: ImagingDeviceModel
+    path: ''
+    startLine: 64497
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceModel As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  id: ImagingDeviceSerialNo
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceSerialNo
+  nameWithType: Series.ImagingDeviceSerialNo
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  type: Property
+  source:
+    id: ImagingDeviceSerialNo
+    path: ''
+    startLine: 64539
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceSerialNo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceSerialNo As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Modality
+  commentId: P:ESAPIX.Facade.API.Series.Modality
+  id: Modality
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Modality
+  nameWithType: Series.Modality
+  fullName: ESAPIX.Facade.API.Series.Modality
+  type: Property
+  source:
+    id: Modality
+    path: ''
+    startLine: 64581
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.SeriesModality Modality { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.SeriesModality
+    content.vb: Public Property Modality As Common.Model.Types.SeriesModality
+  overload: ESAPIX.Facade.API.Series.Modality*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Study
+  commentId: P:ESAPIX.Facade.API.Series.Study
+  id: Study
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Study
+  nameWithType: Series.Study
+  fullName: ESAPIX.Facade.API.Series.Study
+  type: Property
+  source:
+    id: Study
+    path: ''
+    startLine: 64623
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Study Study { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Study
+    content.vb: Public Property Study As Study
+  overload: ESAPIX.Facade.API.Series.Study*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.UID
+  commentId: P:ESAPIX.Facade.API.Series.UID
+  id: UID
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: Series.UID
+  fullName: ESAPIX.Facade.API.Series.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 64672
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.Series.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor
+  commentId: M:ESAPIX.Facade.API.Series.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series()
+  nameWithType: Series.Series()
+  fullName: ESAPIX.Facade.API.Series.Series()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 64714
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Series.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series(Object)
+  nameWithType: Series.Series(Object)
+  fullName: ESAPIX.Facade.API.Series.Series(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 64719
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.FOR
+  commentId: P:ESAPIX.Facade.API.Series.FOR
+  id: FOR
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: FOR
+  nameWithType: Series.FOR
+  fullName: ESAPIX.Facade.API.Series.FOR
+  type: Property
+  source:
+    id: FOR
+    path: ''
+    startLine: 92980
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string FOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FOR As String
+  overload: ESAPIX.Facade.API.Series.FOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Images
+  commentId: P:ESAPIX.Facade.API.Series.Images
+  id: Images
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Images
+  nameWithType: Series.Images
+  fullName: ESAPIX.Facade.API.Series.Images
+  type: Property
+  source:
+    id: Images
+    path: ''
+    startLine: 93022
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Image> Images { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Image}
+    content.vb: Public Property Images As IEnumerable(Of Image)
+  overload: ESAPIX.Facade.API.Series.Images*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceId
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceId
+  id: ImagingDeviceId
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceId
+  nameWithType: Series.ImagingDeviceId
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceId
+  type: Property
+  source:
+    id: ImagingDeviceId
+    path: ''
+    startLine: 93078
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceId As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  id: ImagingDeviceManufacturer
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceManufacturer
+  nameWithType: Series.ImagingDeviceManufacturer
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  type: Property
+  source:
+    id: ImagingDeviceManufacturer
+    path: ''
+    startLine: 93120
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceManufacturer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceManufacturer As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceModel
+  id: ImagingDeviceModel
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceModel
+  nameWithType: Series.ImagingDeviceModel
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  type: Property
+  source:
+    id: ImagingDeviceModel
+    path: ''
+    startLine: 93162
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceModel As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  id: ImagingDeviceSerialNo
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceSerialNo
+  nameWithType: Series.ImagingDeviceSerialNo
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  type: Property
+  source:
+    id: ImagingDeviceSerialNo
+    path: ''
+    startLine: 93204
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceSerialNo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceSerialNo As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Modality
+  commentId: P:ESAPIX.Facade.API.Series.Modality
+  id: Modality
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Modality
+  nameWithType: Series.Modality
+  fullName: ESAPIX.Facade.API.Series.Modality
+  type: Property
+  source:
+    id: Modality
+    path: ''
+    startLine: 93246
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.SeriesModality Modality { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.SeriesModality
+    content.vb: Public Property Modality As Common.Model.Types.SeriesModality
+  overload: ESAPIX.Facade.API.Series.Modality*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Study
+  commentId: P:ESAPIX.Facade.API.Series.Study
+  id: Study
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Study
+  nameWithType: Series.Study
+  fullName: ESAPIX.Facade.API.Series.Study
+  type: Property
+  source:
+    id: Study
+    path: ''
+    startLine: 93288
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Study Study { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Study
+    content.vb: Public Property Study As Study
+  overload: ESAPIX.Facade.API.Series.Study*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.UID
+  commentId: P:ESAPIX.Facade.API.Series.UID
+  id: UID
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: Series.UID
+  fullName: ESAPIX.Facade.API.Series.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 93337
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.Series.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor
+  commentId: M:ESAPIX.Facade.API.Series.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series()
+  nameWithType: Series.Series()
+  fullName: ESAPIX.Facade.API.Series.Series()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 93379
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Series.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series(Object)
+  nameWithType: Series.Series(Object)
+  fullName: ESAPIX.Facade.API.Series.Series(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 93384
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.FOR
+  commentId: P:ESAPIX.Facade.API.Series.FOR
+  id: FOR
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: FOR
+  nameWithType: Series.FOR
+  fullName: ESAPIX.Facade.API.Series.FOR
+  type: Property
+  source:
+    id: FOR
+    path: ''
+    startLine: 124610
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string FOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FOR As String
+  overload: ESAPIX.Facade.API.Series.FOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Images
+  commentId: P:ESAPIX.Facade.API.Series.Images
+  id: Images
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Images
+  nameWithType: Series.Images
+  fullName: ESAPIX.Facade.API.Series.Images
+  type: Property
+  source:
+    id: Images
+    path: ''
+    startLine: 124652
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Image> Images { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Image}
+    content.vb: Public Property Images As IEnumerable(Of Image)
+  overload: ESAPIX.Facade.API.Series.Images*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceId
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceId
+  id: ImagingDeviceId
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceId
+  nameWithType: Series.ImagingDeviceId
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceId
+  type: Property
+  source:
+    id: ImagingDeviceId
+    path: ''
+    startLine: 124708
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceId As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  id: ImagingDeviceManufacturer
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceManufacturer
+  nameWithType: Series.ImagingDeviceManufacturer
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  type: Property
+  source:
+    id: ImagingDeviceManufacturer
+    path: ''
+    startLine: 124750
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceManufacturer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceManufacturer As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceModel
+  id: ImagingDeviceModel
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceModel
+  nameWithType: Series.ImagingDeviceModel
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  type: Property
+  source:
+    id: ImagingDeviceModel
+    path: ''
+    startLine: 124792
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceModel As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  id: ImagingDeviceSerialNo
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceSerialNo
+  nameWithType: Series.ImagingDeviceSerialNo
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  type: Property
+  source:
+    id: ImagingDeviceSerialNo
+    path: ''
+    startLine: 124834
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceSerialNo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceSerialNo As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Modality
+  commentId: P:ESAPIX.Facade.API.Series.Modality
+  id: Modality
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Modality
+  nameWithType: Series.Modality
+  fullName: ESAPIX.Facade.API.Series.Modality
+  type: Property
+  source:
+    id: Modality
+    path: ''
+    startLine: 124876
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.SeriesModality Modality { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.SeriesModality
+    content.vb: Public Property Modality As Common.Model.Types.SeriesModality
+  overload: ESAPIX.Facade.API.Series.Modality*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Study
+  commentId: P:ESAPIX.Facade.API.Series.Study
+  id: Study
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Study
+  nameWithType: Series.Study
+  fullName: ESAPIX.Facade.API.Series.Study
+  type: Property
+  source:
+    id: Study
+    path: ''
+    startLine: 124918
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Study Study { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Study
+    content.vb: Public Property Study As Study
+  overload: ESAPIX.Facade.API.Series.Study*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.UID
+  commentId: P:ESAPIX.Facade.API.Series.UID
+  id: UID
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: Series.UID
+  fullName: ESAPIX.Facade.API.Series.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 124967
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.Series.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor
+  commentId: M:ESAPIX.Facade.API.Series.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series()
+  nameWithType: Series.Series()
+  fullName: ESAPIX.Facade.API.Series.Series()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 125009
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Series.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series(Object)
+  nameWithType: Series.Series(Object)
+  fullName: ESAPIX.Facade.API.Series.Series(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 125014
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.FOR
+  commentId: P:ESAPIX.Facade.API.Series.FOR
+  id: FOR
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: FOR
+  nameWithType: Series.FOR
+  fullName: ESAPIX.Facade.API.Series.FOR
+  type: Property
+  source:
+    id: FOR
+    path: ''
+    startLine: 158610
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string FOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FOR As String
+  overload: ESAPIX.Facade.API.Series.FOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Images
+  commentId: P:ESAPIX.Facade.API.Series.Images
+  id: Images
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Images
+  nameWithType: Series.Images
+  fullName: ESAPIX.Facade.API.Series.Images
+  type: Property
+  source:
+    id: Images
+    path: ''
+    startLine: 158652
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Image> Images { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Image}
+    content.vb: Public Property Images As IEnumerable(Of Image)
+  overload: ESAPIX.Facade.API.Series.Images*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceId
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceId
+  id: ImagingDeviceId
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceId
+  nameWithType: Series.ImagingDeviceId
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceId
+  type: Property
+  source:
+    id: ImagingDeviceId
+    path: ''
+    startLine: 158708
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceId As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  id: ImagingDeviceManufacturer
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceManufacturer
+  nameWithType: Series.ImagingDeviceManufacturer
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  type: Property
+  source:
+    id: ImagingDeviceManufacturer
+    path: ''
+    startLine: 158750
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceManufacturer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceManufacturer As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceModel
+  id: ImagingDeviceModel
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceModel
+  nameWithType: Series.ImagingDeviceModel
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceModel
+  type: Property
+  source:
+    id: ImagingDeviceModel
+    path: ''
+    startLine: 158792
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceModel As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  commentId: P:ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  id: ImagingDeviceSerialNo
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: ImagingDeviceSerialNo
+  nameWithType: Series.ImagingDeviceSerialNo
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  type: Property
+  source:
+    id: ImagingDeviceSerialNo
+    path: ''
+    startLine: 158834
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ImagingDeviceSerialNo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImagingDeviceSerialNo As String
+  overload: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Modality
+  commentId: P:ESAPIX.Facade.API.Series.Modality
+  id: Modality
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Modality
+  nameWithType: Series.Modality
+  fullName: ESAPIX.Facade.API.Series.Modality
+  type: Property
+  source:
+    id: Modality
+    path: ''
+    startLine: 158876
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.SeriesModality Modality { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.SeriesModality
+    content.vb: Public Property Modality As Common.Model.Types.SeriesModality
+  overload: ESAPIX.Facade.API.Series.Modality*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.Study
+  commentId: P:ESAPIX.Facade.API.Series.Study
+  id: Study
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Study
+  nameWithType: Series.Study
+  fullName: ESAPIX.Facade.API.Series.Study
+  type: Property
+  source:
+    id: Study
+    path: ''
+    startLine: 158918
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Study Study { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Study
+    content.vb: Public Property Study As Study
+  overload: ESAPIX.Facade.API.Series.Study*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.UID
+  commentId: P:ESAPIX.Facade.API.Series.UID
+  id: UID
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: Series.UID
+  fullName: ESAPIX.Facade.API.Series.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 158967
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.Series.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.SetImagingDevice(System.String)
+  commentId: M:ESAPIX.Facade.API.Series.SetImagingDevice(System.String)
+  id: SetImagingDevice(System.String)
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: SetImagingDevice(String)
+  nameWithType: Series.SetImagingDevice(String)
+  fullName: ESAPIX.Facade.API.Series.SetImagingDevice(System.String)
+  type: Method
+  source:
+    id: SetImagingDevice
+    path: ''
+    startLine: 159009
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetImagingDevice(string imagingDeviceId)
+    parameters:
+    - id: imagingDeviceId
+      type: System.String
+    content.vb: Public Sub SetImagingDevice(imagingDeviceId As String)
+  overload: ESAPIX.Facade.API.Series.SetImagingDevice*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor
+  commentId: M:ESAPIX.Facade.API.Series.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series()
+  nameWithType: Series.Series()
+  fullName: ESAPIX.Facade.API.Series.Series()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 159026
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Series.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Series.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Series.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Series
+  langs:
+  - csharp
+  - vb
+  name: Series(Object)
+  nameWithType: Series.Series(Object)
+  fullName: ESAPIX.Facade.API.Series.Series(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 159031
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Series(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Series.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -485,6 +2177,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -520,103 +2217,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -685,6 +2299,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -714,213 +2367,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Series.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Series.#ctor
+- uid: ESAPIX.Facade.API.Series.UID*
+  commentId: Overload:ESAPIX.Facade.API.Series.UID
   isExternal: false
-  name: Series
-  nameWithType: Series.Series
-  fullName: ESAPIX.Facade.API.Series.Series
-- uid: ESAPIX.Facade.API.Series.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Series.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Series.IsLive
-  fullName: ESAPIX.Facade.API.Series.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: ESAPIX.Facade.API.Series.FOR*
-  commentId: Overload:ESAPIX.Facade.API.Series.FOR
-  isExternal: false
-  name: FOR
-  nameWithType: Series.FOR
-  fullName: ESAPIX.Facade.API.Series.FOR
+  name: UID
+  nameWithType: Series.UID
+  fullName: ESAPIX.Facade.API.Series.UID
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -928,6 +2386,60 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: ESAPIX.Facade.API.Series.Modality*
+  commentId: Overload:ESAPIX.Facade.API.Series.Modality
+  isExternal: false
+  name: Modality
+  nameWithType: Series.Modality
+  fullName: ESAPIX.Facade.API.Series.Modality
+- uid: VMS.TPS.Common.Model.Types.SeriesModality
+  isExternal: true
+  name: Common.Model.Types.SeriesModality
+  nameWithType: Common.Model.Types.SeriesModality
+  fullName: VMS.TPS.Common.Model.Types.SeriesModality
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceId*
+  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceId
+  isExternal: false
+  name: ImagingDeviceId
+  nameWithType: Series.ImagingDeviceId
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceId
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceModel*
+  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceModel
+  isExternal: false
+  name: ImagingDeviceModel
+  nameWithType: Series.ImagingDeviceModel
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceModel
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
+  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  isExternal: false
+  name: ImagingDeviceManufacturer
+  nameWithType: Series.ImagingDeviceManufacturer
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+- uid: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
+  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+  isExternal: false
+  name: ImagingDeviceSerialNo
+  nameWithType: Series.ImagingDeviceSerialNo
+  fullName: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
+- uid: ESAPIX.Facade.API.Series.Study*
+  commentId: Overload:ESAPIX.Facade.API.Series.Study
+  isExternal: false
+  name: Study
+  nameWithType: Series.Study
+  fullName: ESAPIX.Facade.API.Series.Study
+- uid: ESAPIX.Facade.API.Study
+  commentId: T:ESAPIX.Facade.API.Study
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Study
+  nameWithType: Study
+  fullName: ESAPIX.Facade.API.Study
+- uid: ESAPIX.Facade.API.Series.FOR*
+  commentId: Overload:ESAPIX.Facade.API.Series.FOR
+  isExternal: false
+  name: FOR
+  nameWithType: Series.FOR
+  fullName: ESAPIX.Facade.API.Series.FOR
 - uid: ESAPIX.Facade.API.Series.Images*
   commentId: Overload:ESAPIX.Facade.API.Series.Images
   isExternal: false
@@ -1013,69 +2525,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.Series.ImagingDeviceId*
-  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceId
+- uid: ESAPIX.Facade.API.Series.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Series.#ctor
   isExternal: false
-  name: ImagingDeviceId
-  nameWithType: Series.ImagingDeviceId
-  fullName: ESAPIX.Facade.API.Series.ImagingDeviceId
-- uid: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer*
-  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
+  name: Series
+  nameWithType: Series.Series
+  fullName: ESAPIX.Facade.API.Series.Series
+- uid: ESAPIX.Facade.API.Series.SetImagingDevice*
+  commentId: Overload:ESAPIX.Facade.API.Series.SetImagingDevice
   isExternal: false
-  name: ImagingDeviceManufacturer
-  nameWithType: Series.ImagingDeviceManufacturer
-  fullName: ESAPIX.Facade.API.Series.ImagingDeviceManufacturer
-- uid: ESAPIX.Facade.API.Series.ImagingDeviceModel*
-  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceModel
-  isExternal: false
-  name: ImagingDeviceModel
-  nameWithType: Series.ImagingDeviceModel
-  fullName: ESAPIX.Facade.API.Series.ImagingDeviceModel
-- uid: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo*
-  commentId: Overload:ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
-  isExternal: false
-  name: ImagingDeviceSerialNo
-  nameWithType: Series.ImagingDeviceSerialNo
-  fullName: ESAPIX.Facade.API.Series.ImagingDeviceSerialNo
-- uid: ESAPIX.Facade.API.Series.Modality*
-  commentId: Overload:ESAPIX.Facade.API.Series.Modality
-  isExternal: false
-  name: Modality
-  nameWithType: Series.Modality
-  fullName: ESAPIX.Facade.API.Series.Modality
-- uid: SeriesModality
-  commentId: '!:SeriesModality'
-  isExternal: true
-  name: SeriesModality
-  nameWithType: SeriesModality
-  fullName: SeriesModality
-- uid: ESAPIX.Facade.API.Series.Study*
-  commentId: Overload:ESAPIX.Facade.API.Series.Study
-  isExternal: false
-  name: Study
-  nameWithType: Series.Study
-  fullName: ESAPIX.Facade.API.Series.Study
-- uid: ESAPIX.Facade.API.Study
-  commentId: T:ESAPIX.Facade.API.Study
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: Study
-  nameWithType: Study
-  fullName: ESAPIX.Facade.API.Study
-- uid: ESAPIX.Facade.API.Series.UID*
-  commentId: Overload:ESAPIX.Facade.API.Series.UID
-  isExternal: false
-  name: UID
-  nameWithType: Series.UID
-  fullName: ESAPIX.Facade.API.Series.UID
-- uid: ESAPIX.Facade.API.Series.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Series.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: Series.WriteXml
-  fullName: ESAPIX.Facade.API.Series.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: SetImagingDevice
+  nameWithType: Series.SetImagingDevice
+  fullName: ESAPIX.Facade.API.Series.SetImagingDevice

@@ -15,5 +15,17 @@ namespace ESAPIX.Extensions
             return ps.Beams.Any(b => b.MLCPlanType == MLCPlanType.DoseDynamic &&
                                      b.CalculationLogs.Any(c => c.Category == "Compensator"));
         }
+
+
+        public static int? NumberOfFractions(this PlanSetup ps)
+        {
+#if (VMS110 || VMS136 || VMS137)
+            return ps.UniqueFractionation?.NumberOfFractions;
+
+#else        
+            return ps.NumberOfFractions;
+#endif
+        }
+
     }
 }

@@ -4,9 +4,12 @@ items:
   commentId: N:ESAPIX.Bootstrapper
   id: ESAPIX.Bootstrapper
   children:
-  - ESAPIX.Bootstrapper.FacadeInitializer
-  - ESAPIX.Bootstrapper.VMSBootstrapper
+  - ESAPIX.Bootstrapper.AppBootstrapper`1
+  - ESAPIX.Bootstrapper.BootstrapperBase`1
+  - ESAPIX.Bootstrapper.ScriptBootstrapper`1
   - ESAPIX.Bootstrapper.XScriptBase
+  - ESAPIX.Bootstrapper.XScriptToFullAppBase
+  - ESAPIX.Bootstrapper.XScriptToFullAppBase.ArgumentBuilder
   langs:
   - csharp
   - vb
@@ -17,21 +20,132 @@ items:
   assemblies:
   - cs.temp.dll
 references:
-- uid: ESAPIX.Bootstrapper.FacadeInitializer
-  commentId: T:ESAPIX.Bootstrapper.FacadeInitializer
+- uid: ESAPIX.Bootstrapper.AppBootstrapper`1
+  commentId: T:ESAPIX.Bootstrapper.AppBootstrapper`1
   isExternal: false
-  name: FacadeInitializer
-  nameWithType: FacadeInitializer
-  fullName: ESAPIX.Bootstrapper.FacadeInitializer
-- uid: ESAPIX.Bootstrapper.VMSBootstrapper
-  commentId: T:ESAPIX.Bootstrapper.VMSBootstrapper
+  name: AppBootstrapper<T>
+  nameWithType: AppBootstrapper<T>
+  fullName: ESAPIX.Bootstrapper.AppBootstrapper<T>
+  nameWithType.vb: AppBootstrapper(Of T)
+  fullName.vb: ESAPIX.Bootstrapper.AppBootstrapper(Of T)
+  name.vb: AppBootstrapper(Of T)
+  spec.csharp:
+  - uid: ESAPIX.Bootstrapper.AppBootstrapper`1
+    name: AppBootstrapper
+    nameWithType: AppBootstrapper
+    fullName: ESAPIX.Bootstrapper.AppBootstrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.Bootstrapper.AppBootstrapper`1
+    name: AppBootstrapper
+    nameWithType: AppBootstrapper
+    fullName: ESAPIX.Bootstrapper.AppBootstrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Bootstrapper.BootstrapperBase`1
+  commentId: T:ESAPIX.Bootstrapper.BootstrapperBase`1
   isExternal: false
-  name: VMSBootstrapper
-  nameWithType: VMSBootstrapper
-  fullName: ESAPIX.Bootstrapper.VMSBootstrapper
+  name: BootstrapperBase<T>
+  nameWithType: BootstrapperBase<T>
+  fullName: ESAPIX.Bootstrapper.BootstrapperBase<T>
+  nameWithType.vb: BootstrapperBase(Of T)
+  fullName.vb: ESAPIX.Bootstrapper.BootstrapperBase(Of T)
+  name.vb: BootstrapperBase(Of T)
+  spec.csharp:
+  - uid: ESAPIX.Bootstrapper.BootstrapperBase`1
+    name: BootstrapperBase
+    nameWithType: BootstrapperBase
+    fullName: ESAPIX.Bootstrapper.BootstrapperBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.Bootstrapper.BootstrapperBase`1
+    name: BootstrapperBase
+    nameWithType: BootstrapperBase
+    fullName: ESAPIX.Bootstrapper.BootstrapperBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Bootstrapper.ScriptBootstrapper`1
+  commentId: T:ESAPIX.Bootstrapper.ScriptBootstrapper`1
+  isExternal: false
+  name: ScriptBootstrapper<T>
+  nameWithType: ScriptBootstrapper<T>
+  fullName: ESAPIX.Bootstrapper.ScriptBootstrapper<T>
+  nameWithType.vb: ScriptBootstrapper(Of T)
+  fullName.vb: ESAPIX.Bootstrapper.ScriptBootstrapper(Of T)
+  name.vb: ScriptBootstrapper(Of T)
+  spec.csharp:
+  - uid: ESAPIX.Bootstrapper.ScriptBootstrapper`1
+    name: ScriptBootstrapper
+    nameWithType: ScriptBootstrapper
+    fullName: ESAPIX.Bootstrapper.ScriptBootstrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ESAPIX.Bootstrapper.ScriptBootstrapper`1
+    name: ScriptBootstrapper
+    nameWithType: ScriptBootstrapper
+    fullName: ESAPIX.Bootstrapper.ScriptBootstrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Bootstrapper.XScriptBase
   commentId: T:ESAPIX.Bootstrapper.XScriptBase
   isExternal: false
   name: XScriptBase
   nameWithType: XScriptBase
   fullName: ESAPIX.Bootstrapper.XScriptBase
+- uid: ESAPIX.Bootstrapper.XScriptToFullAppBase
+  commentId: T:ESAPIX.Bootstrapper.XScriptToFullAppBase
+  isExternal: false
+  name: XScriptToFullAppBase
+  nameWithType: XScriptToFullAppBase
+  fullName: ESAPIX.Bootstrapper.XScriptToFullAppBase
+- uid: ESAPIX.Bootstrapper.XScriptToFullAppBase.ArgumentBuilder
+  commentId: T:ESAPIX.Bootstrapper.XScriptToFullAppBase.ArgumentBuilder
+  isExternal: false
+  name: XScriptToFullAppBase.ArgumentBuilder
+  nameWithType: XScriptToFullAppBase.ArgumentBuilder
+  fullName: ESAPIX.Bootstrapper.XScriptToFullAppBase.ArgumentBuilder

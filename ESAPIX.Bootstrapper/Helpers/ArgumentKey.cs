@@ -15,6 +15,7 @@
         public const string ExternalPlansInScope = "-epsc";
         public const string PlansInScope = "-psc";
         public const string PlanSumsInScope = "-pssc";
-
+        public const string IonPlansInScope = "-ipsc";
+        public const string IonPlanSetup = "-ip";
     }
 }

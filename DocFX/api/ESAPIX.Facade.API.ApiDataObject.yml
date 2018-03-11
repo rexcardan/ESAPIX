@@ -6,17 +6,50 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.ApiDataObject.#ctor
+  - ESAPIX.Facade.API.ApiDataObject.#ctor
+  - ESAPIX.Facade.API.ApiDataObject.#ctor
+  - ESAPIX.Facade.API.ApiDataObject.#ctor
+  - ESAPIX.Facade.API.ApiDataObject.#ctor
+  - ESAPIX.Facade.API.ApiDataObject.#ctor
+  - ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  - ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  - ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  - ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  - ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
   - ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
   - ESAPIX.Facade.API.ApiDataObject.Comment
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.Comment
+  - ESAPIX.Facade.API.ApiDataObject.Comment
+  - ESAPIX.Facade.API.ApiDataObject.Comment
+  - ESAPIX.Facade.API.ApiDataObject.Comment
+  - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.Id
-  - ESAPIX.Facade.API.ApiDataObject.IsLive
+  - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.Id
+  - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.ApiDataObject.Name
+  - ESAPIX.Facade.API.ApiDataObject.Name
+  - ESAPIX.Facade.API.ApiDataObject.Name
+  - ESAPIX.Facade.API.ApiDataObject.Name
+  - ESAPIX.Facade.API.ApiDataObject.Name
   langs:
   - csharp
   - vb
@@ -27,23 +60,28 @@ items:
   source:
     id: ApiDataObject
     path: ''
-    startLine: 4836
+    startLine: 127279
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class ApiDataObject : SerializableObject'
+    content: 'public class ApiDataObject : SerializableObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class ApiDataObject
           Inherits SerializableObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   derivedClasses:
   - ESAPIX.Facade.API.AddOn
   - ESAPIX.Facade.API.AddOnMaterial
+  - ESAPIX.Facade.API.ApplicationScript
+  - ESAPIX.Facade.API.ApplicationScriptLog
   - ESAPIX.Facade.API.Beam
+  - ESAPIX.Facade.API.BeamUncertainty
   - ESAPIX.Facade.API.Block
+  - ESAPIX.Facade.API.BrachyFieldReferencePoint
   - ESAPIX.Facade.API.BrachySolidApplicator
   - ESAPIX.Facade.API.BrachyTreatmentUnit
   - ESAPIX.Facade.API.Catheter
@@ -61,10 +99,14 @@ items:
   - ESAPIX.Facade.API.Patient
   - ESAPIX.Facade.API.PlanningItem
   - ESAPIX.Facade.API.PlanSumComponent
+  - ESAPIX.Facade.API.PlanTreatmentSession
+  - ESAPIX.Facade.API.PlanUncertainty
   - ESAPIX.Facade.API.RadioactiveSource
   - ESAPIX.Facade.API.RadioactiveSourceModel
   - ESAPIX.Facade.API.ReferencePoint
   - ESAPIX.Facade.API.Registration
+  - ESAPIX.Facade.API.RTPrescription
+  - ESAPIX.Facade.API.RTPrescriptionTarget
   - ESAPIX.Facade.API.SeedCollection
   - ESAPIX.Facade.API.Series
   - ESAPIX.Facade.API.Slot
@@ -73,107 +115,23 @@ items:
   - ESAPIX.Facade.API.StructureSet
   - ESAPIX.Facade.API.Study
   - ESAPIX.Facade.API.Technique
-  - ESAPIX.Facade.API.User
+  - ESAPIX.Facade.API.TreatmentPhase
+  - ESAPIX.Facade.API.TreatmentSession
+  - ESAPIX.Facade.API.TreatmentUnitOperatingLimit
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.ApiDataObject.#ctor
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.ApiDataObject
-  langs:
-  - csharp
-  - vb
-  name: ApiDataObject()
-  nameWithType: ApiDataObject.ApiDataObject()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 4838
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public ApiDataObject()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.ApiDataObject
-  langs:
-  - csharp
-  - vb
-  name: ApiDataObject(Object)
-  nameWithType: ApiDataObject.ApiDataObject(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 4843
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public ApiDataObject(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.ApiDataObject.IsLive
-  commentId: P:ESAPIX.Facade.API.ApiDataObject.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.ApiDataObject
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: ApiDataObject.IsLive
-  fullName: ESAPIX.Facade.API.ApiDataObject.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 4848
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.ApiDataObject.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   id: Id
@@ -188,7 +146,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 4853
+    startLine: 4345
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -219,7 +177,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 4868
+    startLine: 4387
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -250,7 +208,7 @@ items:
   source:
     id: Comment
     path: ''
-    startLine: 4883
+    startLine: 4429
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -281,7 +239,7 @@ items:
   source:
     id: HistoryUserName
     path: ''
-    startLine: 4898
+    startLine: 4471
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -312,7 +270,7 @@ items:
   source:
     id: HistoryDateTime
     path: ''
-    startLine: 4915
+    startLine: 4513
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -329,118 +287,1200 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
-  id: ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.ApiDataObject
   langs:
   - csharp
   - vb
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  type: Method
+  name: ApiDataObject()
+  nameWithType: ApiDataObject.ApiDataObject()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject()
+  type: Constructor
   source:
-    id: ToString
+    id: .ctor
     path: ''
-    startLine: 4932
+    startLine: 4555
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public string ToString()
+    content: public ApiDataObject()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject(Object)
+  nameWithType: ApiDataObject.ApiDataObject(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 4560
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  id: Id
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 16220
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
     return:
       type: System.String
-    content.vb: Public Function ToString As String
-  overload: ESAPIX.Facade.API.ApiDataObject.ToString*
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Id*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ApiDataObject.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  id: Name
   parent: ESAPIX.Facade.API.ApiDataObject
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: ApiDataObject.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.ApiDataObject.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+  type: Property
   source:
-    id: WriteXml
+    id: Name
     path: ''
-    startLine: 4939
+    startLine: 16262
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
-    parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.ApiDataObject.WriteXml*
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Name*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  id: Equals(System.Object)
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  id: Comment
   parent: ESAPIX.Facade.API.ApiDataObject
   langs:
   - csharp
   - vb
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  type: Method
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+  type: Property
   source:
-    id: Equals
+    id: Comment
     path: ''
-    startLine: 4945
+    startLine: 16304
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public bool Equals(object obj)
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  id: HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  type: Property
+  source:
+    id: HistoryUserName
+    path: ''
+    startLine: 16346
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  id: HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  type: Property
+  source:
+    id: HistoryDateTime
+    path: ''
+    startLine: 16388
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime HistoryDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property HistoryDateTime As Date
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject()
+  nameWithType: ApiDataObject.ApiDataObject()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 16430
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject(Object)
+  nameWithType: ApiDataObject.ApiDataObject(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 16435
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject(dynamic client)
     parameters:
-    - id: obj
+    - id: client
       type: System.Object
-    return:
-      type: System.Boolean
-    content.vb: Public Function Equals(obj As Object) As Boolean
-  overload: ESAPIX.Facade.API.ApiDataObject.Equals*
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  id: GetHashCode
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  id: Id
   parent: ESAPIX.Facade.API.ApiDataObject
   langs:
   - csharp
   - vb
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  type: Method
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+  type: Property
   source:
-    id: GetHashCode
+    id: Id
     path: ''
-    startLine: 4952
+    startLine: 39065
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public int GetHashCode()
+    content: public string Id { get; set; }
+    parameters: []
     return:
-      type: System.Int32
-    content.vb: Public Function GetHashCode As Integer
-  overload: ESAPIX.Facade.API.ApiDataObject.GetHashCode*
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  id: Name
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 39107
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  id: Comment
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+  type: Property
+  source:
+    id: Comment
+    path: ''
+    startLine: 39149
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  id: HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  type: Property
+  source:
+    id: HistoryUserName
+    path: ''
+    startLine: 39191
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  id: HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  type: Property
+  source:
+    id: HistoryDateTime
+    path: ''
+    startLine: 39233
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime HistoryDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property HistoryDateTime As Date
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject()
+  nameWithType: ApiDataObject.ApiDataObject()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 39275
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject(Object)
+  nameWithType: ApiDataObject.ApiDataObject(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 39280
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  id: Id
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 66780
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  id: Name
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 66822
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  id: Comment
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+  type: Property
+  source:
+    id: Comment
+    path: ''
+    startLine: 66864
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  id: HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  type: Property
+  source:
+    id: HistoryUserName
+    path: ''
+    startLine: 66906
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  id: HistoryUserDisplayName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  type: Property
+  source:
+    id: HistoryUserDisplayName
+    path: ''
+    startLine: 66948
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserDisplayName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserDisplayName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  id: HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  type: Property
+  source:
+    id: HistoryDateTime
+    path: ''
+    startLine: 66990
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime HistoryDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property HistoryDateTime As Date
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject()
+  nameWithType: ApiDataObject.ApiDataObject()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 67032
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject(Object)
+  nameWithType: ApiDataObject.ApiDataObject(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 67037
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  id: Id
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 95634
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  id: Name
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 95676
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  id: Comment
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+  type: Property
+  source:
+    id: Comment
+    path: ''
+    startLine: 95718
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  id: HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  type: Property
+  source:
+    id: HistoryUserName
+    path: ''
+    startLine: 95760
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  id: HistoryUserDisplayName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  type: Property
+  source:
+    id: HistoryUserDisplayName
+    path: ''
+    startLine: 95802
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserDisplayName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserDisplayName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  id: HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  type: Property
+  source:
+    id: HistoryDateTime
+    path: ''
+    startLine: 95844
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime HistoryDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property HistoryDateTime As Date
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject()
+  nameWithType: ApiDataObject.ApiDataObject()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 95886
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject(Object)
+  nameWithType: ApiDataObject.ApiDataObject(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 95891
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Id
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
+  id: Id
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ApiDataObject.Id
+  fullName: ESAPIX.Facade.API.ApiDataObject.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 127281
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Name
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
+  id: Name
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ApiDataObject.Name
+  fullName: ESAPIX.Facade.API.ApiDataObject.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 127323
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.Comment
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.Comment
+  id: Comment
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: ApiDataObject.Comment
+  fullName: ESAPIX.Facade.API.ApiDataObject.Comment
+  type: Property
+  source:
+    id: Comment
+    path: ''
+    startLine: 127365
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: ESAPIX.Facade.API.ApiDataObject.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  id: HistoryUserName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserName
+  nameWithType: ApiDataObject.HistoryUserName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserName
+  type: Property
+  source:
+    id: HistoryUserName
+    path: ''
+    startLine: 127407
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  id: HistoryUserDisplayName
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  type: Property
+  source:
+    id: HistoryUserDisplayName
+    path: ''
+    startLine: 127449
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string HistoryUserDisplayName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HistoryUserDisplayName As String
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  id: HistoryDateTime
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: HistoryDateTime
+  nameWithType: ApiDataObject.HistoryDateTime
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
+  type: Property
+  source:
+    id: HistoryDateTime
+    path: ''
+    startLine: 127491
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime HistoryDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property HistoryDateTime As Date
+  overload: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject()
+  nameWithType: ApiDataObject.ApiDataObject()
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 127533
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ApiDataObject.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ApiDataObject
+  langs:
+  - csharp
+  - vb
+  name: ApiDataObject(Object)
+  nameWithType: ApiDataObject.ApiDataObject(Object)
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 127538
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ApiDataObject(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ApiDataObject.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -466,6 +1506,18 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -534,6 +1586,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -563,207 +1654,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.ApiDataObject.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.#ctor
-  isExternal: false
-  name: ApiDataObject
-  nameWithType: ApiDataObject.ApiDataObject
-  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject
-- uid: ESAPIX.Facade.API.ApiDataObject.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: ApiDataObject.IsLive
-  fullName: ESAPIX.Facade.API.ApiDataObject.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.ApiDataObject.Id*
   commentId: Overload:ESAPIX.Facade.API.ApiDataObject.Id
   isExternal: false
@@ -808,39 +1704,15 @@ references:
   name: DateTime
   nameWithType: DateTime
   fullName: System.DateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString*
-  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.#ctor
   isExternal: false
-  name: ToString
-  nameWithType: ApiDataObject.ToString
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-- uid: ESAPIX.Facade.API.ApiDataObject.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.WriteXml
+  name: ApiDataObject
+  nameWithType: ApiDataObject.ApiDataObject
+  fullName: ESAPIX.Facade.API.ApiDataObject.ApiDataObject
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName*
+  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   isExternal: false
-  name: WriteXml
-  nameWithType: ApiDataObject.WriteXml
-  fullName: ESAPIX.Facade.API.ApiDataObject.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals*
-  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.Equals
-  isExternal: false
-  name: Equals
-  nameWithType: ApiDataObject.Equals
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode*
-  commentId: Overload:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  isExternal: false
-  name: GetHashCode
-  nameWithType: ApiDataObject.GetHashCode
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName

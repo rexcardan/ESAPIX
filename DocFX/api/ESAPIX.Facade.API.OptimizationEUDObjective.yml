@@ -6,13 +6,33 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizationEUDObjective.Dose
-  - ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Operator
   - ESAPIX.Facade.API.OptimizationEUDObjective.Operator
   - ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  - ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  - ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  - ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  - ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
   - ESAPIX.Facade.API.OptimizationEUDObjective.Priority
-  - ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  - ESAPIX.Facade.API.OptimizationEUDObjective.Priority
   langs:
   - csharp
   - vb
@@ -23,124 +43,36 @@ items:
   source:
     id: OptimizationEUDObjective
     path: ''
-    startLine: 10842
+    startLine: 144927
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class OptimizationEUDObjective : OptimizationObjective'
+    content: 'public class OptimizationEUDObjective : OptimizationObjective, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class OptimizationEUDObjective
           Inherits OptimizationObjective
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.OptimizationObjective
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.OptimizationObjective.Structure
   - ESAPIX.Facade.API.OptimizationObjective.StructureId
-  - ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
-  - ESAPIX.Facade.API.OptimizationObjective.GetHashCode
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
-  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.OptimizationEUDObjective
-  langs:
-  - csharp
-  - vb
-  name: OptimizationEUDObjective()
-  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective()
-  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 10844
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizationEUDObjective()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.OptimizationEUDObjective
-  langs:
-  - csharp
-  - vb
-  name: OptimizationEUDObjective(Object)
-  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective(Object)
-  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 10849
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizationEUDObjective(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
-  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.OptimizationEUDObjective
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: OptimizationEUDObjective.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 10854
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
   commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
   id: Dose
@@ -155,16 +87,16 @@ items:
   source:
     id: Dose
     path: ''
-    startLine: 10859
+    startLine: 28320
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DoseValue Dose { get; set; }
+    content: public Common.Model.Types.DoseValue Dose { get; set; }
     parameters: []
     return:
-      type: DoseValue
-    content.vb: Public Property Dose As DoseValue
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Dose As Common.Model.Types.DoseValue
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
   modifiers.csharp:
   - public
@@ -186,16 +118,16 @@ items:
   source:
     id: Operator
     path: ''
-    startLine: 10874
+    startLine: 28362
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public OptimizationObjectiveOperator Operator { get; set; }
+    content: public Common.Model.Types.OptimizationObjectiveOperator Operator { get; set; }
     parameters: []
     return:
-      type: OptimizationObjectiveOperator
-    content.vb: Public Property Operator As OptimizationObjectiveOperator
+      type: VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator
+    content.vb: Public Property Operator As Common.Model.Types.OptimizationObjectiveOperator
   overload: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
   modifiers.csharp:
   - public
@@ -217,7 +149,7 @@ items:
   source:
     id: ParameterA
     path: ''
-    startLine: 10894
+    startLine: 28404
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -248,7 +180,7 @@ items:
   source:
     id: Priority
     path: ''
-    startLine: 10909
+    startLine: 28446
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -265,31 +197,711 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.OptimizationEUDObjective
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: OptimizationEUDObjective.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: OptimizationEUDObjective()
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective()
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 10924
+    startLine: 28488
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public OptimizationEUDObjective()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective(Object)
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective(Object)
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 28493
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: OptimizationEUDObjective.Dose
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 54924
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Dose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Dose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  id: Operator
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Operator
+  nameWithType: OptimizationEUDObjective.Operator
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  type: Property
+  source:
+    id: Operator
+    path: ''
+    startLine: 54966
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.OptimizationObjectiveOperator Operator { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator
+    content.vb: Public Property Operator As Common.Model.Types.OptimizationObjectiveOperator
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  id: ParameterA
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: ParameterA
+  nameWithType: OptimizationEUDObjective.ParameterA
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  type: Property
+  source:
+    id: ParameterA
+    path: ''
+    startLine: 55008
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ParameterA { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ParameterA As Double
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationEUDObjective.Priority
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 55050
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective()
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective()
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 55092
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective(Object)
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective(Object)
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 55097
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: OptimizationEUDObjective.Dose
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 83273
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Dose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Dose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  id: Operator
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Operator
+  nameWithType: OptimizationEUDObjective.Operator
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  type: Property
+  source:
+    id: Operator
+    path: ''
+    startLine: 83315
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.OptimizationObjectiveOperator Operator { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator
+    content.vb: Public Property Operator As Common.Model.Types.OptimizationObjectiveOperator
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  id: ParameterA
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: ParameterA
+  nameWithType: OptimizationEUDObjective.ParameterA
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  type: Property
+  source:
+    id: ParameterA
+    path: ''
+    startLine: 83357
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ParameterA { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ParameterA As Double
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationEUDObjective.Priority
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 83399
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective()
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective()
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 83441
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective(Object)
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective(Object)
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 83446
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: OptimizationEUDObjective.Dose
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 112741
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Dose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Dose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  id: Operator
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Operator
+  nameWithType: OptimizationEUDObjective.Operator
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
+  type: Property
+  source:
+    id: Operator
+    path: ''
+    startLine: 112783
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.OptimizationObjectiveOperator Operator { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator
+    content.vb: Public Property Operator As Common.Model.Types.OptimizationObjectiveOperator
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  id: ParameterA
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: ParameterA
+  nameWithType: OptimizationEUDObjective.ParameterA
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  type: Property
+  source:
+    id: ParameterA
+    path: ''
+    startLine: 112825
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ParameterA { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ParameterA As Double
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationEUDObjective.Priority
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 112867
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective()
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective()
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 112909
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective(Object)
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective(Object)
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 112914
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: OptimizationEUDObjective.Dose
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 144929
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Dose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Dose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  commentId: P:ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  id: ParameterA
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: ParameterA
+  nameWithType: OptimizationEUDObjective.ParameterA
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
+  type: Property
+  source:
+    id: ParameterA
+    path: ''
+    startLine: 144971
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ParameterA { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ParameterA As Double
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective()
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective()
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 145013
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationEUDObjective
+  langs:
+  - csharp
+  - vb
+  name: OptimizationEUDObjective(Object)
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective(Object)
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 145018
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationEUDObjective(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -322,6 +934,11 @@ references:
   name: OptimizationObjective
   nameWithType: OptimizationObjective
   fullName: ESAPIX.Facade.API.OptimizationObjective
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.OptimizationObjective.Structure
   commentId: P:ESAPIX.Facade.API.OptimizationObjective.Structure
   parent: ESAPIX.Facade.API.OptimizationObjective
@@ -336,74 +953,13 @@ references:
   name: StructureId
   nameWithType: OptimizationObjective.StructureId
   fullName: ESAPIX.Facade.API.OptimizationObjective.StructureId
-- uid: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
-  parent: ESAPIX.Facade.API.OptimizationObjective
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: OptimizationObjective.Equals(Object)
-  fullName: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
-    name: Equals
-    nameWithType: OptimizationObjective.Equals
-    fullName: ESAPIX.Facade.API.OptimizationObjective.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.OptimizationObjective.Equals(System.Object)
-    name: Equals
-    nameWithType: OptimizationObjective.Equals
-    fullName: ESAPIX.Facade.API.OptimizationObjective.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
-  commentId: M:ESAPIX.Facade.API.OptimizationObjective.GetHashCode
-  parent: ESAPIX.Facade.API.OptimizationObjective
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: OptimizationObjective.GetHashCode()
-  fullName: ESAPIX.Facade.API.OptimizationObjective.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
-    name: GetHashCode
-    nameWithType: OptimizationObjective.GetHashCode
-    fullName: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
-    name: GetHashCode
-    nameWithType: OptimizationObjective.GetHashCode
-    fullName: ESAPIX.Facade.API.OptimizationObjective.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -472,6 +1028,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -501,260 +1096,34 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
-  isExternal: false
-  name: OptimizationEUDObjective
-  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective
-  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective
-- uid: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: OptimizationEUDObjective.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.Dose*
   commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.Dose
   isExternal: false
   name: Dose
   nameWithType: OptimizationEUDObjective.Dose
   fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Dose
-- uid: DoseValue
+- uid: VMS.TPS.Common.Model.Types.DoseValue
   isExternal: true
-  name: DoseValue
-  nameWithType: DoseValue
-  fullName: DoseValue
+  name: Common.Model.Types.DoseValue
+  nameWithType: Common.Model.Types.DoseValue
+  fullName: VMS.TPS.Common.Model.Types.DoseValue
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.Operator*
   commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.Operator
   isExternal: false
   name: Operator
   nameWithType: OptimizationEUDObjective.Operator
   fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Operator
-- uid: OptimizationObjectiveOperator
+- uid: VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator
   isExternal: true
-  name: OptimizationObjectiveOperator
-  nameWithType: OptimizationObjectiveOperator
-  fullName: OptimizationObjectiveOperator
+  name: Common.Model.Types.OptimizationObjectiveOperator
+  nameWithType: Common.Model.Types.OptimizationObjectiveOperator
+  fullName: VMS.TPS.Common.Model.Types.OptimizationObjectiveOperator
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA*
   commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.ParameterA
   isExternal: false
@@ -774,14 +1143,9 @@ references:
   name: Priority
   nameWithType: OptimizationEUDObjective.Priority
   fullName: ESAPIX.Facade.API.OptimizationEUDObjective.Priority
-- uid: ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml
+- uid: ESAPIX.Facade.API.OptimizationEUDObjective.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationEUDObjective.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: OptimizationEUDObjective.WriteXml
-  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: OptimizationEUDObjective
+  nameWithType: OptimizationEUDObjective.OptimizationEUDObjective
+  fullName: ESAPIX.Facade.API.OptimizationEUDObjective.OptimizationEUDObjective

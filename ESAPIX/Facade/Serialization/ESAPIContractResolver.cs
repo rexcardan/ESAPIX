@@ -21,6 +21,7 @@ namespace ESAPIX.Facade.Serialization
             var excludingNames = new List<string>();
             switch (type.Name)
             {
+#if !VMS110
                 case nameof(IScriptContext.Course):
                     excludingNames.Add(nameof(Course.Patient));
                     break;
@@ -30,11 +31,17 @@ namespace ESAPIX.Facade.Serialization
                 case nameof(IScriptContext.BrachyPlanSetup):
                     excludingNames.Add(nameof(BrachyPlanSetup.Course));
                     break;
-                case nameof(IScriptContext.PlanSetup):
-                    excludingNames.Add(nameof(PlanSetup.Course));
-                    break;
                 case nameof(PlanSum):
                     excludingNames.Add(nameof(PlanSum.Course));
+                    break;
+#endif
+#if (VMS150 || VMS151 || VMS155)
+                  case nameof(IScriptContext.IonPlanSetup):
+                    excludingNames.Add(nameof(IonPlanSetup.Course));
+                    break;
+#endif
+                case nameof(IScriptContext.PlanSetup):
+                    excludingNames.Add(nameof(PlanSetup.Course));
                     break;
                 case nameof(Image.Series):
                     excludingNames.Add(nameof(Series.Images));

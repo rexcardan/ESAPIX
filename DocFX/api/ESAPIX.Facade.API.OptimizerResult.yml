@@ -6,11 +6,34 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.OptimizerResult.#ctor
+  - ESAPIX.Facade.API.OptimizerResult.#ctor
+  - ESAPIX.Facade.API.OptimizerResult.#ctor
+  - ESAPIX.Facade.API.OptimizerResult.#ctor
+  - ESAPIX.Facade.API.OptimizerResult.#ctor
   - ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
-  - ESAPIX.Facade.API.OptimizerResult.IsLive
+  - ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  - ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  - ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  - ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
   - ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
   - ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  - ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  - ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  - ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  - ESAPIX.Facade.API.OptimizerResult.StructureDVHs
   - ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  - ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  - ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  - ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  - ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  - ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  - ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  - ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  - ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
   - ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
   langs:
   - csharp
@@ -22,7 +45,7 @@ items:
   source:
     id: OptimizerResult
     path: ''
-    startLine: 11937
+    startLine: 146625
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -35,6 +58,7 @@ items:
   - System.Object
   - ESAPIX.Facade.API.CalculationResult
   inheritedMembers:
+  - ESAPIX.Facade.API.CalculationResult.IsLive
   - ESAPIX.Facade.API.CalculationResult.Success
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -49,92 +73,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.OptimizerResult.#ctor
-  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.OptimizerResult
-  langs:
-  - csharp
-  - vb
-  name: OptimizerResult()
-  nameWithType: OptimizerResult.OptimizerResult()
-  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11939
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizerResult()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.OptimizerResult
-  langs:
-  - csharp
-  - vb
-  name: OptimizerResult(Object)
-  nameWithType: OptimizerResult.OptimizerResult(Object)
-  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11944
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizerResult(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizerResult.IsLive
-  commentId: P:ESAPIX.Facade.API.OptimizerResult.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.OptimizerResult
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: OptimizerResult.IsLive
-  fullName: ESAPIX.Facade.API.OptimizerResult.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 11949
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.OptimizerResult.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
   commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
   id: StructureDVHs
@@ -149,7 +87,7 @@ items:
   source:
     id: StructureDVHs
     path: ''
-    startLine: 11954
+    startLine: 30286
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -180,7 +118,7 @@ items:
   source:
     id: StructureObjectiveValues
     path: ''
-    startLine: 11992
+    startLine: 30342
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -211,7 +149,7 @@ items:
   source:
     id: TotalObjectiveFunctionValue
     path: ''
-    startLine: 12030
+    startLine: 30398
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -242,7 +180,7 @@ items:
   source:
     id: NumberOfIMRTOptimizerIterations
     path: ''
-    startLine: 12050
+    startLine: 30440
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -257,6 +195,777 @@ items:
   - public
   - get
   - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult()
+  nameWithType: OptimizerResult.OptimizerResult()
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 30482
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult(Object)
+  nameWithType: OptimizerResult.OptimizerResult(Object)
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 30487
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  id: StructureDVHs
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureDVHs
+  nameWithType: OptimizerResult.StructureDVHs
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  type: Property
+  source:
+    id: StructureDVHs
+    path: ''
+    startLine: 56890
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerDVH> StructureDVHs { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  id: StructureObjectiveValues
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureObjectiveValues
+  nameWithType: OptimizerResult.StructureObjectiveValues
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  type: Property
+  source:
+    id: StructureObjectiveValues
+    path: ''
+    startLine: 56946
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  id: TotalObjectiveFunctionValue
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: TotalObjectiveFunctionValue
+  nameWithType: OptimizerResult.TotalObjectiveFunctionValue
+  fullName: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  type: Property
+  source:
+    id: TotalObjectiveFunctionValue
+    path: ''
+    startLine: 57002
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TotalObjectiveFunctionValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TotalObjectiveFunctionValue As Double
+  overload: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  id: NumberOfIMRTOptimizerIterations
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: NumberOfIMRTOptimizerIterations
+  nameWithType: OptimizerResult.NumberOfIMRTOptimizerIterations
+  fullName: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  type: Property
+  source:
+    id: NumberOfIMRTOptimizerIterations
+    path: ''
+    startLine: 57044
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int NumberOfIMRTOptimizerIterations { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
+  overload: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult()
+  nameWithType: OptimizerResult.OptimizerResult()
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 57086
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult(Object)
+  nameWithType: OptimizerResult.OptimizerResult(Object)
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 57091
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  id: StructureDVHs
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureDVHs
+  nameWithType: OptimizerResult.StructureDVHs
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  type: Property
+  source:
+    id: StructureDVHs
+    path: ''
+    startLine: 85097
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerDVH> StructureDVHs { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  id: StructureObjectiveValues
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureObjectiveValues
+  nameWithType: OptimizerResult.StructureObjectiveValues
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  type: Property
+  source:
+    id: StructureObjectiveValues
+    path: ''
+    startLine: 85153
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  id: TotalObjectiveFunctionValue
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: TotalObjectiveFunctionValue
+  nameWithType: OptimizerResult.TotalObjectiveFunctionValue
+  fullName: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  type: Property
+  source:
+    id: TotalObjectiveFunctionValue
+    path: ''
+    startLine: 85209
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TotalObjectiveFunctionValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TotalObjectiveFunctionValue As Double
+  overload: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  id: NumberOfIMRTOptimizerIterations
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: NumberOfIMRTOptimizerIterations
+  nameWithType: OptimizerResult.NumberOfIMRTOptimizerIterations
+  fullName: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  type: Property
+  source:
+    id: NumberOfIMRTOptimizerIterations
+    path: ''
+    startLine: 85251
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int NumberOfIMRTOptimizerIterations { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
+  overload: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult()
+  nameWithType: OptimizerResult.OptimizerResult()
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 85293
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult(Object)
+  nameWithType: OptimizerResult.OptimizerResult(Object)
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 85298
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  id: StructureDVHs
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureDVHs
+  nameWithType: OptimizerResult.StructureDVHs
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  type: Property
+  source:
+    id: StructureDVHs
+    path: ''
+    startLine: 114565
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerDVH> StructureDVHs { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  id: StructureObjectiveValues
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureObjectiveValues
+  nameWithType: OptimizerResult.StructureObjectiveValues
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  type: Property
+  source:
+    id: StructureObjectiveValues
+    path: ''
+    startLine: 114621
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  id: TotalObjectiveFunctionValue
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: TotalObjectiveFunctionValue
+  nameWithType: OptimizerResult.TotalObjectiveFunctionValue
+  fullName: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  type: Property
+  source:
+    id: TotalObjectiveFunctionValue
+    path: ''
+    startLine: 114677
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TotalObjectiveFunctionValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TotalObjectiveFunctionValue As Double
+  overload: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  id: NumberOfIMRTOptimizerIterations
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: NumberOfIMRTOptimizerIterations
+  nameWithType: OptimizerResult.NumberOfIMRTOptimizerIterations
+  fullName: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  type: Property
+  source:
+    id: NumberOfIMRTOptimizerIterations
+    path: ''
+    startLine: 114719
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int NumberOfIMRTOptimizerIterations { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
+  overload: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult()
+  nameWithType: OptimizerResult.OptimizerResult()
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 114761
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult(Object)
+  nameWithType: OptimizerResult.OptimizerResult(Object)
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 114766
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  id: StructureDVHs
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureDVHs
+  nameWithType: OptimizerResult.StructureDVHs
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureDVHs
+  type: Property
+  source:
+    id: StructureDVHs
+    path: ''
+    startLine: 146627
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerDVH> StructureDVHs { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerDVH}
+    content.vb: Public Property StructureDVHs As IEnumerable(Of OptimizerDVH)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  id: StructureObjectiveValues
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: StructureObjectiveValues
+  nameWithType: OptimizerResult.StructureObjectiveValues
+  fullName: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues
+  type: Property
+  source:
+    id: StructureObjectiveValues
+    path: ''
+    startLine: 146683
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<OptimizerObjectiveValue> StructureObjectiveValues { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.OptimizerObjectiveValue}
+    content.vb: Public Property StructureObjectiveValues As IEnumerable(Of OptimizerObjectiveValue)
+  overload: ESAPIX.Facade.API.OptimizerResult.StructureObjectiveValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  id: TotalObjectiveFunctionValue
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: TotalObjectiveFunctionValue
+  nameWithType: OptimizerResult.TotalObjectiveFunctionValue
+  fullName: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue
+  type: Property
+  source:
+    id: TotalObjectiveFunctionValue
+    path: ''
+    startLine: 146739
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TotalObjectiveFunctionValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TotalObjectiveFunctionValue As Double
+  overload: ESAPIX.Facade.API.OptimizerResult.TotalObjectiveFunctionValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  commentId: P:ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  id: NumberOfIMRTOptimizerIterations
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: NumberOfIMRTOptimizerIterations
+  nameWithType: OptimizerResult.NumberOfIMRTOptimizerIterations
+  fullName: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations
+  type: Property
+  source:
+    id: NumberOfIMRTOptimizerIterations
+    path: ''
+    startLine: 146781
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int NumberOfIMRTOptimizerIterations { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfIMRTOptimizerIterations As Integer
+  overload: ESAPIX.Facade.API.OptimizerResult.NumberOfIMRTOptimizerIterations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult()
+  nameWithType: OptimizerResult.OptimizerResult()
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 146823
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerResult.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerResult
+  langs:
+  - csharp
+  - vb
+  name: OptimizerResult(Object)
+  nameWithType: OptimizerResult.OptimizerResult(Object)
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 146828
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerResult(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  modifiers.csharp:
+  - public
   modifiers.vb:
   - Public
 references:
@@ -280,6 +989,13 @@ references:
   name: CalculationResult
   nameWithType: CalculationResult
   fullName: ESAPIX.Facade.API.CalculationResult
+- uid: ESAPIX.Facade.API.CalculationResult.IsLive
+  commentId: P:ESAPIX.Facade.API.CalculationResult.IsLive
+  parent: ESAPIX.Facade.API.CalculationResult
+  isExternal: false
+  name: IsLive
+  nameWithType: CalculationResult.IsLive
+  fullName: ESAPIX.Facade.API.CalculationResult.IsLive
 - uid: ESAPIX.Facade.API.CalculationResult.Success
   commentId: P:ESAPIX.Facade.API.CalculationResult.Success
   parent: ESAPIX.Facade.API.CalculationResult
@@ -572,25 +1288,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.OptimizerResult.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.#ctor
-  isExternal: false
-  name: OptimizerResult
-  nameWithType: OptimizerResult.OptimizerResult
-  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult
-- uid: ESAPIX.Facade.API.OptimizerResult.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: OptimizerResult.IsLive
-  fullName: ESAPIX.Facade.API.OptimizerResult.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizerResult.StructureDVHs*
   commentId: Overload:ESAPIX.Facade.API.OptimizerResult.StructureDVHs
   isExternal: false
@@ -749,3 +1446,9 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: ESAPIX.Facade.API.OptimizerResult.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerResult.#ctor
+  isExternal: false
+  name: OptimizerResult
+  nameWithType: OptimizerResult.OptimizerResult
+  fullName: ESAPIX.Facade.API.OptimizerResult.OptimizerResult

@@ -2,9 +2,10 @@
 
 using System.Collections.Generic;
 using System.IO;
-using ESAPIX.AppKit;
 using ESAPIX.Interfaces;
 using Newtonsoft.Json;
+using ESAPIX.Common;
+using ESAPIX.Extensions;
 
 #endregion
 
@@ -26,7 +27,9 @@ namespace ESAPIX.Facade.Serialization
                         new ProfilePointConverter(),
                         new DoseProfileConverter(),
                         new DVHPointConverter(),
+#if !VMS110
                         new StructureCodeInfoConverter(),
+#endif
                         new DoseValueConverter(),
                         new ControlPointCollectionConverter()
                     },
@@ -43,7 +46,7 @@ namespace ESAPIX.Facade.Serialization
                 {
                     TypeNameHandling = TypeNameHandling.None,
                     ContractResolver = new ESAPIContractResolver(),
-                    Converters = new List<JsonConverter> {new DoseProfileConverter()}
+                    Converters = new List<JsonConverter> { new DoseProfileConverter() }
                 };
             }
         }
@@ -101,28 +104,33 @@ namespace ESAPIX.Facade.Serialization
         public static OfflineContext DeserializeContext(string jsonPath)
         {
             var ctx = DeserializeFromFile<OfflineContext>(jsonPath);
+#if !VMS110
             //BRACHY
             if (ctx.BrachyPlanSetup != null) ctx.BrachyPlanSetup.Course = ctx.Course;
             if (ctx.BrachyPlansInScope != null)
                 foreach (var ps in ctx.BrachyPlansInScope)
-                    ps.Course = ctx.Course;
-            //PLAN SETUPS
-            if (ctx.PlanSetup != null) ctx.PlanSetup.Course = ctx.Course;
-            if (ctx.PlansInScope != null)
-                foreach (var ps in ctx.PlansInScope)
                     ps.Course = ctx.Course;
             //EXTERNAL PLAN SETUPS
             if (ctx.ExternalPlanSetup != null) ctx.ExternalPlanSetup.Course = ctx.Course;
             if (ctx.ExternalPlansInScope != null)
                 foreach (var ps in ctx.PlansInScope)
                     ps.Course = ctx.Course;
+#endif
+            //PLAN SETUPS
+            if (ctx.PlanSetup != null) ctx.PlanSetup.Course = ctx.Course;
+            if (ctx.PlansInScope != null)
+                foreach (var ps in ctx.PlansInScope)
+                    ps.Course = ctx.Course;
+
 
             //PLAN SUMS
+#if !VMS110
             if (ctx.PlanSumsInScope != null)
                 foreach (var ps in ctx.PlanSumsInScope)
                     ps.Course = ctx.Course;
-
+#endif
             return ctx;
         }
+
     }
 }

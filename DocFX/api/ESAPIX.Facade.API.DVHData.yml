@@ -6,18 +6,71 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.DVHData.#ctor
+  - ESAPIX.Facade.API.DVHData.#ctor
+  - ESAPIX.Facade.API.DVHData.#ctor
+  - ESAPIX.Facade.API.DVHData.#ctor
+  - ESAPIX.Facade.API.DVHData.#ctor
+  - ESAPIX.Facade.API.DVHData.#ctor
+  - ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  - ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  - ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  - ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  - ESAPIX.Facade.API.DVHData.#ctor(System.Object)
   - ESAPIX.Facade.API.DVHData.#ctor(System.Object)
   - ESAPIX.Facade.API.DVHData.Coverage
+  - ESAPIX.Facade.API.DVHData.Coverage
+  - ESAPIX.Facade.API.DVHData.Coverage
+  - ESAPIX.Facade.API.DVHData.Coverage
+  - ESAPIX.Facade.API.DVHData.Coverage
+  - ESAPIX.Facade.API.DVHData.Coverage
   - ESAPIX.Facade.API.DVHData.CurveData
-  - ESAPIX.Facade.API.DVHData.IsLive
+  - ESAPIX.Facade.API.DVHData.CurveData
+  - ESAPIX.Facade.API.DVHData.CurveData
+  - ESAPIX.Facade.API.DVHData.CurveData
+  - ESAPIX.Facade.API.DVHData.CurveData
+  - ESAPIX.Facade.API.DVHData.CurveData
+  - ESAPIX.Facade.API.DVHData.MaxDose
+  - ESAPIX.Facade.API.DVHData.MaxDose
+  - ESAPIX.Facade.API.DVHData.MaxDose
+  - ESAPIX.Facade.API.DVHData.MaxDose
+  - ESAPIX.Facade.API.DVHData.MaxDose
   - ESAPIX.Facade.API.DVHData.MaxDose
   - ESAPIX.Facade.API.DVHData.MeanDose
+  - ESAPIX.Facade.API.DVHData.MeanDose
+  - ESAPIX.Facade.API.DVHData.MeanDose
+  - ESAPIX.Facade.API.DVHData.MeanDose
+  - ESAPIX.Facade.API.DVHData.MeanDose
+  - ESAPIX.Facade.API.DVHData.MeanDose
+  - ESAPIX.Facade.API.DVHData.MedianDose
+  - ESAPIX.Facade.API.DVHData.MedianDose
+  - ESAPIX.Facade.API.DVHData.MedianDose
+  - ESAPIX.Facade.API.DVHData.MedianDose
+  - ESAPIX.Facade.API.DVHData.MedianDose
   - ESAPIX.Facade.API.DVHData.MedianDose
   - ESAPIX.Facade.API.DVHData.MinDose
+  - ESAPIX.Facade.API.DVHData.MinDose
+  - ESAPIX.Facade.API.DVHData.MinDose
+  - ESAPIX.Facade.API.DVHData.MinDose
+  - ESAPIX.Facade.API.DVHData.MinDose
+  - ESAPIX.Facade.API.DVHData.MinDose
+  - ESAPIX.Facade.API.DVHData.SamplingCoverage
+  - ESAPIX.Facade.API.DVHData.SamplingCoverage
+  - ESAPIX.Facade.API.DVHData.SamplingCoverage
+  - ESAPIX.Facade.API.DVHData.SamplingCoverage
+  - ESAPIX.Facade.API.DVHData.SamplingCoverage
   - ESAPIX.Facade.API.DVHData.SamplingCoverage
   - ESAPIX.Facade.API.DVHData.StdDev
+  - ESAPIX.Facade.API.DVHData.StdDev
+  - ESAPIX.Facade.API.DVHData.StdDev
+  - ESAPIX.Facade.API.DVHData.StdDev
+  - ESAPIX.Facade.API.DVHData.StdDev
+  - ESAPIX.Facade.API.DVHData.StdDev
   - ESAPIX.Facade.API.DVHData.Volume
-  - ESAPIX.Facade.API.DVHData.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.DVHData.Volume
+  - ESAPIX.Facade.API.DVHData.Volume
+  - ESAPIX.Facade.API.DVHData.Volume
+  - ESAPIX.Facade.API.DVHData.Volume
+  - ESAPIX.Facade.API.DVHData.Volume
   langs:
   - csharp
   - vb
@@ -28,35 +81,312 @@ items:
   source:
     id: DVHData
     path: ''
-    startLine: 8930
+    startLine: 137701
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class DVHData : SerializableObject'
+    content: 'public class DVHData : SerializableObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class DVHData
           Inherits SerializableObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
+- uid: ESAPIX.Facade.API.DVHData.Coverage
+  commentId: P:ESAPIX.Facade.API.DVHData.Coverage
+  id: Coverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Coverage
+  nameWithType: DVHData.Coverage
+  fullName: ESAPIX.Facade.API.DVHData.Coverage
+  type: Property
+  source:
+    id: Coverage
+    path: ''
+    startLine: 8445
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Coverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Coverage As Double
+  overload: ESAPIX.Facade.API.DVHData.Coverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Volume
+  commentId: P:ESAPIX.Facade.API.DVHData.Volume
+  id: Volume
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: DVHData.Volume
+  fullName: ESAPIX.Facade.API.DVHData.Volume
+  type: Property
+  source:
+    id: Volume
+    path: ''
+    startLine: 8487
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Volume { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Volume As Double
+  overload: ESAPIX.Facade.API.DVHData.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MinDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MinDose
+  id: MinDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MinDose
+  nameWithType: DVHData.MinDose
+  fullName: ESAPIX.Facade.API.DVHData.MinDose
+  type: Property
+  source:
+    id: MinDose
+    path: ''
+    startLine: 8529
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MinDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MinDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MinDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MaxDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MaxDose
+  id: MaxDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MaxDose
+  nameWithType: DVHData.MaxDose
+  fullName: ESAPIX.Facade.API.DVHData.MaxDose
+  type: Property
+  source:
+    id: MaxDose
+    path: ''
+    startLine: 8571
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MaxDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MaxDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MaxDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MeanDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MeanDose
+  id: MeanDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MeanDose
+  nameWithType: DVHData.MeanDose
+  fullName: ESAPIX.Facade.API.DVHData.MeanDose
+  type: Property
+  source:
+    id: MeanDose
+    path: ''
+    startLine: 8613
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MeanDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MeanDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MeanDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MedianDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MedianDose
+  id: MedianDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MedianDose
+  nameWithType: DVHData.MedianDose
+  fullName: ESAPIX.Facade.API.DVHData.MedianDose
+  type: Property
+  source:
+    id: MedianDose
+    path: ''
+    startLine: 8655
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MedianDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MedianDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MedianDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.StdDev
+  commentId: P:ESAPIX.Facade.API.DVHData.StdDev
+  id: StdDev
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: StdDev
+  nameWithType: DVHData.StdDev
+  fullName: ESAPIX.Facade.API.DVHData.StdDev
+  type: Property
+  source:
+    id: StdDev
+    path: ''
+    startLine: 8697
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StdDev { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StdDev As Double
+  overload: ESAPIX.Facade.API.DVHData.StdDev*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  commentId: P:ESAPIX.Facade.API.DVHData.SamplingCoverage
+  id: SamplingCoverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: SamplingCoverage
+  nameWithType: DVHData.SamplingCoverage
+  fullName: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  type: Property
+  source:
+    id: SamplingCoverage
+    path: ''
+    startLine: 8739
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SamplingCoverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SamplingCoverage As Double
+  overload: ESAPIX.Facade.API.DVHData.SamplingCoverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.CurveData
+  commentId: P:ESAPIX.Facade.API.DVHData.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: DVHData.CurveData
+  fullName: ESAPIX.Facade.API.DVHData.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 8781
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.DVHData.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: ESAPIX.Facade.API.DVHData.#ctor
   commentId: M:ESAPIX.Facade.API.DVHData.#ctor
   id: '#ctor'
@@ -71,7 +401,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8932
+    startLine: 8823
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -97,7 +427,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8937
+    startLine: 8828
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -112,37 +442,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.DVHData.IsLive
-  commentId: P:ESAPIX.Facade.API.DVHData.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.DVHData
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: DVHData.IsLive
-  fullName: ESAPIX.Facade.API.DVHData.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 8942
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.DVHData.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.DVHData.Coverage
   commentId: P:ESAPIX.Facade.API.DVHData.Coverage
   id: Coverage
@@ -157,7 +456,7 @@ items:
   source:
     id: Coverage
     path: ''
-    startLine: 8947
+    startLine: 24346
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -188,16 +487,16 @@ items:
   source:
     id: CurveData
     path: ''
-    startLine: 8962
+    startLine: 24388
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DVHPoint[] CurveData { get; set; }
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
     parameters: []
     return:
-      type: DVHPoint[]
-    content.vb: Public Property CurveData As DVHPoint()
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
   overload: ESAPIX.Facade.API.DVHData.CurveData*
   modifiers.csharp:
   - public
@@ -219,16 +518,16 @@ items:
   source:
     id: MaxDose
     path: ''
-    startLine: 8979
+    startLine: 24430
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DoseValue MaxDose { get; set; }
+    content: public Common.Model.Types.DoseValue MaxDose { get; set; }
     parameters: []
     return:
-      type: DoseValue
-    content.vb: Public Property MaxDose As DoseValue
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MaxDose As Common.Model.Types.DoseValue
   overload: ESAPIX.Facade.API.DVHData.MaxDose*
   modifiers.csharp:
   - public
@@ -250,16 +549,16 @@ items:
   source:
     id: MeanDose
     path: ''
-    startLine: 8994
+    startLine: 24472
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DoseValue MeanDose { get; set; }
+    content: public Common.Model.Types.DoseValue MeanDose { get; set; }
     parameters: []
     return:
-      type: DoseValue
-    content.vb: Public Property MeanDose As DoseValue
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MeanDose As Common.Model.Types.DoseValue
   overload: ESAPIX.Facade.API.DVHData.MeanDose*
   modifiers.csharp:
   - public
@@ -281,16 +580,16 @@ items:
   source:
     id: MedianDose
     path: ''
-    startLine: 9009
+    startLine: 24514
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DoseValue MedianDose { get; set; }
+    content: public Common.Model.Types.DoseValue MedianDose { get; set; }
     parameters: []
     return:
-      type: DoseValue
-    content.vb: Public Property MedianDose As DoseValue
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MedianDose As Common.Model.Types.DoseValue
   overload: ESAPIX.Facade.API.DVHData.MedianDose*
   modifiers.csharp:
   - public
@@ -312,16 +611,16 @@ items:
   source:
     id: MinDose
     path: ''
-    startLine: 9026
+    startLine: 24556
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DoseValue MinDose { get; set; }
+    content: public Common.Model.Types.DoseValue MinDose { get; set; }
     parameters: []
     return:
-      type: DoseValue
-    content.vb: Public Property MinDose As DoseValue
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MinDose As Common.Model.Types.DoseValue
   overload: ESAPIX.Facade.API.DVHData.MinDose*
   modifiers.csharp:
   - public
@@ -343,7 +642,7 @@ items:
   source:
     id: SamplingCoverage
     path: ''
-    startLine: 9041
+    startLine: 24598
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -374,7 +673,7 @@ items:
   source:
     id: StdDev
     path: ''
-    startLine: 9058
+    startLine: 24640
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -405,7 +704,7 @@ items:
   source:
     id: Volume
     path: ''
-    startLine: 9073
+    startLine: 24682
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -422,31 +721,1393 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.DVHData.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.DVHData.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.DVHData.#ctor
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.DVHData
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: DVHData.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.DVHData.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: DVHData()
+  nameWithType: DVHData.DVHData()
+  fullName: ESAPIX.Facade.API.DVHData.DVHData()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 9088
+    startLine: 24724
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public DVHData()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData(Object)
+  nameWithType: DVHData.DVHData(Object)
+  fullName: ESAPIX.Facade.API.DVHData.DVHData(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 24729
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.DVHData.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Coverage
+  commentId: P:ESAPIX.Facade.API.DVHData.Coverage
+  id: Coverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Coverage
+  nameWithType: DVHData.Coverage
+  fullName: ESAPIX.Facade.API.DVHData.Coverage
+  type: Property
+  source:
+    id: Coverage
+    path: ''
+    startLine: 47611
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Coverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Coverage As Double
+  overload: ESAPIX.Facade.API.DVHData.Coverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.CurveData
+  commentId: P:ESAPIX.Facade.API.DVHData.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: DVHData.CurveData
+  fullName: ESAPIX.Facade.API.DVHData.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 47653
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.DVHData.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MaxDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MaxDose
+  id: MaxDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MaxDose
+  nameWithType: DVHData.MaxDose
+  fullName: ESAPIX.Facade.API.DVHData.MaxDose
+  type: Property
+  source:
+    id: MaxDose
+    path: ''
+    startLine: 47695
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MaxDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MaxDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MaxDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MeanDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MeanDose
+  id: MeanDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MeanDose
+  nameWithType: DVHData.MeanDose
+  fullName: ESAPIX.Facade.API.DVHData.MeanDose
+  type: Property
+  source:
+    id: MeanDose
+    path: ''
+    startLine: 47737
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MeanDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MeanDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MeanDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MedianDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MedianDose
+  id: MedianDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MedianDose
+  nameWithType: DVHData.MedianDose
+  fullName: ESAPIX.Facade.API.DVHData.MedianDose
+  type: Property
+  source:
+    id: MedianDose
+    path: ''
+    startLine: 47779
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MedianDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MedianDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MedianDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MinDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MinDose
+  id: MinDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MinDose
+  nameWithType: DVHData.MinDose
+  fullName: ESAPIX.Facade.API.DVHData.MinDose
+  type: Property
+  source:
+    id: MinDose
+    path: ''
+    startLine: 47821
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MinDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MinDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MinDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  commentId: P:ESAPIX.Facade.API.DVHData.SamplingCoverage
+  id: SamplingCoverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: SamplingCoverage
+  nameWithType: DVHData.SamplingCoverage
+  fullName: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  type: Property
+  source:
+    id: SamplingCoverage
+    path: ''
+    startLine: 47863
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SamplingCoverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SamplingCoverage As Double
+  overload: ESAPIX.Facade.API.DVHData.SamplingCoverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.StdDev
+  commentId: P:ESAPIX.Facade.API.DVHData.StdDev
+  id: StdDev
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: StdDev
+  nameWithType: DVHData.StdDev
+  fullName: ESAPIX.Facade.API.DVHData.StdDev
+  type: Property
+  source:
+    id: StdDev
+    path: ''
+    startLine: 47905
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StdDev { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StdDev As Double
+  overload: ESAPIX.Facade.API.DVHData.StdDev*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Volume
+  commentId: P:ESAPIX.Facade.API.DVHData.Volume
+  id: Volume
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: DVHData.Volume
+  fullName: ESAPIX.Facade.API.DVHData.Volume
+  type: Property
+  source:
+    id: Volume
+    path: ''
+    startLine: 47947
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Volume { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Volume As Double
+  overload: ESAPIX.Facade.API.DVHData.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData()
+  nameWithType: DVHData.DVHData()
+  fullName: ESAPIX.Facade.API.DVHData.DVHData()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 47989
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData(Object)
+  nameWithType: DVHData.DVHData(Object)
+  fullName: ESAPIX.Facade.API.DVHData.DVHData(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 47994
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Coverage
+  commentId: P:ESAPIX.Facade.API.DVHData.Coverage
+  id: Coverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Coverage
+  nameWithType: DVHData.Coverage
+  fullName: ESAPIX.Facade.API.DVHData.Coverage
+  type: Property
+  source:
+    id: Coverage
+    path: ''
+    startLine: 76367
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Coverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Coverage As Double
+  overload: ESAPIX.Facade.API.DVHData.Coverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.CurveData
+  commentId: P:ESAPIX.Facade.API.DVHData.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: DVHData.CurveData
+  fullName: ESAPIX.Facade.API.DVHData.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 76409
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.DVHData.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MaxDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MaxDose
+  id: MaxDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MaxDose
+  nameWithType: DVHData.MaxDose
+  fullName: ESAPIX.Facade.API.DVHData.MaxDose
+  type: Property
+  source:
+    id: MaxDose
+    path: ''
+    startLine: 76451
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MaxDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MaxDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MaxDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MeanDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MeanDose
+  id: MeanDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MeanDose
+  nameWithType: DVHData.MeanDose
+  fullName: ESAPIX.Facade.API.DVHData.MeanDose
+  type: Property
+  source:
+    id: MeanDose
+    path: ''
+    startLine: 76493
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MeanDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MeanDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MeanDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MedianDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MedianDose
+  id: MedianDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MedianDose
+  nameWithType: DVHData.MedianDose
+  fullName: ESAPIX.Facade.API.DVHData.MedianDose
+  type: Property
+  source:
+    id: MedianDose
+    path: ''
+    startLine: 76535
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MedianDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MedianDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MedianDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MinDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MinDose
+  id: MinDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MinDose
+  nameWithType: DVHData.MinDose
+  fullName: ESAPIX.Facade.API.DVHData.MinDose
+  type: Property
+  source:
+    id: MinDose
+    path: ''
+    startLine: 76577
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MinDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MinDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MinDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  commentId: P:ESAPIX.Facade.API.DVHData.SamplingCoverage
+  id: SamplingCoverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: SamplingCoverage
+  nameWithType: DVHData.SamplingCoverage
+  fullName: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  type: Property
+  source:
+    id: SamplingCoverage
+    path: ''
+    startLine: 76619
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SamplingCoverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SamplingCoverage As Double
+  overload: ESAPIX.Facade.API.DVHData.SamplingCoverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.StdDev
+  commentId: P:ESAPIX.Facade.API.DVHData.StdDev
+  id: StdDev
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: StdDev
+  nameWithType: DVHData.StdDev
+  fullName: ESAPIX.Facade.API.DVHData.StdDev
+  type: Property
+  source:
+    id: StdDev
+    path: ''
+    startLine: 76661
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StdDev { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StdDev As Double
+  overload: ESAPIX.Facade.API.DVHData.StdDev*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Volume
+  commentId: P:ESAPIX.Facade.API.DVHData.Volume
+  id: Volume
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: DVHData.Volume
+  fullName: ESAPIX.Facade.API.DVHData.Volume
+  type: Property
+  source:
+    id: Volume
+    path: ''
+    startLine: 76703
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Volume { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Volume As Double
+  overload: ESAPIX.Facade.API.DVHData.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData()
+  nameWithType: DVHData.DVHData()
+  fullName: ESAPIX.Facade.API.DVHData.DVHData()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 76745
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData(Object)
+  nameWithType: DVHData.DVHData(Object)
+  fullName: ESAPIX.Facade.API.DVHData.DVHData(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 76750
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Coverage
+  commentId: P:ESAPIX.Facade.API.DVHData.Coverage
+  id: Coverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Coverage
+  nameWithType: DVHData.Coverage
+  fullName: ESAPIX.Facade.API.DVHData.Coverage
+  type: Property
+  source:
+    id: Coverage
+    path: ''
+    startLine: 105729
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Coverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Coverage As Double
+  overload: ESAPIX.Facade.API.DVHData.Coverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.CurveData
+  commentId: P:ESAPIX.Facade.API.DVHData.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: DVHData.CurveData
+  fullName: ESAPIX.Facade.API.DVHData.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 105771
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.DVHData.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MaxDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MaxDose
+  id: MaxDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MaxDose
+  nameWithType: DVHData.MaxDose
+  fullName: ESAPIX.Facade.API.DVHData.MaxDose
+  type: Property
+  source:
+    id: MaxDose
+    path: ''
+    startLine: 105813
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MaxDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MaxDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MaxDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MeanDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MeanDose
+  id: MeanDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MeanDose
+  nameWithType: DVHData.MeanDose
+  fullName: ESAPIX.Facade.API.DVHData.MeanDose
+  type: Property
+  source:
+    id: MeanDose
+    path: ''
+    startLine: 105855
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MeanDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MeanDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MeanDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MedianDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MedianDose
+  id: MedianDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MedianDose
+  nameWithType: DVHData.MedianDose
+  fullName: ESAPIX.Facade.API.DVHData.MedianDose
+  type: Property
+  source:
+    id: MedianDose
+    path: ''
+    startLine: 105897
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MedianDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MedianDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MedianDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MinDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MinDose
+  id: MinDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MinDose
+  nameWithType: DVHData.MinDose
+  fullName: ESAPIX.Facade.API.DVHData.MinDose
+  type: Property
+  source:
+    id: MinDose
+    path: ''
+    startLine: 105939
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MinDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MinDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MinDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  commentId: P:ESAPIX.Facade.API.DVHData.SamplingCoverage
+  id: SamplingCoverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: SamplingCoverage
+  nameWithType: DVHData.SamplingCoverage
+  fullName: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  type: Property
+  source:
+    id: SamplingCoverage
+    path: ''
+    startLine: 105981
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SamplingCoverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SamplingCoverage As Double
+  overload: ESAPIX.Facade.API.DVHData.SamplingCoverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.StdDev
+  commentId: P:ESAPIX.Facade.API.DVHData.StdDev
+  id: StdDev
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: StdDev
+  nameWithType: DVHData.StdDev
+  fullName: ESAPIX.Facade.API.DVHData.StdDev
+  type: Property
+  source:
+    id: StdDev
+    path: ''
+    startLine: 106023
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StdDev { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StdDev As Double
+  overload: ESAPIX.Facade.API.DVHData.StdDev*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Volume
+  commentId: P:ESAPIX.Facade.API.DVHData.Volume
+  id: Volume
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: DVHData.Volume
+  fullName: ESAPIX.Facade.API.DVHData.Volume
+  type: Property
+  source:
+    id: Volume
+    path: ''
+    startLine: 106065
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Volume { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Volume As Double
+  overload: ESAPIX.Facade.API.DVHData.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData()
+  nameWithType: DVHData.DVHData()
+  fullName: ESAPIX.Facade.API.DVHData.DVHData()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 106107
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData(Object)
+  nameWithType: DVHData.DVHData(Object)
+  fullName: ESAPIX.Facade.API.DVHData.DVHData(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 106112
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Coverage
+  commentId: P:ESAPIX.Facade.API.DVHData.Coverage
+  id: Coverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Coverage
+  nameWithType: DVHData.Coverage
+  fullName: ESAPIX.Facade.API.DVHData.Coverage
+  type: Property
+  source:
+    id: Coverage
+    path: ''
+    startLine: 137703
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Coverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Coverage As Double
+  overload: ESAPIX.Facade.API.DVHData.Coverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.CurveData
+  commentId: P:ESAPIX.Facade.API.DVHData.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: DVHData.CurveData
+  fullName: ESAPIX.Facade.API.DVHData.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 137745
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.DVHData.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MaxDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MaxDose
+  id: MaxDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MaxDose
+  nameWithType: DVHData.MaxDose
+  fullName: ESAPIX.Facade.API.DVHData.MaxDose
+  type: Property
+  source:
+    id: MaxDose
+    path: ''
+    startLine: 137787
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MaxDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MaxDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MaxDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MeanDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MeanDose
+  id: MeanDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MeanDose
+  nameWithType: DVHData.MeanDose
+  fullName: ESAPIX.Facade.API.DVHData.MeanDose
+  type: Property
+  source:
+    id: MeanDose
+    path: ''
+    startLine: 137829
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MeanDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MeanDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MeanDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MedianDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MedianDose
+  id: MedianDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MedianDose
+  nameWithType: DVHData.MedianDose
+  fullName: ESAPIX.Facade.API.DVHData.MedianDose
+  type: Property
+  source:
+    id: MedianDose
+    path: ''
+    startLine: 137871
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MedianDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MedianDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MedianDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.MinDose
+  commentId: P:ESAPIX.Facade.API.DVHData.MinDose
+  id: MinDose
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: MinDose
+  nameWithType: DVHData.MinDose
+  fullName: ESAPIX.Facade.API.DVHData.MinDose
+  type: Property
+  source:
+    id: MinDose
+    path: ''
+    startLine: 137913
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue MinDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property MinDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.DVHData.MinDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  commentId: P:ESAPIX.Facade.API.DVHData.SamplingCoverage
+  id: SamplingCoverage
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: SamplingCoverage
+  nameWithType: DVHData.SamplingCoverage
+  fullName: ESAPIX.Facade.API.DVHData.SamplingCoverage
+  type: Property
+  source:
+    id: SamplingCoverage
+    path: ''
+    startLine: 137955
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SamplingCoverage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SamplingCoverage As Double
+  overload: ESAPIX.Facade.API.DVHData.SamplingCoverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.StdDev
+  commentId: P:ESAPIX.Facade.API.DVHData.StdDev
+  id: StdDev
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: StdDev
+  nameWithType: DVHData.StdDev
+  fullName: ESAPIX.Facade.API.DVHData.StdDev
+  type: Property
+  source:
+    id: StdDev
+    path: ''
+    startLine: 137997
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StdDev { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StdDev As Double
+  overload: ESAPIX.Facade.API.DVHData.StdDev*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.Volume
+  commentId: P:ESAPIX.Facade.API.DVHData.Volume
+  id: Volume
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: DVHData.Volume
+  fullName: ESAPIX.Facade.API.DVHData.Volume
+  type: Property
+  source:
+    id: Volume
+    path: ''
+    startLine: 138039
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Volume { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Volume As Double
+  overload: ESAPIX.Facade.API.DVHData.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData()
+  nameWithType: DVHData.DVHData()
+  fullName: ESAPIX.Facade.API.DVHData.DVHData()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 138081
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.DVHData.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.DVHData
+  langs:
+  - csharp
+  - vb
+  name: DVHData(Object)
+  nameWithType: DVHData.DVHData(Object)
+  fullName: ESAPIX.Facade.API.DVHData.DVHData(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 138086
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.DVHData.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -472,6 +2133,18 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -540,6 +2213,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -569,310 +2281,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.DVHData.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.DVHData.#ctor
-  isExternal: false
-  name: DVHData
-  nameWithType: DVHData.DVHData
-  fullName: ESAPIX.Facade.API.DVHData.DVHData
-- uid: ESAPIX.Facade.API.DVHData.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.DVHData.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: DVHData.IsLive
-  fullName: ESAPIX.Facade.API.DVHData.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.DVHData.Coverage*
   commentId: Overload:ESAPIX.Facade.API.DVHData.Coverage
   isExternal: false
@@ -886,48 +2300,29 @@ references:
   name: Double
   nameWithType: Double
   fullName: System.Double
-- uid: ESAPIX.Facade.API.DVHData.CurveData*
-  commentId: Overload:ESAPIX.Facade.API.DVHData.CurveData
+- uid: ESAPIX.Facade.API.DVHData.Volume*
+  commentId: Overload:ESAPIX.Facade.API.DVHData.Volume
   isExternal: false
-  name: CurveData
-  nameWithType: DVHData.CurveData
-  fullName: ESAPIX.Facade.API.DVHData.CurveData
-- uid: DVHPoint[]
-  name: DVHPoint[]
-  nameWithType: DVHPoint[]
-  fullName: DVHPoint[]
-  nameWithType.vb: DVHPoint()
-  fullName.vb: DVHPoint()
-  name.vb: DVHPoint()
-  spec.csharp:
-  - uid: DVHPoint
-    name: DVHPoint
-    nameWithType: DVHPoint
-    fullName: DVHPoint
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: DVHPoint
-    name: DVHPoint
-    nameWithType: DVHPoint
-    fullName: DVHPoint
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
+  name: Volume
+  nameWithType: DVHData.Volume
+  fullName: ESAPIX.Facade.API.DVHData.Volume
+- uid: ESAPIX.Facade.API.DVHData.MinDose*
+  commentId: Overload:ESAPIX.Facade.API.DVHData.MinDose
+  isExternal: false
+  name: MinDose
+  nameWithType: DVHData.MinDose
+  fullName: ESAPIX.Facade.API.DVHData.MinDose
+- uid: VMS.TPS.Common.Model.Types.DoseValue
+  isExternal: true
+  name: Common.Model.Types.DoseValue
+  nameWithType: Common.Model.Types.DoseValue
+  fullName: VMS.TPS.Common.Model.Types.DoseValue
 - uid: ESAPIX.Facade.API.DVHData.MaxDose*
   commentId: Overload:ESAPIX.Facade.API.DVHData.MaxDose
   isExternal: false
   name: MaxDose
   nameWithType: DVHData.MaxDose
   fullName: ESAPIX.Facade.API.DVHData.MaxDose
-- uid: DoseValue
-  isExternal: true
-  name: DoseValue
-  nameWithType: DoseValue
-  fullName: DoseValue
 - uid: ESAPIX.Facade.API.DVHData.MeanDose*
   commentId: Overload:ESAPIX.Facade.API.DVHData.MeanDose
   isExternal: false
@@ -940,38 +2335,52 @@ references:
   name: MedianDose
   nameWithType: DVHData.MedianDose
   fullName: ESAPIX.Facade.API.DVHData.MedianDose
-- uid: ESAPIX.Facade.API.DVHData.MinDose*
-  commentId: Overload:ESAPIX.Facade.API.DVHData.MinDose
-  isExternal: false
-  name: MinDose
-  nameWithType: DVHData.MinDose
-  fullName: ESAPIX.Facade.API.DVHData.MinDose
-- uid: ESAPIX.Facade.API.DVHData.SamplingCoverage*
-  commentId: Overload:ESAPIX.Facade.API.DVHData.SamplingCoverage
-  isExternal: false
-  name: SamplingCoverage
-  nameWithType: DVHData.SamplingCoverage
-  fullName: ESAPIX.Facade.API.DVHData.SamplingCoverage
 - uid: ESAPIX.Facade.API.DVHData.StdDev*
   commentId: Overload:ESAPIX.Facade.API.DVHData.StdDev
   isExternal: false
   name: StdDev
   nameWithType: DVHData.StdDev
   fullName: ESAPIX.Facade.API.DVHData.StdDev
-- uid: ESAPIX.Facade.API.DVHData.Volume*
-  commentId: Overload:ESAPIX.Facade.API.DVHData.Volume
+- uid: ESAPIX.Facade.API.DVHData.SamplingCoverage*
+  commentId: Overload:ESAPIX.Facade.API.DVHData.SamplingCoverage
   isExternal: false
-  name: Volume
-  nameWithType: DVHData.Volume
-  fullName: ESAPIX.Facade.API.DVHData.Volume
-- uid: ESAPIX.Facade.API.DVHData.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.DVHData.WriteXml
+  name: SamplingCoverage
+  nameWithType: DVHData.SamplingCoverage
+  fullName: ESAPIX.Facade.API.DVHData.SamplingCoverage
+- uid: ESAPIX.Facade.API.DVHData.CurveData*
+  commentId: Overload:ESAPIX.Facade.API.DVHData.CurveData
   isExternal: false
-  name: WriteXml
-  nameWithType: DVHData.WriteXml
-  fullName: ESAPIX.Facade.API.DVHData.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: CurveData
+  nameWithType: DVHData.CurveData
+  fullName: ESAPIX.Facade.API.DVHData.CurveData
+- uid: VMS.TPS.Common.Model.Types.DVHPoint[]
+  name: Common.Model.Types.DVHPoint[]
+  nameWithType: Common.Model.Types.DVHPoint[]
+  fullName: VMS.TPS.Common.Model.Types.DVHPoint[]
+  nameWithType.vb: Common.Model.Types.DVHPoint()
+  fullName.vb: VMS.TPS.Common.Model.Types.DVHPoint()
+  name.vb: Common.Model.Types.DVHPoint()
+  spec.csharp:
+  - uid: VMS.TPS.Common.Model.Types.DVHPoint
+    name: Common.Model.Types.DVHPoint
+    nameWithType: Common.Model.Types.DVHPoint
+    fullName: VMS.TPS.Common.Model.Types.DVHPoint
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: VMS.TPS.Common.Model.Types.DVHPoint
+    name: Common.Model.Types.DVHPoint
+    nameWithType: Common.Model.Types.DVHPoint
+    fullName: VMS.TPS.Common.Model.Types.DVHPoint
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: ESAPIX.Facade.API.DVHData.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.DVHData.#ctor
+  isExternal: false
+  name: DVHData
+  nameWithType: DVHData.DVHData
+  fullName: ESAPIX.Facade.API.DVHData.DVHData

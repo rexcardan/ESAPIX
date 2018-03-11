@@ -5,6 +5,7 @@ items:
   id: PlanSumExtensions
   parent: ESAPIX.Extensions
   children:
+  - ESAPIX.Extensions.PlanSumExtensions.Course(PlanSum)
   - ESAPIX.Extensions.PlanSumExtensions.GetRelativeDVHCumulativeData(PlanSum,Structure,VolumePresentation,System.Double)
   langs:
   - csharp
@@ -16,7 +17,7 @@ items:
   source:
     id: PlanSumExtensions
     path: ''
-    startLine: 4017
+    startLine: 3752
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -55,7 +56,7 @@ items:
   source:
     id: GetRelativeDVHCumulativeData
     path: ''
-    startLine: 4029
+    startLine: 3764
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -84,6 +85,43 @@ items:
 
       Public Shared Function GetRelativeDVHCumulativeData(ps As PlanSum, s As  Structure, vPres As VolumePresentation, binWidth As Double) As DVHPoint()
   overload: ESAPIX.Extensions.PlanSumExtensions.GetRelativeDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Extensions.PlanSumExtensions.Course(PlanSum)
+  commentId: M:ESAPIX.Extensions.PlanSumExtensions.Course(PlanSum)
+  id: Course(PlanSum)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanSumExtensions
+  langs:
+  - csharp
+  - vb
+  name: Course(PlanSum)
+  nameWithType: PlanSumExtensions.Course(PlanSum)
+  fullName: ESAPIX.Extensions.PlanSumExtensions.Course(PlanSum)
+  type: Method
+  source:
+    id: Course
+    path: ''
+    startLine: 3774
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static Course Course(this PlanSum ps)
+    parameters:
+    - id: ps
+      type: PlanSum
+    return:
+      type: Course
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Course(ps As PlanSum) As Course
+  overload: ESAPIX.Extensions.PlanSumExtensions.Course*
   modifiers.csharp:
   - public
   - static
@@ -396,7 +434,6 @@ references:
   nameWithType: PlanSumExtensions.GetRelativeDVHCumulativeData
   fullName: ESAPIX.Extensions.PlanSumExtensions.GetRelativeDVHCumulativeData
 - uid: PlanSum
-  commentId: '!:PlanSum'
   isExternal: true
   name: PlanSum
   nameWithType: PlanSum
@@ -443,3 +480,14 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: ESAPIX.Extensions.PlanSumExtensions.Course*
+  commentId: Overload:ESAPIX.Extensions.PlanSumExtensions.Course
+  isExternal: false
+  name: Course
+  nameWithType: PlanSumExtensions.Course
+  fullName: ESAPIX.Extensions.PlanSumExtensions.Course
+- uid: Course
+  isExternal: true
+  name: Course
+  nameWithType: Course
+  fullName: Course

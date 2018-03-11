@@ -6,15 +6,45 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
-  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
-  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  - ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
   langs:
   - csharp
   - vb
@@ -25,122 +55,34 @@ items:
   source:
     id: OptimizationNormalTissueParameter
     path: ''
-    startLine: 11137
+    startLine: 145393
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class OptimizationNormalTissueParameter : OptimizationParameter'
+    content: 'public class OptimizationNormalTissueParameter : OptimizationParameter, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class OptimizationNormalTissueParameter
           Inherits OptimizationParameter
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.OptimizationParameter
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
-  - ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  - ESAPIX.Facade.API.OptimizationParameter.GetHashCode
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
-  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
-  langs:
-  - csharp
-  - vb
-  name: OptimizationNormalTissueParameter()
-  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
-  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11139
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizationNormalTissueParameter()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
-  langs:
-  - csharp
-  - vb
-  name: OptimizationNormalTissueParameter(Object)
-  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(Object)
-  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11144
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizationNormalTissueParameter(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
-  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: OptimizationNormalTissueParameter.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 11149
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
   commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
   id: DistanceFromTargetBorderInMM
@@ -155,7 +97,7 @@ items:
   source:
     id: DistanceFromTargetBorderInMM
     path: ''
-    startLine: 11154
+    startLine: 28912
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -186,7 +128,7 @@ items:
   source:
     id: EndDosePercentage
     path: ''
-    startLine: 11174
+    startLine: 28954
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -217,7 +159,7 @@ items:
   source:
     id: FallOff
     path: ''
-    startLine: 11191
+    startLine: 28996
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -248,7 +190,7 @@ items:
   source:
     id: IsAutomatic
     path: ''
-    startLine: 11206
+    startLine: 29038
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -279,7 +221,7 @@ items:
   source:
     id: Priority
     path: ''
-    startLine: 11221
+    startLine: 29080
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -310,7 +252,7 @@ items:
   source:
     id: StartDosePercentage
     path: ''
-    startLine: 11236
+    startLine: 29122
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -327,31 +269,1021 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: OptimizationNormalTissueParameter.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: OptimizationNormalTissueParameter()
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 11253
+    startLine: 29164
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public OptimizationNormalTissueParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter(Object)
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 29169
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  id: DistanceFromTargetBorderInMM
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: DistanceFromTargetBorderInMM
+  nameWithType: OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  type: Property
+  source:
+    id: DistanceFromTargetBorderInMM
+    path: ''
+    startLine: 55516
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DistanceFromTargetBorderInMM { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DistanceFromTargetBorderInMM As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  id: EndDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: EndDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.EndDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  type: Property
+  source:
+    id: EndDosePercentage
+    path: ''
+    startLine: 55558
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EndDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EndDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  id: FallOff
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: FallOff
+  nameWithType: OptimizationNormalTissueParameter.FallOff
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  type: Property
+  source:
+    id: FallOff
+    path: ''
+    startLine: 55600
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double FallOff { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property FallOff As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  id: IsAutomatic
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: IsAutomatic
+  nameWithType: OptimizationNormalTissueParameter.IsAutomatic
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  type: Property
+  source:
+    id: IsAutomatic
+    path: ''
+    startLine: 55642
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsAutomatic { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsAutomatic As Boolean
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationNormalTissueParameter.Priority
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 55684
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  id: StartDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: StartDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.StartDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  type: Property
+  source:
+    id: StartDosePercentage
+    path: ''
+    startLine: 55726
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StartDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter()
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 55768
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter(Object)
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 55773
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  id: DistanceFromTargetBorderInMM
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: DistanceFromTargetBorderInMM
+  nameWithType: OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  type: Property
+  source:
+    id: DistanceFromTargetBorderInMM
+    path: ''
+    startLine: 83865
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DistanceFromTargetBorderInMM { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DistanceFromTargetBorderInMM As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  id: EndDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: EndDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.EndDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  type: Property
+  source:
+    id: EndDosePercentage
+    path: ''
+    startLine: 83907
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EndDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EndDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  id: FallOff
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: FallOff
+  nameWithType: OptimizationNormalTissueParameter.FallOff
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  type: Property
+  source:
+    id: FallOff
+    path: ''
+    startLine: 83949
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double FallOff { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property FallOff As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  id: IsAutomatic
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: IsAutomatic
+  nameWithType: OptimizationNormalTissueParameter.IsAutomatic
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  type: Property
+  source:
+    id: IsAutomatic
+    path: ''
+    startLine: 83991
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsAutomatic { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsAutomatic As Boolean
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationNormalTissueParameter.Priority
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 84033
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  id: StartDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: StartDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.StartDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  type: Property
+  source:
+    id: StartDosePercentage
+    path: ''
+    startLine: 84075
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StartDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter()
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 84117
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter(Object)
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 84122
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  id: DistanceFromTargetBorderInMM
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: DistanceFromTargetBorderInMM
+  nameWithType: OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  type: Property
+  source:
+    id: DistanceFromTargetBorderInMM
+    path: ''
+    startLine: 113333
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DistanceFromTargetBorderInMM { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DistanceFromTargetBorderInMM As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  id: EndDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: EndDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.EndDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  type: Property
+  source:
+    id: EndDosePercentage
+    path: ''
+    startLine: 113375
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EndDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EndDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  id: FallOff
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: FallOff
+  nameWithType: OptimizationNormalTissueParameter.FallOff
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  type: Property
+  source:
+    id: FallOff
+    path: ''
+    startLine: 113417
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double FallOff { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property FallOff As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  id: IsAutomatic
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: IsAutomatic
+  nameWithType: OptimizationNormalTissueParameter.IsAutomatic
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  type: Property
+  source:
+    id: IsAutomatic
+    path: ''
+    startLine: 113459
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsAutomatic { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsAutomatic As Boolean
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationNormalTissueParameter.Priority
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 113501
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  id: StartDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: StartDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.StartDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  type: Property
+  source:
+    id: StartDosePercentage
+    path: ''
+    startLine: 113543
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StartDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter()
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 113585
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter(Object)
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 113590
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  id: DistanceFromTargetBorderInMM
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: DistanceFromTargetBorderInMM
+  nameWithType: OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
+  type: Property
+  source:
+    id: DistanceFromTargetBorderInMM
+    path: ''
+    startLine: 145395
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double DistanceFromTargetBorderInMM { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DistanceFromTargetBorderInMM As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  id: EndDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: EndDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.EndDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage
+  type: Property
+  source:
+    id: EndDosePercentage
+    path: ''
+    startLine: 145437
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EndDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EndDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.EndDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  id: FallOff
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: FallOff
+  nameWithType: OptimizationNormalTissueParameter.FallOff
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff
+  type: Property
+  source:
+    id: FallOff
+    path: ''
+    startLine: 145479
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double FallOff { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property FallOff As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.FallOff*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  id: IsAutomatic
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: IsAutomatic
+  nameWithType: OptimizationNormalTissueParameter.IsAutomatic
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+  type: Property
+  source:
+    id: IsAutomatic
+    path: ''
+    startLine: 145521
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsAutomatic { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsAutomatic As Boolean
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  id: Priority
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: OptimizationNormalTissueParameter.Priority
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
+  type: Property
+  source:
+    id: Priority
+    path: ''
+    startLine: 145563
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Priority As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  commentId: P:ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  id: StartDosePercentage
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: StartDosePercentage
+  nameWithType: OptimizationNormalTissueParameter.StartDosePercentage
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
+  type: Property
+  source:
+    id: StartDosePercentage
+    path: ''
+    startLine: 145605
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double StartDosePercentage { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartDosePercentage As Double
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter()
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 145647
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationNormalTissueParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationNormalTissueParameter(Object)
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 145652
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationNormalTissueParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -384,74 +1316,18 @@ references:
   name: OptimizationParameter
   nameWithType: OptimizationParameter
   fullName: ESAPIX.Facade.API.OptimizationParameter
-- uid: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  parent: ESAPIX.Facade.API.OptimizationParameter
+- uid: System.Xml.Serialization.IXmlSerializable
   isExternal: true
-  name: Equals(Object)
-  nameWithType: OptimizationParameter.Equals(Object)
-  fullName: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-    name: Equals
-    nameWithType: OptimizationParameter.Equals
-    fullName: ESAPIX.Facade.API.OptimizationParameter.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-    name: Equals
-    nameWithType: OptimizationParameter.Equals
-    fullName: ESAPIX.Facade.API.OptimizationParameter.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  commentId: M:ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  parent: ESAPIX.Facade.API.OptimizationParameter
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: OptimizationParameter.GetHashCode()
-  fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-    name: GetHashCode
-    nameWithType: OptimizationParameter.GetHashCode
-    fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-    name: GetHashCode
-    nameWithType: OptimizationParameter.GetHashCode
-    fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -520,6 +1396,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -549,238 +1464,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
-  isExternal: false
-  name: OptimizationNormalTissueParameter
-  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter
-  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter
-- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: OptimizationNormalTissueParameter.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM*
   commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.DistanceFromTargetBorderInMM
   isExternal: false
@@ -812,6 +1501,13 @@ references:
   name: IsAutomatic
   nameWithType: OptimizationNormalTissueParameter.IsAutomatic
   fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.IsAutomatic
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority*
   commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.Priority
   isExternal: false
@@ -824,14 +1520,9 @@ references:
   name: StartDosePercentage
   nameWithType: OptimizationNormalTissueParameter.StartDosePercentage
   fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.StartDosePercentage
-- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml
+- uid: ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationNormalTissueParameter.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: OptimizationNormalTissueParameter.WriteXml
-  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: OptimizationNormalTissueParameter
+  nameWithType: OptimizationNormalTissueParameter.OptimizationNormalTissueParameter
+  fullName: ESAPIX.Facade.API.OptimizationNormalTissueParameter.OptimizationNormalTissueParameter

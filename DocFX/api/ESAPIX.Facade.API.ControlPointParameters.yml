@@ -6,16 +6,68 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.ControlPointParameters.#ctor
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  - ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
   - ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
   - ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  - ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  - ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  - ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  - ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
   - ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  - ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  - ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  - ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  - ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  - ESAPIX.Facade.API.ControlPointParameters.Index
+  - ESAPIX.Facade.API.ControlPointParameters.Index
+  - ESAPIX.Facade.API.ControlPointParameters.Index
+  - ESAPIX.Facade.API.ControlPointParameters.Index
+  - ESAPIX.Facade.API.ControlPointParameters.IsLive
+  - ESAPIX.Facade.API.ControlPointParameters.IsLive
+  - ESAPIX.Facade.API.ControlPointParameters.IsLive
+  - ESAPIX.Facade.API.ControlPointParameters.IsLive
   - ESAPIX.Facade.API.ControlPointParameters.IsLive
   - ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  - ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  - ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  - ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  - ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  - ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  - ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  - ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  - ESAPIX.Facade.API.ControlPointParameters.LeafPositions
   - ESAPIX.Facade.API.ControlPointParameters.LeafPositions
   - ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  - ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  - ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  - ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  - ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  - ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  - ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  - ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  - ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
   - ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
   - ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
   - ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  - ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
   - ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
   langs:
   - csharp
@@ -27,7 +79,7 @@ items:
   source:
     id: ControlPointParameters
     path: ''
-    startLine: 7950
+    startLine: 135382
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -36,6 +88,8 @@ items:
     content.vb: Public Class ControlPointParameters
   inheritance:
   - System.Object
+  derivedClasses:
+  - ESAPIX.Facade.API.IonControlPointParameters
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -50,61 +104,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor
-  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.ControlPointParameters
-  langs:
-  - csharp
-  - vb
-  name: ControlPointParameters()
-  nameWithType: ControlPointParameters.ControlPointParameters()
-  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 7954
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public ControlPointParameters()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.ControlPointParameters
-  langs:
-  - csharp
-  - vb
-  name: ControlPointParameters(Object)
-  nameWithType: ControlPointParameters.ControlPointParameters(Object)
-  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 7959
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public ControlPointParameters(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: ESAPIX.Facade.API.ControlPointParameters.IsLive
   commentId: P:ESAPIX.Facade.API.ControlPointParameters.IsLive
   id: IsLive
@@ -119,7 +118,7 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 7964
+    startLine: 22317
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -150,7 +149,7 @@ items:
   source:
     id: CollimatorAngle
     path: ''
-    startLine: 7969
+    startLine: 22325
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -181,7 +180,7 @@ items:
   source:
     id: GantryAngle
     path: ''
-    startLine: 7986
+    startLine: 22367
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -212,16 +211,16 @@ items:
   source:
     id: JawPositions
     path: ''
-    startLine: 8003
+    startLine: 22409
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public VRect<double> JawPositions { get; set; }
+    content: public Common.Model.Types.VRect<double> JawPositions { get; set; }
     parameters: []
     return:
-      type: VRect{System.Double}
-    content.vb: Public Property JawPositions As VRect(Of Double)
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Property JawPositions As Common.Model.Types.VRect(Of Double)
   overload: ESAPIX.Facade.API.ControlPointParameters.JawPositions*
   modifiers.csharp:
   - public
@@ -243,7 +242,7 @@ items:
   source:
     id: LeafPositions
     path: ''
-    startLine: 8020
+    startLine: 22451
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -274,7 +273,7 @@ items:
   source:
     id: MetersetWeight
     path: ''
-    startLine: 8037
+    startLine: 22493
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -305,7 +304,7 @@ items:
   source:
     id: PatientSupportAngle
     path: ''
-    startLine: 8054
+    startLine: 22535
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -336,7 +335,7 @@ items:
   source:
     id: TableTopLateralPosition
     path: ''
-    startLine: 8071
+    startLine: 22577
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -367,7 +366,7 @@ items:
   source:
     id: TableTopLongitudinalPosition
     path: ''
-    startLine: 8091
+    startLine: 22619
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -398,7 +397,7 @@ items:
   source:
     id: TableTopVerticalPosition
     path: ''
-    startLine: 8111
+    startLine: 22661
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -413,6 +412,1645 @@ items:
   - public
   - get
   - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters()
+  nameWithType: ControlPointParameters.ControlPointParameters()
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 22703
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters(Object)
+  nameWithType: ControlPointParameters.ControlPointParameters(Object)
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 22708
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ControlPointParameters.IsLive
+  fullName: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 45388
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.ControlPointParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  id: CollimatorAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: CollimatorAngle
+  nameWithType: ControlPointParameters.CollimatorAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  type: Property
+  source:
+    id: CollimatorAngle
+    path: ''
+    startLine: 45396
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double CollimatorAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property CollimatorAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  id: GantryAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryAngle
+  nameWithType: ControlPointParameters.GantryAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  type: Property
+  source:
+    id: GantryAngle
+    path: ''
+    startLine: 45438
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GantryAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property GantryAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.GantryAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.Index
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.Index
+  id: Index
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ControlPointParameters.Index
+  fullName: ESAPIX.Facade.API.ControlPointParameters.Index
+  type: Property
+  source:
+    id: Index
+    path: ''
+    startLine: 45480
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Index { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Index As Integer
+  overload: ESAPIX.Facade.API.ControlPointParameters.Index*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  id: JawPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: JawPositions
+  nameWithType: ControlPointParameters.JawPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  type: Property
+  source:
+    id: JawPositions
+    path: ''
+    startLine: 45522
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VRect<double> JawPositions { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Property JawPositions As Common.Model.Types.VRect(Of Double)
+  overload: ESAPIX.Facade.API.ControlPointParameters.JawPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  id: LeafPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: LeafPositions
+  nameWithType: ControlPointParameters.LeafPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  type: Property
+  source:
+    id: LeafPositions
+    path: ''
+    startLine: 45564
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public float[, ] LeafPositions { get; set; }
+    parameters: []
+    return:
+      type: System.Single[,]
+    content.vb: Public Property LeafPositions As Single(,)
+  overload: ESAPIX.Facade.API.ControlPointParameters.LeafPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  id: MetersetWeight
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: MetersetWeight
+  nameWithType: ControlPointParameters.MetersetWeight
+  fullName: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  type: Property
+  source:
+    id: MetersetWeight
+    path: ''
+    startLine: 45606
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MetersetWeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MetersetWeight As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  id: PatientSupportAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: PatientSupportAngle
+  nameWithType: ControlPointParameters.PatientSupportAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  type: Property
+  source:
+    id: PatientSupportAngle
+    path: ''
+    startLine: 45648
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double PatientSupportAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property PatientSupportAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  id: TableTopLateralPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLateralPosition
+  nameWithType: ControlPointParameters.TableTopLateralPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  type: Property
+  source:
+    id: TableTopLateralPosition
+    path: ''
+    startLine: 45690
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLateralPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLateralPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  id: TableTopLongitudinalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLongitudinalPosition
+  nameWithType: ControlPointParameters.TableTopLongitudinalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  type: Property
+  source:
+    id: TableTopLongitudinalPosition
+    path: ''
+    startLine: 45732
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLongitudinalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLongitudinalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  id: TableTopVerticalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopVerticalPosition
+  nameWithType: ControlPointParameters.TableTopVerticalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  type: Property
+  source:
+    id: TableTopVerticalPosition
+    path: ''
+    startLine: 45774
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopVerticalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopVerticalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters()
+  nameWithType: ControlPointParameters.ControlPointParameters()
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 45816
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters(Object)
+  nameWithType: ControlPointParameters.ControlPointParameters(Object)
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 45821
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ControlPointParameters.IsLive
+  fullName: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 74161
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.ControlPointParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  id: CollimatorAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: CollimatorAngle
+  nameWithType: ControlPointParameters.CollimatorAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  type: Property
+  source:
+    id: CollimatorAngle
+    path: ''
+    startLine: 74169
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double CollimatorAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property CollimatorAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  id: GantryAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryAngle
+  nameWithType: ControlPointParameters.GantryAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  type: Property
+  source:
+    id: GantryAngle
+    path: ''
+    startLine: 74211
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GantryAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property GantryAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.GantryAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.Index
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.Index
+  id: Index
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ControlPointParameters.Index
+  fullName: ESAPIX.Facade.API.ControlPointParameters.Index
+  type: Property
+  source:
+    id: Index
+    path: ''
+    startLine: 74253
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Index { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Index As Integer
+  overload: ESAPIX.Facade.API.ControlPointParameters.Index*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  id: JawPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: JawPositions
+  nameWithType: ControlPointParameters.JawPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  type: Property
+  source:
+    id: JawPositions
+    path: ''
+    startLine: 74295
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VRect<double> JawPositions { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Property JawPositions As Common.Model.Types.VRect(Of Double)
+  overload: ESAPIX.Facade.API.ControlPointParameters.JawPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  id: LeafPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: LeafPositions
+  nameWithType: ControlPointParameters.LeafPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  type: Property
+  source:
+    id: LeafPositions
+    path: ''
+    startLine: 74337
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public float[, ] LeafPositions { get; set; }
+    parameters: []
+    return:
+      type: System.Single[,]
+    content.vb: Public Property LeafPositions As Single(,)
+  overload: ESAPIX.Facade.API.ControlPointParameters.LeafPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  id: MetersetWeight
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: MetersetWeight
+  nameWithType: ControlPointParameters.MetersetWeight
+  fullName: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  type: Property
+  source:
+    id: MetersetWeight
+    path: ''
+    startLine: 74379
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MetersetWeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MetersetWeight As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  id: PatientSupportAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: PatientSupportAngle
+  nameWithType: ControlPointParameters.PatientSupportAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  type: Property
+  source:
+    id: PatientSupportAngle
+    path: ''
+    startLine: 74421
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double PatientSupportAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property PatientSupportAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  id: TableTopLateralPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLateralPosition
+  nameWithType: ControlPointParameters.TableTopLateralPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  type: Property
+  source:
+    id: TableTopLateralPosition
+    path: ''
+    startLine: 74463
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLateralPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLateralPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  id: TableTopLongitudinalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLongitudinalPosition
+  nameWithType: ControlPointParameters.TableTopLongitudinalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  type: Property
+  source:
+    id: TableTopLongitudinalPosition
+    path: ''
+    startLine: 74505
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLongitudinalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLongitudinalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  id: TableTopVerticalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopVerticalPosition
+  nameWithType: ControlPointParameters.TableTopVerticalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  type: Property
+  source:
+    id: TableTopVerticalPosition
+    path: ''
+    startLine: 74547
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopVerticalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopVerticalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters()
+  nameWithType: ControlPointParameters.ControlPointParameters()
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 74589
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters(Object)
+  nameWithType: ControlPointParameters.ControlPointParameters(Object)
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 74594
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ControlPointParameters.IsLive
+  fullName: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 103523
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.ControlPointParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  id: CollimatorAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: CollimatorAngle
+  nameWithType: ControlPointParameters.CollimatorAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  type: Property
+  source:
+    id: CollimatorAngle
+    path: ''
+    startLine: 103531
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double CollimatorAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property CollimatorAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  id: GantryAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryAngle
+  nameWithType: ControlPointParameters.GantryAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  type: Property
+  source:
+    id: GantryAngle
+    path: ''
+    startLine: 103573
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GantryAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property GantryAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.GantryAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.Index
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.Index
+  id: Index
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ControlPointParameters.Index
+  fullName: ESAPIX.Facade.API.ControlPointParameters.Index
+  type: Property
+  source:
+    id: Index
+    path: ''
+    startLine: 103615
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Index { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Index As Integer
+  overload: ESAPIX.Facade.API.ControlPointParameters.Index*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  id: JawPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: JawPositions
+  nameWithType: ControlPointParameters.JawPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  type: Property
+  source:
+    id: JawPositions
+    path: ''
+    startLine: 103657
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VRect<double> JawPositions { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Property JawPositions As Common.Model.Types.VRect(Of Double)
+  overload: ESAPIX.Facade.API.ControlPointParameters.JawPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  id: LeafPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: LeafPositions
+  nameWithType: ControlPointParameters.LeafPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  type: Property
+  source:
+    id: LeafPositions
+    path: ''
+    startLine: 103699
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public float[, ] LeafPositions { get; set; }
+    parameters: []
+    return:
+      type: System.Single[,]
+    content.vb: Public Property LeafPositions As Single(,)
+  overload: ESAPIX.Facade.API.ControlPointParameters.LeafPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  id: MetersetWeight
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: MetersetWeight
+  nameWithType: ControlPointParameters.MetersetWeight
+  fullName: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  type: Property
+  source:
+    id: MetersetWeight
+    path: ''
+    startLine: 103741
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MetersetWeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MetersetWeight As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  id: PatientSupportAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: PatientSupportAngle
+  nameWithType: ControlPointParameters.PatientSupportAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  type: Property
+  source:
+    id: PatientSupportAngle
+    path: ''
+    startLine: 103783
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double PatientSupportAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property PatientSupportAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  id: TableTopLateralPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLateralPosition
+  nameWithType: ControlPointParameters.TableTopLateralPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  type: Property
+  source:
+    id: TableTopLateralPosition
+    path: ''
+    startLine: 103825
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLateralPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLateralPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  id: TableTopLongitudinalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLongitudinalPosition
+  nameWithType: ControlPointParameters.TableTopLongitudinalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  type: Property
+  source:
+    id: TableTopLongitudinalPosition
+    path: ''
+    startLine: 103867
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLongitudinalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLongitudinalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  id: TableTopVerticalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopVerticalPosition
+  nameWithType: ControlPointParameters.TableTopVerticalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  type: Property
+  source:
+    id: TableTopVerticalPosition
+    path: ''
+    startLine: 103909
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopVerticalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopVerticalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters()
+  nameWithType: ControlPointParameters.ControlPointParameters()
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 103951
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters(Object)
+  nameWithType: ControlPointParameters.ControlPointParameters(Object)
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 103956
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: ControlPointParameters.IsLive
+  fullName: ESAPIX.Facade.API.ControlPointParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 135385
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.ControlPointParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  id: CollimatorAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: CollimatorAngle
+  nameWithType: ControlPointParameters.CollimatorAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle
+  type: Property
+  source:
+    id: CollimatorAngle
+    path: ''
+    startLine: 135393
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double CollimatorAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property CollimatorAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.CollimatorAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  id: GantryAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryAngle
+  nameWithType: ControlPointParameters.GantryAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.GantryAngle
+  type: Property
+  source:
+    id: GantryAngle
+    path: ''
+    startLine: 135435
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GantryAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property GantryAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.GantryAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.Index
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.Index
+  id: Index
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ControlPointParameters.Index
+  fullName: ESAPIX.Facade.API.ControlPointParameters.Index
+  type: Property
+  source:
+    id: Index
+    path: ''
+    startLine: 135477
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Index { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Index As Integer
+  overload: ESAPIX.Facade.API.ControlPointParameters.Index*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  id: JawPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: JawPositions
+  nameWithType: ControlPointParameters.JawPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.JawPositions
+  type: Property
+  source:
+    id: JawPositions
+    path: ''
+    startLine: 135519
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VRect<double> JawPositions { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Property JawPositions As Common.Model.Types.VRect(Of Double)
+  overload: ESAPIX.Facade.API.ControlPointParameters.JawPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  id: LeafPositions
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: LeafPositions
+  nameWithType: ControlPointParameters.LeafPositions
+  fullName: ESAPIX.Facade.API.ControlPointParameters.LeafPositions
+  type: Property
+  source:
+    id: LeafPositions
+    path: ''
+    startLine: 135561
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public float[, ] LeafPositions { get; set; }
+    parameters: []
+    return:
+      type: System.Single[,]
+    content.vb: Public Property LeafPositions As Single(,)
+  overload: ESAPIX.Facade.API.ControlPointParameters.LeafPositions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  id: MetersetWeight
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: MetersetWeight
+  nameWithType: ControlPointParameters.MetersetWeight
+  fullName: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight
+  type: Property
+  source:
+    id: MetersetWeight
+    path: ''
+    startLine: 135603
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MetersetWeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MetersetWeight As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.MetersetWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  id: PatientSupportAngle
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: PatientSupportAngle
+  nameWithType: ControlPointParameters.PatientSupportAngle
+  fullName: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle
+  type: Property
+  source:
+    id: PatientSupportAngle
+    path: ''
+    startLine: 135645
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double PatientSupportAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property PatientSupportAngle As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.PatientSupportAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  id: TableTopLateralPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLateralPosition
+  nameWithType: ControlPointParameters.TableTopLateralPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition
+  type: Property
+  source:
+    id: TableTopLateralPosition
+    path: ''
+    startLine: 135687
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLateralPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLateralPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLateralPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  id: TableTopLongitudinalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopLongitudinalPosition
+  nameWithType: ControlPointParameters.TableTopLongitudinalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition
+  type: Property
+  source:
+    id: TableTopLongitudinalPosition
+    path: ''
+    startLine: 135729
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopLongitudinalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopLongitudinalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopLongitudinalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  commentId: P:ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  id: TableTopVerticalPosition
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: TableTopVerticalPosition
+  nameWithType: ControlPointParameters.TableTopVerticalPosition
+  fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+  type: Property
+  source:
+    id: TableTopVerticalPosition
+    path: ''
+    startLine: 135771
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TableTopVerticalPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableTopVerticalPosition As Double
+  overload: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters()
+  nameWithType: ControlPointParameters.ControlPointParameters()
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 135813
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPointParameters(Object)
+  nameWithType: ControlPointParameters.ControlPointParameters(Object)
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 135818
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  modifiers.csharp:
+  - public
   modifiers.vb:
   - Public
 references:
@@ -714,12 +2352,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.ControlPointParameters.#ctor
-  isExternal: false
-  name: ControlPointParameters
-  nameWithType: ControlPointParameters.ControlPointParameters
-  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters
 - uid: ESAPIX.Facade.API.ControlPointParameters.IsLive*
   commentId: Overload:ESAPIX.Facade.API.ControlPointParameters.IsLive
   isExternal: false
@@ -758,20 +2390,20 @@ references:
   name: JawPositions
   nameWithType: ControlPointParameters.JawPositions
   fullName: ESAPIX.Facade.API.ControlPointParameters.JawPositions
-- uid: VRect{System.Double}
-  commentId: '!:VRect{System.Double}'
-  definition: VRect`1
-  name: VRect<Double>
-  nameWithType: VRect<Double>
-  fullName: VRect<System.Double>
-  nameWithType.vb: VRect(Of Double)
-  fullName.vb: VRect(Of System.Double)
-  name.vb: VRect(Of Double)
+- uid: VMS.TPS.Common.Model.Types.VRect{System.Double}
+  commentId: '!:VMS.TPS.Common.Model.Types.VRect{System.Double}'
+  definition: VMS.TPS.Common.Model.Types.VRect`1
+  name: Common.Model.Types.VRect<Double>
+  nameWithType: Common.Model.Types.VRect<Double>
+  fullName: VMS.TPS.Common.Model.Types.VRect<System.Double>
+  nameWithType.vb: Common.Model.Types.VRect(Of Double)
+  fullName.vb: VMS.TPS.Common.Model.Types.VRect(Of System.Double)
+  name.vb: Common.Model.Types.VRect(Of Double)
   spec.csharp:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: <
     nameWithType: <
@@ -785,10 +2417,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -801,19 +2433,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRect`1
+- uid: VMS.TPS.Common.Model.Types.VRect`1
   isExternal: true
-  name: VRect<>
-  nameWithType: VRect<>
-  fullName: VRect<>
-  nameWithType.vb: VRect(Of )
-  fullName.vb: VRect(Of )
-  name.vb: VRect(Of )
+  name: Common.Model.Types.VRect<>
+  nameWithType: Common.Model.Types.VRect<>
+  fullName: VMS.TPS.Common.Model.Types.VRect<>
+  nameWithType.vb: Common.Model.Types.VRect(Of )
+  fullName.vb: VMS.TPS.Common.Model.Types.VRect(Of )
+  name.vb: Common.Model.Types.VRect(Of )
   spec.csharp:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: <
     nameWithType: <
@@ -825,10 +2457,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -900,3 +2532,22 @@ references:
   name: TableTopVerticalPosition
   nameWithType: ControlPointParameters.TableTopVerticalPosition
   fullName: ESAPIX.Facade.API.ControlPointParameters.TableTopVerticalPosition
+- uid: ESAPIX.Facade.API.ControlPointParameters.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.ControlPointParameters.#ctor
+  isExternal: false
+  name: ControlPointParameters
+  nameWithType: ControlPointParameters.ControlPointParameters
+  fullName: ESAPIX.Facade.API.ControlPointParameters.ControlPointParameters
+- uid: ESAPIX.Facade.API.ControlPointParameters.Index*
+  commentId: Overload:ESAPIX.Facade.API.ControlPointParameters.Index
+  isExternal: false
+  name: Index
+  nameWithType: ControlPointParameters.Index
+  fullName: ESAPIX.Facade.API.ControlPointParameters.Index
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

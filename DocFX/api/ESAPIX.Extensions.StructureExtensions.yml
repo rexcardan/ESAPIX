@@ -5,6 +5,7 @@ items:
   id: StructureExtensions
   parent: ESAPIX.Extensions
   children:
+  - ESAPIX.Extensions.StructureExtensions.GetTargetStats(Structure,PlanningItem,DoseValue,TargetStat[])
   - ESAPIX.Extensions.StructureExtensions.VoxelsOnSlice(Structure,Image,System.Int32)
   langs:
   - csharp
@@ -16,7 +17,7 @@ items:
   source:
     id: StructureExtensions
     path: ''
-    startLine: 4265
+    startLine: 4013
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -55,7 +56,7 @@ items:
   source:
     id: VoxelsOnSlice
     path: ''
-    startLine: 4274
+    startLine: 4022
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -75,7 +76,7 @@ items:
       description: the slice of the image
     return:
       type: System.Double[,]
-      description: ''
+      description: display units of the image
     content.vb: >-
       <ExtensionAttribute>
 
@@ -87,6 +88,52 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: ESAPIX.Extensions.StructureExtensions.GetTargetStats(Structure,PlanningItem,DoseValue,TargetStat[])
+  commentId: M:ESAPIX.Extensions.StructureExtensions.GetTargetStats(Structure,PlanningItem,DoseValue,TargetStat[])
+  id: GetTargetStats(Structure,PlanningItem,DoseValue,TargetStat[])
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.StructureExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetTargetStats(Structure, PlanningItem, DoseValue, TargetStat[])
+  nameWithType: StructureExtensions.GetTargetStats(Structure, PlanningItem, DoseValue, TargetStat[])
+  fullName: ESAPIX.Extensions.StructureExtensions.GetTargetStats(Structure, PlanningItem, DoseValue, TargetStat[])
+  type: Method
+  source:
+    id: GetTargetStats
+    path: ''
+    startLine: 4044
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static Dictionary<TargetStat, double> GetTargetStats(this Structure s, PlanningItem pi, DoseValue referenceDose, params TargetStat[] desiredStats)
+    parameters:
+    - id: s
+      type: Structure
+    - id: pi
+      type: PlanningItem
+    - id: referenceDose
+      type: DoseValue
+    - id: desiredStats
+      type: TargetStat[]
+    return:
+      type: Dictionary{TargetStat,System.Double}
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetTargetStats(s As  Structure, pi As PlanningItem, referenceDose As DoseValue, ParamArray desiredStats As TargetStat()) As Dictionary(Of TargetStat, Double)
+  overload: ESAPIX.Extensions.StructureExtensions.GetTargetStats*
+  nameWithType.vb: StructureExtensions.GetTargetStats(Structure, PlanningItem, DoseValue, TargetStat())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.StructureExtensions.GetTargetStats(Structure, PlanningItem, DoseValue, TargetStat())
+  name.vb: GetTargetStats(Structure, PlanningItem, DoseValue, TargetStat())
 references:
 - uid: ESAPIX.Extensions
   commentId: N:ESAPIX.Extensions
@@ -434,3 +481,153 @@ references:
   - name: (,)
     nameWithType: (,)
     fullName: (,)
+- uid: ESAPIX.Extensions.StructureExtensions.GetTargetStats*
+  commentId: Overload:ESAPIX.Extensions.StructureExtensions.GetTargetStats
+  isExternal: false
+  name: GetTargetStats
+  nameWithType: StructureExtensions.GetTargetStats
+  fullName: ESAPIX.Extensions.StructureExtensions.GetTargetStats
+- uid: PlanningItem
+  isExternal: true
+  name: PlanningItem
+  nameWithType: PlanningItem
+  fullName: PlanningItem
+- uid: DoseValue
+  isExternal: true
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: DoseValue
+- uid: TargetStat[]
+  name: TargetStat[]
+  nameWithType: TargetStat[]
+  fullName: TargetStat[]
+  nameWithType.vb: TargetStat()
+  fullName.vb: TargetStat()
+  name.vb: TargetStat()
+  spec.csharp:
+  - uid: TargetStat
+    name: TargetStat
+    nameWithType: TargetStat
+    fullName: TargetStat
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: TargetStat
+    name: TargetStat
+    nameWithType: TargetStat
+    fullName: TargetStat
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Dictionary{TargetStat,System.Double}
+  commentId: '!:Dictionary{TargetStat,System.Double}'
+  definition: Dictionary`2
+  name: Dictionary<TargetStat, Double>
+  nameWithType: Dictionary<TargetStat, Double>
+  fullName: Dictionary<TargetStat, System.Double>
+  nameWithType.vb: Dictionary(Of TargetStat, Double)
+  fullName.vb: Dictionary(Of TargetStat, System.Double)
+  name.vb: Dictionary(Of TargetStat, Double)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TargetStat
+    name: TargetStat
+    nameWithType: TargetStat
+    fullName: TargetStat
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TargetStat
+    name: TargetStat
+    nameWithType: TargetStat
+    fullName: TargetStat
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

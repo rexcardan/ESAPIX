@@ -6,16 +6,59 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  - ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
   - ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
   - ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  - ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  - ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  - ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  - ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  - ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  - ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  - ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  - ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  - ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  - ESAPIX.Facade.API.FieldReferencePoint.FieldDose
   - ESAPIX.Facade.API.FieldReferencePoint.FieldDose
   - ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
-  - ESAPIX.Facade.API.FieldReferencePoint.IsLive
+  - ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  - ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  - ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  - ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  - ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  - ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
   - ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
   - ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  - ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  - ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  - ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  - ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  - ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
   - ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
   - ESAPIX.Facade.API.FieldReferencePoint.SSD
-  - ESAPIX.Facade.API.FieldReferencePoint.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.FieldReferencePoint.SSD
+  - ESAPIX.Facade.API.FieldReferencePoint.SSD
+  - ESAPIX.Facade.API.FieldReferencePoint.SSD
+  - ESAPIX.Facade.API.FieldReferencePoint.SSD
+  - ESAPIX.Facade.API.FieldReferencePoint.SSD
   langs:
   - csharp
   - vb
@@ -26,251 +69,40 @@ items:
   source:
     id: FieldReferencePoint
     path: ''
-    startLine: 9865
+    startLine: 139543
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class FieldReferencePoint : ApiDataObject'
+    content: 'public class FieldReferencePoint : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class FieldReferencePoint
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor
-  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.FieldReferencePoint
-  langs:
-  - csharp
-  - vb
-  name: FieldReferencePoint()
-  nameWithType: FieldReferencePoint.FieldReferencePoint()
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 9867
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public FieldReferencePoint()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.FieldReferencePoint
-  langs:
-  - csharp
-  - vb
-  name: FieldReferencePoint(Object)
-  nameWithType: FieldReferencePoint.FieldReferencePoint(Object)
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 9872
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public FieldReferencePoint(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.FieldReferencePoint.IsLive
-  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.FieldReferencePoint
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: FieldReferencePoint.IsLive
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 9877
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.FieldReferencePoint.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
-  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
-  id: EffectiveDepth
-  parent: ESAPIX.Facade.API.FieldReferencePoint
-  langs:
-  - csharp
-  - vb
-  name: EffectiveDepth
-  nameWithType: FieldReferencePoint.EffectiveDepth
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
-  type: Property
-  source:
-    id: EffectiveDepth
-    path: ''
-    startLine: 9882
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public double EffectiveDepth { get; set; }
-    parameters: []
-    return:
-      type: System.Double
-    content.vb: Public Property EffectiveDepth As Double
-  overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
-  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
-  id: FieldDose
-  parent: ESAPIX.Facade.API.FieldReferencePoint
-  langs:
-  - csharp
-  - vb
-  name: FieldDose
-  nameWithType: FieldReferencePoint.FieldDose
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
-  type: Property
-  source:
-    id: FieldDose
-    path: ''
-    startLine: 9899
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public DoseValue FieldDose { get; set; }
-    parameters: []
-    return:
-      type: DoseValue
-    content.vb: Public Property FieldDose As DoseValue
-  overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
-  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
-  id: IsFieldDoseNominal
-  parent: ESAPIX.Facade.API.FieldReferencePoint
-  langs:
-  - csharp
-  - vb
-  name: IsFieldDoseNominal
-  nameWithType: FieldReferencePoint.IsFieldDoseNominal
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
-  type: Property
-  source:
-    id: IsFieldDoseNominal
-    path: ''
-    startLine: 9914
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsFieldDoseNominal { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property IsFieldDoseNominal As Boolean
-  overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
-  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
-  id: IsPrimaryReferencePoint
-  parent: ESAPIX.Facade.API.FieldReferencePoint
-  langs:
-  - csharp
-  - vb
-  name: IsPrimaryReferencePoint
-  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
-  type: Property
-  source:
-    id: IsPrimaryReferencePoint
-    path: ''
-    startLine: 9931
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsPrimaryReferencePoint { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property IsPrimaryReferencePoint As Boolean
-  overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
   commentId: P:ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
   id: ReferencePoint
@@ -285,7 +117,7 @@ items:
   source:
     id: ReferencePoint
     path: ''
-    startLine: 9951
+    startLine: 9003
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -316,16 +148,412 @@ items:
   source:
     id: RefPointLocation
     path: ''
-    startLine: 9972
+    startLine: 9052
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public VVector RefPointLocation { get; set; }
+    content: public Common.Model.Types.VVector RefPointLocation { get; set; }
     parameters: []
     return:
-      type: VVector
-    content.vb: Public Property RefPointLocation As VVector
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property RefPointLocation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  id: FieldDose
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldDose
+  nameWithType: FieldReferencePoint.FieldDose
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  type: Property
+  source:
+    id: FieldDose
+    path: ''
+    startLine: 9094
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue FieldDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property FieldDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  id: EffectiveDepth
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: EffectiveDepth
+  nameWithType: FieldReferencePoint.EffectiveDepth
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  type: Property
+  source:
+    id: EffectiveDepth
+    path: ''
+    startLine: 9136
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EffectiveDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EffectiveDepth As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.SSD
+  id: SSD
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: SSD
+  nameWithType: FieldReferencePoint.SSD
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  type: Property
+  source:
+    id: SSD
+    path: ''
+    startLine: 9178
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SSD { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SSD As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.SSD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  id: IsPrimaryReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryReferencePoint
+  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  type: Property
+  source:
+    id: IsPrimaryReferencePoint
+    path: ''
+    startLine: 9220
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsPrimaryReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPrimaryReferencePoint As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  id: IsFieldDoseNominal
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsFieldDoseNominal
+  nameWithType: FieldReferencePoint.IsFieldDoseNominal
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  type: Property
+  source:
+    id: IsFieldDoseNominal
+    path: ''
+    startLine: 9262
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsFieldDoseNominal { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFieldDoseNominal As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint()
+  nameWithType: FieldReferencePoint.FieldReferencePoint()
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9304
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint(Object)
+  nameWithType: FieldReferencePoint.FieldReferencePoint(Object)
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9309
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  id: EffectiveDepth
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: EffectiveDepth
+  nameWithType: FieldReferencePoint.EffectiveDepth
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  type: Property
+  source:
+    id: EffectiveDepth
+    path: ''
+    startLine: 26237
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EffectiveDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EffectiveDepth As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  id: FieldDose
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldDose
+  nameWithType: FieldReferencePoint.FieldDose
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  type: Property
+  source:
+    id: FieldDose
+    path: ''
+    startLine: 26279
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue FieldDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property FieldDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  id: IsFieldDoseNominal
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsFieldDoseNominal
+  nameWithType: FieldReferencePoint.IsFieldDoseNominal
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  type: Property
+  source:
+    id: IsFieldDoseNominal
+    path: ''
+    startLine: 26321
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsFieldDoseNominal { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFieldDoseNominal As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  id: IsPrimaryReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryReferencePoint
+  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  type: Property
+  source:
+    id: IsPrimaryReferencePoint
+    path: ''
+    startLine: 26363
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsPrimaryReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPrimaryReferencePoint As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  id: ReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: ReferencePoint
+  nameWithType: FieldReferencePoint.ReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  type: Property
+  source:
+    id: ReferencePoint
+    path: ''
+    startLine: 26405
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ReferencePoint ReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ReferencePoint
+    content.vb: Public Property ReferencePoint As ReferencePoint
+  overload: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  id: RefPointLocation
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: RefPointLocation
+  nameWithType: FieldReferencePoint.RefPointLocation
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  type: Property
+  source:
+    id: RefPointLocation
+    path: ''
+    startLine: 26454
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector RefPointLocation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property RefPointLocation As Common.Model.Types.VVector
   overload: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation*
   modifiers.csharp:
   - public
@@ -347,7 +575,7 @@ items:
   source:
     id: SSD
     path: ''
-    startLine: 9989
+    startLine: 26496
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -364,31 +592,1145 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.FieldReferencePoint.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.FieldReferencePoint
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: FieldReferencePoint.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: FieldReferencePoint()
+  nameWithType: FieldReferencePoint.FieldReferencePoint()
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 10004
+    startLine: 26538
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public FieldReferencePoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint(Object)
+  nameWithType: FieldReferencePoint.FieldReferencePoint(Object)
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 26543
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.FieldReferencePoint.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  id: EffectiveDepth
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: EffectiveDepth
+  nameWithType: FieldReferencePoint.EffectiveDepth
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  type: Property
+  source:
+    id: EffectiveDepth
+    path: ''
+    startLine: 49502
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EffectiveDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EffectiveDepth As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  id: FieldDose
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldDose
+  nameWithType: FieldReferencePoint.FieldDose
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  type: Property
+  source:
+    id: FieldDose
+    path: ''
+    startLine: 49544
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue FieldDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property FieldDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  id: IsFieldDoseNominal
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsFieldDoseNominal
+  nameWithType: FieldReferencePoint.IsFieldDoseNominal
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  type: Property
+  source:
+    id: IsFieldDoseNominal
+    path: ''
+    startLine: 49586
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsFieldDoseNominal { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFieldDoseNominal As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  id: IsPrimaryReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryReferencePoint
+  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  type: Property
+  source:
+    id: IsPrimaryReferencePoint
+    path: ''
+    startLine: 49628
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsPrimaryReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPrimaryReferencePoint As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  id: ReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: ReferencePoint
+  nameWithType: FieldReferencePoint.ReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  type: Property
+  source:
+    id: ReferencePoint
+    path: ''
+    startLine: 49670
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ReferencePoint ReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ReferencePoint
+    content.vb: Public Property ReferencePoint As ReferencePoint
+  overload: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  id: RefPointLocation
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: RefPointLocation
+  nameWithType: FieldReferencePoint.RefPointLocation
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  type: Property
+  source:
+    id: RefPointLocation
+    path: ''
+    startLine: 49719
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector RefPointLocation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property RefPointLocation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.SSD
+  id: SSD
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: SSD
+  nameWithType: FieldReferencePoint.SSD
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  type: Property
+  source:
+    id: SSD
+    path: ''
+    startLine: 49761
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SSD { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SSD As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.SSD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint()
+  nameWithType: FieldReferencePoint.FieldReferencePoint()
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 49803
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint(Object)
+  nameWithType: FieldReferencePoint.FieldReferencePoint(Object)
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 49808
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  id: EffectiveDepth
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: EffectiveDepth
+  nameWithType: FieldReferencePoint.EffectiveDepth
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  type: Property
+  source:
+    id: EffectiveDepth
+    path: ''
+    startLine: 78063
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EffectiveDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EffectiveDepth As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  id: FieldDose
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldDose
+  nameWithType: FieldReferencePoint.FieldDose
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  type: Property
+  source:
+    id: FieldDose
+    path: ''
+    startLine: 78105
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue FieldDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property FieldDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  id: IsFieldDoseNominal
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsFieldDoseNominal
+  nameWithType: FieldReferencePoint.IsFieldDoseNominal
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  type: Property
+  source:
+    id: IsFieldDoseNominal
+    path: ''
+    startLine: 78147
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsFieldDoseNominal { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFieldDoseNominal As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  id: IsPrimaryReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryReferencePoint
+  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  type: Property
+  source:
+    id: IsPrimaryReferencePoint
+    path: ''
+    startLine: 78189
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsPrimaryReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPrimaryReferencePoint As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  id: ReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: ReferencePoint
+  nameWithType: FieldReferencePoint.ReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  type: Property
+  source:
+    id: ReferencePoint
+    path: ''
+    startLine: 78231
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ReferencePoint ReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ReferencePoint
+    content.vb: Public Property ReferencePoint As ReferencePoint
+  overload: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  id: RefPointLocation
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: RefPointLocation
+  nameWithType: FieldReferencePoint.RefPointLocation
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  type: Property
+  source:
+    id: RefPointLocation
+    path: ''
+    startLine: 78280
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector RefPointLocation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property RefPointLocation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.SSD
+  id: SSD
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: SSD
+  nameWithType: FieldReferencePoint.SSD
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  type: Property
+  source:
+    id: SSD
+    path: ''
+    startLine: 78322
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SSD { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SSD As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.SSD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint()
+  nameWithType: FieldReferencePoint.FieldReferencePoint()
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 78364
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint(Object)
+  nameWithType: FieldReferencePoint.FieldReferencePoint(Object)
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 78369
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  id: EffectiveDepth
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: EffectiveDepth
+  nameWithType: FieldReferencePoint.EffectiveDepth
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  type: Property
+  source:
+    id: EffectiveDepth
+    path: ''
+    startLine: 107473
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EffectiveDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EffectiveDepth As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  id: FieldDose
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldDose
+  nameWithType: FieldReferencePoint.FieldDose
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  type: Property
+  source:
+    id: FieldDose
+    path: ''
+    startLine: 107515
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue FieldDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property FieldDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  id: IsFieldDoseNominal
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsFieldDoseNominal
+  nameWithType: FieldReferencePoint.IsFieldDoseNominal
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  type: Property
+  source:
+    id: IsFieldDoseNominal
+    path: ''
+    startLine: 107557
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsFieldDoseNominal { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFieldDoseNominal As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  id: IsPrimaryReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryReferencePoint
+  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  type: Property
+  source:
+    id: IsPrimaryReferencePoint
+    path: ''
+    startLine: 107599
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsPrimaryReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPrimaryReferencePoint As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  id: ReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: ReferencePoint
+  nameWithType: FieldReferencePoint.ReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  type: Property
+  source:
+    id: ReferencePoint
+    path: ''
+    startLine: 107641
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ReferencePoint ReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ReferencePoint
+    content.vb: Public Property ReferencePoint As ReferencePoint
+  overload: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  id: RefPointLocation
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: RefPointLocation
+  nameWithType: FieldReferencePoint.RefPointLocation
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  type: Property
+  source:
+    id: RefPointLocation
+    path: ''
+    startLine: 107690
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector RefPointLocation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property RefPointLocation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.SSD
+  id: SSD
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: SSD
+  nameWithType: FieldReferencePoint.SSD
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  type: Property
+  source:
+    id: SSD
+    path: ''
+    startLine: 107732
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SSD { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SSD As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.SSD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint()
+  nameWithType: FieldReferencePoint.FieldReferencePoint()
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 107774
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint(Object)
+  nameWithType: FieldReferencePoint.FieldReferencePoint(Object)
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 107779
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  id: EffectiveDepth
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: EffectiveDepth
+  nameWithType: FieldReferencePoint.EffectiveDepth
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  type: Property
+  source:
+    id: EffectiveDepth
+    path: ''
+    startLine: 139545
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double EffectiveDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EffectiveDepth As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  id: FieldDose
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldDose
+  nameWithType: FieldReferencePoint.FieldDose
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  type: Property
+  source:
+    id: FieldDose
+    path: ''
+    startLine: 139587
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue FieldDose { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property FieldDose As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  id: IsFieldDoseNominal
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsFieldDoseNominal
+  nameWithType: FieldReferencePoint.IsFieldDoseNominal
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  type: Property
+  source:
+    id: IsFieldDoseNominal
+    path: ''
+    startLine: 139629
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsFieldDoseNominal { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFieldDoseNominal As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  id: IsPrimaryReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryReferencePoint
+  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+  type: Property
+  source:
+    id: IsPrimaryReferencePoint
+    path: ''
+    startLine: 139671
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsPrimaryReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPrimaryReferencePoint As Boolean
+  overload: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  id: ReferencePoint
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: ReferencePoint
+  nameWithType: FieldReferencePoint.ReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
+  type: Property
+  source:
+    id: ReferencePoint
+    path: ''
+    startLine: 139713
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ReferencePoint ReferencePoint { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ReferencePoint
+    content.vb: Public Property ReferencePoint As ReferencePoint
+  overload: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  id: RefPointLocation
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: RefPointLocation
+  nameWithType: FieldReferencePoint.RefPointLocation
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
+  type: Property
+  source:
+    id: RefPointLocation
+    path: ''
+    startLine: 139762
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector RefPointLocation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property RefPointLocation As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  commentId: P:ESAPIX.Facade.API.FieldReferencePoint.SSD
+  id: SSD
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: SSD
+  nameWithType: FieldReferencePoint.SSD
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.SSD
+  type: Property
+  source:
+    id: SSD
+    path: ''
+    startLine: 139804
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double SSD { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SSD As Double
+  overload: ESAPIX.Facade.API.FieldReferencePoint.SSD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint()
+  nameWithType: FieldReferencePoint.FieldReferencePoint()
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 139846
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.FieldReferencePoint.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.FieldReferencePoint
+  langs:
+  - csharp
+  - vb
+  name: FieldReferencePoint(Object)
+  nameWithType: FieldReferencePoint.FieldReferencePoint(Object)
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 139851
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public FieldReferencePoint(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -421,6 +1763,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -456,103 +1803,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -621,6 +1885,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -650,243 +1953,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.#ctor
-  isExternal: false
-  name: FieldReferencePoint
-  nameWithType: FieldReferencePoint.FieldReferencePoint
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint
-- uid: ESAPIX.Facade.API.FieldReferencePoint.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: FieldReferencePoint.IsLive
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
-  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
-  isExternal: false
-  name: EffectiveDepth
-  nameWithType: FieldReferencePoint.EffectiveDepth
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
-- uid: System.Double
-  commentId: T:System.Double
-  parent: System
-  isExternal: true
-  name: Double
-  nameWithType: Double
-  fullName: System.Double
-- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
-  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
-  isExternal: false
-  name: FieldDose
-  nameWithType: FieldReferencePoint.FieldDose
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
-- uid: DoseValue
-  isExternal: true
-  name: DoseValue
-  nameWithType: DoseValue
-  fullName: DoseValue
-- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
-  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
-  isExternal: false
-  name: IsFieldDoseNominal
-  nameWithType: FieldReferencePoint.IsFieldDoseNominal
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
-- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
-  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
-  isExternal: false
-  name: IsPrimaryReferencePoint
-  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
 - uid: ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint*
   commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.ReferencePoint
   isExternal: false
@@ -906,25 +1978,63 @@ references:
   name: RefPointLocation
   nameWithType: FieldReferencePoint.RefPointLocation
   fullName: ESAPIX.Facade.API.FieldReferencePoint.RefPointLocation
-- uid: VVector
+- uid: VMS.TPS.Common.Model.Types.VVector
   isExternal: true
-  name: VVector
-  nameWithType: VVector
-  fullName: VVector
+  name: Common.Model.Types.VVector
+  nameWithType: Common.Model.Types.VVector
+  fullName: VMS.TPS.Common.Model.Types.VVector
+- uid: ESAPIX.Facade.API.FieldReferencePoint.FieldDose*
+  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+  isExternal: false
+  name: FieldDose
+  nameWithType: FieldReferencePoint.FieldDose
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldDose
+- uid: VMS.TPS.Common.Model.Types.DoseValue
+  isExternal: true
+  name: Common.Model.Types.DoseValue
+  nameWithType: Common.Model.Types.DoseValue
+  fullName: VMS.TPS.Common.Model.Types.DoseValue
+- uid: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth*
+  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+  isExternal: false
+  name: EffectiveDepth
+  nameWithType: FieldReferencePoint.EffectiveDepth
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.EffectiveDepth
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
 - uid: ESAPIX.Facade.API.FieldReferencePoint.SSD*
   commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.SSD
   isExternal: false
   name: SSD
   nameWithType: FieldReferencePoint.SSD
   fullName: ESAPIX.Facade.API.FieldReferencePoint.SSD
-- uid: ESAPIX.Facade.API.FieldReferencePoint.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.WriteXml
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint*
+  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
   isExternal: false
-  name: WriteXml
-  nameWithType: FieldReferencePoint.WriteXml
-  fullName: ESAPIX.Facade.API.FieldReferencePoint.WriteXml
-- uid: System.Xml.XmlWriter
+  name: IsPrimaryReferencePoint
+  nameWithType: FieldReferencePoint.IsPrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsPrimaryReferencePoint
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal*
+  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+  isExternal: false
+  name: IsFieldDoseNominal
+  nameWithType: FieldReferencePoint.IsFieldDoseNominal
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.IsFieldDoseNominal
+- uid: ESAPIX.Facade.API.FieldReferencePoint.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.FieldReferencePoint.#ctor
+  isExternal: false
+  name: FieldReferencePoint
+  nameWithType: FieldReferencePoint.FieldReferencePoint
+  fullName: ESAPIX.Facade.API.FieldReferencePoint.FieldReferencePoint

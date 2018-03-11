@@ -6,12 +6,35 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.ControlPointCollection.#ctor
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  - ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
   - ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
   - ESAPIX.Facade.API.ControlPointCollection.Count
+  - ESAPIX.Facade.API.ControlPointCollection.Count
+  - ESAPIX.Facade.API.ControlPointCollection.Count
+  - ESAPIX.Facade.API.ControlPointCollection.Count
+  - ESAPIX.Facade.API.ControlPointCollection.Count
+  - ESAPIX.Facade.API.ControlPointCollection.Count
   - ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
-  - ESAPIX.Facade.API.ControlPointCollection.IsLive
+  - ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  - ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  - ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  - ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  - ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
   - ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
-  - ESAPIX.Facade.API.ControlPointCollection.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  - ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  - ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  - ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  - ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
   langs:
   - csharp
   - vb
@@ -22,124 +45,35 @@ items:
   source:
     id: ControlPointCollection
     path: ''
-    startLine: 7864
+    startLine: 135252
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class ControlPointCollection : SerializableObject, IEnumerable<ControlPoint>'
+    content: 'public class ControlPointCollection : SerializableObject, Xml.Serialization.IXmlSerializable, IEnumerable<ControlPoint>, IEnumerable'
     content.vb: >-
       Public Class ControlPointCollection
           Inherits SerializableObject
-          Implements IEnumerable(Of ControlPoint)
+          Implements Xml.Serialization.IXmlSerializable, IEnumerable(Of ControlPoint), IEnumerable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   implements:
-  - IEnumerable{ESAPIX.Facade.API.ControlPoint}
+  - System.Xml.Serialization.IXmlSerializable
+  - System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPoint}
+  - System.Collections.IEnumerable
   inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor
-  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.ControlPointCollection
-  langs:
-  - csharp
-  - vb
-  name: ControlPointCollection()
-  nameWithType: ControlPointCollection.ControlPointCollection()
-  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 7867
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public ControlPointCollection()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.ControlPointCollection
-  langs:
-  - csharp
-  - vb
-  name: ControlPointCollection(Object)
-  nameWithType: ControlPointCollection.ControlPointCollection(Object)
-  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 7872
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public ControlPointCollection(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.ControlPointCollection.IsLive
-  commentId: P:ESAPIX.Facade.API.ControlPointCollection.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.ControlPointCollection
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: ControlPointCollection.IsLive
-  fullName: ESAPIX.Facade.API.ControlPointCollection.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 7877
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.ControlPointCollection.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
   commentId: P:ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
   id: Item(System.Int32)
@@ -154,7 +88,7 @@ items:
   source:
     id: this[]
     path: ''
-    startLine: 7882
+    startLine: 7416
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -190,7 +124,7 @@ items:
   source:
     id: Count
     path: ''
-    startLine: 7903
+    startLine: 7465
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -207,33 +141,156 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.ControlPointCollection.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.ControlPointCollection.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  id: GetEnumerator
   parent: ESAPIX.Facade.API.ControlPointCollection
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: ControlPointCollection.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.ControlPointCollection.WriteXml(System.Xml.XmlWriter)
+  name: GetEnumerator()
+  nameWithType: ControlPointCollection.GetEnumerator()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator()
   type: Method
   source:
-    id: WriteXml
+    id: GetEnumerator
     path: ''
-    startLine: 7918
+    startLine: 7513
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
-    parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.ControlPointCollection.WriteXml*
+    content: public IEnumerator<ControlPoint> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
+  overload: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPoint}.GetEnumerator
   modifiers.csharp:
   - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection()
+  nameWithType: ControlPointCollection.ControlPointCollection()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 7519
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection(Object)
+  nameWithType: ControlPointCollection.ControlPointCollection(Object)
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 7524
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: ControlPointCollection.Item[Int32]
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Item[System.Int32]
+  type: Property
+  source:
+    id: this[]
+    path: ''
+    startLine: 22186
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPoint this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: ESAPIX.Facade.API.ControlPoint
+    content.vb: Public Property Item(index As Integer) As ControlPoint
+  overload: ESAPIX.Facade.API.ControlPointCollection.Item*
+  nameWithType.vb: ControlPointCollection.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: ESAPIX.Facade.API.ControlPointCollection.Count
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Count
+  id: Count
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ControlPointCollection.Count
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Count
+  type: Property
+  source:
+    id: Count
+    path: ''
+    startLine: 22235
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Count { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Count As Integer
+  overload: ESAPIX.Facade.API.ControlPointCollection.Count*
+  modifiers.csharp:
+  - public
+  - get
+  - set
   modifiers.vb:
   - Public
 - uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
@@ -250,16 +307,671 @@ items:
   source:
     id: GetEnumerator
     path: ''
-    startLine: 7924
+    startLine: 22283
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
     content: public IEnumerator<ControlPoint> GetEnumerator()
     return:
-      type: IEnumerator{ESAPIX.Facade.API.ControlPoint}
+      type: System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
     content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
   overload: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection()
+  nameWithType: ControlPointCollection.ControlPointCollection()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 22289
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection(Object)
+  nameWithType: ControlPointCollection.ControlPointCollection(Object)
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 22294
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: ControlPointCollection.Item[Int32]
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Item[System.Int32]
+  type: Property
+  source:
+    id: this[]
+    path: ''
+    startLine: 45257
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPoint this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: ESAPIX.Facade.API.ControlPoint
+    content.vb: Public Property Item(index As Integer) As ControlPoint
+  overload: ESAPIX.Facade.API.ControlPointCollection.Item*
+  nameWithType.vb: ControlPointCollection.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: ESAPIX.Facade.API.ControlPointCollection.Count
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Count
+  id: Count
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ControlPointCollection.Count
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Count
+  type: Property
+  source:
+    id: Count
+    path: ''
+    startLine: 45306
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Count { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Count As Integer
+  overload: ESAPIX.Facade.API.ControlPointCollection.Count*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  id: GetEnumerator
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ControlPointCollection.GetEnumerator()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator()
+  type: Method
+  source:
+    id: GetEnumerator
+    path: ''
+    startLine: 45354
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerator<ControlPoint> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
+  overload: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection()
+  nameWithType: ControlPointCollection.ControlPointCollection()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 45360
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection(Object)
+  nameWithType: ControlPointCollection.ControlPointCollection(Object)
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 45365
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: ControlPointCollection.Item[Int32]
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Item[System.Int32]
+  type: Property
+  source:
+    id: this[]
+    path: ''
+    startLine: 74030
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPoint this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: ESAPIX.Facade.API.ControlPoint
+    content.vb: Public Property Item(index As Integer) As ControlPoint
+  overload: ESAPIX.Facade.API.ControlPointCollection.Item*
+  nameWithType.vb: ControlPointCollection.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: ESAPIX.Facade.API.ControlPointCollection.Count
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Count
+  id: Count
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ControlPointCollection.Count
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Count
+  type: Property
+  source:
+    id: Count
+    path: ''
+    startLine: 74079
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Count { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Count As Integer
+  overload: ESAPIX.Facade.API.ControlPointCollection.Count*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  id: GetEnumerator
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ControlPointCollection.GetEnumerator()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator()
+  type: Method
+  source:
+    id: GetEnumerator
+    path: ''
+    startLine: 74127
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerator<ControlPoint> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
+  overload: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection()
+  nameWithType: ControlPointCollection.ControlPointCollection()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 74133
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection(Object)
+  nameWithType: ControlPointCollection.ControlPointCollection(Object)
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 74138
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: ControlPointCollection.Item[Int32]
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Item[System.Int32]
+  type: Property
+  source:
+    id: this[]
+    path: ''
+    startLine: 103392
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPoint this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: ESAPIX.Facade.API.ControlPoint
+    content.vb: Public Property Item(index As Integer) As ControlPoint
+  overload: ESAPIX.Facade.API.ControlPointCollection.Item*
+  nameWithType.vb: ControlPointCollection.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: ESAPIX.Facade.API.ControlPointCollection.Count
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Count
+  id: Count
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ControlPointCollection.Count
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Count
+  type: Property
+  source:
+    id: Count
+    path: ''
+    startLine: 103441
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Count { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Count As Integer
+  overload: ESAPIX.Facade.API.ControlPointCollection.Count*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  id: GetEnumerator
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ControlPointCollection.GetEnumerator()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator()
+  type: Method
+  source:
+    id: GetEnumerator
+    path: ''
+    startLine: 103489
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerator<ControlPoint> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
+  overload: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection()
+  nameWithType: ControlPointCollection.ControlPointCollection()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 103495
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection(Object)
+  nameWithType: ControlPointCollection.ControlPointCollection(Object)
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 103500
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: ControlPointCollection.Item[Int32]
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Item[System.Int32]
+  type: Property
+  source:
+    id: this[]
+    path: ''
+    startLine: 135254
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPoint this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: ESAPIX.Facade.API.ControlPoint
+    content.vb: Public Property Item(index As Integer) As ControlPoint
+  overload: ESAPIX.Facade.API.ControlPointCollection.Item*
+  nameWithType.vb: ControlPointCollection.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.ControlPointCollection.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: ESAPIX.Facade.API.ControlPointCollection.Count
+  commentId: P:ESAPIX.Facade.API.ControlPointCollection.Count
+  id: Count
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ControlPointCollection.Count
+  fullName: ESAPIX.Facade.API.ControlPointCollection.Count
+  type: Property
+  source:
+    id: Count
+    path: ''
+    startLine: 135303
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int Count { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Count As Integer
+  overload: ESAPIX.Facade.API.ControlPointCollection.Count*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
+  id: GetEnumerator
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ControlPointCollection.GetEnumerator()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator()
+  type: Method
+  source:
+    id: GetEnumerator
+    path: ''
+    startLine: 135351
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerator<ControlPoint> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of ControlPoint)
+  overload: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection()
+  nameWithType: ControlPointCollection.ControlPointCollection()
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 135357
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.ControlPointCollection.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.ControlPointCollection
+  langs:
+  - csharp
+  - vb
+  name: ControlPointCollection(Object)
+  nameWithType: ControlPointCollection.ControlPointCollection(Object)
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 135362
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ControlPointCollection(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.ControlPointCollection.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -285,20 +997,26 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
-- uid: IEnumerable{ESAPIX.Facade.API.ControlPoint}
-  commentId: '!:IEnumerable{ESAPIX.Facade.API.ControlPoint}'
-  definition: IEnumerable`1
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPoint}
+  commentId: T:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPoint}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<ControlPoint>
   nameWithType: IEnumerable<ControlPoint>
-  fullName: IEnumerable<ESAPIX.Facade.API.ControlPoint>
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.ControlPoint>
   nameWithType.vb: IEnumerable(Of ControlPoint)
-  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.ControlPoint)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.ControlPoint)
   name.vb: IEnumerable(Of ControlPoint)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -311,10 +1029,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -326,6 +1044,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -394,6 +1126,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -423,348 +1194,63 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullName.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.#ctor
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
-  name: ControlPointCollection
-  nameWithType: ControlPointCollection.ControlPointCollection
-  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection
-- uid: ESAPIX.Facade.API.ControlPointCollection.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.IsLive
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
-  name: IsLive
-  nameWithType: ControlPointCollection.IsLive
-  fullName: ESAPIX.Facade.API.ControlPointCollection.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
 - uid: ESAPIX.Facade.API.ControlPointCollection.Item*
   commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.Item
   isExternal: false
@@ -791,37 +1277,60 @@ references:
   name: Count
   nameWithType: ControlPointCollection.Count
   fullName: ESAPIX.Facade.API.ControlPointCollection.Count
-- uid: ESAPIX.Facade.API.ControlPointCollection.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: ControlPointCollection.WriteXml
-  fullName: ESAPIX.Facade.API.ControlPointCollection.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
 - uid: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator*
   commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
   isExternal: false
   name: GetEnumerator
   nameWithType: ControlPointCollection.GetEnumerator
   fullName: ESAPIX.Facade.API.ControlPointCollection.GetEnumerator
-- uid: IEnumerator{ESAPIX.Facade.API.ControlPoint}
-  commentId: '!:IEnumerator{ESAPIX.Facade.API.ControlPoint}'
-  definition: IEnumerator`1
+- uid: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPoint}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPoint}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{ESAPIX.Facade.API.ControlPoint}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<ControlPoint>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.ControlPoint>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of ControlPoint).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.ControlPoint).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<ControlPoint>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<ESAPIX.Facade.API.ControlPoint>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of ControlPoint).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of ESAPIX.Facade.API.ControlPoint).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
+  commentId: T:System.Collections.Generic.IEnumerator{ESAPIX.Facade.API.ControlPoint}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
   name: IEnumerator<ControlPoint>
   nameWithType: IEnumerator<ControlPoint>
-  fullName: IEnumerator<ESAPIX.Facade.API.ControlPoint>
+  fullName: System.Collections.Generic.IEnumerator<ESAPIX.Facade.API.ControlPoint>
   nameWithType.vb: IEnumerator(Of ControlPoint)
-  fullName.vb: IEnumerator(Of ESAPIX.Facade.API.ControlPoint)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of ESAPIX.Facade.API.ControlPoint)
   name.vb: IEnumerator(Of ControlPoint)
   spec.csharp:
-  - uid: IEnumerator`1
+  - uid: System.Collections.Generic.IEnumerator`1
     name: IEnumerator
     nameWithType: IEnumerator
-    fullName: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: <
     nameWithType: <
@@ -834,10 +1343,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerator`1
+  - uid: System.Collections.Generic.IEnumerator`1
     name: IEnumerator
     nameWithType: IEnumerator
-    fullName: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -849,42 +1358,80 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerator`1
-  commentId: '!:IEnumerator`1'
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
   isExternal: true
-  name: IEnumerator<>
-  nameWithType: IEnumerator<>
-  fullName: IEnumerator<>
-  nameWithType.vb: IEnumerator(Of )
-  fullName.vb: IEnumerator(Of )
-  name.vb: IEnumerator(Of )
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
   spec.csharp:
-  - uid: IEnumerator`1
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<T>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of T).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of T).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
     name: IEnumerator
     nameWithType: IEnumerator
-    fullName: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerator`1
+  - uid: System.Collections.Generic.IEnumerator`1
     name: IEnumerator
     nameWithType: IEnumerator
-    fullName: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.ControlPointCollection.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.ControlPointCollection.#ctor
+  isExternal: false
+  name: ControlPointCollection
+  nameWithType: ControlPointCollection.ControlPointCollection
+  fullName: ESAPIX.Facade.API.ControlPointCollection.ControlPointCollection

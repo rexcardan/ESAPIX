@@ -6,17 +6,56 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  - ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
   - ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
   - ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  - ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  - ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  - ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  - ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  - ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile(VMS.TPS.Common.Model.Types.VVector,VMS.TPS.Common.Model.Types.VVector,System.Double[])
   - ESAPIX.Facade.API.BrachyPlanSetup.Catheters
-  - ESAPIX.Facade.API.BrachyPlanSetup.IsLive
+  - ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  - ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  - ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  - ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  - ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  - ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  - ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  - ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
   - ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
   - ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  - ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  - ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  - ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  - ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  - ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  - ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  - ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  - ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
   - ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
   - ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  - ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  - ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  - ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  - ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
   - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
   - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
-  - ESAPIX.Facade.API.BrachyPlanSetup.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  - ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
   langs:
   - csharp
   - vb
@@ -27,177 +66,112 @@ items:
   source:
     id: BrachyPlanSetup
     path: ''
-    startLine: 6516
+    startLine: 132319
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class BrachyPlanSetup : PlanSetup'
+    content: 'public class BrachyPlanSetup : PlanSetup, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class BrachyPlanSetup
           Inherits PlanSetup
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
   - ESAPIX.Facade.API.PlanningItem
   - ESAPIX.Facade.API.PlanSetup
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
-  - ESAPIX.Facade.API.PlanSetup.ApprovalStatus
-  - ESAPIX.Facade.API.PlanSetup.Beams
-  - ESAPIX.Facade.API.PlanSetup.Course
-  - ESAPIX.Facade.API.PlanSetup.CreationUserName
-  - ESAPIX.Facade.API.PlanSetup.DVHEstimates
-  - ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
-  - ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
-  - ESAPIX.Facade.API.PlanSetup.IsDoseValid
+  - ESAPIX.Facade.API.PlanSetup.UID
   - ESAPIX.Facade.API.PlanSetup.IsTreated
-  - ESAPIX.Facade.API.PlanSetup.OptimizationSetup
-  - ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
-  - ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
-  - ESAPIX.Facade.API.PlanSetup.PlanIntent
-  - ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
-  - ESAPIX.Facade.API.PlanSetup.PlanningApprover
+  - ESAPIX.Facade.API.PlanSetup.CreationUserName
   - ESAPIX.Facade.API.PlanSetup.PlanNormalizationMethod
   - ESAPIX.Facade.API.PlanSetup.PlanNormalizationPoint
-  - ESAPIX.Facade.API.PlanSetup.PlanType
-  - ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
-  - ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
   - ESAPIX.Facade.API.PlanSetup.ProtocolID
   - ESAPIX.Facade.API.PlanSetup.ProtocolPhaseID
-  - ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
-  - ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
-  - ESAPIX.Facade.API.PlanSetup.Series
-  - ESAPIX.Facade.API.PlanSetup.SeriesUID
-  - ESAPIX.Facade.API.PlanSetup.StructureSet
   - ESAPIX.Facade.API.PlanSetup.TargetVolumeID
-  - ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
+  - ESAPIX.Facade.API.PlanSetup.Course
+  - ESAPIX.Facade.API.PlanSetup.Beams
+  - ESAPIX.Facade.API.PlanSetup.StructureSet
+  - ESAPIX.Facade.API.PlanSetup.IsDoseValid
+  - ESAPIX.Facade.API.PlanSetup.ApprovalStatus
+  - ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
+  - ESAPIX.Facade.API.PlanSetup.PlanningApprover
   - ESAPIX.Facade.API.PlanSetup.TreatmentApprovalDate
   - ESAPIX.Facade.API.PlanSetup.TreatmentApprover
-  - ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
-  - ESAPIX.Facade.API.PlanSetup.UID
+  - ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
+  - ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
   - ESAPIX.Facade.API.PlanSetup.UniqueFractionation
+  - ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
+  - ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
+  - ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
+  - ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
+  - ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
+  - ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
+  - ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
+  - ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
+  - ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  - ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  - ESAPIX.Facade.API.PlanSetup.DVHEstimates
+  - ESAPIX.Facade.API.PlanSetup.OptimizationSetup
+  - ESAPIX.Facade.API.PlanSetup.PlanIntent
+  - ESAPIX.Facade.API.PlanSetup.PlanType
+  - ESAPIX.Facade.API.PlanSetup.Series
+  - ESAPIX.Facade.API.PlanSetup.SeriesUID
   - ESAPIX.Facade.API.PlanSetup.VerifiedPlan
   - ESAPIX.Facade.API.PlanSetup.Id
   - ESAPIX.Facade.API.PlanSetup.PlanNormalizationValue
-  - ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
-  - ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
+  - ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
+  - ESAPIX.Facade.API.PlanSetup.GetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
   - ESAPIX.Facade.API.PlanSetup.GetCalculationOption(System.String,System.String,System.String@)
   - ESAPIX.Facade.API.PlanSetup.GetCalculationOptions(System.String)
-  - ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
-  - ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
-  - ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
+  - ESAPIX.Facade.API.PlanSetup.SetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType,System.String)
   - ESAPIX.Facade.API.PlanSetup.SetCalculationOption(System.String,System.String,System.String)
+  - ESAPIX.Facade.API.PlanSetup.PlanUncertainties
+  - ESAPIX.Facade.API.PlanSetup.DosePerFractionInPrimaryRefPoint
+  - ESAPIX.Facade.API.PlanSetup.PrescribedDosePerFraction
+  - ESAPIX.Facade.API.PlanSetup.ApplicationScriptLogs
+  - ESAPIX.Facade.API.PlanSetup.DosePerFraction
+  - ESAPIX.Facade.API.PlanSetup.NumberOfFractions
+  - ESAPIX.Facade.API.PlanSetup.PlannedDosePerFraction
+  - ESAPIX.Facade.API.PlanSetup.PlanningApproverDisplayName
+  - ESAPIX.Facade.API.PlanSetup.TotalDose
+  - ESAPIX.Facade.API.PlanSetup.TreatmentApproverDisplayName
+  - ESAPIX.Facade.API.PlanSetup.TreatmentPercentage
+  - ESAPIX.Facade.API.PlanSetup.SetPrescription(System.Int32,VMS.TPS.Common.Model.Types.DoseValue,System.Double)
+  - ESAPIX.Facade.API.PlanSetup.PlanObjectiveStructures
+  - ESAPIX.Facade.API.PlanSetup.ApprovalHistory
+  - ESAPIX.Facade.API.PlanSetup.PredecessorPlan
+  - ESAPIX.Facade.API.PlanSetup.ReferencePoints
+  - ESAPIX.Facade.API.PlanSetup.RTPrescription
+  - ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures(System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhasePrescription}@,System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhaseMeasure}@)
+  - ESAPIX.Facade.API.PlanSetup.AddReferencePoint(ESAPIX.Facade.API.Structure,System.Nullable{VMS.TPS.Common.Model.Types.VVector},System.String,System.String)
+  - ESAPIX.Facade.API.PlanSetup.TreatmentSessions
+  - ESAPIX.Facade.API.PlanSetup.UseGating
   - ESAPIX.Facade.API.PlanningItem.CreationDateTime
   - ESAPIX.Facade.API.PlanningItem.Dose
   - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
-  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor
-  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.BrachyPlanSetup
-  langs:
-  - csharp
-  - vb
-  name: BrachyPlanSetup()
-  nameWithType: BrachyPlanSetup.BrachyPlanSetup()
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6518
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public BrachyPlanSetup()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.BrachyPlanSetup
-  langs:
-  - csharp
-  - vb
-  name: BrachyPlanSetup(Object)
-  nameWithType: BrachyPlanSetup.BrachyPlanSetup(Object)
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6523
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public BrachyPlanSetup(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.BrachyPlanSetup.IsLive
-  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.BrachyPlanSetup
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: BrachyPlanSetup.IsLive
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 6528
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.BrachyPlanSetup.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
   commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
   id: ApplicationSetupType
@@ -212,7 +186,7 @@ items:
   source:
     id: ApplicationSetupType
     path: ''
-    startLine: 6533
+    startLine: 19466
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -243,7 +217,7 @@ items:
   source:
     id: Catheters
     path: ''
-    startLine: 6550
+    startLine: 19508
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -274,7 +248,7 @@ items:
   source:
     id: NumberOfPdrPulses
     path: ''
-    startLine: 6588
+    startLine: 19564
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -305,7 +279,7 @@ items:
   source:
     id: PdrPulseInterval
     path: ''
-    startLine: 6605
+    startLine: 19606
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -336,7 +310,7 @@ items:
   source:
     id: SeedCollections
     path: ''
-    startLine: 6622
+    startLine: 19648
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -367,7 +341,7 @@ items:
   source:
     id: SolidApplicators
     path: ''
-    startLine: 6660
+    startLine: 19704
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -398,7 +372,7 @@ items:
   source:
     id: TreatmentDateTime
     path: ''
-    startLine: 6698
+    startLine: 19760
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -429,7 +403,7 @@ items:
   source:
     id: TreatmentTechnique
     path: ''
-    startLine: 6715
+    startLine: 19802
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -446,31 +420,1307 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.BrachyPlanSetup.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.BrachyPlanSetup
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: BrachyPlanSetup.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: BrachyPlanSetup()
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup()
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 6732
+    startLine: 19844
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public BrachyPlanSetup()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup(Object)
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup(Object)
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 19849
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.BrachyPlanSetup.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  id: ApplicationSetupType
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: ApplicationSetupType
+  nameWithType: BrachyPlanSetup.ApplicationSetupType
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  type: Property
+  source:
+    id: ApplicationSetupType
+    path: ''
+    startLine: 42495
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicationSetupType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicationSetupType As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachyPlanSetup.Catheters
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 42537
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  id: NumberOfPdrPulses
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: NumberOfPdrPulses
+  nameWithType: BrachyPlanSetup.NumberOfPdrPulses
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  type: Property
+  source:
+    id: NumberOfPdrPulses
+    path: ''
+    startLine: 42593
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int ? NumberOfPdrPulses { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property NumberOfPdrPulses As Integer?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  id: PdrPulseInterval
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: PdrPulseInterval
+  nameWithType: BrachyPlanSetup.PdrPulseInterval
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  type: Property
+  source:
+    id: PdrPulseInterval
+    path: ''
+    startLine: 42635
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ? PdrPulseInterval { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property PdrPulseInterval As Double?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  id: SeedCollections
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SeedCollections
+  nameWithType: BrachyPlanSetup.SeedCollections
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  type: Property
+  source:
+    id: SeedCollections
+    path: ''
+    startLine: 42677
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<SeedCollection> SeedCollections { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.SeedCollection}
+    content.vb: Public Property SeedCollections As IEnumerable(Of SeedCollection)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  id: SolidApplicators
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SolidApplicators
+  nameWithType: BrachyPlanSetup.SolidApplicators
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  type: Property
+  source:
+    id: SolidApplicators
+    path: ''
+    startLine: 42733
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<BrachySolidApplicator> SolidApplicators { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.BrachySolidApplicator}
+    content.vb: Public Property SolidApplicators As IEnumerable(Of BrachySolidApplicator)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  id: TreatmentDateTime
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentDateTime
+  nameWithType: BrachyPlanSetup.TreatmentDateTime
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  type: Property
+  source:
+    id: TreatmentDateTime
+    path: ''
+    startLine: 42789
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? TreatmentDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property TreatmentDateTime As Date?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  id: TreatmentTechnique
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentTechnique
+  nameWithType: BrachyPlanSetup.TreatmentTechnique
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  type: Property
+  source:
+    id: TreatmentTechnique
+    path: ''
+    startLine: 42831
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string TreatmentTechnique { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TreatmentTechnique As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup()
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup()
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 42873
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup(Object)
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup(Object)
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 42878
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  id: ApplicationSetupType
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: ApplicationSetupType
+  nameWithType: BrachyPlanSetup.ApplicationSetupType
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  type: Property
+  source:
+    id: ApplicationSetupType
+    path: ''
+    startLine: 71219
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicationSetupType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicationSetupType As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachyPlanSetup.Catheters
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 71261
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  id: NumberOfPdrPulses
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: NumberOfPdrPulses
+  nameWithType: BrachyPlanSetup.NumberOfPdrPulses
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  type: Property
+  source:
+    id: NumberOfPdrPulses
+    path: ''
+    startLine: 71317
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int ? NumberOfPdrPulses { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property NumberOfPdrPulses As Integer?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  id: PdrPulseInterval
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: PdrPulseInterval
+  nameWithType: BrachyPlanSetup.PdrPulseInterval
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  type: Property
+  source:
+    id: PdrPulseInterval
+    path: ''
+    startLine: 71359
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ? PdrPulseInterval { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property PdrPulseInterval As Double?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  id: SeedCollections
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SeedCollections
+  nameWithType: BrachyPlanSetup.SeedCollections
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  type: Property
+  source:
+    id: SeedCollections
+    path: ''
+    startLine: 71401
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<SeedCollection> SeedCollections { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.SeedCollection}
+    content.vb: Public Property SeedCollections As IEnumerable(Of SeedCollection)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  id: SolidApplicators
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SolidApplicators
+  nameWithType: BrachyPlanSetup.SolidApplicators
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  type: Property
+  source:
+    id: SolidApplicators
+    path: ''
+    startLine: 71457
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<BrachySolidApplicator> SolidApplicators { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.BrachySolidApplicator}
+    content.vb: Public Property SolidApplicators As IEnumerable(Of BrachySolidApplicator)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  id: TreatmentDateTime
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentDateTime
+  nameWithType: BrachyPlanSetup.TreatmentDateTime
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  type: Property
+  source:
+    id: TreatmentDateTime
+    path: ''
+    startLine: 71513
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? TreatmentDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property TreatmentDateTime As Date?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  id: TreatmentTechnique
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentTechnique
+  nameWithType: BrachyPlanSetup.TreatmentTechnique
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  type: Property
+  source:
+    id: TreatmentTechnique
+    path: ''
+    startLine: 71555
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string TreatmentTechnique { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TreatmentTechnique As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup()
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup()
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 71597
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup(Object)
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup(Object)
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 71602
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  id: ApplicationSetupType
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: ApplicationSetupType
+  nameWithType: BrachyPlanSetup.ApplicationSetupType
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  type: Property
+  source:
+    id: ApplicationSetupType
+    path: ''
+    startLine: 100525
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicationSetupType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicationSetupType As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachyPlanSetup.Catheters
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 100567
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  id: NumberOfPdrPulses
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: NumberOfPdrPulses
+  nameWithType: BrachyPlanSetup.NumberOfPdrPulses
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  type: Property
+  source:
+    id: NumberOfPdrPulses
+    path: ''
+    startLine: 100623
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int ? NumberOfPdrPulses { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property NumberOfPdrPulses As Integer?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  id: PdrPulseInterval
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: PdrPulseInterval
+  nameWithType: BrachyPlanSetup.PdrPulseInterval
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  type: Property
+  source:
+    id: PdrPulseInterval
+    path: ''
+    startLine: 100665
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ? PdrPulseInterval { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property PdrPulseInterval As Double?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  id: SeedCollections
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SeedCollections
+  nameWithType: BrachyPlanSetup.SeedCollections
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  type: Property
+  source:
+    id: SeedCollections
+    path: ''
+    startLine: 100707
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<SeedCollection> SeedCollections { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.SeedCollection}
+    content.vb: Public Property SeedCollections As IEnumerable(Of SeedCollection)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  id: SolidApplicators
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SolidApplicators
+  nameWithType: BrachyPlanSetup.SolidApplicators
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  type: Property
+  source:
+    id: SolidApplicators
+    path: ''
+    startLine: 100763
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<BrachySolidApplicator> SolidApplicators { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.BrachySolidApplicator}
+    content.vb: Public Property SolidApplicators As IEnumerable(Of BrachySolidApplicator)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  id: TreatmentDateTime
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentDateTime
+  nameWithType: BrachyPlanSetup.TreatmentDateTime
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  type: Property
+  source:
+    id: TreatmentDateTime
+    path: ''
+    startLine: 100819
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? TreatmentDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property TreatmentDateTime As Date?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  id: TreatmentTechnique
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentTechnique
+  nameWithType: BrachyPlanSetup.TreatmentTechnique
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  type: Property
+  source:
+    id: TreatmentTechnique
+    path: ''
+    startLine: 100861
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string TreatmentTechnique { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TreatmentTechnique As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup()
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup()
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 100903
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup(Object)
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup(Object)
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 100908
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  id: ApplicationSetupType
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: ApplicationSetupType
+  nameWithType: BrachyPlanSetup.ApplicationSetupType
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
+  type: Property
+  source:
+    id: ApplicationSetupType
+    path: ''
+    startLine: 132321
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicationSetupType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicationSetupType As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachyPlanSetup.Catheters
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 132363
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  id: NumberOfPdrPulses
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: NumberOfPdrPulses
+  nameWithType: BrachyPlanSetup.NumberOfPdrPulses
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses
+  type: Property
+  source:
+    id: NumberOfPdrPulses
+    path: ''
+    startLine: 132419
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public int ? NumberOfPdrPulses { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property NumberOfPdrPulses As Integer?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.NumberOfPdrPulses*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  id: PdrPulseInterval
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: PdrPulseInterval
+  nameWithType: BrachyPlanSetup.PdrPulseInterval
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval
+  type: Property
+  source:
+    id: PdrPulseInterval
+    path: ''
+    startLine: 132461
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double ? PdrPulseInterval { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property PdrPulseInterval As Double?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.PdrPulseInterval*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  id: SeedCollections
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SeedCollections
+  nameWithType: BrachyPlanSetup.SeedCollections
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections
+  type: Property
+  source:
+    id: SeedCollections
+    path: ''
+    startLine: 132503
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<SeedCollection> SeedCollections { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.SeedCollection}
+    content.vb: Public Property SeedCollections As IEnumerable(Of SeedCollection)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SeedCollections*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  id: SolidApplicators
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: SolidApplicators
+  nameWithType: BrachyPlanSetup.SolidApplicators
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators
+  type: Property
+  source:
+    id: SolidApplicators
+    path: ''
+    startLine: 132559
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<BrachySolidApplicator> SolidApplicators { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.BrachySolidApplicator}
+    content.vb: Public Property SolidApplicators As IEnumerable(Of BrachySolidApplicator)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.SolidApplicators*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  id: TreatmentDateTime
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentDateTime
+  nameWithType: BrachyPlanSetup.TreatmentDateTime
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime
+  type: Property
+  source:
+    id: TreatmentDateTime
+    path: ''
+    startLine: 132615
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? TreatmentDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property TreatmentDateTime As Date?
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  commentId: P:ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  id: TreatmentTechnique
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: TreatmentTechnique
+  nameWithType: BrachyPlanSetup.TreatmentTechnique
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
+  type: Property
+  source:
+    id: TreatmentTechnique
+    path: ''
+    startLine: 132657
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string TreatmentTechnique { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TreatmentTechnique As String
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile(VMS.TPS.Common.Model.Types.VVector,VMS.TPS.Common.Model.Types.VVector,System.Double[])
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile(VMS.TPS.Common.Model.Types.VVector,VMS.TPS.Common.Model.Types.VVector,System.Double[])
+  id: CalculateAccurateTG43DoseProfile(VMS.TPS.Common.Model.Types.VVector,VMS.TPS.Common.Model.Types.VVector,System.Double[])
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: CalculateAccurateTG43DoseProfile(Common.Model.Types.VVector, Common.Model.Types.VVector, Double[])
+  nameWithType: BrachyPlanSetup.CalculateAccurateTG43DoseProfile(Common.Model.Types.VVector, Common.Model.Types.VVector, Double[])
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile(VMS.TPS.Common.Model.Types.VVector, VMS.TPS.Common.Model.Types.VVector, System.Double[])
+  type: Method
+  source:
+    id: CalculateAccurateTG43DoseProfile
+    path: ''
+    startLine: 132699
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseProfile CalculateAccurateTG43DoseProfile(Common.Model.Types.VVector start, Common.Model.Types.VVector stop, double[] preallocatedBuffer)
+    parameters:
+    - id: start
+      type: VMS.TPS.Common.Model.Types.VVector
+    - id: stop
+      type: VMS.TPS.Common.Model.Types.VVector
+    - id: preallocatedBuffer
+      type: System.Double[]
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseProfile
+    content.vb: Public Function CalculateAccurateTG43DoseProfile(start As Common.Model.Types.VVector, stop As Common.Model.Types.VVector, preallocatedBuffer As Double()) As Common.Model.Types.DoseProfile
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile*
+  nameWithType.vb: BrachyPlanSetup.CalculateAccurateTG43DoseProfile(Common.Model.Types.VVector, Common.Model.Types.VVector, Double())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile(VMS.TPS.Common.Model.Types.VVector, VMS.TPS.Common.Model.Types.VVector, System.Double())
+  name.vb: CalculateAccurateTG43DoseProfile(Common.Model.Types.VVector, Common.Model.Types.VVector, Double())
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup()
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup()
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 132723
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachyPlanSetup.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachyPlanSetup
+  langs:
+  - csharp
+  - vb
+  name: BrachyPlanSetup(Object)
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup(Object)
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 132728
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachyPlanSetup(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -517,62 +1767,18 @@ references:
   name: PlanSetup
   nameWithType: PlanSetup
   fullName: ESAPIX.Facade.API.PlanSetup
-- uid: ESAPIX.Facade.API.PlanSetup.ApprovalStatus
-  commentId: P:ESAPIX.Facade.API.PlanSetup.ApprovalStatus
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.PlanSetup.UID
+  commentId: P:ESAPIX.Facade.API.PlanSetup.UID
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: false
-  name: ApprovalStatus
-  nameWithType: PlanSetup.ApprovalStatus
-  fullName: ESAPIX.Facade.API.PlanSetup.ApprovalStatus
-- uid: ESAPIX.Facade.API.PlanSetup.Beams
-  commentId: P:ESAPIX.Facade.API.PlanSetup.Beams
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: Beams
-  nameWithType: PlanSetup.Beams
-  fullName: ESAPIX.Facade.API.PlanSetup.Beams
-- uid: ESAPIX.Facade.API.PlanSetup.Course
-  commentId: P:ESAPIX.Facade.API.PlanSetup.Course
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: Course
-  nameWithType: PlanSetup.Course
-  fullName: ESAPIX.Facade.API.PlanSetup.Course
-- uid: ESAPIX.Facade.API.PlanSetup.CreationUserName
-  commentId: P:ESAPIX.Facade.API.PlanSetup.CreationUserName
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: CreationUserName
-  nameWithType: PlanSetup.CreationUserName
-  fullName: ESAPIX.Facade.API.PlanSetup.CreationUserName
-- uid: ESAPIX.Facade.API.PlanSetup.DVHEstimates
-  commentId: P:ESAPIX.Facade.API.PlanSetup.DVHEstimates
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: DVHEstimates
-  nameWithType: PlanSetup.DVHEstimates
-  fullName: ESAPIX.Facade.API.PlanSetup.DVHEstimates
-- uid: ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
-  commentId: P:ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: ElectronCalculationModel
-  nameWithType: PlanSetup.ElectronCalculationModel
-  fullName: ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
-- uid: ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
-  commentId: P:ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: ElectronCalculationOptions
-  nameWithType: PlanSetup.ElectronCalculationOptions
-  fullName: ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
-- uid: ESAPIX.Facade.API.PlanSetup.IsDoseValid
-  commentId: P:ESAPIX.Facade.API.PlanSetup.IsDoseValid
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: IsDoseValid
-  nameWithType: PlanSetup.IsDoseValid
-  fullName: ESAPIX.Facade.API.PlanSetup.IsDoseValid
+  name: UID
+  nameWithType: PlanSetup.UID
+  fullName: ESAPIX.Facade.API.PlanSetup.UID
 - uid: ESAPIX.Facade.API.PlanSetup.IsTreated
   commentId: P:ESAPIX.Facade.API.PlanSetup.IsTreated
   parent: ESAPIX.Facade.API.PlanSetup
@@ -580,48 +1786,13 @@ references:
   name: IsTreated
   nameWithType: PlanSetup.IsTreated
   fullName: ESAPIX.Facade.API.PlanSetup.IsTreated
-- uid: ESAPIX.Facade.API.PlanSetup.OptimizationSetup
-  commentId: P:ESAPIX.Facade.API.PlanSetup.OptimizationSetup
+- uid: ESAPIX.Facade.API.PlanSetup.CreationUserName
+  commentId: P:ESAPIX.Facade.API.PlanSetup.CreationUserName
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: false
-  name: OptimizationSetup
-  nameWithType: PlanSetup.OptimizationSetup
-  fullName: ESAPIX.Facade.API.PlanSetup.OptimizationSetup
-- uid: ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PhotonCalculationModel
-  nameWithType: PlanSetup.PhotonCalculationModel
-  fullName: ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
-- uid: ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PhotonCalculationOptions
-  nameWithType: PlanSetup.PhotonCalculationOptions
-  fullName: ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
-- uid: ESAPIX.Facade.API.PlanSetup.PlanIntent
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanIntent
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PlanIntent
-  nameWithType: PlanSetup.PlanIntent
-  fullName: ESAPIX.Facade.API.PlanSetup.PlanIntent
-- uid: ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PlanningApprovalDate
-  nameWithType: PlanSetup.PlanningApprovalDate
-  fullName: ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
-- uid: ESAPIX.Facade.API.PlanSetup.PlanningApprover
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanningApprover
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PlanningApprover
-  nameWithType: PlanSetup.PlanningApprover
-  fullName: ESAPIX.Facade.API.PlanSetup.PlanningApprover
+  name: CreationUserName
+  nameWithType: PlanSetup.CreationUserName
+  fullName: ESAPIX.Facade.API.PlanSetup.CreationUserName
 - uid: ESAPIX.Facade.API.PlanSetup.PlanNormalizationMethod
   commentId: P:ESAPIX.Facade.API.PlanSetup.PlanNormalizationMethod
   parent: ESAPIX.Facade.API.PlanSetup
@@ -636,27 +1807,6 @@ references:
   name: PlanNormalizationPoint
   nameWithType: PlanSetup.PlanNormalizationPoint
   fullName: ESAPIX.Facade.API.PlanSetup.PlanNormalizationPoint
-- uid: ESAPIX.Facade.API.PlanSetup.PlanType
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanType
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PlanType
-  nameWithType: PlanSetup.PlanType
-  fullName: ESAPIX.Facade.API.PlanSetup.PlanType
-- uid: ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PrescribedPercentage
-  nameWithType: PlanSetup.PrescribedPercentage
-  fullName: ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
-- uid: ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
-  commentId: P:ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: PrimaryReferencePoint
-  nameWithType: PlanSetup.PrimaryReferencePoint
-  fullName: ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
 - uid: ESAPIX.Facade.API.PlanSetup.ProtocolID
   commentId: P:ESAPIX.Facade.API.PlanSetup.ProtocolID
   parent: ESAPIX.Facade.API.PlanSetup
@@ -671,41 +1821,6 @@ references:
   name: ProtocolPhaseID
   nameWithType: PlanSetup.ProtocolPhaseID
   fullName: ESAPIX.Facade.API.PlanSetup.ProtocolPhaseID
-- uid: ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
-  commentId: P:ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: ProtonCalculationModel
-  nameWithType: PlanSetup.ProtonCalculationModel
-  fullName: ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
-- uid: ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
-  commentId: P:ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: ProtonCalculationOptions
-  nameWithType: PlanSetup.ProtonCalculationOptions
-  fullName: ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
-- uid: ESAPIX.Facade.API.PlanSetup.Series
-  commentId: P:ESAPIX.Facade.API.PlanSetup.Series
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: Series
-  nameWithType: PlanSetup.Series
-  fullName: ESAPIX.Facade.API.PlanSetup.Series
-- uid: ESAPIX.Facade.API.PlanSetup.SeriesUID
-  commentId: P:ESAPIX.Facade.API.PlanSetup.SeriesUID
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: SeriesUID
-  nameWithType: PlanSetup.SeriesUID
-  fullName: ESAPIX.Facade.API.PlanSetup.SeriesUID
-- uid: ESAPIX.Facade.API.PlanSetup.StructureSet
-  commentId: P:ESAPIX.Facade.API.PlanSetup.StructureSet
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: false
-  name: StructureSet
-  nameWithType: PlanSetup.StructureSet
-  fullName: ESAPIX.Facade.API.PlanSetup.StructureSet
 - uid: ESAPIX.Facade.API.PlanSetup.TargetVolumeID
   commentId: P:ESAPIX.Facade.API.PlanSetup.TargetVolumeID
   parent: ESAPIX.Facade.API.PlanSetup
@@ -713,13 +1828,55 @@ references:
   name: TargetVolumeID
   nameWithType: PlanSetup.TargetVolumeID
   fullName: ESAPIX.Facade.API.PlanSetup.TargetVolumeID
-- uid: ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
-  commentId: P:ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
+- uid: ESAPIX.Facade.API.PlanSetup.Course
+  commentId: P:ESAPIX.Facade.API.PlanSetup.Course
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: false
-  name: TotalPrescribedDose
-  nameWithType: PlanSetup.TotalPrescribedDose
-  fullName: ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
+  name: Course
+  nameWithType: PlanSetup.Course
+  fullName: ESAPIX.Facade.API.PlanSetup.Course
+- uid: ESAPIX.Facade.API.PlanSetup.Beams
+  commentId: P:ESAPIX.Facade.API.PlanSetup.Beams
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: Beams
+  nameWithType: PlanSetup.Beams
+  fullName: ESAPIX.Facade.API.PlanSetup.Beams
+- uid: ESAPIX.Facade.API.PlanSetup.StructureSet
+  commentId: P:ESAPIX.Facade.API.PlanSetup.StructureSet
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: StructureSet
+  nameWithType: PlanSetup.StructureSet
+  fullName: ESAPIX.Facade.API.PlanSetup.StructureSet
+- uid: ESAPIX.Facade.API.PlanSetup.IsDoseValid
+  commentId: P:ESAPIX.Facade.API.PlanSetup.IsDoseValid
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: IsDoseValid
+  nameWithType: PlanSetup.IsDoseValid
+  fullName: ESAPIX.Facade.API.PlanSetup.IsDoseValid
+- uid: ESAPIX.Facade.API.PlanSetup.ApprovalStatus
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ApprovalStatus
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ApprovalStatus
+  nameWithType: PlanSetup.ApprovalStatus
+  fullName: ESAPIX.Facade.API.PlanSetup.ApprovalStatus
+- uid: ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlanningApprovalDate
+  nameWithType: PlanSetup.PlanningApprovalDate
+  fullName: ESAPIX.Facade.API.PlanSetup.PlanningApprovalDate
+- uid: ESAPIX.Facade.API.PlanSetup.PlanningApprover
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanningApprover
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlanningApprover
+  nameWithType: PlanSetup.PlanningApprover
+  fullName: ESAPIX.Facade.API.PlanSetup.PlanningApprover
 - uid: ESAPIX.Facade.API.PlanSetup.TreatmentApprovalDate
   commentId: P:ESAPIX.Facade.API.PlanSetup.TreatmentApprovalDate
   parent: ESAPIX.Facade.API.PlanSetup
@@ -734,20 +1891,20 @@ references:
   name: TreatmentApprover
   nameWithType: PlanSetup.TreatmentApprover
   fullName: ESAPIX.Facade.API.PlanSetup.TreatmentApprover
-- uid: ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
-  commentId: P:ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
+- uid: ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: false
-  name: TreatmentOrientation
-  nameWithType: PlanSetup.TreatmentOrientation
-  fullName: ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
-- uid: ESAPIX.Facade.API.PlanSetup.UID
-  commentId: P:ESAPIX.Facade.API.PlanSetup.UID
+  name: PrescribedPercentage
+  nameWithType: PlanSetup.PrescribedPercentage
+  fullName: ESAPIX.Facade.API.PlanSetup.PrescribedPercentage
+- uid: ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
+  commentId: P:ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: false
-  name: UID
-  nameWithType: PlanSetup.UID
-  fullName: ESAPIX.Facade.API.PlanSetup.UID
+  name: TotalPrescribedDose
+  nameWithType: PlanSetup.TotalPrescribedDose
+  fullName: ESAPIX.Facade.API.PlanSetup.TotalPrescribedDose
 - uid: ESAPIX.Facade.API.PlanSetup.UniqueFractionation
   commentId: P:ESAPIX.Facade.API.PlanSetup.UniqueFractionation
   parent: ESAPIX.Facade.API.PlanSetup
@@ -755,6 +1912,258 @@ references:
   name: UniqueFractionation
   nameWithType: PlanSetup.UniqueFractionation
   fullName: ESAPIX.Facade.API.PlanSetup.UniqueFractionation
+- uid: ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PrimaryReferencePoint
+  nameWithType: PlanSetup.PrimaryReferencePoint
+  fullName: ESAPIX.Facade.API.PlanSetup.PrimaryReferencePoint
+- uid: ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ElectronCalculationModel
+  nameWithType: PlanSetup.ElectronCalculationModel
+  fullName: ESAPIX.Facade.API.PlanSetup.ElectronCalculationModel
+- uid: ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ElectronCalculationOptions
+  nameWithType: PlanSetup.ElectronCalculationOptions
+  fullName: ESAPIX.Facade.API.PlanSetup.ElectronCalculationOptions
+- uid: ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PhotonCalculationModel
+  nameWithType: PlanSetup.PhotonCalculationModel
+  fullName: ESAPIX.Facade.API.PlanSetup.PhotonCalculationModel
+- uid: ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PhotonCalculationOptions
+  nameWithType: PlanSetup.PhotonCalculationOptions
+  fullName: ESAPIX.Facade.API.PlanSetup.PhotonCalculationOptions
+- uid: ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ProtonCalculationModel
+  nameWithType: PlanSetup.ProtonCalculationModel
+  fullName: ESAPIX.Facade.API.PlanSetup.ProtonCalculationModel
+- uid: ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ProtonCalculationOptions
+  nameWithType: PlanSetup.ProtonCalculationOptions
+  fullName: ESAPIX.Facade.API.PlanSetup.ProtonCalculationOptions
+- uid: ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
+  commentId: P:ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: TreatmentOrientation
+  nameWithType: PlanSetup.TreatmentOrientation
+  fullName: ESAPIX.Facade.API.PlanSetup.TreatmentOrientation
+- uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: true
+  name: GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  nameWithType: PlanSetup.GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, VMS.TPS.Common.Model.Types.VolumePresentation, VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+    name: GetDoseAtVolume
+    nameWithType: PlanSetup.GetDoseAtVolume
+    fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.VolumePresentation
+    name: Common.Model.Types.VolumePresentation
+    nameWithType: Common.Model.Types.VolumePresentation
+    fullName: VMS.TPS.Common.Model.Types.VolumePresentation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    name: Common.Model.Types.DoseValuePresentation
+    nameWithType: Common.Model.Types.DoseValuePresentation
+    fullName: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+    name: GetDoseAtVolume
+    nameWithType: PlanSetup.GetDoseAtVolume
+    fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.VolumePresentation
+    name: Common.Model.Types.VolumePresentation
+    nameWithType: Common.Model.Types.VolumePresentation
+    fullName: VMS.TPS.Common.Model.Types.VolumePresentation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    name: Common.Model.Types.DoseValuePresentation
+    nameWithType: Common.Model.Types.DoseValuePresentation
+    fullName: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: true
+  name: GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  nameWithType: PlanSetup.GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValue, VMS.TPS.Common.Model.Types.VolumePresentation)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+    name: GetVolumeAtDose
+    nameWithType: PlanSetup.GetVolumeAtDose
+    fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.DoseValue
+    name: Common.Model.Types.DoseValue
+    nameWithType: Common.Model.Types.DoseValue
+    fullName: VMS.TPS.Common.Model.Types.DoseValue
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.VolumePresentation
+    name: Common.Model.Types.VolumePresentation
+    nameWithType: Common.Model.Types.VolumePresentation
+    fullName: VMS.TPS.Common.Model.Types.VolumePresentation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+    name: GetVolumeAtDose
+    nameWithType: PlanSetup.GetVolumeAtDose
+    fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.DoseValue
+    name: Common.Model.Types.DoseValue
+    nameWithType: Common.Model.Types.DoseValue
+    fullName: VMS.TPS.Common.Model.Types.DoseValue
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.VolumePresentation
+    name: Common.Model.Types.VolumePresentation
+    nameWithType: Common.Model.Types.VolumePresentation
+    fullName: VMS.TPS.Common.Model.Types.VolumePresentation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.PlanSetup.DVHEstimates
+  commentId: P:ESAPIX.Facade.API.PlanSetup.DVHEstimates
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: DVHEstimates
+  nameWithType: PlanSetup.DVHEstimates
+  fullName: ESAPIX.Facade.API.PlanSetup.DVHEstimates
+- uid: ESAPIX.Facade.API.PlanSetup.OptimizationSetup
+  commentId: P:ESAPIX.Facade.API.PlanSetup.OptimizationSetup
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: OptimizationSetup
+  nameWithType: PlanSetup.OptimizationSetup
+  fullName: ESAPIX.Facade.API.PlanSetup.OptimizationSetup
+- uid: ESAPIX.Facade.API.PlanSetup.PlanIntent
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanIntent
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlanIntent
+  nameWithType: PlanSetup.PlanIntent
+  fullName: ESAPIX.Facade.API.PlanSetup.PlanIntent
+- uid: ESAPIX.Facade.API.PlanSetup.PlanType
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanType
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlanType
+  nameWithType: PlanSetup.PlanType
+  fullName: ESAPIX.Facade.API.PlanSetup.PlanType
+- uid: ESAPIX.Facade.API.PlanSetup.Series
+  commentId: P:ESAPIX.Facade.API.PlanSetup.Series
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: Series
+  nameWithType: PlanSetup.Series
+  fullName: ESAPIX.Facade.API.PlanSetup.Series
+- uid: ESAPIX.Facade.API.PlanSetup.SeriesUID
+  commentId: P:ESAPIX.Facade.API.PlanSetup.SeriesUID
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: SeriesUID
+  nameWithType: PlanSetup.SeriesUID
+  fullName: ESAPIX.Facade.API.PlanSetup.SeriesUID
 - uid: ESAPIX.Facade.API.PlanSetup.VerifiedPlan
   commentId: P:ESAPIX.Facade.API.PlanSetup.VerifiedPlan
   parent: ESAPIX.Facade.API.PlanSetup
@@ -776,80 +2185,80 @@ references:
   name: PlanNormalizationValue
   nameWithType: PlanSetup.PlanNormalizationValue
   fullName: ESAPIX.Facade.API.PlanSetup.PlanNormalizationValue
-- uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
+- uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: true
-  name: ClearCalculationModel(CalculationType)
-  nameWithType: PlanSetup.ClearCalculationModel(CalculationType)
-  fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
+  name: ClearCalculationModel(Common.Model.Types.CalculationType)
+  nameWithType: PlanSetup.ClearCalculationModel(Common.Model.Types.CalculationType)
+  fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
     name: ClearCalculationModel
     nameWithType: PlanSetup.ClearCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CalculationType
-    name: CalculationType
-    nameWithType: CalculationType
-    fullName: CalculationType
+  - uid: VMS.TPS.Common.Model.Types.CalculationType
+    name: Common.Model.Types.CalculationType
+    nameWithType: Common.Model.Types.CalculationType
+    fullName: VMS.TPS.Common.Model.Types.CalculationType
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
     name: ClearCalculationModel
     nameWithType: PlanSetup.ClearCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.ClearCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CalculationType
-    name: CalculationType
-    nameWithType: CalculationType
-    fullName: CalculationType
+  - uid: VMS.TPS.Common.Model.Types.CalculationType
+    name: Common.Model.Types.CalculationType
+    nameWithType: Common.Model.Types.CalculationType
+    fullName: VMS.TPS.Common.Model.Types.CalculationType
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
+- uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: true
-  name: GetCalculationModel(CalculationType)
-  nameWithType: PlanSetup.GetCalculationModel(CalculationType)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
+  name: GetCalculationModel(Common.Model.Types.CalculationType)
+  nameWithType: PlanSetup.GetCalculationModel(Common.Model.Types.CalculationType)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
     name: GetCalculationModel
     nameWithType: PlanSetup.GetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CalculationType
-    name: CalculationType
-    nameWithType: CalculationType
-    fullName: CalculationType
+  - uid: VMS.TPS.Common.Model.Types.CalculationType
+    name: Common.Model.Types.CalculationType
+    nameWithType: Common.Model.Types.CalculationType
+    fullName: VMS.TPS.Common.Model.Types.CalculationType
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(CalculationType)
+  - uid: ESAPIX.Facade.API.PlanSetup.GetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType)
     name: GetCalculationModel
     nameWithType: PlanSetup.GetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.GetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CalculationType
-    name: CalculationType
-    nameWithType: CalculationType
-    fullName: CalculationType
+  - uid: VMS.TPS.Common.Model.Types.CalculationType
+    name: Common.Model.Types.CalculationType
+    nameWithType: Common.Model.Types.CalculationType
+    fullName: VMS.TPS.Common.Model.Types.CalculationType
     isExternal: true
   - name: )
     nameWithType: )
@@ -964,179 +2373,25 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
+- uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType,System.String)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.SetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType,System.String)
   parent: ESAPIX.Facade.API.PlanSetup
   isExternal: true
-  name: GetDoseAtVolume(Structure, Double, VolumePresentation, DoseValuePresentation)
-  nameWithType: PlanSetup.GetDoseAtVolume(Structure, Double, VolumePresentation, DoseValuePresentation)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, VolumePresentation, DoseValuePresentation)
+  name: SetCalculationModel(Common.Model.Types.CalculationType, String)
+  nameWithType: PlanSetup.SetCalculationModel(Common.Model.Types.CalculationType, String)
+  fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType, System.String)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
-    name: GetDoseAtVolume
-    nameWithType: PlanSetup.GetDoseAtVolume
-    fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: ESAPIX.Facade.API.Structure
-    name: Structure
-    nameWithType: Structure
-    fullName: ESAPIX.Facade.API.Structure
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Double
-    name: Double
-    nameWithType: Double
-    fullName: System.Double
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: VolumePresentation
-    name: VolumePresentation
-    nameWithType: VolumePresentation
-    fullName: VolumePresentation
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: DoseValuePresentation
-    name: DoseValuePresentation
-    nameWithType: DoseValuePresentation
-    fullName: DoseValuePresentation
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VolumePresentation,DoseValuePresentation)
-    name: GetDoseAtVolume
-    nameWithType: PlanSetup.GetDoseAtVolume
-    fullName: ESAPIX.Facade.API.PlanSetup.GetDoseAtVolume
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: ESAPIX.Facade.API.Structure
-    name: Structure
-    nameWithType: Structure
-    fullName: ESAPIX.Facade.API.Structure
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Double
-    name: Double
-    nameWithType: Double
-    fullName: System.Double
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: VolumePresentation
-    name: VolumePresentation
-    nameWithType: VolumePresentation
-    fullName: VolumePresentation
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: DoseValuePresentation
-    name: DoseValuePresentation
-    nameWithType: DoseValuePresentation
-    fullName: DoseValuePresentation
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: true
-  name: GetVolumeAtDose(Structure, DoseValue, VolumePresentation)
-  nameWithType: PlanSetup.GetVolumeAtDose(Structure, DoseValue, VolumePresentation)
-  fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure, DoseValue, VolumePresentation)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
-    name: GetVolumeAtDose
-    nameWithType: PlanSetup.GetVolumeAtDose
-    fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: ESAPIX.Facade.API.Structure
-    name: Structure
-    nameWithType: Structure
-    fullName: ESAPIX.Facade.API.Structure
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: DoseValue
-    name: DoseValue
-    nameWithType: DoseValue
-    fullName: DoseValue
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: VolumePresentation
-    name: VolumePresentation
-    nameWithType: VolumePresentation
-    fullName: VolumePresentation
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose(ESAPIX.Facade.API.Structure,DoseValue,VolumePresentation)
-    name: GetVolumeAtDose
-    nameWithType: PlanSetup.GetVolumeAtDose
-    fullName: ESAPIX.Facade.API.PlanSetup.GetVolumeAtDose
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: ESAPIX.Facade.API.Structure
-    name: Structure
-    nameWithType: Structure
-    fullName: ESAPIX.Facade.API.Structure
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: DoseValue
-    name: DoseValue
-    nameWithType: DoseValue
-    fullName: DoseValue
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: VolumePresentation
-    name: VolumePresentation
-    nameWithType: VolumePresentation
-    fullName: VolumePresentation
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
-  commentId: M:ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
-  parent: ESAPIX.Facade.API.PlanSetup
-  isExternal: true
-  name: SetCalculationModel(CalculationType, String)
-  nameWithType: PlanSetup.SetCalculationModel(CalculationType, String)
-  fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType, System.String)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
+  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType,System.String)
     name: SetCalculationModel
     nameWithType: PlanSetup.SetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CalculationType
-    name: CalculationType
-    nameWithType: CalculationType
-    fullName: CalculationType
+  - uid: VMS.TPS.Common.Model.Types.CalculationType
+    name: Common.Model.Types.CalculationType
+    nameWithType: Common.Model.Types.CalculationType
+    fullName: VMS.TPS.Common.Model.Types.CalculationType
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1150,17 +2405,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(CalculationType,System.String)
+  - uid: ESAPIX.Facade.API.PlanSetup.SetCalculationModel(VMS.TPS.Common.Model.Types.CalculationType,System.String)
     name: SetCalculationModel
     nameWithType: PlanSetup.SetCalculationModel
     fullName: ESAPIX.Facade.API.PlanSetup.SetCalculationModel
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CalculationType
-    name: CalculationType
-    nameWithType: CalculationType
-    fullName: CalculationType
+  - uid: VMS.TPS.Common.Model.Types.CalculationType
+    name: Common.Model.Types.CalculationType
+    nameWithType: Common.Model.Types.CalculationType
+    fullName: VMS.TPS.Common.Model.Types.CalculationType
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1244,6 +2499,411 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.PlanSetup.PlanUncertainties
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanUncertainties
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlanUncertainties
+  nameWithType: PlanSetup.PlanUncertainties
+  fullName: ESAPIX.Facade.API.PlanSetup.PlanUncertainties
+- uid: ESAPIX.Facade.API.PlanSetup.DosePerFractionInPrimaryRefPoint
+  commentId: P:ESAPIX.Facade.API.PlanSetup.DosePerFractionInPrimaryRefPoint
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: DosePerFractionInPrimaryRefPoint
+  nameWithType: PlanSetup.DosePerFractionInPrimaryRefPoint
+  fullName: ESAPIX.Facade.API.PlanSetup.DosePerFractionInPrimaryRefPoint
+- uid: ESAPIX.Facade.API.PlanSetup.PrescribedDosePerFraction
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PrescribedDosePerFraction
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PrescribedDosePerFraction
+  nameWithType: PlanSetup.PrescribedDosePerFraction
+  fullName: ESAPIX.Facade.API.PlanSetup.PrescribedDosePerFraction
+- uid: ESAPIX.Facade.API.PlanSetup.ApplicationScriptLogs
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ApplicationScriptLogs
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ApplicationScriptLogs
+  nameWithType: PlanSetup.ApplicationScriptLogs
+  fullName: ESAPIX.Facade.API.PlanSetup.ApplicationScriptLogs
+- uid: ESAPIX.Facade.API.PlanSetup.DosePerFraction
+  commentId: P:ESAPIX.Facade.API.PlanSetup.DosePerFraction
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: DosePerFraction
+  nameWithType: PlanSetup.DosePerFraction
+  fullName: ESAPIX.Facade.API.PlanSetup.DosePerFraction
+- uid: ESAPIX.Facade.API.PlanSetup.NumberOfFractions
+  commentId: P:ESAPIX.Facade.API.PlanSetup.NumberOfFractions
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: NumberOfFractions
+  nameWithType: PlanSetup.NumberOfFractions
+  fullName: ESAPIX.Facade.API.PlanSetup.NumberOfFractions
+- uid: ESAPIX.Facade.API.PlanSetup.PlannedDosePerFraction
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlannedDosePerFraction
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlannedDosePerFraction
+  nameWithType: PlanSetup.PlannedDosePerFraction
+  fullName: ESAPIX.Facade.API.PlanSetup.PlannedDosePerFraction
+- uid: ESAPIX.Facade.API.PlanSetup.PlanningApproverDisplayName
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanningApproverDisplayName
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlanningApproverDisplayName
+  nameWithType: PlanSetup.PlanningApproverDisplayName
+  fullName: ESAPIX.Facade.API.PlanSetup.PlanningApproverDisplayName
+- uid: ESAPIX.Facade.API.PlanSetup.TotalDose
+  commentId: P:ESAPIX.Facade.API.PlanSetup.TotalDose
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: TotalDose
+  nameWithType: PlanSetup.TotalDose
+  fullName: ESAPIX.Facade.API.PlanSetup.TotalDose
+- uid: ESAPIX.Facade.API.PlanSetup.TreatmentApproverDisplayName
+  commentId: P:ESAPIX.Facade.API.PlanSetup.TreatmentApproverDisplayName
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: TreatmentApproverDisplayName
+  nameWithType: PlanSetup.TreatmentApproverDisplayName
+  fullName: ESAPIX.Facade.API.PlanSetup.TreatmentApproverDisplayName
+- uid: ESAPIX.Facade.API.PlanSetup.TreatmentPercentage
+  commentId: P:ESAPIX.Facade.API.PlanSetup.TreatmentPercentage
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: TreatmentPercentage
+  nameWithType: PlanSetup.TreatmentPercentage
+  fullName: ESAPIX.Facade.API.PlanSetup.TreatmentPercentage
+- uid: ESAPIX.Facade.API.PlanSetup.SetPrescription(System.Int32,VMS.TPS.Common.Model.Types.DoseValue,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.SetPrescription(System.Int32,VMS.TPS.Common.Model.Types.DoseValue,System.Double)
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: true
+  name: SetPrescription(Int32, Common.Model.Types.DoseValue, Double)
+  nameWithType: PlanSetup.SetPrescription(Int32, Common.Model.Types.DoseValue, Double)
+  fullName: ESAPIX.Facade.API.PlanSetup.SetPrescription(System.Int32, VMS.TPS.Common.Model.Types.DoseValue, System.Double)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.PlanSetup.SetPrescription(System.Int32,VMS.TPS.Common.Model.Types.DoseValue,System.Double)
+    name: SetPrescription
+    nameWithType: PlanSetup.SetPrescription
+    fullName: ESAPIX.Facade.API.PlanSetup.SetPrescription
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.DoseValue
+    name: Common.Model.Types.DoseValue
+    nameWithType: Common.Model.Types.DoseValue
+    fullName: VMS.TPS.Common.Model.Types.DoseValue
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.PlanSetup.SetPrescription(System.Int32,VMS.TPS.Common.Model.Types.DoseValue,System.Double)
+    name: SetPrescription
+    nameWithType: PlanSetup.SetPrescription
+    fullName: ESAPIX.Facade.API.PlanSetup.SetPrescription
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VMS.TPS.Common.Model.Types.DoseValue
+    name: Common.Model.Types.DoseValue
+    nameWithType: Common.Model.Types.DoseValue
+    fullName: VMS.TPS.Common.Model.Types.DoseValue
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.PlanSetup.PlanObjectiveStructures
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PlanObjectiveStructures
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PlanObjectiveStructures
+  nameWithType: PlanSetup.PlanObjectiveStructures
+  fullName: ESAPIX.Facade.API.PlanSetup.PlanObjectiveStructures
+- uid: ESAPIX.Facade.API.PlanSetup.ApprovalHistory
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ApprovalHistory
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ApprovalHistory
+  nameWithType: PlanSetup.ApprovalHistory
+  fullName: ESAPIX.Facade.API.PlanSetup.ApprovalHistory
+- uid: ESAPIX.Facade.API.PlanSetup.PredecessorPlan
+  commentId: P:ESAPIX.Facade.API.PlanSetup.PredecessorPlan
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: PredecessorPlan
+  nameWithType: PlanSetup.PredecessorPlan
+  fullName: ESAPIX.Facade.API.PlanSetup.PredecessorPlan
+- uid: ESAPIX.Facade.API.PlanSetup.ReferencePoints
+  commentId: P:ESAPIX.Facade.API.PlanSetup.ReferencePoints
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: ReferencePoints
+  nameWithType: PlanSetup.ReferencePoints
+  fullName: ESAPIX.Facade.API.PlanSetup.ReferencePoints
+- uid: ESAPIX.Facade.API.PlanSetup.RTPrescription
+  commentId: P:ESAPIX.Facade.API.PlanSetup.RTPrescription
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: RTPrescription
+  nameWithType: PlanSetup.RTPrescription
+  fullName: ESAPIX.Facade.API.PlanSetup.RTPrescription
+- uid: ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures(System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhasePrescription}@,System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhaseMeasure}@)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures(System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhasePrescription}@,System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhaseMeasure}@)
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: true
+  name: GetProtocolPrescriptionsAndMeasures(List<ProtocolPhasePrescription>, List<ProtocolPhaseMeasure>)
+  nameWithType: PlanSetup.GetProtocolPrescriptionsAndMeasures(List<ProtocolPhasePrescription>, List<ProtocolPhaseMeasure>)
+  fullName: ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures(System.Collections.Generic.List<ESAPIX.Facade.API.ProtocolPhasePrescription>, System.Collections.Generic.List<ESAPIX.Facade.API.ProtocolPhaseMeasure>)
+  nameWithType.vb: PlanSetup.GetProtocolPrescriptionsAndMeasures(List(Of ProtocolPhasePrescription), List(Of ProtocolPhaseMeasure))
+  fullName.vb: ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures(System.Collections.Generic.List(Of ESAPIX.Facade.API.ProtocolPhasePrescription), System.Collections.Generic.List(Of ESAPIX.Facade.API.ProtocolPhaseMeasure))
+  name.vb: GetProtocolPrescriptionsAndMeasures(List(Of ProtocolPhasePrescription), List(Of ProtocolPhaseMeasure))
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures(System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhasePrescription}@,System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhaseMeasure}@)
+    name: GetProtocolPrescriptionsAndMeasures
+    nameWithType: PlanSetup.GetProtocolPrescriptionsAndMeasures
+    fullName: ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.ProtocolPhasePrescription
+    name: ProtocolPhasePrescription
+    nameWithType: ProtocolPhasePrescription
+    fullName: ESAPIX.Facade.API.ProtocolPhasePrescription
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.ProtocolPhaseMeasure
+    name: ProtocolPhaseMeasure
+    nameWithType: ProtocolPhaseMeasure
+    fullName: ESAPIX.Facade.API.ProtocolPhaseMeasure
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures(System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhasePrescription}@,System.Collections.Generic.List{ESAPIX.Facade.API.ProtocolPhaseMeasure}@)
+    name: GetProtocolPrescriptionsAndMeasures
+    nameWithType: PlanSetup.GetProtocolPrescriptionsAndMeasures
+    fullName: ESAPIX.Facade.API.PlanSetup.GetProtocolPrescriptionsAndMeasures
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.ProtocolPhasePrescription
+    name: ProtocolPhasePrescription
+    nameWithType: ProtocolPhasePrescription
+    fullName: ESAPIX.Facade.API.ProtocolPhasePrescription
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.ProtocolPhaseMeasure
+    name: ProtocolPhaseMeasure
+    nameWithType: ProtocolPhaseMeasure
+    fullName: ESAPIX.Facade.API.ProtocolPhaseMeasure
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.PlanSetup.AddReferencePoint(ESAPIX.Facade.API.Structure,System.Nullable{VMS.TPS.Common.Model.Types.VVector},System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.PlanSetup.AddReferencePoint(ESAPIX.Facade.API.Structure,System.Nullable{VMS.TPS.Common.Model.Types.VVector},System.String,System.String)
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: true
+  name: AddReferencePoint(Structure, Nullable<Common.Model.Types.VVector>, String, String)
+  nameWithType: PlanSetup.AddReferencePoint(Structure, Nullable<Common.Model.Types.VVector>, String, String)
+  fullName: ESAPIX.Facade.API.PlanSetup.AddReferencePoint(ESAPIX.Facade.API.Structure, System.Nullable<VMS.TPS.Common.Model.Types.VVector>, System.String, System.String)
+  nameWithType.vb: PlanSetup.AddReferencePoint(Structure, Nullable(Of Common.Model.Types.VVector), String, String)
+  fullName.vb: ESAPIX.Facade.API.PlanSetup.AddReferencePoint(ESAPIX.Facade.API.Structure, System.Nullable(Of VMS.TPS.Common.Model.Types.VVector), System.String, System.String)
+  name.vb: AddReferencePoint(Structure, Nullable(Of Common.Model.Types.VVector), String, String)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.PlanSetup.AddReferencePoint(ESAPIX.Facade.API.Structure,System.Nullable{VMS.TPS.Common.Model.Types.VVector},System.String,System.String)
+    name: AddReferencePoint
+    nameWithType: PlanSetup.AddReferencePoint
+    fullName: ESAPIX.Facade.API.PlanSetup.AddReferencePoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VMS.TPS.Common.Model.Types.VVector
+    name: Common.Model.Types.VVector
+    nameWithType: Common.Model.Types.VVector
+    fullName: VMS.TPS.Common.Model.Types.VVector
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.PlanSetup.AddReferencePoint(ESAPIX.Facade.API.Structure,System.Nullable{VMS.TPS.Common.Model.Types.VVector},System.String,System.String)
+    name: AddReferencePoint
+    nameWithType: PlanSetup.AddReferencePoint
+    fullName: ESAPIX.Facade.API.PlanSetup.AddReferencePoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VMS.TPS.Common.Model.Types.VVector
+    name: Common.Model.Types.VVector
+    nameWithType: Common.Model.Types.VVector
+    fullName: VMS.TPS.Common.Model.Types.VVector
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.PlanSetup.TreatmentSessions
+  commentId: P:ESAPIX.Facade.API.PlanSetup.TreatmentSessions
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: TreatmentSessions
+  nameWithType: PlanSetup.TreatmentSessions
+  fullName: ESAPIX.Facade.API.PlanSetup.TreatmentSessions
+- uid: ESAPIX.Facade.API.PlanSetup.UseGating
+  commentId: P:ESAPIX.Facade.API.PlanSetup.UseGating
+  parent: ESAPIX.Facade.API.PlanSetup
+  isExternal: false
+  name: UseGating
+  nameWithType: PlanSetup.UseGating
+  fullName: ESAPIX.Facade.API.PlanSetup.UseGating
 - uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime
   commentId: P:ESAPIX.Facade.API.PlanningItem.CreationDateTime
   parent: ESAPIX.Facade.API.PlanningItem
@@ -1265,15 +2925,15 @@ references:
   name: DoseValuePresentation
   nameWithType: PlanningItem.DoseValuePresentation
   fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
-- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
-  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
   parent: ESAPIX.Facade.API.PlanningItem
   isExternal: true
-  name: GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
-  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
-  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, DoseValuePresentation, VolumePresentation, System.Double)
+  name: GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValuePresentation, VMS.TPS.Common.Model.Types.VolumePresentation, System.Double)
   spec.csharp:
-  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
     name: GetDVHCumulativeData
     nameWithType: PlanningItem.GetDVHCumulativeData
     fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData
@@ -1287,18 +2947,18 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: DoseValuePresentation
-    name: DoseValuePresentation
-    nameWithType: DoseValuePresentation
-    fullName: DoseValuePresentation
+  - uid: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    name: Common.Model.Types.DoseValuePresentation
+    nameWithType: Common.Model.Types.DoseValuePresentation
+    fullName: VMS.TPS.Common.Model.Types.DoseValuePresentation
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: VolumePresentation
-    name: VolumePresentation
-    nameWithType: VolumePresentation
-    fullName: VolumePresentation
+  - uid: VMS.TPS.Common.Model.Types.VolumePresentation
+    name: Common.Model.Types.VolumePresentation
+    nameWithType: Common.Model.Types.VolumePresentation
+    fullName: VMS.TPS.Common.Model.Types.VolumePresentation
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1312,7 +2972,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
     name: GetDVHCumulativeData
     nameWithType: PlanningItem.GetDVHCumulativeData
     fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData
@@ -1326,18 +2986,18 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: DoseValuePresentation
-    name: DoseValuePresentation
-    nameWithType: DoseValuePresentation
-    fullName: DoseValuePresentation
+  - uid: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    name: Common.Model.Types.DoseValuePresentation
+    nameWithType: Common.Model.Types.DoseValuePresentation
+    fullName: VMS.TPS.Common.Model.Types.DoseValuePresentation
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: VolumePresentation
-    name: VolumePresentation
-    nameWithType: VolumePresentation
-    fullName: VolumePresentation
+  - uid: VMS.TPS.Common.Model.Types.VolumePresentation
+    name: Common.Model.Types.VolumePresentation
+    nameWithType: Common.Model.Types.VolumePresentation
+    fullName: VMS.TPS.Common.Model.Types.VolumePresentation
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1350,6 +3010,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  commentId: P:ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  parent: ESAPIX.Facade.API.PlanningItem
+  isExternal: false
+  name: StructuresSelectedForDvh
+  nameWithType: PlanningItem.StructuresSelectedForDvh
+  fullName: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
 - uid: ESAPIX.Facade.API.ApiDataObject.Name
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Name
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -1378,103 +3045,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -1543,6 +3127,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -1572,207 +3195,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
-  isExternal: false
-  name: BrachyPlanSetup
-  nameWithType: BrachyPlanSetup.BrachyPlanSetup
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup
-- uid: ESAPIX.Facade.API.BrachyPlanSetup.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.BrachyPlanSetup.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: BrachyPlanSetup.IsLive
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType*
   commentId: Overload:ESAPIX.Facade.API.BrachyPlanSetup.ApplicationSetupType
   isExternal: false
@@ -2160,14 +3588,50 @@ references:
   name: TreatmentTechnique
   nameWithType: BrachyPlanSetup.TreatmentTechnique
   fullName: ESAPIX.Facade.API.BrachyPlanSetup.TreatmentTechnique
-- uid: ESAPIX.Facade.API.BrachyPlanSetup.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.BrachyPlanSetup.WriteXml
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.BrachyPlanSetup.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: BrachyPlanSetup.WriteXml
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup.WriteXml
-- uid: System.Xml.XmlWriter
+  name: BrachyPlanSetup
+  nameWithType: BrachyPlanSetup.BrachyPlanSetup
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.BrachyPlanSetup
+- uid: ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile*
+  commentId: Overload:ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile
+  isExternal: false
+  name: CalculateAccurateTG43DoseProfile
+  nameWithType: BrachyPlanSetup.CalculateAccurateTG43DoseProfile
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup.CalculateAccurateTG43DoseProfile
+- uid: VMS.TPS.Common.Model.Types.VVector
   isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Common.Model.Types.VVector
+  nameWithType: Common.Model.Types.VVector
+  fullName: VMS.TPS.Common.Model.Types.VVector
+- uid: System.Double[]
+  name: Double[]
+  nameWithType: Double[]
+  fullName: System.Double[]
+  nameWithType.vb: Double()
+  fullName.vb: System.Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: VMS.TPS.Common.Model.Types.DoseProfile
+  isExternal: true
+  name: Common.Model.Types.DoseProfile
+  nameWithType: Common.Model.Types.DoseProfile
+  fullName: VMS.TPS.Common.Model.Types.DoseProfile

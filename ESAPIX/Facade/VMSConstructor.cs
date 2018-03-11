@@ -9,11 +9,17 @@ using ESAPIX.Extensions;
 using VMS.TPS.Common.Model.Types;
 using XC = ESAPIX.Facade.XContext;
 using Types = VMS.TPS.Common.Model.Types;
+using System.Reflection;
+using System.Windows;
+using VMS.TPS.Common.Model;
 
 namespace ESAPIX.Facade
 {
     public class VMSConstructor
     {
+
         public static Func<System.Object, System.Object, System.String, dynamic> ConstructScriptContextFunc0 = null;
+
+        public static Func<System.Object, System.Object, dynamic, dynamic> ConstructScriptEnvironmentFunc0 = null;
     }
 }

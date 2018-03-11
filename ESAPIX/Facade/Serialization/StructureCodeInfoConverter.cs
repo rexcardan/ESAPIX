@@ -9,6 +9,7 @@ using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.Serialization
 {
+#if !VMS110
     public class StructureCodeInfoConverter : JsonConverter
     {
         public override bool CanWrite => false;
@@ -40,4 +41,5 @@ namespace ESAPIX.Facade.Serialization
             throw new NotImplementedException();
         }
     }
+#endif
 }

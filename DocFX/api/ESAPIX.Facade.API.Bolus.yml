@@ -6,12 +6,35 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Bolus.#ctor
+  - ESAPIX.Facade.API.Bolus.#ctor
+  - ESAPIX.Facade.API.Bolus.#ctor
+  - ESAPIX.Facade.API.Bolus.#ctor
+  - ESAPIX.Facade.API.Bolus.#ctor
+  - ESAPIX.Facade.API.Bolus.#ctor
+  - ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  - ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  - ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  - ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  - ESAPIX.Facade.API.Bolus.#ctor(System.Object)
   - ESAPIX.Facade.API.Bolus.#ctor(System.Object)
   - ESAPIX.Facade.API.Bolus.Id
-  - ESAPIX.Facade.API.Bolus.IsLive
+  - ESAPIX.Facade.API.Bolus.Id
+  - ESAPIX.Facade.API.Bolus.Id
+  - ESAPIX.Facade.API.Bolus.Id
+  - ESAPIX.Facade.API.Bolus.Id
+  - ESAPIX.Facade.API.Bolus.Id
+  - ESAPIX.Facade.API.Bolus.MaterialCTValue
+  - ESAPIX.Facade.API.Bolus.MaterialCTValue
+  - ESAPIX.Facade.API.Bolus.MaterialCTValue
+  - ESAPIX.Facade.API.Bolus.MaterialCTValue
+  - ESAPIX.Facade.API.Bolus.MaterialCTValue
   - ESAPIX.Facade.API.Bolus.MaterialCTValue
   - ESAPIX.Facade.API.Bolus.Name
-  - ESAPIX.Facade.API.Bolus.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Bolus.Name
+  - ESAPIX.Facade.API.Bolus.Name
+  - ESAPIX.Facade.API.Bolus.Name
+  - ESAPIX.Facade.API.Bolus.Name
+  - ESAPIX.Facade.API.Bolus.Name
   langs:
   - csharp
   - vb
@@ -22,35 +45,126 @@ items:
   source:
     id: Bolus
     path: ''
-    startLine: 6431
+    startLine: 131922
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Bolus : SerializableObject'
+    content: 'public class Bolus : SerializableObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class Bolus
           Inherits SerializableObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
+- uid: ESAPIX.Facade.API.Bolus.Id
+  commentId: P:ESAPIX.Facade.API.Bolus.Id
+  id: Id
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Bolus.Id
+  fullName: ESAPIX.Facade.API.Bolus.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 6810
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.Bolus.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Name
+  commentId: P:ESAPIX.Facade.API.Bolus.Name
+  id: Name
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Bolus.Name
+  fullName: ESAPIX.Facade.API.Bolus.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 6852
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.Bolus.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  commentId: P:ESAPIX.Facade.API.Bolus.MaterialCTValue
+  id: MaterialCTValue
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: MaterialCTValue
+  nameWithType: Bolus.MaterialCTValue
+  fullName: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  type: Property
+  source:
+    id: MaterialCTValue
+    path: ''
+    startLine: 6894
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaterialCTValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaterialCTValue As Double
+  overload: ESAPIX.Facade.API.Bolus.MaterialCTValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: ESAPIX.Facade.API.Bolus.#ctor
   commentId: M:ESAPIX.Facade.API.Bolus.#ctor
   id: '#ctor'
@@ -65,7 +179,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6433
+    startLine: 6936
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -91,7 +205,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 6438
+    startLine: 6941
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -106,37 +220,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Bolus.IsLive
-  commentId: P:ESAPIX.Facade.API.Bolus.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Bolus
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Bolus.IsLive
-  fullName: ESAPIX.Facade.API.Bolus.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 6443
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Bolus.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Bolus.Id
   commentId: P:ESAPIX.Facade.API.Bolus.Id
   id: Id
@@ -151,7 +234,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 6448
+    startLine: 19313
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -182,7 +265,7 @@ items:
   source:
     id: MaterialCTValue
     path: ''
-    startLine: 6463
+    startLine: 19355
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -213,7 +296,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 6480
+    startLine: 19397
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -230,31 +313,649 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Bolus.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Bolus.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Bolus.#ctor
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.Bolus
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Bolus.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Bolus.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: Bolus()
+  nameWithType: Bolus.Bolus()
+  fullName: ESAPIX.Facade.API.Bolus.Bolus()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 6495
+    startLine: 19439
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public Bolus()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus(Object)
+  nameWithType: Bolus.Bolus(Object)
+  fullName: ESAPIX.Facade.API.Bolus.Bolus(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 19444
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Bolus.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Id
+  commentId: P:ESAPIX.Facade.API.Bolus.Id
+  id: Id
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Bolus.Id
+  fullName: ESAPIX.Facade.API.Bolus.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 42342
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.Bolus.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  commentId: P:ESAPIX.Facade.API.Bolus.MaterialCTValue
+  id: MaterialCTValue
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: MaterialCTValue
+  nameWithType: Bolus.MaterialCTValue
+  fullName: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  type: Property
+  source:
+    id: MaterialCTValue
+    path: ''
+    startLine: 42384
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaterialCTValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaterialCTValue As Double
+  overload: ESAPIX.Facade.API.Bolus.MaterialCTValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Name
+  commentId: P:ESAPIX.Facade.API.Bolus.Name
+  id: Name
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Bolus.Name
+  fullName: ESAPIX.Facade.API.Bolus.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 42426
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.Bolus.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus()
+  nameWithType: Bolus.Bolus()
+  fullName: ESAPIX.Facade.API.Bolus.Bolus()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 42468
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus(Object)
+  nameWithType: Bolus.Bolus(Object)
+  fullName: ESAPIX.Facade.API.Bolus.Bolus(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 42473
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Id
+  commentId: P:ESAPIX.Facade.API.Bolus.Id
+  id: Id
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Bolus.Id
+  fullName: ESAPIX.Facade.API.Bolus.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 71066
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.Bolus.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  commentId: P:ESAPIX.Facade.API.Bolus.MaterialCTValue
+  id: MaterialCTValue
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: MaterialCTValue
+  nameWithType: Bolus.MaterialCTValue
+  fullName: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  type: Property
+  source:
+    id: MaterialCTValue
+    path: ''
+    startLine: 71108
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaterialCTValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaterialCTValue As Double
+  overload: ESAPIX.Facade.API.Bolus.MaterialCTValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Name
+  commentId: P:ESAPIX.Facade.API.Bolus.Name
+  id: Name
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Bolus.Name
+  fullName: ESAPIX.Facade.API.Bolus.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 71150
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.Bolus.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus()
+  nameWithType: Bolus.Bolus()
+  fullName: ESAPIX.Facade.API.Bolus.Bolus()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 71192
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus(Object)
+  nameWithType: Bolus.Bolus(Object)
+  fullName: ESAPIX.Facade.API.Bolus.Bolus(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 71197
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Id
+  commentId: P:ESAPIX.Facade.API.Bolus.Id
+  id: Id
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Bolus.Id
+  fullName: ESAPIX.Facade.API.Bolus.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 100128
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.Bolus.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  commentId: P:ESAPIX.Facade.API.Bolus.MaterialCTValue
+  id: MaterialCTValue
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: MaterialCTValue
+  nameWithType: Bolus.MaterialCTValue
+  fullName: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  type: Property
+  source:
+    id: MaterialCTValue
+    path: ''
+    startLine: 100170
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaterialCTValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaterialCTValue As Double
+  overload: ESAPIX.Facade.API.Bolus.MaterialCTValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Name
+  commentId: P:ESAPIX.Facade.API.Bolus.Name
+  id: Name
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Bolus.Name
+  fullName: ESAPIX.Facade.API.Bolus.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 100212
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.Bolus.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus()
+  nameWithType: Bolus.Bolus()
+  fullName: ESAPIX.Facade.API.Bolus.Bolus()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 100254
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus(Object)
+  nameWithType: Bolus.Bolus(Object)
+  fullName: ESAPIX.Facade.API.Bolus.Bolus(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 100259
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Id
+  commentId: P:ESAPIX.Facade.API.Bolus.Id
+  id: Id
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Bolus.Id
+  fullName: ESAPIX.Facade.API.Bolus.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 131924
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: ESAPIX.Facade.API.Bolus.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  commentId: P:ESAPIX.Facade.API.Bolus.MaterialCTValue
+  id: MaterialCTValue
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: MaterialCTValue
+  nameWithType: Bolus.MaterialCTValue
+  fullName: ESAPIX.Facade.API.Bolus.MaterialCTValue
+  type: Property
+  source:
+    id: MaterialCTValue
+    path: ''
+    startLine: 131966
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double MaterialCTValue { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaterialCTValue As Double
+  overload: ESAPIX.Facade.API.Bolus.MaterialCTValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.Name
+  commentId: P:ESAPIX.Facade.API.Bolus.Name
+  id: Name
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Bolus.Name
+  fullName: ESAPIX.Facade.API.Bolus.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 132008
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ESAPIX.Facade.API.Bolus.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus()
+  nameWithType: Bolus.Bolus()
+  fullName: ESAPIX.Facade.API.Bolus.Bolus()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 132050
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Bolus.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Bolus
+  langs:
+  - csharp
+  - vb
+  name: Bolus(Object)
+  nameWithType: Bolus.Bolus(Object)
+  fullName: ESAPIX.Facade.API.Bolus.Bolus(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 132055
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Bolus(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Bolus.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -280,6 +981,18 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -348,6 +1061,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -377,310 +1129,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Bolus.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Bolus.#ctor
-  isExternal: false
-  name: Bolus
-  nameWithType: Bolus.Bolus
-  fullName: ESAPIX.Facade.API.Bolus.Bolus
-- uid: ESAPIX.Facade.API.Bolus.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Bolus.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Bolus.IsLive
-  fullName: ESAPIX.Facade.API.Bolus.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Bolus.Id*
   commentId: Overload:ESAPIX.Facade.API.Bolus.Id
   isExternal: false
@@ -694,6 +1148,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: ESAPIX.Facade.API.Bolus.Name*
+  commentId: Overload:ESAPIX.Facade.API.Bolus.Name
+  isExternal: false
+  name: Name
+  nameWithType: Bolus.Name
+  fullName: ESAPIX.Facade.API.Bolus.Name
 - uid: ESAPIX.Facade.API.Bolus.MaterialCTValue*
   commentId: Overload:ESAPIX.Facade.API.Bolus.MaterialCTValue
   isExternal: false
@@ -707,20 +1167,9 @@ references:
   name: Double
   nameWithType: Double
   fullName: System.Double
-- uid: ESAPIX.Facade.API.Bolus.Name*
-  commentId: Overload:ESAPIX.Facade.API.Bolus.Name
+- uid: ESAPIX.Facade.API.Bolus.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Bolus.#ctor
   isExternal: false
-  name: Name
-  nameWithType: Bolus.Name
-  fullName: ESAPIX.Facade.API.Bolus.Name
-- uid: ESAPIX.Facade.API.Bolus.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Bolus.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: Bolus.WriteXml
-  fullName: ESAPIX.Facade.API.Bolus.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Bolus
+  nameWithType: Bolus.Bolus
+  fullName: ESAPIX.Facade.API.Bolus.Bolus

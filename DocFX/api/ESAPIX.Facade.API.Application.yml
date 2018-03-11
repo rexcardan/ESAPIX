@@ -6,17 +6,69 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Application.#ctor
+  - ESAPIX.Facade.API.Application.#ctor
+  - ESAPIX.Facade.API.Application.#ctor
+  - ESAPIX.Facade.API.Application.#ctor
+  - ESAPIX.Facade.API.Application.#ctor
+  - ESAPIX.Facade.API.Application.#ctor
+  - ESAPIX.Facade.API.Application.#ctor(System.Object)
+  - ESAPIX.Facade.API.Application.#ctor(System.Object)
+  - ESAPIX.Facade.API.Application.#ctor(System.Object)
+  - ESAPIX.Facade.API.Application.#ctor(System.Object)
+  - ESAPIX.Facade.API.Application.#ctor(System.Object)
   - ESAPIX.Facade.API.Application.#ctor(System.Object)
   - ESAPIX.Facade.API.Application.ClosePatient
+  - ESAPIX.Facade.API.Application.ClosePatient
+  - ESAPIX.Facade.API.Application.ClosePatient
+  - ESAPIX.Facade.API.Application.ClosePatient
+  - ESAPIX.Facade.API.Application.ClosePatient
+  - ESAPIX.Facade.API.Application.ClosePatient
+  - ESAPIX.Facade.API.Application.CreateApplication
+  - ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  - ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
   - ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
   - ESAPIX.Facade.API.Application.CurrentUser
+  - ESAPIX.Facade.API.Application.CurrentUser
+  - ESAPIX.Facade.API.Application.CurrentUser
+  - ESAPIX.Facade.API.Application.CurrentUser
+  - ESAPIX.Facade.API.Application.CurrentUser
+  - ESAPIX.Facade.API.Application.CurrentUser
   - ESAPIX.Facade.API.Application.Dispose
-  - ESAPIX.Facade.API.Application.IsLive
+  - ESAPIX.Facade.API.Application.Dispose
+  - ESAPIX.Facade.API.Application.Dispose
+  - ESAPIX.Facade.API.Application.Dispose
+  - ESAPIX.Facade.API.Application.Dispose
+  - ESAPIX.Facade.API.Application.Dispose
+  - ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  - ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  - ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  - ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  - ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
   - ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
   - ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  - ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  - ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  - ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  - ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  - ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  - ESAPIX.Facade.API.Application.PatientSummaries
+  - ESAPIX.Facade.API.Application.PatientSummaries
+  - ESAPIX.Facade.API.Application.PatientSummaries
+  - ESAPIX.Facade.API.Application.PatientSummaries
+  - ESAPIX.Facade.API.Application.PatientSummaries
   - ESAPIX.Facade.API.Application.PatientSummaries
   - ESAPIX.Facade.API.Application.SaveModifications
-  - ESAPIX.Facade.API.Application.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Application.SaveModifications
+  - ESAPIX.Facade.API.Application.SaveModifications
+  - ESAPIX.Facade.API.Application.SaveModifications
+  - ESAPIX.Facade.API.Application.SaveModifications
+  - ESAPIX.Facade.API.Application.ScriptEnvironment
+  - ESAPIX.Facade.API.Application.ScriptEnvironment
   langs:
   - csharp
   - vb
@@ -27,121 +79,34 @@ items:
   source:
     id: Application
     path: ''
-    startLine: 4973
+    startLine: 127558
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Application : SerializableObject'
+    content: 'public class Application : SerializableObject, Xml.Serialization.IXmlSerializable, IDisposable'
     content.vb: >-
       Public Class Application
           Inherits SerializableObject
+          Implements Xml.Serialization.IXmlSerializable, IDisposable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
+  - System.IDisposable
   inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.Application.#ctor
-  commentId: M:ESAPIX.Facade.API.Application.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.Application
-  langs:
-  - csharp
-  - vb
-  name: Application()
-  nameWithType: Application.Application()
-  fullName: ESAPIX.Facade.API.Application.Application()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 4975
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Application()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.Application.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Application.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.Application.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.Application
-  langs:
-  - csharp
-  - vb
-  name: Application(Object)
-  nameWithType: Application.Application(Object)
-  fullName: ESAPIX.Facade.API.Application.Application(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 4980
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Application(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.Application.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Application.IsLive
-  commentId: P:ESAPIX.Facade.API.Application.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Application
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Application.IsLive
-  fullName: ESAPIX.Facade.API.Application.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 4985
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Application.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Application.CurrentUser
   commentId: P:ESAPIX.Facade.API.Application.CurrentUser
   id: CurrentUser
@@ -156,7 +121,7 @@ items:
   source:
     id: CurrentUser
     path: ''
-    startLine: 4990
+    startLine: 4582
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -187,7 +152,7 @@ items:
   source:
     id: PatientSummaries
     path: ''
-    startLine: 5009
+    startLine: 4631
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -204,36 +169,34 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
-  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
-  id: CreateApplication(System.String,System.String,System.Boolean)
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  id: CreateApplication(System.String,System.String)
   parent: ESAPIX.Facade.API.Application
   langs:
   - csharp
   - vb
-  name: CreateApplication(String, String, Boolean)
-  nameWithType: Application.CreateApplication(String, String, Boolean)
-  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String, System.Boolean)
+  name: CreateApplication(String, String)
+  nameWithType: Application.CreateApplication(String, String)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String)
   type: Method
   source:
     id: CreateApplication
     path: ''
-    startLine: 5047
+    startLine: 4687
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public static Application CreateApplication(string username, string password, bool useCurrentThread = false)
+    content: public static Application CreateApplication(string username, string password)
     parameters:
     - id: username
       type: System.String
     - id: password
       type: System.String
-    - id: useCurrentThread
-      type: System.Boolean
     return:
       type: ESAPIX.Facade.API.Application
-    content.vb: Public Shared Function CreateApplication(username As String, password As String, useCurrentThread As Boolean = False) As Application
+    content.vb: Public Shared Function CreateApplication(username As String, password As String) As Application
   overload: ESAPIX.Facade.API.Application.CreateApplication*
   modifiers.csharp:
   - public
@@ -255,7 +218,7 @@ items:
   source:
     id: OpenPatient
     path: ''
-    startLine: 5052
+    startLine: 4692
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -286,7 +249,7 @@ items:
   source:
     id: OpenPatientById
     path: ''
-    startLine: 5062
+    startLine: 4716
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -317,7 +280,275 @@ items:
   source:
     id: ClosePatient
     path: ''
-    startLine: 5072
+    startLine: 4740
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void ClosePatient()
+    content.vb: Public Sub ClosePatient
+  overload: ESAPIX.Facade.API.Application.ClosePatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.Dispose
+  commentId: M:ESAPIX.Facade.API.Application.Dispose
+  id: Dispose
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Application.Dispose()
+  fullName: ESAPIX.Facade.API.Application.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: ''
+    startLine: 4757
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: ESAPIX.Facade.API.Application.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor
+  commentId: M:ESAPIX.Facade.API.Application.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application()
+  nameWithType: Application.Application()
+  fullName: ESAPIX.Facade.API.Application.Application()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 4774
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Application.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(Object)
+  nameWithType: Application.Application(Object)
+  fullName: ESAPIX.Facade.API.Application.Application(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 4779
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CurrentUser
+  commentId: P:ESAPIX.Facade.API.Application.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: Application.CurrentUser
+  fullName: ESAPIX.Facade.API.Application.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 16457
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public User CurrentUser { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.User
+    content.vb: Public Property CurrentUser As User
+  overload: ESAPIX.Facade.API.Application.CurrentUser*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.PatientSummaries
+  commentId: P:ESAPIX.Facade.API.Application.PatientSummaries
+  id: PatientSummaries
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: PatientSummaries
+  nameWithType: Application.PatientSummaries
+  fullName: ESAPIX.Facade.API.Application.PatientSummaries
+  type: Property
+  source:
+    id: PatientSummaries
+    path: ''
+    startLine: 16506
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<PatientSummary> PatientSummaries { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.PatientSummary}
+    content.vb: Public Property PatientSummaries As IEnumerable(Of PatientSummary)
+  overload: ESAPIX.Facade.API.Application.PatientSummaries*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  id: CreateApplication(System.String,System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication(String, String)
+  nameWithType: Application.CreateApplication(String, String)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String)
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 16562
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(username As String, password As String) As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  id: OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatient(PatientSummary)
+  nameWithType: Application.OpenPatient(PatientSummary)
+  fullName: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  type: Method
+  source:
+    id: OpenPatient
+    path: ''
+    startLine: 16567
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatient(PatientSummary patientSummary)
+    parameters:
+    - id: patientSummary
+      type: ESAPIX.Facade.API.PatientSummary
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatient(patientSummary As PatientSummary) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  id: OpenPatientById(System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatientById(String)
+  nameWithType: Application.OpenPatientById(String)
+  fullName: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  type: Method
+  source:
+    id: OpenPatientById
+    path: ''
+    startLine: 16591
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatientById(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatientById(id As String) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatientById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.ClosePatient
+  commentId: M:ESAPIX.Facade.API.Application.ClosePatient
+  id: ClosePatient
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: ClosePatient()
+  nameWithType: Application.ClosePatient()
+  fullName: ESAPIX.Facade.API.Application.ClosePatient()
+  type: Method
+  source:
+    id: ClosePatient
+    path: ''
+    startLine: 16615
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -343,7 +574,7 @@ items:
   source:
     id: SaveModifications
     path: ''
-    startLine: 5078
+    startLine: 16632
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -369,7 +600,7 @@ items:
   source:
     id: Dispose
     path: ''
-    startLine: 5084
+    startLine: 16649
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -381,31 +612,1385 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Application.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Application.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Application.#ctor
+  commentId: M:ESAPIX.Facade.API.Application.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.Application
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Application.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Application.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: Application()
+  nameWithType: Application.Application()
+  fullName: ESAPIX.Facade.API.Application.Application()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 5090
+    startLine: 16666
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public Application()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Application.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(Object)
+  nameWithType: Application.Application(Object)
+  fullName: ESAPIX.Facade.API.Application.Application(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 16671
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Application.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CurrentUser
+  commentId: P:ESAPIX.Facade.API.Application.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: Application.CurrentUser
+  fullName: ESAPIX.Facade.API.Application.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 39302
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public User CurrentUser { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.User
+    content.vb: Public Property CurrentUser As User
+  overload: ESAPIX.Facade.API.Application.CurrentUser*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.PatientSummaries
+  commentId: P:ESAPIX.Facade.API.Application.PatientSummaries
+  id: PatientSummaries
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: PatientSummaries
+  nameWithType: Application.PatientSummaries
+  fullName: ESAPIX.Facade.API.Application.PatientSummaries
+  type: Property
+  source:
+    id: PatientSummaries
+    path: ''
+    startLine: 39351
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<PatientSummary> PatientSummaries { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.PatientSummary}
+    content.vb: Public Property PatientSummaries As IEnumerable(Of PatientSummary)
+  overload: ESAPIX.Facade.API.Application.PatientSummaries*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  id: CreateApplication(System.String,System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication(String, String)
+  nameWithType: Application.CreateApplication(String, String)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String)
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 39407
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(username As String, password As String) As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  id: OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatient(PatientSummary)
+  nameWithType: Application.OpenPatient(PatientSummary)
+  fullName: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  type: Method
+  source:
+    id: OpenPatient
+    path: ''
+    startLine: 39412
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatient(PatientSummary patientSummary)
+    parameters:
+    - id: patientSummary
+      type: ESAPIX.Facade.API.PatientSummary
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatient(patientSummary As PatientSummary) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  id: OpenPatientById(System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatientById(String)
+  nameWithType: Application.OpenPatientById(String)
+  fullName: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  type: Method
+  source:
+    id: OpenPatientById
+    path: ''
+    startLine: 39436
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatientById(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatientById(id As String) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatientById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.ClosePatient
+  commentId: M:ESAPIX.Facade.API.Application.ClosePatient
+  id: ClosePatient
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: ClosePatient()
+  nameWithType: Application.ClosePatient()
+  fullName: ESAPIX.Facade.API.Application.ClosePatient()
+  type: Method
+  source:
+    id: ClosePatient
+    path: ''
+    startLine: 39460
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void ClosePatient()
+    content.vb: Public Sub ClosePatient
+  overload: ESAPIX.Facade.API.Application.ClosePatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.SaveModifications
+  commentId: M:ESAPIX.Facade.API.Application.SaveModifications
+  id: SaveModifications
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: SaveModifications()
+  nameWithType: Application.SaveModifications()
+  fullName: ESAPIX.Facade.API.Application.SaveModifications()
+  type: Method
+  source:
+    id: SaveModifications
+    path: ''
+    startLine: 39477
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SaveModifications()
+    content.vb: Public Sub SaveModifications
+  overload: ESAPIX.Facade.API.Application.SaveModifications*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.Dispose
+  commentId: M:ESAPIX.Facade.API.Application.Dispose
+  id: Dispose
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Application.Dispose()
+  fullName: ESAPIX.Facade.API.Application.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: ''
+    startLine: 39494
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: ESAPIX.Facade.API.Application.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor
+  commentId: M:ESAPIX.Facade.API.Application.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application()
+  nameWithType: Application.Application()
+  fullName: ESAPIX.Facade.API.Application.Application()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 39511
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Application.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(Object)
+  nameWithType: Application.Application(Object)
+  fullName: ESAPIX.Facade.API.Application.Application(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 39516
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CurrentUser
+  commentId: P:ESAPIX.Facade.API.Application.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: Application.CurrentUser
+  fullName: ESAPIX.Facade.API.Application.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 67059
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public User CurrentUser { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.User
+    content.vb: Public Property CurrentUser As User
+  overload: ESAPIX.Facade.API.Application.CurrentUser*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.PatientSummaries
+  commentId: P:ESAPIX.Facade.API.Application.PatientSummaries
+  id: PatientSummaries
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: PatientSummaries
+  nameWithType: Application.PatientSummaries
+  fullName: ESAPIX.Facade.API.Application.PatientSummaries
+  type: Property
+  source:
+    id: PatientSummaries
+    path: ''
+    startLine: 67108
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<PatientSummary> PatientSummaries { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.PatientSummary}
+    content.vb: Public Property PatientSummaries As IEnumerable(Of PatientSummary)
+  overload: ESAPIX.Facade.API.Application.PatientSummaries*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String,System.Boolean)
+  id: CreateApplication(System.String,System.String,System.Boolean)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication(String, String, Boolean)
+  nameWithType: Application.CreateApplication(String, String, Boolean)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 67164
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication(string username, string password, bool useCurrentThread)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    - id: useCurrentThread
+      type: System.Boolean
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(username As String, password As String, useCurrentThread As Boolean) As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  id: CreateApplication(System.Boolean)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication(Boolean)
+  nameWithType: Application.CreateApplication(Boolean)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 67169
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication(bool useCurrentThread)
+    parameters:
+    - id: useCurrentThread
+      type: System.Boolean
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(useCurrentThread As Boolean) As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  id: OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatient(PatientSummary)
+  nameWithType: Application.OpenPatient(PatientSummary)
+  fullName: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  type: Method
+  source:
+    id: OpenPatient
+    path: ''
+    startLine: 67174
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatient(PatientSummary patientSummary)
+    parameters:
+    - id: patientSummary
+      type: ESAPIX.Facade.API.PatientSummary
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatient(patientSummary As PatientSummary) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  id: OpenPatientById(System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatientById(String)
+  nameWithType: Application.OpenPatientById(String)
+  fullName: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  type: Method
+  source:
+    id: OpenPatientById
+    path: ''
+    startLine: 67198
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatientById(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatientById(id As String) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatientById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.ClosePatient
+  commentId: M:ESAPIX.Facade.API.Application.ClosePatient
+  id: ClosePatient
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: ClosePatient()
+  nameWithType: Application.ClosePatient()
+  fullName: ESAPIX.Facade.API.Application.ClosePatient()
+  type: Method
+  source:
+    id: ClosePatient
+    path: ''
+    startLine: 67222
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void ClosePatient()
+    content.vb: Public Sub ClosePatient
+  overload: ESAPIX.Facade.API.Application.ClosePatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.SaveModifications
+  commentId: M:ESAPIX.Facade.API.Application.SaveModifications
+  id: SaveModifications
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: SaveModifications()
+  nameWithType: Application.SaveModifications()
+  fullName: ESAPIX.Facade.API.Application.SaveModifications()
+  type: Method
+  source:
+    id: SaveModifications
+    path: ''
+    startLine: 67239
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SaveModifications()
+    content.vb: Public Sub SaveModifications
+  overload: ESAPIX.Facade.API.Application.SaveModifications*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.Dispose
+  commentId: M:ESAPIX.Facade.API.Application.Dispose
+  id: Dispose
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Application.Dispose()
+  fullName: ESAPIX.Facade.API.Application.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: ''
+    startLine: 67256
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: ESAPIX.Facade.API.Application.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor
+  commentId: M:ESAPIX.Facade.API.Application.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application()
+  nameWithType: Application.Application()
+  fullName: ESAPIX.Facade.API.Application.Application()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 67273
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Application.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(Object)
+  nameWithType: Application.Application(Object)
+  fullName: ESAPIX.Facade.API.Application.Application(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 67278
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CurrentUser
+  commentId: P:ESAPIX.Facade.API.Application.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: Application.CurrentUser
+  fullName: ESAPIX.Facade.API.Application.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 95913
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public User CurrentUser { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.User
+    content.vb: Public Property CurrentUser As User
+  overload: ESAPIX.Facade.API.Application.CurrentUser*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.PatientSummaries
+  commentId: P:ESAPIX.Facade.API.Application.PatientSummaries
+  id: PatientSummaries
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: PatientSummaries
+  nameWithType: Application.PatientSummaries
+  fullName: ESAPIX.Facade.API.Application.PatientSummaries
+  type: Property
+  source:
+    id: PatientSummaries
+    path: ''
+    startLine: 95962
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<PatientSummary> PatientSummaries { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.PatientSummary}
+    content.vb: Public Property PatientSummaries As IEnumerable(Of PatientSummary)
+  overload: ESAPIX.Facade.API.Application.PatientSummaries*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.ScriptEnvironment
+  commentId: P:ESAPIX.Facade.API.Application.ScriptEnvironment
+  id: ScriptEnvironment
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: ScriptEnvironment
+  nameWithType: Application.ScriptEnvironment
+  fullName: ESAPIX.Facade.API.Application.ScriptEnvironment
+  type: Property
+  source:
+    id: ScriptEnvironment
+    path: ''
+    startLine: 96018
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ScriptEnvironment ScriptEnvironment { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ScriptEnvironment
+    content.vb: Public Property ScriptEnvironment As ScriptEnvironment
+  overload: ESAPIX.Facade.API.Application.ScriptEnvironment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  id: CreateApplication(System.String,System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication(String, String)
+  nameWithType: Application.CreateApplication(String, String)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String)
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 96067
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(username As String, password As String) As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.CreateApplication
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication
+  id: CreateApplication
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication()
+  nameWithType: Application.CreateApplication()
+  fullName: ESAPIX.Facade.API.Application.CreateApplication()
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 96072
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication()
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  id: OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatient(PatientSummary)
+  nameWithType: Application.OpenPatient(PatientSummary)
+  fullName: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  type: Method
+  source:
+    id: OpenPatient
+    path: ''
+    startLine: 96077
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatient(PatientSummary patientSummary)
+    parameters:
+    - id: patientSummary
+      type: ESAPIX.Facade.API.PatientSummary
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatient(patientSummary As PatientSummary) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  id: OpenPatientById(System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatientById(String)
+  nameWithType: Application.OpenPatientById(String)
+  fullName: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  type: Method
+  source:
+    id: OpenPatientById
+    path: ''
+    startLine: 96101
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatientById(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatientById(id As String) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatientById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.ClosePatient
+  commentId: M:ESAPIX.Facade.API.Application.ClosePatient
+  id: ClosePatient
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: ClosePatient()
+  nameWithType: Application.ClosePatient()
+  fullName: ESAPIX.Facade.API.Application.ClosePatient()
+  type: Method
+  source:
+    id: ClosePatient
+    path: ''
+    startLine: 96125
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void ClosePatient()
+    content.vb: Public Sub ClosePatient
+  overload: ESAPIX.Facade.API.Application.ClosePatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.SaveModifications
+  commentId: M:ESAPIX.Facade.API.Application.SaveModifications
+  id: SaveModifications
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: SaveModifications()
+  nameWithType: Application.SaveModifications()
+  fullName: ESAPIX.Facade.API.Application.SaveModifications()
+  type: Method
+  source:
+    id: SaveModifications
+    path: ''
+    startLine: 96142
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SaveModifications()
+    content.vb: Public Sub SaveModifications
+  overload: ESAPIX.Facade.API.Application.SaveModifications*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.Dispose
+  commentId: M:ESAPIX.Facade.API.Application.Dispose
+  id: Dispose
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Application.Dispose()
+  fullName: ESAPIX.Facade.API.Application.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: ''
+    startLine: 96159
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: ESAPIX.Facade.API.Application.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor
+  commentId: M:ESAPIX.Facade.API.Application.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application()
+  nameWithType: Application.Application()
+  fullName: ESAPIX.Facade.API.Application.Application()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 96176
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Application.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(Object)
+  nameWithType: Application.Application(Object)
+  fullName: ESAPIX.Facade.API.Application.Application(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 96181
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CurrentUser
+  commentId: P:ESAPIX.Facade.API.Application.CurrentUser
+  id: CurrentUser
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: Application.CurrentUser
+  fullName: ESAPIX.Facade.API.Application.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: ''
+    startLine: 127560
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public User CurrentUser { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.User
+    content.vb: Public Property CurrentUser As User
+  overload: ESAPIX.Facade.API.Application.CurrentUser*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.PatientSummaries
+  commentId: P:ESAPIX.Facade.API.Application.PatientSummaries
+  id: PatientSummaries
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: PatientSummaries
+  nameWithType: Application.PatientSummaries
+  fullName: ESAPIX.Facade.API.Application.PatientSummaries
+  type: Property
+  source:
+    id: PatientSummaries
+    path: ''
+    startLine: 127609
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<PatientSummary> PatientSummaries { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.PatientSummary}
+    content.vb: Public Property PatientSummaries As IEnumerable(Of PatientSummary)
+  overload: ESAPIX.Facade.API.Application.PatientSummaries*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.ScriptEnvironment
+  commentId: P:ESAPIX.Facade.API.Application.ScriptEnvironment
+  id: ScriptEnvironment
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: ScriptEnvironment
+  nameWithType: Application.ScriptEnvironment
+  fullName: ESAPIX.Facade.API.Application.ScriptEnvironment
+  type: Property
+  source:
+    id: ScriptEnvironment
+    path: ''
+    startLine: 127665
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public ScriptEnvironment ScriptEnvironment { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.ScriptEnvironment
+    content.vb: Public Property ScriptEnvironment As ScriptEnvironment
+  overload: ESAPIX.Facade.API.Application.ScriptEnvironment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.Dispose
+  commentId: M:ESAPIX.Facade.API.Application.Dispose
+  id: Dispose
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Application.Dispose()
+  fullName: ESAPIX.Facade.API.Application.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: ''
+    startLine: 127714
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: ESAPIX.Facade.API.Application.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.String,System.String)
+  id: CreateApplication(System.String,System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication(String, String)
+  nameWithType: Application.CreateApplication(String, String)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.String, System.String)
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 127731
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(username As String, password As String) As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  commentId: M:ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  id: CreateApplication(System.Boolean)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: CreateApplication(Boolean)
+  nameWithType: Application.CreateApplication(Boolean)
+  fullName: ESAPIX.Facade.API.Application.CreateApplication(System.Boolean)
+  type: Method
+  source:
+    id: CreateApplication
+    path: ''
+    startLine: 127736
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public static Application CreateApplication(bool useSingleThread)
+    parameters:
+    - id: useSingleThread
+      type: System.Boolean
+    return:
+      type: ESAPIX.Facade.API.Application
+    content.vb: Public Shared Function CreateApplication(useSingleThread As Boolean) As Application
+  overload: ESAPIX.Facade.API.Application.CreateApplication*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  id: OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatient(PatientSummary)
+  nameWithType: Application.OpenPatient(PatientSummary)
+  fullName: ESAPIX.Facade.API.Application.OpenPatient(ESAPIX.Facade.API.PatientSummary)
+  type: Method
+  source:
+    id: OpenPatient
+    path: ''
+    startLine: 127741
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatient(PatientSummary patientSummary)
+    parameters:
+    - id: patientSummary
+      type: ESAPIX.Facade.API.PatientSummary
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatient(patientSummary As PatientSummary) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  commentId: M:ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  id: OpenPatientById(System.String)
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: OpenPatientById(String)
+  nameWithType: Application.OpenPatientById(String)
+  fullName: ESAPIX.Facade.API.Application.OpenPatientById(System.String)
+  type: Method
+  source:
+    id: OpenPatientById
+    path: ''
+    startLine: 127765
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Patient OpenPatientById(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: ESAPIX.Facade.API.Patient
+    content.vb: Public Function OpenPatientById(id As String) As Patient
+  overload: ESAPIX.Facade.API.Application.OpenPatientById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.ClosePatient
+  commentId: M:ESAPIX.Facade.API.Application.ClosePatient
+  id: ClosePatient
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: ClosePatient()
+  nameWithType: Application.ClosePatient()
+  fullName: ESAPIX.Facade.API.Application.ClosePatient()
+  type: Method
+  source:
+    id: ClosePatient
+    path: ''
+    startLine: 127789
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void ClosePatient()
+    content.vb: Public Sub ClosePatient
+  overload: ESAPIX.Facade.API.Application.ClosePatient*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.SaveModifications
+  commentId: M:ESAPIX.Facade.API.Application.SaveModifications
+  id: SaveModifications
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: SaveModifications()
+  nameWithType: Application.SaveModifications()
+  fullName: ESAPIX.Facade.API.Application.SaveModifications()
+  type: Method
+  source:
+    id: SaveModifications
+    path: ''
+    startLine: 127806
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SaveModifications()
+    content.vb: Public Sub SaveModifications
+  overload: ESAPIX.Facade.API.Application.SaveModifications*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor
+  commentId: M:ESAPIX.Facade.API.Application.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application()
+  nameWithType: Application.Application()
+  fullName: ESAPIX.Facade.API.Application.Application()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 127823
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Application.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Application.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Application.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(Object)
+  nameWithType: Application.Application(Object)
+  fullName: ESAPIX.Facade.API.Application.Application(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 127828
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Application(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Application.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -431,6 +2016,25 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -499,6 +2103,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -528,310 +2171,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Application.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Application.#ctor
-  isExternal: false
-  name: Application
-  nameWithType: Application.Application
-  fullName: ESAPIX.Facade.API.Application.Application
-- uid: ESAPIX.Facade.API.Application.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Application.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Application.IsLive
-  fullName: ESAPIX.Facade.API.Application.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Application.CurrentUser*
   commentId: Overload:ESAPIX.Facade.API.Application.CurrentUser
   isExternal: false
@@ -982,26 +2327,72 @@ references:
   name: ClosePatient
   nameWithType: Application.ClosePatient
   fullName: ESAPIX.Facade.API.Application.ClosePatient
-- uid: ESAPIX.Facade.API.Application.SaveModifications*
-  commentId: Overload:ESAPIX.Facade.API.Application.SaveModifications
-  isExternal: false
-  name: SaveModifications
-  nameWithType: Application.SaveModifications
-  fullName: ESAPIX.Facade.API.Application.SaveModifications
 - uid: ESAPIX.Facade.API.Application.Dispose*
   commentId: Overload:ESAPIX.Facade.API.Application.Dispose
   isExternal: false
   name: Dispose
   nameWithType: Application.Dispose
   fullName: ESAPIX.Facade.API.Application.Dispose
-- uid: ESAPIX.Facade.API.Application.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Application.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: Application.WriteXml
-  fullName: ESAPIX.Facade.API.Application.WriteXml
-- uid: System.Xml.XmlWriter
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
   isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.Application.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Application.#ctor
+  isExternal: false
+  name: Application
+  nameWithType: Application.Application
+  fullName: ESAPIX.Facade.API.Application.Application
+- uid: ESAPIX.Facade.API.Application.SaveModifications*
+  commentId: Overload:ESAPIX.Facade.API.Application.SaveModifications
+  isExternal: false
+  name: SaveModifications
+  nameWithType: Application.SaveModifications
+  fullName: ESAPIX.Facade.API.Application.SaveModifications
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Facade.API.Application.ScriptEnvironment*
+  commentId: Overload:ESAPIX.Facade.API.Application.ScriptEnvironment
+  isExternal: false
+  name: ScriptEnvironment
+  nameWithType: Application.ScriptEnvironment
+  fullName: ESAPIX.Facade.API.Application.ScriptEnvironment
+- uid: ESAPIX.Facade.API.ScriptEnvironment
+  commentId: T:ESAPIX.Facade.API.ScriptEnvironment
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ScriptEnvironment
+  nameWithType: ScriptEnvironment
+  fullName: ESAPIX.Facade.API.ScriptEnvironment

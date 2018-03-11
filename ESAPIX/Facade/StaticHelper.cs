@@ -1,9 +1,8 @@
 ﻿#region
-
 using System;
-using ESAPIX.AppKit;
 using ESAPIX.Facade.API;
 using VMS.TPS.Common.Model.Types;
+using ESAPIX.Common;
 
 #endregion
 
@@ -27,63 +26,15 @@ namespace ESAPIX.Facade
         public static Func<dynamic, dynamic, double> VVector_DistanceFunc { get; set; } =
             (v1, v2) => { return double.NaN; };
 
-        public static Application Application_CreateApplication(string username, string password,
-            bool useCurrentThread = false)
-
+        public static Application Application_CreateApplication(string username, string password)
         {
-            var thread = new AppComThread(!useCurrentThread);
-
-            Application xapp = null;
-
-            Exception e = null;
-
-            thread.Invoke(() =>
-            {
-                var vms = Application_CreateApplicationFunc0(username, password);
-                xapp = new Application(vms);
-            });
-
-            if (ExpandoGetter.GetClient(xapp) == null)
-                throw new Exception(
-                    "App was not created. Make sure FacadeInitializer.Initialize() in ESAPIX.Bootstrapper is being called before invoking static methods",
-                    e);
-            if (xapp == null)
-
-                throw new Exception("App was not created. Check to make sure the VMS dll references are correct.", e);
-
-            var sac = new StandAloneContext(xapp, thread);
-
-            XContext.Instance.CurrentContext = sac;
-
-            XContext.Instance.CurrentContext.UIDispatcher = System.Windows.Application.Current?.Dispatcher;
-
-            return xapp;
+            throw new Exception("This method should not be called. Call StandAloneContext contructor instead.");
         }
 
         public static Application Application_CreateApplication(
            bool useCurrentThread = false)
         {
-            var thread = new AppComThread(!useCurrentThread);
-            Application xapp = null;
-            Exception e = null;
-            thread.Invoke(() =>
-            {
-                try
-                {
-                    var vms = Application_CreateApplicationFunc1();
-                    xapp = new Application(vms);
-                }
-                catch (Exception ex)
-                {
-                    e = ex;
-                }
-            });
-            if (xapp == null)
-                throw new Exception("App was not created. Check to make sure the VMS dll references are correct.", e);
-            var sac = new StandAloneContext(xapp, thread);
-            XContext.Instance.CurrentContext = sac;
-            XContext.Instance.CurrentContext.UIDispatcher = System.Windows.Application.Current?.Dispatcher;
-            return xapp;
+            throw new Exception("This method should not be called. Call StandAloneContext contructor instead.");
         }
 
         public static void SerializableObject_ClearSerializationHistory()

@@ -13,35 +13,108 @@
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-DEBUG|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>bin\x64\15.1-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS151</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\15.0-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS150</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\15.5-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS155</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-RELEASE|x64'">
+    <OutputPath>bin\x64\15.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS150</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-RELEASE|x64'">
+    <OutputPath>bin\x64\15.1-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS151</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-RELEASE|x64'">
+    <OutputPath>bin\x64\15.5-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS155</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\13.6-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS136</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-RELEASE|x64'">
+    <OutputPath>bin\x64\13.6-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS136</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\13.7-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS137</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-RELEASE|x64'">
+    <OutputPath>bin\x64\13.7-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS137</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\11.0-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS110</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-RELEASE|x64'">
+    <OutputPath>bin\x64\11.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS110</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -77,9 +150,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>C:\Users\vision\Desktop\XCheck\XCheck\XCheck\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -90,24 +160,27 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.0\VMS.TPS.Common.Model.API.dll</HintPath>
-    </Reference>
-    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.0\VMS.TPS.Common.Model.Types.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="AppKit\Data\AbstractStringDataStore.cs" />
+    <Compile Include="AppKit\Data\AppSettings.cs" />
+    <Compile Include="AppKit\Data\JsonDataStore.cs" />
+    <Compile Include="AppKit\Data\SecureStorage.cs" />
+    <Compile Include="AppKit\Data\StorageHelper.cs" />
+    <Compile Include="AppKit\Overlay\SelectPatient.xaml.cs">
+      <DependentUpon>SelectPatient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppKit\Splash\Splasher.cs" />
+    <Compile Include="AppKit\Splash\SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BootstrapperBase.cs" />
-    <Compile Include="ContextBuilder.cs" />
-    <Compile Include="FacadeInitializer.cs" />
     <Compile Include="Helpers\ArgumentBuilder.cs" />
     <Compile Include="Helpers\ArgumentKey.cs" />
     <Compile Include="Helpers\ArgumentParser.cs" />
+    <Compile Include="Helpers\XamlAssemblyLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptBootstrapper.cs" />
     <Compile Include="XScriptBase.cs" />
@@ -122,12 +195,88 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Include="AppKit\Overlay\SelectPatient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppKit\Splash\SplashScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\esapix.ico" />
+    <Content Include="Resources\esapix.png" />
+    <Resource Include="Resources\uabdistort.jpg" />
+    <Resource Include="Resources\uabcode.jpg" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '11.0-DEBUG' Or '$(Configuration)' == '11.0-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\11.0\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\11.0\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '13.6-DEBUG' Or '$(Configuration)' == '13.6-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.6\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.6\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '13.7-DEBUG' Or '$(Configuration)' == '13.7-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.7\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.7\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '15.0-DEBUG' Or '$(Configuration)' == '15.0-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.0\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.0\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '15.1-DEBUG' Or '$(Configuration)' == '15.1-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.1\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.1\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '15.5-DEBUG' Or '$(Configuration)' == '15.5-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.5\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.5\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+		Other similar extension points exist, see Microsoft.Common.targets.
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+	-->
 </Project>

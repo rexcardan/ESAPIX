@@ -27,5 +27,33 @@
             public const string TREATED_VOLUME = "TREATED_VOLUME";
             public const string EXTERNAL = "EXTERNAL";
         }
+
+        public static class CourseIntent
+        {
+            public const string BENIGN = "Benign";
+            public const string CONCOMITANT = "Concomitant";
+            public const string CONCURRENT = "Concurrent";
+            public const string CONSULT_ONLY = "Consult Only";
+            public const string CURATIVE = "Curative";
+            public const string CURATIVE_W_CHEMO = "Curative w/chemo";
+            public const string EMERGENCY = "Emergency";
+            public const string PALLIATIVE = "Palliative";
+            public const string PALLIATIVE_W_CHEMO = "Palliative w/chemo";
+            public const string POST_OP = "Post-op";
+            public const string PRE_OP = "Pre-op";
+            public const string PROTOCOL = "Protocol";
+            public const string RADICAL = "Radical";
+            public const string UNKNOWN = "Unknown";
+        }
+
+        public static class PlanIntent
+        {
+            public const string PROPHYLACTIC = "Prophylactic";
+            public const string RESEARCH = "Research";
+            public const string PALLIATIVE = "Palliative";
+            public const string SERVICE = "Service";
+            public const string MACHINE_QA = "Machine QA";
+            public const string CURATIVE = "Curative";
+        }
     }
 }

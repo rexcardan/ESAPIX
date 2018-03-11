@@ -6,20 +6,70 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  - ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
   - ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
   - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
   - ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
   - ESAPIX.Facade.API.BrachySolidApplicator.Category
+  - ESAPIX.Facade.API.BrachySolidApplicator.Category
+  - ESAPIX.Facade.API.BrachySolidApplicator.Category
+  - ESAPIX.Facade.API.BrachySolidApplicator.Category
+  - ESAPIX.Facade.API.BrachySolidApplicator.Category
   - ESAPIX.Facade.API.BrachySolidApplicator.Catheters
-  - ESAPIX.Facade.API.BrachySolidApplicator.IsLive
+  - ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  - ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  - ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  - ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  - ESAPIX.Facade.API.BrachySolidApplicator.Note
+  - ESAPIX.Facade.API.BrachySolidApplicator.Note
+  - ESAPIX.Facade.API.BrachySolidApplicator.Note
+  - ESAPIX.Facade.API.BrachySolidApplicator.Note
   - ESAPIX.Facade.API.BrachySolidApplicator.Note
   - ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  - ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
   - ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
   - ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  - ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  - ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  - ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  - ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  - ESAPIX.Facade.API.BrachySolidApplicator.UID
+  - ESAPIX.Facade.API.BrachySolidApplicator.UID
+  - ESAPIX.Facade.API.BrachySolidApplicator.UID
+  - ESAPIX.Facade.API.BrachySolidApplicator.UID
   - ESAPIX.Facade.API.BrachySolidApplicator.UID
   - ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  - ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  - ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  - ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  - ESAPIX.Facade.API.BrachySolidApplicator.Vendor
   - ESAPIX.Facade.API.BrachySolidApplicator.Version
-  - ESAPIX.Facade.API.BrachySolidApplicator.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.BrachySolidApplicator.Version
+  - ESAPIX.Facade.API.BrachySolidApplicator.Version
+  - ESAPIX.Facade.API.BrachySolidApplicator.Version
+  - ESAPIX.Facade.API.BrachySolidApplicator.Version
   langs:
   - csharp
   - vb
@@ -30,127 +80,40 @@ items:
   source:
     id: BrachySolidApplicator
     path: ''
-    startLine: 6752
+    startLine: 132748
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class BrachySolidApplicator : ApiDataObject'
+    content: 'public class BrachySolidApplicator : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class BrachySolidApplicator
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor
-  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.BrachySolidApplicator
-  langs:
-  - csharp
-  - vb
-  name: BrachySolidApplicator()
-  nameWithType: BrachySolidApplicator.BrachySolidApplicator()
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6754
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public BrachySolidApplicator()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.BrachySolidApplicator
-  langs:
-  - csharp
-  - vb
-  name: BrachySolidApplicator(Object)
-  nameWithType: BrachySolidApplicator.BrachySolidApplicator(Object)
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6759
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public BrachySolidApplicator(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.BrachySolidApplicator.IsLive
-  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.BrachySolidApplicator
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: BrachySolidApplicator.IsLive
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 6764
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.BrachySolidApplicator.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
   commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
   id: ApplicatorSetName
@@ -165,7 +128,7 @@ items:
   source:
     id: ApplicatorSetName
     path: ''
-    startLine: 6769
+    startLine: 19871
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -196,7 +159,7 @@ items:
   source:
     id: ApplicatorSetType
     path: ''
-    startLine: 6786
+    startLine: 19913
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -227,7 +190,7 @@ items:
   source:
     id: Category
     path: ''
-    startLine: 6803
+    startLine: 19955
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -258,7 +221,7 @@ items:
   source:
     id: Catheters
     path: ''
-    startLine: 6818
+    startLine: 19997
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -289,7 +252,7 @@ items:
   source:
     id: Note
     path: ''
-    startLine: 6856
+    startLine: 20053
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -320,7 +283,7 @@ items:
   source:
     id: PartName
     path: ''
-    startLine: 6871
+    startLine: 20095
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -351,7 +314,7 @@ items:
   source:
     id: PartNumber
     path: ''
-    startLine: 6886
+    startLine: 20137
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -382,7 +345,7 @@ items:
   source:
     id: Summary
     path: ''
-    startLine: 6901
+    startLine: 20179
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -413,7 +376,7 @@ items:
   source:
     id: UID
     path: ''
-    startLine: 6916
+    startLine: 20221
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -444,7 +407,7 @@ items:
   source:
     id: Vendor
     path: ''
-    startLine: 6931
+    startLine: 20263
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -475,7 +438,7 @@ items:
   source:
     id: Version
     path: ''
-    startLine: 6946
+    startLine: 20305
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -492,31 +455,1641 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.BrachySolidApplicator.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.BrachySolidApplicator
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: BrachySolidApplicator.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: BrachySolidApplicator()
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator()
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 6961
+    startLine: 20347
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public BrachySolidApplicator()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator(Object)
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator(Object)
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 20352
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.BrachySolidApplicator.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  id: ApplicatorSetName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetName
+  nameWithType: BrachySolidApplicator.ApplicatorSetName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  type: Property
+  source:
+    id: ApplicatorSetName
+    path: ''
+    startLine: 42900
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  id: ApplicatorSetType
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetType
+  nameWithType: BrachySolidApplicator.ApplicatorSetType
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  type: Property
+  source:
+    id: ApplicatorSetType
+    path: ''
+    startLine: 42942
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetType As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Category
+  id: Category
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: BrachySolidApplicator.Category
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  type: Property
+  source:
+    id: Category
+    path: ''
+    startLine: 42984
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Category As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Category*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachySolidApplicator.Catheters
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 43026
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Note
+  id: Note
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Note
+  nameWithType: BrachySolidApplicator.Note
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  type: Property
+  source:
+    id: Note
+    path: ''
+    startLine: 43082
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Note { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Note As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Note*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  id: PartName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartName
+  nameWithType: BrachySolidApplicator.PartName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  type: Property
+  source:
+    id: PartName
+    path: ''
+    startLine: 43124
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  id: PartNumber
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartNumber
+  nameWithType: BrachySolidApplicator.PartNumber
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  type: Property
+  source:
+    id: PartNumber
+    path: ''
+    startLine: 43166
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartNumber As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  id: Summary
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: BrachySolidApplicator.Summary
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  type: Property
+  source:
+    id: Summary
+    path: ''
+    startLine: 43208
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Summary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Summary As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Summary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.UID
+  id: UID
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: BrachySolidApplicator.UID
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 43250
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  id: Vendor
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Vendor
+  nameWithType: BrachySolidApplicator.Vendor
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  type: Property
+  source:
+    id: Vendor
+    path: ''
+    startLine: 43292
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Vendor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Vendor As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Vendor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Version
+  id: Version
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: BrachySolidApplicator.Version
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  type: Property
+  source:
+    id: Version
+    path: ''
+    startLine: 43334
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Version As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator()
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator()
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 43376
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator(Object)
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator(Object)
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 43381
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  id: ApplicatorSetName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetName
+  nameWithType: BrachySolidApplicator.ApplicatorSetName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  type: Property
+  source:
+    id: ApplicatorSetName
+    path: ''
+    startLine: 71624
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  id: ApplicatorSetType
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetType
+  nameWithType: BrachySolidApplicator.ApplicatorSetType
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  type: Property
+  source:
+    id: ApplicatorSetType
+    path: ''
+    startLine: 71666
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetType As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Category
+  id: Category
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: BrachySolidApplicator.Category
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  type: Property
+  source:
+    id: Category
+    path: ''
+    startLine: 71708
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Category As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Category*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachySolidApplicator.Catheters
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 71750
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Note
+  id: Note
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Note
+  nameWithType: BrachySolidApplicator.Note
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  type: Property
+  source:
+    id: Note
+    path: ''
+    startLine: 71806
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Note { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Note As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Note*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  id: PartName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartName
+  nameWithType: BrachySolidApplicator.PartName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  type: Property
+  source:
+    id: PartName
+    path: ''
+    startLine: 71848
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  id: PartNumber
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartNumber
+  nameWithType: BrachySolidApplicator.PartNumber
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  type: Property
+  source:
+    id: PartNumber
+    path: ''
+    startLine: 71890
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartNumber As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  id: Summary
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: BrachySolidApplicator.Summary
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  type: Property
+  source:
+    id: Summary
+    path: ''
+    startLine: 71932
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Summary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Summary As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Summary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.UID
+  id: UID
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: BrachySolidApplicator.UID
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 71974
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  id: Vendor
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Vendor
+  nameWithType: BrachySolidApplicator.Vendor
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  type: Property
+  source:
+    id: Vendor
+    path: ''
+    startLine: 72016
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Vendor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Vendor As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Vendor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Version
+  id: Version
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: BrachySolidApplicator.Version
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  type: Property
+  source:
+    id: Version
+    path: ''
+    startLine: 72058
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Version As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator()
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator()
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 72100
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator(Object)
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator(Object)
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 72105
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  id: ApplicatorSetName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetName
+  nameWithType: BrachySolidApplicator.ApplicatorSetName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  type: Property
+  source:
+    id: ApplicatorSetName
+    path: ''
+    startLine: 100930
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  id: ApplicatorSetType
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetType
+  nameWithType: BrachySolidApplicator.ApplicatorSetType
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  type: Property
+  source:
+    id: ApplicatorSetType
+    path: ''
+    startLine: 100972
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetType As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Category
+  id: Category
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: BrachySolidApplicator.Category
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  type: Property
+  source:
+    id: Category
+    path: ''
+    startLine: 101014
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Category As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Category*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachySolidApplicator.Catheters
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 101056
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Note
+  id: Note
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Note
+  nameWithType: BrachySolidApplicator.Note
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  type: Property
+  source:
+    id: Note
+    path: ''
+    startLine: 101112
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Note { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Note As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Note*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  id: PartName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartName
+  nameWithType: BrachySolidApplicator.PartName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  type: Property
+  source:
+    id: PartName
+    path: ''
+    startLine: 101154
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  id: PartNumber
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartNumber
+  nameWithType: BrachySolidApplicator.PartNumber
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  type: Property
+  source:
+    id: PartNumber
+    path: ''
+    startLine: 101196
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartNumber As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  id: Summary
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: BrachySolidApplicator.Summary
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  type: Property
+  source:
+    id: Summary
+    path: ''
+    startLine: 101238
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Summary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Summary As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Summary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.UID
+  id: UID
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: BrachySolidApplicator.UID
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 101280
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  id: Vendor
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Vendor
+  nameWithType: BrachySolidApplicator.Vendor
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  type: Property
+  source:
+    id: Vendor
+    path: ''
+    startLine: 101322
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Vendor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Vendor As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Vendor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Version
+  id: Version
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: BrachySolidApplicator.Version
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  type: Property
+  source:
+    id: Version
+    path: ''
+    startLine: 101364
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Version As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator()
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator()
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 101406
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator(Object)
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator(Object)
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 101411
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  id: ApplicatorSetName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetName
+  nameWithType: BrachySolidApplicator.ApplicatorSetName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
+  type: Property
+  source:
+    id: ApplicatorSetName
+    path: ''
+    startLine: 132750
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  id: ApplicatorSetType
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: ApplicatorSetType
+  nameWithType: BrachySolidApplicator.ApplicatorSetType
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType
+  type: Property
+  source:
+    id: ApplicatorSetType
+    path: ''
+    startLine: 132792
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ApplicatorSetType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicatorSetType As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Category
+  id: Category
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: BrachySolidApplicator.Category
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Category
+  type: Property
+  source:
+    id: Category
+    path: ''
+    startLine: 132834
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Category As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Category*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  id: Catheters
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Catheters
+  nameWithType: BrachySolidApplicator.Catheters
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Catheters
+  type: Property
+  source:
+    id: Catheters
+    path: ''
+    startLine: 132876
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Catheter> Catheters { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Catheter}
+    content.vb: Public Property Catheters As IEnumerable(Of Catheter)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Catheters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Note
+  id: Note
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Note
+  nameWithType: BrachySolidApplicator.Note
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Note
+  type: Property
+  source:
+    id: Note
+    path: ''
+    startLine: 132932
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Note { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Note As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Note*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  id: PartName
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartName
+  nameWithType: BrachySolidApplicator.PartName
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartName
+  type: Property
+  source:
+    id: PartName
+    path: ''
+    startLine: 132974
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartName As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  id: PartNumber
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: PartNumber
+  nameWithType: BrachySolidApplicator.PartNumber
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber
+  type: Property
+  source:
+    id: PartNumber
+    path: ''
+    startLine: 133016
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string PartNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartNumber As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.PartNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  id: Summary
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: BrachySolidApplicator.Summary
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Summary
+  type: Property
+  source:
+    id: Summary
+    path: ''
+    startLine: 133058
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Summary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Summary As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Summary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.UID
+  id: UID
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: BrachySolidApplicator.UID
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 133100
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  id: Vendor
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Vendor
+  nameWithType: BrachySolidApplicator.Vendor
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Vendor
+  type: Property
+  source:
+    id: Vendor
+    path: ''
+    startLine: 133142
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Vendor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Vendor As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Vendor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  commentId: P:ESAPIX.Facade.API.BrachySolidApplicator.Version
+  id: Version
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: BrachySolidApplicator.Version
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.Version
+  type: Property
+  source:
+    id: Version
+    path: ''
+    startLine: 133184
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Version As String
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator()
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator()
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 133226
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BrachySolidApplicator.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BrachySolidApplicator
+  langs:
+  - csharp
+  - vb
+  name: BrachySolidApplicator(Object)
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator(Object)
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 133231
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BrachySolidApplicator(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -549,6 +2122,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -584,103 +2162,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -749,6 +2244,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -778,207 +2312,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
-  isExternal: false
-  name: BrachySolidApplicator
-  nameWithType: BrachySolidApplicator.BrachySolidApplicator
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator
-- uid: ESAPIX.Facade.API.BrachySolidApplicator.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: BrachySolidApplicator.IsLive
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName*
   commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.ApplicatorSetName
   isExternal: false
@@ -1131,14 +2470,9 @@ references:
   name: Version
   nameWithType: BrachySolidApplicator.Version
   fullName: ESAPIX.Facade.API.BrachySolidApplicator.Version
-- uid: ESAPIX.Facade.API.BrachySolidApplicator.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.WriteXml
+- uid: ESAPIX.Facade.API.BrachySolidApplicator.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.BrachySolidApplicator.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: BrachySolidApplicator.WriteXml
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: BrachySolidApplicator
+  nameWithType: BrachySolidApplicator.BrachySolidApplicator
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator.BrachySolidApplicator

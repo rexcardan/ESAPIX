@@ -1,7 +1,6 @@
 ﻿#region
-
 using ESAPIX.Facade.API;
-
+using ESAPIX.Extensions;
 #endregion
 
 namespace ESAPIX.Constraints
@@ -21,7 +20,7 @@ namespace ESAPIX.Constraints
             var message = string.Empty;
             if (pi is PlanSetup)
             {
-                if ((pi as PlanSetup).NumberOfFractions == null)
+                if ((pi as PlanSetup).NumberOfFractions() == null)
                 {
                     message = "No fractionation present!";
                     return new ConstraintResult(this, ResultType.NOT_APPLICABLE, message);
@@ -31,7 +30,7 @@ namespace ESAPIX.Constraints
             {
                 var canConstrain = true;
                 foreach (var ps in ((PlanSum) pi).PlanSetups)
-                    canConstrain = canConstrain && ps.NumberOfFractions != null;
+                    canConstrain = canConstrain && ps.NumberOfFractions() != null;
                 if (!canConstrain)
                 {
                     message = "No fractionation present in one or more plans in the sum!";
@@ -48,9 +47,9 @@ namespace ESAPIX.Constraints
             if (pi is PlanSetup)
             {
                 var ps = pi as PlanSetup;
-                if (ps.NumberOfFractions != null)
+                if (ps.NumberOfFractions() != null)
                 {
-                    actualFractions = (int) ps.NumberOfFractions;
+                    actualFractions = (int) ps.NumberOfFractions();
                     if (actualFractions == NumOfFractions)
                         passed = true;
                 }
@@ -58,7 +57,7 @@ namespace ESAPIX.Constraints
             else if (pi is PlanSum)
             {
                 foreach (var ps in ((PlanSum) pi).PlanSetups)
-                    actualFractions += (int) ps.NumberOfFractions;
+                    actualFractions += (int) ps.NumberOfFractions();
                 if (actualFractions == NumOfFractions)
                     passed = true;
             }

@@ -1,0 +1,548 @@
+using System;
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
+using System.Dynamic;
+using ESAPIX.Extensions;
+using VMS.TPS.Common.Model.Types;
+using XC = ESAPIX.Facade.XContext;
+using Types = VMS.TPS.Common.Model.Types;
+
+namespace ESAPIX.Facade.API
+{
+    public class SearchBodyParameters : ESAPIX.Facade.API.SerializableObject, System.Xml.Serialization.IXmlSerializable
+    {
+        public System.Boolean FillAllCavities
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("FillAllCavities"))
+                    {
+                        return _client.FillAllCavities;
+                    }
+                    else
+                    {
+                        return default (System.Boolean);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.FillAllCavities;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Boolean);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.FillAllCavities = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Boolean KeepLargestParts
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("KeepLargestParts"))
+                    {
+                        return _client.KeepLargestParts;
+                    }
+                    else
+                    {
+                        return default (System.Boolean);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.KeepLargestParts;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Boolean);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.KeepLargestParts = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Int32 LowerHUThreshold
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("LowerHUThreshold"))
+                    {
+                        return _client.LowerHUThreshold;
+                    }
+                    else
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.LowerHUThreshold;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.LowerHUThreshold = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Int32 MREdgeThresholdHigh
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("MREdgeThresholdHigh"))
+                    {
+                        return _client.MREdgeThresholdHigh;
+                    }
+                    else
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.MREdgeThresholdHigh;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.MREdgeThresholdHigh = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Int32 MREdgeThresholdLow
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("MREdgeThresholdLow"))
+                    {
+                        return _client.MREdgeThresholdLow;
+                    }
+                    else
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.MREdgeThresholdLow;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.MREdgeThresholdLow = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Int32 NumberOfLargestPartsToKeep
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("NumberOfLargestPartsToKeep"))
+                    {
+                        return _client.NumberOfLargestPartsToKeep;
+                    }
+                    else
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.NumberOfLargestPartsToKeep;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.NumberOfLargestPartsToKeep = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Boolean PreCloseOpenings
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PreCloseOpenings"))
+                    {
+                        return _client.PreCloseOpenings;
+                    }
+                    else
+                    {
+                        return default (System.Boolean);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PreCloseOpenings;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Boolean);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PreCloseOpenings = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double PreCloseOpeningsRadius
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PreCloseOpeningsRadius"))
+                    {
+                        return _client.PreCloseOpeningsRadius;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PreCloseOpeningsRadius;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PreCloseOpeningsRadius = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Boolean PreDisconnect
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PreDisconnect"))
+                    {
+                        return _client.PreDisconnect;
+                    }
+                    else
+                    {
+                        return default (System.Boolean);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PreDisconnect;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Boolean);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PreDisconnect = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Double PreDisconnectRadius
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("PreDisconnectRadius"))
+                    {
+                        return _client.PreDisconnectRadius;
+                    }
+                    else
+                    {
+                        return default (System.Double);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.PreDisconnectRadius;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Double);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.PreDisconnectRadius = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Boolean Smoothing
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("Smoothing"))
+                    {
+                        return _client.Smoothing;
+                    }
+                    else
+                    {
+                        return default (System.Boolean);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.Smoothing;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Boolean);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.Smoothing = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public System.Int32 SmoothingLevel
+        {
+            get
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    if (((ExpandoObject)(_client)).HasProperty("SmoothingLevel"))
+                    {
+                        return _client.SmoothingLevel;
+                    }
+                    else
+                    {
+                        return default (System.Int32);
+                    }
+                }
+                else if ((XC.Instance.CurrentContext) != (null))
+                {
+                    return XC.Instance.CurrentContext.GetValue(sc =>
+                    {
+                        return _client.SmoothingLevel;
+                    }
+
+                    );
+                }
+                else
+                {
+                    return default (System.Int32);
+                }
+            }
+
+            set
+            {
+                if ((_client) is System.Dynamic.ExpandoObject)
+                {
+                    _client.SmoothingLevel = (value);
+                }
+                else
+                {
+                }
+            }
+        }
+
+        public void LoadDefaults()
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                XC.Instance.CurrentContext.Thread.Invoke(() =>
+                {
+                    _client.LoadDefaults();
+                }
+
+                );
+            }
+            else
+            {
+                _client.LoadDefaults();
+            }
+        }
+
+        public SearchBodyParameters()
+        {
+            _client = (new ExpandoObject());
+        }
+
+        public SearchBodyParameters(dynamic client)
+        {
+            _client = (client);
+        }
+    }
+}

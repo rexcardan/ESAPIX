@@ -6,12 +6,30 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Diagnosis.#ctor
+  - ESAPIX.Facade.API.Diagnosis.#ctor
+  - ESAPIX.Facade.API.Diagnosis.#ctor
+  - ESAPIX.Facade.API.Diagnosis.#ctor
+  - ESAPIX.Facade.API.Diagnosis.#ctor
+  - ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  - ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  - ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  - ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
   - ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
   - ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  - ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  - ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  - ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  - ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  - ESAPIX.Facade.API.Diagnosis.Code
+  - ESAPIX.Facade.API.Diagnosis.Code
+  - ESAPIX.Facade.API.Diagnosis.Code
+  - ESAPIX.Facade.API.Diagnosis.Code
   - ESAPIX.Facade.API.Diagnosis.Code
   - ESAPIX.Facade.API.Diagnosis.CodeTable
-  - ESAPIX.Facade.API.Diagnosis.IsLive
-  - ESAPIX.Facade.API.Diagnosis.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Diagnosis.CodeTable
+  - ESAPIX.Facade.API.Diagnosis.CodeTable
+  - ESAPIX.Facade.API.Diagnosis.CodeTable
+  - ESAPIX.Facade.API.Diagnosis.CodeTable
   langs:
   - csharp
   - vb
@@ -22,127 +40,40 @@ items:
   source:
     id: Diagnosis
     path: ''
-    startLine: 8503
+    startLine: 136739
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Diagnosis : ApiDataObject'
+    content: 'public class Diagnosis : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class Diagnosis
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.Diagnosis.#ctor
-  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.Diagnosis
-  langs:
-  - csharp
-  - vb
-  name: Diagnosis()
-  nameWithType: Diagnosis.Diagnosis()
-  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 8505
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Diagnosis()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.Diagnosis
-  langs:
-  - csharp
-  - vb
-  name: Diagnosis(Object)
-  nameWithType: Diagnosis.Diagnosis(Object)
-  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 8510
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Diagnosis(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Diagnosis.IsLive
-  commentId: P:ESAPIX.Facade.API.Diagnosis.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Diagnosis
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Diagnosis.IsLive
-  fullName: ESAPIX.Facade.API.Diagnosis.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 8515
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Diagnosis.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
   commentId: P:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
   id: ClinicalDescription
@@ -157,7 +88,7 @@ items:
   source:
     id: ClinicalDescription
     path: ''
-    startLine: 8520
+    startLine: 23367
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -188,7 +119,7 @@ items:
   source:
     id: Code
     path: ''
-    startLine: 8537
+    startLine: 23409
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -219,7 +150,7 @@ items:
   source:
     id: CodeTable
     path: ''
-    startLine: 8552
+    startLine: 23451
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -236,31 +167,649 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Diagnosis.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Diagnosis.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.Diagnosis
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Diagnosis.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Diagnosis.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: Diagnosis()
+  nameWithType: Diagnosis.Diagnosis()
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 8567
+    startLine: 23493
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public Diagnosis()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis(Object)
+  nameWithType: Diagnosis.Diagnosis(Object)
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 23498
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Diagnosis.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  commentId: P:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  id: ClinicalDescription
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: ClinicalDescription
+  nameWithType: Diagnosis.ClinicalDescription
+  fullName: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  type: Property
+  source:
+    id: ClinicalDescription
+    path: ''
+    startLine: 46632
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ClinicalDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClinicalDescription As String
+  overload: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.Code
+  commentId: P:ESAPIX.Facade.API.Diagnosis.Code
+  id: Code
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: Diagnosis.Code
+  fullName: ESAPIX.Facade.API.Diagnosis.Code
+  type: Property
+  source:
+    id: Code
+    path: ''
+    startLine: 46674
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Code As String
+  overload: ESAPIX.Facade.API.Diagnosis.Code*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.CodeTable
+  commentId: P:ESAPIX.Facade.API.Diagnosis.CodeTable
+  id: CodeTable
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: CodeTable
+  nameWithType: Diagnosis.CodeTable
+  fullName: ESAPIX.Facade.API.Diagnosis.CodeTable
+  type: Property
+  source:
+    id: CodeTable
+    path: ''
+    startLine: 46716
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string CodeTable { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CodeTable As String
+  overload: ESAPIX.Facade.API.Diagnosis.CodeTable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis()
+  nameWithType: Diagnosis.Diagnosis()
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 46758
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis(Object)
+  nameWithType: Diagnosis.Diagnosis(Object)
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 46763
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  commentId: P:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  id: ClinicalDescription
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: ClinicalDescription
+  nameWithType: Diagnosis.ClinicalDescription
+  fullName: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  type: Property
+  source:
+    id: ClinicalDescription
+    path: ''
+    startLine: 75405
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ClinicalDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClinicalDescription As String
+  overload: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.Code
+  commentId: P:ESAPIX.Facade.API.Diagnosis.Code
+  id: Code
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: Diagnosis.Code
+  fullName: ESAPIX.Facade.API.Diagnosis.Code
+  type: Property
+  source:
+    id: Code
+    path: ''
+    startLine: 75447
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Code As String
+  overload: ESAPIX.Facade.API.Diagnosis.Code*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.CodeTable
+  commentId: P:ESAPIX.Facade.API.Diagnosis.CodeTable
+  id: CodeTable
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: CodeTable
+  nameWithType: Diagnosis.CodeTable
+  fullName: ESAPIX.Facade.API.Diagnosis.CodeTable
+  type: Property
+  source:
+    id: CodeTable
+    path: ''
+    startLine: 75489
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string CodeTable { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CodeTable As String
+  overload: ESAPIX.Facade.API.Diagnosis.CodeTable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis()
+  nameWithType: Diagnosis.Diagnosis()
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 75531
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis(Object)
+  nameWithType: Diagnosis.Diagnosis(Object)
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 75536
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  commentId: P:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  id: ClinicalDescription
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: ClinicalDescription
+  nameWithType: Diagnosis.ClinicalDescription
+  fullName: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  type: Property
+  source:
+    id: ClinicalDescription
+    path: ''
+    startLine: 104767
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ClinicalDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClinicalDescription As String
+  overload: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.Code
+  commentId: P:ESAPIX.Facade.API.Diagnosis.Code
+  id: Code
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: Diagnosis.Code
+  fullName: ESAPIX.Facade.API.Diagnosis.Code
+  type: Property
+  source:
+    id: Code
+    path: ''
+    startLine: 104809
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Code As String
+  overload: ESAPIX.Facade.API.Diagnosis.Code*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.CodeTable
+  commentId: P:ESAPIX.Facade.API.Diagnosis.CodeTable
+  id: CodeTable
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: CodeTable
+  nameWithType: Diagnosis.CodeTable
+  fullName: ESAPIX.Facade.API.Diagnosis.CodeTable
+  type: Property
+  source:
+    id: CodeTable
+    path: ''
+    startLine: 104851
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string CodeTable { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CodeTable As String
+  overload: ESAPIX.Facade.API.Diagnosis.CodeTable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis()
+  nameWithType: Diagnosis.Diagnosis()
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 104893
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis(Object)
+  nameWithType: Diagnosis.Diagnosis(Object)
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 104898
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  commentId: P:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  id: ClinicalDescription
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: ClinicalDescription
+  nameWithType: Diagnosis.ClinicalDescription
+  fullName: ESAPIX.Facade.API.Diagnosis.ClinicalDescription
+  type: Property
+  source:
+    id: ClinicalDescription
+    path: ''
+    startLine: 136741
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string ClinicalDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClinicalDescription As String
+  overload: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.Code
+  commentId: P:ESAPIX.Facade.API.Diagnosis.Code
+  id: Code
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: Diagnosis.Code
+  fullName: ESAPIX.Facade.API.Diagnosis.Code
+  type: Property
+  source:
+    id: Code
+    path: ''
+    startLine: 136783
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Code As String
+  overload: ESAPIX.Facade.API.Diagnosis.Code*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.CodeTable
+  commentId: P:ESAPIX.Facade.API.Diagnosis.CodeTable
+  id: CodeTable
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: CodeTable
+  nameWithType: Diagnosis.CodeTable
+  fullName: ESAPIX.Facade.API.Diagnosis.CodeTable
+  type: Property
+  source:
+    id: CodeTable
+    path: ''
+    startLine: 136825
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string CodeTable { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CodeTable As String
+  overload: ESAPIX.Facade.API.Diagnosis.CodeTable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis()
+  nameWithType: Diagnosis.Diagnosis()
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 136867
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Diagnosis.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Diagnosis
+  langs:
+  - csharp
+  - vb
+  name: Diagnosis(Object)
+  nameWithType: Diagnosis.Diagnosis(Object)
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 136872
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Diagnosis(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Diagnosis.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -293,6 +842,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -328,103 +882,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -493,6 +964,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -522,207 +1032,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Diagnosis.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Diagnosis.#ctor
-  isExternal: false
-  name: Diagnosis
-  nameWithType: Diagnosis.Diagnosis
-  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis
-- uid: ESAPIX.Facade.API.Diagnosis.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Diagnosis.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Diagnosis.IsLive
-  fullName: ESAPIX.Facade.API.Diagnosis.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Diagnosis.ClinicalDescription*
   commentId: Overload:ESAPIX.Facade.API.Diagnosis.ClinicalDescription
   isExternal: false
@@ -748,14 +1063,9 @@ references:
   name: CodeTable
   nameWithType: Diagnosis.CodeTable
   fullName: ESAPIX.Facade.API.Diagnosis.CodeTable
-- uid: ESAPIX.Facade.API.Diagnosis.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Diagnosis.WriteXml
+- uid: ESAPIX.Facade.API.Diagnosis.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Diagnosis.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: Diagnosis.WriteXml
-  fullName: ESAPIX.Facade.API.Diagnosis.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Diagnosis
+  nameWithType: Diagnosis.Diagnosis
+  fullName: ESAPIX.Facade.API.Diagnosis.Diagnosis

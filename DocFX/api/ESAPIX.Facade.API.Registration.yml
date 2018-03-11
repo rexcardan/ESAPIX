@@ -6,15 +6,63 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Registration.#ctor
+  - ESAPIX.Facade.API.Registration.#ctor
+  - ESAPIX.Facade.API.Registration.#ctor
+  - ESAPIX.Facade.API.Registration.#ctor
+  - ESAPIX.Facade.API.Registration.#ctor
+  - ESAPIX.Facade.API.Registration.#ctor
+  - ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  - ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  - ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  - ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  - ESAPIX.Facade.API.Registration.#ctor(System.Object)
   - ESAPIX.Facade.API.Registration.#ctor(System.Object)
   - ESAPIX.Facade.API.Registration.CreationDateTime
-  - ESAPIX.Facade.API.Registration.InverseTransformPoint(VVector)
-  - ESAPIX.Facade.API.Registration.IsLive
+  - ESAPIX.Facade.API.Registration.CreationDateTime
+  - ESAPIX.Facade.API.Registration.CreationDateTime
+  - ESAPIX.Facade.API.Registration.CreationDateTime
+  - ESAPIX.Facade.API.Registration.CreationDateTime
+  - ESAPIX.Facade.API.Registration.CreationDateTime
+  - ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.RegisteredFOR
+  - ESAPIX.Facade.API.Registration.RegisteredFOR
+  - ESAPIX.Facade.API.Registration.RegisteredFOR
+  - ESAPIX.Facade.API.Registration.RegisteredFOR
+  - ESAPIX.Facade.API.Registration.RegisteredFOR
   - ESAPIX.Facade.API.Registration.RegisteredFOR
   - ESAPIX.Facade.API.Registration.SourceFOR
+  - ESAPIX.Facade.API.Registration.SourceFOR
+  - ESAPIX.Facade.API.Registration.SourceFOR
+  - ESAPIX.Facade.API.Registration.SourceFOR
+  - ESAPIX.Facade.API.Registration.SourceFOR
+  - ESAPIX.Facade.API.Registration.SourceFOR
+  - ESAPIX.Facade.API.Registration.Status
+  - ESAPIX.Facade.API.Registration.Status
+  - ESAPIX.Facade.API.Registration.StatusDateTime
+  - ESAPIX.Facade.API.Registration.StatusDateTime
+  - ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  - ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  - ESAPIX.Facade.API.Registration.StatusUserName
+  - ESAPIX.Facade.API.Registration.StatusUserName
   - ESAPIX.Facade.API.Registration.TransformationMatrix
-  - ESAPIX.Facade.API.Registration.TransformPoint(VVector)
-  - ESAPIX.Facade.API.Registration.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Registration.TransformationMatrix
+  - ESAPIX.Facade.API.Registration.TransformationMatrix
+  - ESAPIX.Facade.API.Registration.TransformationMatrix
+  - ESAPIX.Facade.API.Registration.TransformationMatrix
+  - ESAPIX.Facade.API.Registration.TransformationMatrix
+  - ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  - ESAPIX.Facade.API.Registration.UID
+  - ESAPIX.Facade.API.Registration.UID
   langs:
   - csharp
   - vb
@@ -25,41 +73,226 @@ items:
   source:
     id: Registration
     path: ''
-    startLine: 14354
+    startLine: 154396
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Registration : ApiDataObject'
+    content: 'public class Registration : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class Registration
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
+- uid: ESAPIX.Facade.API.Registration.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Registration.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Registration.CreationDateTime
+  fullName: ESAPIX.Facade.API.Registration.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 13788
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Registration.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.SourceFOR
+  commentId: P:ESAPIX.Facade.API.Registration.SourceFOR
+  id: SourceFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: SourceFOR
+  nameWithType: Registration.SourceFOR
+  fullName: ESAPIX.Facade.API.Registration.SourceFOR
+  type: Property
+  source:
+    id: SourceFOR
+    path: ''
+    startLine: 13830
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string SourceFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceFOR As String
+  overload: ESAPIX.Facade.API.Registration.SourceFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.RegisteredFOR
+  commentId: P:ESAPIX.Facade.API.Registration.RegisteredFOR
+  id: RegisteredFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: RegisteredFOR
+  nameWithType: Registration.RegisteredFOR
+  fullName: ESAPIX.Facade.API.Registration.RegisteredFOR
+  type: Property
+  source:
+    id: RegisteredFOR
+    path: ''
+    startLine: 13872
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string RegisteredFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RegisteredFOR As String
+  overload: ESAPIX.Facade.API.Registration.RegisteredFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformationMatrix
+  commentId: P:ESAPIX.Facade.API.Registration.TransformationMatrix
+  id: TransformationMatrix
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformationMatrix
+  nameWithType: Registration.TransformationMatrix
+  fullName: ESAPIX.Facade.API.Registration.TransformationMatrix
+  type: Property
+  source:
+    id: TransformationMatrix
+    path: ''
+    startLine: 13914
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] TransformationMatrix { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property TransformationMatrix As Double(,)
+  overload: ESAPIX.Facade.API.Registration.TransformationMatrix*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.TransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: TransformPoint
+    path: ''
+    startLine: 13956
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector TransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function TransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.TransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: InverseTransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.InverseTransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: InverseTransformPoint
+    path: ''
+    startLine: 13980
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector InverseTransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function InverseTransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.InverseTransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: ESAPIX.Facade.API.Registration.#ctor
   commentId: M:ESAPIX.Facade.API.Registration.#ctor
   id: '#ctor'
@@ -74,7 +307,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14356
+    startLine: 14004
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -100,7 +333,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 14361
+    startLine: 14009
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -115,37 +348,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Registration.IsLive
-  commentId: P:ESAPIX.Facade.API.Registration.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Registration
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Registration.IsLive
-  fullName: ESAPIX.Facade.API.Registration.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 14366
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Registration.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Registration.CreationDateTime
   commentId: P:ESAPIX.Facade.API.Registration.CreationDateTime
   id: CreationDateTime
@@ -160,7 +362,7 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 14371
+    startLine: 35178
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -191,7 +393,7 @@ items:
   source:
     id: RegisteredFOR
     path: ''
-    startLine: 14388
+    startLine: 35220
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -222,7 +424,7 @@ items:
   source:
     id: SourceFOR
     path: ''
-    startLine: 14405
+    startLine: 35262
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -253,7 +455,7 @@ items:
   source:
     id: TransformationMatrix
     path: ''
-    startLine: 14420
+    startLine: 35304
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -270,93 +472,1393 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Registration.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Registration.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
   parent: ESAPIX.Facade.API.Registration
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Registration.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Registration.WriteXml(System.Xml.XmlWriter)
-  type: Method
-  source:
-    id: WriteXml
-    path: ''
-    startLine: 14440
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
-    parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Registration.WriteXml*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VVector)
-  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VVector)
-  id: InverseTransformPoint(VVector)
-  parent: ESAPIX.Facade.API.Registration
-  langs:
-  - csharp
-  - vb
-  name: InverseTransformPoint(VVector)
-  nameWithType: Registration.InverseTransformPoint(VVector)
-  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VVector)
+  name: InverseTransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.InverseTransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
   type: Method
   source:
     id: InverseTransformPoint
     path: ''
-    startLine: 14446
+    startLine: 35346
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public VVector InverseTransformPoint(VVector pt)
+    content: public Common.Model.Types.VVector InverseTransformPoint(Common.Model.Types.VVector pt)
     parameters:
     - id: pt
-      type: VVector
+      type: VMS.TPS.Common.Model.Types.VVector
     return:
-      type: VVector
-    content.vb: Public Function InverseTransformPoint(pt As VVector) As VVector
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function InverseTransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
   overload: ESAPIX.Facade.API.Registration.InverseTransformPoint*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Registration.TransformPoint(VVector)
-  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VVector)
-  id: TransformPoint(VVector)
+- uid: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: TransformPoint(VMS.TPS.Common.Model.Types.VVector)
   parent: ESAPIX.Facade.API.Registration
   langs:
   - csharp
   - vb
-  name: TransformPoint(VVector)
-  nameWithType: Registration.TransformPoint(VVector)
-  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VVector)
+  name: TransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.TransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
   type: Method
   source:
     id: TransformPoint
     path: ''
-    startLine: 14453
+    startLine: 35370
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public VVector TransformPoint(VVector pt)
+    content: public Common.Model.Types.VVector TransformPoint(Common.Model.Types.VVector pt)
     parameters:
     - id: pt
-      type: VVector
+      type: VMS.TPS.Common.Model.Types.VVector
     return:
-      type: VVector
-    content.vb: Public Function TransformPoint(pt As VVector) As VVector
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function TransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
   overload: ESAPIX.Facade.API.Registration.TransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration()
+  nameWithType: Registration.Registration()
+  fullName: ESAPIX.Facade.API.Registration.Registration()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 35394
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration(Object)
+  nameWithType: Registration.Registration(Object)
+  fullName: ESAPIX.Facade.API.Registration.Registration(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 35399
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Registration.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Registration.CreationDateTime
+  fullName: ESAPIX.Facade.API.Registration.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 62788
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Registration.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.RegisteredFOR
+  commentId: P:ESAPIX.Facade.API.Registration.RegisteredFOR
+  id: RegisteredFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: RegisteredFOR
+  nameWithType: Registration.RegisteredFOR
+  fullName: ESAPIX.Facade.API.Registration.RegisteredFOR
+  type: Property
+  source:
+    id: RegisteredFOR
+    path: ''
+    startLine: 62830
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string RegisteredFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RegisteredFOR As String
+  overload: ESAPIX.Facade.API.Registration.RegisteredFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.SourceFOR
+  commentId: P:ESAPIX.Facade.API.Registration.SourceFOR
+  id: SourceFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: SourceFOR
+  nameWithType: Registration.SourceFOR
+  fullName: ESAPIX.Facade.API.Registration.SourceFOR
+  type: Property
+  source:
+    id: SourceFOR
+    path: ''
+    startLine: 62872
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string SourceFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceFOR As String
+  overload: ESAPIX.Facade.API.Registration.SourceFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformationMatrix
+  commentId: P:ESAPIX.Facade.API.Registration.TransformationMatrix
+  id: TransformationMatrix
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformationMatrix
+  nameWithType: Registration.TransformationMatrix
+  fullName: ESAPIX.Facade.API.Registration.TransformationMatrix
+  type: Property
+  source:
+    id: TransformationMatrix
+    path: ''
+    startLine: 62914
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] TransformationMatrix { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property TransformationMatrix As Double(,)
+  overload: ESAPIX.Facade.API.Registration.TransformationMatrix*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: InverseTransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.InverseTransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: InverseTransformPoint
+    path: ''
+    startLine: 62956
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector InverseTransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function InverseTransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.InverseTransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.TransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: TransformPoint
+    path: ''
+    startLine: 62980
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector TransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function TransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.TransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration()
+  nameWithType: Registration.Registration()
+  fullName: ESAPIX.Facade.API.Registration.Registration()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 63004
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration(Object)
+  nameWithType: Registration.Registration(Object)
+  fullName: ESAPIX.Facade.API.Registration.Registration(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 63009
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Registration.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Registration.CreationDateTime
+  fullName: ESAPIX.Facade.API.Registration.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 91453
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Registration.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.RegisteredFOR
+  commentId: P:ESAPIX.Facade.API.Registration.RegisteredFOR
+  id: RegisteredFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: RegisteredFOR
+  nameWithType: Registration.RegisteredFOR
+  fullName: ESAPIX.Facade.API.Registration.RegisteredFOR
+  type: Property
+  source:
+    id: RegisteredFOR
+    path: ''
+    startLine: 91495
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string RegisteredFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RegisteredFOR As String
+  overload: ESAPIX.Facade.API.Registration.RegisteredFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.SourceFOR
+  commentId: P:ESAPIX.Facade.API.Registration.SourceFOR
+  id: SourceFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: SourceFOR
+  nameWithType: Registration.SourceFOR
+  fullName: ESAPIX.Facade.API.Registration.SourceFOR
+  type: Property
+  source:
+    id: SourceFOR
+    path: ''
+    startLine: 91537
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string SourceFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceFOR As String
+  overload: ESAPIX.Facade.API.Registration.SourceFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformationMatrix
+  commentId: P:ESAPIX.Facade.API.Registration.TransformationMatrix
+  id: TransformationMatrix
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformationMatrix
+  nameWithType: Registration.TransformationMatrix
+  fullName: ESAPIX.Facade.API.Registration.TransformationMatrix
+  type: Property
+  source:
+    id: TransformationMatrix
+    path: ''
+    startLine: 91579
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] TransformationMatrix { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property TransformationMatrix As Double(,)
+  overload: ESAPIX.Facade.API.Registration.TransformationMatrix*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: InverseTransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.InverseTransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: InverseTransformPoint
+    path: ''
+    startLine: 91621
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector InverseTransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function InverseTransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.InverseTransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.TransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: TransformPoint
+    path: ''
+    startLine: 91645
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector TransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function TransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.TransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration()
+  nameWithType: Registration.Registration()
+  fullName: ESAPIX.Facade.API.Registration.Registration()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 91669
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration(Object)
+  nameWithType: Registration.Registration(Object)
+  fullName: ESAPIX.Facade.API.Registration.Registration(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 91674
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Registration.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Registration.CreationDateTime
+  fullName: ESAPIX.Facade.API.Registration.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 122120
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Registration.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.RegisteredFOR
+  commentId: P:ESAPIX.Facade.API.Registration.RegisteredFOR
+  id: RegisteredFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: RegisteredFOR
+  nameWithType: Registration.RegisteredFOR
+  fullName: ESAPIX.Facade.API.Registration.RegisteredFOR
+  type: Property
+  source:
+    id: RegisteredFOR
+    path: ''
+    startLine: 122162
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string RegisteredFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RegisteredFOR As String
+  overload: ESAPIX.Facade.API.Registration.RegisteredFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.SourceFOR
+  commentId: P:ESAPIX.Facade.API.Registration.SourceFOR
+  id: SourceFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: SourceFOR
+  nameWithType: Registration.SourceFOR
+  fullName: ESAPIX.Facade.API.Registration.SourceFOR
+  type: Property
+  source:
+    id: SourceFOR
+    path: ''
+    startLine: 122204
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string SourceFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceFOR As String
+  overload: ESAPIX.Facade.API.Registration.SourceFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.Status
+  commentId: P:ESAPIX.Facade.API.Registration.Status
+  id: Status
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: Registration.Status
+  fullName: ESAPIX.Facade.API.Registration.Status
+  type: Property
+  source:
+    id: Status
+    path: ''
+    startLine: 122246
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.RegistrationApprovalStatus Status { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.RegistrationApprovalStatus
+    content.vb: Public Property Status As Common.Model.Types.RegistrationApprovalStatus
+  overload: ESAPIX.Facade.API.Registration.Status*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.StatusDateTime
+  commentId: P:ESAPIX.Facade.API.Registration.StatusDateTime
+  id: StatusDateTime
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: StatusDateTime
+  nameWithType: Registration.StatusDateTime
+  fullName: ESAPIX.Facade.API.Registration.StatusDateTime
+  type: Property
+  source:
+    id: StatusDateTime
+    path: ''
+    startLine: 122288
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? StatusDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StatusDateTime As Date?
+  overload: ESAPIX.Facade.API.Registration.StatusDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  commentId: P:ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  id: StatusUserDisplayName
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: StatusUserDisplayName
+  nameWithType: Registration.StatusUserDisplayName
+  fullName: ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  type: Property
+  source:
+    id: StatusUserDisplayName
+    path: ''
+    startLine: 122330
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string StatusUserDisplayName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StatusUserDisplayName As String
+  overload: ESAPIX.Facade.API.Registration.StatusUserDisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.StatusUserName
+  commentId: P:ESAPIX.Facade.API.Registration.StatusUserName
+  id: StatusUserName
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: StatusUserName
+  nameWithType: Registration.StatusUserName
+  fullName: ESAPIX.Facade.API.Registration.StatusUserName
+  type: Property
+  source:
+    id: StatusUserName
+    path: ''
+    startLine: 122372
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string StatusUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StatusUserName As String
+  overload: ESAPIX.Facade.API.Registration.StatusUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformationMatrix
+  commentId: P:ESAPIX.Facade.API.Registration.TransformationMatrix
+  id: TransformationMatrix
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformationMatrix
+  nameWithType: Registration.TransformationMatrix
+  fullName: ESAPIX.Facade.API.Registration.TransformationMatrix
+  type: Property
+  source:
+    id: TransformationMatrix
+    path: ''
+    startLine: 122414
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] TransformationMatrix { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property TransformationMatrix As Double(,)
+  overload: ESAPIX.Facade.API.Registration.TransformationMatrix*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.UID
+  commentId: P:ESAPIX.Facade.API.Registration.UID
+  id: UID
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: Registration.UID
+  fullName: ESAPIX.Facade.API.Registration.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 122456
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.Registration.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: InverseTransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.InverseTransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: InverseTransformPoint
+    path: ''
+    startLine: 122498
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector InverseTransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function InverseTransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.InverseTransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.TransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: TransformPoint
+    path: ''
+    startLine: 122522
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector TransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function TransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.TransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration()
+  nameWithType: Registration.Registration()
+  fullName: ESAPIX.Facade.API.Registration.Registration()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 122546
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration(Object)
+  nameWithType: Registration.Registration(Object)
+  fullName: ESAPIX.Facade.API.Registration.Registration(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 122551
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Registration.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Registration.CreationDateTime
+  fullName: ESAPIX.Facade.API.Registration.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 154398
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Registration.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.RegisteredFOR
+  commentId: P:ESAPIX.Facade.API.Registration.RegisteredFOR
+  id: RegisteredFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: RegisteredFOR
+  nameWithType: Registration.RegisteredFOR
+  fullName: ESAPIX.Facade.API.Registration.RegisteredFOR
+  type: Property
+  source:
+    id: RegisteredFOR
+    path: ''
+    startLine: 154440
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string RegisteredFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RegisteredFOR As String
+  overload: ESAPIX.Facade.API.Registration.RegisteredFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.SourceFOR
+  commentId: P:ESAPIX.Facade.API.Registration.SourceFOR
+  id: SourceFOR
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: SourceFOR
+  nameWithType: Registration.SourceFOR
+  fullName: ESAPIX.Facade.API.Registration.SourceFOR
+  type: Property
+  source:
+    id: SourceFOR
+    path: ''
+    startLine: 154482
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string SourceFOR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceFOR As String
+  overload: ESAPIX.Facade.API.Registration.SourceFOR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.Status
+  commentId: P:ESAPIX.Facade.API.Registration.Status
+  id: Status
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: Registration.Status
+  fullName: ESAPIX.Facade.API.Registration.Status
+  type: Property
+  source:
+    id: Status
+    path: ''
+    startLine: 154524
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.RegistrationApprovalStatus Status { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.RegistrationApprovalStatus
+    content.vb: Public Property Status As Common.Model.Types.RegistrationApprovalStatus
+  overload: ESAPIX.Facade.API.Registration.Status*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.StatusDateTime
+  commentId: P:ESAPIX.Facade.API.Registration.StatusDateTime
+  id: StatusDateTime
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: StatusDateTime
+  nameWithType: Registration.StatusDateTime
+  fullName: ESAPIX.Facade.API.Registration.StatusDateTime
+  type: Property
+  source:
+    id: StatusDateTime
+    path: ''
+    startLine: 154566
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? StatusDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StatusDateTime As Date?
+  overload: ESAPIX.Facade.API.Registration.StatusDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  commentId: P:ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  id: StatusUserDisplayName
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: StatusUserDisplayName
+  nameWithType: Registration.StatusUserDisplayName
+  fullName: ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  type: Property
+  source:
+    id: StatusUserDisplayName
+    path: ''
+    startLine: 154608
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string StatusUserDisplayName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StatusUserDisplayName As String
+  overload: ESAPIX.Facade.API.Registration.StatusUserDisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.StatusUserName
+  commentId: P:ESAPIX.Facade.API.Registration.StatusUserName
+  id: StatusUserName
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: StatusUserName
+  nameWithType: Registration.StatusUserName
+  fullName: ESAPIX.Facade.API.Registration.StatusUserName
+  type: Property
+  source:
+    id: StatusUserName
+    path: ''
+    startLine: 154650
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string StatusUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StatusUserName As String
+  overload: ESAPIX.Facade.API.Registration.StatusUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformationMatrix
+  commentId: P:ESAPIX.Facade.API.Registration.TransformationMatrix
+  id: TransformationMatrix
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformationMatrix
+  nameWithType: Registration.TransformationMatrix
+  fullName: ESAPIX.Facade.API.Registration.TransformationMatrix
+  type: Property
+  source:
+    id: TransformationMatrix
+    path: ''
+    startLine: 154692
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double[, ] TransformationMatrix { get; set; }
+    parameters: []
+    return:
+      type: System.Double[,]
+    content.vb: Public Property TransformationMatrix As Double(,)
+  overload: ESAPIX.Facade.API.Registration.TransformationMatrix*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.UID
+  commentId: P:ESAPIX.Facade.API.Registration.UID
+  id: UID
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: UID
+  nameWithType: Registration.UID
+  fullName: ESAPIX.Facade.API.Registration.UID
+  type: Property
+  source:
+    id: UID
+    path: ''
+    startLine: 154734
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string UID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UID As String
+  overload: ESAPIX.Facade.API.Registration.UID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: InverseTransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.InverseTransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: InverseTransformPoint
+    path: ''
+    startLine: 154776
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector InverseTransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function InverseTransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.InverseTransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  commentId: M:ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  id: TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: TransformPoint(Common.Model.Types.VVector)
+  nameWithType: Registration.TransformPoint(Common.Model.Types.VVector)
+  fullName: ESAPIX.Facade.API.Registration.TransformPoint(VMS.TPS.Common.Model.Types.VVector)
+  type: Method
+  source:
+    id: TransformPoint
+    path: ''
+    startLine: 154800
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector TransformPoint(Common.Model.Types.VVector pt)
+    parameters:
+    - id: pt
+      type: VMS.TPS.Common.Model.Types.VVector
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Function TransformPoint(pt As Common.Model.Types.VVector) As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.Registration.TransformPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration()
+  nameWithType: Registration.Registration()
+  fullName: ESAPIX.Facade.API.Registration.Registration()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 154824
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Registration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Registration.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Registration
+  langs:
+  - csharp
+  - vb
+  name: Registration(Object)
+  nameWithType: Registration.Registration(Object)
+  fullName: ESAPIX.Facade.API.Registration.Registration(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 154829
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Registration(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Registration.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -389,6 +1891,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -424,103 +1931,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -589,6 +2013,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -618,207 +2081,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Registration.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Registration.#ctor
-  isExternal: false
-  name: Registration
-  nameWithType: Registration.Registration
-  fullName: ESAPIX.Facade.API.Registration.Registration
-- uid: ESAPIX.Facade.API.Registration.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Registration.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Registration.IsLive
-  fullName: ESAPIX.Facade.API.Registration.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Registration.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.Registration.CreationDateTime
   isExternal: false
@@ -908,12 +2176,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ESAPIX.Facade.API.Registration.RegisteredFOR*
-  commentId: Overload:ESAPIX.Facade.API.Registration.RegisteredFOR
+- uid: ESAPIX.Facade.API.Registration.SourceFOR*
+  commentId: Overload:ESAPIX.Facade.API.Registration.SourceFOR
   isExternal: false
-  name: RegisteredFOR
-  nameWithType: Registration.RegisteredFOR
-  fullName: ESAPIX.Facade.API.Registration.RegisteredFOR
+  name: SourceFOR
+  nameWithType: Registration.SourceFOR
+  fullName: ESAPIX.Facade.API.Registration.SourceFOR
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -921,12 +2189,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: ESAPIX.Facade.API.Registration.SourceFOR*
-  commentId: Overload:ESAPIX.Facade.API.Registration.SourceFOR
+- uid: ESAPIX.Facade.API.Registration.RegisteredFOR*
+  commentId: Overload:ESAPIX.Facade.API.Registration.RegisteredFOR
   isExternal: false
-  name: SourceFOR
-  nameWithType: Registration.SourceFOR
-  fullName: ESAPIX.Facade.API.Registration.SourceFOR
+  name: RegisteredFOR
+  nameWithType: Registration.RegisteredFOR
+  fullName: ESAPIX.Facade.API.Registration.RegisteredFOR
 - uid: ESAPIX.Facade.API.Registration.TransformationMatrix*
   commentId: Overload:ESAPIX.Facade.API.Registration.TransformationMatrix
   isExternal: false
@@ -958,31 +2226,61 @@ references:
   - name: (,)
     nameWithType: (,)
     fullName: (,)
-- uid: ESAPIX.Facade.API.Registration.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Registration.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: Registration.WriteXml
-  fullName: ESAPIX.Facade.API.Registration.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
-- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint*
-  commentId: Overload:ESAPIX.Facade.API.Registration.InverseTransformPoint
-  isExternal: false
-  name: InverseTransformPoint
-  nameWithType: Registration.InverseTransformPoint
-  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint
-- uid: VVector
-  isExternal: true
-  name: VVector
-  nameWithType: VVector
-  fullName: VVector
 - uid: ESAPIX.Facade.API.Registration.TransformPoint*
   commentId: Overload:ESAPIX.Facade.API.Registration.TransformPoint
   isExternal: false
   name: TransformPoint
   nameWithType: Registration.TransformPoint
   fullName: ESAPIX.Facade.API.Registration.TransformPoint
+- uid: VMS.TPS.Common.Model.Types.VVector
+  isExternal: true
+  name: Common.Model.Types.VVector
+  nameWithType: Common.Model.Types.VVector
+  fullName: VMS.TPS.Common.Model.Types.VVector
+- uid: ESAPIX.Facade.API.Registration.InverseTransformPoint*
+  commentId: Overload:ESAPIX.Facade.API.Registration.InverseTransformPoint
+  isExternal: false
+  name: InverseTransformPoint
+  nameWithType: Registration.InverseTransformPoint
+  fullName: ESAPIX.Facade.API.Registration.InverseTransformPoint
+- uid: ESAPIX.Facade.API.Registration.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Registration.#ctor
+  isExternal: false
+  name: Registration
+  nameWithType: Registration.Registration
+  fullName: ESAPIX.Facade.API.Registration.Registration
+- uid: ESAPIX.Facade.API.Registration.Status*
+  commentId: Overload:ESAPIX.Facade.API.Registration.Status
+  isExternal: false
+  name: Status
+  nameWithType: Registration.Status
+  fullName: ESAPIX.Facade.API.Registration.Status
+- uid: VMS.TPS.Common.Model.Types.RegistrationApprovalStatus
+  isExternal: true
+  name: Common.Model.Types.RegistrationApprovalStatus
+  nameWithType: Common.Model.Types.RegistrationApprovalStatus
+  fullName: VMS.TPS.Common.Model.Types.RegistrationApprovalStatus
+- uid: ESAPIX.Facade.API.Registration.StatusDateTime*
+  commentId: Overload:ESAPIX.Facade.API.Registration.StatusDateTime
+  isExternal: false
+  name: StatusDateTime
+  nameWithType: Registration.StatusDateTime
+  fullName: ESAPIX.Facade.API.Registration.StatusDateTime
+- uid: ESAPIX.Facade.API.Registration.StatusUserDisplayName*
+  commentId: Overload:ESAPIX.Facade.API.Registration.StatusUserDisplayName
+  isExternal: false
+  name: StatusUserDisplayName
+  nameWithType: Registration.StatusUserDisplayName
+  fullName: ESAPIX.Facade.API.Registration.StatusUserDisplayName
+- uid: ESAPIX.Facade.API.Registration.StatusUserName*
+  commentId: Overload:ESAPIX.Facade.API.Registration.StatusUserName
+  isExternal: false
+  name: StatusUserName
+  nameWithType: Registration.StatusUserName
+  fullName: ESAPIX.Facade.API.Registration.StatusUserName
+- uid: ESAPIX.Facade.API.Registration.UID*
+  commentId: Overload:ESAPIX.Facade.API.Registration.UID
+  isExternal: false
+  name: UID
+  nameWithType: Registration.UID
+  fullName: ESAPIX.Facade.API.Registration.UID

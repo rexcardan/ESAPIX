@@ -25,14 +25,19 @@ namespace ESAPIX.Bootstrapper.Helpers
             return GetSingle(commandLineArgs, ArgumentKey.ExternalPlanSetup);
         }
 
-        public static (string,string) GetImage(string[] commandLineArgs)
+        public static string GetIonPlanSetup(string[] commandLineArgs)
+        {
+            return GetSingle(commandLineArgs, ArgumentKey.IonPlanSetup);
+        }
+
+        public static KeyValuePair<string,string> GetImage(string[] commandLineArgs)
         {
             var multiple = GetMultiple(commandLineArgs, ArgumentKey.Image);
             if(multiple!=null && multiple.Count() == 2)
             {
-                return (multiple[0], multiple[1]);
+                return new KeyValuePair<string, string>(multiple[0], multiple[1]);
             }
-            return (string.Empty,string.Empty);
+            return new KeyValuePair<string, string>(string.Empty,string.Empty);
         }
 
         public static string GetCourseId(string[] commandLineArgs)
@@ -58,6 +63,11 @@ namespace ESAPIX.Bootstrapper.Helpers
         public static List<string> GetBrachyPlansInScope(string[] commandLineArgs)
         {
             return GetMultiple(commandLineArgs, ArgumentKey.BrachyPlansInScope)?.ToList();
+        }
+
+        public static List<string> GetIonPlansInScope(string[] commandLineArgs)
+        {
+            return GetMultiple(commandLineArgs, ArgumentKey.IonPlansInScope)?.ToList();
         }
 
         public static string GetSingle(string[] commandLineArgs, string key)

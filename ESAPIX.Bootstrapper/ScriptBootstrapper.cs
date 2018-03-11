@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Threading;
 using ESAPIX.Helpers;
 using ESAPIX.AppKit;
+using ESAPIX.Common;
 
 #endregion
 

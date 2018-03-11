@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using ESAPIX.Bootstrapper.Helpers;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -17,8 +18,6 @@ namespace ESAPIX.Bootstrapper
 
         public void Execute(ScriptContext context, Window window)
         {
-            //When hooked up to bootstrapper (comment out otherwise)
-            FacadeInitializer.Initialize();
             //Get this window barely visible so that when it does show, it isn't ugly ;)
             window.Height = window.Width = 0;
             window.WindowStyle = WindowStyle.None;
@@ -43,10 +42,30 @@ namespace ESAPIX.Bootstrapper
                 var sb = new StringBuilder();
                 sb.Append($"{ArgumentKey.CurrentUser} {ctx.CurrentUser?.Id} ");
 
+#if !VMS110
                 if (!string.IsNullOrEmpty(ctx.ApplicationName))
                 {
                     sb.Append($"{ArgumentKey.ApplicationName} {ctx.ApplicationName} ");
                 }
+                if (ctx.BrachyPlansInScope != null && ctx.BrachyPlansInScope.Any())
+                {
+                    var uids = ctx.BrachyPlansInScope.Select(p => p.UID).ToArray();
+                    sb.Append($"{ArgumentKey.BrachyPlansInScope} {string.Join(" ", uids)} ");
+                }
+                if (ctx.ExternalPlansInScope != null && ctx.ExternalPlansInScope.Any())
+                {
+                    var uids = ctx.ExternalPlansInScope.Select(p => p.UID).ToArray();
+                    sb.Append($"{ArgumentKey.ExternalPlansInScope} {string.Join(" ", uids)} ");
+                }
+                if (ctx.BrachyPlanSetup != null)
+                {
+                    sb.Append($"{ArgumentKey.BrachyPlanSetup} {ctx.BrachyPlanSetup?.UID} ");
+                }
+                if (ctx.ExternalPlanSetup != null)
+                {
+                    sb.Append($"{ArgumentKey.ExternalPlanSetup} {ctx.ExternalPlanSetup?.UID} ");
+                }
+#endif
                 if (!string.IsNullOrEmpty(ctx.Patient?.Id))
                 {
                     sb.Append($"{ArgumentKey.PatientId} {ctx.Patient.Id} ");
@@ -67,14 +86,7 @@ namespace ESAPIX.Bootstrapper
                 {
                     sb.Append($"{ArgumentKey.PlanSetup} {ctx.PlanSetup?.UID} ");
                 }
-                if (ctx.BrachyPlanSetup != null)
-                {
-                    sb.Append($"{ArgumentKey.BrachyPlanSetup} {ctx.BrachyPlanSetup?.UID} ");
-                }
-                if (ctx.ExternalPlanSetup != null)
-                {
-                    sb.Append($"{ArgumentKey.ExternalPlanSetup} {ctx.ExternalPlanSetup?.UID} ");
-                }
+
                 if (ctx.Course != null)
                 {
                     sb.Append($"{ArgumentKey.Course} {ctx.Course?.Id} ");
@@ -84,21 +96,23 @@ namespace ESAPIX.Bootstrapper
                     var uids = ctx.PlansInScope.Select(p => p.UID).ToArray();
                     sb.Append($"{ArgumentKey.PlansInScope} {string.Join(" ", uids)} ");
                 }
-                if (ctx.BrachyPlansInScope != null && ctx.BrachyPlansInScope.Any())
-                {
-                    var uids = ctx.BrachyPlansInScope.Select(p => p.UID).ToArray();
-                    sb.Append($"{ArgumentKey.BrachyPlansInScope} {string.Join(" ", uids)} ");
-                }
-                if (ctx.ExternalPlansInScope != null && ctx.ExternalPlansInScope.Any())
-                {
-                    var uids = ctx.ExternalPlansInScope.Select(p => p.UID).ToArray();
-                    sb.Append($"{ArgumentKey.ExternalPlansInScope} {string.Join(" ", uids)} ");
-                }
+
                 if (ctx.PlanSumsInScope != null && ctx.PlanSumsInScope.Any())
                 {
                     var ids = ctx.PlanSumsInScope.Select(p => p.Id).ToArray();
                     sb.Append($"{ArgumentKey.PlanSumsInScope} {string.Join(" ", ids)} ");
                 }
+#if (VMS151 || VMS150 || VMS155)
+                if (ctx.IonPlansInScope != null && ctx.IonPlansInScope.Any())
+                {
+                    var ids = ctx.IonPlansInScope.Select(p => p.Id).ToArray();
+                    sb.Append($"{ArgumentKey.IonPlansInScope} {string.Join(" ", ids)} ");
+                }
+                if (ctx.IonPlanSetup != null)
+                {
+                    sb.Append($"{ArgumentKey.IonPlanSetup} {ctx.IonPlanSetup?.UID} ");
+                }
+#endif
                 return sb.ToString();
             }
 
@@ -112,23 +126,6 @@ namespace ESAPIX.Bootstrapper
             }
 
             #endregion
-        }
-        public class ArgumentKey
-        {
-            public const string CurrentUser = "-u";
-            public const string Course = "-c";
-            public const string Image = "-i";
-            public const string StructureSet = "-ss";
-            public const string ApplicationName = "-a";
-            public const string PatientId = "-id";
-            public const string PlanSetup = "-p";
-            public const string BrachyPlanSetup = "-bp";
-            public const string BrachyPlansInScope = "-bpsc";
-            public const string ExternalPlanSetup = "-ep";
-            public const string ExternalPlansInScope = "-epsc";
-            public const string PlansInScope = "-psc";
-            public const string PlanSumsInScope = "-pssc";
-
         }
     }
 }

@@ -6,13 +6,49 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.BeamParameters.#ctor
+  - ESAPIX.Facade.API.BeamParameters.#ctor
+  - ESAPIX.Facade.API.BeamParameters.#ctor
+  - ESAPIX.Facade.API.BeamParameters.#ctor
+  - ESAPIX.Facade.API.BeamParameters.#ctor
+  - ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  - ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  - ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  - ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
   - ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
   - ESAPIX.Facade.API.BeamParameters.ControlPoints
+  - ESAPIX.Facade.API.BeamParameters.ControlPoints
+  - ESAPIX.Facade.API.BeamParameters.ControlPoints
+  - ESAPIX.Facade.API.BeamParameters.ControlPoints
+  - ESAPIX.Facade.API.BeamParameters.ControlPoints
+  - ESAPIX.Facade.API.BeamParameters.GantryDirection
+  - ESAPIX.Facade.API.BeamParameters.GantryDirection
+  - ESAPIX.Facade.API.BeamParameters.GantryDirection
+  - ESAPIX.Facade.API.BeamParameters.GantryDirection
   - ESAPIX.Facade.API.BeamParameters.GantryDirection
   - ESAPIX.Facade.API.BeamParameters.IsLive
+  - ESAPIX.Facade.API.BeamParameters.IsLive
+  - ESAPIX.Facade.API.BeamParameters.IsLive
+  - ESAPIX.Facade.API.BeamParameters.IsLive
+  - ESAPIX.Facade.API.BeamParameters.IsLive
+  - ESAPIX.Facade.API.BeamParameters.Isocenter
+  - ESAPIX.Facade.API.BeamParameters.Isocenter
+  - ESAPIX.Facade.API.BeamParameters.Isocenter
+  - ESAPIX.Facade.API.BeamParameters.Isocenter
   - ESAPIX.Facade.API.BeamParameters.Isocenter
   - ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
-  - ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect{System.Double})
+  - ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  - ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  - ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  - ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  - ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  - ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  - ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  - ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  - ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  - ESAPIX.Facade.API.BeamParameters.WeightFactor
+  - ESAPIX.Facade.API.BeamParameters.WeightFactor
+  - ESAPIX.Facade.API.BeamParameters.WeightFactor
+  - ESAPIX.Facade.API.BeamParameters.WeightFactor
   - ESAPIX.Facade.API.BeamParameters.WeightFactor
   langs:
   - csharp
@@ -24,7 +60,7 @@ items:
   source:
     id: BeamParameters
     path: ''
-    startLine: 6157
+    startLine: 131168
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -33,6 +69,8 @@ items:
     content.vb: Public Class BeamParameters
   inheritance:
   - System.Object
+  derivedClasses:
+  - ESAPIX.Facade.API.IonBeamParameters
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -47,61 +85,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.BeamParameters.#ctor
-  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.BeamParameters
-  langs:
-  - csharp
-  - vb
-  name: BeamParameters()
-  nameWithType: BeamParameters.BeamParameters()
-  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6161
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public BeamParameters()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.BeamParameters
-  langs:
-  - csharp
-  - vb
-  name: BeamParameters(Object)
-  nameWithType: BeamParameters.BeamParameters(Object)
-  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6166
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public BeamParameters(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: ESAPIX.Facade.API.BeamParameters.IsLive
   commentId: P:ESAPIX.Facade.API.BeamParameters.IsLive
   id: IsLive
@@ -116,7 +99,7 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 6171
+    startLine: 18769
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -147,7 +130,7 @@ items:
   source:
     id: ControlPoints
     path: ''
-    startLine: 6176
+    startLine: 18777
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -178,16 +161,16 @@ items:
   source:
     id: GantryDirection
     path: ''
-    startLine: 6214
+    startLine: 18833
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public GantryDirection GantryDirection { get; set; }
+    content: public Common.Model.Types.GantryDirection GantryDirection { get; set; }
     parameters: []
     return:
-      type: GantryDirection
-    content.vb: Public Property GantryDirection As GantryDirection
+      type: VMS.TPS.Common.Model.Types.GantryDirection
+    content.vb: Public Property GantryDirection As Common.Model.Types.GantryDirection
   overload: ESAPIX.Facade.API.BeamParameters.GantryDirection*
   modifiers.csharp:
   - public
@@ -209,16 +192,16 @@ items:
   source:
     id: Isocenter
     path: ''
-    startLine: 6234
+    startLine: 18875
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public VVector Isocenter { get; set; }
+    content: public Common.Model.Types.VVector Isocenter { get; set; }
     parameters: []
     return:
-      type: VVector
-    content.vb: Public Property Isocenter As VVector
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Isocenter As Common.Model.Types.VVector
   overload: ESAPIX.Facade.API.BeamParameters.Isocenter*
   modifiers.csharp:
   - public
@@ -240,7 +223,7 @@ items:
   source:
     id: WeightFactor
     path: ''
-    startLine: 6249
+    startLine: 18917
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -271,7 +254,7 @@ items:
   source:
     id: SetAllLeafPositions
     path: ''
-    startLine: 6266
+    startLine: 18959
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -289,38 +272,1189 @@ items:
   - Public
   fullName.vb: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single(,))
   name.vb: SetAllLeafPositions(Single(,))
-- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect{System.Double})
-  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect{System.Double})
-  id: SetJawPositions(VRect{System.Double})
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  id: SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
   parent: ESAPIX.Facade.API.BeamParameters
   langs:
   - csharp
   - vb
-  name: SetJawPositions(VRect<Double>)
-  nameWithType: BeamParameters.SetJawPositions(VRect<Double>)
-  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect<System.Double>)
+  name: SetJawPositions(Common.Model.Types.VRect<Double>)
+  nameWithType: BeamParameters.SetJawPositions(Common.Model.Types.VRect<Double>)
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect<System.Double>)
   type: Method
   source:
     id: SetJawPositions
     path: ''
-    startLine: 6272
+    startLine: 18976
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void SetJawPositions(VRect<double> positions)
+    content: public void SetJawPositions(Common.Model.Types.VRect<double> positions)
     parameters:
     - id: positions
-      type: VRect{System.Double}
-    content.vb: Public Sub SetJawPositions(positions As VRect(Of Double))
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Sub SetJawPositions(positions As Common.Model.Types.VRect(Of Double))
   overload: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
-  nameWithType.vb: BeamParameters.SetJawPositions(VRect(Of Double))
+  nameWithType.vb: BeamParameters.SetJawPositions(Common.Model.Types.VRect(Of Double))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VRect(Of System.Double))
-  name.vb: SetJawPositions(VRect(Of Double))
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect(Of System.Double))
+  name.vb: SetJawPositions(Common.Model.Types.VRect(Of Double))
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters()
+  nameWithType: BeamParameters.BeamParameters()
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 18993
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters(Object)
+  nameWithType: BeamParameters.BeamParameters(Object)
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 18998
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.BeamParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BeamParameters.IsLive
+  fullName: ESAPIX.Facade.API.BeamParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 41631
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.BeamParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  commentId: P:ESAPIX.Facade.API.BeamParameters.ControlPoints
+  id: ControlPoints
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPoints
+  nameWithType: BeamParameters.ControlPoints
+  fullName: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  type: Property
+  source:
+    id: ControlPoints
+    path: ''
+    startLine: 41639
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<ControlPointParameters> ControlPoints { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
+    content.vb: Public Property ControlPoints As IEnumerable(Of ControlPointParameters)
+  overload: ESAPIX.Facade.API.BeamParameters.ControlPoints*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  commentId: P:ESAPIX.Facade.API.BeamParameters.GantryDirection
+  id: GantryDirection
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryDirection
+  nameWithType: BeamParameters.GantryDirection
+  fullName: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  type: Property
+  source:
+    id: GantryDirection
+    path: ''
+    startLine: 41695
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.GantryDirection GantryDirection { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.GantryDirection
+    content.vb: Public Property GantryDirection As Common.Model.Types.GantryDirection
+  overload: ESAPIX.Facade.API.BeamParameters.GantryDirection*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.Isocenter
+  commentId: P:ESAPIX.Facade.API.BeamParameters.Isocenter
+  id: Isocenter
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: Isocenter
+  nameWithType: BeamParameters.Isocenter
+  fullName: ESAPIX.Facade.API.BeamParameters.Isocenter
+  type: Property
+  source:
+    id: Isocenter
+    path: ''
+    startLine: 41737
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Isocenter { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Isocenter As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.BeamParameters.Isocenter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  commentId: P:ESAPIX.Facade.API.BeamParameters.WeightFactor
+  id: WeightFactor
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: WeightFactor
+  nameWithType: BeamParameters.WeightFactor
+  fullName: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  type: Property
+  source:
+    id: WeightFactor
+    path: ''
+    startLine: 41779
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double WeightFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property WeightFactor As Double
+  overload: ESAPIX.Facade.API.BeamParameters.WeightFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  id: SetAllLeafPositions(System.Single[0:,0:])
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetAllLeafPositions(Single[,])
+  nameWithType: BeamParameters.SetAllLeafPositions(Single[,])
+  fullName: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[,])
+  type: Method
+  source:
+    id: SetAllLeafPositions
+    path: ''
+    startLine: 41821
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetAllLeafPositions(float[, ] leafPositions)
+    parameters:
+    - id: leafPositions
+      type: System.Single[,]
+    content.vb: Public Sub SetAllLeafPositions(leafPositions As Single(,))
+  overload: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions*
+  nameWithType.vb: BeamParameters.SetAllLeafPositions(Single(,))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single(,))
+  name.vb: SetAllLeafPositions(Single(,))
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  id: SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetJawPositions(Common.Model.Types.VRect<Double>)
+  nameWithType: BeamParameters.SetJawPositions(Common.Model.Types.VRect<Double>)
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect<System.Double>)
+  type: Method
+  source:
+    id: SetJawPositions
+    path: ''
+    startLine: 41838
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetJawPositions(Common.Model.Types.VRect<double> positions)
+    parameters:
+    - id: positions
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Sub SetJawPositions(positions As Common.Model.Types.VRect(Of Double))
+  overload: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
+  nameWithType.vb: BeamParameters.SetJawPositions(Common.Model.Types.VRect(Of Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect(Of System.Double))
+  name.vb: SetJawPositions(Common.Model.Types.VRect(Of Double))
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters()
+  nameWithType: BeamParameters.BeamParameters()
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 41855
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters(Object)
+  nameWithType: BeamParameters.BeamParameters(Object)
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 41860
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.BeamParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BeamParameters.IsLive
+  fullName: ESAPIX.Facade.API.BeamParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 70355
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.BeamParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  commentId: P:ESAPIX.Facade.API.BeamParameters.ControlPoints
+  id: ControlPoints
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPoints
+  nameWithType: BeamParameters.ControlPoints
+  fullName: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  type: Property
+  source:
+    id: ControlPoints
+    path: ''
+    startLine: 70363
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<ControlPointParameters> ControlPoints { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
+    content.vb: Public Property ControlPoints As IEnumerable(Of ControlPointParameters)
+  overload: ESAPIX.Facade.API.BeamParameters.ControlPoints*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  commentId: P:ESAPIX.Facade.API.BeamParameters.GantryDirection
+  id: GantryDirection
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryDirection
+  nameWithType: BeamParameters.GantryDirection
+  fullName: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  type: Property
+  source:
+    id: GantryDirection
+    path: ''
+    startLine: 70419
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.GantryDirection GantryDirection { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.GantryDirection
+    content.vb: Public Property GantryDirection As Common.Model.Types.GantryDirection
+  overload: ESAPIX.Facade.API.BeamParameters.GantryDirection*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.Isocenter
+  commentId: P:ESAPIX.Facade.API.BeamParameters.Isocenter
+  id: Isocenter
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: Isocenter
+  nameWithType: BeamParameters.Isocenter
+  fullName: ESAPIX.Facade.API.BeamParameters.Isocenter
+  type: Property
+  source:
+    id: Isocenter
+    path: ''
+    startLine: 70461
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Isocenter { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Isocenter As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.BeamParameters.Isocenter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  commentId: P:ESAPIX.Facade.API.BeamParameters.WeightFactor
+  id: WeightFactor
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: WeightFactor
+  nameWithType: BeamParameters.WeightFactor
+  fullName: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  type: Property
+  source:
+    id: WeightFactor
+    path: ''
+    startLine: 70503
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double WeightFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property WeightFactor As Double
+  overload: ESAPIX.Facade.API.BeamParameters.WeightFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  id: SetAllLeafPositions(System.Single[0:,0:])
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetAllLeafPositions(Single[,])
+  nameWithType: BeamParameters.SetAllLeafPositions(Single[,])
+  fullName: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[,])
+  type: Method
+  source:
+    id: SetAllLeafPositions
+    path: ''
+    startLine: 70545
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetAllLeafPositions(float[, ] leafPositions)
+    parameters:
+    - id: leafPositions
+      type: System.Single[,]
+    content.vb: Public Sub SetAllLeafPositions(leafPositions As Single(,))
+  overload: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions*
+  nameWithType.vb: BeamParameters.SetAllLeafPositions(Single(,))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single(,))
+  name.vb: SetAllLeafPositions(Single(,))
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  id: SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetJawPositions(Common.Model.Types.VRect<Double>)
+  nameWithType: BeamParameters.SetJawPositions(Common.Model.Types.VRect<Double>)
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect<System.Double>)
+  type: Method
+  source:
+    id: SetJawPositions
+    path: ''
+    startLine: 70562
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetJawPositions(Common.Model.Types.VRect<double> positions)
+    parameters:
+    - id: positions
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Sub SetJawPositions(positions As Common.Model.Types.VRect(Of Double))
+  overload: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
+  nameWithType.vb: BeamParameters.SetJawPositions(Common.Model.Types.VRect(Of Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect(Of System.Double))
+  name.vb: SetJawPositions(Common.Model.Types.VRect(Of Double))
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters()
+  nameWithType: BeamParameters.BeamParameters()
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 70579
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters(Object)
+  nameWithType: BeamParameters.BeamParameters(Object)
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 70584
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.BeamParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BeamParameters.IsLive
+  fullName: ESAPIX.Facade.API.BeamParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 99375
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.BeamParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  commentId: P:ESAPIX.Facade.API.BeamParameters.ControlPoints
+  id: ControlPoints
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPoints
+  nameWithType: BeamParameters.ControlPoints
+  fullName: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  type: Property
+  source:
+    id: ControlPoints
+    path: ''
+    startLine: 99383
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<ControlPointParameters> ControlPoints { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
+    content.vb: Public Property ControlPoints As IEnumerable(Of ControlPointParameters)
+  overload: ESAPIX.Facade.API.BeamParameters.ControlPoints*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  commentId: P:ESAPIX.Facade.API.BeamParameters.GantryDirection
+  id: GantryDirection
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryDirection
+  nameWithType: BeamParameters.GantryDirection
+  fullName: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  type: Property
+  source:
+    id: GantryDirection
+    path: ''
+    startLine: 99439
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.GantryDirection GantryDirection { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.GantryDirection
+    content.vb: Public Property GantryDirection As Common.Model.Types.GantryDirection
+  overload: ESAPIX.Facade.API.BeamParameters.GantryDirection*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.Isocenter
+  commentId: P:ESAPIX.Facade.API.BeamParameters.Isocenter
+  id: Isocenter
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: Isocenter
+  nameWithType: BeamParameters.Isocenter
+  fullName: ESAPIX.Facade.API.BeamParameters.Isocenter
+  type: Property
+  source:
+    id: Isocenter
+    path: ''
+    startLine: 99481
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Isocenter { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Isocenter As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.BeamParameters.Isocenter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  commentId: P:ESAPIX.Facade.API.BeamParameters.WeightFactor
+  id: WeightFactor
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: WeightFactor
+  nameWithType: BeamParameters.WeightFactor
+  fullName: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  type: Property
+  source:
+    id: WeightFactor
+    path: ''
+    startLine: 99523
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double WeightFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property WeightFactor As Double
+  overload: ESAPIX.Facade.API.BeamParameters.WeightFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  id: SetAllLeafPositions(System.Single[0:,0:])
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetAllLeafPositions(Single[,])
+  nameWithType: BeamParameters.SetAllLeafPositions(Single[,])
+  fullName: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[,])
+  type: Method
+  source:
+    id: SetAllLeafPositions
+    path: ''
+    startLine: 99565
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetAllLeafPositions(float[, ] leafPositions)
+    parameters:
+    - id: leafPositions
+      type: System.Single[,]
+    content.vb: Public Sub SetAllLeafPositions(leafPositions As Single(,))
+  overload: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions*
+  nameWithType.vb: BeamParameters.SetAllLeafPositions(Single(,))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single(,))
+  name.vb: SetAllLeafPositions(Single(,))
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  id: SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetJawPositions(Common.Model.Types.VRect<Double>)
+  nameWithType: BeamParameters.SetJawPositions(Common.Model.Types.VRect<Double>)
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect<System.Double>)
+  type: Method
+  source:
+    id: SetJawPositions
+    path: ''
+    startLine: 99582
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetJawPositions(Common.Model.Types.VRect<double> positions)
+    parameters:
+    - id: positions
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Sub SetJawPositions(positions As Common.Model.Types.VRect(Of Double))
+  overload: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
+  nameWithType.vb: BeamParameters.SetJawPositions(Common.Model.Types.VRect(Of Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect(Of System.Double))
+  name.vb: SetJawPositions(Common.Model.Types.VRect(Of Double))
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters()
+  nameWithType: BeamParameters.BeamParameters()
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 99599
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters(Object)
+  nameWithType: BeamParameters.BeamParameters(Object)
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 99604
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.IsLive
+  commentId: P:ESAPIX.Facade.API.BeamParameters.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: BeamParameters.IsLive
+  fullName: ESAPIX.Facade.API.BeamParameters.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 131171
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.BeamParameters.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  commentId: P:ESAPIX.Facade.API.BeamParameters.ControlPoints
+  id: ControlPoints
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: ControlPoints
+  nameWithType: BeamParameters.ControlPoints
+  fullName: ESAPIX.Facade.API.BeamParameters.ControlPoints
+  type: Property
+  source:
+    id: ControlPoints
+    path: ''
+    startLine: 131179
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<ControlPointParameters> ControlPoints { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.ControlPointParameters}
+    content.vb: Public Property ControlPoints As IEnumerable(Of ControlPointParameters)
+  overload: ESAPIX.Facade.API.BeamParameters.ControlPoints*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  commentId: P:ESAPIX.Facade.API.BeamParameters.GantryDirection
+  id: GantryDirection
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: GantryDirection
+  nameWithType: BeamParameters.GantryDirection
+  fullName: ESAPIX.Facade.API.BeamParameters.GantryDirection
+  type: Property
+  source:
+    id: GantryDirection
+    path: ''
+    startLine: 131235
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.GantryDirection GantryDirection { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.GantryDirection
+    content.vb: Public Property GantryDirection As Common.Model.Types.GantryDirection
+  overload: ESAPIX.Facade.API.BeamParameters.GantryDirection*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.Isocenter
+  commentId: P:ESAPIX.Facade.API.BeamParameters.Isocenter
+  id: Isocenter
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: Isocenter
+  nameWithType: BeamParameters.Isocenter
+  fullName: ESAPIX.Facade.API.BeamParameters.Isocenter
+  type: Property
+  source:
+    id: Isocenter
+    path: ''
+    startLine: 131277
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.VVector Isocenter { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.VVector
+    content.vb: Public Property Isocenter As Common.Model.Types.VVector
+  overload: ESAPIX.Facade.API.BeamParameters.Isocenter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  commentId: P:ESAPIX.Facade.API.BeamParameters.WeightFactor
+  id: WeightFactor
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: WeightFactor
+  nameWithType: BeamParameters.WeightFactor
+  fullName: ESAPIX.Facade.API.BeamParameters.WeightFactor
+  type: Property
+  source:
+    id: WeightFactor
+    path: ''
+    startLine: 131319
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double WeightFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property WeightFactor As Double
+  overload: ESAPIX.Facade.API.BeamParameters.WeightFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[0:,0:])
+  id: SetAllLeafPositions(System.Single[0:,0:])
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetAllLeafPositions(Single[,])
+  nameWithType: BeamParameters.SetAllLeafPositions(Single[,])
+  fullName: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single[,])
+  type: Method
+  source:
+    id: SetAllLeafPositions
+    path: ''
+    startLine: 131361
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetAllLeafPositions(float[, ] leafPositions)
+    parameters:
+    - id: leafPositions
+      type: System.Single[,]
+    content.vb: Public Sub SetAllLeafPositions(leafPositions As Single(,))
+  overload: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions*
+  nameWithType.vb: BeamParameters.SetAllLeafPositions(Single(,))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetAllLeafPositions(System.Single(,))
+  name.vb: SetAllLeafPositions(Single(,))
+- uid: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  commentId: M:ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  id: SetJawPositions(VMS.TPS.Common.Model.Types.VRect{System.Double})
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: SetJawPositions(Common.Model.Types.VRect<Double>)
+  nameWithType: BeamParameters.SetJawPositions(Common.Model.Types.VRect<Double>)
+  fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect<System.Double>)
+  type: Method
+  source:
+    id: SetJawPositions
+    path: ''
+    startLine: 131378
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public void SetJawPositions(Common.Model.Types.VRect<double> positions)
+    parameters:
+    - id: positions
+      type: VMS.TPS.Common.Model.Types.VRect{System.Double}
+    content.vb: Public Sub SetJawPositions(positions As Common.Model.Types.VRect(Of Double))
+  overload: ESAPIX.Facade.API.BeamParameters.SetJawPositions*
+  nameWithType.vb: BeamParameters.SetJawPositions(Common.Model.Types.VRect(Of Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: ESAPIX.Facade.API.BeamParameters.SetJawPositions(VMS.TPS.Common.Model.Types.VRect(Of System.Double))
+  name.vb: SetJawPositions(Common.Model.Types.VRect(Of Double))
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters()
+  nameWithType: BeamParameters.BeamParameters()
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 131395
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.BeamParameters.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.BeamParameters
+  langs:
+  - csharp
+  - vb
+  name: BeamParameters(Object)
+  nameWithType: BeamParameters.BeamParameters(Object)
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 131400
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public BeamParameters(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.BeamParameters.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: ESAPIX.Facade.API
   commentId: N:ESAPIX.Facade.API
@@ -620,12 +1754,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.BeamParameters.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.BeamParameters.#ctor
-  isExternal: false
-  name: BeamParameters
-  nameWithType: BeamParameters.BeamParameters
-  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters
 - uid: ESAPIX.Facade.API.BeamParameters.IsLive*
   commentId: Overload:ESAPIX.Facade.API.BeamParameters.IsLive
   isExternal: false
@@ -730,22 +1858,22 @@ references:
   name: GantryDirection
   nameWithType: BeamParameters.GantryDirection
   fullName: ESAPIX.Facade.API.BeamParameters.GantryDirection
-- uid: GantryDirection
+- uid: VMS.TPS.Common.Model.Types.GantryDirection
   isExternal: true
-  name: GantryDirection
-  nameWithType: GantryDirection
-  fullName: GantryDirection
+  name: Common.Model.Types.GantryDirection
+  nameWithType: Common.Model.Types.GantryDirection
+  fullName: VMS.TPS.Common.Model.Types.GantryDirection
 - uid: ESAPIX.Facade.API.BeamParameters.Isocenter*
   commentId: Overload:ESAPIX.Facade.API.BeamParameters.Isocenter
   isExternal: false
   name: Isocenter
   nameWithType: BeamParameters.Isocenter
   fullName: ESAPIX.Facade.API.BeamParameters.Isocenter
-- uid: VVector
+- uid: VMS.TPS.Common.Model.Types.VVector
   isExternal: true
-  name: VVector
-  nameWithType: VVector
-  fullName: VVector
+  name: Common.Model.Types.VVector
+  nameWithType: Common.Model.Types.VVector
+  fullName: VMS.TPS.Common.Model.Types.VVector
 - uid: ESAPIX.Facade.API.BeamParameters.WeightFactor*
   commentId: Overload:ESAPIX.Facade.API.BeamParameters.WeightFactor
   isExternal: false
@@ -796,20 +1924,20 @@ references:
   name: SetJawPositions
   nameWithType: BeamParameters.SetJawPositions
   fullName: ESAPIX.Facade.API.BeamParameters.SetJawPositions
-- uid: VRect{System.Double}
-  commentId: '!:VRect{System.Double}'
-  definition: VRect`1
-  name: VRect<Double>
-  nameWithType: VRect<Double>
-  fullName: VRect<System.Double>
-  nameWithType.vb: VRect(Of Double)
-  fullName.vb: VRect(Of System.Double)
-  name.vb: VRect(Of Double)
+- uid: VMS.TPS.Common.Model.Types.VRect{System.Double}
+  commentId: '!:VMS.TPS.Common.Model.Types.VRect{System.Double}'
+  definition: VMS.TPS.Common.Model.Types.VRect`1
+  name: Common.Model.Types.VRect<Double>
+  nameWithType: Common.Model.Types.VRect<Double>
+  fullName: VMS.TPS.Common.Model.Types.VRect<System.Double>
+  nameWithType.vb: Common.Model.Types.VRect(Of Double)
+  fullName.vb: VMS.TPS.Common.Model.Types.VRect(Of System.Double)
+  name.vb: Common.Model.Types.VRect(Of Double)
   spec.csharp:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: <
     nameWithType: <
@@ -823,10 +1951,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -839,19 +1967,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRect`1
+- uid: VMS.TPS.Common.Model.Types.VRect`1
   isExternal: true
-  name: VRect<>
-  nameWithType: VRect<>
-  fullName: VRect<>
-  nameWithType.vb: VRect(Of )
-  fullName.vb: VRect(Of )
-  name.vb: VRect(Of )
+  name: Common.Model.Types.VRect<>
+  nameWithType: Common.Model.Types.VRect<>
+  fullName: VMS.TPS.Common.Model.Types.VRect<>
+  nameWithType.vb: Common.Model.Types.VRect(Of )
+  fullName.vb: VMS.TPS.Common.Model.Types.VRect(Of )
+  name.vb: Common.Model.Types.VRect(Of )
   spec.csharp:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: <
     nameWithType: <
@@ -863,10 +1991,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: VRect`1
-    name: VRect
-    nameWithType: VRect
-    fullName: VRect
+  - uid: VMS.TPS.Common.Model.Types.VRect`1
+    name: Common.Model.Types.VRect
+    nameWithType: Common.Model.Types.VRect
+    fullName: VMS.TPS.Common.Model.Types.VRect
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -877,3 +2005,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.BeamParameters.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.BeamParameters.#ctor
+  isExternal: false
+  name: BeamParameters
+  nameWithType: BeamParameters.BeamParameters
+  fullName: ESAPIX.Facade.API.BeamParameters.BeamParameters

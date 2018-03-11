@@ -34,10 +34,10 @@ namespace ESAPIX.Constraints
             int? numFx = 0;
             if (pi is PlanSum)
             {
-                numFx = (pi as PlanSum).PlanSetups.Sum(p => p?.NumberOfFractions);
+                numFx = (pi as PlanSum).PlanSetups.Sum(p => p?.NumberOfFractions());
             }
             else
-                numFx = (pi as PlanSetup)?.NumberOfFractions;
+                numFx = (pi as PlanSetup)?.NumberOfFractions();
 
             Results.Add(new ConstraintResult(null, numFx!=null?ResultType.PASSED:ResultType.NOT_APPLICABLE, "Not valid fraction number", string.Empty));
             return this;

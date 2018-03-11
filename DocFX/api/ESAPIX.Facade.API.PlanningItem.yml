@@ -6,13 +6,51 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.PlanningItem.#ctor
+  - ESAPIX.Facade.API.PlanningItem.#ctor
+  - ESAPIX.Facade.API.PlanningItem.#ctor
+  - ESAPIX.Facade.API.PlanningItem.#ctor
+  - ESAPIX.Facade.API.PlanningItem.#ctor
+  - ESAPIX.Facade.API.PlanningItem.#ctor
+  - ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  - ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  - ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  - ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  - ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
   - ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
   - ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  - ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  - ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  - ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  - ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  - ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  - ESAPIX.Facade.API.PlanningItem.Dose
+  - ESAPIX.Facade.API.PlanningItem.Dose
+  - ESAPIX.Facade.API.PlanningItem.Dose
+  - ESAPIX.Facade.API.PlanningItem.Dose
+  - ESAPIX.Facade.API.PlanningItem.Dose
   - ESAPIX.Facade.API.PlanningItem.Dose
   - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
-  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
-  - ESAPIX.Facade.API.PlanningItem.IsLive
-  - ESAPIX.Facade.API.PlanningItem.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  - ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  - ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  - ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  - ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  - ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  - ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  - ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  - ESAPIX.Facade.API.PlanningItem.StructureSet
+  - ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  - ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  - ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
   langs:
   - csharp
   - vb
@@ -23,15 +61,16 @@ items:
   source:
     id: PlanningItem
     path: ''
-    startLine: 12750
+    startLine: 148270
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class PlanningItem : ApiDataObject'
+    content: 'public class PlanningItem : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class PlanningItem
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
@@ -39,114 +78,26 @@ items:
   derivedClasses:
   - ESAPIX.Facade.API.PlanSetup
   - ESAPIX.Facade.API.PlanSum
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.PlanningItem.#ctor
-  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.PlanningItem
-  langs:
-  - csharp
-  - vb
-  name: PlanningItem()
-  nameWithType: PlanningItem.PlanningItem()
-  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 12752
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public PlanningItem()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.PlanningItem
-  langs:
-  - csharp
-  - vb
-  name: PlanningItem(Object)
-  nameWithType: PlanningItem.PlanningItem(Object)
-  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 12757
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public PlanningItem(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.PlanningItem.IsLive
-  commentId: P:ESAPIX.Facade.API.PlanningItem.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.PlanningItem
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: PlanningItem.IsLive
-  fullName: ESAPIX.Facade.API.PlanningItem.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 12762
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.PlanningItem.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime
   commentId: P:ESAPIX.Facade.API.PlanningItem.CreationDateTime
   id: CreationDateTime
@@ -161,7 +112,7 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 12767
+    startLine: 12152
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -192,7 +143,192 @@ items:
   source:
     id: Dose
     path: ''
-    startLine: 12784
+    startLine: 12194
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Dose Dose { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Dose
+    content.vb: Public Property Dose As Dose
+  overload: ESAPIX.Facade.API.PlanningItem.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  commentId: P:ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  id: DoseValuePresentation
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: DoseValuePresentation
+  nameWithType: PlanningItem.DoseValuePresentation
+  fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  type: Property
+  source:
+    id: DoseValuePresentation
+    path: ''
+    startLine: 12243
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValuePresentation DoseValuePresentation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    content.vb: Public Property DoseValuePresentation As Common.Model.Types.DoseValuePresentation
+  overload: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  id: GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValuePresentation, VMS.TPS.Common.Model.Types.VolumePresentation, System.Double)
+  type: Method
+  source:
+    id: GetDVHCumulativeData
+    path: ''
+    startLine: 12285
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData GetDVHCumulativeData(Structure structure, Common.Model.Types.DoseValuePresentation dosePresentation, Common.Model.Types.VolumePresentation volumePresentation, double binWidth)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: binWidth
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.DVHData
+    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As Common.Model.Types.DoseValuePresentation, volumePresentation As Common.Model.Types.VolumePresentation, binWidth As Double) As DVHData
+  overload: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem()
+  nameWithType: PlanningItem.PlanningItem()
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 12309
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem(Object)
+  nameWithType: PlanningItem.PlanningItem(Object)
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 12314
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: PlanningItem.CreationDateTime
+  fullName: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 31931
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.PlanningItem.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.Dose
+  commentId: P:ESAPIX.Facade.API.PlanningItem.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: PlanningItem.Dose
+  fullName: ESAPIX.Facade.API.PlanningItem.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 31973
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -223,16 +359,16 @@ items:
   source:
     id: DoseValuePresentation
     path: ''
-    startLine: 12803
+    startLine: 32022
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DoseValuePresentation DoseValuePresentation { get; set; }
+    content: public Common.Model.Types.DoseValuePresentation DoseValuePresentation { get; set; }
     parameters: []
     return:
-      type: DoseValuePresentation
-    content.vb: Public Property DoseValuePresentation As DoseValuePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    content.vb: Public Property DoseValuePresentation As Common.Model.Types.DoseValuePresentation
   overload: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
   modifiers.csharp:
   - public
@@ -240,68 +376,1174 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.PlanningItem.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.PlanningItem.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  id: GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
   parent: ESAPIX.Facade.API.PlanningItem
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: PlanningItem.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.PlanningItem.WriteXml(System.Xml.XmlWriter)
-  type: Method
-  source:
-    id: WriteXml
-    path: ''
-    startLine: 12823
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
-    parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.PlanningItem.WriteXml*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
-  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
-  id: GetDVHCumulativeData(ESAPIX.Facade.API.Structure,DoseValuePresentation,VolumePresentation,System.Double)
-  parent: ESAPIX.Facade.API.PlanningItem
-  langs:
-  - csharp
-  - vb
-  name: GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
-  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, DoseValuePresentation, VolumePresentation, Double)
-  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, DoseValuePresentation, VolumePresentation, System.Double)
+  name: GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValuePresentation, VMS.TPS.Common.Model.Types.VolumePresentation, System.Double)
   type: Method
   source:
     id: GetDVHCumulativeData
     path: ''
-    startLine: 12829
+    startLine: 32064
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DVHData GetDVHCumulativeData(Structure structure, DoseValuePresentation dosePresentation, VolumePresentation volumePresentation, double binWidth)
+    content: public DVHData GetDVHCumulativeData(Structure structure, Common.Model.Types.DoseValuePresentation dosePresentation, Common.Model.Types.VolumePresentation volumePresentation, double binWidth)
     parameters:
     - id: structure
       type: ESAPIX.Facade.API.Structure
     - id: dosePresentation
-      type: DoseValuePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
     - id: volumePresentation
-      type: VolumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
     - id: binWidth
       type: System.Double
     return:
       type: ESAPIX.Facade.API.DVHData
-    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As DoseValuePresentation, volumePresentation As VolumePresentation, binWidth As Double) As DVHData
+    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As Common.Model.Types.DoseValuePresentation, volumePresentation As Common.Model.Types.VolumePresentation, binWidth As Double) As DVHData
   overload: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem()
+  nameWithType: PlanningItem.PlanningItem()
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 32088
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem(Object)
+  nameWithType: PlanningItem.PlanningItem(Object)
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 32093
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: PlanningItem.CreationDateTime
+  fullName: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 58535
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.PlanningItem.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.Dose
+  commentId: P:ESAPIX.Facade.API.PlanningItem.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: PlanningItem.Dose
+  fullName: ESAPIX.Facade.API.PlanningItem.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 58577
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItemDose Dose { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.PlanningItemDose
+    content.vb: Public Property Dose As PlanningItemDose
+  overload: ESAPIX.Facade.API.PlanningItem.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  commentId: P:ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  id: DoseValuePresentation
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: DoseValuePresentation
+  nameWithType: PlanningItem.DoseValuePresentation
+  fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  type: Property
+  source:
+    id: DoseValuePresentation
+    path: ''
+    startLine: 58626
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValuePresentation DoseValuePresentation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    content.vb: Public Property DoseValuePresentation As Common.Model.Types.DoseValuePresentation
+  overload: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  id: GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValuePresentation, VMS.TPS.Common.Model.Types.VolumePresentation, System.Double)
+  type: Method
+  source:
+    id: GetDVHCumulativeData
+    path: ''
+    startLine: 58668
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData GetDVHCumulativeData(Structure structure, Common.Model.Types.DoseValuePresentation dosePresentation, Common.Model.Types.VolumePresentation volumePresentation, double binWidth)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: binWidth
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.DVHData
+    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As Common.Model.Types.DoseValuePresentation, volumePresentation As Common.Model.Types.VolumePresentation, binWidth As Double) As DVHData
+  overload: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem()
+  nameWithType: PlanningItem.PlanningItem()
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 58692
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem(Object)
+  nameWithType: PlanningItem.PlanningItem(Object)
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 58697
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: PlanningItem.CreationDateTime
+  fullName: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 86742
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.PlanningItem.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.Dose
+  commentId: P:ESAPIX.Facade.API.PlanningItem.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: PlanningItem.Dose
+  fullName: ESAPIX.Facade.API.PlanningItem.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 86784
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItemDose Dose { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.PlanningItemDose
+    content.vb: Public Property Dose As PlanningItemDose
+  overload: ESAPIX.Facade.API.PlanningItem.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  commentId: P:ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  id: DoseValuePresentation
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: DoseValuePresentation
+  nameWithType: PlanningItem.DoseValuePresentation
+  fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  type: Property
+  source:
+    id: DoseValuePresentation
+    path: ''
+    startLine: 86833
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValuePresentation DoseValuePresentation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    content.vb: Public Property DoseValuePresentation As Common.Model.Types.DoseValuePresentation
+  overload: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  commentId: P:ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  id: StructuresSelectedForDvh
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: StructuresSelectedForDvh
+  nameWithType: PlanningItem.StructuresSelectedForDvh
+  fullName: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  type: Property
+  source:
+    id: StructuresSelectedForDvh
+    path: ''
+    startLine: 86875
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Structure> StructuresSelectedForDvh { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Structure}
+    content.vb: Public Property StructuresSelectedForDvh As IEnumerable(Of  Structure)
+  overload: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  id: GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValuePresentation, VMS.TPS.Common.Model.Types.VolumePresentation, System.Double)
+  type: Method
+  source:
+    id: GetDVHCumulativeData
+    path: ''
+    startLine: 86931
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData GetDVHCumulativeData(Structure structure, Common.Model.Types.DoseValuePresentation dosePresentation, Common.Model.Types.VolumePresentation volumePresentation, double binWidth)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: binWidth
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.DVHData
+    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As Common.Model.Types.DoseValuePresentation, volumePresentation As Common.Model.Types.VolumePresentation, binWidth As Double) As DVHData
+  overload: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  id: GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  nameWithType: PlanningItem.GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, VMS.TPS.Common.Model.Types.VolumePresentation, VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  type: Method
+  source:
+    id: GetDoseAtVolume
+    path: ''
+    startLine: 86955
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue GetDoseAtVolume(Structure structure, double volume, Common.Model.Types.VolumePresentation volumePresentation, Common.Model.Types.DoseValuePresentation requestedDosePresentation)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: volume
+      type: System.Double
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: requestedDosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Function GetDoseAtVolume(structure As  Structure, volume As Double, volumePresentation As Common.Model.Types.VolumePresentation, requestedDosePresentation As Common.Model.Types.DoseValuePresentation) As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  id: GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  nameWithType: PlanningItem.GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValue, VMS.TPS.Common.Model.Types.VolumePresentation)
+  type: Method
+  source:
+    id: GetVolumeAtDose
+    path: ''
+    startLine: 86979
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GetVolumeAtDose(Structure structure, Common.Model.Types.DoseValue dose, Common.Model.Types.VolumePresentation requestedVolumePresentation)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dose
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    - id: requestedVolumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    return:
+      type: System.Double
+    content.vb: Public Function GetVolumeAtDose(structure As  Structure, dose As Common.Model.Types.DoseValue, requestedVolumePresentation As Common.Model.Types.VolumePresentation) As Double
+  overload: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem()
+  nameWithType: PlanningItem.PlanningItem()
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 87003
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem(Object)
+  nameWithType: PlanningItem.PlanningItem(Object)
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 87008
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: PlanningItem.CreationDateTime
+  fullName: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 116210
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.PlanningItem.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.Dose
+  commentId: P:ESAPIX.Facade.API.PlanningItem.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: PlanningItem.Dose
+  fullName: ESAPIX.Facade.API.PlanningItem.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 116252
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItemDose Dose { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.PlanningItemDose
+    content.vb: Public Property Dose As PlanningItemDose
+  overload: ESAPIX.Facade.API.PlanningItem.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  commentId: P:ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  id: DoseValuePresentation
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: DoseValuePresentation
+  nameWithType: PlanningItem.DoseValuePresentation
+  fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  type: Property
+  source:
+    id: DoseValuePresentation
+    path: ''
+    startLine: 116301
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValuePresentation DoseValuePresentation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    content.vb: Public Property DoseValuePresentation As Common.Model.Types.DoseValuePresentation
+  overload: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  commentId: P:ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  id: StructuresSelectedForDvh
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: StructuresSelectedForDvh
+  nameWithType: PlanningItem.StructuresSelectedForDvh
+  fullName: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  type: Property
+  source:
+    id: StructuresSelectedForDvh
+    path: ''
+    startLine: 116343
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Structure> StructuresSelectedForDvh { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Structure}
+    content.vb: Public Property StructuresSelectedForDvh As IEnumerable(Of  Structure)
+  overload: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  id: GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValuePresentation, VMS.TPS.Common.Model.Types.VolumePresentation, System.Double)
+  type: Method
+  source:
+    id: GetDVHCumulativeData
+    path: ''
+    startLine: 116399
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData GetDVHCumulativeData(Structure structure, Common.Model.Types.DoseValuePresentation dosePresentation, Common.Model.Types.VolumePresentation volumePresentation, double binWidth)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: binWidth
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.DVHData
+    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As Common.Model.Types.DoseValuePresentation, volumePresentation As Common.Model.Types.VolumePresentation, binWidth As Double) As DVHData
+  overload: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  id: GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  nameWithType: PlanningItem.GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, VMS.TPS.Common.Model.Types.VolumePresentation, VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  type: Method
+  source:
+    id: GetDoseAtVolume
+    path: ''
+    startLine: 116423
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue GetDoseAtVolume(Structure structure, double volume, Common.Model.Types.VolumePresentation volumePresentation, Common.Model.Types.DoseValuePresentation requestedDosePresentation)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: volume
+      type: System.Double
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: requestedDosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Function GetDoseAtVolume(structure As  Structure, volume As Double, volumePresentation As Common.Model.Types.VolumePresentation, requestedDosePresentation As Common.Model.Types.DoseValuePresentation) As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  id: GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  nameWithType: PlanningItem.GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValue, VMS.TPS.Common.Model.Types.VolumePresentation)
+  type: Method
+  source:
+    id: GetVolumeAtDose
+    path: ''
+    startLine: 116447
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GetVolumeAtDose(Structure structure, Common.Model.Types.DoseValue dose, Common.Model.Types.VolumePresentation requestedVolumePresentation)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dose
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    - id: requestedVolumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    return:
+      type: System.Double
+    content.vb: Public Function GetVolumeAtDose(structure As  Structure, dose As Common.Model.Types.DoseValue, requestedVolumePresentation As Common.Model.Types.VolumePresentation) As Double
+  overload: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem()
+  nameWithType: PlanningItem.PlanningItem()
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 116471
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem(Object)
+  nameWithType: PlanningItem.PlanningItem(Object)
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 116476
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: PlanningItem.CreationDateTime
+  fullName: ESAPIX.Facade.API.PlanningItem.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 148272
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.PlanningItem.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.Dose
+  commentId: P:ESAPIX.Facade.API.PlanningItem.Dose
+  id: Dose
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: PlanningItem.Dose
+  fullName: ESAPIX.Facade.API.PlanningItem.Dose
+  type: Property
+  source:
+    id: Dose
+    path: ''
+    startLine: 148314
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItemDose Dose { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.PlanningItemDose
+    content.vb: Public Property Dose As PlanningItemDose
+  overload: ESAPIX.Facade.API.PlanningItem.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  commentId: P:ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  id: DoseValuePresentation
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: DoseValuePresentation
+  nameWithType: PlanningItem.DoseValuePresentation
+  fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
+  type: Property
+  source:
+    id: DoseValuePresentation
+    path: ''
+    startLine: 148363
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValuePresentation DoseValuePresentation { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    content.vb: Public Property DoseValuePresentation As Common.Model.Types.DoseValuePresentation
+  overload: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.StructureSet
+  commentId: P:ESAPIX.Facade.API.PlanningItem.StructureSet
+  id: StructureSet
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: StructureSet
+  nameWithType: PlanningItem.StructureSet
+  fullName: ESAPIX.Facade.API.PlanningItem.StructureSet
+  type: Property
+  source:
+    id: StructureSet
+    path: ''
+    startLine: 148405
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public StructureSet StructureSet { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.StructureSet
+    content.vb: Public Property StructureSet As StructureSet
+  overload: ESAPIX.Facade.API.PlanningItem.StructureSet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  commentId: P:ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  id: StructuresSelectedForDvh
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: StructuresSelectedForDvh
+  nameWithType: PlanningItem.StructuresSelectedForDvh
+  fullName: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  type: Property
+  source:
+    id: StructuresSelectedForDvh
+    path: ''
+    startLine: 148454
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public IEnumerable<Structure> StructuresSelectedForDvh { get; set; }
+    parameters: []
+    return:
+      type: IEnumerable{ESAPIX.Facade.API.Structure}
+    content.vb: Public Property StructuresSelectedForDvh As IEnumerable(Of  Structure)
+  overload: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  id: GetDVHCumulativeData(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValuePresentation,VMS.TPS.Common.Model.Types.VolumePresentation,System.Double)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  nameWithType: PlanningItem.GetDVHCumulativeData(Structure, Common.Model.Types.DoseValuePresentation, Common.Model.Types.VolumePresentation, Double)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValuePresentation, VMS.TPS.Common.Model.Types.VolumePresentation, System.Double)
+  type: Method
+  source:
+    id: GetDVHCumulativeData
+    path: ''
+    startLine: 148510
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DVHData GetDVHCumulativeData(Structure structure, Common.Model.Types.DoseValuePresentation dosePresentation, Common.Model.Types.VolumePresentation volumePresentation, double binWidth)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: binWidth
+      type: System.Double
+    return:
+      type: ESAPIX.Facade.API.DVHData
+    content.vb: Public Function GetDVHCumulativeData(structure As  Structure, dosePresentation As Common.Model.Types.DoseValuePresentation, volumePresentation As Common.Model.Types.VolumePresentation, binWidth As Double) As DVHData
+  overload: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  id: GetDoseAtVolume(ESAPIX.Facade.API.Structure,System.Double,VMS.TPS.Common.Model.Types.VolumePresentation,VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  nameWithType: PlanningItem.GetDoseAtVolume(Structure, Double, Common.Model.Types.VolumePresentation, Common.Model.Types.DoseValuePresentation)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume(ESAPIX.Facade.API.Structure, System.Double, VMS.TPS.Common.Model.Types.VolumePresentation, VMS.TPS.Common.Model.Types.DoseValuePresentation)
+  type: Method
+  source:
+    id: GetDoseAtVolume
+    path: ''
+    startLine: 148534
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue GetDoseAtVolume(Structure structure, double volume, Common.Model.Types.VolumePresentation volumePresentation, Common.Model.Types.DoseValuePresentation requestedDosePresentation)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: volume
+      type: System.Double
+    - id: volumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    - id: requestedDosePresentation
+      type: VMS.TPS.Common.Model.Types.DoseValuePresentation
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Function GetDoseAtVolume(structure As  Structure, volume As Double, volumePresentation As Common.Model.Types.VolumePresentation, requestedDosePresentation As Common.Model.Types.DoseValuePresentation) As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  id: GetVolumeAtDose(ESAPIX.Facade.API.Structure,VMS.TPS.Common.Model.Types.DoseValue,VMS.TPS.Common.Model.Types.VolumePresentation)
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  nameWithType: PlanningItem.GetVolumeAtDose(Structure, Common.Model.Types.DoseValue, Common.Model.Types.VolumePresentation)
+  fullName: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose(ESAPIX.Facade.API.Structure, VMS.TPS.Common.Model.Types.DoseValue, VMS.TPS.Common.Model.Types.VolumePresentation)
+  type: Method
+  source:
+    id: GetVolumeAtDose
+    path: ''
+    startLine: 148558
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double GetVolumeAtDose(Structure structure, Common.Model.Types.DoseValue dose, Common.Model.Types.VolumePresentation requestedVolumePresentation)
+    parameters:
+    - id: structure
+      type: ESAPIX.Facade.API.Structure
+    - id: dose
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    - id: requestedVolumePresentation
+      type: VMS.TPS.Common.Model.Types.VolumePresentation
+    return:
+      type: System.Double
+    content.vb: Public Function GetVolumeAtDose(structure As  Structure, dose As Common.Model.Types.DoseValue, requestedVolumePresentation As Common.Model.Types.VolumePresentation) As Double
+  overload: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem()
+  nameWithType: PlanningItem.PlanningItem()
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 148582
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.PlanningItem.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.PlanningItem
+  langs:
+  - csharp
+  - vb
+  name: PlanningItem(Object)
+  nameWithType: PlanningItem.PlanningItem(Object)
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 148587
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public PlanningItem(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.PlanningItem.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -334,6 +1576,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -369,103 +1616,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -534,6 +1698,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -563,207 +1766,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.PlanningItem.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.PlanningItem.#ctor
-  isExternal: false
-  name: PlanningItem
-  nameWithType: PlanningItem.PlanningItem
-  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem
-- uid: ESAPIX.Facade.API.PlanningItem.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.PlanningItem.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: PlanningItem.IsLive
-  fullName: ESAPIX.Facade.API.PlanningItem.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.PlanningItem.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.PlanningItem.CreationDateTime
   isExternal: false
@@ -859,35 +1867,24 @@ references:
   name: Dose
   nameWithType: PlanningItem.Dose
   fullName: ESAPIX.Facade.API.PlanningItem.Dose
-- uid: ESAPIX.Facade.API.PlanningItemDose
-  commentId: T:ESAPIX.Facade.API.PlanningItemDose
+- uid: ESAPIX.Facade.API.Dose
+  commentId: T:ESAPIX.Facade.API.Dose
   parent: ESAPIX.Facade.API
   isExternal: false
-  name: PlanningItemDose
-  nameWithType: PlanningItemDose
-  fullName: ESAPIX.Facade.API.PlanningItemDose
+  name: Dose
+  nameWithType: Dose
+  fullName: ESAPIX.Facade.API.Dose
 - uid: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation*
   commentId: Overload:ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
   isExternal: false
   name: DoseValuePresentation
   nameWithType: PlanningItem.DoseValuePresentation
   fullName: ESAPIX.Facade.API.PlanningItem.DoseValuePresentation
-- uid: DoseValuePresentation
+- uid: VMS.TPS.Common.Model.Types.DoseValuePresentation
   isExternal: true
-  name: DoseValuePresentation
-  nameWithType: DoseValuePresentation
-  fullName: DoseValuePresentation
-- uid: ESAPIX.Facade.API.PlanningItem.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.PlanningItem.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: PlanningItem.WriteXml
-  fullName: ESAPIX.Facade.API.PlanningItem.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Common.Model.Types.DoseValuePresentation
+  nameWithType: Common.Model.Types.DoseValuePresentation
+  fullName: VMS.TPS.Common.Model.Types.DoseValuePresentation
 - uid: ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData*
   commentId: Overload:ESAPIX.Facade.API.PlanningItem.GetDVHCumulativeData
   isExternal: false
@@ -901,11 +1898,11 @@ references:
   name: Structure
   nameWithType: Structure
   fullName: ESAPIX.Facade.API.Structure
-- uid: VolumePresentation
+- uid: VMS.TPS.Common.Model.Types.VolumePresentation
   isExternal: true
-  name: VolumePresentation
-  nameWithType: VolumePresentation
-  fullName: VolumePresentation
+  name: Common.Model.Types.VolumePresentation
+  nameWithType: Common.Model.Types.VolumePresentation
+  fullName: VMS.TPS.Common.Model.Types.VolumePresentation
 - uid: System.Double
   commentId: T:System.Double
   parent: System
@@ -920,3 +1917,131 @@ references:
   name: DVHData
   nameWithType: DVHData
   fullName: ESAPIX.Facade.API.DVHData
+- uid: ESAPIX.Facade.API.PlanningItem.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.PlanningItem.#ctor
+  isExternal: false
+  name: PlanningItem
+  nameWithType: PlanningItem.PlanningItem
+  fullName: ESAPIX.Facade.API.PlanningItem.PlanningItem
+- uid: ESAPIX.Facade.API.PlanningItemDose
+  commentId: T:ESAPIX.Facade.API.PlanningItemDose
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: PlanningItemDose
+  nameWithType: PlanningItemDose
+  fullName: ESAPIX.Facade.API.PlanningItemDose
+- uid: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh*
+  commentId: Overload:ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+  isExternal: false
+  name: StructuresSelectedForDvh
+  nameWithType: PlanningItem.StructuresSelectedForDvh
+  fullName: ESAPIX.Facade.API.PlanningItem.StructuresSelectedForDvh
+- uid: IEnumerable{ESAPIX.Facade.API.Structure}
+  commentId: '!:IEnumerable{ESAPIX.Facade.API.Structure}'
+  definition: IEnumerable`1
+  name: IEnumerable<Structure>
+  nameWithType: IEnumerable<Structure>
+  fullName: IEnumerable<ESAPIX.Facade.API.Structure>
+  nameWithType.vb: IEnumerable(Of Structure)
+  fullName.vb: IEnumerable(Of ESAPIX.Facade.API.Structure)
+  name.vb: IEnumerable(Of Structure)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ESAPIX.Facade.API.Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: ESAPIX.Facade.API.Structure
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume*
+  commentId: Overload:ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume
+  isExternal: false
+  name: GetDoseAtVolume
+  nameWithType: PlanningItem.GetDoseAtVolume
+  fullName: ESAPIX.Facade.API.PlanningItem.GetDoseAtVolume
+- uid: VMS.TPS.Common.Model.Types.DoseValue
+  isExternal: true
+  name: Common.Model.Types.DoseValue
+  nameWithType: Common.Model.Types.DoseValue
+  fullName: VMS.TPS.Common.Model.Types.DoseValue
+- uid: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose*
+  commentId: Overload:ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose
+  isExternal: false
+  name: GetVolumeAtDose
+  nameWithType: PlanningItem.GetVolumeAtDose
+  fullName: ESAPIX.Facade.API.PlanningItem.GetVolumeAtDose
+- uid: ESAPIX.Facade.API.PlanningItem.StructureSet*
+  commentId: Overload:ESAPIX.Facade.API.PlanningItem.StructureSet
+  isExternal: false
+  name: StructureSet
+  nameWithType: PlanningItem.StructureSet
+  fullName: ESAPIX.Facade.API.PlanningItem.StructureSet
+- uid: ESAPIX.Facade.API.StructureSet
+  commentId: T:ESAPIX.Facade.API.StructureSet
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: StructureSet
+  nameWithType: StructureSet
+  fullName: ESAPIX.Facade.API.StructureSet

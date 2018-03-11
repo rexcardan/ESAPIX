@@ -6,11 +6,29 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Hospital.#ctor
+  - ESAPIX.Facade.API.Hospital.#ctor
+  - ESAPIX.Facade.API.Hospital.#ctor
+  - ESAPIX.Facade.API.Hospital.#ctor
+  - ESAPIX.Facade.API.Hospital.#ctor
+  - ESAPIX.Facade.API.Hospital.#ctor
+  - ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  - ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  - ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  - ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  - ESAPIX.Facade.API.Hospital.#ctor(System.Object)
   - ESAPIX.Facade.API.Hospital.#ctor(System.Object)
   - ESAPIX.Facade.API.Hospital.CreationDateTime
-  - ESAPIX.Facade.API.Hospital.IsLive
+  - ESAPIX.Facade.API.Hospital.CreationDateTime
+  - ESAPIX.Facade.API.Hospital.CreationDateTime
+  - ESAPIX.Facade.API.Hospital.CreationDateTime
+  - ESAPIX.Facade.API.Hospital.CreationDateTime
+  - ESAPIX.Facade.API.Hospital.CreationDateTime
   - ESAPIX.Facade.API.Hospital.Location
-  - ESAPIX.Facade.API.Hospital.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Hospital.Location
+  - ESAPIX.Facade.API.Hospital.Location
+  - ESAPIX.Facade.API.Hospital.Location
+  - ESAPIX.Facade.API.Hospital.Location
+  - ESAPIX.Facade.API.Hospital.Location
   langs:
   - csharp
   - vb
@@ -21,127 +39,40 @@ items:
   source:
     id: Hospital
     path: ''
-    startLine: 10144
+    startLine: 139871
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Hospital : ApiDataObject'
+    content: 'public class Hospital : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class Hospital
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.Hospital.#ctor
-  commentId: M:ESAPIX.Facade.API.Hospital.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.Hospital
-  langs:
-  - csharp
-  - vb
-  name: Hospital()
-  nameWithType: Hospital.Hospital()
-  fullName: ESAPIX.Facade.API.Hospital.Hospital()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 10146
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Hospital()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.Hospital.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Hospital.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.Hospital.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.Hospital
-  langs:
-  - csharp
-  - vb
-  name: Hospital(Object)
-  nameWithType: Hospital.Hospital(Object)
-  fullName: ESAPIX.Facade.API.Hospital.Hospital(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 10151
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Hospital(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.Hospital.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Hospital.IsLive
-  commentId: P:ESAPIX.Facade.API.Hospital.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Hospital
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Hospital.IsLive
-  fullName: ESAPIX.Facade.API.Hospital.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 10156
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Hospital.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Hospital.CreationDateTime
   commentId: P:ESAPIX.Facade.API.Hospital.CreationDateTime
   id: CreationDateTime
@@ -156,7 +87,7 @@ items:
   source:
     id: CreationDateTime
     path: ''
-    startLine: 10161
+    startLine: 9526
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -187,7 +118,7 @@ items:
   source:
     id: Location
     path: ''
-    startLine: 10178
+    startLine: 9568
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -204,31 +135,642 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Hospital.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Hospital.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Hospital.#ctor
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.Hospital
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Hospital.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Hospital.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: Hospital()
+  nameWithType: Hospital.Hospital()
+  fullName: ESAPIX.Facade.API.Hospital.Hospital()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 10193
+    startLine: 9610
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public Hospital()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital(Object)
+  nameWithType: Hospital.Hospital(Object)
+  fullName: ESAPIX.Facade.API.Hospital.Hospital(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 9615
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Hospital.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Hospital.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Hospital.CreationDateTime
+  fullName: ESAPIX.Facade.API.Hospital.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 26777
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Hospital.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.Location
+  commentId: P:ESAPIX.Facade.API.Hospital.Location
+  id: Location
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Hospital.Location
+  fullName: ESAPIX.Facade.API.Hospital.Location
+  type: Property
+  source:
+    id: Location
+    path: ''
+    startLine: 26819
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Location { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Location As String
+  overload: ESAPIX.Facade.API.Hospital.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital()
+  nameWithType: Hospital.Hospital()
+  fullName: ESAPIX.Facade.API.Hospital.Hospital()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 26861
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital(Object)
+  nameWithType: Hospital.Hospital(Object)
+  fullName: ESAPIX.Facade.API.Hospital.Hospital(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 26866
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Hospital.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Hospital.CreationDateTime
+  fullName: ESAPIX.Facade.API.Hospital.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 50042
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Hospital.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.Location
+  commentId: P:ESAPIX.Facade.API.Hospital.Location
+  id: Location
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Hospital.Location
+  fullName: ESAPIX.Facade.API.Hospital.Location
+  type: Property
+  source:
+    id: Location
+    path: ''
+    startLine: 50084
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Location { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Location As String
+  overload: ESAPIX.Facade.API.Hospital.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital()
+  nameWithType: Hospital.Hospital()
+  fullName: ESAPIX.Facade.API.Hospital.Hospital()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 50126
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital(Object)
+  nameWithType: Hospital.Hospital(Object)
+  fullName: ESAPIX.Facade.API.Hospital.Hospital(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 50131
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Hospital.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Hospital.CreationDateTime
+  fullName: ESAPIX.Facade.API.Hospital.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 78391
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Hospital.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.Location
+  commentId: P:ESAPIX.Facade.API.Hospital.Location
+  id: Location
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Hospital.Location
+  fullName: ESAPIX.Facade.API.Hospital.Location
+  type: Property
+  source:
+    id: Location
+    path: ''
+    startLine: 78433
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Location { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Location As String
+  overload: ESAPIX.Facade.API.Hospital.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital()
+  nameWithType: Hospital.Hospital()
+  fullName: ESAPIX.Facade.API.Hospital.Hospital()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 78475
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital(Object)
+  nameWithType: Hospital.Hospital(Object)
+  fullName: ESAPIX.Facade.API.Hospital.Hospital(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 78480
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Hospital.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Hospital.CreationDateTime
+  fullName: ESAPIX.Facade.API.Hospital.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 107801
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Hospital.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.Location
+  commentId: P:ESAPIX.Facade.API.Hospital.Location
+  id: Location
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Hospital.Location
+  fullName: ESAPIX.Facade.API.Hospital.Location
+  type: Property
+  source:
+    id: Location
+    path: ''
+    startLine: 107843
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Location { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Location As String
+  overload: ESAPIX.Facade.API.Hospital.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital()
+  nameWithType: Hospital.Hospital()
+  fullName: ESAPIX.Facade.API.Hospital.Hospital()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 107885
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital(Object)
+  nameWithType: Hospital.Hospital(Object)
+  fullName: ESAPIX.Facade.API.Hospital.Hospital(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 107890
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.CreationDateTime
+  commentId: P:ESAPIX.Facade.API.Hospital.CreationDateTime
+  id: CreationDateTime
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: CreationDateTime
+  nameWithType: Hospital.CreationDateTime
+  fullName: ESAPIX.Facade.API.Hospital.CreationDateTime
+  type: Property
+  source:
+    id: CreationDateTime
+    path: ''
+    startLine: 139873
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public DateTime? CreationDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CreationDateTime As Date?
+  overload: ESAPIX.Facade.API.Hospital.CreationDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.Location
+  commentId: P:ESAPIX.Facade.API.Hospital.Location
+  id: Location
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Hospital.Location
+  fullName: ESAPIX.Facade.API.Hospital.Location
+  type: Property
+  source:
+    id: Location
+    path: ''
+    startLine: 139915
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public string Location { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Location As String
+  overload: ESAPIX.Facade.API.Hospital.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital()
+  nameWithType: Hospital.Hospital()
+  fullName: ESAPIX.Facade.API.Hospital.Hospital()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 139957
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Hospital.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Hospital
+  langs:
+  - csharp
+  - vb
+  name: Hospital(Object)
+  nameWithType: Hospital.Hospital(Object)
+  fullName: ESAPIX.Facade.API.Hospital.Hospital(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 139962
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Hospital(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Hospital.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -261,6 +803,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -296,103 +843,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -461,6 +925,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -490,207 +993,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Hospital.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Hospital.#ctor
-  isExternal: false
-  name: Hospital
-  nameWithType: Hospital.Hospital
-  fullName: ESAPIX.Facade.API.Hospital.Hospital
-- uid: ESAPIX.Facade.API.Hospital.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Hospital.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Hospital.IsLive
-  fullName: ESAPIX.Facade.API.Hospital.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Hospital.CreationDateTime*
   commentId: Overload:ESAPIX.Facade.API.Hospital.CreationDateTime
   isExternal: false
@@ -793,14 +1101,9 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: ESAPIX.Facade.API.Hospital.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Hospital.WriteXml
+- uid: ESAPIX.Facade.API.Hospital.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Hospital.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: Hospital.WriteXml
-  fullName: ESAPIX.Facade.API.Hospital.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Hospital
+  nameWithType: Hospital.Hospital
+  fullName: ESAPIX.Facade.API.Hospital.Hospital

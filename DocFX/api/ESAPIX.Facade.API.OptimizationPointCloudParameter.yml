@@ -6,11 +6,13 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
-  - ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
+  - ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   - ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure
-  - ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure
   langs:
   - csharp
   - vb
@@ -21,122 +23,34 @@ items:
   source:
     id: OptimizationPointCloudParameter
     path: ''
-    startLine: 11404
+    startLine: 55938
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class OptimizationPointCloudParameter : OptimizationParameter'
+    content: 'public class OptimizationPointCloudParameter : OptimizationParameter, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class OptimizationPointCloudParameter
           Inherits OptimizationParameter
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.OptimizationParameter
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
-  - ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  - ESAPIX.Facade.API.OptimizationParameter.GetHashCode
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
-  commentId: M:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
-  langs:
-  - csharp
-  - vb
-  name: OptimizationPointCloudParameter()
-  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter()
-  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11406
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizationPointCloudParameter()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
-  langs:
-  - csharp
-  - vb
-  name: OptimizationPointCloudParameter(Object)
-  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter(Object)
-  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11411
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizationPointCloudParameter(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
-  commentId: P:ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: OptimizationPointCloudParameter.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 11416
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   commentId: P:ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   id: PointResolutionInMM
@@ -151,7 +65,7 @@ items:
   source:
     id: PointResolutionInMM
     path: ''
-    startLine: 11421
+    startLine: 29336
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -182,7 +96,7 @@ items:
   source:
     id: Structure
     path: ''
-    startLine: 11438
+    startLine: 29378
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -199,31 +113,174 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: OptimizationPointCloudParameter.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: OptimizationPointCloudParameter()
+  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter()
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 11457
+    startLine: 29427
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public OptimizationPointCloudParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationPointCloudParameter(Object)
+  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 29432
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationPointCloudParameter(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
+  commentId: P:ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
+  id: PointResolutionInMM
+  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
+  langs:
+  - csharp
+  - vb
+  name: PointResolutionInMM
+  nameWithType: OptimizationPointCloudParameter.PointResolutionInMM
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
+  type: Property
+  source:
+    id: PointResolutionInMM
+    path: ''
+    startLine: 55940
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double PointResolutionInMM { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property PointResolutionInMM As Double
+  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure
+  commentId: P:ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure
+  id: Structure
+  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
+  langs:
+  - csharp
+  - vb
+  name: Structure
+  nameWithType: OptimizationPointCloudParameter.Structure
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure
+  type: Property
+  source:
+    id: Structure
+    path: ''
+    startLine: 55982
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Structure Structure { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Structure
+    content.vb: 'Public Property Structure As '
+  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.Structure*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationPointCloudParameter()
+  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter()
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 56031
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationPointCloudParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationPointCloudParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationPointCloudParameter(Object)
+  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 56036
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationPointCloudParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -256,74 +313,18 @@ references:
   name: OptimizationParameter
   nameWithType: OptimizationParameter
   fullName: ESAPIX.Facade.API.OptimizationParameter
-- uid: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  parent: ESAPIX.Facade.API.OptimizationParameter
+- uid: System.Xml.Serialization.IXmlSerializable
   isExternal: true
-  name: Equals(Object)
-  nameWithType: OptimizationParameter.Equals(Object)
-  fullName: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-    name: Equals
-    nameWithType: OptimizationParameter.Equals
-    fullName: ESAPIX.Facade.API.OptimizationParameter.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-    name: Equals
-    nameWithType: OptimizationParameter.Equals
-    fullName: ESAPIX.Facade.API.OptimizationParameter.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  commentId: M:ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  parent: ESAPIX.Facade.API.OptimizationParameter
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: OptimizationParameter.GetHashCode()
-  fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-    name: GetHashCode
-    nameWithType: OptimizationParameter.GetHashCode
-    fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-    name: GetHashCode
-    nameWithType: OptimizationParameter.GetHashCode
-    fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -392,6 +393,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -421,238 +461,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
-  isExternal: false
-  name: OptimizationPointCloudParameter
-  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter
-  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter
-- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: OptimizationPointCloudParameter.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM*
   commentId: Overload:ESAPIX.Facade.API.OptimizationPointCloudParameter.PointResolutionInMM
   isExternal: false
@@ -679,14 +493,9 @@ references:
   name: Structure
   nameWithType: Structure
   fullName: ESAPIX.Facade.API.Structure
-- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml
+- uid: ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizationPointCloudParameter.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: OptimizationPointCloudParameter.WriteXml
-  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: OptimizationPointCloudParameter
+  nameWithType: OptimizationPointCloudParameter.OptimizationPointCloudParameter
+  fullName: ESAPIX.Facade.API.OptimizationPointCloudParameter.OptimizationPointCloudParameter

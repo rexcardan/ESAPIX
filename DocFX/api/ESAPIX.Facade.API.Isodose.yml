@@ -6,12 +6,35 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Isodose.#ctor
+  - ESAPIX.Facade.API.Isodose.#ctor
+  - ESAPIX.Facade.API.Isodose.#ctor
+  - ESAPIX.Facade.API.Isodose.#ctor
+  - ESAPIX.Facade.API.Isodose.#ctor
+  - ESAPIX.Facade.API.Isodose.#ctor
+  - ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  - ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  - ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  - ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  - ESAPIX.Facade.API.Isodose.#ctor(System.Object)
   - ESAPIX.Facade.API.Isodose.#ctor(System.Object)
   - ESAPIX.Facade.API.Isodose.Color
-  - ESAPIX.Facade.API.Isodose.IsLive
+  - ESAPIX.Facade.API.Isodose.Color
+  - ESAPIX.Facade.API.Isodose.Color
+  - ESAPIX.Facade.API.Isodose.Color
+  - ESAPIX.Facade.API.Isodose.Color
+  - ESAPIX.Facade.API.Isodose.Color
+  - ESAPIX.Facade.API.Isodose.Level
+  - ESAPIX.Facade.API.Isodose.Level
+  - ESAPIX.Facade.API.Isodose.Level
+  - ESAPIX.Facade.API.Isodose.Level
+  - ESAPIX.Facade.API.Isodose.Level
   - ESAPIX.Facade.API.Isodose.Level
   - ESAPIX.Facade.API.Isodose.MeshGeometry
-  - ESAPIX.Facade.API.Isodose.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Isodose.MeshGeometry
+  - ESAPIX.Facade.API.Isodose.MeshGeometry
+  - ESAPIX.Facade.API.Isodose.MeshGeometry
+  - ESAPIX.Facade.API.Isodose.MeshGeometry
+  - ESAPIX.Facade.API.Isodose.MeshGeometry
   langs:
   - csharp
   - vb
@@ -22,35 +45,126 @@ items:
   source:
     id: Isodose
     path: ''
-    startLine: 10647
+    startLine: 144295
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Isodose : SerializableObject'
+    content: 'public class Isodose : SerializableObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class Isodose
           Inherits SerializableObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
+- uid: ESAPIX.Facade.API.Isodose.Level
+  commentId: P:ESAPIX.Facade.API.Isodose.Level
+  id: Level
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Isodose.Level
+  fullName: ESAPIX.Facade.API.Isodose.Level
+  type: Property
+  source:
+    id: Level
+    path: ''
+    startLine: 10708
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Level { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Level As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.Isodose.Level*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Color
+  commentId: P:ESAPIX.Facade.API.Isodose.Color
+  id: Color
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Isodose.Color
+  fullName: ESAPIX.Facade.API.Isodose.Color
+  type: Property
+  source:
+    id: Color
+    path: ''
+    startLine: 10750
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Color Color { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property Color As Windows.Media.Color
+  overload: ESAPIX.Facade.API.Isodose.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.MeshGeometry
+  commentId: P:ESAPIX.Facade.API.Isodose.MeshGeometry
+  id: MeshGeometry
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: MeshGeometry
+  nameWithType: Isodose.MeshGeometry
+  fullName: ESAPIX.Facade.API.Isodose.MeshGeometry
+  type: Property
+  source:
+    id: MeshGeometry
+    path: ''
+    startLine: 10792
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.MeshGeometry3D
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
+  overload: ESAPIX.Facade.API.Isodose.MeshGeometry*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: ESAPIX.Facade.API.Isodose.#ctor
   commentId: M:ESAPIX.Facade.API.Isodose.#ctor
   id: '#ctor'
@@ -65,7 +179,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10649
+    startLine: 10847
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -91,7 +205,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 10654
+    startLine: 10852
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -106,37 +220,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Isodose.IsLive
-  commentId: P:ESAPIX.Facade.API.Isodose.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Isodose
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Isodose.IsLive
-  fullName: ESAPIX.Facade.API.Isodose.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 10659
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Isodose.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Isodose.Color
   commentId: P:ESAPIX.Facade.API.Isodose.Color
   id: Color
@@ -151,7 +234,7 @@ items:
   source:
     id: Color
     path: ''
-    startLine: 10664
+    startLine: 27959
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -182,16 +265,16 @@ items:
   source:
     id: Level
     path: ''
-    startLine: 10684
+    startLine: 28001
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DoseValue Level { get; set; }
+    content: public Common.Model.Types.DoseValue Level { get; set; }
     parameters: []
     return:
-      type: DoseValue
-    content.vb: Public Property Level As DoseValue
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Level As Common.Model.Types.DoseValue
   overload: ESAPIX.Facade.API.Isodose.Level*
   modifiers.csharp:
   - public
@@ -213,7 +296,7 @@ items:
   source:
     id: MeshGeometry
     path: ''
-    startLine: 10699
+    startLine: 28043
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -230,31 +313,649 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Isodose.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Isodose.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Isodose.#ctor
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.Isodose
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Isodose.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Isodose.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: Isodose()
+  nameWithType: Isodose.Isodose()
+  fullName: ESAPIX.Facade.API.Isodose.Isodose()
+  type: Constructor
   source:
-    id: WriteXml
+    id: .ctor
     path: ''
-    startLine: 10719
+    startLine: 28098
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public Isodose()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose(Object)
+  nameWithType: Isodose.Isodose(Object)
+  fullName: ESAPIX.Facade.API.Isodose.Isodose(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 28103
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Isodose.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Color
+  commentId: P:ESAPIX.Facade.API.Isodose.Color
+  id: Color
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Isodose.Color
+  fullName: ESAPIX.Facade.API.Isodose.Color
+  type: Property
+  source:
+    id: Color
+    path: ''
+    startLine: 54292
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Color Color { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property Color As Windows.Media.Color
+  overload: ESAPIX.Facade.API.Isodose.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Level
+  commentId: P:ESAPIX.Facade.API.Isodose.Level
+  id: Level
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Isodose.Level
+  fullName: ESAPIX.Facade.API.Isodose.Level
+  type: Property
+  source:
+    id: Level
+    path: ''
+    startLine: 54334
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Level { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Level As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.Isodose.Level*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.MeshGeometry
+  commentId: P:ESAPIX.Facade.API.Isodose.MeshGeometry
+  id: MeshGeometry
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: MeshGeometry
+  nameWithType: Isodose.MeshGeometry
+  fullName: ESAPIX.Facade.API.Isodose.MeshGeometry
+  type: Property
+  source:
+    id: MeshGeometry
+    path: ''
+    startLine: 54376
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.MeshGeometry3D
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
+  overload: ESAPIX.Facade.API.Isodose.MeshGeometry*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose()
+  nameWithType: Isodose.Isodose()
+  fullName: ESAPIX.Facade.API.Isodose.Isodose()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 54431
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose(Object)
+  nameWithType: Isodose.Isodose(Object)
+  fullName: ESAPIX.Facade.API.Isodose.Isodose(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 54436
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Color
+  commentId: P:ESAPIX.Facade.API.Isodose.Color
+  id: Color
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Isodose.Color
+  fullName: ESAPIX.Facade.API.Isodose.Color
+  type: Property
+  source:
+    id: Color
+    path: ''
+    startLine: 82641
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Color Color { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property Color As Windows.Media.Color
+  overload: ESAPIX.Facade.API.Isodose.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Level
+  commentId: P:ESAPIX.Facade.API.Isodose.Level
+  id: Level
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Isodose.Level
+  fullName: ESAPIX.Facade.API.Isodose.Level
+  type: Property
+  source:
+    id: Level
+    path: ''
+    startLine: 82683
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Level { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Level As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.Isodose.Level*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.MeshGeometry
+  commentId: P:ESAPIX.Facade.API.Isodose.MeshGeometry
+  id: MeshGeometry
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: MeshGeometry
+  nameWithType: Isodose.MeshGeometry
+  fullName: ESAPIX.Facade.API.Isodose.MeshGeometry
+  type: Property
+  source:
+    id: MeshGeometry
+    path: ''
+    startLine: 82725
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.MeshGeometry3D
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
+  overload: ESAPIX.Facade.API.Isodose.MeshGeometry*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose()
+  nameWithType: Isodose.Isodose()
+  fullName: ESAPIX.Facade.API.Isodose.Isodose()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 82780
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose(Object)
+  nameWithType: Isodose.Isodose(Object)
+  fullName: ESAPIX.Facade.API.Isodose.Isodose(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 82785
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Color
+  commentId: P:ESAPIX.Facade.API.Isodose.Color
+  id: Color
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Isodose.Color
+  fullName: ESAPIX.Facade.API.Isodose.Color
+  type: Property
+  source:
+    id: Color
+    path: ''
+    startLine: 112109
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Color Color { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property Color As Windows.Media.Color
+  overload: ESAPIX.Facade.API.Isodose.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Level
+  commentId: P:ESAPIX.Facade.API.Isodose.Level
+  id: Level
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Isodose.Level
+  fullName: ESAPIX.Facade.API.Isodose.Level
+  type: Property
+  source:
+    id: Level
+    path: ''
+    startLine: 112151
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Level { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Level As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.Isodose.Level*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.MeshGeometry
+  commentId: P:ESAPIX.Facade.API.Isodose.MeshGeometry
+  id: MeshGeometry
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: MeshGeometry
+  nameWithType: Isodose.MeshGeometry
+  fullName: ESAPIX.Facade.API.Isodose.MeshGeometry
+  type: Property
+  source:
+    id: MeshGeometry
+    path: ''
+    startLine: 112193
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.MeshGeometry3D
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
+  overload: ESAPIX.Facade.API.Isodose.MeshGeometry*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose()
+  nameWithType: Isodose.Isodose()
+  fullName: ESAPIX.Facade.API.Isodose.Isodose()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 112248
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose(Object)
+  nameWithType: Isodose.Isodose(Object)
+  fullName: ESAPIX.Facade.API.Isodose.Isodose(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 112253
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Color
+  commentId: P:ESAPIX.Facade.API.Isodose.Color
+  id: Color
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Isodose.Color
+  fullName: ESAPIX.Facade.API.Isodose.Color
+  type: Property
+  source:
+    id: Color
+    path: ''
+    startLine: 144297
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Color Color { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property Color As Windows.Media.Color
+  overload: ESAPIX.Facade.API.Isodose.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.Level
+  commentId: P:ESAPIX.Facade.API.Isodose.Level
+  id: Level
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Isodose.Level
+  fullName: ESAPIX.Facade.API.Isodose.Level
+  type: Property
+  source:
+    id: Level
+    path: ''
+    startLine: 144339
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DoseValue Level { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DoseValue
+    content.vb: Public Property Level As Common.Model.Types.DoseValue
+  overload: ESAPIX.Facade.API.Isodose.Level*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.MeshGeometry
+  commentId: P:ESAPIX.Facade.API.Isodose.MeshGeometry
+  id: MeshGeometry
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: MeshGeometry
+  nameWithType: Isodose.MeshGeometry
+  fullName: ESAPIX.Facade.API.Isodose.MeshGeometry
+  type: Property
+  source:
+    id: MeshGeometry
+    path: ''
+    startLine: 144381
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Media.Media3D.MeshGeometry3D MeshGeometry { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.MeshGeometry3D
+    content.vb: Public Property MeshGeometry As Windows.Media.Media3D.MeshGeometry3D
+  overload: ESAPIX.Facade.API.Isodose.MeshGeometry*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose()
+  nameWithType: Isodose.Isodose()
+  fullName: ESAPIX.Facade.API.Isodose.Isodose()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 144436
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Isodose.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Isodose
+  langs:
+  - csharp
+  - vb
+  name: Isodose(Object)
+  nameWithType: Isodose.Isodose(Object)
+  fullName: ESAPIX.Facade.API.Isodose.Isodose(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 144441
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Isodose(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Isodose.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -280,6 +981,18 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -348,6 +1061,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -377,310 +1129,23 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Isodose.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Isodose.#ctor
+- uid: ESAPIX.Facade.API.Isodose.Level*
+  commentId: Overload:ESAPIX.Facade.API.Isodose.Level
   isExternal: false
-  name: Isodose
-  nameWithType: Isodose.Isodose
-  fullName: ESAPIX.Facade.API.Isodose.Isodose
-- uid: ESAPIX.Facade.API.Isodose.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Isodose.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Isodose.IsLive
-  fullName: ESAPIX.Facade.API.Isodose.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+  name: Level
+  nameWithType: Isodose.Level
+  fullName: ESAPIX.Facade.API.Isodose.Level
+- uid: VMS.TPS.Common.Model.Types.DoseValue
   isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
+  name: Common.Model.Types.DoseValue
+  nameWithType: Common.Model.Types.DoseValue
+  fullName: VMS.TPS.Common.Model.Types.DoseValue
 - uid: ESAPIX.Facade.API.Isodose.Color*
   commentId: Overload:ESAPIX.Facade.API.Isodose.Color
   isExternal: false
@@ -692,17 +1157,6 @@ references:
   name: Windows.Media.Color
   nameWithType: Windows.Media.Color
   fullName: System.Windows.Media.Color
-- uid: ESAPIX.Facade.API.Isodose.Level*
-  commentId: Overload:ESAPIX.Facade.API.Isodose.Level
-  isExternal: false
-  name: Level
-  nameWithType: Isodose.Level
-  fullName: ESAPIX.Facade.API.Isodose.Level
-- uid: DoseValue
-  isExternal: true
-  name: DoseValue
-  nameWithType: DoseValue
-  fullName: DoseValue
 - uid: ESAPIX.Facade.API.Isodose.MeshGeometry*
   commentId: Overload:ESAPIX.Facade.API.Isodose.MeshGeometry
   isExternal: false
@@ -714,14 +1168,9 @@ references:
   name: Windows.Media.Media3D.MeshGeometry3D
   nameWithType: Windows.Media.Media3D.MeshGeometry3D
   fullName: System.Windows.Media.Media3D.MeshGeometry3D
-- uid: ESAPIX.Facade.API.Isodose.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Isodose.WriteXml
+- uid: ESAPIX.Facade.API.Isodose.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Isodose.#ctor
   isExternal: false
-  name: WriteXml
-  nameWithType: Isodose.WriteXml
-  fullName: ESAPIX.Facade.API.Isodose.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Isodose
+  nameWithType: Isodose.Isodose
+  fullName: ESAPIX.Facade.API.Isodose.Isodose

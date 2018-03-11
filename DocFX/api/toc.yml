@@ -1,33 +1,13 @@
 ### YamlMime:TableOfContent
-- uid: ESAPIX.AppKit
-  name: ESAPIX.AppKit
+- uid: ''
+  name: ''
   items:
-  - uid: ESAPIX.AppKit.AppBootstrapper`1
-    name: AppBootstrapper<T>
-    name.vb: AppBootstrapper(Of T)
-  - uid: ESAPIX.AppKit.AppComThread
-    name: AppComThread
-  - uid: ESAPIX.AppKit.ConsoleSyncContext
-    name: ConsoleSyncContext
-  - uid: ESAPIX.AppKit.PluginContext
-    name: PluginContext
-  - uid: ESAPIX.AppKit.ScriptBootstrapper`1
-    name: ScriptBootstrapper<T>
-    name.vb: ScriptBootstrapper(Of T)
-  - uid: ESAPIX.AppKit.ScriptComThread
-    name: ScriptComThread
-  - uid: ESAPIX.AppKit.StandAloneContext
-    name: StandAloneContext
-  - uid: ESAPIX.AppKit.StandAloneContext.BrachyPlanSetupChangedHandler
-    name: StandAloneContext.BrachyPlanSetupChangedHandler
-  - uid: ESAPIX.AppKit.StandAloneContext.CourseChangedHandler
-    name: StandAloneContext.CourseChangedHandler
-  - uid: ESAPIX.AppKit.StandAloneContext.ExternalPlanSetupChangedHandler
-    name: StandAloneContext.ExternalPlanSetupChangedHandler
-  - uid: ESAPIX.AppKit.StandAloneContext.PatientChangedHandler
-    name: StandAloneContext.PatientChangedHandler
-  - uid: ESAPIX.AppKit.StandAloneContext.PlanSetupChangedHandler
-    name: StandAloneContext.PlanSetupChangedHandler
+  - uid: App
+    name: App
+  - uid: MainView
+    name: MainView
+  - uid: MainViewModel
+    name: MainViewModel
 - uid: ESAPIX.AppKit.Data
   name: ESAPIX.AppKit.Data
   items:
@@ -44,6 +24,11 @@
     name.vb: SecureStorage(Of T)
   - uid: ESAPIX.AppKit.Data.StorageHelper
     name: StorageHelper
+- uid: ESAPIX.AppKit.Exceptions
+  name: ESAPIX.AppKit.Exceptions
+  items:
+  - uid: ESAPIX.AppKit.Exceptions.ScriptException
+    name: ScriptException
 - uid: ESAPIX.AppKit.Overlay
   name: ESAPIX.AppKit.Overlay
   items:
@@ -59,12 +44,55 @@
 - uid: ESAPIX.Bootstrapper
   name: ESAPIX.Bootstrapper
   items:
-  - uid: ESAPIX.Bootstrapper.FacadeInitializer
-    name: FacadeInitializer
-  - uid: ESAPIX.Bootstrapper.VMSBootstrapper
-    name: VMSBootstrapper
+  - uid: ESAPIX.Bootstrapper.AppBootstrapper`1
+    name: AppBootstrapper<T>
+    name.vb: AppBootstrapper(Of T)
+  - uid: ESAPIX.Bootstrapper.BootstrapperBase`1
+    name: BootstrapperBase<T>
+    name.vb: BootstrapperBase(Of T)
+  - uid: ESAPIX.Bootstrapper.ScriptBootstrapper`1
+    name: ScriptBootstrapper<T>
+    name.vb: ScriptBootstrapper(Of T)
   - uid: ESAPIX.Bootstrapper.XScriptBase
     name: XScriptBase
+  - uid: ESAPIX.Bootstrapper.XScriptToFullAppBase
+    name: XScriptToFullAppBase
+  - uid: ESAPIX.Bootstrapper.XScriptToFullAppBase.ArgumentBuilder
+    name: XScriptToFullAppBase.ArgumentBuilder
+- uid: ESAPIX.Bootstrapper.Helpers
+  name: ESAPIX.Bootstrapper.Helpers
+  items:
+  - uid: ESAPIX.Bootstrapper.Helpers.ArgumentBuilder
+    name: ArgumentBuilder
+  - uid: ESAPIX.Bootstrapper.Helpers.ArgumentKey
+    name: ArgumentKey
+  - uid: ESAPIX.Bootstrapper.Helpers.ArgumentParser
+    name: ArgumentParser
+- uid: ESAPIX.Common
+  name: ESAPIX.Common
+  items:
+  - uid: ESAPIX.Common.AppComThread
+    name: AppComThread
+  - uid: ESAPIX.Common.ConsoleSyncContext
+    name: ConsoleSyncContext
+  - uid: ESAPIX.Common.OfflineContext
+    name: OfflineContext
+  - uid: ESAPIX.Common.PluginContext
+    name: PluginContext
+  - uid: ESAPIX.Common.ScriptComThread
+    name: ScriptComThread
+  - uid: ESAPIX.Common.StandAloneContext
+    name: StandAloneContext
+  - uid: ESAPIX.Common.StandAloneContext.BrachyPlanSetupChangedHandler
+    name: StandAloneContext.BrachyPlanSetupChangedHandler
+  - uid: ESAPIX.Common.StandAloneContext.CourseChangedHandler
+    name: StandAloneContext.CourseChangedHandler
+  - uid: ESAPIX.Common.StandAloneContext.ExternalPlanSetupChangedHandler
+    name: StandAloneContext.ExternalPlanSetupChangedHandler
+  - uid: ESAPIX.Common.StandAloneContext.PatientChangedHandler
+    name: StandAloneContext.PatientChangedHandler
+  - uid: ESAPIX.Common.StandAloneContext.PlanSetupChangedHandler
+    name: StandAloneContext.PlanSetupChangedHandler
 - uid: ESAPIX.Constraints
   name: ESAPIX.Constraints
   items:
@@ -82,6 +110,8 @@
     name: NFractionConstraint
   - uid: ESAPIX.Constraints.OrConstraint
     name: OrConstraint
+  - uid: ESAPIX.Constraints.PQAsserter
+    name: PQAsserter
   - uid: ESAPIX.Constraints.PriorityConverter
     name: PriorityConverter
   - uid: ESAPIX.Constraints.PriorityType
@@ -90,6 +120,8 @@
     name: ResultType
   - uid: ESAPIX.Constraints.StructureNameConstraint
     name: StructureNameConstraint
+  - uid: ESAPIX.Constraints.TargetStat
+    name: TargetStat
 - uid: ESAPIX.Constraints.DVH
   name: ESAPIX.Constraints.DVH
   items:
@@ -144,8 +176,15 @@
     name: MayoRegex
   - uid: ESAPIX.Constraints.DVH.Query.QueryType
     name: QueryType
+  - uid: ESAPIX.Constraints.DVH.Query.TargetStats
+    name: TargetStats
   - uid: ESAPIX.Constraints.DVH.Query.Units
     name: Units
+- uid: ESAPIX.Constraints.Tests
+  name: ESAPIX.Constraints.Tests
+  items:
+  - uid: ESAPIX.Constraints.Tests.PQAsserterTests
+    name: PQAsserterTests
 - uid: ESAPIX.DVH
   name: ESAPIX.DVH
   items:
@@ -162,14 +201,14 @@
     name: DoseExtensions
   - uid: ESAPIX.Extensions.DVHDataExtensions
     name: DVHDataExtensions
+  - uid: ESAPIX.Extensions.ExceptionExtensions
+    name: ExceptionExtensions
   - uid: ESAPIX.Extensions.ExpandoExtensions
     name: ExpandoExtensions
   - uid: ESAPIX.Extensions.ImageExtensions
     name: ImageExtensions
   - uid: ESAPIX.Extensions.ListExtensions
     name: ListExtensions
-  - uid: ESAPIX.Extensions.PatientExtensions
-    name: PatientExtensions
   - uid: ESAPIX.Extensions.PlanningItemExtensions
     name: PlanningItemExtensions
   - uid: ESAPIX.Extensions.PlanSetupExtensions
@@ -217,6 +256,10 @@
     name: ApiDataObject
   - uid: ESAPIX.Facade.API.Application
     name: Application
+  - uid: ESAPIX.Facade.API.ApplicationScript
+    name: ApplicationScript
+  - uid: ESAPIX.Facade.API.ApplicationScriptLog
+    name: ApplicationScriptLog
   - uid: ESAPIX.Facade.API.Applicator
     name: Applicator
   - uid: ESAPIX.Facade.API.Beam
@@ -227,10 +270,14 @@
     name: BeamDose
   - uid: ESAPIX.Facade.API.BeamParameters
     name: BeamParameters
+  - uid: ESAPIX.Facade.API.BeamUncertainty
+    name: BeamUncertainty
   - uid: ESAPIX.Facade.API.Block
     name: Block
   - uid: ESAPIX.Facade.API.Bolus
     name: Bolus
+  - uid: ESAPIX.Facade.API.BrachyFieldReferencePoint
+    name: BrachyFieldReferencePoint
   - uid: ESAPIX.Facade.API.BrachyPlanSetup
     name: BrachyPlanSetup
   - uid: ESAPIX.Facade.API.BrachySolidApplicator
@@ -275,8 +322,36 @@
     name: Hospital
   - uid: ESAPIX.Facade.API.Image
     name: Image
+  - uid: ESAPIX.Facade.API.IonBeam
+    name: IonBeam
+  - uid: ESAPIX.Facade.API.IonBeamParameters
+    name: IonBeamParameters
+  - uid: ESAPIX.Facade.API.IonControlPoint
+    name: IonControlPoint
+  - uid: ESAPIX.Facade.API.IonControlPointCollection
+    name: IonControlPointCollection
+  - uid: ESAPIX.Facade.API.IonControlPointPair
+    name: IonControlPointPair
+  - uid: ESAPIX.Facade.API.IonControlPointPairCollection
+    name: IonControlPointPairCollection
+  - uid: ESAPIX.Facade.API.IonControlPointParameters
+    name: IonControlPointParameters
+  - uid: ESAPIX.Facade.API.IonPlanSetup
+    name: IonPlanSetup
+  - uid: ESAPIX.Facade.API.IonSpot
+    name: IonSpot
+  - uid: ESAPIX.Facade.API.IonSpotCollection
+    name: IonSpotCollection
+  - uid: ESAPIX.Facade.API.IonSpotParameters
+    name: IonSpotParameters
+  - uid: ESAPIX.Facade.API.IonSpotParametersCollection
+    name: IonSpotParametersCollection
   - uid: ESAPIX.Facade.API.Isodose
     name: Isodose
+  - uid: ESAPIX.Facade.API.LateralSpreadingDevice
+    name: LateralSpreadingDevice
+  - uid: ESAPIX.Facade.API.LateralSpreadingDeviceSettings
+    name: LateralSpreadingDeviceSettings
   - uid: ESAPIX.Facade.API.MLC
     name: MLC
   - uid: ESAPIX.Facade.API.OptimizationEUDObjective
@@ -317,16 +392,46 @@
     name: PlanSum
   - uid: ESAPIX.Facade.API.PlanSumComponent
     name: PlanSumComponent
+  - uid: ESAPIX.Facade.API.PlanTreatmentSession
+    name: PlanTreatmentSession
+  - uid: ESAPIX.Facade.API.PlanUncertainty
+    name: PlanUncertainty
+  - uid: ESAPIX.Facade.API.ProtocolPhaseMeasure
+    name: ProtocolPhaseMeasure
+  - uid: ESAPIX.Facade.API.ProtocolPhasePrescription
+    name: ProtocolPhasePrescription
   - uid: ESAPIX.Facade.API.RadioactiveSource
     name: RadioactiveSource
   - uid: ESAPIX.Facade.API.RadioactiveSourceModel
     name: RadioactiveSourceModel
+  - uid: ESAPIX.Facade.API.RangeModulator
+    name: RangeModulator
+  - uid: ESAPIX.Facade.API.RangeModulatorSettings
+    name: RangeModulatorSettings
+  - uid: ESAPIX.Facade.API.RangeShifter
+    name: RangeShifter
+  - uid: ESAPIX.Facade.API.RangeShifterSettings
+    name: RangeShifterSettings
   - uid: ESAPIX.Facade.API.ReferencePoint
     name: ReferencePoint
   - uid: ESAPIX.Facade.API.Registration
     name: Registration
+  - uid: ESAPIX.Facade.API.RTPrescription
+    name: RTPrescription
+  - uid: ESAPIX.Facade.API.RTPrescriptionConstraint
+    name: RTPrescriptionConstraint
+  - uid: ESAPIX.Facade.API.RTPrescriptionOrganAtRisk
+    name: RTPrescriptionOrganAtRisk
+  - uid: ESAPIX.Facade.API.RTPrescriptionTarget
+    name: RTPrescriptionTarget
+  - uid: ESAPIX.Facade.API.RTPrescriptionTargetConstraints
+    name: RTPrescriptionTargetConstraints
   - uid: ESAPIX.Facade.API.ScriptContext
     name: ScriptContext
+  - uid: ESAPIX.Facade.API.ScriptEnvironment
+    name: ScriptEnvironment
+  - uid: ESAPIX.Facade.API.SearchBodyParameters
+    name: SearchBodyParameters
   - uid: ESAPIX.Facade.API.SeedCollection
     name: SeedCollection
   - uid: ESAPIX.Facade.API.SegmentVolume
@@ -347,8 +452,20 @@
     name: Study
   - uid: ESAPIX.Facade.API.Technique
     name: Technique
+  - uid: ESAPIX.Facade.API.TradeoffExplorationContext
+    name: TradeoffExplorationContext
+  - uid: ESAPIX.Facade.API.TradeoffObjective
+    name: TradeoffObjective
   - uid: ESAPIX.Facade.API.Tray
     name: Tray
+  - uid: ESAPIX.Facade.API.TreatmentPhase
+    name: TreatmentPhase
+  - uid: ESAPIX.Facade.API.TreatmentSession
+    name: TreatmentSession
+  - uid: ESAPIX.Facade.API.TreatmentUnitOperatingLimit
+    name: TreatmentUnitOperatingLimit
+  - uid: ESAPIX.Facade.API.TreatmentUnitOperatingLimits
+    name: TreatmentUnitOperatingLimits
   - uid: ESAPIX.Facade.API.User
     name: User
   - uid: ESAPIX.Facade.API.Wedge
@@ -356,16 +473,26 @@
 - uid: ESAPIX.Facade.Serialization
   name: ESAPIX.Facade.Serialization
   items:
+  - uid: ESAPIX.Facade.Serialization.ControlPointCollectionConverter
+    name: ControlPointCollectionConverter
+  - uid: ESAPIX.Facade.Serialization.DoseProfileConverter
+    name: DoseProfileConverter
+  - uid: ESAPIX.Facade.Serialization.DoseValueConverter
+    name: DoseValueConverter
+  - uid: ESAPIX.Facade.Serialization.DVHPointConverter
+    name: DVHPointConverter
+  - uid: ESAPIX.Facade.Serialization.ESAPIContractResolver
+    name: ESAPIContractResolver
   - uid: ESAPIX.Facade.Serialization.FacadeSerializer
     name: FacadeSerializer
   - uid: ESAPIX.Facade.Serialization.IEnumerableJsonConverter
     name: IEnumerableJsonConverter
-  - uid: ESAPIX.Facade.Serialization.InfiniteLoopResolver
-    name: InfiniteLoopResolver
   - uid: ESAPIX.Facade.Serialization.MeshGeometryConverter
     name: MeshGeometryConverter
-  - uid: ESAPIX.Facade.Serialization.SerializedMethod
-    name: SerializedMethod
+  - uid: ESAPIX.Facade.Serialization.ProfilePointConverter
+    name: ProfilePointConverter
+  - uid: ESAPIX.Facade.Serialization.StructureCodeInfoConverter
+    name: StructureCodeInfoConverter
 - uid: ESAPIX.Facade.Tests
   name: ESAPIX.Facade.Tests
   items:
@@ -378,6 +505,12 @@
     name: FileHelper
   - uid: ESAPIX.Helpers.MagicStrings
     name: MagicStrings
+  - uid: ESAPIX.Helpers.MagicStrings.CourseIntent
+    name: MagicStrings.CourseIntent
+  - uid: ESAPIX.Helpers.MagicStrings.DICOMType
+    name: MagicStrings.DICOMType
+  - uid: ESAPIX.Helpers.MagicStrings.PlanIntent
+    name: MagicStrings.PlanIntent
   - uid: ESAPIX.Helpers.MagicStrings.VolumeUnits
     name: MagicStrings.VolumeUnits
   - uid: ESAPIX.Helpers.MathHelper
@@ -400,13 +533,34 @@
     name: Logger
   - uid: ESAPIX.Logging.Logger.LogHandler
     name: Logger.LogHandler
-  - uid: ESAPIX.Logging.LogStrings
-    name: LogStrings
 - uid: ESAPIX.OfflineObjects
   name: ESAPIX.OfflineObjects
   items:
   - uid: ESAPIX.OfflineObjects.Samples
     name: Samples
+- uid: ESAPIX_FacadeBuilder
+  name: ESAPIX_FacadeBuilder
+  items:
+  - uid: ESAPIX_FacadeBuilder.BootstrapperBuilder
+    name: BootstrapperBuilder
+  - uid: ESAPIX_FacadeBuilder.CommonSyntax
+    name: CommonSyntax
+  - uid: ESAPIX_FacadeBuilder.FacadeHolder
+    name: FacadeHolder
+  - uid: ESAPIX_FacadeBuilder.FacadeInitializer
+    name: FacadeInitializer
+  - uid: ESAPIX_FacadeBuilder.GeneratorBuilder
+    name: GeneratorBuilder
+  - uid: ESAPIX_FacadeBuilder.GenericHelper
+    name: GenericHelper
+  - uid: ESAPIX_FacadeBuilder.NameHelper
+    name: NameHelper
+  - uid: ESAPIX_FacadeBuilder.ParameterHelper
+    name: ParameterHelper
+  - uid: ESAPIX_FacadeBuilder.ParameterMetadata
+    name: ParameterMetadata
+  - uid: ESAPIX_FacadeBuilder.VMSConstructBuilder
+    name: VMSConstructBuilder
 - uid: ESAPIX_TESTS.Helpers
   name: ESAPIX_TESTS.Helpers
   items:
@@ -419,3 +573,8 @@
   items:
   - uid: ESAPIXTests.Facade.Serialization.FacadeSerializerTests
     name: FacadeSerializerTests
+- uid: VMS.TPS
+  name: VMS.TPS
+  items:
+  - uid: VMS.TPS.Script
+    name: Script

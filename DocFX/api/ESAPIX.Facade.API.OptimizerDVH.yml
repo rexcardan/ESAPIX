@@ -6,9 +6,29 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.OptimizerDVH.#ctor
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
   - ESAPIX.Facade.API.OptimizerDVH.CurveData
+  - ESAPIX.Facade.API.OptimizerDVH.CurveData
+  - ESAPIX.Facade.API.OptimizerDVH.CurveData
+  - ESAPIX.Facade.API.OptimizerDVH.CurveData
+  - ESAPIX.Facade.API.OptimizerDVH.CurveData
   - ESAPIX.Facade.API.OptimizerDVH.IsLive
+  - ESAPIX.Facade.API.OptimizerDVH.IsLive
+  - ESAPIX.Facade.API.OptimizerDVH.IsLive
+  - ESAPIX.Facade.API.OptimizerDVH.IsLive
+  - ESAPIX.Facade.API.OptimizerDVH.IsLive
+  - ESAPIX.Facade.API.OptimizerDVH.Structure
+  - ESAPIX.Facade.API.OptimizerDVH.Structure
+  - ESAPIX.Facade.API.OptimizerDVH.Structure
+  - ESAPIX.Facade.API.OptimizerDVH.Structure
   - ESAPIX.Facade.API.OptimizerDVH.Structure
   langs:
   - csharp
@@ -20,7 +40,7 @@ items:
   source:
     id: OptimizerDVH
     path: ''
-    startLine: 11803
+    startLine: 146371
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -43,61 +63,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor
-  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.OptimizerDVH
-  langs:
-  - csharp
-  - vb
-  name: OptimizerDVH()
-  nameWithType: OptimizerDVH.OptimizerDVH()
-  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11807
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizerDVH()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.OptimizerDVH
-  langs:
-  - csharp
-  - vb
-  name: OptimizerDVH(Object)
-  nameWithType: OptimizerDVH.OptimizerDVH(Object)
-  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 11812
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public OptimizerDVH(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: ESAPIX.Facade.API.OptimizerDVH.IsLive
   commentId: P:ESAPIX.Facade.API.OptimizerDVH.IsLive
   id: IsLive
@@ -112,7 +77,7 @@ items:
   source:
     id: IsLive
     path: ''
-    startLine: 11817
+    startLine: 30033
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -143,16 +108,16 @@ items:
   source:
     id: CurveData
     path: ''
-    startLine: 11822
+    startLine: 30041
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public DVHPoint[] CurveData { get; set; }
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
     parameters: []
     return:
-      type: DVHPoint[]
-    content.vb: Public Property CurveData As DVHPoint()
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
   overload: ESAPIX.Facade.API.OptimizerDVH.CurveData*
   modifiers.csharp:
   - public
@@ -174,7 +139,7 @@ items:
   source:
     id: Structure
     path: ''
-    startLine: 11839
+    startLine: 30083
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -189,6 +154,653 @@ items:
   - public
   - get
   - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH()
+  nameWithType: OptimizerDVH.OptimizerDVH()
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 30132
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH(Object)
+  nameWithType: OptimizerDVH.OptimizerDVH(Object)
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 30137
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizerDVH.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 56637
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizerDVH.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: OptimizerDVH.CurveData
+  fullName: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 56645
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.OptimizerDVH.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.Structure
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.Structure
+  id: Structure
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: Structure
+  nameWithType: OptimizerDVH.Structure
+  fullName: ESAPIX.Facade.API.OptimizerDVH.Structure
+  type: Property
+  source:
+    id: Structure
+    path: ''
+    startLine: 56687
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Structure Structure { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Structure
+    content.vb: 'Public Property Structure As '
+  overload: ESAPIX.Facade.API.OptimizerDVH.Structure*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH()
+  nameWithType: OptimizerDVH.OptimizerDVH()
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 56736
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH(Object)
+  nameWithType: OptimizerDVH.OptimizerDVH(Object)
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 56741
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizerDVH.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 84844
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizerDVH.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: OptimizerDVH.CurveData
+  fullName: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 84852
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.OptimizerDVH.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.Structure
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.Structure
+  id: Structure
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: Structure
+  nameWithType: OptimizerDVH.Structure
+  fullName: ESAPIX.Facade.API.OptimizerDVH.Structure
+  type: Property
+  source:
+    id: Structure
+    path: ''
+    startLine: 84894
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Structure Structure { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Structure
+    content.vb: 'Public Property Structure As '
+  overload: ESAPIX.Facade.API.OptimizerDVH.Structure*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH()
+  nameWithType: OptimizerDVH.OptimizerDVH()
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 84943
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH(Object)
+  nameWithType: OptimizerDVH.OptimizerDVH(Object)
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 84948
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizerDVH.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 114312
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizerDVH.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: OptimizerDVH.CurveData
+  fullName: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 114320
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.OptimizerDVH.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.Structure
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.Structure
+  id: Structure
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: Structure
+  nameWithType: OptimizerDVH.Structure
+  fullName: ESAPIX.Facade.API.OptimizerDVH.Structure
+  type: Property
+  source:
+    id: Structure
+    path: ''
+    startLine: 114362
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Structure Structure { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Structure
+    content.vb: 'Public Property Structure As '
+  overload: ESAPIX.Facade.API.OptimizerDVH.Structure*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH()
+  nameWithType: OptimizerDVH.OptimizerDVH()
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 114411
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH(Object)
+  nameWithType: OptimizerDVH.OptimizerDVH(Object)
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 114416
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.IsLive
+  id: IsLive
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: IsLive
+  nameWithType: OptimizerDVH.IsLive
+  fullName: ESAPIX.Facade.API.OptimizerDVH.IsLive
+  type: Property
+  source:
+    id: IsLive
+    path: ''
+    startLine: 146374
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsLive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLive As Boolean
+  overload: ESAPIX.Facade.API.OptimizerDVH.IsLive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.CurveData
+  id: CurveData
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: CurveData
+  nameWithType: OptimizerDVH.CurveData
+  fullName: ESAPIX.Facade.API.OptimizerDVH.CurveData
+  type: Property
+  source:
+    id: CurveData
+    path: ''
+    startLine: 146382
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.DVHPoint[] CurveData { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.DVHPoint[]
+    content.vb: Public Property CurveData As Common.Model.Types.DVHPoint()
+  overload: ESAPIX.Facade.API.OptimizerDVH.CurveData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.Structure
+  commentId: P:ESAPIX.Facade.API.OptimizerDVH.Structure
+  id: Structure
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: Structure
+  nameWithType: OptimizerDVH.Structure
+  fullName: ESAPIX.Facade.API.OptimizerDVH.Structure
+  type: Property
+  source:
+    id: Structure
+    path: ''
+    startLine: 146424
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Structure Structure { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Structure
+    content.vb: 'Public Property Structure As '
+  overload: ESAPIX.Facade.API.OptimizerDVH.Structure*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH()
+  nameWithType: OptimizerDVH.OptimizerDVH()
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 146473
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizerDVH.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizerDVH
+  langs:
+  - csharp
+  - vb
+  name: OptimizerDVH(Object)
+  nameWithType: OptimizerDVH.OptimizerDVH(Object)
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 146478
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizerDVH(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  modifiers.csharp:
+  - public
   modifiers.vb:
   - Public
 references:
@@ -490,12 +1102,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.OptimizerDVH.#ctor
-  isExternal: false
-  name: OptimizerDVH
-  nameWithType: OptimizerDVH.OptimizerDVH
-  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH
 - uid: ESAPIX.Facade.API.OptimizerDVH.IsLive*
   commentId: Overload:ESAPIX.Facade.API.OptimizerDVH.IsLive
   isExternal: false
@@ -515,27 +1121,27 @@ references:
   name: CurveData
   nameWithType: OptimizerDVH.CurveData
   fullName: ESAPIX.Facade.API.OptimizerDVH.CurveData
-- uid: DVHPoint[]
-  name: DVHPoint[]
-  nameWithType: DVHPoint[]
-  fullName: DVHPoint[]
-  nameWithType.vb: DVHPoint()
-  fullName.vb: DVHPoint()
-  name.vb: DVHPoint()
+- uid: VMS.TPS.Common.Model.Types.DVHPoint[]
+  name: Common.Model.Types.DVHPoint[]
+  nameWithType: Common.Model.Types.DVHPoint[]
+  fullName: VMS.TPS.Common.Model.Types.DVHPoint[]
+  nameWithType.vb: Common.Model.Types.DVHPoint()
+  fullName.vb: VMS.TPS.Common.Model.Types.DVHPoint()
+  name.vb: Common.Model.Types.DVHPoint()
   spec.csharp:
-  - uid: DVHPoint
-    name: DVHPoint
-    nameWithType: DVHPoint
-    fullName: DVHPoint
+  - uid: VMS.TPS.Common.Model.Types.DVHPoint
+    name: Common.Model.Types.DVHPoint
+    nameWithType: Common.Model.Types.DVHPoint
+    fullName: VMS.TPS.Common.Model.Types.DVHPoint
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: DVHPoint
-    name: DVHPoint
-    nameWithType: DVHPoint
-    fullName: DVHPoint
+  - uid: VMS.TPS.Common.Model.Types.DVHPoint
+    name: Common.Model.Types.DVHPoint
+    nameWithType: Common.Model.Types.DVHPoint
+    fullName: VMS.TPS.Common.Model.Types.DVHPoint
     isExternal: true
   - name: ()
     nameWithType: ()
@@ -553,3 +1159,9 @@ references:
   name: Structure
   nameWithType: Structure
   fullName: ESAPIX.Facade.API.Structure
+- uid: ESAPIX.Facade.API.OptimizerDVH.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.OptimizerDVH.#ctor
+  isExternal: false
+  name: OptimizerDVH
+  nameWithType: OptimizerDVH.OptimizerDVH
+  fullName: ESAPIX.Facade.API.OptimizerDVH.OptimizerDVH

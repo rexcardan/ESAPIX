@@ -1,6 +1,7 @@
 ﻿#region
 
 using ESAPIX.Facade.API;
+using System.Linq;
 using VMS.TPS.Common.Model.Types;
 
 #endregion
@@ -27,6 +28,15 @@ namespace ESAPIX.Extensions
             var scalingPoint = new DoseValue(guessedRxGy, DoseValue.DoseUnit.Gy);
             var dvhCurve = psDVH.CurveData.ConvertToRelativeDose(scalingPoint);
             return dvhCurve;
+        }
+
+        public static Course Course(this PlanSum ps)
+        {
+#if VMS110
+            return ps.PlanSetups.FirstOrDefault()?.Course;
+#else
+            return ps.Course;
+#endif
         }
     }
 }

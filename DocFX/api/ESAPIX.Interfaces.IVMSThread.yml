@@ -18,7 +18,7 @@ items:
   source:
     id: IVMSThread
     path: ''
-    startLine: 16902
+    startLine: 164206
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -49,7 +49,7 @@ items:
   source:
     id: ThreadId
     path: ''
-    startLine: 16904
+    startLine: 164208
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -78,7 +78,7 @@ items:
   source:
     id: InvokeAsync
     path: ''
-    startLine: 16905
+    startLine: 164209
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -88,7 +88,7 @@ items:
     - id: action
       type: System.Action
     return:
-      type: Task
+      type: System.Threading.Tasks.Task
     content.vb: Function InvokeAsync(action As Action) As Task
   overload: ESAPIX.Interfaces.IVMSThread.InvokeAsync*
 - uid: ESAPIX.Interfaces.IVMSThread.Invoke(System.Action)
@@ -105,7 +105,7 @@ items:
   source:
     id: Invoke
     path: ''
-    startLine: 16907
+    startLine: 164211
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Interfaces
@@ -193,11 +193,19 @@ references:
   name: Action
   nameWithType: Action
   fullName: System.Action
-- uid: Task
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
 - uid: ESAPIX.Interfaces.IVMSThread.Invoke*
   commentId: Overload:ESAPIX.Interfaces.IVMSThread.Invoke
   isExternal: false

@@ -6,15 +6,55 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.Block.#ctor
+  - ESAPIX.Facade.API.Block.#ctor
+  - ESAPIX.Facade.API.Block.#ctor
+  - ESAPIX.Facade.API.Block.#ctor
+  - ESAPIX.Facade.API.Block.#ctor
+  - ESAPIX.Facade.API.Block.#ctor
+  - ESAPIX.Facade.API.Block.#ctor(System.Object)
+  - ESAPIX.Facade.API.Block.#ctor(System.Object)
+  - ESAPIX.Facade.API.Block.#ctor(System.Object)
+  - ESAPIX.Facade.API.Block.#ctor(System.Object)
+  - ESAPIX.Facade.API.Block.#ctor(System.Object)
   - ESAPIX.Facade.API.Block.#ctor(System.Object)
   - ESAPIX.Facade.API.Block.AddOnMaterial
+  - ESAPIX.Facade.API.Block.AddOnMaterial
+  - ESAPIX.Facade.API.Block.AddOnMaterial
+  - ESAPIX.Facade.API.Block.AddOnMaterial
+  - ESAPIX.Facade.API.Block.AddOnMaterial
+  - ESAPIX.Facade.API.Block.AddOnMaterial
   - ESAPIX.Facade.API.Block.IsDiverging
-  - ESAPIX.Facade.API.Block.IsLive
+  - ESAPIX.Facade.API.Block.IsDiverging
+  - ESAPIX.Facade.API.Block.IsDiverging
+  - ESAPIX.Facade.API.Block.IsDiverging
+  - ESAPIX.Facade.API.Block.IsDiverging
+  - ESAPIX.Facade.API.Block.IsDiverging
+  - ESAPIX.Facade.API.Block.Outline
+  - ESAPIX.Facade.API.Block.Outline
+  - ESAPIX.Facade.API.Block.TransmissionFactor
+  - ESAPIX.Facade.API.Block.TransmissionFactor
+  - ESAPIX.Facade.API.Block.TransmissionFactor
+  - ESAPIX.Facade.API.Block.TransmissionFactor
+  - ESAPIX.Facade.API.Block.TransmissionFactor
   - ESAPIX.Facade.API.Block.TransmissionFactor
   - ESAPIX.Facade.API.Block.Tray
+  - ESAPIX.Facade.API.Block.Tray
+  - ESAPIX.Facade.API.Block.Tray
+  - ESAPIX.Facade.API.Block.Tray
+  - ESAPIX.Facade.API.Block.Tray
+  - ESAPIX.Facade.API.Block.Tray
+  - ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  - ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  - ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  - ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  - ESAPIX.Facade.API.Block.TrayTransmissionFactor
   - ESAPIX.Facade.API.Block.TrayTransmissionFactor
   - ESAPIX.Facade.API.Block.Type
-  - ESAPIX.Facade.API.Block.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.Block.Type
+  - ESAPIX.Facade.API.Block.Type
+  - ESAPIX.Facade.API.Block.Type
+  - ESAPIX.Facade.API.Block.Type
+  - ESAPIX.Facade.API.Block.Type
   langs:
   - csharp
   - vb
@@ -25,127 +65,40 @@ items:
   source:
     id: Block
     path: ''
-    startLine: 6291
+    startLine: 131587
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class Block : ApiDataObject'
+    content: 'public class Block : ApiDataObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class Block
           Inherits ApiDataObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
   - ESAPIX.Facade.API.ApiDataObject
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
   - ESAPIX.Facade.API.ApiDataObject.Id
   - ESAPIX.Facade.API.ApiDataObject.Name
   - ESAPIX.Facade.API.ApiDataObject.Comment
   - ESAPIX.Facade.API.ApiDataObject.HistoryUserName
   - ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-  - ESAPIX.Facade.API.ApiDataObject.ToString
-  - ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  - ESAPIX.Facade.API.ApiDataObject.GetHashCode
+  - ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: ESAPIX.Facade.API.Block.#ctor
-  commentId: M:ESAPIX.Facade.API.Block.#ctor
-  id: '#ctor'
-  parent: ESAPIX.Facade.API.Block
-  langs:
-  - csharp
-  - vb
-  name: Block()
-  nameWithType: Block.Block()
-  fullName: ESAPIX.Facade.API.Block.Block()
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6293
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Block()
-    content.vb: Public Sub New
-  overload: ESAPIX.Facade.API.Block.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Block.#ctor(System.Object)
-  commentId: M:ESAPIX.Facade.API.Block.#ctor(System.Object)
-  id: '#ctor(System.Object)'
-  parent: ESAPIX.Facade.API.Block
-  langs:
-  - csharp
-  - vb
-  name: Block(Object)
-  nameWithType: Block.Block(Object)
-  fullName: ESAPIX.Facade.API.Block.Block(System.Object)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 6298
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public Block(dynamic client)
-    parameters:
-    - id: client
-      type: System.Object
-    content.vb: Public Sub New(client As Object)
-  overload: ESAPIX.Facade.API.Block.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Block.IsLive
-  commentId: P:ESAPIX.Facade.API.Block.IsLive
-  id: IsLive
-  parent: ESAPIX.Facade.API.Block
-  langs:
-  - csharp
-  - vb
-  name: IsLive
-  nameWithType: Block.IsLive
-  fullName: ESAPIX.Facade.API.Block.IsLive
-  type: Property
-  source:
-    id: IsLive
-    path: ''
-    startLine: 6303
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.Block.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: ESAPIX.Facade.API.Block.AddOnMaterial
   commentId: P:ESAPIX.Facade.API.Block.AddOnMaterial
   id: AddOnMaterial
@@ -160,7 +113,7 @@ items:
   source:
     id: AddOnMaterial
     path: ''
-    startLine: 6308
+    startLine: 6517
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -171,68 +124,6 @@ items:
       type: ESAPIX.Facade.API.AddOnMaterial
     content.vb: Public Property AddOnMaterial As AddOnMaterial
   overload: ESAPIX.Facade.API.Block.AddOnMaterial*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Block.IsDiverging
-  commentId: P:ESAPIX.Facade.API.Block.IsDiverging
-  id: IsDiverging
-  parent: ESAPIX.Facade.API.Block
-  langs:
-  - csharp
-  - vb
-  name: IsDiverging
-  nameWithType: Block.IsDiverging
-  fullName: ESAPIX.Facade.API.Block.IsDiverging
-  type: Property
-  source:
-    id: IsDiverging
-    path: ''
-    startLine: 6329
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public bool IsDiverging { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property IsDiverging As Boolean
-  overload: ESAPIX.Facade.API.Block.IsDiverging*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: ESAPIX.Facade.API.Block.TransmissionFactor
-  commentId: P:ESAPIX.Facade.API.Block.TransmissionFactor
-  id: TransmissionFactor
-  parent: ESAPIX.Facade.API.Block
-  langs:
-  - csharp
-  - vb
-  name: TransmissionFactor
-  nameWithType: Block.TransmissionFactor
-  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
-  type: Property
-  source:
-    id: TransmissionFactor
-    path: ''
-    startLine: 6344
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public double TransmissionFactor { get; set; }
-    parameters: []
-    return:
-      type: System.Double
-    content.vb: Public Property TransmissionFactor As Double
-  overload: ESAPIX.Facade.API.Block.TransmissionFactor*
   modifiers.csharp:
   - public
   - get
@@ -253,7 +144,7 @@ items:
   source:
     id: Tray
     path: ''
-    startLine: 6361
+    startLine: 6566
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -264,6 +155,37 @@ items:
       type: ESAPIX.Facade.API.Tray
     content.vb: Public Property Tray As Tray
   overload: ESAPIX.Facade.API.Block.Tray*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TransmissionFactor
+  id: TransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TransmissionFactor
+  nameWithType: Block.TransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
+  type: Property
+  source:
+    id: TransmissionFactor
+    path: ''
+    startLine: 6615
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TransmissionFactor*
   modifiers.csharp:
   - public
   - get
@@ -284,7 +206,7 @@ items:
   source:
     id: TrayTransmissionFactor
     path: ''
-    startLine: 6380
+    startLine: 6657
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -315,16 +237,16 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 6398
+    startLine: 6699
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public BlockType Type { get; set; }
+    content: public Common.Model.Types.BlockType Type { get; set; }
     parameters: []
     return:
-      type: BlockType
-    content.vb: Public Property Type As BlockType
+      type: VMS.TPS.Common.Model.Types.BlockType
+    content.vb: Public Property Type As Common.Model.Types.BlockType
   overload: ESAPIX.Facade.API.Block.Type*
   modifiers.csharp:
   - public
@@ -332,31 +254,1355 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.Block.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.Block.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
+- uid: ESAPIX.Facade.API.Block.IsDiverging
+  commentId: P:ESAPIX.Facade.API.Block.IsDiverging
+  id: IsDiverging
   parent: ESAPIX.Facade.API.Block
   langs:
   - csharp
   - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: Block.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.Block.WriteXml(System.Xml.XmlWriter)
-  type: Method
+  name: IsDiverging
+  nameWithType: Block.IsDiverging
+  fullName: ESAPIX.Facade.API.Block.IsDiverging
+  type: Property
   source:
-    id: WriteXml
+    id: IsDiverging
     path: ''
-    startLine: 6413
+    startLine: 6741
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
+    content: public bool IsDiverging { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDiverging As Boolean
+  overload: ESAPIX.Facade.API.Block.IsDiverging*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor
+  commentId: M:ESAPIX.Facade.API.Block.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block()
+  nameWithType: Block.Block()
+  fullName: ESAPIX.Facade.API.Block.Block()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 6783
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Block.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block(Object)
+  nameWithType: Block.Block(Object)
+  fullName: ESAPIX.Facade.API.Block.Block(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 6788
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block(dynamic client)
     parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.Block.WriteXml*
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.AddOnMaterial
+  commentId: P:ESAPIX.Facade.API.Block.AddOnMaterial
+  id: AddOnMaterial
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: AddOnMaterial
+  nameWithType: Block.AddOnMaterial
+  fullName: ESAPIX.Facade.API.Block.AddOnMaterial
+  type: Property
+  source:
+    id: AddOnMaterial
+    path: ''
+    startLine: 19020
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public AddOnMaterial AddOnMaterial { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.AddOnMaterial
+    content.vb: Public Property AddOnMaterial As AddOnMaterial
+  overload: ESAPIX.Facade.API.Block.AddOnMaterial*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.IsDiverging
+  commentId: P:ESAPIX.Facade.API.Block.IsDiverging
+  id: IsDiverging
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: IsDiverging
+  nameWithType: Block.IsDiverging
+  fullName: ESAPIX.Facade.API.Block.IsDiverging
+  type: Property
+  source:
+    id: IsDiverging
+    path: ''
+    startLine: 19069
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsDiverging { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDiverging As Boolean
+  overload: ESAPIX.Facade.API.Block.IsDiverging*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TransmissionFactor
+  id: TransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TransmissionFactor
+  nameWithType: Block.TransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
+  type: Property
+  source:
+    id: TransmissionFactor
+    path: ''
+    startLine: 19111
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Tray
+  commentId: P:ESAPIX.Facade.API.Block.Tray
+  id: Tray
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Tray
+  nameWithType: Block.Tray
+  fullName: ESAPIX.Facade.API.Block.Tray
+  type: Property
+  source:
+    id: Tray
+    path: ''
+    startLine: 19153
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Tray Tray { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Tray
+    content.vb: Public Property Tray As Tray
+  overload: ESAPIX.Facade.API.Block.Tray*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  id: TrayTransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TrayTransmissionFactor
+  nameWithType: Block.TrayTransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  type: Property
+  source:
+    id: TrayTransmissionFactor
+    path: ''
+    startLine: 19202
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TrayTransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TrayTransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TrayTransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Type
+  commentId: P:ESAPIX.Facade.API.Block.Type
+  id: Type
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Block.Type
+  fullName: ESAPIX.Facade.API.Block.Type
+  type: Property
+  source:
+    id: Type
+    path: ''
+    startLine: 19244
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.BlockType Type { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.BlockType
+    content.vb: Public Property Type As Common.Model.Types.BlockType
+  overload: ESAPIX.Facade.API.Block.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor
+  commentId: M:ESAPIX.Facade.API.Block.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block()
+  nameWithType: Block.Block()
+  fullName: ESAPIX.Facade.API.Block.Block()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 19286
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Block.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block(Object)
+  nameWithType: Block.Block(Object)
+  fullName: ESAPIX.Facade.API.Block.Block(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 19291
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.AddOnMaterial
+  commentId: P:ESAPIX.Facade.API.Block.AddOnMaterial
+  id: AddOnMaterial
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: AddOnMaterial
+  nameWithType: Block.AddOnMaterial
+  fullName: ESAPIX.Facade.API.Block.AddOnMaterial
+  type: Property
+  source:
+    id: AddOnMaterial
+    path: ''
+    startLine: 42049
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public AddOnMaterial AddOnMaterial { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.AddOnMaterial
+    content.vb: Public Property AddOnMaterial As AddOnMaterial
+  overload: ESAPIX.Facade.API.Block.AddOnMaterial*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.IsDiverging
+  commentId: P:ESAPIX.Facade.API.Block.IsDiverging
+  id: IsDiverging
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: IsDiverging
+  nameWithType: Block.IsDiverging
+  fullName: ESAPIX.Facade.API.Block.IsDiverging
+  type: Property
+  source:
+    id: IsDiverging
+    path: ''
+    startLine: 42098
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsDiverging { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDiverging As Boolean
+  overload: ESAPIX.Facade.API.Block.IsDiverging*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TransmissionFactor
+  id: TransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TransmissionFactor
+  nameWithType: Block.TransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
+  type: Property
+  source:
+    id: TransmissionFactor
+    path: ''
+    startLine: 42140
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Tray
+  commentId: P:ESAPIX.Facade.API.Block.Tray
+  id: Tray
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Tray
+  nameWithType: Block.Tray
+  fullName: ESAPIX.Facade.API.Block.Tray
+  type: Property
+  source:
+    id: Tray
+    path: ''
+    startLine: 42182
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Tray Tray { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Tray
+    content.vb: Public Property Tray As Tray
+  overload: ESAPIX.Facade.API.Block.Tray*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  id: TrayTransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TrayTransmissionFactor
+  nameWithType: Block.TrayTransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  type: Property
+  source:
+    id: TrayTransmissionFactor
+    path: ''
+    startLine: 42231
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TrayTransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TrayTransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TrayTransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Type
+  commentId: P:ESAPIX.Facade.API.Block.Type
+  id: Type
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Block.Type
+  fullName: ESAPIX.Facade.API.Block.Type
+  type: Property
+  source:
+    id: Type
+    path: ''
+    startLine: 42273
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.BlockType Type { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.BlockType
+    content.vb: Public Property Type As Common.Model.Types.BlockType
+  overload: ESAPIX.Facade.API.Block.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor
+  commentId: M:ESAPIX.Facade.API.Block.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block()
+  nameWithType: Block.Block()
+  fullName: ESAPIX.Facade.API.Block.Block()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 42315
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Block.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block(Object)
+  nameWithType: Block.Block(Object)
+  fullName: ESAPIX.Facade.API.Block.Block(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 42320
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.AddOnMaterial
+  commentId: P:ESAPIX.Facade.API.Block.AddOnMaterial
+  id: AddOnMaterial
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: AddOnMaterial
+  nameWithType: Block.AddOnMaterial
+  fullName: ESAPIX.Facade.API.Block.AddOnMaterial
+  type: Property
+  source:
+    id: AddOnMaterial
+    path: ''
+    startLine: 70773
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public AddOnMaterial AddOnMaterial { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.AddOnMaterial
+    content.vb: Public Property AddOnMaterial As AddOnMaterial
+  overload: ESAPIX.Facade.API.Block.AddOnMaterial*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.IsDiverging
+  commentId: P:ESAPIX.Facade.API.Block.IsDiverging
+  id: IsDiverging
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: IsDiverging
+  nameWithType: Block.IsDiverging
+  fullName: ESAPIX.Facade.API.Block.IsDiverging
+  type: Property
+  source:
+    id: IsDiverging
+    path: ''
+    startLine: 70822
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsDiverging { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDiverging As Boolean
+  overload: ESAPIX.Facade.API.Block.IsDiverging*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TransmissionFactor
+  id: TransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TransmissionFactor
+  nameWithType: Block.TransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
+  type: Property
+  source:
+    id: TransmissionFactor
+    path: ''
+    startLine: 70864
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Tray
+  commentId: P:ESAPIX.Facade.API.Block.Tray
+  id: Tray
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Tray
+  nameWithType: Block.Tray
+  fullName: ESAPIX.Facade.API.Block.Tray
+  type: Property
+  source:
+    id: Tray
+    path: ''
+    startLine: 70906
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Tray Tray { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Tray
+    content.vb: Public Property Tray As Tray
+  overload: ESAPIX.Facade.API.Block.Tray*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  id: TrayTransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TrayTransmissionFactor
+  nameWithType: Block.TrayTransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  type: Property
+  source:
+    id: TrayTransmissionFactor
+    path: ''
+    startLine: 70955
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TrayTransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TrayTransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TrayTransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Type
+  commentId: P:ESAPIX.Facade.API.Block.Type
+  id: Type
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Block.Type
+  fullName: ESAPIX.Facade.API.Block.Type
+  type: Property
+  source:
+    id: Type
+    path: ''
+    startLine: 70997
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.BlockType Type { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.BlockType
+    content.vb: Public Property Type As Common.Model.Types.BlockType
+  overload: ESAPIX.Facade.API.Block.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor
+  commentId: M:ESAPIX.Facade.API.Block.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block()
+  nameWithType: Block.Block()
+  fullName: ESAPIX.Facade.API.Block.Block()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 71039
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Block.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block(Object)
+  nameWithType: Block.Block(Object)
+  fullName: ESAPIX.Facade.API.Block.Block(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 71044
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.AddOnMaterial
+  commentId: P:ESAPIX.Facade.API.Block.AddOnMaterial
+  id: AddOnMaterial
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: AddOnMaterial
+  nameWithType: Block.AddOnMaterial
+  fullName: ESAPIX.Facade.API.Block.AddOnMaterial
+  type: Property
+  source:
+    id: AddOnMaterial
+    path: ''
+    startLine: 99793
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public AddOnMaterial AddOnMaterial { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.AddOnMaterial
+    content.vb: Public Property AddOnMaterial As AddOnMaterial
+  overload: ESAPIX.Facade.API.Block.AddOnMaterial*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.IsDiverging
+  commentId: P:ESAPIX.Facade.API.Block.IsDiverging
+  id: IsDiverging
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: IsDiverging
+  nameWithType: Block.IsDiverging
+  fullName: ESAPIX.Facade.API.Block.IsDiverging
+  type: Property
+  source:
+    id: IsDiverging
+    path: ''
+    startLine: 99842
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsDiverging { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDiverging As Boolean
+  overload: ESAPIX.Facade.API.Block.IsDiverging*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Outline
+  commentId: P:ESAPIX.Facade.API.Block.Outline
+  id: Outline
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Outline
+  nameWithType: Block.Outline
+  fullName: ESAPIX.Facade.API.Block.Outline
+  type: Property
+  source:
+    id: Outline
+    path: ''
+    startLine: 99884
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Point[][] Outline { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Point[][]
+    content.vb: Public Property Outline As Windows.Point()()
+  overload: ESAPIX.Facade.API.Block.Outline*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TransmissionFactor
+  id: TransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TransmissionFactor
+  nameWithType: Block.TransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
+  type: Property
+  source:
+    id: TransmissionFactor
+    path: ''
+    startLine: 99926
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Tray
+  commentId: P:ESAPIX.Facade.API.Block.Tray
+  id: Tray
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Tray
+  nameWithType: Block.Tray
+  fullName: ESAPIX.Facade.API.Block.Tray
+  type: Property
+  source:
+    id: Tray
+    path: ''
+    startLine: 99968
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Tray Tray { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Tray
+    content.vb: Public Property Tray As Tray
+  overload: ESAPIX.Facade.API.Block.Tray*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  id: TrayTransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TrayTransmissionFactor
+  nameWithType: Block.TrayTransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  type: Property
+  source:
+    id: TrayTransmissionFactor
+    path: ''
+    startLine: 100017
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TrayTransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TrayTransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TrayTransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Type
+  commentId: P:ESAPIX.Facade.API.Block.Type
+  id: Type
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Block.Type
+  fullName: ESAPIX.Facade.API.Block.Type
+  type: Property
+  source:
+    id: Type
+    path: ''
+    startLine: 100059
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.BlockType Type { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.BlockType
+    content.vb: Public Property Type As Common.Model.Types.BlockType
+  overload: ESAPIX.Facade.API.Block.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor
+  commentId: M:ESAPIX.Facade.API.Block.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block()
+  nameWithType: Block.Block()
+  fullName: ESAPIX.Facade.API.Block.Block()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 100101
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Block.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block(Object)
+  nameWithType: Block.Block(Object)
+  fullName: ESAPIX.Facade.API.Block.Block(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 100106
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.AddOnMaterial
+  commentId: P:ESAPIX.Facade.API.Block.AddOnMaterial
+  id: AddOnMaterial
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: AddOnMaterial
+  nameWithType: Block.AddOnMaterial
+  fullName: ESAPIX.Facade.API.Block.AddOnMaterial
+  type: Property
+  source:
+    id: AddOnMaterial
+    path: ''
+    startLine: 131589
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public AddOnMaterial AddOnMaterial { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.AddOnMaterial
+    content.vb: Public Property AddOnMaterial As AddOnMaterial
+  overload: ESAPIX.Facade.API.Block.AddOnMaterial*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.IsDiverging
+  commentId: P:ESAPIX.Facade.API.Block.IsDiverging
+  id: IsDiverging
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: IsDiverging
+  nameWithType: Block.IsDiverging
+  fullName: ESAPIX.Facade.API.Block.IsDiverging
+  type: Property
+  source:
+    id: IsDiverging
+    path: ''
+    startLine: 131638
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public bool IsDiverging { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDiverging As Boolean
+  overload: ESAPIX.Facade.API.Block.IsDiverging*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Outline
+  commentId: P:ESAPIX.Facade.API.Block.Outline
+  id: Outline
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Outline
+  nameWithType: Block.Outline
+  fullName: ESAPIX.Facade.API.Block.Outline
+  type: Property
+  source:
+    id: Outline
+    path: ''
+    startLine: 131680
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Windows.Point[][] Outline { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Point[][]
+    content.vb: Public Property Outline As Windows.Point()()
+  overload: ESAPIX.Facade.API.Block.Outline*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TransmissionFactor
+  id: TransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TransmissionFactor
+  nameWithType: Block.TransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
+  type: Property
+  source:
+    id: TransmissionFactor
+    path: ''
+    startLine: 131722
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Tray
+  commentId: P:ESAPIX.Facade.API.Block.Tray
+  id: Tray
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Tray
+  nameWithType: Block.Tray
+  fullName: ESAPIX.Facade.API.Block.Tray
+  type: Property
+  source:
+    id: Tray
+    path: ''
+    startLine: 131764
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Tray Tray { get; set; }
+    parameters: []
+    return:
+      type: ESAPIX.Facade.API.Tray
+    content.vb: Public Property Tray As Tray
+  overload: ESAPIX.Facade.API.Block.Tray*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  commentId: P:ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  id: TrayTransmissionFactor
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: TrayTransmissionFactor
+  nameWithType: Block.TrayTransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TrayTransmissionFactor
+  type: Property
+  source:
+    id: TrayTransmissionFactor
+    path: ''
+    startLine: 131813
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public double TrayTransmissionFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TrayTransmissionFactor As Double
+  overload: ESAPIX.Facade.API.Block.TrayTransmissionFactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.Type
+  commentId: P:ESAPIX.Facade.API.Block.Type
+  id: Type
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Block.Type
+  fullName: ESAPIX.Facade.API.Block.Type
+  type: Property
+  source:
+    id: Type
+    path: ''
+    startLine: 131855
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Common.Model.Types.BlockType Type { get; set; }
+    parameters: []
+    return:
+      type: VMS.TPS.Common.Model.Types.BlockType
+    content.vb: Public Property Type As Common.Model.Types.BlockType
+  overload: ESAPIX.Facade.API.Block.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor
+  commentId: M:ESAPIX.Facade.API.Block.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block()
+  nameWithType: Block.Block()
+  fullName: ESAPIX.Facade.API.Block.Block()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 131897
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.Block.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.Block.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.Block.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.Block
+  langs:
+  - csharp
+  - vb
+  name: Block(Object)
+  nameWithType: Block.Block(Object)
+  fullName: ESAPIX.Facade.API.Block.Block(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 131902
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public Block(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.Block.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -389,6 +1635,11 @@ references:
   name: ApiDataObject
   nameWithType: ApiDataObject
   fullName: ESAPIX.Facade.API.ApiDataObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
 - uid: ESAPIX.Facade.API.ApiDataObject.Id
   commentId: P:ESAPIX.Facade.API.ApiDataObject.Id
   parent: ESAPIX.Facade.API.ApiDataObject
@@ -424,103 +1675,20 @@ references:
   name: HistoryDateTime
   nameWithType: ApiDataObject.HistoryDateTime
   fullName: ESAPIX.Facade.API.ApiDataObject.HistoryDateTime
-- uid: ESAPIX.Facade.API.ApiDataObject.ToString
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.ToString
+- uid: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+  commentId: P:ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
   parent: ESAPIX.Facade.API.ApiDataObject
   isExternal: false
-  name: ToString()
-  nameWithType: ApiDataObject.ToString()
-  fullName: ESAPIX.Facade.API.ApiDataObject.ToString()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.ToString
-    name: ToString
-    nameWithType: ApiDataObject.ToString
-    fullName: ESAPIX.Facade.API.ApiDataObject.ToString
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  parent: ESAPIX.Facade.API.ApiDataObject
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: ApiDataObject.Equals(Object)
-  fullName: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.Equals(System.Object)
-    name: Equals
-    nameWithType: ApiDataObject.Equals
-    fullName: ESAPIX.Facade.API.ApiDataObject.Equals
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  commentId: M:ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  parent: ESAPIX.Facade.API.ApiDataObject
+  name: HistoryUserDisplayName
+  nameWithType: ApiDataObject.HistoryUserDisplayName
+  fullName: ESAPIX.Facade.API.ApiDataObject.HistoryUserDisplayName
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
   isExternal: false
-  name: GetHashCode()
-  nameWithType: ApiDataObject.GetHashCode()
-  fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode()
-  spec.csharp:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-    name: GetHashCode
-    nameWithType: ApiDataObject.GetHashCode
-    fullName: ESAPIX.Facade.API.ApiDataObject.GetHashCode
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -589,6 +1757,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -618,207 +1825,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: ESAPIX.Facade.API.Block.#ctor*
-  commentId: Overload:ESAPIX.Facade.API.Block.#ctor
-  isExternal: false
-  name: Block
-  nameWithType: Block.Block
-  fullName: ESAPIX.Facade.API.Block.Block
-- uid: ESAPIX.Facade.API.Block.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.Block.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: Block.IsLive
-  fullName: ESAPIX.Facade.API.Block.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: ESAPIX.Facade.API.Block.AddOnMaterial*
   commentId: Overload:ESAPIX.Facade.API.Block.AddOnMaterial
   isExternal: false
@@ -832,25 +1844,6 @@ references:
   name: AddOnMaterial
   nameWithType: AddOnMaterial
   fullName: ESAPIX.Facade.API.AddOnMaterial
-- uid: ESAPIX.Facade.API.Block.IsDiverging*
-  commentId: Overload:ESAPIX.Facade.API.Block.IsDiverging
-  isExternal: false
-  name: IsDiverging
-  nameWithType: Block.IsDiverging
-  fullName: ESAPIX.Facade.API.Block.IsDiverging
-- uid: ESAPIX.Facade.API.Block.TransmissionFactor*
-  commentId: Overload:ESAPIX.Facade.API.Block.TransmissionFactor
-  isExternal: false
-  name: TransmissionFactor
-  nameWithType: Block.TransmissionFactor
-  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
-- uid: System.Double
-  commentId: T:System.Double
-  parent: System
-  isExternal: true
-  name: Double
-  nameWithType: Double
-  fullName: System.Double
 - uid: ESAPIX.Facade.API.Block.Tray*
   commentId: Overload:ESAPIX.Facade.API.Block.Tray
   isExternal: false
@@ -864,6 +1857,19 @@ references:
   name: Tray
   nameWithType: Tray
   fullName: ESAPIX.Facade.API.Tray
+- uid: ESAPIX.Facade.API.Block.TransmissionFactor*
+  commentId: Overload:ESAPIX.Facade.API.Block.TransmissionFactor
+  isExternal: false
+  name: TransmissionFactor
+  nameWithType: Block.TransmissionFactor
+  fullName: ESAPIX.Facade.API.Block.TransmissionFactor
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
 - uid: ESAPIX.Facade.API.Block.TrayTransmissionFactor*
   commentId: Overload:ESAPIX.Facade.API.Block.TrayTransmissionFactor
   isExternal: false
@@ -876,20 +1882,64 @@ references:
   name: Type
   nameWithType: Block.Type
   fullName: ESAPIX.Facade.API.Block.Type
-- uid: BlockType
-  commentId: '!:BlockType'
+- uid: VMS.TPS.Common.Model.Types.BlockType
   isExternal: true
-  name: BlockType
-  nameWithType: BlockType
-  fullName: BlockType
-- uid: ESAPIX.Facade.API.Block.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.Block.WriteXml
+  name: Common.Model.Types.BlockType
+  nameWithType: Common.Model.Types.BlockType
+  fullName: VMS.TPS.Common.Model.Types.BlockType
+- uid: ESAPIX.Facade.API.Block.IsDiverging*
+  commentId: Overload:ESAPIX.Facade.API.Block.IsDiverging
   isExternal: false
-  name: WriteXml
-  nameWithType: Block.WriteXml
-  fullName: ESAPIX.Facade.API.Block.WriteXml
-- uid: System.Xml.XmlWriter
+  name: IsDiverging
+  nameWithType: Block.IsDiverging
+  fullName: ESAPIX.Facade.API.Block.IsDiverging
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ESAPIX.Facade.API.Block.#ctor*
+  commentId: Overload:ESAPIX.Facade.API.Block.#ctor
+  isExternal: false
+  name: Block
+  nameWithType: Block.Block
+  fullName: ESAPIX.Facade.API.Block.Block
+- uid: ESAPIX.Facade.API.Block.Outline*
+  commentId: Overload:ESAPIX.Facade.API.Block.Outline
+  isExternal: false
+  name: Outline
+  nameWithType: Block.Outline
+  fullName: ESAPIX.Facade.API.Block.Outline
+- uid: System.Windows.Point[][]
+  name: Windows.Point[][]
+  nameWithType: Windows.Point[][]
+  fullName: System.Windows.Point[][]
+  nameWithType.vb: Windows.Point()()
+  fullName.vb: System.Windows.Point()()
+  name.vb: Windows.Point()()
+  spec.csharp:
+  - uid: System.Windows.Point
+    name: Windows.Point
+    nameWithType: Windows.Point
+    fullName: System.Windows.Point
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Windows.Point
+    name: Windows.Point
+    nameWithType: Windows.Point
+    fullName: System.Windows.Point
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ()
+    nameWithType: ()
+    fullName: ()

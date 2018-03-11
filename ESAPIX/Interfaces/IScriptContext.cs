@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 using ESAPIX.Facade.API;
-using static ESAPIX.AppKit.StandAloneContext;
 using ESAPIX.Logging;
+using static ESAPIX.Common.StandAloneContext;
 
 #endregion
 
@@ -18,12 +18,17 @@ namespace ESAPIX.Interfaces
     /// </summary>
     public interface IScriptContext
     {
+#if !VMS110
         string ApplicationName { get; }
 
         BrachyPlanSetup BrachyPlanSetup { get; }
 
         IEnumerable<BrachyPlanSetup> BrachyPlansInScope { get; }
 
+        ExternalPlanSetup ExternalPlanSetup { get; }
+
+        IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
+#endif
         User CurrentUser { get; }
 
         Course Course { get; }
@@ -32,15 +37,20 @@ namespace ESAPIX.Interfaces
 
         Patient Patient { get; }
 
-        ExternalPlanSetup ExternalPlanSetup { get; }
-
-        IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; }
-
         PlanSetup PlanSetup { get; }
 
         IEnumerable<PlanSetup> PlansInScope { get; }
 
         IEnumerable<PlanSum> PlanSumsInScope { get; }
+
+#if (VMS150 || VMS151 || VMS155)
+        IonPlanSetup IonPlanSetup {get;}
+
+        IEnumerable<IonPlanSetup> IonPlansInScope {get;}
+
+        event IonPlanSetupChangedHandler IonPlanSetupChanged;
+#endif
+
 
         StructureSet StructureSet { get; }
 
@@ -73,12 +83,12 @@ namespace ESAPIX.Interfaces
 
         //These are only used in Standalone Context, but are here so casting does not have to be performed to check
         event PatientChangedHandler PatientChanged;
-
         event PlanSetupChangedHandler PlanSetupChanged;
+#if !VMS110
         event ExternalPlanSetupChangedHandler ExternalPlanSetupChanged;
-        event PlanSetupChangedHandler BrachyPlanSetupChanged;
+        event BrachyPlanSetupChangedHandler BrachyPlanSetupChanged;
+#endif
         event CourseChangedHandler CourseChanged;
-
         #endregion
     }
 }

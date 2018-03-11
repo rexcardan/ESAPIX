@@ -6,19 +6,22 @@ items:
   parent: ESAPIX.Extensions
   children:
   - ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem,System.String,System.String)
-  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},MayoQuery)
-  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},System.String)
-  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,MayoQuery)
-  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,System.String)
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,Structure[])
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,System.String[])
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,Structure[])
+  - ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,System.String[])
   - ESAPIX.Extensions.PlanningItemExtensions.GetBeams(PlanningItem)
   - ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
   - ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,IEnumerable{Structure},DoseValue,VolumePresentation)
   - ESAPIX.Extensions.PlanningItemExtensions.GetComplimentVolumeAtDose(PlanningItem,Structure,DoseValue,VolumePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetCourse(PlanningItem)
   - ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,Structure,DoseValuePresentation,VolumePresentation,System.Double)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,System.String,DoseValuePresentation,VolumePresentation,System.Double)
   - ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
   - ESAPIX.Extensions.PlanningItemExtensions.GetDoseAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
   - ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,IEnumerable{Structure},System.Double,VolumePresentation,DoseValuePresentation)
   - ESAPIX.Extensions.PlanningItemExtensions.GetDoseComplimentAtVolume(PlanningItem,Structure,System.Double,VolumePresentation,DoseValuePresentation)
+  - ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative(PlanningItem)
   - ESAPIX.Extensions.PlanningItemExtensions.GetImage(PlanningItem)
   - ESAPIX.Extensions.PlanningItemExtensions.GetStructure(PlanningItem,System.String,System.String)
   - ESAPIX.Extensions.PlanningItemExtensions.GetStructures(PlanningItem)
@@ -36,7 +39,7 @@ items:
   source:
     id: PlanningItemExtensions
     path: ''
-    startLine: 3611
+    startLine: 3275
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -75,7 +78,7 @@ items:
   source:
     id: GetStructures
     path: ''
-    startLine: 3620
+    startLine: 3284
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -116,7 +119,7 @@ items:
   source:
     id: GetStructureSet
     path: ''
-    startLine: 3640
+    startLine: 3304
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -157,7 +160,7 @@ items:
   source:
     id: GetBeams
     path: ''
-    startLine: 3660
+    startLine: 3324
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -183,6 +186,43 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative(PlanningItem)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative(PlanningItem)
+  id: GetFieldReferencePointsCumulative(PlanningItem)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetFieldReferencePointsCumulative(PlanningItem)
+  nameWithType: PlanningItemExtensions.GetFieldReferencePointsCumulative(PlanningItem)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative(PlanningItem)
+  type: Method
+  source:
+    id: GetFieldReferencePointsCumulative
+    path: ''
+    startLine: 3335
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static IEnumerable<FieldReferencePoint> GetFieldReferencePointsCumulative(this PlanningItem pi)
+    parameters:
+    - id: pi
+      type: PlanningItem
+    return:
+      type: IEnumerable{FieldReferencePoint}
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetFieldReferencePointsCumulative(pi As PlanningItem) As IEnumerable(Of FieldReferencePoint)
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: ESAPIX.Extensions.PlanningItemExtensions.GetImage(PlanningItem)
   commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetImage(PlanningItem)
   id: GetImage(PlanningItem)
@@ -198,7 +238,7 @@ items:
   source:
     id: GetImage
     path: ''
-    startLine: 3686
+    startLine: 3359
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -224,6 +264,47 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetCourse(PlanningItem)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetCourse(PlanningItem)
+  id: GetCourse(PlanningItem)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetCourse(PlanningItem)
+  nameWithType: PlanningItemExtensions.GetCourse(PlanningItem)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetCourse(PlanningItem)
+  type: Method
+  source:
+    id: GetCourse
+    path: ''
+    startLine: 3379
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  summary: "\nReturns the course from a planning item\n"
+  example: []
+  syntax:
+    content: public static Course GetCourse(this PlanningItem pi)
+    parameters:
+    - id: pi
+      type: PlanningItem
+      description: the planning item inside the course
+    return:
+      type: Course
+      description: the course for this planning item
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetCourse(pi As PlanningItem) As Course
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetCourse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem,System.String,System.String)
   commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure(PlanningItem,System.String,System.String)
   id: ContainsStructure(PlanningItem,System.String,System.String)
@@ -239,7 +320,7 @@ items:
   source:
     id: ContainsStructure
     path: ''
-    startLine: 3713
+    startLine: 3404
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -286,7 +367,7 @@ items:
   source:
     id: GetStructure
     path: ''
-    startLine: 3749
+    startLine: 3444
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -326,7 +407,7 @@ items:
   source:
     id: TotalPrescribedDoseGy
     path: ''
-    startLine: 3756
+    startLine: 3451
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -363,7 +444,7 @@ items:
   source:
     id: GetDefaultDVHCumulativeData
     path: ''
-    startLine: 3782
+    startLine: 3477
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -395,6 +476,51 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,System.String,DoseValuePresentation,VolumePresentation,System.Double)
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,System.String,DoseValuePresentation,VolumePresentation,System.Double)
+  id: GetDefaultDVHCumulativeData(PlanningItem,System.String,DoseValuePresentation,VolumePresentation,System.Double)
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultDVHCumulativeData(PlanningItem, String, DoseValuePresentation, VolumePresentation, Double)
+  nameWithType: PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem, String, DoseValuePresentation, VolumePresentation, Double)
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem, System.String, DoseValuePresentation, VolumePresentation, System.Double)
+  type: Method
+  source:
+    id: GetDefaultDVHCumulativeData
+    path: ''
+    startLine: 3486
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static DVHData GetDefaultDVHCumulativeData(this PlanningItem plan, string structureId, DoseValuePresentation dvp = null, VolumePresentation vp = null, double binWidth = 0.1)
+    parameters:
+    - id: plan
+      type: PlanningItem
+    - id: structureId
+      type: System.String
+    - id: dvp
+      type: DoseValuePresentation
+    - id: vp
+      type: VolumePresentation
+    - id: binWidth
+      type: System.Double
+    return:
+      type: DVHData
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDefaultDVHCumulativeData(plan As PlanningItem, structureId As String, dvp As DoseValuePresentation = Nothing, vp As VolumePresentation = Nothing, binWidth As Double = 0.1) As DVHData
+  overload: ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
   commentId: M:ESAPIX.Extensions.PlanningItemExtensions.GetComplexDVH(PlanningItem,IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
   id: GetComplexDVH(PlanningItem,IEnumerable{Structure},VolumePresentation,DoseValuePresentation,System.Double)
@@ -410,7 +536,7 @@ items:
   source:
     id: GetComplexDVH
     path: ''
-    startLine: 3802
+    startLine: 3507
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -466,7 +592,7 @@ items:
   source:
     id: GetDoseAtVolume
     path: ''
-    startLine: 3832
+    startLine: 3537
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -519,7 +645,7 @@ items:
   source:
     id: GetDoseAtVolume
     path: ''
-    startLine: 3847
+    startLine: 3552
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -574,7 +700,7 @@ items:
   source:
     id: GetDoseComplimentAtVolume
     path: ''
-    startLine: 3864
+    startLine: 3569
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -630,7 +756,7 @@ items:
   source:
     id: GetDoseComplimentAtVolume
     path: ''
-    startLine: 3891
+    startLine: 3596
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -683,7 +809,7 @@ items:
   source:
     id: GetVolumeAtDose
     path: ''
-    startLine: 3909
+    startLine: 3614
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -733,7 +859,7 @@ items:
   source:
     id: GetComplimentVolumeAtDose
     path: ''
-    startLine: 3924
+    startLine: 3629
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -783,7 +909,7 @@ items:
   source:
     id: GetComplimentVolumeAtDose
     path: ''
-    startLine: 3940
+    startLine: 3645
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -836,7 +962,7 @@ items:
   source:
     id: GetVolumeAtDose
     path: ''
-    startLine: 3954
+    startLine: 3660
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
@@ -874,176 +1000,182 @@ items:
   - Shared
   fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.GetVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
   name.vb: GetVolumeAtDose(PlanningItem, IEnumerable(Of Structure), DoseValue, VolumePresentation)
-- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},System.String)
-  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},System.String)
-  id: ExecuteQuery(PlanningItem,IEnumerable{Structure},System.String)
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,Structure[])
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,Structure[])
+  id: ExecuteQuery(PlanningItem,System.String,Structure[])
   isExtensionMethod: true
   parent: ESAPIX.Extensions.PlanningItemExtensions
   langs:
   - csharp
   - vb
-  name: ExecuteQuery(PlanningItem, IEnumerable<Structure>, String)
-  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable<Structure>, String)
-  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable<Structure>, System.String)
+  name: ExecuteQuery(PlanningItem, String, Structure[])
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, String, Structure[])
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.String, Structure[])
   type: Method
   source:
     id: ExecuteQuery
     path: ''
-    startLine: 3964
+    startLine: 3671
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
-    content: public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, string mayoFormatQuery)
+    content: public static double ExecuteQuery(this PlanningItem pi, string mayoFormatQuery, params Structure[] ss)
     parameters:
     - id: pi
       type: PlanningItem
-    - id: ss
-      type: IEnumerable{Structure}
     - id: mayoFormatQuery
       type: System.String
+    - id: ss
+      type: Structure[]
     return:
       type: System.Double
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), mayoFormatQuery As String) As Double
+      Public Shared Function ExecuteQuery(pi As PlanningItem, mayoFormatQuery As String, ParamArray ss As  Structure ()) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
-  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), String)
+  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, String, Structure())
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), System.String)
-  name.vb: ExecuteQuery(PlanningItem, IEnumerable(Of Structure), String)
-- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,System.String)
-  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,System.String)
-  id: ExecuteQuery(PlanningItem,Structure,System.String)
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.String, Structure())
+  name.vb: ExecuteQuery(PlanningItem, String, Structure())
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,Structure[])
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,Structure[])
+  id: ExecuteQuery(PlanningItem,MayoQuery,Structure[])
   isExtensionMethod: true
   parent: ESAPIX.Extensions.PlanningItemExtensions
   langs:
   - csharp
   - vb
-  name: ExecuteQuery(PlanningItem, Structure, String)
-  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, String)
-  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, System.String)
+  name: ExecuteQuery(PlanningItem, MayoQuery, Structure[])
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, Structure[])
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, Structure[])
   type: Method
   source:
     id: ExecuteQuery
     path: ''
-    startLine: 3970
+    startLine: 3677
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
-    content: public static double ExecuteQuery(this PlanningItem pi, Structure s, string mayoFormatQuery)
+    content: public static double ExecuteQuery(this PlanningItem pi, MayoQuery query, params Structure[] ss)
     parameters:
     - id: pi
       type: PlanningItem
-    - id: s
-      type: Structure
+    - id: query
+      type: MayoQuery
+    - id: ss
+      type: Structure[]
+    return:
+      type: System.Double
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteQuery(pi As PlanningItem, query As MayoQuery, ParamArray ss As  Structure ()) As Double
+  overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
+  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, Structure())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, Structure())
+  name.vb: ExecuteQuery(PlanningItem, MayoQuery, Structure())
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,System.String[])
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,System.String[])
+  id: ExecuteQuery(PlanningItem,System.String,System.String[])
+  isExtensionMethod: true
+  parent: ESAPIX.Extensions.PlanningItemExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(PlanningItem, String, String[])
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, String, String[])
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.String, System.String[])
+  type: Method
+  source:
+    id: ExecuteQuery
+    path: ''
+    startLine: 3682
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Extensions
+  syntax:
+    content: public static double ExecuteQuery(this PlanningItem pi, string mayoFormatQuery, params string[] ss)
+    parameters:
+    - id: pi
+      type: PlanningItem
     - id: mayoFormatQuery
       type: System.String
-    return:
-      type: System.Double
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, mayoFormatQuery As String) As Double
-  overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},MayoQuery)
-  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},MayoQuery)
-  id: ExecuteQuery(PlanningItem,IEnumerable{Structure},MayoQuery)
-  isExtensionMethod: true
-  parent: ESAPIX.Extensions.PlanningItemExtensions
-  langs:
-  - csharp
-  - vb
-  name: ExecuteQuery(PlanningItem, IEnumerable<Structure>, MayoQuery)
-  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable<Structure>, MayoQuery)
-  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable<Structure>, MayoQuery)
-  type: Method
-  source:
-    id: ExecuteQuery
-    path: ''
-    startLine: 3976
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Extensions
-  syntax:
-    content: public static double ExecuteQuery(this PlanningItem pi, IEnumerable<Structure> ss, MayoQuery query)
-    parameters:
-    - id: pi
-      type: PlanningItem
     - id: ss
-      type: IEnumerable{Structure}
-    - id: query
-      type: MayoQuery
+      type: System.String[]
     return:
       type: System.Double
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function ExecuteQuery(pi As PlanningItem, ss As IEnumerable(Of  Structure), query As MayoQuery) As Double
+      Public Shared Function ExecuteQuery(pi As PlanningItem, mayoFormatQuery As String, ParamArray ss As String()) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
-  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), MayoQuery)
+  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, String, String())
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, IEnumerable(Of Structure), MayoQuery)
-  name.vb: ExecuteQuery(PlanningItem, IEnumerable(Of Structure), MayoQuery)
-- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,MayoQuery)
-  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,MayoQuery)
-  id: ExecuteQuery(PlanningItem,Structure,MayoQuery)
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, System.String, System.String())
+  name.vb: ExecuteQuery(PlanningItem, String, String())
+- uid: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,System.String[])
+  commentId: M:ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,System.String[])
+  id: ExecuteQuery(PlanningItem,MayoQuery,System.String[])
   isExtensionMethod: true
   parent: ESAPIX.Extensions.PlanningItemExtensions
   langs:
   - csharp
   - vb
-  name: ExecuteQuery(PlanningItem, Structure, MayoQuery)
-  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, MayoQuery)
-  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, Structure, MayoQuery)
+  name: ExecuteQuery(PlanningItem, MayoQuery, String[])
+  nameWithType: PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, String[])
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, System.String[])
   type: Method
   source:
     id: ExecuteQuery
     path: ''
-    startLine: 3981
+    startLine: 3688
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Extensions
   syntax:
-    content: public static double ExecuteQuery(this PlanningItem pi, Structure s, MayoQuery query)
+    content: public static double ExecuteQuery(this PlanningItem pi, MayoQuery query, params string[] ss)
     parameters:
     - id: pi
       type: PlanningItem
-    - id: s
-      type: Structure
     - id: query
       type: MayoQuery
+    - id: ss
+      type: System.String[]
     return:
       type: System.Double
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function ExecuteQuery(pi As PlanningItem, s As  Structure, query As MayoQuery) As Double
+      Public Shared Function ExecuteQuery(pi As PlanningItem, query As MayoQuery, ParamArray ss As String()) As Double
   overload: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery*
+  nameWithType.vb: PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, String())
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
+  fullName.vb: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem, MayoQuery, System.String())
+  name.vb: ExecuteQuery(PlanningItem, MayoQuery, String())
 references:
 - uid: ESAPIX.Extensions
   commentId: N:ESAPIX.Extensions
@@ -1495,6 +1627,55 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative
+  isExternal: false
+  name: GetFieldReferencePointsCumulative
+  nameWithType: PlanningItemExtensions.GetFieldReferencePointsCumulative
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative
+- uid: IEnumerable{FieldReferencePoint}
+  commentId: '!:IEnumerable{FieldReferencePoint}'
+  definition: IEnumerable`1
+  name: IEnumerable<FieldReferencePoint>
+  nameWithType: IEnumerable<FieldReferencePoint>
+  fullName: IEnumerable<FieldReferencePoint>
+  nameWithType.vb: IEnumerable(Of FieldReferencePoint)
+  fullName.vb: IEnumerable(Of FieldReferencePoint)
+  name.vb: IEnumerable(Of FieldReferencePoint)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: FieldReferencePoint
+    name: FieldReferencePoint
+    nameWithType: FieldReferencePoint
+    fullName: FieldReferencePoint
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: FieldReferencePoint
+    name: FieldReferencePoint
+    nameWithType: FieldReferencePoint
+    fullName: FieldReferencePoint
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Extensions.PlanningItemExtensions.GetImage*
   commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetImage
   isExternal: false
@@ -1506,6 +1687,17 @@ references:
   name: Image
   nameWithType: Image
   fullName: Image
+- uid: ESAPIX.Extensions.PlanningItemExtensions.GetCourse*
+  commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.GetCourse
+  isExternal: false
+  name: GetCourse
+  nameWithType: PlanningItemExtensions.GetCourse
+  fullName: ESAPIX.Extensions.PlanningItemExtensions.GetCourse
+- uid: Course
+  isExternal: true
+  name: Course
+  nameWithType: Course
+  fullName: Course
 - uid: ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure*
   commentId: Overload:ESAPIX.Extensions.PlanningItemExtensions.ContainsStructure
   isExternal: false
@@ -1567,7 +1759,6 @@ references:
   nameWithType: VolumePresentation
   fullName: VolumePresentation
 - uid: DVHData
-  commentId: '!:DVHData'
   isExternal: true
   name: DVHData
   nameWithType: DVHData
@@ -1638,8 +1829,58 @@ references:
   name: ExecuteQuery
   nameWithType: PlanningItemExtensions.ExecuteQuery
   fullName: ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery
+- uid: Structure[]
+  name: Structure[]
+  nameWithType: Structure[]
+  fullName: Structure[]
+  nameWithType.vb: Structure()
+  fullName.vb: Structure()
+  name.vb: Structure()
+  spec.csharp:
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Structure
+    name: Structure
+    nameWithType: Structure
+    fullName: Structure
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: MayoQuery
   isExternal: true
   name: MayoQuery
   nameWithType: MayoQuery
   fullName: MayoQuery
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

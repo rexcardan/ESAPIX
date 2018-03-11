@@ -8,6 +8,8 @@ using ESAPIX.AppKit.Overlay;
 using ESAPIX.Facade.Serialization;
 using ESAPIX.Bootstrapper.Helpers;
 using System.Linq;
+using ESAPIX.Common;
+using System;
 
 #endregion
 
@@ -22,10 +24,9 @@ namespace ESAPIX.Bootstrapper
         /// <param name="vmsUsername">username for VMS access</param>
         /// <param name="vmsPassword">password for VMS access</param>
         /// <param name="singleThread">indicates whether or not to use a single thread (default is multithread)</param>
-        public AppBootstrapper(string vmsUsername, string vmsPassword, bool singleThread = false) : base()
+        public AppBootstrapper(Func<VMS.TPS.Common.Model.API.Application> createAppFunc) : base()
         {
-            FacadeInitializer.Initialize();
-            _ctx = StandAloneContext.Create(singleThread);
+            _ctx = new StandAloneContext(createAppFunc);
             _ctx.UIDispatcher = Dispatcher.CurrentDispatcher;
         }
 
@@ -35,7 +36,6 @@ namespace ESAPIX.Bootstrapper
         /// <param name="offlineContextPath">the path to the offline context json file</param>
         public AppBootstrapper(string offlineContextPath) : base()
         {
-            FacadeInitializer.Initialize();
             var ctx = FacadeSerializer.DeserializeContext(offlineContextPath);
             ctx.Thread = new AppComThread();
             _ctx = ctx;
@@ -101,6 +101,7 @@ namespace ESAPIX.Bootstrapper
                     sac.SetPlanSetup(plan);
                 }
 
+#if !VMS110
                 var externalPlanUid = ArgumentParser.GetExternalPlanSetup(commandLineArgs);
                 if (!string.IsNullOrEmpty(planUid))
                 {
@@ -113,13 +114,6 @@ namespace ESAPIX.Bootstrapper
                 {
                     var plan = sac.Course.BrachyPlanSetups.FirstOrDefault(p => p.UID == brachyPlanUid);
                     sac.SetBrachyPlanSetup(plan);
-                }
-
-                var plansInScope = ArgumentParser.GetPlansInScope(commandLineArgs);
-                if (plansInScope!=null && plansInScope.Any())
-                {
-                    var plans = sac.Course.PlanSetups.Where(p => plansInScope.Contains(p.UID));
-                    sac.SetPlansInScope(plans);
                 }
 
                 var explansInScope = ArgumentParser.GetExternalPlansInScope(commandLineArgs);
@@ -135,6 +129,29 @@ namespace ESAPIX.Bootstrapper
                     var plans = sac.Course.BrachyPlanSetups.Where(p => explansInScope.Contains(p.UID));
                     sac.SetBrachyPlansInScope(plans);
                 }
+#endif
+                var plansInScope = ArgumentParser.GetPlansInScope(commandLineArgs);
+                if (plansInScope != null && plansInScope.Any())
+                {
+                    var plans = sac.Course.PlanSetups.Where(p => plansInScope.Contains(p.UID));
+                    sac.SetPlansInScope(plans);
+                }
+
+#if (VMS150 || VMS151 || VMS155)
+                var ionPlansInScope = ArgumentParser.GetIonPlansInScope(commandLineArgs);
+                if (ionPlansInScope != null && ionPlansInScope.Any())
+                {
+                    var plans = sac.Course.IonPlanSetups.Where(p => explansInScope.Contains(p.UID));
+                    sac.SetIonPlansInScope(plans);
+                }
+
+                var ionPlanUid = ArgumentParser.GetIonPlanSetup(commandLineArgs);
+                if (!string.IsNullOrEmpty(planUid))
+                {
+                    var plan = sac.Course.IonPlanSetups.FirstOrDefault(p => p.UID == externalPlanUid);
+                    sac.SetIonPlanSetup(plan);
+                }
+#endif
             }
         }
     }

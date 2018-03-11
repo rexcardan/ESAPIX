@@ -8,13 +8,17 @@ items:
   - ESAPIX.Facade.API.AddOnMaterial
   - ESAPIX.Facade.API.ApiDataObject
   - ESAPIX.Facade.API.Application
+  - ESAPIX.Facade.API.ApplicationScript
+  - ESAPIX.Facade.API.ApplicationScriptLog
   - ESAPIX.Facade.API.Applicator
   - ESAPIX.Facade.API.Beam
   - ESAPIX.Facade.API.BeamCalculationLog
   - ESAPIX.Facade.API.BeamDose
   - ESAPIX.Facade.API.BeamParameters
+  - ESAPIX.Facade.API.BeamUncertainty
   - ESAPIX.Facade.API.Block
   - ESAPIX.Facade.API.Bolus
+  - ESAPIX.Facade.API.BrachyFieldReferencePoint
   - ESAPIX.Facade.API.BrachyPlanSetup
   - ESAPIX.Facade.API.BrachySolidApplicator
   - ESAPIX.Facade.API.BrachyTreatmentUnit
@@ -37,7 +41,21 @@ items:
   - ESAPIX.Facade.API.Fractionation
   - ESAPIX.Facade.API.Hospital
   - ESAPIX.Facade.API.Image
+  - ESAPIX.Facade.API.IonBeam
+  - ESAPIX.Facade.API.IonBeamParameters
+  - ESAPIX.Facade.API.IonControlPoint
+  - ESAPIX.Facade.API.IonControlPointCollection
+  - ESAPIX.Facade.API.IonControlPointPair
+  - ESAPIX.Facade.API.IonControlPointPairCollection
+  - ESAPIX.Facade.API.IonControlPointParameters
+  - ESAPIX.Facade.API.IonPlanSetup
+  - ESAPIX.Facade.API.IonSpot
+  - ESAPIX.Facade.API.IonSpotCollection
+  - ESAPIX.Facade.API.IonSpotParameters
+  - ESAPIX.Facade.API.IonSpotParametersCollection
   - ESAPIX.Facade.API.Isodose
+  - ESAPIX.Facade.API.LateralSpreadingDevice
+  - ESAPIX.Facade.API.LateralSpreadingDeviceSettings
   - ESAPIX.Facade.API.MLC
   - ESAPIX.Facade.API.OptimizationEUDObjective
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter
@@ -58,11 +76,26 @@ items:
   - ESAPIX.Facade.API.PlanSetup
   - ESAPIX.Facade.API.PlanSum
   - ESAPIX.Facade.API.PlanSumComponent
+  - ESAPIX.Facade.API.PlanTreatmentSession
+  - ESAPIX.Facade.API.PlanUncertainty
+  - ESAPIX.Facade.API.ProtocolPhaseMeasure
+  - ESAPIX.Facade.API.ProtocolPhasePrescription
   - ESAPIX.Facade.API.RadioactiveSource
   - ESAPIX.Facade.API.RadioactiveSourceModel
+  - ESAPIX.Facade.API.RangeModulator
+  - ESAPIX.Facade.API.RangeModulatorSettings
+  - ESAPIX.Facade.API.RangeShifter
+  - ESAPIX.Facade.API.RangeShifterSettings
   - ESAPIX.Facade.API.ReferencePoint
   - ESAPIX.Facade.API.Registration
+  - ESAPIX.Facade.API.RTPrescription
+  - ESAPIX.Facade.API.RTPrescriptionConstraint
+  - ESAPIX.Facade.API.RTPrescriptionOrganAtRisk
+  - ESAPIX.Facade.API.RTPrescriptionTarget
+  - ESAPIX.Facade.API.RTPrescriptionTargetConstraints
   - ESAPIX.Facade.API.ScriptContext
+  - ESAPIX.Facade.API.ScriptEnvironment
+  - ESAPIX.Facade.API.SearchBodyParameters
   - ESAPIX.Facade.API.SeedCollection
   - ESAPIX.Facade.API.SegmentVolume
   - ESAPIX.Facade.API.SerializableObject
@@ -73,7 +106,13 @@ items:
   - ESAPIX.Facade.API.StructureSet
   - ESAPIX.Facade.API.Study
   - ESAPIX.Facade.API.Technique
+  - ESAPIX.Facade.API.TradeoffExplorationContext
+  - ESAPIX.Facade.API.TradeoffObjective
   - ESAPIX.Facade.API.Tray
+  - ESAPIX.Facade.API.TreatmentPhase
+  - ESAPIX.Facade.API.TreatmentSession
+  - ESAPIX.Facade.API.TreatmentUnitOperatingLimit
+  - ESAPIX.Facade.API.TreatmentUnitOperatingLimits
   - ESAPIX.Facade.API.User
   - ESAPIX.Facade.API.Wedge
   langs:
@@ -134,20 +173,6 @@ references:
   name: BeamCalculationLog
   nameWithType: BeamCalculationLog
   fullName: ESAPIX.Facade.API.BeamCalculationLog
-- uid: ESAPIX.Facade.API.BeamDose
-  commentId: T:ESAPIX.Facade.API.BeamDose
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: BeamDose
-  nameWithType: BeamDose
-  fullName: ESAPIX.Facade.API.BeamDose
-- uid: ESAPIX.Facade.API.BeamParameters
-  commentId: T:ESAPIX.Facade.API.BeamParameters
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: BeamParameters
-  nameWithType: BeamParameters
-  fullName: ESAPIX.Facade.API.BeamParameters
 - uid: ESAPIX.Facade.API.Block
   commentId: T:ESAPIX.Facade.API.Block
   isExternal: false
@@ -160,39 +185,6 @@ references:
   name: Bolus
   nameWithType: Bolus
   fullName: ESAPIX.Facade.API.Bolus
-- uid: ESAPIX.Facade.API.BrachyPlanSetup
-  commentId: T:ESAPIX.Facade.API.BrachyPlanSetup
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: BrachyPlanSetup
-  nameWithType: BrachyPlanSetup
-  fullName: ESAPIX.Facade.API.BrachyPlanSetup
-- uid: ESAPIX.Facade.API.BrachySolidApplicator
-  commentId: T:ESAPIX.Facade.API.BrachySolidApplicator
-  isExternal: false
-  name: BrachySolidApplicator
-  nameWithType: BrachySolidApplicator
-  fullName: ESAPIX.Facade.API.BrachySolidApplicator
-- uid: ESAPIX.Facade.API.BrachyTreatmentUnit
-  commentId: T:ESAPIX.Facade.API.BrachyTreatmentUnit
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: BrachyTreatmentUnit
-  nameWithType: BrachyTreatmentUnit
-  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit
-- uid: ESAPIX.Facade.API.CalculationResult
-  commentId: T:ESAPIX.Facade.API.CalculationResult
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: CalculationResult
-  nameWithType: CalculationResult
-  fullName: ESAPIX.Facade.API.CalculationResult
-- uid: ESAPIX.Facade.API.Catheter
-  commentId: T:ESAPIX.Facade.API.Catheter
-  isExternal: false
-  name: Catheter
-  nameWithType: Catheter
-  fullName: ESAPIX.Facade.API.Catheter
 - uid: ESAPIX.Facade.API.Compensator
   commentId: T:ESAPIX.Facade.API.Compensator
   parent: ESAPIX.Facade.API
@@ -214,12 +206,6 @@ references:
   name: ControlPointCollection
   nameWithType: ControlPointCollection
   fullName: ESAPIX.Facade.API.ControlPointCollection
-- uid: ESAPIX.Facade.API.ControlPointParameters
-  commentId: T:ESAPIX.Facade.API.ControlPointParameters
-  isExternal: false
-  name: ControlPointParameters
-  nameWithType: ControlPointParameters
-  fullName: ESAPIX.Facade.API.ControlPointParameters
 - uid: ESAPIX.Facade.API.Course
   commentId: T:ESAPIX.Facade.API.Course
   parent: ESAPIX.Facade.API
@@ -227,12 +213,6 @@ references:
   name: Course
   nameWithType: Course
   fullName: ESAPIX.Facade.API.Course
-- uid: ESAPIX.Facade.API.Diagnosis
-  commentId: T:ESAPIX.Facade.API.Diagnosis
-  isExternal: false
-  name: Diagnosis
-  nameWithType: Diagnosis
-  fullName: ESAPIX.Facade.API.Diagnosis
 - uid: ESAPIX.Facade.API.Dose
   commentId: T:ESAPIX.Facade.API.Dose
   parent: ESAPIX.Facade.API
@@ -247,19 +227,6 @@ references:
   name: DVHData
   nameWithType: DVHData
   fullName: ESAPIX.Facade.API.DVHData
-- uid: ESAPIX.Facade.API.EstimatedDVH
-  commentId: T:ESAPIX.Facade.API.EstimatedDVH
-  isExternal: false
-  name: EstimatedDVH
-  nameWithType: EstimatedDVH
-  fullName: ESAPIX.Facade.API.EstimatedDVH
-- uid: ESAPIX.Facade.API.EvaluationDose
-  commentId: T:ESAPIX.Facade.API.EvaluationDose
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: EvaluationDose
-  nameWithType: EvaluationDose
-  fullName: ESAPIX.Facade.API.EvaluationDose
 - uid: ESAPIX.Facade.API.ExternalBeam
   commentId: T:ESAPIX.Facade.API.ExternalBeam
   parent: ESAPIX.Facade.API
@@ -267,20 +234,6 @@ references:
   name: ExternalBeam
   nameWithType: ExternalBeam
   fullName: ESAPIX.Facade.API.ExternalBeam
-- uid: ESAPIX.Facade.API.ExternalBeamTreatmentUnit
-  commentId: T:ESAPIX.Facade.API.ExternalBeamTreatmentUnit
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: ExternalBeamTreatmentUnit
-  nameWithType: ExternalBeamTreatmentUnit
-  fullName: ESAPIX.Facade.API.ExternalBeamTreatmentUnit
-- uid: ESAPIX.Facade.API.ExternalPlanSetup
-  commentId: T:ESAPIX.Facade.API.ExternalPlanSetup
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: ExternalPlanSetup
-  nameWithType: ExternalPlanSetup
-  fullName: ESAPIX.Facade.API.ExternalPlanSetup
 - uid: ESAPIX.Facade.API.FieldReferencePoint
   commentId: T:ESAPIX.Facade.API.FieldReferencePoint
   isExternal: false
@@ -321,6 +274,216 @@ references:
   name: MLC
   nameWithType: MLC
   fullName: ESAPIX.Facade.API.MLC
+- uid: ESAPIX.Facade.API.Patient
+  commentId: T:ESAPIX.Facade.API.Patient
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Patient
+  nameWithType: Patient
+  fullName: ESAPIX.Facade.API.Patient
+- uid: ESAPIX.Facade.API.PatientSummary
+  commentId: T:ESAPIX.Facade.API.PatientSummary
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: PatientSummary
+  nameWithType: PatientSummary
+  fullName: ESAPIX.Facade.API.PatientSummary
+- uid: ESAPIX.Facade.API.PlanningItem
+  commentId: T:ESAPIX.Facade.API.PlanningItem
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: PlanningItem
+  nameWithType: PlanningItem
+  fullName: ESAPIX.Facade.API.PlanningItem
+- uid: ESAPIX.Facade.API.PlanSetup
+  commentId: T:ESAPIX.Facade.API.PlanSetup
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: PlanSetup
+  nameWithType: PlanSetup
+  fullName: ESAPIX.Facade.API.PlanSetup
+- uid: ESAPIX.Facade.API.PlanSum
+  commentId: T:ESAPIX.Facade.API.PlanSum
+  isExternal: false
+  name: PlanSum
+  nameWithType: PlanSum
+  fullName: ESAPIX.Facade.API.PlanSum
+- uid: ESAPIX.Facade.API.ReferencePoint
+  commentId: T:ESAPIX.Facade.API.ReferencePoint
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ReferencePoint
+  nameWithType: ReferencePoint
+  fullName: ESAPIX.Facade.API.ReferencePoint
+- uid: ESAPIX.Facade.API.Registration
+  commentId: T:ESAPIX.Facade.API.Registration
+  isExternal: false
+  name: Registration
+  nameWithType: Registration
+  fullName: ESAPIX.Facade.API.Registration
+- uid: ESAPIX.Facade.API.ScriptContext
+  commentId: T:ESAPIX.Facade.API.ScriptContext
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ScriptContext
+  nameWithType: ScriptContext
+  fullName: ESAPIX.Facade.API.ScriptContext
+- uid: ESAPIX.Facade.API.SerializableObject
+  commentId: T:ESAPIX.Facade.API.SerializableObject
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SerializableObject
+  nameWithType: SerializableObject
+  fullName: ESAPIX.Facade.API.SerializableObject
+- uid: ESAPIX.Facade.API.Series
+  commentId: T:ESAPIX.Facade.API.Series
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Series
+  nameWithType: Series
+  fullName: ESAPIX.Facade.API.Series
+- uid: ESAPIX.Facade.API.Slot
+  commentId: T:ESAPIX.Facade.API.Slot
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Slot
+  nameWithType: Slot
+  fullName: ESAPIX.Facade.API.Slot
+- uid: ESAPIX.Facade.API.Structure
+  commentId: T:ESAPIX.Facade.API.Structure
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Structure
+  nameWithType: Structure
+  fullName: ESAPIX.Facade.API.Structure
+- uid: ESAPIX.Facade.API.StructureSet
+  commentId: T:ESAPIX.Facade.API.StructureSet
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: StructureSet
+  nameWithType: StructureSet
+  fullName: ESAPIX.Facade.API.StructureSet
+- uid: ESAPIX.Facade.API.Study
+  commentId: T:ESAPIX.Facade.API.Study
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Study
+  nameWithType: Study
+  fullName: ESAPIX.Facade.API.Study
+- uid: ESAPIX.Facade.API.Technique
+  commentId: T:ESAPIX.Facade.API.Technique
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Technique
+  nameWithType: Technique
+  fullName: ESAPIX.Facade.API.Technique
+- uid: ESAPIX.Facade.API.Tray
+  commentId: T:ESAPIX.Facade.API.Tray
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: Tray
+  nameWithType: Tray
+  fullName: ESAPIX.Facade.API.Tray
+- uid: ESAPIX.Facade.API.User
+  commentId: T:ESAPIX.Facade.API.User
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: ESAPIX.Facade.API.User
+- uid: ESAPIX.Facade.API.Wedge
+  commentId: T:ESAPIX.Facade.API.Wedge
+  isExternal: false
+  name: Wedge
+  nameWithType: Wedge
+  fullName: ESAPIX.Facade.API.Wedge
+- uid: ESAPIX.Facade.API.BeamDose
+  commentId: T:ESAPIX.Facade.API.BeamDose
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: BeamDose
+  nameWithType: BeamDose
+  fullName: ESAPIX.Facade.API.BeamDose
+- uid: ESAPIX.Facade.API.BeamParameters
+  commentId: T:ESAPIX.Facade.API.BeamParameters
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: BeamParameters
+  nameWithType: BeamParameters
+  fullName: ESAPIX.Facade.API.BeamParameters
+- uid: ESAPIX.Facade.API.BrachyPlanSetup
+  commentId: T:ESAPIX.Facade.API.BrachyPlanSetup
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: BrachyPlanSetup
+  nameWithType: BrachyPlanSetup
+  fullName: ESAPIX.Facade.API.BrachyPlanSetup
+- uid: ESAPIX.Facade.API.BrachySolidApplicator
+  commentId: T:ESAPIX.Facade.API.BrachySolidApplicator
+  isExternal: false
+  name: BrachySolidApplicator
+  nameWithType: BrachySolidApplicator
+  fullName: ESAPIX.Facade.API.BrachySolidApplicator
+- uid: ESAPIX.Facade.API.BrachyTreatmentUnit
+  commentId: T:ESAPIX.Facade.API.BrachyTreatmentUnit
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: BrachyTreatmentUnit
+  nameWithType: BrachyTreatmentUnit
+  fullName: ESAPIX.Facade.API.BrachyTreatmentUnit
+- uid: ESAPIX.Facade.API.CalculationResult
+  commentId: T:ESAPIX.Facade.API.CalculationResult
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: CalculationResult
+  nameWithType: CalculationResult
+  fullName: ESAPIX.Facade.API.CalculationResult
+- uid: ESAPIX.Facade.API.Catheter
+  commentId: T:ESAPIX.Facade.API.Catheter
+  isExternal: false
+  name: Catheter
+  nameWithType: Catheter
+  fullName: ESAPIX.Facade.API.Catheter
+- uid: ESAPIX.Facade.API.ControlPointParameters
+  commentId: T:ESAPIX.Facade.API.ControlPointParameters
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ControlPointParameters
+  nameWithType: ControlPointParameters
+  fullName: ESAPIX.Facade.API.ControlPointParameters
+- uid: ESAPIX.Facade.API.Diagnosis
+  commentId: T:ESAPIX.Facade.API.Diagnosis
+  isExternal: false
+  name: Diagnosis
+  nameWithType: Diagnosis
+  fullName: ESAPIX.Facade.API.Diagnosis
+- uid: ESAPIX.Facade.API.EstimatedDVH
+  commentId: T:ESAPIX.Facade.API.EstimatedDVH
+  isExternal: false
+  name: EstimatedDVH
+  nameWithType: EstimatedDVH
+  fullName: ESAPIX.Facade.API.EstimatedDVH
+- uid: ESAPIX.Facade.API.EvaluationDose
+  commentId: T:ESAPIX.Facade.API.EvaluationDose
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: EvaluationDose
+  nameWithType: EvaluationDose
+  fullName: ESAPIX.Facade.API.EvaluationDose
+- uid: ESAPIX.Facade.API.ExternalBeamTreatmentUnit
+  commentId: T:ESAPIX.Facade.API.ExternalBeamTreatmentUnit
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ExternalBeamTreatmentUnit
+  nameWithType: ExternalBeamTreatmentUnit
+  fullName: ESAPIX.Facade.API.ExternalBeamTreatmentUnit
+- uid: ESAPIX.Facade.API.ExternalPlanSetup
+  commentId: T:ESAPIX.Facade.API.ExternalPlanSetup
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ExternalPlanSetup
+  nameWithType: ExternalPlanSetup
+  fullName: ESAPIX.Facade.API.ExternalPlanSetup
 - uid: ESAPIX.Facade.API.OptimizationEUDObjective
   commentId: T:ESAPIX.Facade.API.OptimizationEUDObjective
   parent: ESAPIX.Facade.API
@@ -403,27 +566,6 @@ references:
   name: OptimizerResult
   nameWithType: OptimizerResult
   fullName: ESAPIX.Facade.API.OptimizerResult
-- uid: ESAPIX.Facade.API.Patient
-  commentId: T:ESAPIX.Facade.API.Patient
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: Patient
-  nameWithType: Patient
-  fullName: ESAPIX.Facade.API.Patient
-- uid: ESAPIX.Facade.API.PatientSummary
-  commentId: T:ESAPIX.Facade.API.PatientSummary
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: PatientSummary
-  nameWithType: PatientSummary
-  fullName: ESAPIX.Facade.API.PatientSummary
-- uid: ESAPIX.Facade.API.PlanningItem
-  commentId: T:ESAPIX.Facade.API.PlanningItem
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: PlanningItem
-  nameWithType: PlanningItem
-  fullName: ESAPIX.Facade.API.PlanningItem
 - uid: ESAPIX.Facade.API.PlanningItemDose
   commentId: T:ESAPIX.Facade.API.PlanningItemDose
   parent: ESAPIX.Facade.API
@@ -431,19 +573,6 @@ references:
   name: PlanningItemDose
   nameWithType: PlanningItemDose
   fullName: ESAPIX.Facade.API.PlanningItemDose
-- uid: ESAPIX.Facade.API.PlanSetup
-  commentId: T:ESAPIX.Facade.API.PlanSetup
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: PlanSetup
-  nameWithType: PlanSetup
-  fullName: ESAPIX.Facade.API.PlanSetup
-- uid: ESAPIX.Facade.API.PlanSum
-  commentId: T:ESAPIX.Facade.API.PlanSum
-  isExternal: false
-  name: PlanSum
-  nameWithType: PlanSum
-  fullName: ESAPIX.Facade.API.PlanSum
 - uid: ESAPIX.Facade.API.PlanSumComponent
   commentId: T:ESAPIX.Facade.API.PlanSumComponent
   isExternal: false
@@ -464,25 +593,6 @@ references:
   name: RadioactiveSourceModel
   nameWithType: RadioactiveSourceModel
   fullName: ESAPIX.Facade.API.RadioactiveSourceModel
-- uid: ESAPIX.Facade.API.ReferencePoint
-  commentId: T:ESAPIX.Facade.API.ReferencePoint
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: ReferencePoint
-  nameWithType: ReferencePoint
-  fullName: ESAPIX.Facade.API.ReferencePoint
-- uid: ESAPIX.Facade.API.Registration
-  commentId: T:ESAPIX.Facade.API.Registration
-  isExternal: false
-  name: Registration
-  nameWithType: Registration
-  fullName: ESAPIX.Facade.API.Registration
-- uid: ESAPIX.Facade.API.ScriptContext
-  commentId: T:ESAPIX.Facade.API.ScriptContext
-  isExternal: false
-  name: ScriptContext
-  nameWithType: ScriptContext
-  fullName: ESAPIX.Facade.API.ScriptContext
 - uid: ESAPIX.Facade.API.SeedCollection
   commentId: T:ESAPIX.Facade.API.SeedCollection
   isExternal: false
@@ -496,27 +606,6 @@ references:
   name: SegmentVolume
   nameWithType: SegmentVolume
   fullName: ESAPIX.Facade.API.SegmentVolume
-- uid: ESAPIX.Facade.API.SerializableObject
-  commentId: T:ESAPIX.Facade.API.SerializableObject
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: SerializableObject
-  nameWithType: SerializableObject
-  fullName: ESAPIX.Facade.API.SerializableObject
-- uid: ESAPIX.Facade.API.Series
-  commentId: T:ESAPIX.Facade.API.Series
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: Series
-  nameWithType: Series
-  fullName: ESAPIX.Facade.API.Series
-- uid: ESAPIX.Facade.API.Slot
-  commentId: T:ESAPIX.Facade.API.Slot
-  parent: ESAPIX.Facade.API
-  isExternal: false
-  name: Slot
-  nameWithType: Slot
-  fullName: ESAPIX.Facade.API.Slot
 - uid: ESAPIX.Facade.API.SourcePosition
   commentId: T:ESAPIX.Facade.API.SourcePosition
   parent: ESAPIX.Facade.API
@@ -524,54 +613,263 @@ references:
   name: SourcePosition
   nameWithType: SourcePosition
   fullName: ESAPIX.Facade.API.SourcePosition
-- uid: ESAPIX.Facade.API.Structure
-  commentId: T:ESAPIX.Facade.API.Structure
+- uid: ESAPIX.Facade.API.BeamUncertainty
+  commentId: T:ESAPIX.Facade.API.BeamUncertainty
+  isExternal: false
+  name: BeamUncertainty
+  nameWithType: BeamUncertainty
+  fullName: ESAPIX.Facade.API.BeamUncertainty
+- uid: ESAPIX.Facade.API.IonBeam
+  commentId: T:ESAPIX.Facade.API.IonBeam
+  isExternal: false
+  name: IonBeam
+  nameWithType: IonBeam
+  fullName: ESAPIX.Facade.API.IonBeam
+- uid: ESAPIX.Facade.API.IonBeamParameters
+  commentId: T:ESAPIX.Facade.API.IonBeamParameters
   parent: ESAPIX.Facade.API
   isExternal: false
-  name: Structure
-  nameWithType: Structure
-  fullName: ESAPIX.Facade.API.Structure
-- uid: ESAPIX.Facade.API.StructureSet
-  commentId: T:ESAPIX.Facade.API.StructureSet
+  name: IonBeamParameters
+  nameWithType: IonBeamParameters
+  fullName: ESAPIX.Facade.API.IonBeamParameters
+- uid: ESAPIX.Facade.API.IonControlPoint
+  commentId: T:ESAPIX.Facade.API.IonControlPoint
   parent: ESAPIX.Facade.API
   isExternal: false
-  name: StructureSet
-  nameWithType: StructureSet
-  fullName: ESAPIX.Facade.API.StructureSet
-- uid: ESAPIX.Facade.API.Study
-  commentId: T:ESAPIX.Facade.API.Study
+  name: IonControlPoint
+  nameWithType: IonControlPoint
+  fullName: ESAPIX.Facade.API.IonControlPoint
+- uid: ESAPIX.Facade.API.IonControlPointCollection
+  commentId: T:ESAPIX.Facade.API.IonControlPointCollection
   parent: ESAPIX.Facade.API
   isExternal: false
-  name: Study
-  nameWithType: Study
-  fullName: ESAPIX.Facade.API.Study
-- uid: ESAPIX.Facade.API.Technique
-  commentId: T:ESAPIX.Facade.API.Technique
+  name: IonControlPointCollection
+  nameWithType: IonControlPointCollection
+  fullName: ESAPIX.Facade.API.IonControlPointCollection
+- uid: ESAPIX.Facade.API.IonControlPointPair
+  commentId: T:ESAPIX.Facade.API.IonControlPointPair
   parent: ESAPIX.Facade.API
   isExternal: false
-  name: Technique
-  nameWithType: Technique
-  fullName: ESAPIX.Facade.API.Technique
-- uid: ESAPIX.Facade.API.Tray
-  commentId: T:ESAPIX.Facade.API.Tray
+  name: IonControlPointPair
+  nameWithType: IonControlPointPair
+  fullName: ESAPIX.Facade.API.IonControlPointPair
+- uid: ESAPIX.Facade.API.IonControlPointPairCollection
+  commentId: T:ESAPIX.Facade.API.IonControlPointPairCollection
   parent: ESAPIX.Facade.API
   isExternal: false
-  name: Tray
-  nameWithType: Tray
-  fullName: ESAPIX.Facade.API.Tray
-- uid: ESAPIX.Facade.API.User
-  commentId: T:ESAPIX.Facade.API.User
+  name: IonControlPointPairCollection
+  nameWithType: IonControlPointPairCollection
+  fullName: ESAPIX.Facade.API.IonControlPointPairCollection
+- uid: ESAPIX.Facade.API.IonControlPointParameters
+  commentId: T:ESAPIX.Facade.API.IonControlPointParameters
   parent: ESAPIX.Facade.API
   isExternal: false
-  name: User
-  nameWithType: User
-  fullName: ESAPIX.Facade.API.User
-- uid: ESAPIX.Facade.API.Wedge
-  commentId: T:ESAPIX.Facade.API.Wedge
+  name: IonControlPointParameters
+  nameWithType: IonControlPointParameters
+  fullName: ESAPIX.Facade.API.IonControlPointParameters
+- uid: ESAPIX.Facade.API.IonPlanSetup
+  commentId: T:ESAPIX.Facade.API.IonPlanSetup
+  parent: ESAPIX.Facade.API
   isExternal: false
-  name: Wedge
-  nameWithType: Wedge
-  fullName: ESAPIX.Facade.API.Wedge
+  name: IonPlanSetup
+  nameWithType: IonPlanSetup
+  fullName: ESAPIX.Facade.API.IonPlanSetup
+- uid: ESAPIX.Facade.API.IonSpot
+  commentId: T:ESAPIX.Facade.API.IonSpot
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: IonSpot
+  nameWithType: IonSpot
+  fullName: ESAPIX.Facade.API.IonSpot
+- uid: ESAPIX.Facade.API.IonSpotCollection
+  commentId: T:ESAPIX.Facade.API.IonSpotCollection
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: IonSpotCollection
+  nameWithType: IonSpotCollection
+  fullName: ESAPIX.Facade.API.IonSpotCollection
+- uid: ESAPIX.Facade.API.IonSpotParameters
+  commentId: T:ESAPIX.Facade.API.IonSpotParameters
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: IonSpotParameters
+  nameWithType: IonSpotParameters
+  fullName: ESAPIX.Facade.API.IonSpotParameters
+- uid: ESAPIX.Facade.API.IonSpotParametersCollection
+  commentId: T:ESAPIX.Facade.API.IonSpotParametersCollection
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: IonSpotParametersCollection
+  nameWithType: IonSpotParametersCollection
+  fullName: ESAPIX.Facade.API.IonSpotParametersCollection
+- uid: ESAPIX.Facade.API.LateralSpreadingDevice
+  commentId: T:ESAPIX.Facade.API.LateralSpreadingDevice
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: LateralSpreadingDevice
+  nameWithType: LateralSpreadingDevice
+  fullName: ESAPIX.Facade.API.LateralSpreadingDevice
+- uid: ESAPIX.Facade.API.LateralSpreadingDeviceSettings
+  commentId: T:ESAPIX.Facade.API.LateralSpreadingDeviceSettings
+  isExternal: false
+  name: LateralSpreadingDeviceSettings
+  nameWithType: LateralSpreadingDeviceSettings
+  fullName: ESAPIX.Facade.API.LateralSpreadingDeviceSettings
+- uid: ESAPIX.Facade.API.PlanUncertainty
+  commentId: T:ESAPIX.Facade.API.PlanUncertainty
+  isExternal: false
+  name: PlanUncertainty
+  nameWithType: PlanUncertainty
+  fullName: ESAPIX.Facade.API.PlanUncertainty
+- uid: ESAPIX.Facade.API.RangeModulator
+  commentId: T:ESAPIX.Facade.API.RangeModulator
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: RangeModulator
+  nameWithType: RangeModulator
+  fullName: ESAPIX.Facade.API.RangeModulator
+- uid: ESAPIX.Facade.API.RangeModulatorSettings
+  commentId: T:ESAPIX.Facade.API.RangeModulatorSettings
+  isExternal: false
+  name: RangeModulatorSettings
+  nameWithType: RangeModulatorSettings
+  fullName: ESAPIX.Facade.API.RangeModulatorSettings
+- uid: ESAPIX.Facade.API.RangeShifter
+  commentId: T:ESAPIX.Facade.API.RangeShifter
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: RangeShifter
+  nameWithType: RangeShifter
+  fullName: ESAPIX.Facade.API.RangeShifter
+- uid: ESAPIX.Facade.API.RangeShifterSettings
+  commentId: T:ESAPIX.Facade.API.RangeShifterSettings
+  isExternal: false
+  name: RangeShifterSettings
+  nameWithType: RangeShifterSettings
+  fullName: ESAPIX.Facade.API.RangeShifterSettings
+- uid: ESAPIX.Facade.API.ApplicationScript
+  commentId: T:ESAPIX.Facade.API.ApplicationScript
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ApplicationScript
+  nameWithType: ApplicationScript
+  fullName: ESAPIX.Facade.API.ApplicationScript
+- uid: ESAPIX.Facade.API.ApplicationScriptLog
+  commentId: T:ESAPIX.Facade.API.ApplicationScriptLog
+  isExternal: false
+  name: ApplicationScriptLog
+  nameWithType: ApplicationScriptLog
+  fullName: ESAPIX.Facade.API.ApplicationScriptLog
+- uid: ESAPIX.Facade.API.BrachyFieldReferencePoint
+  commentId: T:ESAPIX.Facade.API.BrachyFieldReferencePoint
+  isExternal: false
+  name: BrachyFieldReferencePoint
+  nameWithType: BrachyFieldReferencePoint
+  fullName: ESAPIX.Facade.API.BrachyFieldReferencePoint
+- uid: ESAPIX.Facade.API.ProtocolPhaseMeasure
+  commentId: T:ESAPIX.Facade.API.ProtocolPhaseMeasure
+  isExternal: false
+  name: ProtocolPhaseMeasure
+  nameWithType: ProtocolPhaseMeasure
+  fullName: ESAPIX.Facade.API.ProtocolPhaseMeasure
+- uid: ESAPIX.Facade.API.ProtocolPhasePrescription
+  commentId: T:ESAPIX.Facade.API.ProtocolPhasePrescription
+  isExternal: false
+  name: ProtocolPhasePrescription
+  nameWithType: ProtocolPhasePrescription
+  fullName: ESAPIX.Facade.API.ProtocolPhasePrescription
+- uid: ESAPIX.Facade.API.RTPrescription
+  commentId: T:ESAPIX.Facade.API.RTPrescription
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: RTPrescription
+  nameWithType: RTPrescription
+  fullName: ESAPIX.Facade.API.RTPrescription
+- uid: ESAPIX.Facade.API.RTPrescriptionTarget
+  commentId: T:ESAPIX.Facade.API.RTPrescriptionTarget
+  isExternal: false
+  name: RTPrescriptionTarget
+  nameWithType: RTPrescriptionTarget
+  fullName: ESAPIX.Facade.API.RTPrescriptionTarget
+- uid: ESAPIX.Facade.API.ScriptEnvironment
+  commentId: T:ESAPIX.Facade.API.ScriptEnvironment
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: ScriptEnvironment
+  nameWithType: ScriptEnvironment
+  fullName: ESAPIX.Facade.API.ScriptEnvironment
+- uid: ESAPIX.Facade.API.PlanTreatmentSession
+  commentId: T:ESAPIX.Facade.API.PlanTreatmentSession
+  isExternal: false
+  name: PlanTreatmentSession
+  nameWithType: PlanTreatmentSession
+  fullName: ESAPIX.Facade.API.PlanTreatmentSession
+- uid: ESAPIX.Facade.API.RTPrescriptionConstraint
+  commentId: T:ESAPIX.Facade.API.RTPrescriptionConstraint
+  isExternal: false
+  name: RTPrescriptionConstraint
+  nameWithType: RTPrescriptionConstraint
+  fullName: ESAPIX.Facade.API.RTPrescriptionConstraint
+- uid: ESAPIX.Facade.API.RTPrescriptionOrganAtRisk
+  commentId: T:ESAPIX.Facade.API.RTPrescriptionOrganAtRisk
+  isExternal: false
+  name: RTPrescriptionOrganAtRisk
+  nameWithType: RTPrescriptionOrganAtRisk
+  fullName: ESAPIX.Facade.API.RTPrescriptionOrganAtRisk
+- uid: ESAPIX.Facade.API.RTPrescriptionTargetConstraints
+  commentId: T:ESAPIX.Facade.API.RTPrescriptionTargetConstraints
+  isExternal: false
+  name: RTPrescriptionTargetConstraints
+  nameWithType: RTPrescriptionTargetConstraints
+  fullName: ESAPIX.Facade.API.RTPrescriptionTargetConstraints
+- uid: ESAPIX.Facade.API.SearchBodyParameters
+  commentId: T:ESAPIX.Facade.API.SearchBodyParameters
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: SearchBodyParameters
+  nameWithType: SearchBodyParameters
+  fullName: ESAPIX.Facade.API.SearchBodyParameters
+- uid: ESAPIX.Facade.API.TradeoffExplorationContext
+  commentId: T:ESAPIX.Facade.API.TradeoffExplorationContext
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: TradeoffExplorationContext
+  nameWithType: TradeoffExplorationContext
+  fullName: ESAPIX.Facade.API.TradeoffExplorationContext
+- uid: ESAPIX.Facade.API.TradeoffObjective
+  commentId: T:ESAPIX.Facade.API.TradeoffObjective
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: TradeoffObjective
+  nameWithType: TradeoffObjective
+  fullName: ESAPIX.Facade.API.TradeoffObjective
+- uid: ESAPIX.Facade.API.TreatmentPhase
+  commentId: T:ESAPIX.Facade.API.TreatmentPhase
+  isExternal: false
+  name: TreatmentPhase
+  nameWithType: TreatmentPhase
+  fullName: ESAPIX.Facade.API.TreatmentPhase
+- uid: ESAPIX.Facade.API.TreatmentSession
+  commentId: T:ESAPIX.Facade.API.TreatmentSession
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: TreatmentSession
+  nameWithType: TreatmentSession
+  fullName: ESAPIX.Facade.API.TreatmentSession
+- uid: ESAPIX.Facade.API.TreatmentUnitOperatingLimit
+  commentId: T:ESAPIX.Facade.API.TreatmentUnitOperatingLimit
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: TreatmentUnitOperatingLimit
+  nameWithType: TreatmentUnitOperatingLimit
+  fullName: ESAPIX.Facade.API.TreatmentUnitOperatingLimit
+- uid: ESAPIX.Facade.API.TreatmentUnitOperatingLimits
+  commentId: T:ESAPIX.Facade.API.TreatmentUnitOperatingLimits
+  parent: ESAPIX.Facade.API
+  isExternal: false
+  name: TreatmentUnitOperatingLimits
+  nameWithType: TreatmentUnitOperatingLimits
+  fullName: ESAPIX.Facade.API.TreatmentUnitOperatingLimits
 - uid: ESAPIX.Facade.API
   commentId: N:ESAPIX.Facade.API
   isExternal: false

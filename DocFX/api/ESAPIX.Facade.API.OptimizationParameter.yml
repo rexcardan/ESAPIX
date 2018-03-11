@@ -6,11 +6,15 @@ items:
   parent: ESAPIX.Facade.API
   children:
   - ESAPIX.Facade.API.OptimizationParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor
   - ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
-  - ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  - ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  - ESAPIX.Facade.API.OptimizationParameter.IsLive
-  - ESAPIX.Facade.API.OptimizationParameter.WriteXml(System.Xml.XmlWriter)
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  - ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
   langs:
   - csharp
   - vb
@@ -21,15 +25,16 @@ items:
   source:
     id: OptimizationParameter
     path: ''
-    startLine: 11355
+    startLine: 145874
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: 'public class OptimizationParameter : SerializableObject'
+    content: 'public class OptimizationParameter : SerializableObject, Xml.Serialization.IXmlSerializable'
     content.vb: >-
       Public Class OptimizationParameter
           Inherits SerializableObject
+          Implements Xml.Serialization.IXmlSerializable
   inheritance:
   - System.Object
   - ESAPIX.Facade.API.SerializableObject
@@ -37,15 +42,14 @@ items:
   - ESAPIX.Facade.API.OptimizationIMRTBeamParameter
   - ESAPIX.Facade.API.OptimizationNormalTissueParameter
   - ESAPIX.Facade.API.OptimizationPointCloudParameter
+  implements:
+  - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
+  - ESAPIX.Facade.API.SerializableObject.IsLive
   - ESAPIX.Facade.API.SerializableObject.GetSchema
   - ESAPIX.Facade.API.SerializableObject.ReadXml(System.Xml.XmlReader)
+  - ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
   - ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
-  - System.Object.ToString
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -66,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11357
+    startLine: 29309
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -92,7 +96,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 11362
+    startLine: 29314
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
@@ -107,121 +111,222 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationParameter.IsLive
-  commentId: P:ESAPIX.Facade.API.OptimizationParameter.IsLive
-  id: IsLive
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.OptimizationParameter
   langs:
   - csharp
   - vb
-  name: IsLive
-  nameWithType: OptimizationParameter.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationParameter.IsLive
-  type: Property
+  name: OptimizationParameter()
+  nameWithType: OptimizationParameter.OptimizationParameter()
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter()
+  type: Constructor
   source:
-    id: IsLive
+    id: .ctor
     path: ''
-    startLine: 11367
+    startLine: 55913
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public bool IsLive { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsLive As Boolean
-  overload: ESAPIX.Facade.API.OptimizationParameter.IsLive*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: ESAPIX.Facade.API.OptimizationParameter.WriteXml(System.Xml.XmlWriter)
-  commentId: M:ESAPIX.Facade.API.OptimizationParameter.WriteXml(System.Xml.XmlWriter)
-  id: WriteXml(System.Xml.XmlWriter)
-  parent: ESAPIX.Facade.API.OptimizationParameter
-  langs:
-  - csharp
-  - vb
-  name: WriteXml(Xml.XmlWriter)
-  nameWithType: OptimizationParameter.WriteXml(Xml.XmlWriter)
-  fullName: ESAPIX.Facade.API.OptimizationParameter.WriteXml(System.Xml.XmlWriter)
-  type: Method
-  source:
-    id: WriteXml
-    path: ''
-    startLine: 11372
-  assemblies:
-  - cs.temp.dll
-  namespace: ESAPIX.Facade.API
-  syntax:
-    content: public void WriteXml(Xml.XmlWriter writer)
-    parameters:
-    - id: writer
-      type: System.Xml.XmlWriter
-    content.vb: Public Sub WriteXml(writer As Xml.XmlWriter)
-  overload: ESAPIX.Facade.API.OptimizationParameter.WriteXml*
+    content: public OptimizationParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  commentId: M:ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  id: Equals(System.Object)
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
   parent: ESAPIX.Facade.API.OptimizationParameter
   langs:
   - csharp
   - vb
-  name: Equals(Object)
-  nameWithType: OptimizationParameter.Equals(Object)
-  fullName: ESAPIX.Facade.API.OptimizationParameter.Equals(System.Object)
-  type: Method
+  name: OptimizationParameter(Object)
+  nameWithType: OptimizationParameter.OptimizationParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter(System.Object)
+  type: Constructor
   source:
-    id: Equals
+    id: .ctor
     path: ''
-    startLine: 11378
+    startLine: 55918
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public bool Equals(object obj)
+    content: public OptimizationParameter(dynamic client)
     parameters:
-    - id: obj
+    - id: client
       type: System.Object
-    return:
-      type: System.Boolean
-    content.vb: Public Function Equals(obj As Object) As Boolean
-  overload: ESAPIX.Facade.API.OptimizationParameter.Equals*
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  commentId: M:ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  id: GetHashCode
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor
+  id: '#ctor'
   parent: ESAPIX.Facade.API.OptimizationParameter
   langs:
   - csharp
   - vb
-  name: GetHashCode()
-  nameWithType: OptimizationParameter.GetHashCode()
-  fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode()
-  type: Method
+  name: OptimizationParameter()
+  nameWithType: OptimizationParameter.OptimizationParameter()
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter()
+  type: Constructor
   source:
-    id: GetHashCode
+    id: .ctor
     path: ''
-    startLine: 11385
+    startLine: 84262
   assemblies:
   - cs.temp.dll
   namespace: ESAPIX.Facade.API
   syntax:
-    content: public int GetHashCode()
-    return:
-      type: System.Int32
-    content.vb: Public Function GetHashCode As Integer
-  overload: ESAPIX.Facade.API.OptimizationParameter.GetHashCode*
+    content: public OptimizationParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationParameter(Object)
+  nameWithType: OptimizationParameter.OptimizationParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 84267
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationParameter()
+  nameWithType: OptimizationParameter.OptimizationParameter()
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 113730
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationParameter(Object)
+  nameWithType: OptimizationParameter.OptimizationParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 113735
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor
+  id: '#ctor'
+  parent: ESAPIX.Facade.API.OptimizationParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationParameter()
+  nameWithType: OptimizationParameter.OptimizationParameter()
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 145876
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationParameter()
+    content.vb: Public Sub New
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  commentId: M:ESAPIX.Facade.API.OptimizationParameter.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: ESAPIX.Facade.API.OptimizationParameter
+  langs:
+  - csharp
+  - vb
+  name: OptimizationParameter(Object)
+  nameWithType: OptimizationParameter.OptimizationParameter(Object)
+  fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter(System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 145881
+  assemblies:
+  - cs.temp.dll
+  namespace: ESAPIX.Facade.API
+  syntax:
+    content: public OptimizationParameter(dynamic client)
+    parameters:
+    - id: client
+      type: System.Object
+    content.vb: Public Sub New(client As Object)
+  overload: ESAPIX.Facade.API.OptimizationParameter.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -247,6 +352,18 @@ references:
   name: SerializableObject
   nameWithType: SerializableObject
   fullName: ESAPIX.Facade.API.SerializableObject
+- uid: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: Xml.Serialization.IXmlSerializable
+  nameWithType: Xml.Serialization.IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: ESAPIX.Facade.API.SerializableObject.IsLive
+  commentId: P:ESAPIX.Facade.API.SerializableObject.IsLive
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: false
+  name: IsLive
+  nameWithType: SerializableObject.IsLive
+  fullName: ESAPIX.Facade.API.SerializableObject.IsLive
 - uid: ESAPIX.Facade.API.SerializableObject.GetSchema
   commentId: M:ESAPIX.Facade.API.SerializableObject.GetSchema
   parent: ESAPIX.Facade.API.SerializableObject
@@ -315,6 +432,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  commentId: M:ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  parent: ESAPIX.Facade.API.SerializableObject
+  isExternal: true
+  name: WriteXml(Xml.XmlWriter)
+  nameWithType: SerializableObject.WriteXml(Xml.XmlWriter)
+  fullName: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ESAPIX.Facade.API.SerializableObject.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: SerializableObject.WriteXml
+    fullName: ESAPIX.Facade.API.SerializableObject.WriteXml
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: Xml.XmlWriter
+    nameWithType: Xml.XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   commentId: M:ESAPIX.Facade.API.SerializableObject.ClearSerializationHistory
   parent: ESAPIX.Facade.API.SerializableObject
@@ -344,213 +500,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
@@ -563,46 +512,3 @@ references:
   name: OptimizationParameter
   nameWithType: OptimizationParameter.OptimizationParameter
   fullName: ESAPIX.Facade.API.OptimizationParameter.OptimizationParameter
-- uid: ESAPIX.Facade.API.OptimizationParameter.IsLive*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationParameter.IsLive
-  isExternal: false
-  name: IsLive
-  nameWithType: OptimizationParameter.IsLive
-  fullName: ESAPIX.Facade.API.OptimizationParameter.IsLive
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: ESAPIX.Facade.API.OptimizationParameter.WriteXml*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationParameter.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: OptimizationParameter.WriteXml
-  fullName: ESAPIX.Facade.API.OptimizationParameter.WriteXml
-- uid: System.Xml.XmlWriter
-  isExternal: true
-  name: Xml.XmlWriter
-  nameWithType: Xml.XmlWriter
-  fullName: System.Xml.XmlWriter
-- uid: ESAPIX.Facade.API.OptimizationParameter.Equals*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationParameter.Equals
-  isExternal: false
-  name: Equals
-  nameWithType: OptimizationParameter.Equals
-  fullName: ESAPIX.Facade.API.OptimizationParameter.Equals
-- uid: ESAPIX.Facade.API.OptimizationParameter.GetHashCode*
-  commentId: Overload:ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-  isExternal: false
-  name: GetHashCode
-  nameWithType: OptimizationParameter.GetHashCode
-  fullName: ESAPIX.Facade.API.OptimizationParameter.GetHashCode
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
