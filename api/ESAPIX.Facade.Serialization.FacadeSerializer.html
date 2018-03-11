@@ -112,7 +112,7 @@
               <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class FacadeSerializer</code></pre>
+                <pre><code class="lang-csharp hljs">public static class FacadeSerializer</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -168,12 +168,13 @@
               </h3>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.DeserializePatient(System.String)">DeserializePatient(String)</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.Deserialize``1(System.String)">Deserialize&lt;T&gt;(String)</h4>
+              <div class="markdown level1 summary"><p>Deserialize from JSON string</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Patient DeserializePatient(string jsonPatient)</code></pre>
+                <pre><code class="lang-csharp hljs">public static T Deserialize&lt;T&gt;(string json)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -187,7 +188,66 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>jsonPatient</em></td>
+                    <td><em>json</em></td>
+                    <td><p>json string of object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><p>object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the type of object to be returned</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.DeserializeContext(System.String)">DeserializeContext(String)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static OfflineContext DeserializeContext(string jsonPath)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jsonPath</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -202,19 +262,20 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Patient</span></td>
+                    <td><span class="xref">OfflineContext</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.DeserializePlan(System.String)">DeserializePlan(String)</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.DeserializeFromFile``1(System.String)">DeserializeFromFile&lt;T&gt;(String)</h4>
+              <div class="markdown level1 summary"><p>Deserialize from JSON string</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static PlanSetup DeserializePlan(string jsonPlan)</code></pre>
+                <pre><code class="lang-csharp hljs">public static T DeserializeFromFile&lt;T&gt;(string jsonPath)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -228,8 +289,9 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>jsonPlan</em></td>
-                    <td></td>
+                    <td><em>jsonPath</em></td>
+                    <td><p>file path to save object file</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -243,19 +305,37 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">PlanSetup</span></td>
-                    <td></td>
+                    <td><span class="xref">T</span></td>
+                    <td><p>object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the type of object to be returned</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.SerializePatient(Patient)">SerializePatient(Patient)</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.Serialize(System.Object)">Serialize(Object)</h4>
+              <div class="markdown level1 summary"><p>Serialize to JSON string</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static string SerializePatient(Patient patient)</code></pre>
+                <pre><code class="lang-csharp hljs">public static string Serialize(object o)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -268,50 +348,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Patient</span></td>
-                    <td><em>patient</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.SerializePlan(PlanSetup)">SerializePlan(PlanSetup)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static string SerializePlan(PlanSetup plan)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">PlanSetup</span></td>
-                    <td><em>plan</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>o</em></td>
+                    <td><p>object to be serialized</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -326,7 +366,73 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
+                    <td><p>json string of object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.SerializeContext(ESAPIX.Interfaces.IScriptContext,System.String)">SerializeContext(IScriptContext, String)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void SerializeContext(IScriptContext ctx, string jsonPath)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="ESAPIX.Interfaces.IScriptContext.html">IScriptContext</a></td>
+                    <td><em>ctx</em></td>
                     <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jsonPath</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Facade.Serialization.FacadeSerializer.SerializeToFile(System.Object,System.String)">SerializeToFile(Object, String)</h4>
+              <div class="markdown level1 summary"><p>Serialize to text file (json)</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void SerializeToFile(object o, string jsonPath)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>o</em></td>
+                    <td><p>object to be serialized</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jsonPath</em></td>
+                    <td><p>file path to save object file</p>
+</td>
                   </tr>
                 </tbody>
               </table>

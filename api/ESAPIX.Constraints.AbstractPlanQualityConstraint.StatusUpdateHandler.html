@@ -83,7 +83,7 @@
               <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public delegate void StatusUpdateHandler(string status);</code></pre>
+                <pre><code class="lang-csharp hljs">public delegate void StatusUpdateHandler(double progress, string status);</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -95,6 +95,11 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><em>progress</em></td>
+                    <td></td>
+                  </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>status</em></td>

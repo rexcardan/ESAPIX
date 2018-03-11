@@ -118,6 +118,62 @@
               </h3>
               
               
+              <h4 id="methods" data-uid="ESAPIX.Extensions.StructureExtensions.GetTargetStats(Structure,PlanningItem,DoseValue,TargetStat[])">GetTargetStats(Structure, PlanningItem, DoseValue, TargetStat[])</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Dictionary&lt;TargetStat, double&gt; GetTargetStats(this Structure s, PlanningItem pi, DoseValue referenceDose, params TargetStat[] desiredStats)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Structure</span></td>
+                    <td><em>s</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">DoseValue</span></td>
+                    <td><em>referenceDose</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TargetStat</span>[]</td>
+                    <td><em>desiredStats</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Dictionary</span>&lt;<span class="xref">TargetStat</span>, <span class="xref">System.Double</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <h4 id="methods" data-uid="ESAPIX.Extensions.StructureExtensions.VoxelsOnSlice(Structure,Image,System.Int32)">VoxelsOnSlice(Structure, Image, Int32)</h4>
               <div class="markdown level1 summary"><p>Returns the voxel HU from a given slice within a structure. Voxels outside the structure are NaN</p>
 </div>
@@ -167,7 +223,8 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Double</span>[,]</td>
-                    <td></td>
+                    <td><p>display units of the image</p>
+</td>
                   </tr>
                 </tbody>
               </table>

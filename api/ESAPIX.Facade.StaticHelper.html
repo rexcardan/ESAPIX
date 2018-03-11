@@ -118,12 +118,12 @@
               </h3>
               
               
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.CreateApplicationFunc">CreateApplicationFunc</h4>
+              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplicationFunc0">Application_CreateApplicationFunc0</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Func&lt;string, string, dynamic&gt; CreateApplicationFunc { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public static Func&lt;string, string, dynamic&gt; Application_CreateApplicationFunc0 { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -136,6 +136,30 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplicationFunc1">Application_CreateApplicationFunc1</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Func&lt;dynamic&gt; Application_CreateApplicationFunc1 { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -166,12 +190,12 @@
               </table>
               
               
-              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction">SerializableObject_ClearSerializationHistoryAction</h4>
+              <h4 id="properties" data-uid="ESAPIX.Facade.StaticHelper.SerializableObject_ClearSerializationHistoryAction0">SerializableObject_ClearSerializationHistoryAction0</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Action SerializableObject_ClearSerializationHistoryAction { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public static Action SerializableObject_ClearSerializationHistoryAction0 { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -216,12 +240,53 @@
               </h3>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String,System.Boolean)">Application_CreateApplication(String, String, Boolean)</h4>
+              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.Boolean)">Application_CreateApplication(Boolean)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Application Application_CreateApplication(string username, string password, bool useCurrentThread = false)</code></pre>
+                <pre><code class="lang-csharp hljs">public static Application Application_CreateApplication(bool useCurrentThread = false)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><em>useCurrentThread</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Application</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Facade.StaticHelper.Application_CreateApplication(System.String,System.String)">Application_CreateApplication(String, String)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Application Application_CreateApplication(string username, string password)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -241,11 +306,6 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>password</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td><em>useCurrentThread</em></td>
                     <td></td>
                   </tr>
                 </tbody>

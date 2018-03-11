@@ -282,12 +282,12 @@
                   <div><a class="xref" href="ESAPIX.Constraints.IConstraint.html">IConstraint.Constrain(PlanningItem)</a></div>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Constraints.AbstractPlanQualityConstraint.OnStatusChanged(System.String)">OnStatusChanged(String)</h4>
+              <h4 id="methods" data-uid="ESAPIX.Constraints.AbstractPlanQualityConstraint.OnStatusChanged(System.Double,System.String)">OnStatusChanged(Double, String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void OnStatusChanged(string status)</code></pre>
+                <pre><code class="lang-csharp hljs">public void OnStatusChanged(double progress, string status)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -299,6 +299,11 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><em>progress</em></td>
+                    <td></td>
+                  </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>status</em></td>

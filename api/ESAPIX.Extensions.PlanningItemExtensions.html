@@ -177,12 +177,12 @@ contoured.</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},MayoQuery)">ExecuteQuery(PlanningItem, IEnumerable&lt;Structure&gt;, MayoQuery)</h4>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,Structure[])">ExecuteQuery(PlanningItem, MayoQuery, Structure[])</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, MayoQuery query)</code></pre>
+                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, MayoQuery query, params Structure[] ss)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -197,11 +197,6 @@ contoured.</p>
                   <tr>
                     <td><span class="xref">PlanningItem</span></td>
                     <td><em>pi</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
-                    <td><em>ss</em></td>
                     <td></td>
                   </tr>
                   <tr>
@@ -209,57 +204,11 @@ contoured.</p>
                     <td><em>query</em></td>
                     <td></td>
                   </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
                   <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,IEnumerable{Structure},System.String)">ExecuteQuery(PlanningItem, IEnumerable&lt;Structure&gt;, String)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, IEnumerable&lt;Structure&gt; ss, string mayoFormatQuery)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">PlanningItem</span></td>
-                    <td><em>pi</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Structure</span>&gt;</td>
+                    <td><span class="xref">Structure</span>[]</td>
                     <td><em>ss</em></td>
                     <td></td>
                   </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>mayoFormatQuery</em></td>
-                    <td></td>
-                  </tr>
                 </tbody>
               </table>
               <h5 class="returns">Returns</h5>
@@ -279,12 +228,12 @@ contoured.</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,MayoQuery)">ExecuteQuery(PlanningItem, Structure, MayoQuery)</h4>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,MayoQuery,System.String[])">ExecuteQuery(PlanningItem, MayoQuery, String[])</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, Structure s, MayoQuery query)</code></pre>
+                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, MayoQuery query, params string[] ss)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -299,11 +248,6 @@ contoured.</p>
                   <tr>
                     <td><span class="xref">PlanningItem</span></td>
                     <td><em>pi</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Structure</span></td>
-                    <td><em>s</em></td>
                     <td></td>
                   </tr>
                   <tr>
@@ -311,6 +255,11 @@ contoured.</p>
                     <td><em>query</em></td>
                     <td></td>
                   </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td><em>ss</em></td>
+                    <td></td>
+                  </tr>
                 </tbody>
               </table>
               <h5 class="returns">Returns</h5>
@@ -330,12 +279,12 @@ contoured.</p>
               </table>
               
               
-              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,Structure,System.String)">ExecuteQuery(PlanningItem, Structure, String)</h4>
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,Structure[])">ExecuteQuery(PlanningItem, String, Structure[])</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, Structure s, string mayoFormatQuery)</code></pre>
+                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, string mayoFormatQuery, params Structure[] ss)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -353,13 +302,64 @@ contoured.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Structure</span></td>
-                    <td><em>s</em></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>mayoFormatQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Structure</span>[]</td>
+                    <td><em>ss</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.ExecuteQuery(PlanningItem,System.String,System.String[])">ExecuteQuery(PlanningItem, String, String[])</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static double ExecuteQuery(this PlanningItem pi, string mayoFormatQuery, params string[] ss)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>mayoFormatQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td><em>ss</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -620,6 +620,50 @@ to be merged into a single dvh by summing volumes as each dose value</p>
               </table>
               
               
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetCourse(PlanningItem)">GetCourse(PlanningItem)</h4>
+              <div class="markdown level1 summary"><p>Returns the course from a planning item</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Course GetCourse(this PlanningItem pi)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td><p>the planning item inside the course</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Course</span></td>
+                    <td><p>the course for this planning item</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,Structure,DoseValuePresentation,VolumePresentation,System.Double)">GetDefaultDVHCumulativeData(PlanningItem, Structure, DoseValuePresentation, VolumePresentation, Double)</h4>
               <div class="markdown level1 summary"><p>Enables a shorter method for doing a common task (getting the DVH from a structure). Contains default values.</p>
 </div>
@@ -646,6 +690,67 @@ to be merged into a single dvh by summing volumes as each dose value</p>
                   <tr>
                     <td><span class="xref">Structure</span></td>
                     <td><em>s</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">DoseValuePresentation</span></td>
+                    <td><em>dvp</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">VolumePresentation</span></td>
+                    <td><em>vp</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><em>binWidth</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DVHData</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetDefaultDVHCumulativeData(PlanningItem,System.String,DoseValuePresentation,VolumePresentation,System.Double)">GetDefaultDVHCumulativeData(PlanningItem, String, DoseValuePresentation, VolumePresentation, Double)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DVHData GetDefaultDVHCumulativeData(this PlanningItem plan, string structureId, DoseValuePresentation dvp = null, VolumePresentation vp = null, double binWidth = 0.1)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>plan</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>structureId</em></td>
                     <td></td>
                   </tr>
                   <tr>
@@ -948,6 +1053,47 @@ object and subtracting the input volume</p>
                     <td><span class="xref">DoseValue</span></td>
                     <td><p>Return the coldspot dose for a given volume.</p>
 </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <h4 id="methods" data-uid="ESAPIX.Extensions.PlanningItemExtensions.GetFieldReferencePointsCumulative(PlanningItem)">GetFieldReferencePointsCumulative(PlanningItem)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;FieldReferencePoint&gt; GetFieldReferencePointsCumulative(this PlanningItem pi)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">PlanningItem</span></td>
+                    <td><em>pi</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">FieldReferencePoint</span>&gt;</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
