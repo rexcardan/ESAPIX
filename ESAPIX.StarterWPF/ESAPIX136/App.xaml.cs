@@ -18,7 +18,7 @@ namespace $safeprojectname$
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var bs = new AppBootstrapper<MainView>(null, null);
+            var bs = new AppBootstrapper<MainView>(()=> { return VMS.TPS.Common.Model.API.Application.CreateApplication(); });
             bs.Run();
         }
     }

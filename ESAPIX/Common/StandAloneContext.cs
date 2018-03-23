@@ -27,7 +27,7 @@ namespace ESAPIX.Common
             {
                 throw new Exception("Must assign a function to create VMS app. Call SetAppFunction() prior to this.");
             }
-            X.Application xApp = null;
+
             var thread = new AppComThread();
             thread.Invoke(() =>
             {
@@ -36,10 +36,10 @@ namespace ESAPIX.Common
             });
             this.Thread = thread;
 
-            if (xApp == null)
+            if (_app == null)
                 throw new Exception("App was not created. Check to make sure the VMS dll references are correct.", e);
 
-            if (ExpandoGetter.GetClient(xApp) == null)
+            if (ExpandoGetter.GetClient(_app) == null)
                 throw new Exception(
                     "App was not created. Make sure FacadeInitializer.Initialize() in ESAPIX.Bootstrapper is being called before invoking static methods",
                     e);
@@ -53,6 +53,8 @@ namespace ESAPIX.Common
         {
             _app?.Dispose();
         }
+
+        public Application Application { get { return _app; } }
 
         public Course Course { get; set; }
 

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.AppKit;
+using ESAPIX.Common;
 using System.Windows.Threading;
 using $safeprojectname$.Views;
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="ESAPIX_VSIX_2017.Cardan.ad8fc2be-b274-4c6d-9006-ea668b13d788" Version="1.1" Language="en-US" Publisher="Rex Cardan, PhD" />
-    <DisplayName>ESAPIX 13.6 WPF Template</DisplayName>
+    <Identity Id="ESAPIX_VSIX_2017.Cardan.4bae33de-d9e7-46c3-a32e-a24199edb4e2" Version="1.2.1" Language="en-US" Publisher="Rex Cardan, PhD" />
+    <DisplayName>ESAPIX 15.5 WPF Template</DisplayName>
     <Description xml:space="preserve">This is a starter WPF template for the Eclipse Scripting API Extension library (ESAPIX). It includes the basic setup for standalone and script plugins as well as MVVM structure design.</Description>
     <MoreInfo>https://rexcardan.github.io/ESAPIX/</MoreInfo>
     <GettingStartedGuide>https://rexcardan.github.io/ESAPIX/</GettingStartedGuide>
@@ -11,7 +11,7 @@
     <Tags>ESAPI</Tags>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
+    <InstallationTarget Version="[15.0,16.0)" Id="Microsoft.VisualStudio.Community" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
