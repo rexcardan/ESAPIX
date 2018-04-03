@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ESAPIX.Bootstrapper.Helpers
@@ -89,6 +90,11 @@ namespace ESAPIX.Bootstrapper.Helpers
                 return commandLineArgs.Skip(index+1).TakeWhile(k => !k.StartsWith("-")).ToArray();
             }
             return null;
+        }
+
+        public static string CurrentUserId(string[] commandLineArgs)
+        {
+            return GetSingle(commandLineArgs, ArgumentKey.CurrentUserId);
         }
     }
 }

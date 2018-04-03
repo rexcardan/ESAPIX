@@ -9,7 +9,7 @@ namespace ESAPIX.Bootstrapper.Helpers
         public static string Build(IScriptContext ctx)
         {
             var sb = new StringBuilder();
-            sb.Append($"{ArgumentKey.CurrentUser} {ctx.CurrentUser.Id} ");
+            sb.Append($"{ArgumentKey.CurrentUserId} {ctx.CurrentUser.Id} ");
 #if !VMS110
             if (!string.IsNullOrEmpty(ctx.ApplicationName))
             {

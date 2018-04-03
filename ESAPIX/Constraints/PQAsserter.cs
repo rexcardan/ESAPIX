@@ -92,7 +92,7 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="pi">the planing item</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsElectronFields(PlanningItem pi)
+        public PQAsserter ContainsOneOrMoreElectronBeams(PlanningItem pi)
         {
             var isPlanSetup = IsPlanSetup(pi).Results.Last();
             if (!isPlanSetup.IsSuccess)
@@ -106,7 +106,7 @@ namespace ESAPIX.Constraints
             var containsElectrons = ens.Any(e => e.EndsWith("E"));
 
             if (!containsElectrons)
-                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Must contain electron fields", string.Empty));
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Doesn't contain electron fields", string.Empty));
             else
                 Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
             return this;
@@ -271,6 +271,56 @@ namespace ESAPIX.Constraints
                   $"No beam is not of type {mType}", string.Empty));
             return this;
 
+        }
+
+        /// <summary>
+        /// Asserts the plan contains all fields of specified MLCPlanType
+        /// </summary>
+        /// <param name="mType">the MLC type which all beams must have</param>
+        /// <returns>the asserter object</returns>
+        public PQAsserter ContainsOneOrMorePhotonBeams(PlanningItem pi)
+        {
+            var isPlanSetup = IsPlanSetup(pi).Results.Last();
+            if (!isPlanSetup.IsSuccess)
+            {
+                Results.Add(isPlanSetup);
+                return this;
+            }
+
+            var ps = pi as PlanSetup;
+            var ens = ps.Beams.Select(b => b.EnergyModeDisplayName).ToList();
+            var containsPhotons = ens.Any(e => e.EndsWith("X"));
+
+            if (!containsPhotons)
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Doesn't contain photon fields", string.Empty));
+            else
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts the plan contains all fields of specified MLCPlanType
+        /// </summary>
+        /// <param name="mType">the MLC type which all beams must have</param>
+        /// <returns>the asserter object</returns>
+        public PQAsserter ContainsOneOrMoreProtonBeams(PlanningItem pi)
+        {
+            var isPlanSetup = IsPlanSetup(pi).Results.Last();
+            if (!isPlanSetup.IsSuccess)
+            {
+                Results.Add(isPlanSetup);
+                return this;
+            }
+
+            var ps = pi as PlanSetup;
+            var ens = ps.Beams.Select(b => b.EnergyModeDisplayName).ToList();
+            var containsProtons = ens.Any(e => e.EndsWith("P"));
+
+            if (!containsProtons)
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Doesn't contain photon fields", string.Empty));
+            else
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            return this;
         }
     }
 }

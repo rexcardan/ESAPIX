@@ -2,7 +2,7 @@
 {
     public class ArgumentKey
     {
-        public const string CurrentUser = "-u";
+        public const string CurrentUserId = "-u";
         public const string Course = "-c";
         public const string Image = "-i";
         public const string StructureSet = "-ss";
