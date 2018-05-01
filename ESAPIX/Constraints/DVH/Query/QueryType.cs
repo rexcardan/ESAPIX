@@ -3,9 +3,9 @@
     public enum QueryType
     {
         VOLUME_AT_DOSE,
-        COMPLIMENT_VOLUME,
+        COMPLEMENT_VOLUME,
         DOSE_AT_VOLUME,
-        DOSE_COMPLIMENT,
+        DOSE_COMPLEMENT,
         MEAN_DOSE,
         MIN_DOSE,
         MAX_DOSE

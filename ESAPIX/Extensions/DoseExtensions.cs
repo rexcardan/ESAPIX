@@ -1,5 +1,6 @@
 ﻿#region
 
+using ESAPIX.Facade.API;
 using System;
 using VMS.TPS.Common.Model.Types;
 
@@ -71,6 +72,44 @@ namespace ESAPIX.Extensions
             if (dv.Unit == DoseValue.DoseUnit.Gy && unit == DoseValue.DoseUnit.cGy)
                 return dv.Dose * 100;
             return double.NaN;
+        }
+
+        /// <summary>
+        /// Converts the dose to the unit requested. It cannot convert from % to abs dose. Will return NaN if asked
+        /// </summary>
+        /// <param name="dv">the dose value to be converted</param>
+        /// <param name="unit">the unit desired for the returned dose</param>
+        /// <returns>the dose in the desired units</returns>
+        public static DoseValue ConvertUnits(this DoseValue dv, DoseValue.DoseUnit unit)
+        {
+            var dose = dv.GetDose(unit);
+            return new DoseValue(dose, unit);
+        }
+
+        /// <summary>
+        /// Converts the dose to the system units. It cannot convert from % to abs dose. Will return NaN if asked
+        /// </summary>
+        /// <param name="dv">the dose value to be converted</param>
+        /// <param name="unit">the unit desired for the returned dose</param>
+        /// <returns>the dose in the desired units</returns>
+        public static DoseValue ConvertToSystemUnits(this DoseValue dv, PlanningItem pi)
+        {
+            var newDv = new DoseValue(dv.Dose, dv.Unit);
+            if (dv.GetPresentation() != DoseValuePresentation.Relative)
+            {
+                // Need to convert to system units first (ugh!)
+                var oldPresentation = pi.DoseValuePresentation;
+                pi.DoseValuePresentation = DoseValuePresentation.Absolute;
+                if (pi?.Dose != null)
+                {
+                    var systemUnits = pi.Dose.DoseMax3D.Unit;
+                    pi.DoseValuePresentation = oldPresentation;
+                    //Thanks ESAPIX!
+                    newDv = dv.ConvertUnits(systemUnits);
+                }
+                throw new Exception("Cannot determine system units for dose. Plan dose is null");
+            }
+            return newDv;
         }
 
         #region COMPARISONS

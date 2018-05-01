@@ -6,9 +6,9 @@ using VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Constraints.DVH
 {
-    public class MinComplimentVolumeAtDose : ComplimentVolumeAtDoseConstraint
+    public class MinComplementVolumeAtDose : ComplementVolumeAtDoseConstraint
     {
-        public MinComplimentVolumeAtDose()
+        public MinComplementVolumeAtDose()
         {
             PassingFunc = vol => { return vol >= Volume ? ResultType.PASSED : GetFailedResultType(); };
         }

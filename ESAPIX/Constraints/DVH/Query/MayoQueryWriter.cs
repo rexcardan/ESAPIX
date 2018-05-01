@@ -21,9 +21,9 @@ namespace ESAPIX.Constraints.DVH.Query
         {
             switch (queryType)
             {
-                case QueryType.COMPLIMENT_VOLUME: return "CV";
+                case QueryType.COMPLEMENT_VOLUME: return "CV";
                 case QueryType.DOSE_AT_VOLUME: return "D";
-                case QueryType.DOSE_COMPLIMENT: return "DC";
+                case QueryType.DOSE_COMPLEMENT: return "DC";
                 case QueryType.MAX_DOSE: return "MAX";
                 case QueryType.MEAN_DOSE: return "MEAN";
                 case QueryType.MIN_DOSE: return "MIN";

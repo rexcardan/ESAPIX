@@ -53,10 +53,10 @@ namespace ESAPIX.Constraints.DVH.Query
             if (!match.Success) throw new ArgumentException($"Not a valid query type {query}!");
             switch (match.Value)
             {
-                case "DC": return QueryType.DOSE_COMPLIMENT;
+                case "DC": return QueryType.DOSE_COMPLEMENT;
                 case "V": return QueryType.VOLUME_AT_DOSE;
                 case "D": return QueryType.DOSE_AT_VOLUME;
-                case "CV": return QueryType.COMPLIMENT_VOLUME;
+                case "CV": return QueryType.COMPLEMENT_VOLUME;
                 case "Min": return QueryType.MIN_DOSE;
                 case "Max": return QueryType.MAX_DOSE;
                 case "Mean": return QueryType.MEAN_DOSE;

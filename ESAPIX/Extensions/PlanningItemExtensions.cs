@@ -297,7 +297,7 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        ///     Return the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the
+        ///     Return the Complement dose (coldspot) for a given volume. This is equivalent to taking the total volume of the
         ///     object and subtracting the input volume
         /// </summary>
         /// <param name="i">the current planning item</param>
@@ -306,25 +306,25 @@ namespace ESAPIX.Extensions
         /// <param name="vPres">the volume presentation of the input volume</param>
         /// <param name="dPres">the dose presentation to return</param>
         /// <returns>Return the coldspot dose for a given volume.</returns>
-        public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, IEnumerable<Structure> ss, double volume,
+        public static DoseValue GetDoseComplementAtVolume(this PlanningItem i, IEnumerable<Structure> ss, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
             if (i is PlanSetup)
             {
                 var plan = i as PlanSetup;
                 var dvh = plan.GetComplexDVH(ss, vPres, dPres);
-                return dvh.GetDoseCompliment(volume);
+                return dvh.GetDoseComplement(volume);
             }
             else
             {
                 var plan = i as PlanSum;
                 var dvh = plan.GetComplexDVH(ss, vPres, dPres);
-                return dvh.GetDoseCompliment(volume);
+                return dvh.GetDoseComplement(volume);
             }
         }
 
         /// <summary>
-        ///     Return the compliment dose (coldspot) for a given volume. This is equivalent to taking the total volume of the
+        ///     Return the Complement dose (coldspot) for a given volume. This is equivalent to taking the total volume of the
         ///     object and subtracting the input volume
         /// </summary>
         /// <param name="i">the current planning item</param>
@@ -333,10 +333,10 @@ namespace ESAPIX.Extensions
         /// <param name="vPres">the volume presentation of the input volume</param>
         /// <param name="dPres">the dose presentation to return</param>
         /// <returns>Return the coldspot dose for a given volume.</returns>
-        public static DoseValue GetDoseComplimentAtVolume(this PlanningItem i, Structure s, double volume,
+        public static DoseValue GetDoseComplementAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseComplimentAtVolume(new[] {s}, volume, vPres, dPres);
+            return i.GetDoseComplementAtVolume(new[] {s}, volume, vPres, dPres);
         }
 
         #endregion
@@ -353,39 +353,42 @@ namespace ESAPIX.Extensions
         /// <returns>the volume at the requested presentation</returns>
         public static double GetVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv, VolumePresentation vPres)
         {
+            dv = dv.ConvertToSystemUnits(pi);
             var dPres = dv.GetPresentation();
             var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
             return dvhCurve.GetVolumeAtDose(dv);
         }
 
         /// <summary>
-        ///     Returns the compliment volume of the input structure at a given input dose
+        ///     Returns the Complement volume of the input structure at a given input dose
         /// </summary>
         /// <param name="pi">the current planning item</param>
         /// <param name="s">the structure to query</param>
         /// <param name="dv">the dose value to query</param>
         /// <param name="vPres">the volume presentation to return</param>
         /// <returns>the volume at the requested presentation</returns>
-        public static double GetComplimentVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv,
+        public static double GetComplementVolumeAtDose(this PlanningItem pi, Structure s, DoseValue dv,
             VolumePresentation vPres)
         {
+            dv = dv.ConvertToSystemUnits(pi);
             var dPres = dv.GetPresentation();
             var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
-            return dvhCurve.GetComplimentVolumeAtDose(dv);
+            return dvhCurve.GetComplementVolumeAtDose(dv);
         }
 
         /// <summary>
-        ///     Returns the sum of the compliment volumes across the input structures at a given input dose
+        ///     Returns the sum of the Complement volumes across the input structures at a given input dose
         /// </summary>
         /// <param name="pi">the current planning item</param>
         /// <param name="ss">the structures to query</param>
         /// <param name="dv">the dose value to query</param>
         /// <param name="vPres">the volume presentation to return</param>
         /// <returns>the volume at the requested presentation</returns>
-        public static double GetComplimentVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv,
+        public static double GetComplementVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv,
             VolumePresentation vPres)
         {
-            var vol = ss.Sum(s => pi.GetComplimentVolumeAtDose(s, dv, VolumePresentation.AbsoluteCm3));
+            dv = dv.ConvertToSystemUnits(pi);
+            var vol = ss.Sum(s => pi.GetComplementVolumeAtDose(s, dv, VolumePresentation.AbsoluteCm3));
             return vPres == VolumePresentation.AbsoluteCm3 ? vol : vol / ss.Sum(s => s.Volume) * 100;
         }
 
@@ -400,6 +403,7 @@ namespace ESAPIX.Extensions
         public static double GetVolumeAtDose(this PlanningItem pi, IEnumerable<Structure> ss, DoseValue dv,
             VolumePresentation vPres)
         {
+            dv = dv.ConvertToSystemUnits(pi);
             var vol = ss.Sum(s => pi.GetVolumeAtDose(s, dv, VolumePresentation.AbsoluteCm3));
             return vPres == VolumePresentation.AbsoluteCm3 ? vol : vol / ss.Sum(s => s.Volume)*100;
         }

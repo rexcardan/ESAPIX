@@ -24,9 +24,9 @@ namespace ESAPIX.Extensions
             switch (query.QueryType)
             {
                 case QueryType.DOSE_AT_VOLUME: return QueryDose(dvh, query);
-                case QueryType.DOSE_COMPLIMENT: return QueryDoseCompliment(dvh, query);
+                case QueryType.DOSE_COMPLEMENT: return QueryDoseComplement(dvh, query);
                 case QueryType.VOLUME_AT_DOSE: return QueryVolume(dvh, query);
-                case QueryType.COMPLIMENT_VOLUME: return QueryComplimentVolume(dvh, query);
+                case QueryType.COMPLEMENT_VOLUME: return QueryComplementVolume(dvh, query);
                 case QueryType.MAX_DOSE: return QueryMaxDose(dvh, query);
                 case QueryType.MEAN_DOSE: return QueryMeanDose(dvh, query);
                 case QueryType.MIN_DOSE: return QueryMinDose(dvh, query);
@@ -42,7 +42,7 @@ namespace ESAPIX.Extensions
         public static DoseValuePresentation GetDosePresentation(this MayoQuery query)
         {
             //If volume query return query unit to dose unit
-            if (query.QueryType == QueryType.COMPLIMENT_VOLUME ||
+            if (query.QueryType == QueryType.COMPLEMENT_VOLUME ||
                 query.QueryType == QueryType.VOLUME_AT_DOSE)
                 switch (query.QueryUnits)
                 {
@@ -68,7 +68,7 @@ namespace ESAPIX.Extensions
         public static DoseValue.DoseUnit GetDoseUnit(this MayoQuery query)
         {
             //If volume query return query unit to dose unit
-            if (query.QueryType == QueryType.COMPLIMENT_VOLUME ||
+            if (query.QueryType == QueryType.COMPLEMENT_VOLUME ||
                 query.QueryType == QueryType.VOLUME_AT_DOSE)
                 switch (query.QueryUnits)
                 {
@@ -94,7 +94,7 @@ namespace ESAPIX.Extensions
         public static VolumePresentation GetVolumePresentation(this MayoQuery query)
         {
             //If volume query return units desired to volume unit
-            if (query.QueryType == QueryType.COMPLIMENT_VOLUME ||
+            if (query.QueryType == QueryType.COMPLEMENT_VOLUME ||
                 query.QueryType == QueryType.VOLUME_AT_DOSE)
                 switch (query.UnitsDesired)
                 {
@@ -141,9 +141,9 @@ namespace ESAPIX.Extensions
             return mean.GetDose(doseUnit);
         }
 
-        private static double QueryDoseCompliment(DVHPoint[] dvh, MayoQuery query)
+        private static double QueryDoseComplement(DVHPoint[] dvh, MayoQuery query)
         {
-            var dose = dvh.GetDoseCompliment(query.QueryValue);
+            var dose = dvh.GetDoseComplement(query.QueryValue);
             var doseUnit = query.GetDoseUnit();
             return dose.GetDose(doseUnit);
         }
@@ -155,11 +155,11 @@ namespace ESAPIX.Extensions
             return dvh.GetVolumeAtDose(doseValue);
         }
 
-        private static double QueryComplimentVolume(DVHPoint[] dvh, MayoQuery query)
+        private static double QueryComplementVolume(DVHPoint[] dvh, MayoQuery query)
         {
             var doseUnit = query.GetDoseUnit();
             var doseValue = new DoseValue(query.QueryValue, doseUnit);
-            return dvh.GetComplimentVolumeAtDose(doseValue);
+            return dvh.GetComplementVolumeAtDose(doseValue);
         }
     }
 }

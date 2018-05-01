@@ -35,11 +35,11 @@ namespace ESAPIX.DVH
                 case QueryType.VOLUME_AT_DOSE:
                     BuildVolumeAtDoseConstraint(mc, structureName, priority, out c);
                     break;
-                case QueryType.DOSE_COMPLIMENT:
-                    BuildDoseComplimentConstraint(mc, structureName, priority, out c);
+                case QueryType.DOSE_COMPLEMENT:
+                    BuildDoseComplementConstraint(mc, structureName, priority, out c);
                     break;
-                case QueryType.COMPLIMENT_VOLUME:
-                    BuildComplimentVolumeConstraint(mc, structureName, priority, out c);
+                case QueryType.COMPLEMENT_VOLUME:
+                    BuildComplementVolumeConstraint(mc, structureName, priority, out c);
                     break;
             }
             return c;
@@ -158,7 +158,7 @@ namespace ESAPIX.DVH
             }
         }
 
-        private static void BuildComplimentVolumeConstraint(MayoConstraint mc, string structureName,
+        private static void BuildComplementVolumeConstraint(MayoConstraint mc, string structureName,
             PriorityType priority, out IConstraint c)
         {
             var dose = mc.Query.QueryValue;
@@ -171,7 +171,7 @@ namespace ESAPIX.DVH
                 case Discriminator.EQUAL:
                 case Discriminator.GREATER_THAN:
                 case Discriminator.GREATHER_THAN_OR_EQUAL:
-                    c = new MinComplimentVolumeAtDose
+                    c = new MinComplementVolumeAtDose
                     {
                         ConstraintDose = dv,
                         Priority = priority,
@@ -182,7 +182,7 @@ namespace ESAPIX.DVH
                     break;
                 case Discriminator.LESS_THAN:
                 case Discriminator.LESS_THAN_OR_EQUAL:
-                    c = new MaxComplimentVolumeAtDose
+                    c = new MaxComplementVolumeAtDose
                     {
                         ConstraintDose = dv,
                         Priority = priority,
@@ -197,7 +197,7 @@ namespace ESAPIX.DVH
             }
         }
 
-        private static void BuildDoseComplimentConstraint(MayoConstraint mc, string structureName,
+        private static void BuildDoseComplementConstraint(MayoConstraint mc, string structureName,
             PriorityType priority, out IConstraint c)
         {
             var volume = mc.Query.QueryValue;
@@ -210,7 +210,7 @@ namespace ESAPIX.DVH
                 case Discriminator.EQUAL:
                 case Discriminator.GREATER_THAN:
                 case Discriminator.GREATHER_THAN_OR_EQUAL:
-                    c = new MinComplimentDoseAtVolumeConstraint
+                    c = new MinComplementDoseAtVolumeConstraint
                     {
                         ConstraintDose = dv,
                         Priority = priority,
@@ -221,7 +221,7 @@ namespace ESAPIX.DVH
                     break;
                 case Discriminator.LESS_THAN:
                 case Discriminator.LESS_THAN_OR_EQUAL:
-                    c = new MaxComplimentDoseAtVolumeConstraint
+                    c = new MaxComplementDoseAtVolumeConstraint
                     {
                         ConstraintDose = dv,
                         Priority = priority,

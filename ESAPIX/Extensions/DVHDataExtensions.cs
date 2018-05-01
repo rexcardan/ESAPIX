@@ -40,12 +40,12 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        ///     Gets the compliment volume (volume about a certain dose point) for the structure dvh
+        ///     Gets the Complement volume (volume about a certain dose point) for the structure dvh
         /// </summary>
         /// <param name="dvh">the dose volume histogram for this structure</param>
         /// <param name="dv">the dose value to sample the curve</param>
         /// <returns></returns>
-        public static double GetComplimentVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
+        public static double GetComplementVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
         {
             var maxVol = dvh.Max(d => d.Volume);
             var normalVolume = dvh.GetVolumeAtDose(dv);
@@ -102,13 +102,13 @@ namespace ESAPIX.Extensions
         }
 
         /// <summary>
-        ///     Gets the compliment dose for the specified volume (the cold spot). Calculated by taking the total volume and
+        ///     Gets the Complement dose for the specified volume (the cold spot). Calculated by taking the total volume and
         ///     subtracting the input volume.
         /// </summary>
         /// <param name="dvh">the dvhPoint array that is queried</param>
         /// <param name="volume">the volume in the same units as the DVH curve</param>
         /// <returns>the cold spot dose at the specified volume</returns>
-        public static DoseValue GetDoseCompliment(this DVHPoint[] dvh, double volume)
+        public static DoseValue GetDoseComplement(this DVHPoint[] dvh, double volume)
         {
             var maxVol = dvh.Max(d => d.Volume);
             var volOfInterest = maxVol - volume;

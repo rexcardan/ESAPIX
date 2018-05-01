@@ -12,12 +12,12 @@ using VMS.TPS.Common.Model.Types;
 namespace ESAPIX.Constraints.DVH
 {
     /// <summary>
-    ///     Encapsulates the compliment volume (cold spot) of a structure. Volume compliment is the volume which recieves equal
+    ///     Encapsulates the Complement volume (cold spot) of a structure. Volume Complement is the volume which recieves equal
     ///     or
     ///     LESS than the constraint dose. This is equivalent to STRUCTURE volume - VolumeAtDose(). Represents the amount of
     ///     tissue spared
     /// </summary>
-    public abstract class ComplimentVolumeAtDoseConstraint : DoseStructureConstraint
+    public abstract class ComplementVolumeAtDoseConstraint : DoseStructureConstraint
     {
         public double Volume { get; set; }
         public VolumePresentation VolumeType { get; set; }
@@ -33,10 +33,10 @@ namespace ESAPIX.Constraints.DVH
         /// </summary>
         /// <param name="pi">the planning item containing the dose to be queried</param>
         /// <returns>the dose value at the volume of this constraint</returns>
-        public double GetComplimentVolumeAtDose(PlanningItem pi)
+        public double GetComplementVolumeAtDose(PlanningItem pi)
         {
             var structures = StructureNames.Select(s => pi.GetStructure(s));
-            var volAtDose = pi.GetComplimentVolumeAtDose(structures, ConstraintDose, VolumeType);
+            var volAtDose = pi.GetComplementVolumeAtDose(structures, ConstraintDose, VolumeType);
             return volAtDose;
         }
 
@@ -45,14 +45,14 @@ namespace ESAPIX.Constraints.DVH
             var msg = string.Empty;
             var passed = GetFailedResultType();
 
-            var volAtDose = GetComplimentVolumeAtDose(pi);
+            var volAtDose = GetComplementVolumeAtDose(pi);
             passed = PassingFunc(volAtDose);
 
             var stringUnit = VolumeType == VolumePresentation.AbsoluteCm3 ? "CC" : "%";
             var val = $"{volAtDose.ToString("F3")} {stringUnit}";
 
             msg =
-                $"Compliment volume of {StructureName} at {ConstraintDose.Dose} {ConstraintDose.UnitAsString} was {val}.";
+                $"Complement volume of {StructureName} at {ConstraintDose.Dose} {ConstraintDose.UnitAsString} was {val}.";
             return new ConstraintResult(this, passed, msg, val);
         }
     }
