@@ -53,6 +53,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.Id = (value));
+                }
             }
         }
 
@@ -94,6 +99,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.PlanNormalizationValue = (value));
                 }
             }
         }
@@ -2336,6 +2346,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.UseGating = (value));
                 }
             }
         }

@@ -53,6 +53,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.FillAllCavities = (value));
+                }
             }
         }
 
@@ -94,6 +99,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.KeepLargestParts = (value));
                 }
             }
         }
@@ -137,6 +147,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.LowerHUThreshold = (value));
+                }
             }
         }
 
@@ -178,6 +193,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.MREdgeThresholdHigh = (value));
                 }
             }
         }
@@ -221,6 +241,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.MREdgeThresholdLow = (value));
+                }
             }
         }
 
@@ -262,6 +287,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.NumberOfLargestPartsToKeep = (value));
                 }
             }
         }
@@ -305,6 +335,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.PreCloseOpenings = (value));
+                }
             }
         }
 
@@ -346,6 +381,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.PreCloseOpeningsRadius = (value));
                 }
             }
         }
@@ -389,6 +429,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.PreDisconnect = (value));
+                }
             }
         }
 
@@ -430,6 +475,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.PreDisconnectRadius = (value));
                 }
             }
         }
@@ -473,6 +523,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.Smoothing = (value));
+                }
             }
         }
 
@@ -514,6 +569,11 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
+                }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.SmoothingLevel = (value));
                 }
             }
         }

@@ -35,7 +35,7 @@ namespace ESAPIX.Facade.API
                     }
                     else
                     {
-                        return default(ESAPIX.Facade.API.User);
+                        return default (ESAPIX.Facade.API.User);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
@@ -56,7 +56,7 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
-                    return default(ESAPIX.Facade.API.User);
+                    return default (ESAPIX.Facade.API.User);
                 }
             }
 
@@ -84,7 +84,7 @@ namespace ESAPIX.Facade.API
                     }
                     else
                     {
-                        return default(ESAPIX.Facade.API.Course);
+                        return default (ESAPIX.Facade.API.Course);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
@@ -105,7 +105,7 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
-                    return default(ESAPIX.Facade.API.Course);
+                    return default (ESAPIX.Facade.API.Course);
                 }
             }
 
@@ -133,7 +133,7 @@ namespace ESAPIX.Facade.API
                     }
                     else
                     {
-                        return default(ESAPIX.Facade.API.Image);
+                        return default (ESAPIX.Facade.API.Image);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
@@ -154,7 +154,7 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
-                    return default(ESAPIX.Facade.API.Image);
+                    return default (ESAPIX.Facade.API.Image);
                 }
             }
 
@@ -182,7 +182,7 @@ namespace ESAPIX.Facade.API
                     }
                     else
                     {
-                        return default(ESAPIX.Facade.API.StructureSet);
+                        return default (ESAPIX.Facade.API.StructureSet);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
@@ -203,7 +203,7 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
-                    return default(ESAPIX.Facade.API.StructureSet);
+                    return default (ESAPIX.Facade.API.StructureSet);
                 }
             }
 
@@ -231,7 +231,7 @@ namespace ESAPIX.Facade.API
                     }
                     else
                     {
-                        return default(ESAPIX.Facade.API.Patient);
+                        return default (ESAPIX.Facade.API.Patient);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
@@ -252,7 +252,7 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
-                    return default(ESAPIX.Facade.API.Patient);
+                    return default (ESAPIX.Facade.API.Patient);
                 }
             }
 
@@ -280,7 +280,7 @@ namespace ESAPIX.Facade.API
                     }
                     else
                     {
-                        return default(ESAPIX.Facade.API.PlanSetup);
+                        return default (ESAPIX.Facade.API.PlanSetup);
                     }
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
@@ -301,7 +301,7 @@ namespace ESAPIX.Facade.API
                 }
                 else
                 {
-                    return default(ESAPIX.Facade.API.PlanSetup);
+                    return default (ESAPIX.Facade.API.PlanSetup);
                 }
             }
 
@@ -439,18 +439,6 @@ namespace ESAPIX.Facade.API
             _client = (client);
         }
 
-        public ScriptContext(System.Object context, System.Object user)
-        {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-#if !VMS110
-                _client = (VMSConstructor.ConstructScriptContextFunc0(context, user));
-#endif
-            }
-            else
-            {
-                throw new Exception("There is no VMS Context to create the class");
-            }
-        }
+       
     }
 }

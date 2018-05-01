@@ -207,6 +207,11 @@ namespace ESAPIX.Facade.API
                 else
                 {
                 }
+
+                if ((XC.Instance.CurrentContext) != (null))
+                {
+                    XC.Instance.CurrentContext.Thread.Invoke(() => _client.NumberOfIMRTOptimizerIterations = (value));
+                }
             }
         }
 

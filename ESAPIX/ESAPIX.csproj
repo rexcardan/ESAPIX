@@ -1,813 +1,813 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{3C5FDD1E-FC04-4C21-BBFF-DFE3C584B729}</ProjectGuid>
-		<OutputType>Library</OutputType>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>ESAPIX</RootNamespace>
-		<AssemblyName>ESAPIX</AssemblyName>
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-		<TargetFrameworkProfile />
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\x64\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-		<OutputPath>bin\x64\Release\</OutputPath>
-		<DefineConstants>TRACE;VMS150</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-DEBUG|x64'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\x64\15.0-DEBUG\</OutputPath>
-		<DefineConstants>TRACE;DEBUG;VMS150</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-DEBUG|x64'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\x64\15.1-DEBUG\</OutputPath>
-		<DefineConstants>TRACE;DEBUG;VMS151</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-DEBUG|x64'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\x64\15.5-DEBUG\</OutputPath>
-		<DefineConstants>TRACE;DEBUG;VMS155</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-RELEASE|x64'">
-		<OutputPath>bin\x64\15.0-RELEASE\</OutputPath>
-		<DefineConstants>TRACE;VMS150</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-RELEASE|x64'">
-		<OutputPath>bin\x64\15.1-RELEASE\</OutputPath>
-		<DefineConstants>TRACE;VMS151</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-RELEASE|x64'">
-		<OutputPath>bin\x64\15.5-RELEASE\</OutputPath>
-		<DefineConstants>TRACE;VMS155</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-DEBUG|x64'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\x64\13.6-DEBUG\</OutputPath>
-		<DefineConstants>TRACE;DEBUG;VMS136</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-RELEASE|x64'">
-		<OutputPath>bin\x64\13.6-RELEASE\</OutputPath>
-		<DefineConstants>TRACE;VMS136</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-DEBUG|x64'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\x64\13.7-DEBUG\</OutputPath>
-		<DefineConstants>TRACE;DEBUG;VMS137</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-RELEASE|x64'">
-		<OutputPath>bin\x64\13.7-RELEASE\</OutputPath>
-		<DefineConstants>TRACE;VMS137</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-DEBUG|x64'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\x64\11.0-DEBUG\</OutputPath>
-		<DefineConstants>TRACE;DEBUG;VMS110</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-RELEASE|x64'">
-		<OutputPath>bin\x64\11.0-RELEASE\</OutputPath>
-		<DefineConstants>TRACE;VMS110</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-			<HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-		</Reference>
-		<Reference Include="PresentationCore" />
-		<Reference Include="PresentationFramework" />
-		<Reference Include="System" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Runtime.Serialization" />
-		<Reference Include="System.Windows.Forms" />
-		<Reference Include="System.Xaml" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Xml" />
-		<Reference Include="WindowsBase" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Common\AppComThread.cs" />
-		<Compile Include="Common\ConsoleSyncContext.cs" />
-		<Compile Include="Common\OfflineContext.cs" />
-		<Compile Include="Common\PluginContext.cs" />
-		<Compile Include="Common\ScriptComThread.cs" />
-		<Compile Include="Common\StandAloneContext.cs" />
-		<Compile Include="Constraints\AbstractPlanQualityConstraint.cs" />
-		<Compile Include="Constraints\DVH\ComplimentDoseAtVolumeConstraint.cs" />
-		<Compile Include="Constraints\DVH\ComplimentVolumeAtDoseConstraint.cs" />
-		<Compile Include="Constraints\ConstraintResult.cs" />
-		<Compile Include="Constraints\DVH\DoseAtVolumeConstraint.cs" />
-		<Compile Include="Constraints\DVH\DoseStructureConstraint.cs" />
-		<Compile Include="Constraints\TargetStat.cs" />
-		<Compile Include="Constraints\TargetStats.cs" />
-		<Compile Include="Constraints\IConstraint.cs" />
-		<Compile Include="Constraints\IPriorityConstraint.cs" />
-		<Compile Include="Constraints\DVH\MaxComplimentDoseAtVolumeConstraint.cs" />
-		<Compile Include="Constraints\DVH\MaxComplimentVolumeAtDose.cs" />
-		<Compile Include="Constraints\DVH\MaxDoseAtVolConstraint.cs" />
-		<Compile Include="Constraints\DVH\MaxDoseConstraint.cs" />
-		<Compile Include="Constraints\DVH\MaxMeanDoseConstraint.cs" />
-		<Compile Include="Constraints\DVH\MaxVolAtDoseConstraint.cs" />
-		<Compile Include="Constraints\DVH\MinComplimentDoseAtVolumeConstraint.cs" />
-		<Compile Include="Constraints\DVH\MinComplimentVolumeAtDose.cs" />
-		<Compile Include="Constraints\DVH\MinDoseAtVolConstraint.cs" />
-		<Compile Include="Constraints\DVH\MinDoseConstraint.cs" />
-		<Compile Include="Constraints\DVH\MinMeanDoseConstraint.cs" />
-		<Compile Include="Constraints\DVH\MinVolAtDoseConstraint.cs" />
-		<Compile Include="Constraints\NFractionConstraint.cs" />
-		<Compile Include="Constraints\OrConstraint.cs" />
-		<Compile Include="Constraints\PQAsserter.cs" />
-		<Compile Include="Constraints\PriorityType.cs" />
-		<Compile Include="Constraints\ResultType.cs" />
-		<Compile Include="Constraints\StructureNameConstraint.cs" />
-		<Compile Include="Constraints\DVH\VolumeAtDoseConstraint.cs" />
-		<Compile Include="Constraints\DVH\Query\DiscriminatorConverter.cs" />
-		<Compile Include="Constraints\DVH\Query\MayoConstraintConverter.cs" />
-		<Compile Include="Constraints\PriorityConverter.cs" />
-		<Compile Include="Exceptions\ScriptException.cs" />
-		<Compile Include="Extensions\ExceptionExtensions.cs" />
-		<Compile Include="Extensions\ExpandoExtensions.cs" />
-		<Compile Include="Extensions\QueryExtensions.cs" />
-		<Compile Include="Constraints\DVH\Query\Discriminator.cs" />
-		<Compile Include="Constraints\DVH\Query\MayoConstraint.cs" />
-		<Compile Include="Constraints\DVH\Query\MayoQuery.cs" />
-		<Compile Include="Constraints\DVH\Query\MayoQueryReader.cs" />
-		<Compile Include="Constraints\DVH\Query\MayoQueryWriter.cs" />
-		<Compile Include="Constraints\DVH\Query\MayoRegex.cs" />
-		<Compile Include="Constraints\DVH\Query\QueryType.cs" />
-		<Compile Include="Constraints\DVH\Query\Units.cs" />
-		<Compile Include="Extensions\ArrayExtensions.cs" />
-		<Compile Include="Extensions\DoseExtensions.cs" />
-		<Compile Include="Extensions\DVHDataExtensions.cs" />
-		<Compile Include="Extensions\ImageExtensions.cs" />
-		<Compile Include="Extensions\ListExtensions.cs" />
-		<Compile Include="Extensions\PlanningItemExtensions.cs" />
-		<Compile Include="Extensions\PlanSetupExtensions.cs" />
-		<Compile Include="Extensions\PlanSumExtensions.cs" />
-		<Compile Include="Extensions\SerializationExtensions.cs" />
-		<Compile Include="Extensions\StringExtensions.cs" />
-		<Compile Include="Extensions\StructureExtensions.cs" />
-		<Compile Include="Extensions\VVectorExtensions.cs" />
-		<Compile Include="Facade\DefaultHelper.cs" />
-		<Compile Include="Facade\ExpandoGetter.cs" />
-		<Compile Include="Facade\Serialization\ControlPointCollectionConverter.cs" />
-		<Compile Include="Facade\Serialization\DoseProfileConverter.cs" />
-		<Compile Include="Facade\Serialization\DoseValueConverter.cs" />
-		<Compile Include="Facade\Serialization\DVHPointConverter.cs" />
-		<Compile Include="Facade\Serialization\ESAPIContractResolver.cs" />
-		<Compile Include="Facade\Serialization\FacadeSerializer.cs" />
-		<Compile Include="Facade\Serialization\MeshGeometryConverter.cs" />
-		<Compile Include="Facade\Serialization\ProfilePointConverter.cs" />
-		<Compile Include="Facade\Serialization\StructureCodeInfoConverter.cs" />
-		<Compile Include="Facade\StaticHelper.cs" />
-		<Compile Include="Facade\VMSConstructor.cs" />
-		<Compile Include="Helpers\FileHelper.cs" />
-		<Compile Include="Facade\Serialization\IEnumerableJsonConverter.cs" />
-		<Compile Include="Helpers\MagicStrings.cs" />
-		<Compile Include="Helpers\MathHelper.cs" />
-		<Compile Include="Interfaces\IScriptContext.cs" />
-		<Compile Include="Interfaces\ISecureStorable.cs" />
-		<Compile Include="Interfaces\IVMSThread.cs" />
-		<Compile Include="Logging\Logger.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Compile Include="Facade\XContext.cs" />
-		<Compile Include="Properties\Resources.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DesignTime>True</DesignTime>
-			<DependentUpon>Resources.resx</DependentUpon>
-		</Compile>
-	</ItemGroup>
-	<ItemGroup Condition="'$(Configuration)' == '11.0-DEBUG' Or '$(Configuration)' == '11.0-RELEASE'">
-		<Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\11.0\VMS.TPS.Common.Model.Types.dll</HintPath>
-		</Reference>
-		<Compile Include="Facade\API11.0\AddOn.cs" />
-		<Compile Include="Facade\API11.0\AddOnMaterial.cs" />
-		<Compile Include="Facade\API11.0\ApiDataObject.cs" />
-		<Compile Include="Facade\API11.0\Application.cs" />
-		<Compile Include="Facade\API11.0\Applicator.cs" />
-		<Compile Include="Facade\API11.0\Beam.cs" />
-		<Compile Include="Facade\API11.0\BeamCalculationLog.cs" />
-		<Compile Include="Facade\API11.0\Block.cs" />
-		<Compile Include="Facade\API11.0\Bolus.cs" />
-		<Compile Include="Facade\API11.0\Compensator.cs" />
-		<Compile Include="Facade\API11.0\ControlPoint.cs" />
-		<Compile Include="Facade\API11.0\ControlPointCollection.cs" />
-		<Compile Include="Facade\API11.0\Course.cs" />
-		<Compile Include="Facade\API11.0\Dose.cs" />
-		<Compile Include="Facade\API11.0\DVHData.cs" />
-		<Compile Include="Facade\API11.0\ExternalBeam.cs" />
-		<Compile Include="Facade\API11.0\FieldReferencePoint.cs" />
-		<Compile Include="Facade\API11.0\Fractionation.cs" />
-		<Compile Include="Facade\API11.0\Hospital.cs" />
-		<Compile Include="Facade\API11.0\Image.cs" />
-		<Compile Include="Facade\API11.0\Isodose.cs" />
-		<Compile Include="Facade\API11.0\MLC.cs" />
-		<Compile Include="Facade\API11.0\Patient.cs" />
-		<Compile Include="Facade\API11.0\PatientSummary.cs" />
-		<Compile Include="Facade\API11.0\PlanningItem.cs" />
-		<Compile Include="Facade\API11.0\PlanSetup.cs" />
-		<Compile Include="Facade\API11.0\PlanSum.cs" />
-		<Compile Include="Facade\API11.0\ReferencePoint.cs" />
-		<Compile Include="Facade\API11.0\Registration.cs" />
-		<Compile Include="Facade\API11.0\ScriptContext.cs" />
-		<Compile Include="Facade\API11.0\SerializableObject.cs" />
-		<Compile Include="Facade\API11.0\Series.cs" />
-		<Compile Include="Facade\API11.0\Slot.cs" />
-		<Compile Include="Facade\API11.0\Structure.cs" />
-		<Compile Include="Facade\API11.0\StructureSet.cs" />
-		<Compile Include="Facade\API11.0\Study.cs" />
-		<Compile Include="Facade\API11.0\Technique.cs" />
-		<Compile Include="Facade\API11.0\Tray.cs" />
-		<Compile Include="Facade\API11.0\User.cs" />
-		<Compile Include="Facade\API11.0\Wedge.cs" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(Configuration)' == '13.6-DEBUG' Or '$(Configuration)' == '13.6-RELEASE'">
-		<Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.6\VMS.TPS.Common.Model.Types.dll</HintPath>
-		</Reference>
-		<Compile Include="Facade\API13.6\AddOn.cs" />
-		<Compile Include="Facade\API13.6\AddOnMaterial.cs" />
-		<Compile Include="Facade\API13.6\ApiDataObject.cs" />
-		<Compile Include="Facade\API13.6\Application.cs" />
-		<Compile Include="Facade\API13.6\Applicator.cs" />
-		<Compile Include="Facade\API13.6\Beam.cs" />
-		<Compile Include="Facade\API13.6\BeamCalculationLog.cs" />
-		<Compile Include="Facade\API13.6\BeamDose.cs" />
-		<Compile Include="Facade\API13.6\BeamParameters.cs" />
-		<Compile Include="Facade\API13.6\Block.cs" />
-		<Compile Include="Facade\API13.6\Bolus.cs" />
-		<Compile Include="Facade\API13.6\BrachyPlanSetup.cs" />
-		<Compile Include="Facade\API13.6\BrachySolidApplicator.cs" />
-		<Compile Include="Facade\API13.6\BrachyTreatmentUnit.cs" />
-		<Compile Include="Facade\API13.6\CalculationResult.cs" />
-		<Compile Include="Facade\API13.6\Catheter.cs" />
-		<Compile Include="Facade\API13.6\Compensator.cs" />
-		<Compile Include="Facade\API13.6\ControlPoint.cs" />
-		<Compile Include="Facade\API13.6\ControlPointCollection.cs" />
-		<Compile Include="Facade\API13.6\ControlPointParameters.cs" />
-		<Compile Include="Facade\API13.6\Course.cs" />
-		<Compile Include="Facade\API13.6\Diagnosis.cs" />
-		<Compile Include="Facade\API13.6\Dose.cs" />
-		<Compile Include="Facade\API13.6\DVHData.cs" />
-		<Compile Include="Facade\API13.6\EstimatedDVH.cs" />
-		<Compile Include="Facade\API13.6\EvaluationDose.cs" />
-		<Compile Include="Facade\API13.6\ExternalBeam.cs" />
-		<Compile Include="Facade\API13.6\ExternalBeamTreatmentUnit.cs" />
-		<Compile Include="Facade\API13.6\ExternalPlanSetup.cs" />
-		<Compile Include="Facade\API13.6\FieldReferencePoint.cs" />
-		<Compile Include="Facade\API13.6\Fractionation.cs" />
-		<Compile Include="Facade\API13.6\Hospital.cs" />
-		<Compile Include="Facade\API13.6\Image.cs" />
-		<Compile Include="Facade\API13.6\Isodose.cs" />
-		<Compile Include="Facade\API13.6\MLC.cs" />
-		<Compile Include="Facade\API13.6\OptimizationEUDObjective.cs" />
-		<Compile Include="Facade\API13.6\OptimizationIMRTBeamParameter.cs" />
-		<Compile Include="Facade\API13.6\OptimizationMeanDoseObjective.cs" />
-		<Compile Include="Facade\API13.6\OptimizationNormalTissueParameter.cs" />
-		<Compile Include="Facade\API13.6\OptimizationObjective.cs" />
-		<Compile Include="Facade\API13.6\OptimizationParameter.cs" />
-		<Compile Include="Facade\API13.6\OptimizationPointCloudParameter.cs" />
-		<Compile Include="Facade\API13.6\OptimizationPointObjective.cs" />
-		<Compile Include="Facade\API13.6\OptimizationSetup.cs" />
-		<Compile Include="Facade\API13.6\OptimizerDVH.cs" />
-		<Compile Include="Facade\API13.6\OptimizerObjectiveValue.cs" />
-		<Compile Include="Facade\API13.6\OptimizerResult.cs" />
-		<Compile Include="Facade\API13.6\Patient.cs" />
-		<Compile Include="Facade\API13.6\PatientSummary.cs" />
-		<Compile Include="Facade\API13.6\PlanningItem.cs" />
-		<Compile Include="Facade\API13.6\PlanningItemDose.cs" />
-		<Compile Include="Facade\API13.6\PlanSetup.cs" />
-		<Compile Include="Facade\API13.6\PlanSum.cs" />
-		<Compile Include="Facade\API13.6\PlanSumComponent.cs" />
-		<Compile Include="Facade\API13.6\RadioactiveSource.cs" />
-		<Compile Include="Facade\API13.6\RadioactiveSourceModel.cs" />
-		<Compile Include="Facade\API13.6\ReferencePoint.cs" />
-		<Compile Include="Facade\API13.6\Registration.cs" />
-		<Compile Include="Facade\API13.6\ScriptContext.cs" />
-		<Compile Include="Facade\API13.6\SeedCollection.cs" />
-		<Compile Include="Facade\API13.6\SegmentVolume.cs" />
-		<Compile Include="Facade\API13.6\SerializableObject.cs" />
-		<Compile Include="Facade\API13.6\Series.cs" />
-		<Compile Include="Facade\API13.6\Slot.cs" />
-		<Compile Include="Facade\API13.6\SourcePosition.cs" />
-		<Compile Include="Facade\API13.6\Structure.cs" />
-		<Compile Include="Facade\API13.6\StructureSet.cs" />
-		<Compile Include="Facade\API13.6\Study.cs" />
-		<Compile Include="Facade\API13.6\Technique.cs" />
-		<Compile Include="Facade\API13.6\Tray.cs" />
-		<Compile Include="Facade\API13.6\User.cs" />
-		<Compile Include="Facade\API13.6\Wedge.cs" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(Configuration)' == '13.7-DEBUG' Or '$(Configuration)' == '13.7-RELEASE'">
-		<Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.7\VMS.TPS.Common.Model.Types.dll</HintPath>
-		</Reference>
-		<Compile Include="Facade\API13.7\AddOn.cs" />
-		<Compile Include="Facade\API13.7\AddOnMaterial.cs" />
-		<Compile Include="Facade\API13.7\ApiDataObject.cs" />
-		<Compile Include="Facade\API13.7\Application.cs" />
-		<Compile Include="Facade\API13.7\Applicator.cs" />
-		<Compile Include="Facade\API13.7\Beam.cs" />
-		<Compile Include="Facade\API13.7\BeamCalculationLog.cs" />
-		<Compile Include="Facade\API13.7\BeamDose.cs" />
-		<Compile Include="Facade\API13.7\BeamParameters.cs" />
-		<Compile Include="Facade\API13.7\BeamUncertainty.cs" />
-		<Compile Include="Facade\API13.7\Block.cs" />
-		<Compile Include="Facade\API13.7\Bolus.cs" />
-		<Compile Include="Facade\API13.7\BrachyPlanSetup.cs" />
-		<Compile Include="Facade\API13.7\BrachySolidApplicator.cs" />
-		<Compile Include="Facade\API13.7\BrachyTreatmentUnit.cs" />
-		<Compile Include="Facade\API13.7\CalculationResult.cs" />
-		<Compile Include="Facade\API13.7\Catheter.cs" />
-		<Compile Include="Facade\API13.7\Compensator.cs" />
-		<Compile Include="Facade\API13.7\ControlPoint.cs" />
-		<Compile Include="Facade\API13.7\ControlPointCollection.cs" />
-		<Compile Include="Facade\API13.7\ControlPointParameters.cs" />
-		<Compile Include="Facade\API13.7\Course.cs" />
-		<Compile Include="Facade\API13.7\Diagnosis.cs" />
-		<Compile Include="Facade\API13.7\Dose.cs" />
-		<Compile Include="Facade\API13.7\DVHData.cs" />
-		<Compile Include="Facade\API13.7\EstimatedDVH.cs" />
-		<Compile Include="Facade\API13.7\EvaluationDose.cs" />
-		<Compile Include="Facade\API13.7\ExternalBeam.cs" />
-		<Compile Include="Facade\API13.7\ExternalBeamTreatmentUnit.cs" />
-		<Compile Include="Facade\API13.7\ExternalPlanSetup.cs" />
-		<Compile Include="Facade\API13.7\FieldReferencePoint.cs" />
-		<Compile Include="Facade\API13.7\Fractionation.cs" />
-		<Compile Include="Facade\API13.7\Hospital.cs" />
-		<Compile Include="Facade\API13.7\Image.cs" />
-		<Compile Include="Facade\API13.7\IonBeam.cs" />
-		<Compile Include="Facade\API13.7\IonBeamParameters.cs" />
-		<Compile Include="Facade\API13.7\IonControlPoint.cs" />
-		<Compile Include="Facade\API13.7\IonControlPointCollection.cs" />
-		<Compile Include="Facade\API13.7\IonControlPointPair.cs" />
-		<Compile Include="Facade\API13.7\IonControlPointPairCollection.cs" />
-		<Compile Include="Facade\API13.7\IonControlPointParameters.cs" />
-		<Compile Include="Facade\API13.7\IonPlanSetup.cs" />
-		<Compile Include="Facade\API13.7\IonSpot.cs" />
-		<Compile Include="Facade\API13.7\IonSpotCollection.cs" />
-		<Compile Include="Facade\API13.7\IonSpotParameters.cs" />
-		<Compile Include="Facade\API13.7\IonSpotParametersCollection.cs" />
-		<Compile Include="Facade\API13.7\Isodose.cs" />
-		<Compile Include="Facade\API13.7\LateralSpreadingDevice.cs" />
-		<Compile Include="Facade\API13.7\LateralSpreadingDeviceSettings.cs" />
-		<Compile Include="Facade\API13.7\MLC.cs" />
-		<Compile Include="Facade\API13.7\OptimizationEUDObjective.cs" />
-		<Compile Include="Facade\API13.7\OptimizationIMRTBeamParameter.cs" />
-		<Compile Include="Facade\API13.7\OptimizationMeanDoseObjective.cs" />
-		<Compile Include="Facade\API13.7\OptimizationNormalTissueParameter.cs" />
-		<Compile Include="Facade\API13.7\OptimizationObjective.cs" />
-		<Compile Include="Facade\API13.7\OptimizationParameter.cs" />
-		<Compile Include="Facade\API13.7\OptimizationPointCloudParameter.cs" />
-		<Compile Include="Facade\API13.7\OptimizationPointObjective.cs" />
-		<Compile Include="Facade\API13.7\OptimizationSetup.cs" />
-		<Compile Include="Facade\API13.7\OptimizerDVH.cs" />
-		<Compile Include="Facade\API13.7\OptimizerObjectiveValue.cs" />
-		<Compile Include="Facade\API13.7\OptimizerResult.cs" />
-		<Compile Include="Facade\API13.7\Patient.cs" />
-		<Compile Include="Facade\API13.7\PatientSummary.cs" />
-		<Compile Include="Facade\API13.7\PlanningItem.cs" />
-		<Compile Include="Facade\API13.7\PlanningItemDose.cs" />
-		<Compile Include="Facade\API13.7\PlanSetup.cs" />
-		<Compile Include="Facade\API13.7\PlanSum.cs" />
-		<Compile Include="Facade\API13.7\PlanSumComponent.cs" />
-		<Compile Include="Facade\API13.7\PlanUncertainty.cs" />
-		<Compile Include="Facade\API13.7\RadioactiveSource.cs" />
-		<Compile Include="Facade\API13.7\RadioactiveSourceModel.cs" />
-		<Compile Include="Facade\API13.7\RangeModulator.cs" />
-		<Compile Include="Facade\API13.7\RangeModulatorSettings.cs" />
-		<Compile Include="Facade\API13.7\RangeShifter.cs" />
-		<Compile Include="Facade\API13.7\RangeShifterSettings.cs" />
-		<Compile Include="Facade\API13.7\ReferencePoint.cs" />
-		<Compile Include="Facade\API13.7\Registration.cs" />
-		<Compile Include="Facade\API13.7\ScriptContext.cs" />
-		<Compile Include="Facade\API13.7\SeedCollection.cs" />
-		<Compile Include="Facade\API13.7\SegmentVolume.cs" />
-		<Compile Include="Facade\API13.7\SerializableObject.cs" />
-		<Compile Include="Facade\API13.7\Series.cs" />
-		<Compile Include="Facade\API13.7\Slot.cs" />
-		<Compile Include="Facade\API13.7\SourcePosition.cs" />
-		<Compile Include="Facade\API13.7\Structure.cs" />
-		<Compile Include="Facade\API13.7\StructureSet.cs" />
-		<Compile Include="Facade\API13.7\Study.cs" />
-		<Compile Include="Facade\API13.7\Technique.cs" />
-		<Compile Include="Facade\API13.7\Tray.cs" />
-		<Compile Include="Facade\API13.7\User.cs" />
-		<Compile Include="Facade\API13.7\Wedge.cs" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(Configuration)' == '15.0-DEBUG' Or '$(Configuration)' == '15.0-RELEASE'">
-		<Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.0\VMS.TPS.Common.Model.Types.dll</HintPath>
-		</Reference>
-		<Compile Include="Facade\API15.0\AddOn.cs" />
-		<Compile Include="Facade\API15.0\AddOnMaterial.cs" />
-		<Compile Include="Facade\API15.0\ApiDataObject.cs" />
-		<Compile Include="Facade\API15.0\Application.cs" />
-		<Compile Include="Facade\API15.0\ApplicationScript.cs" />
-		<Compile Include="Facade\API15.0\ApplicationScriptLog.cs" />
-		<Compile Include="Facade\API15.0\Applicator.cs" />
-		<Compile Include="Facade\API15.0\Beam.cs" />
-		<Compile Include="Facade\API15.0\BeamCalculationLog.cs" />
-		<Compile Include="Facade\API15.0\BeamDose.cs" />
-		<Compile Include="Facade\API15.0\BeamParameters.cs" />
-		<Compile Include="Facade\API15.0\BeamUncertainty.cs" />
-		<Compile Include="Facade\API15.0\Block.cs" />
-		<Compile Include="Facade\API15.0\Bolus.cs" />
-		<Compile Include="Facade\API15.0\BrachyPlanSetup.cs" />
-		<Compile Include="Facade\API15.0\BrachySolidApplicator.cs" />
-		<Compile Include="Facade\API15.0\BrachyTreatmentUnit.cs" />
-		<Compile Include="Facade\API15.0\CalculationResult.cs" />
-		<Compile Include="Facade\API15.0\Catheter.cs" />
-		<Compile Include="Facade\API15.0\Compensator.cs" />
-		<Compile Include="Facade\API15.0\ControlPoint.cs" />
-		<Compile Include="Facade\API15.0\ControlPointCollection.cs" />
-		<Compile Include="Facade\API15.0\ControlPointParameters.cs" />
-		<Compile Include="Facade\API15.0\Course.cs" />
-		<Compile Include="Facade\API15.0\Diagnosis.cs" />
-		<Compile Include="Facade\API15.0\Dose.cs" />
-		<Compile Include="Facade\API15.0\DVHData.cs" />
-		<Compile Include="Facade\API15.0\EstimatedDVH.cs" />
-		<Compile Include="Facade\API15.0\EvaluationDose.cs" />
-		<Compile Include="Facade\API15.0\ExternalBeamTreatmentUnit.cs" />
-		<Compile Include="Facade\API15.0\ExternalPlanSetup.cs" />
-		<Compile Include="Facade\API15.0\FieldReferencePoint.cs" />
-		<Compile Include="Facade\API15.0\Hospital.cs" />
-		<Compile Include="Facade\API15.0\Image.cs" />
-		<Compile Include="Facade\API15.0\IonBeam.cs" />
-		<Compile Include="Facade\API15.0\IonBeamParameters.cs" />
-		<Compile Include="Facade\API15.0\IonControlPoint.cs" />
-		<Compile Include="Facade\API15.0\IonControlPointCollection.cs" />
-		<Compile Include="Facade\API15.0\IonControlPointPair.cs" />
-		<Compile Include="Facade\API15.0\IonControlPointPairCollection.cs" />
-		<Compile Include="Facade\API15.0\IonControlPointParameters.cs" />
-		<Compile Include="Facade\API15.0\IonPlanSetup.cs" />
-		<Compile Include="Facade\API15.0\IonSpot.cs" />
-		<Compile Include="Facade\API15.0\IonSpotCollection.cs" />
-		<Compile Include="Facade\API15.0\IonSpotParameters.cs" />
-		<Compile Include="Facade\API15.0\IonSpotParametersCollection.cs" />
-		<Compile Include="Facade\API15.0\Isodose.cs" />
-		<Compile Include="Facade\API15.0\LateralSpreadingDevice.cs" />
-		<Compile Include="Facade\API15.0\LateralSpreadingDeviceSettings.cs" />
-		<Compile Include="Facade\API15.0\MLC.cs" />
-		<Compile Include="Facade\API15.0\OptimizationEUDObjective.cs" />
-		<Compile Include="Facade\API15.0\OptimizationIMRTBeamParameter.cs" />
-		<Compile Include="Facade\API15.0\OptimizationMeanDoseObjective.cs" />
-		<Compile Include="Facade\API15.0\OptimizationNormalTissueParameter.cs" />
-		<Compile Include="Facade\API15.0\OptimizationObjective.cs" />
-		<Compile Include="Facade\API15.0\OptimizationParameter.cs" />
-		<Compile Include="Facade\API15.0\OptimizationPointObjective.cs" />
-		<Compile Include="Facade\API15.0\OptimizationSetup.cs" />
-		<Compile Include="Facade\API15.0\OptimizerDVH.cs" />
-		<Compile Include="Facade\API15.0\OptimizerObjectiveValue.cs" />
-		<Compile Include="Facade\API15.0\OptimizerResult.cs" />
-		<Compile Include="Facade\API15.0\Patient.cs" />
-		<Compile Include="Facade\API15.0\PatientSummary.cs" />
-		<Compile Include="Facade\API15.0\PlanningItem.cs" />
-		<Compile Include="Facade\API15.0\PlanningItemDose.cs" />
-		<Compile Include="Facade\API15.0\PlanSetup.cs" />
-		<Compile Include="Facade\API15.0\PlanSum.cs" />
-		<Compile Include="Facade\API15.0\PlanSumComponent.cs" />
-		<Compile Include="Facade\API15.0\PlanUncertainty.cs" />
-		<Compile Include="Facade\API15.0\RadioactiveSource.cs" />
-		<Compile Include="Facade\API15.0\RadioactiveSourceModel.cs" />
-		<Compile Include="Facade\API15.0\RangeModulator.cs" />
-		<Compile Include="Facade\API15.0\RangeModulatorSettings.cs" />
-		<Compile Include="Facade\API15.0\RangeShifter.cs" />
-		<Compile Include="Facade\API15.0\RangeShifterSettings.cs" />
-		<Compile Include="Facade\API15.0\ReferencePoint.cs" />
-		<Compile Include="Facade\API15.0\Registration.cs" />
-		<Compile Include="Facade\API15.0\ScriptContext.cs" />
-		<Compile Include="Facade\API15.0\SeedCollection.cs" />
-		<Compile Include="Facade\API15.0\SegmentVolume.cs" />
-		<Compile Include="Facade\API15.0\SerializableObject.cs" />
-		<Compile Include="Facade\API15.0\Series.cs" />
-		<Compile Include="Facade\API15.0\Slot.cs" />
-		<Compile Include="Facade\API15.0\SourcePosition.cs" />
-		<Compile Include="Facade\API15.0\Structure.cs" />
-		<Compile Include="Facade\API15.0\StructureSet.cs" />
-		<Compile Include="Facade\API15.0\Study.cs" />
-		<Compile Include="Facade\API15.0\Technique.cs" />
-		<Compile Include="Facade\API15.0\Tray.cs" />
-		<Compile Include="Facade\API15.0\User.cs" />
-		<Compile Include="Facade\API15.0\Wedge.cs" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(Configuration)' == '15.1-DEBUG' Or '$(Configuration)' == '15.1-RELEASE'">
-		<Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.1\VMS.TPS.Common.Model.Types.dll</HintPath>
-		</Reference>
-		<Compile Include="Facade\API15.1\AddOn.cs" />
-		<Compile Include="Facade\API15.1\AddOnMaterial.cs" />
-		<Compile Include="Facade\API15.1\ApiDataObject.cs" />
-		<Compile Include="Facade\API15.1\Application.cs" />
-		<Compile Include="Facade\API15.1\ApplicationScript.cs" />
-		<Compile Include="Facade\API15.1\ApplicationScriptLog.cs" />
-		<Compile Include="Facade\API15.1\Applicator.cs" />
-		<Compile Include="Facade\API15.1\Beam.cs" />
-		<Compile Include="Facade\API15.1\BeamCalculationLog.cs" />
-		<Compile Include="Facade\API15.1\BeamDose.cs" />
-		<Compile Include="Facade\API15.1\BeamParameters.cs" />
-		<Compile Include="Facade\API15.1\BeamUncertainty.cs" />
-		<Compile Include="Facade\API15.1\Block.cs" />
-		<Compile Include="Facade\API15.1\Bolus.cs" />
-		<Compile Include="Facade\API15.1\BrachyFieldReferencePoint.cs" />
-		<Compile Include="Facade\API15.1\BrachyPlanSetup.cs" />
-		<Compile Include="Facade\API15.1\BrachySolidApplicator.cs" />
-		<Compile Include="Facade\API15.1\BrachyTreatmentUnit.cs" />
-		<Compile Include="Facade\API15.1\CalculationResult.cs" />
-		<Compile Include="Facade\API15.1\Catheter.cs" />
-		<Compile Include="Facade\API15.1\Compensator.cs" />
-		<Compile Include="Facade\API15.1\ControlPoint.cs" />
-		<Compile Include="Facade\API15.1\ControlPointCollection.cs" />
-		<Compile Include="Facade\API15.1\ControlPointParameters.cs" />
-		<Compile Include="Facade\API15.1\Course.cs" />
-		<Compile Include="Facade\API15.1\Diagnosis.cs" />
-		<Compile Include="Facade\API15.1\Dose.cs" />
-		<Compile Include="Facade\API15.1\DVHData.cs" />
-		<Compile Include="Facade\API15.1\EstimatedDVH.cs" />
-		<Compile Include="Facade\API15.1\EvaluationDose.cs" />
-		<Compile Include="Facade\API15.1\ExternalBeamTreatmentUnit.cs" />
-		<Compile Include="Facade\API15.1\ExternalPlanSetup.cs" />
-		<Compile Include="Facade\API15.1\FieldReferencePoint.cs" />
-		<Compile Include="Facade\API15.1\Hospital.cs" />
-		<Compile Include="Facade\API15.1\Image.cs" />
-		<Compile Include="Facade\API15.1\IonBeam.cs" />
-		<Compile Include="Facade\API15.1\IonBeamParameters.cs" />
-		<Compile Include="Facade\API15.1\IonControlPoint.cs" />
-		<Compile Include="Facade\API15.1\IonControlPointCollection.cs" />
-		<Compile Include="Facade\API15.1\IonControlPointPair.cs" />
-		<Compile Include="Facade\API15.1\IonControlPointPairCollection.cs" />
-		<Compile Include="Facade\API15.1\IonControlPointParameters.cs" />
-		<Compile Include="Facade\API15.1\IonPlanSetup.cs" />
-		<Compile Include="Facade\API15.1\IonSpot.cs" />
-		<Compile Include="Facade\API15.1\IonSpotCollection.cs" />
-		<Compile Include="Facade\API15.1\IonSpotParameters.cs" />
-		<Compile Include="Facade\API15.1\IonSpotParametersCollection.cs" />
-		<Compile Include="Facade\API15.1\Isodose.cs" />
-		<Compile Include="Facade\API15.1\LateralSpreadingDevice.cs" />
-		<Compile Include="Facade\API15.1\LateralSpreadingDeviceSettings.cs" />
-		<Compile Include="Facade\API15.1\MLC.cs" />
-		<Compile Include="Facade\API15.1\OptimizationEUDObjective.cs" />
-		<Compile Include="Facade\API15.1\OptimizationIMRTBeamParameter.cs" />
-		<Compile Include="Facade\API15.1\OptimizationMeanDoseObjective.cs" />
-		<Compile Include="Facade\API15.1\OptimizationNormalTissueParameter.cs" />
-		<Compile Include="Facade\API15.1\OptimizationObjective.cs" />
-		<Compile Include="Facade\API15.1\OptimizationParameter.cs" />
-		<Compile Include="Facade\API15.1\OptimizationPointObjective.cs" />
-		<Compile Include="Facade\API15.1\OptimizationSetup.cs" />
-		<Compile Include="Facade\API15.1\OptimizerDVH.cs" />
-		<Compile Include="Facade\API15.1\OptimizerObjectiveValue.cs" />
-		<Compile Include="Facade\API15.1\OptimizerResult.cs" />
-		<Compile Include="Facade\API15.1\Patient.cs" />
-		<Compile Include="Facade\API15.1\PatientSummary.cs" />
-		<Compile Include="Facade\API15.1\PlanningItem.cs" />
-		<Compile Include="Facade\API15.1\PlanningItemDose.cs" />
-		<Compile Include="Facade\API15.1\PlanSetup.cs" />
-		<Compile Include="Facade\API15.1\PlanSum.cs" />
-		<Compile Include="Facade\API15.1\PlanSumComponent.cs" />
-		<Compile Include="Facade\API15.1\PlanUncertainty.cs" />
-		<Compile Include="Facade\API15.1\ProtocolPhaseMeasure.cs" />
-		<Compile Include="Facade\API15.1\ProtocolPhasePrescription.cs" />
-		<Compile Include="Facade\API15.1\RadioactiveSource.cs" />
-		<Compile Include="Facade\API15.1\RadioactiveSourceModel.cs" />
-		<Compile Include="Facade\API15.1\RangeModulator.cs" />
-		<Compile Include="Facade\API15.1\RangeModulatorSettings.cs" />
-		<Compile Include="Facade\API15.1\RangeShifter.cs" />
-		<Compile Include="Facade\API15.1\RangeShifterSettings.cs" />
-		<Compile Include="Facade\API15.1\ReferencePoint.cs" />
-		<Compile Include="Facade\API15.1\Registration.cs" />
-		<Compile Include="Facade\API15.1\RTPrescription.cs" />
-		<Compile Include="Facade\API15.1\RTPrescriptionTarget.cs" />
-		<Compile Include="Facade\API15.1\ScriptContext.cs" />
-		<Compile Include="Facade\API15.1\ScriptEnvironment.cs" />
-		<Compile Include="Facade\API15.1\SeedCollection.cs" />
-		<Compile Include="Facade\API15.1\SegmentVolume.cs" />
-		<Compile Include="Facade\API15.1\SerializableObject.cs" />
-		<Compile Include="Facade\API15.1\Series.cs" />
-		<Compile Include="Facade\API15.1\Slot.cs" />
-		<Compile Include="Facade\API15.1\SourcePosition.cs" />
-		<Compile Include="Facade\API15.1\Structure.cs" />
-		<Compile Include="Facade\API15.1\StructureSet.cs" />
-		<Compile Include="Facade\API15.1\Study.cs" />
-		<Compile Include="Facade\API15.1\Technique.cs" />
-		<Compile Include="Facade\API15.1\Tray.cs" />
-		<Compile Include="Facade\API15.1\User.cs" />
-		<Compile Include="Facade\API15.1\Wedge.cs" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(Configuration)' == '15.5-DEBUG' Or '$(Configuration)' == '15.5-RELEASE'">
-		<Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.5\VMS.TPS.Common.Model.Types.dll</HintPath>
-		</Reference>
-		<Compile Include="Facade\API15.5\AddOn.cs" />
-		<Compile Include="Facade\API15.5\AddOnMaterial.cs" />
-		<Compile Include="Facade\API15.5\ApiDataObject.cs" />
-		<Compile Include="Facade\API15.5\Application.cs" />
-		<Compile Include="Facade\API15.5\ApplicationScript.cs" />
-		<Compile Include="Facade\API15.5\ApplicationScriptLog.cs" />
-		<Compile Include="Facade\API15.5\Applicator.cs" />
-		<Compile Include="Facade\API15.5\Beam.cs" />
-		<Compile Include="Facade\API15.5\BeamCalculationLog.cs" />
-		<Compile Include="Facade\API15.5\BeamDose.cs" />
-		<Compile Include="Facade\API15.5\BeamParameters.cs" />
-		<Compile Include="Facade\API15.5\BeamUncertainty.cs" />
-		<Compile Include="Facade\API15.5\Block.cs" />
-		<Compile Include="Facade\API15.5\Bolus.cs" />
-		<Compile Include="Facade\API15.5\BrachyFieldReferencePoint.cs" />
-		<Compile Include="Facade\API15.5\BrachyPlanSetup.cs" />
-		<Compile Include="Facade\API15.5\BrachySolidApplicator.cs" />
-		<Compile Include="Facade\API15.5\BrachyTreatmentUnit.cs" />
-		<Compile Include="Facade\API15.5\CalculationResult.cs" />
-		<Compile Include="Facade\API15.5\Catheter.cs" />
-		<Compile Include="Facade\API15.5\Compensator.cs" />
-		<Compile Include="Facade\API15.5\ControlPoint.cs" />
-		<Compile Include="Facade\API15.5\ControlPointCollection.cs" />
-		<Compile Include="Facade\API15.5\ControlPointParameters.cs" />
-		<Compile Include="Facade\API15.5\Course.cs" />
-		<Compile Include="Facade\API15.5\Diagnosis.cs" />
-		<Compile Include="Facade\API15.5\Dose.cs" />
-		<Compile Include="Facade\API15.5\DVHData.cs" />
-		<Compile Include="Facade\API15.5\EstimatedDVH.cs" />
-		<Compile Include="Facade\API15.5\EvaluationDose.cs" />
-		<Compile Include="Facade\API15.5\ExternalBeamTreatmentUnit.cs" />
-		<Compile Include="Facade\API15.5\ExternalPlanSetup.cs" />
-		<Compile Include="Facade\API15.5\FieldReferencePoint.cs" />
-		<Compile Include="Facade\API15.5\Hospital.cs" />
-		<Compile Include="Facade\API15.5\Image.cs" />
-		<Compile Include="Facade\API15.5\IonBeam.cs" />
-		<Compile Include="Facade\API15.5\IonBeamParameters.cs" />
-		<Compile Include="Facade\API15.5\IonControlPoint.cs" />
-		<Compile Include="Facade\API15.5\IonControlPointCollection.cs" />
-		<Compile Include="Facade\API15.5\IonControlPointPair.cs" />
-		<Compile Include="Facade\API15.5\IonControlPointPairCollection.cs" />
-		<Compile Include="Facade\API15.5\IonControlPointParameters.cs" />
-		<Compile Include="Facade\API15.5\IonPlanSetup.cs" />
-		<Compile Include="Facade\API15.5\IonSpot.cs" />
-		<Compile Include="Facade\API15.5\IonSpotCollection.cs" />
-		<Compile Include="Facade\API15.5\IonSpotParameters.cs" />
-		<Compile Include="Facade\API15.5\IonSpotParametersCollection.cs" />
-		<Compile Include="Facade\API15.5\Isodose.cs" />
-		<Compile Include="Facade\API15.5\LateralSpreadingDevice.cs" />
-		<Compile Include="Facade\API15.5\LateralSpreadingDeviceSettings.cs" />
-		<Compile Include="Facade\API15.5\MLC.cs" />
-		<Compile Include="Facade\API15.5\OptimizationEUDObjective.cs" />
-		<Compile Include="Facade\API15.5\OptimizationIMRTBeamParameter.cs" />
-		<Compile Include="Facade\API15.5\OptimizationMeanDoseObjective.cs" />
-		<Compile Include="Facade\API15.5\OptimizationNormalTissueParameter.cs" />
-		<Compile Include="Facade\API15.5\OptimizationObjective.cs" />
-		<Compile Include="Facade\API15.5\OptimizationParameter.cs" />
-		<Compile Include="Facade\API15.5\OptimizationPointObjective.cs" />
-		<Compile Include="Facade\API15.5\OptimizationSetup.cs" />
-		<Compile Include="Facade\API15.5\OptimizerDVH.cs" />
-		<Compile Include="Facade\API15.5\OptimizerObjectiveValue.cs" />
-		<Compile Include="Facade\API15.5\OptimizerResult.cs" />
-		<Compile Include="Facade\API15.5\Patient.cs" />
-		<Compile Include="Facade\API15.5\PatientSummary.cs" />
-		<Compile Include="Facade\API15.5\PlanningItem.cs" />
-		<Compile Include="Facade\API15.5\PlanningItemDose.cs" />
-		<Compile Include="Facade\API15.5\PlanSetup.cs" />
-		<Compile Include="Facade\API15.5\PlanSum.cs" />
-		<Compile Include="Facade\API15.5\PlanSumComponent.cs" />
-		<Compile Include="Facade\API15.5\PlanTreatmentSession.cs" />
-		<Compile Include="Facade\API15.5\PlanUncertainty.cs" />
-		<Compile Include="Facade\API15.5\ProtocolPhaseMeasure.cs" />
-		<Compile Include="Facade\API15.5\ProtocolPhasePrescription.cs" />
-		<Compile Include="Facade\API15.5\RadioactiveSource.cs" />
-		<Compile Include="Facade\API15.5\RadioactiveSourceModel.cs" />
-		<Compile Include="Facade\API15.5\RangeModulator.cs" />
-		<Compile Include="Facade\API15.5\RangeModulatorSettings.cs" />
-		<Compile Include="Facade\API15.5\RangeShifter.cs" />
-		<Compile Include="Facade\API15.5\RangeShifterSettings.cs" />
-		<Compile Include="Facade\API15.5\ReferencePoint.cs" />
-		<Compile Include="Facade\API15.5\Registration.cs" />
-		<Compile Include="Facade\API15.5\RTPrescription.cs" />
-		<Compile Include="Facade\API15.5\RTPrescriptionConstraint.cs" />
-		<Compile Include="Facade\API15.5\RTPrescriptionOrganAtRisk.cs" />
-		<Compile Include="Facade\API15.5\RTPrescriptionTarget.cs" />
-		<Compile Include="Facade\API15.5\RTPrescriptionTargetConstraints.cs" />
-		<Compile Include="Facade\API15.5\ScriptContext.cs" />
-		<Compile Include="Facade\API15.5\ScriptEnvironment.cs" />
-		<Compile Include="Facade\API15.5\SearchBodyParameters.cs" />
-		<Compile Include="Facade\API15.5\SeedCollection.cs" />
-		<Compile Include="Facade\API15.5\SegmentVolume.cs" />
-		<Compile Include="Facade\API15.5\SerializableObject.cs" />
-		<Compile Include="Facade\API15.5\Series.cs" />
-		<Compile Include="Facade\API15.5\Slot.cs" />
-		<Compile Include="Facade\API15.5\SourcePosition.cs" />
-		<Compile Include="Facade\API15.5\Structure.cs" />
-		<Compile Include="Facade\API15.5\StructureSet.cs" />
-		<Compile Include="Facade\API15.5\Study.cs" />
-		<Compile Include="Facade\API15.5\Technique.cs" />
-		<Compile Include="Facade\API15.5\TradeoffExplorationContext.cs" />
-		<Compile Include="Facade\API15.5\TradeoffObjective.cs" />
-		<Compile Include="Facade\API15.5\Tray.cs" />
-		<Compile Include="Facade\API15.5\TreatmentPhase.cs" />
-		<Compile Include="Facade\API15.5\TreatmentSession.cs" />
-		<Compile Include="Facade\API15.5\TreatmentUnitOperatingLimit.cs" />
-		<Compile Include="Facade\API15.5\TreatmentUnitOperatingLimits.cs" />
-		<Compile Include="Facade\API15.5\User.cs" />
-		<Compile Include="Facade\API15.5\Wedge.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="app.config" />
-		<None Include="packages.config" />
-	</ItemGroup>
-	<ItemGroup>
-		<Page Include="Styles\UAB_Styles.xaml">
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-	</ItemGroup>
-	<ItemGroup>
-		<EmbeddedResource Include="Properties\Resources.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-	</ItemGroup>
-	<ItemGroup>
-		<Content Include="Resources\esapix.ico" />
-		<Content Include="Resources\esapix.png" />
-	</ItemGroup>
-	<ItemGroup />
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C5FDD1E-FC04-4C21-BBFF-DFE3C584B729}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESAPIX</RootNamespace>
+    <AssemblyName>ESAPIX</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;VMS150</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\15.0-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS150</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\15.1-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS151</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\15.5-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS155</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-RELEASE|x64'">
+    <OutputPath>bin\x64\15.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS150</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-RELEASE|x64'">
+    <OutputPath>bin\x64\15.1-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS151</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-RELEASE|x64'">
+    <OutputPath>bin\x64\15.5-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS155</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\13.6-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS136</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-RELEASE|x64'">
+    <OutputPath>bin\x64\13.6-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS136</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\13.7-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS137</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-RELEASE|x64'">
+    <OutputPath>bin\x64\13.7-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS137</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\11.0-DEBUG\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VMS110</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-RELEASE|x64'">
+    <OutputPath>bin\x64\11.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS110</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AppComThread.cs" />
+    <Compile Include="Common\ConsoleSyncContext.cs" />
+    <Compile Include="Common\OfflineContext.cs" />
+    <Compile Include="Common\PluginContext.cs" />
+    <Compile Include="Common\ScriptComThread.cs" />
+    <Compile Include="Common\StandAloneContext.cs" />
+    <Compile Include="Constraints\AbstractPlanQualityConstraint.cs" />
+    <Compile Include="Constraints\DVH\ComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\ComplimentVolumeAtDoseConstraint.cs" />
+    <Compile Include="Constraints\ConstraintResult.cs" />
+    <Compile Include="Constraints\DVH\DoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\DoseStructureConstraint.cs" />
+    <Compile Include="Constraints\TargetStat.cs" />
+    <Compile Include="Constraints\TargetStats.cs" />
+    <Compile Include="Constraints\IConstraint.cs" />
+    <Compile Include="Constraints\IPriorityConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxComplimentVolumeAtDose.cs" />
+    <Compile Include="Constraints\DVH\MaxDoseAtVolConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxMeanDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MaxVolAtDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinComplimentDoseAtVolumeConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinComplimentVolumeAtDose.cs" />
+    <Compile Include="Constraints\DVH\MinDoseAtVolConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinMeanDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\MinVolAtDoseConstraint.cs" />
+    <Compile Include="Constraints\NFractionConstraint.cs" />
+    <Compile Include="Constraints\OrConstraint.cs" />
+    <Compile Include="Constraints\PQAsserter.cs" />
+    <Compile Include="Constraints\PriorityType.cs" />
+    <Compile Include="Constraints\ResultType.cs" />
+    <Compile Include="Constraints\StructureNameConstraint.cs" />
+    <Compile Include="Constraints\DVH\VolumeAtDoseConstraint.cs" />
+    <Compile Include="Constraints\DVH\Query\DiscriminatorConverter.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoConstraintConverter.cs" />
+    <Compile Include="Constraints\PriorityConverter.cs" />
+    <Compile Include="Exceptions\ScriptException.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\ExpandoExtensions.cs" />
+    <Compile Include="Extensions\QueryExtensions.cs" />
+    <Compile Include="Constraints\DVH\Query\Discriminator.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoConstraint.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoQuery.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoQueryReader.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoQueryWriter.cs" />
+    <Compile Include="Constraints\DVH\Query\MayoRegex.cs" />
+    <Compile Include="Constraints\DVH\Query\QueryType.cs" />
+    <Compile Include="Constraints\DVH\Query\Units.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\DoseExtensions.cs" />
+    <Compile Include="Extensions\DVHDataExtensions.cs" />
+    <Compile Include="Extensions\ImageExtensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\PlanningItemExtensions.cs" />
+    <Compile Include="Extensions\PlanSetupExtensions.cs" />
+    <Compile Include="Extensions\PlanSumExtensions.cs" />
+    <Compile Include="Extensions\SerializationExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\StructureExtensions.cs" />
+    <Compile Include="Extensions\VVectorExtensions.cs" />
+    <Compile Include="Facade\DefaultHelper.cs" />
+    <Compile Include="Facade\ExpandoGetter.cs" />
+    <Compile Include="Facade\Serialization\ControlPointCollectionConverter.cs" />
+    <Compile Include="Facade\Serialization\DoseProfileConverter.cs" />
+    <Compile Include="Facade\Serialization\DoseValueConverter.cs" />
+    <Compile Include="Facade\Serialization\DVHPointConverter.cs" />
+    <Compile Include="Facade\Serialization\ESAPIContractResolver.cs" />
+    <Compile Include="Facade\Serialization\FacadeSerializer.cs" />
+    <Compile Include="Facade\Serialization\MeshGeometryConverter.cs" />
+    <Compile Include="Facade\Serialization\ProfilePointConverter.cs" />
+    <Compile Include="Facade\Serialization\StructureCodeInfoConverter.cs" />
+    <Compile Include="Facade\StaticHelper.cs" />
+    <Compile Include="Facade\VMSConstructor.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Facade\Serialization\IEnumerableJsonConverter.cs" />
+    <Compile Include="Helpers\MagicStrings.cs" />
+    <Compile Include="Helpers\MathHelper.cs" />
+    <Compile Include="Interfaces\IScriptContext.cs" />
+    <Compile Include="Interfaces\ISecureStorable.cs" />
+    <Compile Include="Interfaces\IVMSThread.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Facade\XContext.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '11.0-DEBUG' Or '$(Configuration)' == '11.0-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\11.0\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Compile Include="Facade\API11.0\AddOn.cs" />
+    <Compile Include="Facade\API11.0\AddOnMaterial.cs" />
+    <Compile Include="Facade\API11.0\ApiDataObject.cs" />
+    <Compile Include="Facade\API11.0\Application.cs" />
+    <Compile Include="Facade\API11.0\Applicator.cs" />
+    <Compile Include="Facade\API11.0\Beam.cs" />
+    <Compile Include="Facade\API11.0\BeamCalculationLog.cs" />
+    <Compile Include="Facade\API11.0\Block.cs" />
+    <Compile Include="Facade\API11.0\Bolus.cs" />
+    <Compile Include="Facade\API11.0\Compensator.cs" />
+    <Compile Include="Facade\API11.0\ControlPoint.cs" />
+    <Compile Include="Facade\API11.0\ControlPointCollection.cs" />
+    <Compile Include="Facade\API11.0\Course.cs" />
+    <Compile Include="Facade\API11.0\Dose.cs" />
+    <Compile Include="Facade\API11.0\DVHData.cs" />
+    <Compile Include="Facade\API11.0\ExternalBeam.cs" />
+    <Compile Include="Facade\API11.0\FieldReferencePoint.cs" />
+    <Compile Include="Facade\API11.0\Fractionation.cs" />
+    <Compile Include="Facade\API11.0\Hospital.cs" />
+    <Compile Include="Facade\API11.0\Image.cs" />
+    <Compile Include="Facade\API11.0\Isodose.cs" />
+    <Compile Include="Facade\API11.0\MLC.cs" />
+    <Compile Include="Facade\API11.0\Patient.cs" />
+    <Compile Include="Facade\API11.0\PatientSummary.cs" />
+    <Compile Include="Facade\API11.0\PlanningItem.cs" />
+    <Compile Include="Facade\API11.0\PlanSetup.cs" />
+    <Compile Include="Facade\API11.0\PlanSum.cs" />
+    <Compile Include="Facade\API11.0\ReferencePoint.cs" />
+    <Compile Include="Facade\API11.0\Registration.cs" />
+    <Compile Include="Facade\API11.0\ScriptContext.cs" />
+    <Compile Include="Facade\API11.0\SerializableObject.cs" />
+    <Compile Include="Facade\API11.0\Series.cs" />
+    <Compile Include="Facade\API11.0\Slot.cs" />
+    <Compile Include="Facade\API11.0\Structure.cs" />
+    <Compile Include="Facade\API11.0\StructureSet.cs" />
+    <Compile Include="Facade\API11.0\Study.cs" />
+    <Compile Include="Facade\API11.0\Technique.cs" />
+    <Compile Include="Facade\API11.0\Tray.cs" />
+    <Compile Include="Facade\API11.0\User.cs" />
+    <Compile Include="Facade\API11.0\Wedge.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '13.6-DEBUG' Or '$(Configuration)' == '13.6-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.6\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Compile Include="Facade\API13.6\AddOn.cs" />
+    <Compile Include="Facade\API13.6\AddOnMaterial.cs" />
+    <Compile Include="Facade\API13.6\ApiDataObject.cs" />
+    <Compile Include="Facade\API13.6\Application.cs" />
+    <Compile Include="Facade\API13.6\Applicator.cs" />
+    <Compile Include="Facade\API13.6\Beam.cs" />
+    <Compile Include="Facade\API13.6\BeamCalculationLog.cs" />
+    <Compile Include="Facade\API13.6\BeamDose.cs" />
+    <Compile Include="Facade\API13.6\BeamParameters.cs" />
+    <Compile Include="Facade\API13.6\Block.cs" />
+    <Compile Include="Facade\API13.6\Bolus.cs" />
+    <Compile Include="Facade\API13.6\BrachyPlanSetup.cs" />
+    <Compile Include="Facade\API13.6\BrachySolidApplicator.cs" />
+    <Compile Include="Facade\API13.6\BrachyTreatmentUnit.cs" />
+    <Compile Include="Facade\API13.6\CalculationResult.cs" />
+    <Compile Include="Facade\API13.6\Catheter.cs" />
+    <Compile Include="Facade\API13.6\Compensator.cs" />
+    <Compile Include="Facade\API13.6\ControlPoint.cs" />
+    <Compile Include="Facade\API13.6\ControlPointCollection.cs" />
+    <Compile Include="Facade\API13.6\ControlPointParameters.cs" />
+    <Compile Include="Facade\API13.6\Course.cs" />
+    <Compile Include="Facade\API13.6\Diagnosis.cs" />
+    <Compile Include="Facade\API13.6\Dose.cs" />
+    <Compile Include="Facade\API13.6\DVHData.cs" />
+    <Compile Include="Facade\API13.6\EstimatedDVH.cs" />
+    <Compile Include="Facade\API13.6\EvaluationDose.cs" />
+    <Compile Include="Facade\API13.6\ExternalBeam.cs" />
+    <Compile Include="Facade\API13.6\ExternalBeamTreatmentUnit.cs" />
+    <Compile Include="Facade\API13.6\ExternalPlanSetup.cs" />
+    <Compile Include="Facade\API13.6\FieldReferencePoint.cs" />
+    <Compile Include="Facade\API13.6\Fractionation.cs" />
+    <Compile Include="Facade\API13.6\Hospital.cs" />
+    <Compile Include="Facade\API13.6\Image.cs" />
+    <Compile Include="Facade\API13.6\Isodose.cs" />
+    <Compile Include="Facade\API13.6\MLC.cs" />
+    <Compile Include="Facade\API13.6\OptimizationEUDObjective.cs" />
+    <Compile Include="Facade\API13.6\OptimizationIMRTBeamParameter.cs" />
+    <Compile Include="Facade\API13.6\OptimizationMeanDoseObjective.cs" />
+    <Compile Include="Facade\API13.6\OptimizationNormalTissueParameter.cs" />
+    <Compile Include="Facade\API13.6\OptimizationObjective.cs" />
+    <Compile Include="Facade\API13.6\OptimizationParameter.cs" />
+    <Compile Include="Facade\API13.6\OptimizationPointCloudParameter.cs" />
+    <Compile Include="Facade\API13.6\OptimizationPointObjective.cs" />
+    <Compile Include="Facade\API13.6\OptimizationSetup.cs" />
+    <Compile Include="Facade\API13.6\OptimizerDVH.cs" />
+    <Compile Include="Facade\API13.6\OptimizerObjectiveValue.cs" />
+    <Compile Include="Facade\API13.6\OptimizerResult.cs" />
+    <Compile Include="Facade\API13.6\Patient.cs" />
+    <Compile Include="Facade\API13.6\PatientSummary.cs" />
+    <Compile Include="Facade\API13.6\PlanningItem.cs" />
+    <Compile Include="Facade\API13.6\PlanningItemDose.cs" />
+    <Compile Include="Facade\API13.6\PlanSetup.cs" />
+    <Compile Include="Facade\API13.6\PlanSum.cs" />
+    <Compile Include="Facade\API13.6\PlanSumComponent.cs" />
+    <Compile Include="Facade\API13.6\RadioactiveSource.cs" />
+    <Compile Include="Facade\API13.6\RadioactiveSourceModel.cs" />
+    <Compile Include="Facade\API13.6\ReferencePoint.cs" />
+    <Compile Include="Facade\API13.6\Registration.cs" />
+    <Compile Include="Facade\API13.6\ScriptContext.cs" />
+    <Compile Include="Facade\API13.6\SeedCollection.cs" />
+    <Compile Include="Facade\API13.6\SegmentVolume.cs" />
+    <Compile Include="Facade\API13.6\SerializableObject.cs" />
+    <Compile Include="Facade\API13.6\Series.cs" />
+    <Compile Include="Facade\API13.6\Slot.cs" />
+    <Compile Include="Facade\API13.6\SourcePosition.cs" />
+    <Compile Include="Facade\API13.6\Structure.cs" />
+    <Compile Include="Facade\API13.6\StructureSet.cs" />
+    <Compile Include="Facade\API13.6\Study.cs" />
+    <Compile Include="Facade\API13.6\Technique.cs" />
+    <Compile Include="Facade\API13.6\Tray.cs" />
+    <Compile Include="Facade\API13.6\User.cs" />
+    <Compile Include="Facade\API13.6\Wedge.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '13.7-DEBUG' Or '$(Configuration)' == '13.7-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.7\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Compile Include="Facade\API13.7\AddOn.cs" />
+    <Compile Include="Facade\API13.7\AddOnMaterial.cs" />
+    <Compile Include="Facade\API13.7\ApiDataObject.cs" />
+    <Compile Include="Facade\API13.7\Application.cs" />
+    <Compile Include="Facade\API13.7\Applicator.cs" />
+    <Compile Include="Facade\API13.7\Beam.cs" />
+    <Compile Include="Facade\API13.7\BeamCalculationLog.cs" />
+    <Compile Include="Facade\API13.7\BeamDose.cs" />
+    <Compile Include="Facade\API13.7\BeamParameters.cs" />
+    <Compile Include="Facade\API13.7\BeamUncertainty.cs" />
+    <Compile Include="Facade\API13.7\Block.cs" />
+    <Compile Include="Facade\API13.7\Bolus.cs" />
+    <Compile Include="Facade\API13.7\BrachyPlanSetup.cs" />
+    <Compile Include="Facade\API13.7\BrachySolidApplicator.cs" />
+    <Compile Include="Facade\API13.7\BrachyTreatmentUnit.cs" />
+    <Compile Include="Facade\API13.7\CalculationResult.cs" />
+    <Compile Include="Facade\API13.7\Catheter.cs" />
+    <Compile Include="Facade\API13.7\Compensator.cs" />
+    <Compile Include="Facade\API13.7\ControlPoint.cs" />
+    <Compile Include="Facade\API13.7\ControlPointCollection.cs" />
+    <Compile Include="Facade\API13.7\ControlPointParameters.cs" />
+    <Compile Include="Facade\API13.7\Course.cs" />
+    <Compile Include="Facade\API13.7\Diagnosis.cs" />
+    <Compile Include="Facade\API13.7\Dose.cs" />
+    <Compile Include="Facade\API13.7\DVHData.cs" />
+    <Compile Include="Facade\API13.7\EstimatedDVH.cs" />
+    <Compile Include="Facade\API13.7\EvaluationDose.cs" />
+    <Compile Include="Facade\API13.7\ExternalBeam.cs" />
+    <Compile Include="Facade\API13.7\ExternalBeamTreatmentUnit.cs" />
+    <Compile Include="Facade\API13.7\ExternalPlanSetup.cs" />
+    <Compile Include="Facade\API13.7\FieldReferencePoint.cs" />
+    <Compile Include="Facade\API13.7\Fractionation.cs" />
+    <Compile Include="Facade\API13.7\Hospital.cs" />
+    <Compile Include="Facade\API13.7\Image.cs" />
+    <Compile Include="Facade\API13.7\IonBeam.cs" />
+    <Compile Include="Facade\API13.7\IonBeamParameters.cs" />
+    <Compile Include="Facade\API13.7\IonControlPoint.cs" />
+    <Compile Include="Facade\API13.7\IonControlPointCollection.cs" />
+    <Compile Include="Facade\API13.7\IonControlPointPair.cs" />
+    <Compile Include="Facade\API13.7\IonControlPointPairCollection.cs" />
+    <Compile Include="Facade\API13.7\IonControlPointParameters.cs" />
+    <Compile Include="Facade\API13.7\IonPlanSetup.cs" />
+    <Compile Include="Facade\API13.7\IonSpot.cs" />
+    <Compile Include="Facade\API13.7\IonSpotCollection.cs" />
+    <Compile Include="Facade\API13.7\IonSpotParameters.cs" />
+    <Compile Include="Facade\API13.7\IonSpotParametersCollection.cs" />
+    <Compile Include="Facade\API13.7\Isodose.cs" />
+    <Compile Include="Facade\API13.7\LateralSpreadingDevice.cs" />
+    <Compile Include="Facade\API13.7\LateralSpreadingDeviceSettings.cs" />
+    <Compile Include="Facade\API13.7\MLC.cs" />
+    <Compile Include="Facade\API13.7\OptimizationEUDObjective.cs" />
+    <Compile Include="Facade\API13.7\OptimizationIMRTBeamParameter.cs" />
+    <Compile Include="Facade\API13.7\OptimizationMeanDoseObjective.cs" />
+    <Compile Include="Facade\API13.7\OptimizationNormalTissueParameter.cs" />
+    <Compile Include="Facade\API13.7\OptimizationObjective.cs" />
+    <Compile Include="Facade\API13.7\OptimizationParameter.cs" />
+    <Compile Include="Facade\API13.7\OptimizationPointCloudParameter.cs" />
+    <Compile Include="Facade\API13.7\OptimizationPointObjective.cs" />
+    <Compile Include="Facade\API13.7\OptimizationSetup.cs" />
+    <Compile Include="Facade\API13.7\OptimizerDVH.cs" />
+    <Compile Include="Facade\API13.7\OptimizerObjectiveValue.cs" />
+    <Compile Include="Facade\API13.7\OptimizerResult.cs" />
+    <Compile Include="Facade\API13.7\Patient.cs" />
+    <Compile Include="Facade\API13.7\PatientSummary.cs" />
+    <Compile Include="Facade\API13.7\PlanningItem.cs" />
+    <Compile Include="Facade\API13.7\PlanningItemDose.cs" />
+    <Compile Include="Facade\API13.7\PlanSetup.cs" />
+    <Compile Include="Facade\API13.7\PlanSum.cs" />
+    <Compile Include="Facade\API13.7\PlanSumComponent.cs" />
+    <Compile Include="Facade\API13.7\PlanUncertainty.cs" />
+    <Compile Include="Facade\API13.7\RadioactiveSource.cs" />
+    <Compile Include="Facade\API13.7\RadioactiveSourceModel.cs" />
+    <Compile Include="Facade\API13.7\RangeModulator.cs" />
+    <Compile Include="Facade\API13.7\RangeModulatorSettings.cs" />
+    <Compile Include="Facade\API13.7\RangeShifter.cs" />
+    <Compile Include="Facade\API13.7\RangeShifterSettings.cs" />
+    <Compile Include="Facade\API13.7\ReferencePoint.cs" />
+    <Compile Include="Facade\API13.7\Registration.cs" />
+    <Compile Include="Facade\API13.7\ScriptContext.cs" />
+    <Compile Include="Facade\API13.7\SeedCollection.cs" />
+    <Compile Include="Facade\API13.7\SegmentVolume.cs" />
+    <Compile Include="Facade\API13.7\SerializableObject.cs" />
+    <Compile Include="Facade\API13.7\Series.cs" />
+    <Compile Include="Facade\API13.7\Slot.cs" />
+    <Compile Include="Facade\API13.7\SourcePosition.cs" />
+    <Compile Include="Facade\API13.7\Structure.cs" />
+    <Compile Include="Facade\API13.7\StructureSet.cs" />
+    <Compile Include="Facade\API13.7\Study.cs" />
+    <Compile Include="Facade\API13.7\Technique.cs" />
+    <Compile Include="Facade\API13.7\Tray.cs" />
+    <Compile Include="Facade\API13.7\User.cs" />
+    <Compile Include="Facade\API13.7\Wedge.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '15.0-DEBUG' Or '$(Configuration)' == '15.0-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.0\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Compile Include="Facade\API15.0\AddOn.cs" />
+    <Compile Include="Facade\API15.0\AddOnMaterial.cs" />
+    <Compile Include="Facade\API15.0\ApiDataObject.cs" />
+    <Compile Include="Facade\API15.0\Application.cs" />
+    <Compile Include="Facade\API15.0\ApplicationScript.cs" />
+    <Compile Include="Facade\API15.0\ApplicationScriptLog.cs" />
+    <Compile Include="Facade\API15.0\Applicator.cs" />
+    <Compile Include="Facade\API15.0\Beam.cs" />
+    <Compile Include="Facade\API15.0\BeamCalculationLog.cs" />
+    <Compile Include="Facade\API15.0\BeamDose.cs" />
+    <Compile Include="Facade\API15.0\BeamParameters.cs" />
+    <Compile Include="Facade\API15.0\BeamUncertainty.cs" />
+    <Compile Include="Facade\API15.0\Block.cs" />
+    <Compile Include="Facade\API15.0\Bolus.cs" />
+    <Compile Include="Facade\API15.0\BrachyPlanSetup.cs" />
+    <Compile Include="Facade\API15.0\BrachySolidApplicator.cs" />
+    <Compile Include="Facade\API15.0\BrachyTreatmentUnit.cs" />
+    <Compile Include="Facade\API15.0\CalculationResult.cs" />
+    <Compile Include="Facade\API15.0\Catheter.cs" />
+    <Compile Include="Facade\API15.0\Compensator.cs" />
+    <Compile Include="Facade\API15.0\ControlPoint.cs" />
+    <Compile Include="Facade\API15.0\ControlPointCollection.cs" />
+    <Compile Include="Facade\API15.0\ControlPointParameters.cs" />
+    <Compile Include="Facade\API15.0\Course.cs" />
+    <Compile Include="Facade\API15.0\Diagnosis.cs" />
+    <Compile Include="Facade\API15.0\Dose.cs" />
+    <Compile Include="Facade\API15.0\DVHData.cs" />
+    <Compile Include="Facade\API15.0\EstimatedDVH.cs" />
+    <Compile Include="Facade\API15.0\EvaluationDose.cs" />
+    <Compile Include="Facade\API15.0\ExternalBeamTreatmentUnit.cs" />
+    <Compile Include="Facade\API15.0\ExternalPlanSetup.cs" />
+    <Compile Include="Facade\API15.0\FieldReferencePoint.cs" />
+    <Compile Include="Facade\API15.0\Hospital.cs" />
+    <Compile Include="Facade\API15.0\Image.cs" />
+    <Compile Include="Facade\API15.0\IonBeam.cs" />
+    <Compile Include="Facade\API15.0\IonBeamParameters.cs" />
+    <Compile Include="Facade\API15.0\IonControlPoint.cs" />
+    <Compile Include="Facade\API15.0\IonControlPointCollection.cs" />
+    <Compile Include="Facade\API15.0\IonControlPointPair.cs" />
+    <Compile Include="Facade\API15.0\IonControlPointPairCollection.cs" />
+    <Compile Include="Facade\API15.0\IonControlPointParameters.cs" />
+    <Compile Include="Facade\API15.0\IonPlanSetup.cs" />
+    <Compile Include="Facade\API15.0\IonSpot.cs" />
+    <Compile Include="Facade\API15.0\IonSpotCollection.cs" />
+    <Compile Include="Facade\API15.0\IonSpotParameters.cs" />
+    <Compile Include="Facade\API15.0\IonSpotParametersCollection.cs" />
+    <Compile Include="Facade\API15.0\Isodose.cs" />
+    <Compile Include="Facade\API15.0\LateralSpreadingDevice.cs" />
+    <Compile Include="Facade\API15.0\LateralSpreadingDeviceSettings.cs" />
+    <Compile Include="Facade\API15.0\MLC.cs" />
+    <Compile Include="Facade\API15.0\OptimizationEUDObjective.cs" />
+    <Compile Include="Facade\API15.0\OptimizationIMRTBeamParameter.cs" />
+    <Compile Include="Facade\API15.0\OptimizationMeanDoseObjective.cs" />
+    <Compile Include="Facade\API15.0\OptimizationNormalTissueParameter.cs" />
+    <Compile Include="Facade\API15.0\OptimizationObjective.cs" />
+    <Compile Include="Facade\API15.0\OptimizationParameter.cs" />
+    <Compile Include="Facade\API15.0\OptimizationPointObjective.cs" />
+    <Compile Include="Facade\API15.0\OptimizationSetup.cs" />
+    <Compile Include="Facade\API15.0\OptimizerDVH.cs" />
+    <Compile Include="Facade\API15.0\OptimizerObjectiveValue.cs" />
+    <Compile Include="Facade\API15.0\OptimizerResult.cs" />
+    <Compile Include="Facade\API15.0\Patient.cs" />
+    <Compile Include="Facade\API15.0\PatientSummary.cs" />
+    <Compile Include="Facade\API15.0\PlanningItem.cs" />
+    <Compile Include="Facade\API15.0\PlanningItemDose.cs" />
+    <Compile Include="Facade\API15.0\PlanSetup.cs" />
+    <Compile Include="Facade\API15.0\PlanSum.cs" />
+    <Compile Include="Facade\API15.0\PlanSumComponent.cs" />
+    <Compile Include="Facade\API15.0\PlanUncertainty.cs" />
+    <Compile Include="Facade\API15.0\RadioactiveSource.cs" />
+    <Compile Include="Facade\API15.0\RadioactiveSourceModel.cs" />
+    <Compile Include="Facade\API15.0\RangeModulator.cs" />
+    <Compile Include="Facade\API15.0\RangeModulatorSettings.cs" />
+    <Compile Include="Facade\API15.0\RangeShifter.cs" />
+    <Compile Include="Facade\API15.0\RangeShifterSettings.cs" />
+    <Compile Include="Facade\API15.0\ReferencePoint.cs" />
+    <Compile Include="Facade\API15.0\Registration.cs" />
+    <Compile Include="Facade\API15.0\ScriptContext.cs" />
+    <Compile Include="Facade\API15.0\SeedCollection.cs" />
+    <Compile Include="Facade\API15.0\SegmentVolume.cs" />
+    <Compile Include="Facade\API15.0\SerializableObject.cs" />
+    <Compile Include="Facade\API15.0\Series.cs" />
+    <Compile Include="Facade\API15.0\Slot.cs" />
+    <Compile Include="Facade\API15.0\SourcePosition.cs" />
+    <Compile Include="Facade\API15.0\Structure.cs" />
+    <Compile Include="Facade\API15.0\StructureSet.cs" />
+    <Compile Include="Facade\API15.0\Study.cs" />
+    <Compile Include="Facade\API15.0\Technique.cs" />
+    <Compile Include="Facade\API15.0\Tray.cs" />
+    <Compile Include="Facade\API15.0\User.cs" />
+    <Compile Include="Facade\API15.0\Wedge.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '15.1-DEBUG' Or '$(Configuration)' == '15.1-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.1\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Compile Include="Facade\API15.1\AddOn.cs" />
+    <Compile Include="Facade\API15.1\AddOnMaterial.cs" />
+    <Compile Include="Facade\API15.1\ApiDataObject.cs" />
+    <Compile Include="Facade\API15.1\Application.cs" />
+    <Compile Include="Facade\API15.1\ApplicationScript.cs" />
+    <Compile Include="Facade\API15.1\ApplicationScriptLog.cs" />
+    <Compile Include="Facade\API15.1\Applicator.cs" />
+    <Compile Include="Facade\API15.1\Beam.cs" />
+    <Compile Include="Facade\API15.1\BeamCalculationLog.cs" />
+    <Compile Include="Facade\API15.1\BeamDose.cs" />
+    <Compile Include="Facade\API15.1\BeamParameters.cs" />
+    <Compile Include="Facade\API15.1\BeamUncertainty.cs" />
+    <Compile Include="Facade\API15.1\Block.cs" />
+    <Compile Include="Facade\API15.1\Bolus.cs" />
+    <Compile Include="Facade\API15.1\BrachyFieldReferencePoint.cs" />
+    <Compile Include="Facade\API15.1\BrachyPlanSetup.cs" />
+    <Compile Include="Facade\API15.1\BrachySolidApplicator.cs" />
+    <Compile Include="Facade\API15.1\BrachyTreatmentUnit.cs" />
+    <Compile Include="Facade\API15.1\CalculationResult.cs" />
+    <Compile Include="Facade\API15.1\Catheter.cs" />
+    <Compile Include="Facade\API15.1\Compensator.cs" />
+    <Compile Include="Facade\API15.1\ControlPoint.cs" />
+    <Compile Include="Facade\API15.1\ControlPointCollection.cs" />
+    <Compile Include="Facade\API15.1\ControlPointParameters.cs" />
+    <Compile Include="Facade\API15.1\Course.cs" />
+    <Compile Include="Facade\API15.1\Diagnosis.cs" />
+    <Compile Include="Facade\API15.1\Dose.cs" />
+    <Compile Include="Facade\API15.1\DVHData.cs" />
+    <Compile Include="Facade\API15.1\EstimatedDVH.cs" />
+    <Compile Include="Facade\API15.1\EvaluationDose.cs" />
+    <Compile Include="Facade\API15.1\ExternalBeamTreatmentUnit.cs" />
+    <Compile Include="Facade\API15.1\ExternalPlanSetup.cs" />
+    <Compile Include="Facade\API15.1\FieldReferencePoint.cs" />
+    <Compile Include="Facade\API15.1\Hospital.cs" />
+    <Compile Include="Facade\API15.1\Image.cs" />
+    <Compile Include="Facade\API15.1\IonBeam.cs" />
+    <Compile Include="Facade\API15.1\IonBeamParameters.cs" />
+    <Compile Include="Facade\API15.1\IonControlPoint.cs" />
+    <Compile Include="Facade\API15.1\IonControlPointCollection.cs" />
+    <Compile Include="Facade\API15.1\IonControlPointPair.cs" />
+    <Compile Include="Facade\API15.1\IonControlPointPairCollection.cs" />
+    <Compile Include="Facade\API15.1\IonControlPointParameters.cs" />
+    <Compile Include="Facade\API15.1\IonPlanSetup.cs" />
+    <Compile Include="Facade\API15.1\IonSpot.cs" />
+    <Compile Include="Facade\API15.1\IonSpotCollection.cs" />
+    <Compile Include="Facade\API15.1\IonSpotParameters.cs" />
+    <Compile Include="Facade\API15.1\IonSpotParametersCollection.cs" />
+    <Compile Include="Facade\API15.1\Isodose.cs" />
+    <Compile Include="Facade\API15.1\LateralSpreadingDevice.cs" />
+    <Compile Include="Facade\API15.1\LateralSpreadingDeviceSettings.cs" />
+    <Compile Include="Facade\API15.1\MLC.cs" />
+    <Compile Include="Facade\API15.1\OptimizationEUDObjective.cs" />
+    <Compile Include="Facade\API15.1\OptimizationIMRTBeamParameter.cs" />
+    <Compile Include="Facade\API15.1\OptimizationMeanDoseObjective.cs" />
+    <Compile Include="Facade\API15.1\OptimizationNormalTissueParameter.cs" />
+    <Compile Include="Facade\API15.1\OptimizationObjective.cs" />
+    <Compile Include="Facade\API15.1\OptimizationParameter.cs" />
+    <Compile Include="Facade\API15.1\OptimizationPointObjective.cs" />
+    <Compile Include="Facade\API15.1\OptimizationSetup.cs" />
+    <Compile Include="Facade\API15.1\OptimizerDVH.cs" />
+    <Compile Include="Facade\API15.1\OptimizerObjectiveValue.cs" />
+    <Compile Include="Facade\API15.1\OptimizerResult.cs" />
+    <Compile Include="Facade\API15.1\Patient.cs" />
+    <Compile Include="Facade\API15.1\PatientSummary.cs" />
+    <Compile Include="Facade\API15.1\PlanningItem.cs" />
+    <Compile Include="Facade\API15.1\PlanningItemDose.cs" />
+    <Compile Include="Facade\API15.1\PlanSetup.cs" />
+    <Compile Include="Facade\API15.1\PlanSum.cs" />
+    <Compile Include="Facade\API15.1\PlanSumComponent.cs" />
+    <Compile Include="Facade\API15.1\PlanUncertainty.cs" />
+    <Compile Include="Facade\API15.1\ProtocolPhaseMeasure.cs" />
+    <Compile Include="Facade\API15.1\ProtocolPhasePrescription.cs" />
+    <Compile Include="Facade\API15.1\RadioactiveSource.cs" />
+    <Compile Include="Facade\API15.1\RadioactiveSourceModel.cs" />
+    <Compile Include="Facade\API15.1\RangeModulator.cs" />
+    <Compile Include="Facade\API15.1\RangeModulatorSettings.cs" />
+    <Compile Include="Facade\API15.1\RangeShifter.cs" />
+    <Compile Include="Facade\API15.1\RangeShifterSettings.cs" />
+    <Compile Include="Facade\API15.1\ReferencePoint.cs" />
+    <Compile Include="Facade\API15.1\Registration.cs" />
+    <Compile Include="Facade\API15.1\RTPrescription.cs" />
+    <Compile Include="Facade\API15.1\RTPrescriptionTarget.cs" />
+    <Compile Include="Facade\API15.1\ScriptContext.cs" />
+    <Compile Include="Facade\API15.1\ScriptEnvironment.cs" />
+    <Compile Include="Facade\API15.1\SeedCollection.cs" />
+    <Compile Include="Facade\API15.1\SegmentVolume.cs" />
+    <Compile Include="Facade\API15.1\SerializableObject.cs" />
+    <Compile Include="Facade\API15.1\Series.cs" />
+    <Compile Include="Facade\API15.1\Slot.cs" />
+    <Compile Include="Facade\API15.1\SourcePosition.cs" />
+    <Compile Include="Facade\API15.1\Structure.cs" />
+    <Compile Include="Facade\API15.1\StructureSet.cs" />
+    <Compile Include="Facade\API15.1\Study.cs" />
+    <Compile Include="Facade\API15.1\Technique.cs" />
+    <Compile Include="Facade\API15.1\Tray.cs" />
+    <Compile Include="Facade\API15.1\User.cs" />
+    <Compile Include="Facade\API15.1\Wedge.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == '15.5-DEBUG' Or '$(Configuration)' == '15.5-RELEASE'">
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.5\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Compile Include="Facade\API15.5\AddOn.cs" />
+    <Compile Include="Facade\API15.5\AddOnMaterial.cs" />
+    <Compile Include="Facade\API15.5\ApiDataObject.cs" />
+    <Compile Include="Facade\API15.5\Application.cs" />
+    <Compile Include="Facade\API15.5\ApplicationScript.cs" />
+    <Compile Include="Facade\API15.5\ApplicationScriptLog.cs" />
+    <Compile Include="Facade\API15.5\Applicator.cs" />
+    <Compile Include="Facade\API15.5\Beam.cs" />
+    <Compile Include="Facade\API15.5\BeamCalculationLog.cs" />
+    <Compile Include="Facade\API15.5\BeamDose.cs" />
+    <Compile Include="Facade\API15.5\BeamParameters.cs" />
+    <Compile Include="Facade\API15.5\BeamUncertainty.cs" />
+    <Compile Include="Facade\API15.5\Block.cs" />
+    <Compile Include="Facade\API15.5\Bolus.cs" />
+    <Compile Include="Facade\API15.5\BrachyFieldReferencePoint.cs" />
+    <Compile Include="Facade\API15.5\BrachyPlanSetup.cs" />
+    <Compile Include="Facade\API15.5\BrachySolidApplicator.cs" />
+    <Compile Include="Facade\API15.5\BrachyTreatmentUnit.cs" />
+    <Compile Include="Facade\API15.5\CalculationResult.cs" />
+    <Compile Include="Facade\API15.5\Catheter.cs" />
+    <Compile Include="Facade\API15.5\Compensator.cs" />
+    <Compile Include="Facade\API15.5\ControlPoint.cs" />
+    <Compile Include="Facade\API15.5\ControlPointCollection.cs" />
+    <Compile Include="Facade\API15.5\ControlPointParameters.cs" />
+    <Compile Include="Facade\API15.5\Course.cs" />
+    <Compile Include="Facade\API15.5\Diagnosis.cs" />
+    <Compile Include="Facade\API15.5\Dose.cs" />
+    <Compile Include="Facade\API15.5\DVHData.cs" />
+    <Compile Include="Facade\API15.5\EstimatedDVH.cs" />
+    <Compile Include="Facade\API15.5\EvaluationDose.cs" />
+    <Compile Include="Facade\API15.5\ExternalBeamTreatmentUnit.cs" />
+    <Compile Include="Facade\API15.5\ExternalPlanSetup.cs" />
+    <Compile Include="Facade\API15.5\FieldReferencePoint.cs" />
+    <Compile Include="Facade\API15.5\Hospital.cs" />
+    <Compile Include="Facade\API15.5\Image.cs" />
+    <Compile Include="Facade\API15.5\IonBeam.cs" />
+    <Compile Include="Facade\API15.5\IonBeamParameters.cs" />
+    <Compile Include="Facade\API15.5\IonControlPoint.cs" />
+    <Compile Include="Facade\API15.5\IonControlPointCollection.cs" />
+    <Compile Include="Facade\API15.5\IonControlPointPair.cs" />
+    <Compile Include="Facade\API15.5\IonControlPointPairCollection.cs" />
+    <Compile Include="Facade\API15.5\IonControlPointParameters.cs" />
+    <Compile Include="Facade\API15.5\IonPlanSetup.cs" />
+    <Compile Include="Facade\API15.5\IonSpot.cs" />
+    <Compile Include="Facade\API15.5\IonSpotCollection.cs" />
+    <Compile Include="Facade\API15.5\IonSpotParameters.cs" />
+    <Compile Include="Facade\API15.5\IonSpotParametersCollection.cs" />
+    <Compile Include="Facade\API15.5\Isodose.cs" />
+    <Compile Include="Facade\API15.5\LateralSpreadingDevice.cs" />
+    <Compile Include="Facade\API15.5\LateralSpreadingDeviceSettings.cs" />
+    <Compile Include="Facade\API15.5\MLC.cs" />
+    <Compile Include="Facade\API15.5\OptimizationEUDObjective.cs" />
+    <Compile Include="Facade\API15.5\OptimizationIMRTBeamParameter.cs" />
+    <Compile Include="Facade\API15.5\OptimizationMeanDoseObjective.cs" />
+    <Compile Include="Facade\API15.5\OptimizationNormalTissueParameter.cs" />
+    <Compile Include="Facade\API15.5\OptimizationObjective.cs" />
+    <Compile Include="Facade\API15.5\OptimizationParameter.cs" />
+    <Compile Include="Facade\API15.5\OptimizationPointObjective.cs" />
+    <Compile Include="Facade\API15.5\OptimizationSetup.cs" />
+    <Compile Include="Facade\API15.5\OptimizerDVH.cs" />
+    <Compile Include="Facade\API15.5\OptimizerObjectiveValue.cs" />
+    <Compile Include="Facade\API15.5\OptimizerResult.cs" />
+    <Compile Include="Facade\API15.5\Patient.cs" />
+    <Compile Include="Facade\API15.5\PatientSummary.cs" />
+    <Compile Include="Facade\API15.5\PlanningItem.cs" />
+    <Compile Include="Facade\API15.5\PlanningItemDose.cs" />
+    <Compile Include="Facade\API15.5\PlanSetup.cs" />
+    <Compile Include="Facade\API15.5\PlanSum.cs" />
+    <Compile Include="Facade\API15.5\PlanSumComponent.cs" />
+    <Compile Include="Facade\API15.5\PlanTreatmentSession.cs" />
+    <Compile Include="Facade\API15.5\PlanUncertainty.cs" />
+    <Compile Include="Facade\API15.5\ProtocolPhaseMeasure.cs" />
+    <Compile Include="Facade\API15.5\ProtocolPhasePrescription.cs" />
+    <Compile Include="Facade\API15.5\RadioactiveSource.cs" />
+    <Compile Include="Facade\API15.5\RadioactiveSourceModel.cs" />
+    <Compile Include="Facade\API15.5\RangeModulator.cs" />
+    <Compile Include="Facade\API15.5\RangeModulatorSettings.cs" />
+    <Compile Include="Facade\API15.5\RangeShifter.cs" />
+    <Compile Include="Facade\API15.5\RangeShifterSettings.cs" />
+    <Compile Include="Facade\API15.5\ReferencePoint.cs" />
+    <Compile Include="Facade\API15.5\Registration.cs" />
+    <Compile Include="Facade\API15.5\RTPrescription.cs" />
+    <Compile Include="Facade\API15.5\RTPrescriptionConstraint.cs" />
+    <Compile Include="Facade\API15.5\RTPrescriptionOrganAtRisk.cs" />
+    <Compile Include="Facade\API15.5\RTPrescriptionTarget.cs" />
+    <Compile Include="Facade\API15.5\RTPrescriptionTargetConstraints.cs" />
+    <Compile Include="Facade\API15.5\ScriptContext.cs" />
+    <Compile Include="Facade\API15.5\ScriptEnvironment.cs" />
+    <Compile Include="Facade\API15.5\SearchBodyParameters.cs" />
+    <Compile Include="Facade\API15.5\SeedCollection.cs" />
+    <Compile Include="Facade\API15.5\SegmentVolume.cs" />
+    <Compile Include="Facade\API15.5\SerializableObject.cs" />
+    <Compile Include="Facade\API15.5\Series.cs" />
+    <Compile Include="Facade\API15.5\Slot.cs" />
+    <Compile Include="Facade\API15.5\SourcePosition.cs" />
+    <Compile Include="Facade\API15.5\Structure.cs" />
+    <Compile Include="Facade\API15.5\StructureSet.cs" />
+    <Compile Include="Facade\API15.5\Study.cs" />
+    <Compile Include="Facade\API15.5\Technique.cs" />
+    <Compile Include="Facade\API15.5\TradeoffExplorationContext.cs" />
+    <Compile Include="Facade\API15.5\TradeoffObjective.cs" />
+    <Compile Include="Facade\API15.5\Tray.cs" />
+    <Compile Include="Facade\API15.5\TreatmentPhase.cs" />
+    <Compile Include="Facade\API15.5\TreatmentSession.cs" />
+    <Compile Include="Facade\API15.5\TreatmentUnitOperatingLimit.cs" />
+    <Compile Include="Facade\API15.5\TreatmentUnitOperatingLimits.cs" />
+    <Compile Include="Facade\API15.5\User.cs" />
+    <Compile Include="Facade\API15.5\Wedge.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Styles\UAB_Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\esapix.ico" />
+    <Content Include="Resources\esapix.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 		Other similar extension points exist, see Microsoft.Common.targets.
 		<Target Name="BeforeBuild">
 		</Target>

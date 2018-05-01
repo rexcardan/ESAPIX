@@ -107,7 +107,10 @@ namespace ESAPIX.Extensions
                     //Thanks ESAPIX!
                     newDv = dv.ConvertUnits(systemUnits);
                 }
-                throw new Exception("Cannot determine system units for dose. Plan dose is null");
+                else
+                {
+                    throw new Exception("Cannot determine system units for dose. Plan dose is null");
+                }
             }
             return newDv;
         }

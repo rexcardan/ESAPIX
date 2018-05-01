@@ -190,7 +190,7 @@ namespace ESAPIX.Facade.API
             return StaticHelper.Application_CreateApplication(username, password);
         }
 
-        public static ESAPIX.Facade.API.Application CreateApplication(bool useSingleThread)
+        public static ESAPIX.Facade.API.Application CreateApplication()
         {
             return StaticHelper.Application_CreateApplication();
         }
