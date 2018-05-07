@@ -1829,7 +1829,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanSetOptimalFluence(fluence, out message_OUT));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -1854,7 +1854,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CollimatorAngleToUser(val));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }
@@ -1946,7 +1946,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GantryAngleToUser(val));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }
@@ -1994,7 +1994,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetOptimalFluence());
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.Fluence)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.Fluence)))
                     {
                         return default (VMS.TPS.Common.Model.Types.Fluence);
                     }
@@ -2018,7 +2018,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetSourceLocation(gantryAngle));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.VVector)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.VVector)))
                     {
                         return default (VMS.TPS.Common.Model.Types.VVector);
                     }
@@ -2042,7 +2042,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.JawPositionsToUserString(val));
-                    if ((fromClient) == (default (System.String)))
+                    if (fromClient.Equals(default (System.String)))
                     {
                         return default (System.String);
                     }
@@ -2066,7 +2066,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.PatientSupportAngleToUser(val));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }

@@ -1078,7 +1078,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.DicomToUser(dicom, planSetup._client));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.VVector)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.VVector)))
                     {
                         return default (VMS.TPS.Common.Model.Types.VVector);
                     }
@@ -1102,7 +1102,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetImageProfile(start, stop, preallocatedBuffer));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.ImageProfile)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.ImageProfile)))
                     {
                         return default (VMS.TPS.Common.Model.Types.ImageProfile);
                     }
@@ -1143,7 +1143,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.UserToDicom(user, planSetup._client));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.VVector)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.VVector)))
                     {
                         return default (VMS.TPS.Common.Model.Types.VVector);
                     }
@@ -1167,7 +1167,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.VoxelToDisplayValue(voxelValue));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }

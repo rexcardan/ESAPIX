@@ -420,7 +420,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.LoadSavedPlanCollection());
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -444,7 +444,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CreatePlanCollection(continueOptimization, intermediateDoseMode._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -468,7 +468,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetObjectiveCost(objective._client));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }
@@ -492,7 +492,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetObjectiveLowerLimit(objective._client));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }
@@ -516,7 +516,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetObjectiveUpperLimit(objective._client));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }
@@ -540,7 +540,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetObjectiveUpperRestrictor(objective._client));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }
@@ -639,7 +639,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddTargetHomogeneityObjective(targetStructure._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -663,7 +663,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddTradeoffObjective(structure._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -687,7 +687,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.AddTradeoffObjective(objective._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -711,7 +711,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.RemoveTradeoffObjective(tradeoffObjective._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -735,7 +735,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.RemoveTargetHomogeneityObjective(targetStructure._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -759,7 +759,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.RemoveTradeoffObjective(structure._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -834,7 +834,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CreateDeliverableVmatPlan(useIntermediateDose));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }

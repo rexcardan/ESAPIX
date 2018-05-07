@@ -30,7 +30,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetSchema());
-                    if ((fromClient) == (default (System.Xml.Schema.XmlSchema)))
+                    if (fromClient.Equals(default (System.Xml.Schema.XmlSchema)))
                     {
                         return default (System.Xml.Schema.XmlSchema);
                     }

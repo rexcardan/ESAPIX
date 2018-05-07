@@ -399,7 +399,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CalculateAccurateTG43DoseProfile(start, stop, preallocatedBuffer));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.DoseProfile)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.DoseProfile)))
                     {
                         return default (VMS.TPS.Common.Model.Types.DoseProfile);
                     }

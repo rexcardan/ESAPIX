@@ -189,7 +189,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.TransformPoint(pt));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.VVector)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.VVector)))
                     {
                         return default (VMS.TPS.Common.Model.Types.VVector);
                     }
@@ -213,7 +213,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.InverseTransformPoint(pt));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.VVector)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.VVector)))
                     {
                         return default (VMS.TPS.Common.Model.Types.VVector);
                     }

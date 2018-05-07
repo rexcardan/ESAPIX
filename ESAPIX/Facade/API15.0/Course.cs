@@ -675,7 +675,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanAddPlanSetup(structureSet._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -699,7 +699,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanRemovePlanSetup(planSetup._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }

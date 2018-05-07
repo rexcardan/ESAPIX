@@ -581,7 +581,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetDoseToPoint(at));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.DoseValue)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.DoseValue)))
                     {
                         return default (VMS.TPS.Common.Model.Types.DoseValue);
                     }
@@ -605,7 +605,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetDoseProfile(start, stop, preallocatedBuffer));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.DoseProfile)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.DoseProfile)))
                     {
                         return default (VMS.TPS.Common.Model.Types.DoseProfile);
                     }
@@ -646,7 +646,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.VoxelToDoseValue(voxelValue));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.DoseValue)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.DoseValue)))
                     {
                         return default (VMS.TPS.Common.Model.Types.DoseValue);
                     }

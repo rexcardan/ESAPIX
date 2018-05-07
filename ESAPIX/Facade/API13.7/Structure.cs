@@ -628,7 +628,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanConvertToHighResolution());
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -653,7 +653,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanSetAssignedHU(out errorMessage_OUT));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -713,7 +713,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetAssignedHU(out huValue_OUT));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -738,7 +738,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetContoursOnImagePlane(z));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.VVector[][])))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.VVector[][])))
                     {
                         return default (VMS.TPS.Common.Model.Types.VVector[][]);
                     }
@@ -762,7 +762,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetNumberOfSeparateParts());
-                    if ((fromClient) == (default (System.Int32)))
+                    if (fromClient.Equals(default (System.Int32)))
                     {
                         return default (System.Int32);
                     }
@@ -786,7 +786,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetSegmentProfile(start, stop, preallocatedBuffer));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.SegmentProfile)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.SegmentProfile)))
                     {
                         return default (VMS.TPS.Common.Model.Types.SegmentProfile);
                     }
@@ -810,7 +810,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.IsPointInsideSegment(point));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -906,7 +906,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.ResetAssignedHU());
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }

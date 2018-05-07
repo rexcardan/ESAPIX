@@ -779,7 +779,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanAddCourse());
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -804,7 +804,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanAddEmptyPhantom(out errorMessage_OUT));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -830,7 +830,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanCopyImageFromOtherPatient(targetStudy._client, otherPatientId, otherPatientStudyId, otherPatient3DImageId, out errorMessage_OUT));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -855,7 +855,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanModifyData());
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -879,7 +879,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanRemoveCourse(course._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -904,7 +904,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.CanRemoveEmptyPhantom(structureset._client, out errorMessage_OUT));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }

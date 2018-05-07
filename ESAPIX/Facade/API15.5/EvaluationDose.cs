@@ -21,7 +21,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.DoseValueToVoxel(doseValue));
-                    if ((fromClient) == (default (System.Int32)))
+                    if (fromClient.Equals(default (System.Int32)))
                     {
                         return default (System.Int32);
                     }

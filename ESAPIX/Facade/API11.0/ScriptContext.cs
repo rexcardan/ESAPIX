@@ -439,6 +439,5 @@ namespace ESAPIX.Facade.API
             _client = (client);
         }
 
-       
     }
 }

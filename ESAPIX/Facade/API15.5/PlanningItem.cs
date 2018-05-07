@@ -288,7 +288,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetDoseAtVolume(structure._client, volume, volumePresentation, requestedDosePresentation));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.DoseValue)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.DoseValue)))
                     {
                         return default (VMS.TPS.Common.Model.Types.DoseValue);
                     }
@@ -312,7 +312,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetVolumeAtDose(structure._client, dose, requestedVolumePresentation));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }

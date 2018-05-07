@@ -2473,7 +2473,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetCalculationModel(calculationType));
-                    if ((fromClient) == (default (System.String)))
+                    if (fromClient.Equals(default (System.String)))
                     {
                         return default (System.String);
                     }
@@ -2498,7 +2498,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetCalculationOption(calculationModel, optionName, out optionValue_OUT));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
@@ -2523,7 +2523,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetCalculationOptions(calculationModel));
-                    if ((fromClient) == (default (System.Collections.Generic.Dictionary<System.String,System.String>)))
+                    if (fromClient.Equals(default (System.Collections.Generic.Dictionary<System.String,System.String>)))
                     {
                         return default (System.Collections.Generic.Dictionary<System.String,System.String>);
                     }
@@ -2564,7 +2564,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.SetCalculationOption(calculationModel, optionName, optionValue));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }

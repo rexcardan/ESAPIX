@@ -231,7 +231,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetPlanSumOperation(planSetupInPlanSum._client));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.PlanSumOperation)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.PlanSumOperation)))
                     {
                         return default (VMS.TPS.Common.Model.Types.PlanSumOperation);
                     }
@@ -255,7 +255,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetPlanWeight(planSetupInPlanSum._client));
-                    if ((fromClient) == (default (System.Double)))
+                    if (fromClient.Equals(default (System.Double)))
                     {
                         return default (System.Double);
                     }

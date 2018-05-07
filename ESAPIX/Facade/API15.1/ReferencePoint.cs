@@ -204,7 +204,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.GetReferencePointLocation(planSetup._client));
-                    if ((fromClient) == (default (VMS.TPS.Common.Model.Types.VVector)))
+                    if (fromClient.Equals(default (VMS.TPS.Common.Model.Types.VVector)))
                     {
                         return default (VMS.TPS.Common.Model.Types.VVector);
                     }
@@ -228,7 +228,7 @@ namespace ESAPIX.Facade.API
                 var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
                 {
                     var fromClient = (_client.HasLocation(planSetup._client));
-                    if ((fromClient) == (default (System.Boolean)))
+                    if (fromClient.Equals(default (System.Boolean)))
                     {
                         return default (System.Boolean);
                     }
