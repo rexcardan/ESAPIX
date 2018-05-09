@@ -17,7 +17,7 @@ namespace ESAPIX.AppKit.Splash
         ///     of return type window
         /// </summary>
         /// <returns>the splash screen to show</returns>
-        public static Window GetSplash(Assembly titleAssembly = null)
+        public static SplashScreen GetSplash(Assembly titleAssembly = null)
         {
             if (titleAssembly == null) titleAssembly = Assembly.GetCallingAssembly();
             var calling = titleAssembly;

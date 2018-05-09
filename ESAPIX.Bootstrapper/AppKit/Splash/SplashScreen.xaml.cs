@@ -1,5 +1,6 @@
 ﻿#region
 
+using ESAPIX.Bootstrapper.AppKit.Splash;
 using System;
 using System.Windows;
 using System.Windows.Media.Animation;
@@ -11,7 +12,7 @@ namespace ESAPIX.AppKit.Splash
     /// <summary>
     ///     Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class SplashScreen : Window
+    public partial class SplashScreen : SplashTemplate
     {
         private readonly Storyboard Showboard;
 
@@ -35,7 +36,7 @@ namespace ESAPIX.AppKit.Splash
 
         private void Showboard_Completed(object sender, EventArgs e)
         {
-            Close();
+            this.RaiseFinished(e);
         }
 
         private delegate void ShowDelegate();

@@ -1,8 +1,12 @@
-﻿using ESAPIX.Bootstrapper.Helpers;
+﻿using ESAPIX.Bootstrapper.AppKit.Splash;
+using ESAPIX.Bootstrapper.Helpers;
+using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Bootstrapper
@@ -14,6 +18,9 @@ namespace ESAPIX.Bootstrapper
     /// </summary>
     public class XScriptToFullAppBase
     {
+        /// <summary>
+        /// The path to your WPF executable (standalone app).
+        /// </summary>
         public string AppStartPath { get; set; }
 
         public void Execute(ScriptContext context, Window window)
@@ -21,17 +28,36 @@ namespace ESAPIX.Bootstrapper
             //Get this window barely visible so that when it does show, it isn't ugly ;)
             window.Height = window.Width = 0;
             window.WindowStyle = WindowStyle.None;
-            window.Hide();
             window.Loaded += Window_Loaded;
 
+            if (Splash != null)
+            {
+                window.Content = Splash;
+                window.Width = Splash.Width;
+                window.Height = Splash.Height;
+                Splash.Finished += (send, args1) =>
+                {
+                    window.Hide();
+                };
+            }
+            else
+            {
+                window.Hide();
+            }
+
             var args = ArgumentBuilder.Build(context);
-            Process.Start(AppStartPath, args);
+            AppDomainSetup setup = new AppDomainSetup();
+            setup.ApplicationBase = Path.GetDirectoryName(AppStartPath);
+
+            var appDomain = AppDomain.CreateDomain("ESAPIX" + Guid.NewGuid(), null, setup);
+            appDomain.ExecuteAssembly(AppStartPath, args.Split(null));
+            AppDomain.Unload(appDomain);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var win = sender as Window;
-            win.Loaded += Window_Loaded;
+            win.Loaded -= Window_Loaded;
             win.Close();
         }
 
@@ -127,5 +153,7 @@ namespace ESAPIX.Bootstrapper
 
             #endregion
         }
+
+        public SplashTemplate Splash { get; set; }
     }
 }
