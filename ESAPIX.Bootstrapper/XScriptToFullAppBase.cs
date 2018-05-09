@@ -46,12 +46,8 @@ namespace ESAPIX.Bootstrapper
             }
 
             var args = ArgumentBuilder.Build(context);
-            AppDomainSetup setup = new AppDomainSetup();
-            setup.ApplicationBase = Path.GetDirectoryName(AppStartPath);
-
-            var appDomain = AppDomain.CreateDomain("ESAPIX" + Guid.NewGuid(), null, setup);
-            appDomain.ExecuteAssembly(AppStartPath, args.Split(null));
-            AppDomain.Unload(appDomain);
+            var process = Process.Start(AppStartPath, args);
+            process.WaitForExit();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
