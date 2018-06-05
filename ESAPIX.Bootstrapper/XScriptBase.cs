@@ -24,15 +24,16 @@ namespace ESAPIX.Bootstrapper
 
             var plugCtx = new PluginContext(scriptContext, window);
             var frame = new DispatcherFrame();
+            Dispatcher.CurrentDispatcher.UnhandledException += CurrentDispatcher_UnhandledException;
             XContext.Instance.CurrentContext = plugCtx;
             XExecute(plugCtx, frame);
-            Dispatcher.CurrentDispatcher.UnhandledException += CurrentDispatcher_UnhandledException;
             Dispatcher.PushFrame(frame);
+            Dispatcher.CurrentDispatcher.UnhandledException -= CurrentDispatcher_UnhandledException;
         }
 
         private void CurrentDispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
-            MessageBox.Show($"SCRIPT ERROR : \n\n"+e.Exception.Message);
+            MessageBox.Show($"SCRIPT ERROR : \n\n" + e.Exception.Message);
             e.Handled = true;
         }
 
@@ -41,10 +42,12 @@ namespace ESAPIX.Bootstrapper
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var win = sender as Window;
-            win.Loaded += Window_Loaded;
-            win.Close();
+            win.Loaded -= Window_Loaded;
+            win.Dispatcher.Invoke(() =>
+            {
+                win.Close();
+            });
         }
-
         #endregion
 
         public abstract void XExecute(PluginContext ctx, DispatcherFrame frame);

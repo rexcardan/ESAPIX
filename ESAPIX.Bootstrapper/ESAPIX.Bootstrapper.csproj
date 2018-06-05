@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <ProjectGuid>{26F9BB2A-80A4-44A5-A737-AAC1042B1CC9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -13,113 +13,119 @@
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-DEBUG|x64'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '11.0-DEBUG|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\15.1-DEBUG\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;VMS151</DefineConstants>
     <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-DEBUG|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\15.0-DEBUG\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;VMS150</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-DEBUG|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\15.5-DEBUG\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;VMS155</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.0-RELEASE|x64'">
-    <OutputPath>bin\x64\15.0-RELEASE\</OutputPath>
-    <DefineConstants>TRACE;VMS150</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.1-RELEASE|x64'">
-    <OutputPath>bin\x64\15.1-RELEASE\</OutputPath>
-    <DefineConstants>TRACE;VMS151</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-RELEASE|x64'">
-    <OutputPath>bin\x64\15.5-RELEASE\</OutputPath>
-    <DefineConstants>TRACE;VMS155</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-DEBUG|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\13.6-DEBUG\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;VMS136</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.6-RELEASE|x64'">
-    <OutputPath>bin\x64\13.6-RELEASE\</OutputPath>
-    <DefineConstants>TRACE;VMS136</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-DEBUG|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\13.7-DEBUG\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;VMS137</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '13.7-RELEASE|x64'">
-    <OutputPath>bin\x64\13.7-RELEASE\</OutputPath>
-    <DefineConstants>TRACE;VMS137</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-DEBUG|x64'">
-    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
     <OutputPath>bin\x64\11.0-DEBUG\</OutputPath>
     <DefineConstants>TRACE;DEBUG;VMS110</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '11.0-RELEASE|x64'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '11.0-RELEASE|x64'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
     <OutputPath>bin\x64\11.0-RELEASE\</OutputPath>
     <DefineConstants>TRACE;VMS110</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '13.6-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\13.6-RELEASE\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VMS136</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '13.6-RELEASE|x64'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x64\13.6.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS136</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '13.7-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\13.7-RELEASE\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VMS137</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '13.7-RELEASE|x64'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x64\13.7.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS137</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '15.0-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\15.0-RELEASE\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VMS150</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '15.0-RELEASE|x64'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x64\15.0.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS150</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '15.1-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\15.1-RELEASE\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VMS151</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '15.1-RELEASE|x64'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x64\15.1.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS151</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '15.5-DEBUG|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\15.5-RELEASE\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VMS155</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '15.5-RELEASE|x64'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x64\15.5.0-RELEASE\</OutputPath>
+    <DefineConstants>TRACE;VMS155</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -136,6 +142,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -272,6 +279,42 @@
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+if $(ConfigurationName) == 11.0-RELEASE goto :rel110
+if $(ConfigurationName) == 13.6-RELEASE goto :rel136
+if $(ConfigurationName) == 13.7-RELEASE goto :rel137
+if $(ConfigurationName) == 15.0-RELEASE goto :rel150
+if $(ConfigurationName) == 15.1-RELEASE goto :rel151
+if $(ConfigurationName) == 15.5-RELEASE goto :rel155
+
+goto :exit
+
+:rel110
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\11.0\lib\net45\$(ProjectName).dll"
+goto :exit
+:rel136
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\13.6\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel137
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\13.7\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel150
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\15.0\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel151
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\15.1\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel155
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\15.5\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:exit</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 		Other similar extension points exist, see Microsoft.Common.targets.
 		<Target Name="BeforeBuild">

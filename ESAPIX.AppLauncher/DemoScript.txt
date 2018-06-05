@@ -1,0 +1,39 @@
+using System;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Collections.Generic;
+using System.Reflection;
+using VMS.TPS.Common.Model.API;
+using VMS.TPS.Common.Model.Types;
+
+namespace VMS.TPS
+{
+    public class Script
+    {
+        public Script()
+        {
+        }
+
+        public void Execute(ScriptContext context)
+        {
+	    //STEP 1
+	    //Store the path to the standalone app you want to launch (*Needs to implement ESAPIX.Bootstrapper.AppBootstrapper)
+            var appPath = @"..\ProgramData\Vision\PublishedScripts\MyApp\MyApp.esapi.exe";
+
+            //STEP 2
+	    //Point to your AppLauncher location
+            var launcherPath = @"..\ProgramData\Vision\PublishedScripts\Launcher\ESAPIX.AppLauncher.esapi.exe";
+
+	    //BOILERPLATE (same for everyone)
+            var launcher = Activator.CreateInstanceFrom(launcherPath, "ESAPIX.AppLauncher.XScript").Unwrap();
+            var type = launcher.GetType();
+            type.InvokeMember("Execute",
+                              BindingFlags.Default | BindingFlags.InvokeMethod,
+                              null,
+                              launcher,
+                              new object[] { context, appPath});
+        }
+
+    }
+}

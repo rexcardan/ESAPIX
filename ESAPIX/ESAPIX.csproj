@@ -75,6 +75,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>2</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '15.5-RELEASE|x64'">
     <OutputPath>bin\x64\15.5-RELEASE\</OutputPath>
@@ -142,6 +143,8 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -807,6 +810,42 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+if $(ConfigurationName) == 11.0-RELEASE goto :rel110
+if $(ConfigurationName) == 13.6-RELEASE goto :rel136
+if $(ConfigurationName) == 13.7-RELEASE goto :rel137
+if $(ConfigurationName) == 15.0-RELEASE goto :rel150
+if $(ConfigurationName) == 15.1-RELEASE goto :rel151
+if $(ConfigurationName) == 15.5-RELEASE goto :rel155
+
+goto :exit
+
+:rel110
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\11.0\lib\net45\$(ProjectName).dll"
+goto :exit
+:rel136
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\13.6\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel137
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\13.7\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel150
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.0\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel151
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.1\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel155
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.5\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:exit</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 		Other similar extension points exist, see Microsoft.Common.targets.
 		<Target Name="BeforeBuild">
