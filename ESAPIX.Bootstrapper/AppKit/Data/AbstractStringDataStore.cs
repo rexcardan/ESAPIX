@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using ESAPIX.Helpers;
+using ESAPIX.Helpers.IO;
 
 #endregion
 

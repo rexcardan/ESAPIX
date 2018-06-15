@@ -199,6 +199,7 @@
     <Compile Include="Constraints\DVH\Query\DiscriminatorConverter.cs" />
     <Compile Include="Constraints\DVH\Query\MayoConstraintConverter.cs" />
     <Compile Include="Constraints\PriorityConverter.cs" />
+    <Compile Include="Exceptions\PatientNotFoundException.cs" />
     <Compile Include="Exceptions\ScriptException.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\ExpandoExtensions.cs" />
@@ -236,8 +237,13 @@
     <Compile Include="Facade\Serialization\StructureCodeInfoConverter.cs" />
     <Compile Include="Facade\StaticHelper.cs" />
     <Compile Include="Facade\VMSConstructor.cs" />
-    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\DVH\DVHParams.cs" />
+    <Compile Include="Helpers\DVH\Miner.cs" />
+    <Compile Include="Helpers\IO\CsvFile.cs" />
+    <Compile Include="Helpers\IO\FileHelper.cs" />
     <Compile Include="Facade\Serialization\IEnumerableJsonConverter.cs" />
+    <Compile Include="Helpers\Filters\MatchType.cs" />
+    <Compile Include="Helpers\Levenshtein.cs" />
     <Compile Include="Helpers\MagicStrings.cs" />
     <Compile Include="Helpers\MathHelper.cs" />
     <Compile Include="Interfaces\IScriptContext.cs" />

@@ -50,7 +50,6 @@ namespace ESAPIX.Bootstrapper
             {
                 CleanUp();
                 shell.Dispatcher.UnhandledException -= Dispatcher_UnhandledException;
-                Application.Current.Shutdown();
             };
 
             //Give the bootstrapper the opportunity to inject some stuff if desired

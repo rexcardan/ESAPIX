@@ -43,10 +43,7 @@ namespace ESAPIX.Bootstrapper
         {
             var win = sender as Window;
             win.Loaded -= Window_Loaded;
-            win.Dispatcher.Invoke(() =>
-            {
-                win.Close();
-            });
+            win.Close();
         }
         #endregion
 

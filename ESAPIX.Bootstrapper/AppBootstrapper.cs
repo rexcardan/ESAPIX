@@ -75,6 +75,7 @@ namespace ESAPIX.Bootstrapper
             if (_ctx is StandAloneContext)
             {
                 (_ctx as StandAloneContext).Dispose();
+                Application.Current.Shutdown();
             }
         }
 
