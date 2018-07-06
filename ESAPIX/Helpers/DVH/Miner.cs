@@ -27,10 +27,7 @@ namespace ESAPIX.Helpers.DVH
         /// The matching criteria for the structure set id
         /// </summary>
         private MatchType _structureSetMatchType;
-        /// <summary>
-        /// The exclusive structures to be sampled. Will sample all if this list is empty
-        /// </summary>
-        private List<string> _structures = new List<string>();
+
         private bool _doIncludeDVH;
         private DVHParams _dvhParams;
 
@@ -45,17 +42,14 @@ namespace ESAPIX.Helpers.DVH
             _dvhParams = dvhParams;
         }
 
-        /// <summary>
-        /// Gets the metrics requested for the patient ids and specific filters set
-        /// </summary>
-        /// <param name="metrics">a list of Mayo format DVH criteria</param>
-        /// <returns></returns>
-        public CsvFile GetMetrics(Facade.API.Application app, params string[] metrics)
+        public CsvFile GetMetrics(Application app, params StructureQuery[] metricsDesired)
         {
             CsvFile csv = new CsvFile();
             var header = new List<dynamic>();
             header.AddRange(new dynamic[] { "Patient Id", "Course", "Plan Id", "Structure", "Volume" });
+            var metrics = metricsDesired.SelectMany(m => m.Queries).Distinct().ToList();
             header.AddRange(metrics);
+
             if (_doIncludeDVH)
             {
                 header.Add($"DVH[{_dvhParams.DoseUnits}]");
@@ -65,75 +59,88 @@ namespace ESAPIX.Helpers.DVH
 
             foreach (var id in _patientIds)
             {
-                Logger.Log($"Opening patient {id}");
-                var pat = app.OpenPatientById(id);
-                if (pat == null) { Logger.Log($"Couldn't find patient {id}"); throw new PatientNotFoundException(id); }
-
-                //Match structure sets
-                Logger.Log($"Filtering structure sets...");
-                var s_structureSets = FilterStructureSets(pat);
-                Logger.Log($"{s_structureSets.Count()} structure sets match criteria");
-                Logger.Log($"Filtering planning items...");
-                var s_plans = FilterPlanningItems(pat, s_structureSets);
-                Logger.Log($"{s_plans.Count()} plans match criteria");
-
-                foreach (var pi in s_plans)
+                try
                 {
-                    List<dynamic> rowItems = new List<dynamic>();
-                    rowItems.AddRange(new dynamic[] { pat.Id, pi.GetCourse().Id, pi.Id });
-                    var s_structures = GetFilteredStructures(pi);
-                    foreach(var str in s_structures)
+                    Logger.Log($"Opening patient {id}");
+                    var pat = app.OpenPatientById(id);
+                    if (pat == null)
                     {
+                        Logger.Log($"Couldn't find patient {id}");
+                        throw new PatientNotFoundException(id);
+                    }
 
-                        rowItems.Add(str.Id);
-                        rowItems.Add(str.Volume);
-                        foreach(var met in metrics)
+                    //Match structure sets
+                    Logger.Log($"Filtering structure sets...");
+                    var s_structureSets = FilterStructureSets(pat).ToList();
+                    Logger.Log($"{s_structureSets.Count()} structure sets match criteria");
+                    Logger.Log($"Filtering planning items...");
+                    var s_plans = FilterPlanningItems(pat, s_structureSets).ToList();
+                    Logger.Log($"{s_plans.Count()} plans match criteria");
+
+                    foreach (var pi in s_plans)
+                    {
+                        var s_structures = GetFilteredStructures(pi, metricsDesired);
+                        foreach (var str in s_structures)
                         {
-                            Logger.Log($"Querying {met} from item {pi.Id}, structure {str.Id}...");
-                            var val = pi.ExecuteQuery(met, str);
-                            Logger.Log($"Storing value {met} = {val} for item {pi.Id}, structure {str.Id}...");
-                            rowItems.Add(val);
-                        }
-                        if (_doIncludeDVH)
-                        {
-                            Logger.Log($"Recording DVH from item {pi.Id}, structure {str.Id}...");
-                            rowItems.Add(string.Empty); //cell space
-                            var dvh = pi.GetDVHCumulativeData(str, _dvhParams.DosePresentation, _dvhParams.VolumePresentation, _dvhParams.BinWidth);
-                            var maxDose = dvh.MaxDose.Dose;
-                            for(int i = 0; i < Math.Ceiling(maxDose) + 3; i++)
+                            List<dynamic> rowItems = new List<dynamic>();
+                            rowItems.AddRange(new dynamic[] { pat.Id, pi.GetCourse().Id, pi.Id });
+                            rowItems.Add(str.Id);
+                            rowItems.Add(str.Volume);
+                            foreach (var met in metrics)
                             {
-                                var val = dvh.CurveData.GetVolumeAtDose(new VMS.TPS.Common.Model.Types.DoseValue(i, _dvhParams.DoseUnits));
+                                Logger.Log($"Querying {met} from item {pi.Id}, structure {str.Id}...");
+                                var val = pi.ExecuteQuery(met, str);
+                                Logger.Log($"Storing value {met} = {val} for item {pi.Id}, structure {str.Id}...");
                                 rowItems.Add(val);
                             }
+                            if (_doIncludeDVH)
+                            {
+                                Logger.Log($"Recording DVH from item {pi.Id}, structure {str.Id}...");
+                                rowItems.Add(string.Empty); //cell space
+                                var dvh = pi.GetDVHCumulativeData(str, _dvhParams.DosePresentation, _dvhParams.VolumePresentation, _dvhParams.BinWidth);
+                                var maxDose = dvh.MaxDose.Dose;
+                                for (int i = 0; i < Math.Ceiling(maxDose) + 3; i++)
+                                {
+                                    var val = dvh.CurveData.GetVolumeAtDose(new VMS.TPS.Common.Model.Types.DoseValue(i, _dvhParams.DoseUnits));
+                                    rowItems.Add(val);
+                                }
+                            }
+                            csv.AddRow(rowItems.ToArray());
                         }
                     }
-                    csv.AddRow(rowItems.ToArray());
-                   
+
+                    Logger.Log($"Closing patient {id}");
+                    app.ClosePatient();
                 }
-                Logger.Log($"Closing patient {id}");
-                app.ClosePatient();
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
             return csv;
         }
 
-        private IEnumerable<Structure> GetFilteredStructures(PlanningItem pi)
+        /// <summary>
+        /// Finds only the structures to be queries based on input structure Ids
+        /// </summary>
+        /// <param name="pi"></param>
+        /// <param name="metricsDesired"></param>
+        /// <returns></returns>
+        private IEnumerable<Structure> GetFilteredStructures(PlanningItem pi, StructureQuery[] metricsDesired)
         {
-            if (!_structures.Any()) { return pi.GetStructureSet().Structures; }
-            else
-            {
-                return pi.GetStructureSet().Structures
-                    .Where(s => _structures.Any(st => st.ToUpper().Equals(s.Id.ToUpper())));
-            }
+            var structureIds = metricsDesired.Select(m => m.StructureId).Distinct().ToList();
+            return pi.GetStructureSet().Structures.Where(s => structureIds.Contains(s.Id));
         }
 
         private IEnumerable<PlanningItem> FilterPlanningItems(Patient pat, IEnumerable<StructureSet> s_structureSets)
         {
             IEnumerable<PlanningItem> planSetups = pat.Courses.SelectMany(c => c.PlanSetups)
-                    .Where(p => s_structureSets.Contains(p.StructureSet));
-            IEnumerable<PlanningItem> planSums = pat.Courses.SelectMany(c => c.PlanSums)
-                .Where(p => s_structureSets.Contains(p.StructureSet));
+                    .Where(p => s_structureSets.Any(s => s.Id == p.StructureSet.Id));
+
             if (IncludePlanSums)
             {
+                IEnumerable<PlanningItem> planSums = pat.Courses.SelectMany(c => c.PlanSums)
+                  .Where(p => s_structureSets.Any(s => s.Id == p.StructureSet.Id));
                 return planSetups.Concat(planSums);
             }
             else
@@ -176,16 +183,6 @@ namespace ESAPIX.Helpers.DVH
         {
             _structureSetId = structureSetId;
             _structureSetMatchType = matchType;
-        }
-
-        /// <summary>
-        /// Specify the particular structures to be sampled for each patient. If not set,
-        /// all structures will be sampled. Will not be case sensitive in the search
-        /// </summary>
-        /// <param name="structures">the structure ids to be sampled</param>
-        public void SetStructures(params string[] structures)
-        {
-            _structures = structures.ToList();
         }
 
         /// <summary>

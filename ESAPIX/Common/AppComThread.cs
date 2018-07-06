@@ -3,11 +3,11 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using ESAPIX.Interfaces;
 using ESAPIX.Facade;
 using ESAPIX.AppKit.Exceptions;
 using ESAPIX.Extensions;
+using System.Windows.Threading;
 
 #endregion
 
@@ -19,6 +19,7 @@ namespace ESAPIX.Common
 
         private readonly Thread thread;
         private SynchronizationContext ctx;
+        private Dispatcher _dispatcher;
 
         public AppComThread(bool useNewThread = true)
         {
@@ -33,59 +34,41 @@ namespace ESAPIX.Common
             }
             else
             {
-                //For standalone apps - boot up another thread
                 using (mre = new ManualResetEvent(false))
                 {
                     Exception ex = null;
                     thread = new Thread(() =>
                     {
-                        try
-                        {
-                            //Hack to initiate a windows message pump (keeps the thread alive) :(
-                            Application.Idle += Initialize;
-                            Application.Run();
-                            Debug.WriteLine("ESAPIX Thread closing...");
-                        }
-                        catch (Exception e)
-                        {
-                            Debug.Write(e.ToString());
-                            MessageBox.Show($"VMS Thread crashed : \n{e}");
-                        }
+                        _dispatcher = Dispatcher.CurrentDispatcher;
+                        _dispatcher.UnhandledException += _dispatcher_UnhandledException;
+                        mre.Set();
+                        Dispatcher.Run();
                     });
                     thread.Name = "ESAPIX Thread";
-                    thread.IsBackground = true;
                     thread.SetApartmentState(ApartmentState.STA);
                     thread.Start();
                     mre.WaitOne();
-
                     if (ex != null) { throw ex; }
                 }
             }
         }
 
+        private void _dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            _dispatcher.UnhandledException -= _dispatcher_UnhandledException;
+            throw e.Exception;
+        }
+
         public async Task InvokeAsync(Action action)
         {
-            var task = Task.Run(() =>
-            {
-                Delegate del = action;
-                return Invoke(del);
-            });
-            await task;
-            if (task.Exception != null)
-            {
-                var wrapped = new ScriptException(task.Exception);
-                XContext.Instance.CurrentContext.Logger.Log(wrapped.Message);
-                XContext.Instance.CurrentContext.Logger.Log(task.Exception.GetRootException().Message);
-                throw wrapped;
-            }
+            await Task.Run(async () => await _dispatcher.InvokeAsync(action));
         }
 
         public void Invoke(Action action)
         {
             try
             {
-                Delegate del = action;
-                Invoke(del);
+                _dispatcher.Invoke(action);
             }
             catch (Exception e)
             {
@@ -98,34 +81,9 @@ namespace ESAPIX.Common
 
         public void Dispose()
         {
-            if (ctx != null)
-            {
-                ctx.Send(_ => Application.ExitThread(), null);
-                ctx = null;
-            }
+            _dispatcher.InvokeShutdown();
         }
 
         public int ThreadId => thread.ManagedThreadId;
-
-        public void BeginInvoke(Delegate dlg, params object[] args)
-        {
-            if (ctx == null) throw new ObjectDisposedException("VmsComThread");
-            ctx.Post(_ => dlg.DynamicInvoke(args), null);
-        }
-
-        public object Invoke(Delegate dlg, params object[] args)
-        {
-            object result = null;
-            if (ctx == null) throw new ObjectDisposedException("VmsComThread");
-            ctx.Send(_ => result = dlg.DynamicInvoke(args), null);
-            return result;
-        }
-
-        protected virtual void Initialize(object sender, EventArgs e)
-        {
-            ctx = SynchronizationContext.Current;
-            mre.Set();
-            Application.Idle -= Initialize;
-        }
     }
 }

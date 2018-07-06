@@ -86,9 +86,7 @@ namespace ESAPIX.Common
         public ExternalPlanSetup ExternalPlanSetup { get; private set; }
 
         public IEnumerable<ExternalPlanSetup> ExternalPlansInScope { get; set; }
-
 #endif
-
         public Logger Logger { get; private set; }
 
         public bool SetPatient(string id)
@@ -181,7 +179,7 @@ namespace ESAPIX.Common
             BrachyPlansInScope = plans;
         }
 
-                public bool SetExternalPlanSetup(ExternalPlanSetup ex)
+        public bool SetExternalPlanSetup(ExternalPlanSetup ex)
         {
             PlanSetup = ex;
             ExternalPlanSetup = ex;
@@ -202,7 +200,7 @@ namespace ESAPIX.Common
         }
 #endif
 
-#region CONTEXT CHANGED EVENTS
+        #region CONTEXT CHANGED EVENTS
 
         public delegate void PatientChangedHandler(Patient newPatient);
 
@@ -233,7 +231,7 @@ namespace ESAPIX.Common
 
         public void OnIonPlanSetupChanged(IonPlanSetup ps)
         {
-            UIDispatcher?.Invoke(() => IonPlanSetupChanged?.Invoke(ps));
+            IonPlanSetupChanged?.Invoke(ps);
         }
 #endif
 
@@ -241,7 +239,7 @@ namespace ESAPIX.Common
 
         public void OnPatientChanged(Patient p)
         {
-            UIDispatcher?.Invoke(() => PatientChanged?.Invoke(p));
+            PatientChanged?.Invoke(p);
         }
 
         public delegate void PlanSetupChangedHandler(PlanSetup ps);
@@ -250,7 +248,7 @@ namespace ESAPIX.Common
 
         public void OnPlanSetupChanged(PlanSetup ps)
         {
-            UIDispatcher?.Invoke(() => PlanSetupChanged?.Invoke(ps));
+            PlanSetupChanged?.Invoke(ps);
         }
 
 #if !VMS110
@@ -260,7 +258,7 @@ namespace ESAPIX.Common
 
         public void OnExternalPlanSetupChanged(ExternalPlanSetup ps)
         {
-            UIDispatcher?.Invoke(() => ExternalPlanSetupChanged?.Invoke(ps));
+            ExternalPlanSetupChanged?.Invoke(ps);
         }
 
         public delegate void BrachyPlanSetupChangedHandler(BrachyPlanSetup ps);
@@ -269,7 +267,7 @@ namespace ESAPIX.Common
 
         public void OnBrachyPlanSetupChanged(BrachyPlanSetup ps)
         {
-            UIDispatcher?.Invoke(() => BrachyPlanSetupChanged?.Invoke(ps));
+            BrachyPlanSetupChanged?.Invoke(ps);
         }
 #endif
         public delegate void CourseChangedHandler(Course c);
@@ -278,7 +276,7 @@ namespace ESAPIX.Common
 
         public void OnCourseChanged(Course c)
         {
-            UIDispatcher?.Invoke(() => CourseChanged?.Invoke(c));
+            CourseChanged?.Invoke(c);
         }
 
         public async Task<T> GetValueAsync<T>(Func<IScriptContext, T> toExecute)
@@ -295,6 +293,6 @@ namespace ESAPIX.Common
             return result;
         }
 
-#endregion
+        #endregion
     }
 }

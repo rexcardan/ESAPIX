@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows;
-using System.Windows.Forms;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 
@@ -39,18 +38,6 @@ namespace ESAPIX.Helpers.IO
             return null;
         }
 
-        /// <summary>
-        ///     Provides a file folder chooser
-        /// </summary>
-        /// <returns>the path to the folder chosen or null for no folder selected</returns>
-        public static string ChooseFolder()
-        {
-            var dialog = new FolderBrowserDialog();
-            if (dialog.ShowDialog() == DialogResult.OK)
-                return dialog.SelectedPath;
-            return null;
-        }
-
         public static void LaunchFile(string path)
         {
             try
@@ -61,18 +48,6 @@ namespace ESAPIX.Helpers.IO
             {
                 SaveFile(path);
             }
-        }
-
-        public static void LaunchPDFInBrowser(string pdfPath)
-        {
-            //Launch PDF In Browswer
-            var pdfWindow = new Window();
-            var browser = new WebBrowser();
-            browser.Navigate(new Uri(pdfPath));
-            pdfWindow.Content = browser;
-
-            pdfWindow.ShowDialog();
-            browser.Dispose();
         }
 
         public static void SaveFile(string originalFilePath)
