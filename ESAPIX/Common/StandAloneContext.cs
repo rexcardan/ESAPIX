@@ -52,6 +52,7 @@ namespace ESAPIX.Common
         public void Dispose()
         {
             _app?.Dispose();
+            Thread.Dispose();
         }
 
         public Application Application { get { return _app; } }
