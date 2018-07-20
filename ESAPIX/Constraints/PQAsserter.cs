@@ -29,6 +29,83 @@ namespace ESAPIX.Constraints
             }
         }
 
+        /// <summary>
+        /// Asserts the input assertion. Upon failure returns a Action Level 3 contraint result
+        /// </summary>
+        /// <param name="pi">the planning item to be evaluated</param>
+        /// <param name="assertion">the assertion that if not passed, returns an "not applicable" result</param>
+        /// <param name="failedMessage">the message to show in case of failure</param>
+        /// <returns>the plan quality asserter</returns>
+        public PQAsserter Assert(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        {
+            bool passed = false;
+            try
+            {
+                passed = assertion(pi);
+            }
+            catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
+
+            Results.Add(new ConstraintResult(null, passed ? ResultType.PASSED : ResultType.NOT_APPLICABLE, failedMessage));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts the input assertion. Upon failure returns a Action Level 3 contraint result
+        /// </summary>
+        /// <param name="pi">the planning item to be evaluated</param>
+        /// <param name="assertion">the assertion that if not passed, returns an Action level 3 result</param>
+        /// <param name="failedMessage">the message to show in case of failure</param>
+        /// <returns>the plan quality asserter</returns>
+        public PQAsserter AssertCriticalPriority(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        {
+            bool passed = false;
+            try
+            {
+                passed = assertion(pi);
+            }
+            catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
+            Results.Add(new ConstraintResult(null, passed ? ResultType.PASSED : ResultType.ACTION_LEVEL_3, failedMessage));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts the input assertion. Upon failure returns a Action Level 3 contraint result
+        /// </summary>
+        /// <param name="pi">the planning item to be evaluated</param>
+        /// <param name="assertion">the assertion that if not passed, returns an Action level 2 result</param>
+        /// <param name="failedMessage">the message to show in case of failure</param>
+        /// <returns>the plan quality asserter</returns>
+        public PQAsserter AssertMidPriority(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        {
+            bool passed = false;
+            try
+            {
+                passed = assertion(pi);
+            }
+            catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
+            Results.Add(new ConstraintResult(null, passed ? ResultType.PASSED : ResultType.ACTION_LEVEL_2, failedMessage));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts the input assertion. Upon failure returns a Action Level 1 contraint result
+        /// </summary>
+        /// <param name="pi">the planning item to be evaluated</param>
+        /// <param name="assertion">the assertion that if not passed, returns an Action level 3 result</param>
+        /// <param name="failedMessage">the message to show in case of failure</param>
+        /// <returns>the plan quality asserter</returns>
+        public PQAsserter AssertLowPriority(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        {
+            bool passed = false;
+            try
+            {
+                passed = assertion(pi);
+            }
+            catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
+            Results.Add(new ConstraintResult(null, passed ? ResultType.PASSED : ResultType.ACTION_LEVEL_1, failedMessage));
+            return this;
+        }
+
         public PQAsserter ContainsValidFractionNum(PlanningItem pi)
         {
             int? numFx = 0;
@@ -39,7 +116,7 @@ namespace ESAPIX.Constraints
             else
                 numFx = (pi as PlanSetup)?.NumberOfFractions();
 
-            Results.Add(new ConstraintResult(null, numFx!=null?ResultType.PASSED:ResultType.NOT_APPLICABLE, "Not valid fraction number", string.Empty));
+            Results.Add(new ConstraintResult(null, numFx != null ? ResultType.PASSED : ResultType.NOT_APPLICABLE, "Not valid fraction number", string.Empty));
             return this;
         }
 
