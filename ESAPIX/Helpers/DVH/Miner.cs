@@ -115,6 +115,7 @@ namespace ESAPIX.Helpers.DVH
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+                    app.ClosePatient();
                 }
             }
             return csv;

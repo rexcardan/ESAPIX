@@ -12,7 +12,7 @@ namespace ESAPIX.AppKit.Exceptions
         {
             get
             {
-                return msg;
+                return msg + $"=> {InnerException.Message} @ " + InnerException.ToString();
             }
         }
     }

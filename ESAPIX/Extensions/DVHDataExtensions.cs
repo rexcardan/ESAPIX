@@ -22,18 +22,17 @@ namespace ESAPIX.Extensions
         /// <returns>the volume in the same units as the DVH point array</returns>
         public static double GetVolumeAtDose(this DVHPoint[] dvh, DoseValue dv)
         {
-            var curve = dvh.Select(d => new {Dose = d.DoseValue.GetDose(dv.Unit), d.Volume, d.VolumeUnit});
+            var curve = dvh.Select(d => new { Dose = d.DoseValue.GetDose(dv.Unit), d.Volume, d.VolumeUnit });
             var maxDose = curve.Max(d => d.Dose);
             var minDose = curve.Min(d => d.Dose);
 
             //If the max dose is less than the queried dose, then there is no volume at the queried dose (out of range)
             //If the min dose is greater than the queried dose, then 100% of the volume is at the queried dose
-            if (maxDose < dv.Dose || dv.Dose < minDose)
-                return maxDose < dv.Dose ? 0 : dvh.Max(d => d.Volume);
-            //If it makes it this far, we will have to interpolate
+            if (dv.Dose >= maxDose) return 0;
+            if (dv.Dose < minDose) { return dvh.Max(d => d.Volume); }
+
             var higherPoint = curve.First(p => p.Dose > dv.Dose);
             var lowerPoint = curve.Last(p => p.Dose <= dv.Dose);
-
             var volumeAtPoint = Interpolate(higherPoint.Dose, lowerPoint.Dose, higherPoint.Volume, lowerPoint.Volume,
                 dv.Dose);
             return volumeAtPoint;
