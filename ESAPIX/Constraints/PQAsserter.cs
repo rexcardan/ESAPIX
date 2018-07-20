@@ -11,8 +11,19 @@ using static ESAPIX.Constraints.ResultType;
 
 namespace ESAPIX.Constraints
 {
+    /// <summary>
+    /// The Plan Quality Asserter verifies a planning item meets certain criteria, before constraining to a 
+    /// particular constraint. It is designed to help with the IConstraint.CanConstrain(pi) method.
+    /// </summary>
     public class PQAsserter
     {
+        private PlanningItem _pi;
+
+        public PQAsserter(PlanningItem pi)
+        {
+            _pi = pi;
+        }
+
         public List<ConstraintResult> Results { get; set; } = new List<ConstraintResult>();
 
         /// <summary>
@@ -32,16 +43,15 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts the input assertion. Upon failure returns a Action Level 3 contraint result
         /// </summary>
-        /// <param name="pi">the planning item to be evaluated</param>
         /// <param name="assertion">the assertion that if not passed, returns an "not applicable" result</param>
         /// <param name="failedMessage">the message to show in case of failure</param>
         /// <returns>the plan quality asserter</returns>
-        public PQAsserter Assert(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        public PQAsserter Assert(Func<PlanningItem, bool> assertion, string failedMessage)
         {
             bool passed = false;
             try
             {
-                passed = assertion(pi);
+                passed = assertion(_pi);
             }
             catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
 
@@ -52,16 +62,15 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts the input assertion. Upon failure returns a Action Level 3 contraint result
         /// </summary>
-        /// <param name="pi">the planning item to be evaluated</param>
         /// <param name="assertion">the assertion that if not passed, returns an Action level 3 result</param>
         /// <param name="failedMessage">the message to show in case of failure</param>
         /// <returns>the plan quality asserter</returns>
-        public PQAsserter AssertCriticalPriority(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        public PQAsserter AssertCriticalPriority(Func<PlanningItem, bool> assertion, string failedMessage)
         {
             bool passed = false;
             try
             {
-                passed = assertion(pi);
+                passed = assertion(_pi);
             }
             catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
             Results.Add(new ConstraintResult(null, passed ? ResultType.PASSED : ResultType.ACTION_LEVEL_3, failedMessage));
@@ -71,16 +80,15 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts the input assertion. Upon failure returns a Action Level 3 contraint result
         /// </summary>
-        /// <param name="pi">the planning item to be evaluated</param>
         /// <param name="assertion">the assertion that if not passed, returns an Action level 2 result</param>
         /// <param name="failedMessage">the message to show in case of failure</param>
         /// <returns>the plan quality asserter</returns>
-        public PQAsserter AssertMidPriority(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        public PQAsserter AssertMidPriority(Func<PlanningItem, bool> assertion, string failedMessage)
         {
             bool passed = false;
             try
             {
-                passed = assertion(pi);
+                passed = assertion(_pi);
             }
             catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
             Results.Add(new ConstraintResult(null, passed ? ResultType.PASSED : ResultType.ACTION_LEVEL_2, failedMessage));
@@ -90,31 +98,30 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts the input assertion. Upon failure returns a Action Level 1 contraint result
         /// </summary>
-        /// <param name="pi">the planning item to be evaluated</param>
         /// <param name="assertion">the assertion that if not passed, returns an Action level 3 result</param>
         /// <param name="failedMessage">the message to show in case of failure</param>
         /// <returns>the plan quality asserter</returns>
-        public PQAsserter AssertLowPriority(PlanningItem pi, Func<PlanningItem, bool> assertion, string failedMessage)
+        public PQAsserter AssertLowPriority(Func<PlanningItem, bool> assertion, string failedMessage)
         {
             bool passed = false;
             try
             {
-                passed = assertion(pi);
+                passed = assertion(_pi);
             }
             catch (Exception e) { failedMessage += $" => Exception thrown : {e.Message}"; }
             Results.Add(new ConstraintResult(null, passed ? ResultType.PASSED : ResultType.ACTION_LEVEL_1, failedMessage));
             return this;
         }
 
-        public PQAsserter ContainsValidFractionNum(PlanningItem pi)
+        public PQAsserter ContainsValidFractionNum()
         {
             int? numFx = 0;
-            if (pi is PlanSum)
+            if (_pi is PlanSum)
             {
-                numFx = (pi as PlanSum).PlanSetups.Sum(p => p?.NumberOfFractions());
+                numFx = (_pi as PlanSum).PlanSetups.Sum(p => p?.NumberOfFractions());
             }
             else
-                numFx = (pi as PlanSetup)?.NumberOfFractions();
+                numFx = (_pi as PlanSetup)?.NumberOfFractions();
 
             Results.Add(new ConstraintResult(null, numFx != null ? ResultType.PASSED : ResultType.NOT_APPLICABLE, "Not valid fraction number", string.Empty));
             return this;
@@ -123,11 +130,10 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts contains image (not null)
         /// </summary>
-        /// <param name="pi">the planing item</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter HasImage(PlanningItem pi)
+        public PQAsserter HasImage()
         {
-            if (pi.GetImage() == null)
+            if (_pi.GetImage() == null)
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No image", string.Empty));
             else
                 Results.Add(new ConstraintResult(null, PASSED, string.Empty));
@@ -137,12 +143,11 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts contains structure set (not null)
         /// </summary>
-        /// <param name="pi">the planing item</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter HasStructureSet(PlanningItem pi)
+        public PQAsserter HasStructureSet()
         {
             // Check for structure set. If plan does not have a structure set, test is not applicable
-            if (pi.GetStructures() == null)
+            if (_pi.GetStructures() == null)
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set.", string.Empty));
             else
                 Results.Add(new ConstraintResult(null, PASSED, string.Empty));
@@ -152,12 +157,11 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts planning item is plan setup type
         /// </summary>
-        /// <param name="pi">the planing item</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter IsPlanSetup(PlanningItem pi)
+        public PQAsserter IsPlanSetup()
         {
             // Check for structure set. If plan does not have a structure set, test is not applicable
-            if (pi is PlanSum)
+            if (_pi is PlanSum)
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Must be plan setup only", string.Empty));
             else Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
 
@@ -167,18 +171,17 @@ namespace ESAPIX.Constraints
         /// <summary>
         /// Asserts is plan setup AND contains electron fields
         /// </summary>
-        /// <param name="pi">the planing item</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsOneOrMoreElectronBeams(PlanningItem pi)
+        public PQAsserter ContainsOneOrMoreElectronBeams()
         {
-            var isPlanSetup = IsPlanSetup(pi).Results.Last();
+            var isPlanSetup = IsPlanSetup().Results.Last();
             if (!isPlanSetup.IsSuccess)
             {
                 Results.Add(isPlanSetup);
                 return this;
             }
 
-            var ps = pi as PlanSetup;
+            var ps = _pi as PlanSetup;
             var ens = ps.Beams.Select(b => b.EnergyModeDisplayName).ToList();
             var containsElectrons = ens.Any(e => e.EndsWith("E"));
 
@@ -194,16 +197,16 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="structureIds">the ids required for the plan</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsNonEmptyStructuresById(PlanningItem pi, params string[] structureIds)
+        public PQAsserter ContainsNonEmptyStructuresById(params string[] structureIds)
         {
-            var structures = pi.GetStructures();
+            var structures = _pi.GetStructures();
             if (structures == null)
             {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
                 return this;
             }
             foreach (var id in structureIds)
-                if (!pi.ContainsStructure(id))
+                if (!_pi.ContainsStructure(id))
                 {
                     Results.Add(new ConstraintResult(null, NOT_APPLICABLE, $"Missing {id}, or {id} is empty",
                         string.Empty));
@@ -218,9 +221,9 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="structureIds">the ids required for the plan</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsOneOrMoreNonEmptyStructureById(PlanningItem pi, params string[] structureIds)
+        public PQAsserter ContainsOneOrMoreNonEmptyStructureById(params string[] structureIds)
         {
-            var structures = pi.GetStructures();
+            var structures = _pi.GetStructures();
             if (structures == null)
             {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
@@ -228,7 +231,7 @@ namespace ESAPIX.Constraints
             }
             foreach (var id in structureIds)
             {
-                if (pi.ContainsStructure(id))
+                if (_pi.ContainsStructure(id))
                 {
                     Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
                     return this;
@@ -245,9 +248,9 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="dicomTypes">the required DICOM types for this plan</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsNonEmptyStructuresByDICOMType(PlanningItem pi, params string[] dicomTypes)
+        public PQAsserter ContainsNonEmptyStructuresByDICOMType(params string[] dicomTypes)
         {
-            var structures = pi.GetStructures();
+            var structures = _pi.GetStructures();
             if (structures == null)
             {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
@@ -272,9 +275,9 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="dicomTypes">the required DICOM types for this plan</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsOneOrMoreNonEmptyStructuresByDICOMType(PlanningItem pi, params string[] dicomTypes)
+        public PQAsserter ContainsOneOrMoreNonEmptyStructuresByDICOMType(params string[] dicomTypes)
         {
-            var structures = pi.GetStructures();
+            var structures = _pi.GetStructures();
             if (structures == null)
             {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
@@ -299,9 +302,9 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="mType">the MLC type which all beams must have</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsTreatmentBeamsByMLCPlanType(PlanningItem pi, VMS.TPS.Common.Model.Types.MLCPlanType mType)
+        public PQAsserter ContainsTreatmentBeamsByMLCPlanType(VMS.TPS.Common.Model.Types.MLCPlanType mType)
         {
-            var beams = pi.GetBeams();
+            var beams = _pi.GetBeams();
             if (beams == null || !beams.Any())
             {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
@@ -326,9 +329,9 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="mType">the MLC type which all beams must have</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsOneOrMoreTreatmentBeamsByMLCPlanType(PlanningItem pi, VMS.TPS.Common.Model.Types.MLCPlanType mType)
+        public PQAsserter ContainsOneOrMoreTreatmentBeamsByMLCPlanType(VMS.TPS.Common.Model.Types.MLCPlanType mType)
         {
-            var beams = pi.GetBeams();
+            var beams = _pi.GetBeams();
             if (beams == null || !beams.Any())
             {
                 Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
@@ -355,16 +358,16 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="mType">the MLC type which all beams must have</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsOneOrMorePhotonBeams(PlanningItem pi)
+        public PQAsserter ContainsOneOrMorePhotonBeams()
         {
-            var isPlanSetup = IsPlanSetup(pi).Results.Last();
+            var isPlanSetup = IsPlanSetup().Results.Last();
             if (!isPlanSetup.IsSuccess)
             {
                 Results.Add(isPlanSetup);
                 return this;
             }
 
-            var ps = pi as PlanSetup;
+            var ps = _pi as PlanSetup;
             var ens = ps.Beams.Select(b => b.EnergyModeDisplayName).ToList();
             var containsPhotons = ens.Any(e => e.EndsWith("X"));
 
@@ -380,16 +383,16 @@ namespace ESAPIX.Constraints
         /// </summary>
         /// <param name="mType">the MLC type which all beams must have</param>
         /// <returns>the asserter object</returns>
-        public PQAsserter ContainsOneOrMoreProtonBeams(PlanningItem pi)
+        public PQAsserter ContainsOneOrMoreProtonBeams()
         {
-            var isPlanSetup = IsPlanSetup(pi).Results.Last();
+            var isPlanSetup = IsPlanSetup().Results.Last();
             if (!isPlanSetup.IsSuccess)
             {
                 Results.Add(isPlanSetup);
                 return this;
             }
 
-            var ps = pi as PlanSetup;
+            var ps = _pi as PlanSetup;
             var ens = ps.Beams.Select(b => b.EnergyModeDisplayName).ToList();
             var containsProtons = ens.Any(e => e.EndsWith("P"));
 
