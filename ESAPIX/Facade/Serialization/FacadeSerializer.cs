@@ -31,7 +31,10 @@ namespace ESAPIX.Facade.Serialization
                         new StructureCodeInfoConverter(),
 #endif
                         new DoseValueConverter(),
-                        new ControlPointCollectionConverter()
+                        new ControlPointCollectionConverter(),
+#if VMS155
+                     
+#endif
                     },
                     ContractResolver = new ESAPIContractResolver()
                 };
