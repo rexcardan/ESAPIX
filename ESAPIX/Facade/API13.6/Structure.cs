@@ -283,7 +283,7 @@ namespace ESAPIX.Facade.API
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
-                    MeshGeometry3D mesh = (null);
+                    MeshGeometry3D mesh = (new MeshGeometry3D());
                     var points = (new Point3D[]{});
                     var normals = (new Vector3D[]{});
                     var indices = (new Int32[]{});
@@ -291,7 +291,6 @@ namespace ESAPIX.Facade.API
                     {
                         if ((_client.MeshGeometry) != (null))
                         {
-                            mesh = (new MeshGeometry3D());
                             points = (new Point3D[_client.MeshGeometry.Positions.Count]);
                             normals = (new Vector3D[_client.MeshGeometry.Normals.Count]);
                             indices = (new Int32[_client.MeshGeometry.TriangleIndices.Count]);
@@ -302,7 +301,7 @@ namespace ESAPIX.Facade.API
                     }
 
                     );
-                    if ((mesh) == (null))
+                    if ((points.Length) == (0))
                     {
                         return null;
                     }
