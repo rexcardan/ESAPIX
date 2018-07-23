@@ -437,6 +437,30 @@ namespace ESAPIX.Facade.API
             }
         }
 
+        //public System.Boolean CreatePlanCollection(System.Boolean continueOptimization, ESAPIX.Facade.API.TradeoffPlanGenerationIntermediateDoseMode intermediateDoseMode)
+        //{
+        //    if ((XC.Instance.CurrentContext) != (null))
+        //    {
+        //        var vmsResult = (XC.Instance.CurrentContext.GetValue(sc =>
+        //        {
+        //            var fromClient = (_client.CreatePlanCollection(continueOptimization, intermediateDoseMode._client));
+        //            if (fromClient.Equals(default (System.Boolean)))
+        //            {
+        //                return default (System.Boolean);
+        //            }
+
+        //            return (System.Boolean)(fromClient);
+        //        }
+
+        //        ));
+        //        return vmsResult;
+        //    }
+        //    else
+        //    {
+        //        return (System.Boolean)(_client.CreatePlanCollection(continueOptimization, intermediateDoseMode));
+        //    }
+        //}
+
         public System.Double GetObjectiveCost(ESAPIX.Facade.API.TradeoffObjective objective)
         {
             if ((XC.Instance.CurrentContext) != (null))

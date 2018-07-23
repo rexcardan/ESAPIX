@@ -38,10 +38,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Energies;
-                        enumerator = asEnum.GetEnumerator();
+                        if ((asEnum) != null)
+                        {
+                            enumerator = asEnum.GetEnumerator();
+                        }
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield break;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = default (System.String);
@@ -88,10 +96,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.EnergyModes;
-                        enumerator = asEnum.GetEnumerator();
+                        if ((asEnum) != null)
+                        {
+                            enumerator = asEnum.GetEnumerator();
+                        }
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield break;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = default (System.String);
@@ -189,7 +205,7 @@ namespace ESAPIX.Facade.API
                     );
                     if (enumerator == null)
                     {
-                        yield return null;
+                        yield break;
                     }
 
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))

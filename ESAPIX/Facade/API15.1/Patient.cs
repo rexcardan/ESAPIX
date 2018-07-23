@@ -47,7 +47,7 @@ namespace ESAPIX.Facade.API
                     );
                     if (enumerator == null)
                     {
-                        yield return null;
+                        yield break;
                     }
 
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
@@ -496,7 +496,7 @@ namespace ESAPIX.Facade.API
                     );
                     if (enumerator == null)
                     {
-                        yield return null;
+                        yield break;
                     }
 
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
@@ -644,7 +644,7 @@ namespace ESAPIX.Facade.API
                     );
                     if (enumerator == null)
                     {
-                        yield return null;
+                        yield break;
                     }
 
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
@@ -708,7 +708,7 @@ namespace ESAPIX.Facade.API
                     );
                     if (enumerator == null)
                     {
-                        yield return null;
+                        yield break;
                     }
 
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
