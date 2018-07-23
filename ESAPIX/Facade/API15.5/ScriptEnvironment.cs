@@ -173,15 +173,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Scripts;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.ApplicationScript();
@@ -237,16 +240,6 @@ namespace ESAPIX.Facade.API
             _client = (client);
         }
 
-        public ScriptEnvironment(System.String appName, System.Collections.Generic.IEnumerable<VMS.TPS.Common.Model.IApplicationScript> scripts, System.Action<System.Reflection.Assembly,System.Object,System.Windows.Window,System.Object> scriptExecutionEngine)
-        {
-            if ((XC.Instance.CurrentContext) != (null))
-            {
-                _client = (VMSConstructor.ConstructScriptEnvironmentFunc0(appName, scripts, scriptExecutionEngine));
-            }
-            else
-            {
-                throw new Exception("There is no VMS Context to create the class");
-            }
-        }
+     
     }
 }

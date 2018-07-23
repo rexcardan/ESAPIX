@@ -213,15 +213,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Blocks;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.Block();
@@ -274,15 +277,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Boluses;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.Bolus();
@@ -335,15 +341,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.CalculationLogs;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.BeamCalculationLog();
@@ -711,15 +720,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.FieldReferencePoints;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.FieldReferencePoint();
@@ -1465,15 +1477,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Trays;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.Tray();
@@ -1575,15 +1590,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Wedges;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.Wedge();

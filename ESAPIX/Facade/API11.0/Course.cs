@@ -122,15 +122,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.PlanSetups;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.PlanSetup();
@@ -183,15 +186,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.PlanSums;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.PlanSum();

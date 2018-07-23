@@ -38,15 +38,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.BrachyFieldReferencePoints;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.BrachyFieldReferencePoint();
@@ -141,15 +144,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.SourcePositions;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.SourcePosition();

@@ -397,15 +397,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.OrgansAtRisk;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.RTPrescriptionOrganAtRisk();
@@ -717,15 +720,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.TargetConstraintsWithoutTargetLevel;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.RTPrescriptionTargetConstraints();
@@ -778,15 +784,18 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Targets;
-                        if ((asEnum) == null)
+                        if ((asEnum) != null)
                         {
-                            return null;
+                            enumerator = asEnum.GetEnumerator();
                         }
-
-                        enumerator = asEnum.GetEnumerator();
                     }
 
                     );
+                    if (enumerator == null)
+                    {
+                        yield return null;
+                    }
+
                     while (XC.Instance.CurrentContext.GetValue<bool>(sc => enumerator.MoveNext()))
                     {
                         var facade = new ESAPIX.Facade.API.RTPrescriptionTarget();
