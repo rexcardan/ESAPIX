@@ -115,21 +115,30 @@ namespace ESAPIX.Facade.API
                 }
                 else if ((XC.Instance.CurrentContext) != (null))
                 {
-                    var mesh = (new MeshGeometry3D());
+                    MeshGeometry3D mesh = (null);
                     var points = (new Point3D[]{});
                     var normals = (new Vector3D[]{});
                     var indices = (new Int32[]{});
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
-                        points = (new Point3D[_client.MeshGeometry.Positions.Count]);
-                        normals = (new Vector3D[_client.MeshGeometry.Normals.Count]);
-                        indices = (new Int32[_client.MeshGeometry.TriangleIndices.Count]);
-                        _client.MeshGeometry.Positions.CopyTo(points, 0);
-                        _client.MeshGeometry.Normals.CopyTo(normals, 0);
-                        _client.MeshGeometry.TriangleIndices.CopyTo(indices, 0);
+                        if ((_client.MeshGeometry) != (null))
+                        {
+                            mesh = (new MeshGeometry3D());
+                            points = (new Point3D[_client.MeshGeometry.Positions.Count]);
+                            normals = (new Vector3D[_client.MeshGeometry.Normals.Count]);
+                            indices = (new Int32[_client.MeshGeometry.TriangleIndices.Count]);
+                            _client.MeshGeometry.Positions.CopyTo(points, 0);
+                            _client.MeshGeometry.Normals.CopyTo(normals, 0);
+                            _client.MeshGeometry.TriangleIndices.CopyTo(indices, 0);
+                        }
                     }
 
                     );
+                    if ((mesh) == (null))
+                    {
+                        return null;
+                    }
+
                     mesh.Positions = (new Point3DCollection(points));
                     mesh.Normals = (new Vector3DCollection(normals));
                     mesh.TriangleIndices = (new Int32Collection(indices));
