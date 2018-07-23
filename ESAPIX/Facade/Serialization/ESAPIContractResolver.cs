@@ -39,6 +39,24 @@ namespace ESAPIX.Facade.Serialization
                   case nameof(IScriptContext.IonPlanSetup):
                     excludingNames.Add(nameof(IonPlanSetup.Course));
                     break;
+                case nameof(BeamCalculationLog):
+                    excludingNames.Add(nameof(Beam));
+                    break;
+                case nameof(EstimatedDVH):
+                    excludingNames.Add(nameof(EstimatedDVH.PlanSetup));
+                    excludingNames.Add(nameof(EstimatedDVH.Structure));
+                    break;
+                case nameof(OptimizationObjective):
+                    excludingNames.Add(nameof(OptimizationObjective.Structure));
+                    break;
+#endif
+#if (VMS155)
+                case nameof(PlanTreatmentSession):
+                    excludingNames.Add(nameof(PlanTreatmentSession.PlanSetup));
+                    break;
+                case nameof(TreatmentSession):
+                    excludingNames.Add(nameof(TreatmentSession.SessionPlans));
+                    break;
 #endif
                 case nameof(IScriptContext.PlanSetup):
                     excludingNames.Add(nameof(PlanSetup.Course));
