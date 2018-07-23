@@ -164,6 +164,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.LateralSpreadingDevices;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -521,6 +526,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.RangeModulators;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -577,6 +587,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.RangeShifters;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 

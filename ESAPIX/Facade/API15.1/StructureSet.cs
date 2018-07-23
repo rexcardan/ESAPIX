@@ -38,6 +38,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Structures;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -94,6 +99,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.ApplicationScriptLogs;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 

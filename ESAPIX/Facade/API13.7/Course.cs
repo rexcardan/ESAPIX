@@ -85,6 +85,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.PlanSetups;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -141,6 +146,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.ExternalPlanSetups;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -197,6 +207,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.BrachyPlanSetups;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -253,6 +268,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.IonPlanSetups;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -351,6 +371,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.Diagnoses;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -498,6 +523,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.PlanSums;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 

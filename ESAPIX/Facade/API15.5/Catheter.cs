@@ -80,6 +80,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.BrachyFieldReferencePoints;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -346,6 +351,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.SourcePositions;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 

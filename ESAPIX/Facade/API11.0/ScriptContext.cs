@@ -341,6 +341,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.PlansInScope;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -397,6 +402,11 @@ namespace ESAPIX.Facade.API
                     XC.Instance.CurrentContext.Thread.Invoke(() =>
                     {
                         var asEnum = (IEnumerable)_client.PlanSumsInScope;
+                        if ((asEnum) == null)
+                        {
+                            return null;
+                        }
+
                         enumerator = asEnum.GetEnumerator();
                     }
 
@@ -439,5 +449,16 @@ namespace ESAPIX.Facade.API
             _client = (client);
         }
 
+        public ScriptContext(System.Object context, System.Object user)
+        {
+            if ((XC.Instance.CurrentContext) != (null))
+            {
+                _client = (VMSConstructor.ConstructScriptContextFunc0(context, user));
+            }
+            else
+            {
+                throw new Exception("There is no VMS Context to create the class");
+            }
+        }
     }
 }

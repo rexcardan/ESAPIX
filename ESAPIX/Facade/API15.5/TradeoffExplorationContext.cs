@@ -437,7 +437,7 @@ namespace ESAPIX.Facade.API
             }
         }
 
-        public System.Boolean CreatePlanCollection(System.Boolean continueOptimization, dynamic intermediateDoseMode)
+        public System.Boolean CreatePlanCollection(System.Boolean continueOptimization, ESAPIX.Facade.API.TradeoffPlanGenerationIntermediateDoseMode intermediateDoseMode)
         {
             if ((XC.Instance.CurrentContext) != (null))
             {
