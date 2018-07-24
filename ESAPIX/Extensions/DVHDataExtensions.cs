@@ -234,10 +234,46 @@ namespace ESAPIX.Extensions
             if (dvh.Any())
             {
                 var unit = dvh.First().DoseValue.Unit;
-                var meanVal = dvh.Average(d => d.DoseValue.Dose);
+                dvh = dvh.Differential();
+                var sum = dvh.Sum(d => d.Volume * d.DoseValue.Dose);
+                var totalVolume = dvh.Sum(d => d.Volume);
+                var meanVal = sum / totalVolume;
                 return new DoseValue(meanVal, unit);
             }
             return DoseValue.UndefinedDose();
+        }
+
+        /// <summary>
+        /// Converts cumulative to differntial
+        /// </summary>
+        /// <param name="dvh">the dvh curve</param>
+        /// <returns>the differential dvh</returns>
+        public static DVHPoint[] Differential(this DVHPoint[] dvh, double binWidth = 5)
+        {
+            var maxDose = dvh.MaxDose();
+            var volumeUnit = dvh.First().VolumeUnit;
+            var minDose = dvh.MinDose();
+
+            List<DVHPoint> differential = new List<DVHPoint>();
+
+            for (int i = 0; i < dvh.Length-1; i++)
+            {
+                var pt1 = dvh[i];
+                var pt2 = dvh[i + 1];
+                var vol = pt1.Volume - pt2.Volume;
+                var dose = pt2.DoseValue.Dose - pt1.DoseValue.Dose;
+                var ddvh = vol / dose;
+                differential.Add(new DVHPoint(pt1.DoseValue, ddvh, volumeUnit));
+            }
+
+            var max = differential.Max(d => d.Volume);
+            for (int i = 0; i < differential.Count; i++)
+            {
+                var dv = differential[i];
+                differential[i] = new DVHPoint(dv.DoseValue, dv.Volume / max, dv.VolumeUnit);
+            }
+
+            return differential.ToArray();
         }
     }
 }
