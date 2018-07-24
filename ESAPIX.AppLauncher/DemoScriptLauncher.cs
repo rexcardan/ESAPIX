@@ -44,79 +44,79 @@ namespace VMS.TPS
 
         public class ArgumentBuilder
         {
-            public static string Build(ScriptContext ctx)
+            public static string Build(IScriptContext ctx)
             {
                 var sb = new StringBuilder();
 
                 if (ctx.CurrentUser != null)
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.CurrentUserId, ctx.CurrentUser.Id));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.CurrentUserId, ctx.CurrentUser.Id));
                 }
 #if !VMS110
                 if (!string.IsNullOrEmpty(ctx.ApplicationName))
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.ApplicationName, ctx.ApplicationName));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.ApplicationName, ctx.ApplicationName));
                 }
                 if (ctx.BrachyPlansInScope != null && ctx.BrachyPlansInScope.Any())
                 {
                     var uids = ctx.BrachyPlansInScope.Select(p => p.UID).ToArray();
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.BrachyPlansInScope, string.Join(" ", uids)));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.BrachyPlansInScope, string.Join(" ", uids)));
                 }
                 if (ctx.ExternalPlansInScope != null && ctx.ExternalPlansInScope.Any())
                 {
                     var uids = ctx.ExternalPlansInScope.Select(p => p.UID).ToArray();
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.ExternalPlansInScope, string.Join(" ", uids)));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.ExternalPlansInScope, string.Join(" ", uids)));
                 }
                 if (ctx.BrachyPlanSetup != null)
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.BrachyPlanSetup, ctx.BrachyPlanSetup.UID));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.BrachyPlanSetup, ctx.BrachyPlanSetup.UID));
                 }
                 if (ctx.ExternalPlanSetup != null)
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.ExternalPlanSetup, ctx.ExternalPlanSetup.UID));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.ExternalPlanSetup, ctx.ExternalPlanSetup.UID));
                 }
 #endif
                 if (ctx.Patient != null && !string.IsNullOrEmpty(ctx.Patient.Id))
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.PatientId, ctx.Patient.Id));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.PatientId, ctx.Patient.Id));
                 }
                 if (ctx.Image != null)
                 {
-                    sb.Append(string.Format("{0} {1} {2}", ArgumentKey.Image, ctx.Image.Id, ctx.Image.Series.UID));
+                    sb.Append(string.Format("{0} {1} {2} ", ArgumentKey.Image, ctx.Image.Id, ctx.Image.Series.UID));
                 }
                 if (ctx.StructureSet != null)
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.StructureSet, ctx.StructureSet.UID));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.StructureSet, ctx.StructureSet.UID));
                 }
                 if (ctx.PlanSetup != null)
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.PlanSetup, ctx.PlanSetup.UID));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.PlanSetup, ctx.PlanSetup.UID));
                 }
 
                 if (ctx.Course != null)
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.Course, ctx.Course.Id));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.Course, ctx.Course.Id));
                 }
                 if (ctx.PlansInScope != null && ctx.PlansInScope.Any())
                 {
                     var uids = ctx.PlansInScope.Select(p => p.UID).ToArray();
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.PlansInScope, string.Join(" ", uids)));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.PlansInScope, string.Join(" ", uids)));
                 }
 
                 if (ctx.PlanSumsInScope != null && ctx.PlanSumsInScope.Any())
                 {
                     var ids = ctx.PlanSumsInScope.Select(p => p.Id).ToArray();
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.PlanSumsInScope, string.Join(" ", ids)));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.PlanSumsInScope, string.Join(" ", ids)));
                 }
 #if (VMS151 || VMS150 || VMS155)
                 if (ctx.IonPlansInScope != null && ctx.IonPlansInScope.Any())
                 {
                     var ids = ctx.IonPlansInScope.Select(p => p.Id).ToArray();
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.IonPlansInScope, string.Join(" ", ids)));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.IonPlansInScope, string.Join(" ", ids)));
                 }
                 if (ctx.IonPlanSetup != null)
                 {
-                    sb.Append(string.Format("{0} {1}", ArgumentKey.IonPlanSetup, ctx.IonPlanSetup.UID));
+                    sb.Append(string.Format("{0} {1} ", ArgumentKey.IonPlanSetup, ctx.IonPlanSetup.UID));
                 }
 #endif
                 return sb.ToString();
