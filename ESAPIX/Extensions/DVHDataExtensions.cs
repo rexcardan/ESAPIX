@@ -248,7 +248,7 @@ namespace ESAPIX.Extensions
         /// </summary>
         /// <param name="dvh">the dvh curve</param>
         /// <returns>the differential dvh</returns>
-        public static DVHPoint[] Differential(this DVHPoint[] dvh, double binWidth = 5)
+        public static DVHPoint[] Differential(this DVHPoint[] dvh)
         {
             var maxDose = dvh.MaxDose();
             var volumeUnit = dvh.First().VolumeUnit;
@@ -265,7 +265,7 @@ namespace ESAPIX.Extensions
                 var ddvh = vol / dose;
                 differential.Add(new DVHPoint(pt1.DoseValue, ddvh, volumeUnit));
             }
-
+            //Normalize
             var max = differential.Max(d => d.Volume);
             for (int i = 0; i < differential.Count; i++)
             {
