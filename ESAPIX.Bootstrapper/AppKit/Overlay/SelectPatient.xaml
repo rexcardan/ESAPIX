@@ -5,25 +5,40 @@
         <StackPanel MinWidth="500">
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0" />
-                    <GradientStop Color="#FFC7C7C7" Offset="1" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="#FFC7C7C7" />
+                    <GradientStop Color="#FF8D8D8D" Offset="0.377"/>
+                    <GradientStop Color="#FF666666" Offset="0.379"/>
+                    <GradientStop Color="#FF939393" Offset="0.241"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Button x:Name="showContextButton" Content="Change Patient Context" Click="ShowPatientContext_Click" />
             <StackPanel x:Name="patientContextMenu">
-                <TextBlock Text="ESAPIX BOOTSTRAP" FontWeight="Bold" Padding="5" Margin="5" Foreground="White"
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="pack://application:,,,/ESAPIX.Bootstrapper;component/Resources/esapix.png" Width="20"/>
+                    <TextBlock Text="ESAPIX BOOTSTRAP" FontWeight="Bold" Padding="5" Margin="5" Foreground="White"
                            TextAlignment="Center" FontSize="16" />
+                </StackPanel>
+               
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center">
                     <TextBlock Text="Patient Id" Padding="5" Margin="5" Foreground="White" />
-                    <TextBox x:Name="patientId" Width="150" Padding="5" Margin="5">
-                        <TextBox.InputBindings>
-                            <KeyBinding Key="Return"
-                                        Command="{Binding SearchCommand}" />
-                        </TextBox.InputBindings>
-                    </TextBox>
-                    <Button Content="Update Patient Context" Command="{Binding SearchCommand}" MaxWidth="150"
-                            Margin="5" Padding="5" />
+                    <ComboBox IsEditable="True" x:Name="patientId" Padding="5" Margin="5" Width="250"
+                              ItemsSource="{Binding Suggestions}"
+                              Text="{Binding PatientId}"
+                              PreviewTextInput="patientId_PreviewTextInput"
+                              PreviewKeyDown="patientId_PreviewKeyDown"
+                              DropDownClosed="patientId_DropDownClosed">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                (<Run Text="{Binding Id, Mode=OneWay}"/>)
+                                <Run Text="{Binding LastName, Mode=OneWay}"/>, 
+                                <Run Text="{Binding FirstName, Mode=OneWay}"/>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
                     <ComboBox ItemsSource="{Binding Courses}" Padding="5" Margin="5" Width="150"
                               SelectedItem="{Binding SelectedCourse, Mode=TwoWay}">
                         <ComboBox.ItemTemplate>
@@ -40,6 +55,12 @@
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
+                    <Button Margin="5" Padding="5" Command="{Binding SaveContextCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="pack://application:,,,/ESAPIX.Bootstrapper;component/Resources/save.png" Width="16" VerticalAlignment="Center" Margin="5 0"
+                                   ToolTip="Save Context To File"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
                 <Grid>
                     <Grid.Background>

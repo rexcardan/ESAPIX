@@ -12,6 +12,9 @@ using System.Windows.Controls;
 using System.Windows.Threading;
 using Prism.Commands;
 using ESAPIX.Common;
+using ESAPIX.Facade.API;
+using ESAPIX.Helpers;
+using ESAPIX.Bootstrapper.AppKit.Data;
 
 #endregion
 
@@ -27,23 +30,40 @@ namespace ESAPIX.AppKit.Overlay
         private string _selCourse;
 
         private string _selectedPlanItem;
+        private List<PatientSummary> _summaries;
 
         public SelectPatient(StandAloneContext app)
         {
             _disp = Dispatcher.CurrentDispatcher;
             InitializeComponent();
             _app = app;
+            //Preload summaries
+            LoadSummaries();
             DataContext = this;
             patientContextMenu.Visibility = Visibility.Visible;
             hideContextButton.Visibility = Visibility.Visible;
             showContextButton.Visibility = Visibility.Collapsed;
             Courses = new ObservableCollection<string>();
             PlanItems = new ObservableCollection<string>();
-            SearchCommand = new DelegateCommand(async () =>
+            SaveContextCommand = new DelegateCommand(() =>
             {
-                UpdateStatus("Searching...");
-                await UpdatePatient();
+               ContextIO.SaveToFile(_app);
             });
+        }
+
+        private async void LoadSummaries()
+        {
+            patientId.IsEnabled = false;
+            await Task.Run(() =>
+            {
+                UpdateStatus("Caching Summaries...");
+                _summaries = _app.Application.PatientSummaries.Select(p =>
+                {
+                    return new PatientSummary() { Id = p.Id, FirstName = p.FirstName, LastName = p.LastName };
+                }).ToList();
+                UpdateStatus("");
+            });
+            patientId.IsEnabled = true;
         }
 
         public string Status { get; set; }
@@ -100,60 +120,7 @@ namespace ESAPIX.AppKit.Overlay
             }
         }
 
-        public DelegateCommand SearchCommand { get; set; }
-
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public async Task UpdatePatient()
-        {
-            try
-            {
-                if (_app != null)
-                {
-                    var id = "";
-                    await _disp.InvokeAsync(() => { id = patientId.Text; });
-                    //Close last patient
-                    await Task.Run(() =>
-                    {
-                        if (_app.Patient != null && _app.Patient.IsLive)
-                        {
-                            Debug.WriteLine($"Closing patient {_app.Patient.LastName}");
-                            _app.ClosePatient();
-                        }
-                    });
-                    var foundPatient = await Task.Run(() =>
-                    {
-                        if (_app.SetPatient(id))
-                        {
-                            Debug.WriteLine($"Found patient {id}");
-                            UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
-                                _app.Patient.FirstName, _app.Patient.Id));
-                            return true;
-                        }
-                        Debug.WriteLine($"Couldn't find patient {patientId.Text}");
-                        UpdateStatus("Patient not found!");
-                        return false;
-                    });
-
-                    if (foundPatient)
-                    {
-                        var courseNames = _app.Patient.Courses.Select(c => c.Id).ToList();
-
-                        Courses.Clear();
-                        courseNames.ForEach(Courses.Add);
-
-                        SelectedCourse = Courses.FirstOrDefault();
-                        OnPropertyChanged("Courses");
-                        OnPropertyChanged("SelectedCourse");
-                        OnPropertyChanged("Status");
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-        }
 
         private void UpdateStatus(string p)
         {
@@ -180,5 +147,90 @@ namespace ESAPIX.AppKit.Overlay
             hideContextButton.Visibility = Visibility.Collapsed;
             showContextButton.Visibility = Visibility.Visible;
         }
+
+        public DelegateCommand SaveContextCommand { get; set; }
+
+        #region AUTOCOMPLETE FUNCTIONS
+        private void SearchForPatientCandidates(string inputText)
+        {
+            Suggestions.Clear();
+            var candidates = _summaries.Select(s => new
+            {
+                s,
+                IdDistance = Levenshtein.ComputeDistance(s.Id.ToUpper(), inputText.ToUpper()),
+                LastNameDistance = Levenshtein.ComputeDistance(s.LastName.ToUpper(), inputText.ToUpper()),
+                FullNameDistance = Levenshtein.ComputeDistance($"{s.LastName.ToUpper()}, {s.FirstName.ToUpper()}", inputText.ToUpper()),
+            })
+            .Select(s => new { s.s, Distance = Math.Min(Math.Min(s.IdDistance, s.FullNameDistance), s.LastNameDistance) })
+            .OrderBy(s => s.Distance)
+            .Where(s => s.Distance < 5)
+            .OrderBy(s => s.Distance)
+            .Take(5).ToList();
+            candidates.ForEach(c => Suggestions.Add(c.s));
+        }
+
+        public ObservableCollection<PatientSummary> Suggestions { get; set; } = new ObservableCollection<PatientSummary>();
+
+        private async void patientId_DropDownClosed(object sender, EventArgs e)
+        {
+            //Mode up selected
+            var patientSummary = patientId.SelectedItem as PatientSummary;
+            patientSummary = patientSummary ?? Suggestions.FirstOrDefault();
+            await ModeUpSelected(patientSummary);
+        }
+
+        private async Task ModeUpSelected(PatientSummary patientSummary)
+        {
+            //Load text correctly
+            if (patientSummary != null)
+            {
+                patientId.Text = $"({patientSummary.Id}) {patientSummary.LastName}, {patientSummary.FirstName}";
+                if (patientSummary.Id != _app.Patient?.Id)
+                {
+                    //Close last patient
+                    await Task.Run(() =>
+                    {
+                        if (_app.Patient != null && _app.Patient.IsLive)
+                        {
+                            Debug.WriteLine($"Closing patient {_app.Patient.LastName}");
+                            _app.ClosePatient();
+                        }
+                    });
+
+                    //Mode up selected
+                    if (_app.SetPatient(patientSummary.Id))
+                    {
+                        Courses.Clear();
+                        var courseNames = _app.Patient.Courses.Select(c => c.Id).ToList();
+                        courseNames.ForEach(Courses.Add);
+
+                        SelectedCourse = Courses.FirstOrDefault();
+                        OnPropertyChanged("Courses");
+                        OnPropertyChanged("SelectedCourse");
+                        OnPropertyChanged("Status");
+                    }
+                }
+            }
+        }
+
+        private void patientId_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Back)
+            {
+                SearchForPatientCandidates(patientId.Text);
+            }
+            if(e.Key == System.Windows.Input.Key.Enter)
+            {
+                var patientSummary = Suggestions.FirstOrDefault();
+                ModeUpSelected(patientSummary);
+            }
+        }
+
+        private void patientId_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            SearchForPatientCandidates(patientId.Text + e.Text);
+            patientId.IsDropDownOpen = true;
+        }
+        #endregion
     }
 }

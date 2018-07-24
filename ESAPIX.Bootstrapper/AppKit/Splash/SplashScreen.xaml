@@ -83,13 +83,13 @@
         </EventTrigger>
     </UserControl.Triggers>
     <Grid x:Name="grid1">
-        <Image Source="/ESAPIX.Bootstrapper;component/Resources/uabcode.jpg" />
+        <Image Source="pack://application:,,,/ESAPIX.Bootstrapper;component/Resources/uabcode.jpg" />
         <!--<Image Source="uabcode.jpg" Stretch="Fill"/>-->
         <Grid x:Name="grid">
             <TextBlock x:Name="SoftLabel" Text="UAB Code" FontSize="20" HorizontalAlignment="Center"
                        VerticalAlignment="Bottom" Padding="10" Foreground="#FF3E3E46" />
             <Image x:Name="image" Stretch="UniformToFill"
-                   Source="/ESAPIX.Bootstrapper;component/Resources/uabdistort.jpg">
+                   Source="pack://application:,,,/ESAPIX.Bootstrapper;component/Resources/uabdistort.jpg">
                 <Image.OpacityMask>
                     <LinearGradientBrush EndPoint="1.5,1.5" StartPoint="-1.2,-1.2">
                         <GradientStop Offset="0.9" />
