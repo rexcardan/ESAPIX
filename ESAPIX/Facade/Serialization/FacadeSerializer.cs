@@ -6,6 +6,11 @@ using ESAPIX.Interfaces;
 using Newtonsoft.Json;
 using ESAPIX.Common;
 using ESAPIX.Extensions;
+using Newtonsoft.Json.Serialization;
+using System.Xml;
+using System.Text;
+using System.Xml.Serialization;
+using ESAPIX.Facade.API;
 
 #endregion
 
@@ -52,6 +57,64 @@ namespace ESAPIX.Facade.Serialization
                     Converters = new List<JsonConverter> { new DoseProfileConverter() }
                 };
             }
+        }
+
+        /// <summary>
+        /// Serialize to JSON string
+        /// </summary>
+        /// <param name="o">object to be serialized</param>
+        /// <returns>json string of object</returns>
+        public static string Serialize(IXmlSerializable apiObject)
+        {
+            var xml = SerializeToXML(apiObject);
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xml);
+
+            //Convert to JSON
+            var json = JsonConvert.SerializeXmlNode(doc.FirstChild, Newtonsoft.Json.Formatting.None, true);
+            json = json.Replace("@", "");
+            return json;
+        }
+
+        /// <summary>
+        /// Serialize to XML string
+        /// </summary>
+        /// <param name="o">object to be serialized</param>
+        /// <returns>json string of object</returns>
+        public static string SerializeToXML(IXmlSerializable apiObject)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.ConformanceLevel = ConformanceLevel.Fragment;
+            settings.CloseOutput = false;
+            var ms = new StringBuilder();
+            {
+                using (XmlWriter writer = XmlWriter.Create(ms, settings))
+                {
+
+                    //Write to XML first (built into ESAPI)
+                    var @class = apiObject.GetType().FullName;
+                    writer.WriteStartElement(@class);
+                    apiObject.WriteXml(writer);
+                    writer.WriteFullEndElement();
+                    writer.Close();
+                    var xml = ms.ToString();
+                    return xml;
+                }
+            }
+        }
+        /// <summary>
+        /// Serialize to JSON string
+        /// </summary>
+        /// <param name="o">object to be serialized</param>
+        /// <returns>json string of object</returns>
+        public static string SerializeStructureWithGeometry(Structure st)
+        {
+            var mesh = st.MeshGeometry;
+            var meshJson = JsonConvert.SerializeObject(mesh, SerializeSettings);
+            var jsonNonGeometry = Serialize(st);
+            var recovered = JsonConvert.DeserializeObject<Structure>(jsonNonGeometry, DeserializeSettings);
+            recovered.MeshGeometry = mesh;
+            return JsonConvert.SerializeObject(recovered, SerializeSettings);
         }
 
         /// <summary>

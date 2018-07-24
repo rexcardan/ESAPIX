@@ -48,7 +48,13 @@ namespace ESAPIX.Facade.Serialization
             typeof(IEnumerable<StructureSet>),
             typeof(IEnumerable<Registration>),
             typeof(IEnumerable<Isodose>),
-            typeof(IEnumerable<string>)
+            typeof(IEnumerable<string>),
+            typeof(IEnumerable<ReferencePoint>),
+#if VMS155
+            typeof(IEnumerable<ImageApprovalHistoryEntry>),
+            typeof(IEnumerable<PlanTreatmentSession>),
+            typeof(IEnumerable<StructureApprovalHistoryEntry>)
+#endif
         };
 
         public override bool CanRead
@@ -73,6 +79,7 @@ namespace ESAPIX.Facade.Serialization
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
             JsonSerializer serializer)
         {
+            
             var typ = objectType.GenericTypeArguments.FirstOrDefault();
 
             if (typ != null)
@@ -94,11 +101,26 @@ namespace ESAPIX.Facade.Serialization
 
                     try
                     {
-                        var tempList = JArray.Load(reader)
+                        var item = JObject.Load(reader);
+                        var val = item.Value<JObject>();
+                       
+
+                        try
+                        {
+                            var arrayr = val.First.CreateReader();
+                            var tempList2 = JArray.Load(arrayr)
                             .Select(i => (dynamic)serializer.Deserialize(((JObject)i).CreateReader(), typ))
                             .ToList();
-
-                        tempList.ForEach(i => { list.Add(i); });
+                            tempList2.ForEach(i => { list.Add(i); });
+                        }
+                        catch(Exception e)
+                        {
+                            var arrayr = val.First.First.CreateReader();
+                            var tempList2 = JArray.Load(arrayr)
+                            .Select(i => (dynamic)serializer.Deserialize(((JObject)i).CreateReader(), typ))
+                            .ToList();
+                            tempList2.ForEach(i => { list.Add(i); });
+                        }
                     }
                     catch (Exception e)
                     {

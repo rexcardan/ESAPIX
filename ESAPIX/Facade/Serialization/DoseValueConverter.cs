@@ -26,8 +26,15 @@ namespace ESAPIX.Facade.Serialization
 
             // Read the properties which will be used as constructor parameters
             var value = (double) jo["Dose"];
-            var unit = jo["Unit"].ToObject<DoseValue.DoseUnit>();
-
+            var unitVal = jo["Unit"].Value<string>();
+            DoseValue.DoseUnit unit = DoseValue.DoseUnit.Unknown;
+            switch (unitVal)
+            {
+                case "%": unit = DoseValue.DoseUnit.Percent;break;
+                case "cGy": unit = DoseValue.DoseUnit.cGy;break;
+                case "Gy": unit = DoseValue.DoseUnit.Gy;break;
+            }
+        
             // Construct the Result object using the non-default constructor
             var dv = new DoseValue(value, unit);
 
