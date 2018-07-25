@@ -10,9 +10,65 @@
         Title="MainView" Height="300" Width="300" Icon="../Resources/esapix.png">
     <Grid>
         <!--EXAMPLE DATA BIND-->
-        <TextBlock TextAlignment="Center" FontSize="14">
-            <Run Text="{Binding Username}" FontWeight="Bold" />
-            <Run Text=" is currently logged in"/>
-        </TextBlock>
+        <Grid Width="400" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Loaded Plan Details"
+                       Grid.ColumnSpan="2"
+                       HorizontalAlignment="Stretch"
+                       Background="Black"
+                       Foreground="White"
+                       TextAlignment="Center"/>
+            <!--PLAN ID-->
+            <TextBlock Text="Plan Id"
+                       Grid.Row="1"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+            <TextBlock Text="{Binding Path=Id}"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+            <!--Number of Beams-->
+            <TextBlock Text="Number of Beams"
+                       Grid.Row="2"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+            <TextBlock Text="{Binding Path=NBeams}"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+            <!--UID-->
+            <TextBlock Text="SOP Instance UID"
+                       Grid.Row="3"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+            <TextBlock Text="{Binding Path=UID}"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+            <!--IsDoseCalculated-->
+            <TextBlock Text="Is Dose Calculated?"
+                       Grid.Row="4"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+            <TextBlock Text="{Binding Path=IsDoseCalculated}"
+                       Grid.Row="4"
+                       Grid.Column="1"
+                       HorizontalAlignment="Stretch"
+                       TextAlignment="Center"/>
+        </Grid>
     </Grid>
 </Window>

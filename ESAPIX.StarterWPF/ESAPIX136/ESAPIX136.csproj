@@ -86,7 +86,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -112,6 +112,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <None Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </None>
@@ -135,7 +140,10 @@
     <None Include="ProjectTemplate.csproj">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\Settings.settings" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <VSTemplate Include="ProjectTemplate.vstemplate">
@@ -166,13 +174,6 @@
     </None>
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)' == '13.6-DEBUG' Or '$(Configuration)' == '13.6-RELEASE'">
-    <Reference Include="ESAPIX, Version=1.5.0.2, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_13.6.1.5.0.2\lib\net45\ESAPIX.dll</HintPath>
-    </Reference>
-    <Reference Include="ESAPIX.Bootstrapper, Version=1.5.0.1, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_Bootstrapper_13.6.1.5.0.1\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.6\VMS.TPS.Common.Model.API.dll</HintPath>
@@ -181,17 +182,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.6\VMS.TPS.Common.Model.Interface.dll</HintPath>
     </Reference>
-    <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>..\..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.6\VMS.TPS.Common.Model.Types.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)' == '13.7-DEBUG' Or '$(Configuration)' == '13.7-RELEASE'">
-    <Reference Include="ESAPIX, Version=1.5.0.2, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_13.7.1.5.0.2\lib\net45\ESAPIX.dll</HintPath>
-    </Reference>
-    <Reference Include="ESAPIX.Bootstrapper, Version=1.5.0.1, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_Bootstrapper_13.7.1.5.0.1\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
-    </Reference>
     <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\13.7\VMS.TPS.Common.Model.API.dll</HintPath>
@@ -206,10 +198,10 @@
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)' == '15.0-DEBUG' Or '$(Configuration)' == '15.0-RELEASE'">
     <Reference Include="ESAPIX, Version=1.5.0.2, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_15.0.1.5.0.2\lib\net45\ESAPIX.dll</HintPath>
+      <HintPath>..\packages\ESAPIX_15.5.1.5.0.15\lib\net45\ESAPIX.dll</HintPath>
     </Reference>
     <Reference Include="ESAPIX.Bootstrapper, Version=1.5.0.1, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\ESAPIX_Bootstrapper_15.0.1.5.0.1\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
+      <HintPath>..\packages\ESAPIX_Bootstrapper_15.5.1.5.0.16\lib\net45\ESAPIX.Bootstrapper.dll</HintPath>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.API, Version=1.0.200.39, Culture=neutral, PublicKeyToken=305b81e210ec4b89, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
