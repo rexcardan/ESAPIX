@@ -198,12 +198,6 @@
     <Compile Include="XScriptToFullAppBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ESAPIX\ESAPIX.csproj">
-      <Project>{3c5fdd1e-fc04-4c21-bbff-dfe3c584b729}</Project>
-      <Name>ESAPIX</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -282,6 +276,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ESAPIX_FacadeBuilder\ESAPIX_FacadeBuilder\DLL Versions\15.5\VMS.TPS.Common.Model.API.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESAPIX\ESAPIX.csproj">
+      <Project>{3c5fdd1e-fc04-4c21-bbff-dfe3c584b729}</Project>
+      <Name>ESAPIX</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

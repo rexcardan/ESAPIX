@@ -25,10 +25,7 @@ namespace ESAPIX.Bootstrapper
 
         protected override void CleanUp()
         {
-            _frame.Dispatcher.Invoke(() =>
-            {
-                _frame.Continue = false;
-            });
+            _frame.Continue = false;
         }
 
         public new void Run()
