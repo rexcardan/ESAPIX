@@ -44,7 +44,7 @@ namespace VMS.TPS
 
         public class ArgumentBuilder
         {
-            public static string Build(IScriptContext ctx)
+            public static string Build(ScriptContext ctx)
             {
                 var sb = new StringBuilder();
 
