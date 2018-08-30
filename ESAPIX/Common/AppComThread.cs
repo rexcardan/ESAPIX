@@ -16,9 +16,7 @@ namespace ESAPIX.Common
     public class AppComThread : IVMSThread
     {
         private readonly ManualResetEvent mre;
-
         private readonly Thread thread;
-        private SynchronizationContext ctx;
         private Dispatcher _dispatcher;
 
         public AppComThread(bool useNewThread = true)
@@ -28,9 +26,7 @@ namespace ESAPIX.Common
                 thread = Thread.CurrentThread;
                 if (thread.GetApartmentState() != ApartmentState.STA)
                     throw new Exception("The current thread must be marked as STA. Cannot connect to ESAPI!");
-                if (SynchronizationContext.Current == null)
-                    SynchronizationContext.SetSynchronizationContext(new ConsoleSyncContext());
-                ctx = SynchronizationContext.Current;
+                _dispatcher = Dispatcher.CurrentDispatcher;
             }
             else
             {

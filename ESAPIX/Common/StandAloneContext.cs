@@ -20,7 +20,7 @@ namespace ESAPIX.Common
     {
         private Application _app;
 
-        public StandAloneContext(Func<dynamic> createVMSApp)
+        public StandAloneContext(Func<dynamic> createVMSApp, bool multithreaded = false)
         {
             Exception e = null;
             if (createVMSApp == null)
@@ -28,7 +28,7 @@ namespace ESAPIX.Common
                 throw new Exception("Must assign a function to create VMS app. Call SetAppFunction() prior to this.");
             }
 
-            var thread = new AppComThread();
+            var thread = new AppComThread(multithreaded);
             thread.Invoke(() =>
             {
                 var vms = createVMSApp();
