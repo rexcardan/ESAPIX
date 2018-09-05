@@ -6,6 +6,7 @@ using VMS.TPS.Common.Model.Types;
 using ESAPIX.Constraints;
 using System.Collections.Generic;
 using ESAPIX.Constraints.DVH.Query;
+using ESAPIX.Helpers;
 
 #endregion
 
@@ -54,6 +55,16 @@ namespace ESAPIX.Extensions
                 }
             }
             return stats;
+        }
+
+        /// <summary>
+        /// Writes the structure geometry to an .OBJ file for 3D applications
+        /// </summary>
+        /// <param name="s">the structure</param>
+        /// <param name="objPath">the path to create the .OBJ file</param>
+        public static void ToObjFile(this Structure s, string objPath)
+        {
+            ObjFileWriter.Write(s.MeshGeometry, objPath);
         }
     }
 }
