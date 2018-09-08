@@ -6,7 +6,6 @@ using System.Windows.Threading;
 using ESAPIX.AppKit;
 using ESAPIX.AppKit.Overlay;
 using ESAPIX.Facade.Serialization;
-using ESAPIX.Bootstrapper.Helpers;
 using System.Linq;
 using ESAPIX.Common;
 using System;

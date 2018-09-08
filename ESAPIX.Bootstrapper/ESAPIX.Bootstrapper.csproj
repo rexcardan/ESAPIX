@@ -175,7 +175,6 @@
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="AppKit\Data\AbstractStringDataStore.cs" />
     <Compile Include="AppKit\Data\AppSettings.cs" />
-    <Compile Include="AppKit\Data\ContextIO.cs" />
     <Compile Include="AppKit\Data\JsonDataStore.cs" />
     <Compile Include="AppKit\Data\SecureStorage.cs" />
     <Compile Include="AppKit\Data\StorageHelper.cs" />
@@ -188,14 +187,10 @@
     </Compile>
     <Compile Include="AppKit\Splash\SplashTemplate.cs" />
     <Compile Include="BootstrapperBase.cs" />
-    <Compile Include="Helpers\ArgumentBuilder.cs" />
-    <Compile Include="Helpers\ArgumentKey.cs" />
-    <Compile Include="Helpers\ArgumentParser.cs" />
     <Compile Include="Helpers\XamlAssemblyLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptBootstrapper.cs" />
     <Compile Include="XScriptBase.cs" />
-    <Compile Include="XScriptToFullAppBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

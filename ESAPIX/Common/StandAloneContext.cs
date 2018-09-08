@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using ESAPIX.Common.Args;
 using ESAPIX.Facade;
 using ESAPIX.Facade.API;
 using ESAPIX.Interfaces;
@@ -47,6 +48,11 @@ namespace ESAPIX.Common
             XContext.Instance.CurrentContext = this;
             CurrentUser = _app?.CurrentUser;
             Logger = new Logger();
+        }
+
+        public void SetContextFromArguments(string[] args)
+        {
+            ArgContextSetter.Set(this, args);
         }
 
         public void Dispose()

@@ -29,6 +29,14 @@ namespace ESAPIX.Common
             Logger = new Logger();
         }
 
+        public PluginContext(dynamic vmsContext)
+        {
+            _ctx = new ScriptContext(vmsContext);
+            _scriptReference = new WeakReference(vmsContext);
+            Thread = new ScriptComThread(Dispatcher.CurrentDispatcher);
+            Logger = new Logger();
+        }
+
 #if !VMS110
         public string ApplicationName => _ctx?.ApplicationName;
 

@@ -161,6 +161,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\AppComThread.cs" />
+    <Compile Include="Common\Args\ArgContextSetter.cs" />
+    <Compile Include="Common\Args\ArgumentBuilder.cs" />
+    <Compile Include="Common\Args\ArgumentKey.cs" />
+    <Compile Include="Common\Args\ArgumentParser.cs" />
+    <Compile Include="Common\Args\ContextIO.cs" />
     <Compile Include="Common\ConsoleSyncContext.cs" />
     <Compile Include="Common\OfflineContext.cs" />
     <Compile Include="Common\PluginContext.cs" />
@@ -236,6 +241,10 @@
     <Compile Include="Facade\Serialization\StructureCodeInfoConverter.cs" />
     <Compile Include="Facade\StaticHelper.cs" />
     <Compile Include="Facade\VMSConstructor.cs" />
+    <Compile Include="Helpers\Brachy\Ir192.cs" />
+    <Compile Include="Helpers\Brachy\Ir192AnisotropyCalculator.cs" />
+    <Compile Include="Helpers\Brachy\Ir192RadialDoseCalculator.cs" />
+    <Compile Include="Helpers\Brachy\PolarPosition.cs" />
     <Compile Include="Helpers\DVH\DVHParams.cs" />
     <Compile Include="Helpers\DVH\Miner.cs" />
     <Compile Include="Helpers\DVH\StructureQuery.cs" />

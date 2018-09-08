@@ -2,7 +2,6 @@
 
 using System.Windows;
 using System.Windows.Threading;
-using ESAPIX.AppKit;
 using ESAPIX.Facade;
 using VMS.TPS.Common.Model.API;
 using ESAPIX.Common;

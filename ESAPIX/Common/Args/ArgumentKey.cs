@@ -1,4 +1,4 @@
-﻿namespace ESAPIX.Bootstrapper.Helpers
+﻿namespace ESAPIX.Common.Args
 {
     public class ArgumentKey
     {

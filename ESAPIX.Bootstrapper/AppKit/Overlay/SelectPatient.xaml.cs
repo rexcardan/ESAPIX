@@ -14,7 +14,7 @@ using Prism.Commands;
 using ESAPIX.Common;
 using ESAPIX.Facade.API;
 using ESAPIX.Helpers;
-using ESAPIX.Bootstrapper.AppKit.Data;
+using ESAPIX.Common.Args;
 
 #endregion
 
