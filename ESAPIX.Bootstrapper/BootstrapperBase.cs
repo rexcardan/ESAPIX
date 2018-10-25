@@ -42,7 +42,6 @@ namespace ESAPIX.Bootstrapper
         protected async override void InitializeShell()
         {
             var shell = (Window)Shell;
-            _ctx.UIDispatcher = shell.Dispatcher;
 
             //Needed to not crash app on multithreading exceptions
             shell.Dispatcher.UnhandledException += Dispatcher_UnhandledException;

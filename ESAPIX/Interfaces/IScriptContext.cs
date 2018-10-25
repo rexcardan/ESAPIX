@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Threading;
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using ESAPIX.Logging;
 using static ESAPIX.Common.StandAloneContext;
 
@@ -53,13 +53,6 @@ namespace ESAPIX.Interfaces
 
 
         StructureSet StructureSet { get; }
-
-        /// <summary>
-        ///     The thread that can access VMS objects
-        /// </summary>
-        IVMSThread Thread { get; }
-
-        Dispatcher UIDispatcher { get; set; }
 
         /// <summary>
         ///     Gets a value on the correct thread and returns it

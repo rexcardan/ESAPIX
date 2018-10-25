@@ -18,12 +18,12 @@ namespace $safeprojectname$.ViewModels
         _ctx = ctx;
 
         //Example data bind
-        FillDetails(ctx.PlanSetup);
+        OnPlanChanged(ctx.PlanSetup);
         //Handle plan changes (in standalone mode)
-        ctx.PlanSetupChanged += FillDetails;
+        ctx.PlanSetupChanged += OnPlanChanged;
     }
 
-    public void FillDetails(PlanSetup ps)
+    public void OnPlanChanged(PlanSetup ps)
     {
         Id = ps?.Id;
         UID = ps?.UID;

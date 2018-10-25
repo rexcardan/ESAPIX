@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using ESAPIX.Constraints.DVH.Query;
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
 #endregion
@@ -70,25 +70,6 @@ namespace ESAPIX.Extensions
                 foreach (var ps in (pi as PlanSum).PlanSetups)
                 foreach (var beam in ps.Beams)
                     yield return beam;
-        }
-
-        public static IEnumerable<FieldReferencePoint> GetFieldReferencePointsCumulative(this PlanningItem pi)
-        {
-            var beams = pi.GetBeams();
-            var referencePointClusters = beams.SelectMany(b => b.FieldReferencePoints)
-                .GroupBy(frp => frp.ReferencePoint.Id);
-            foreach(var cluster in referencePointClusters)
-            {
-                var rp = new FieldReferencePoint();
-                rp.Name = cluster.First().Name;
-                rp.Id = cluster.Key;
-                rp.Comment = rp.Comment;
-                rp.HistoryDateTime = cluster.First().HistoryDateTime;
-                rp.HistoryUserName = cluster.First().HistoryUserName;
-                rp.EffectiveDepth = cluster.First().EffectiveDepth;
-                rp.FieldDose = new DoseValue(cluster.Sum(c => c.FieldDose.Dose), cluster.First().FieldDose.Unit);
-                yield return rp;
-            }
         }
 
         /// <summary>

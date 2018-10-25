@@ -2,7 +2,7 @@
 
 using System.Linq;
 using ESAPIX.Extensions;
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
 #endregion

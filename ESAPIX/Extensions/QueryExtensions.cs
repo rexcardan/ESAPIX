@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using ESAPIX.Constraints.DVH.Query;
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
 #endregion

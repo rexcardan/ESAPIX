@@ -1,4 +1,6 @@
-﻿namespace ESAPIX.Constraints.DVH.Query
+﻿using System;
+
+namespace ESAPIX.Constraints.DVH.Query
 {
     public class MayoQuery
     {

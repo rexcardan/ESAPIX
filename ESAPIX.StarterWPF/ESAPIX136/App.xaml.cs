@@ -1,7 +1,6 @@
 ﻿using ESAPIX.Bootstrapper;
 using $safeprojectname$.Views;
 using System;
-using ESAPIX.Bootstrapper.AppKit.Data;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -21,7 +20,10 @@ namespace $safeprojectname$
         string[] args = e.Args;
         base.OnStartup(e);
         var bs = new AppBootstrapper<MainView>(() => { return VMS.TPS.Common.Model.API.Application.CreateApplication(); });
+        //You can use the following to load a context (for debugging purposes)
         //args = ContextIO.ReadArgsFromFile(@"context.txt");
+        //Might disable (uncomment) for plugin mode
+        //bs.IsPatientSelectionEnabled = false;
         bs.Run(args);
     }
     }

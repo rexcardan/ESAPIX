@@ -4,80 +4,92 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using ESAPIX.Interfaces;
-using ESAPIX.Facade;
 using ESAPIX.AppKit.Exceptions;
 using ESAPIX.Extensions;
 using System.Windows.Threading;
+using System.Windows.Forms;
+using VMS.TPS.Common.Model.API;
 
 #endregion
 
 namespace ESAPIX.Common
 {
-    public class AppComThread : IVMSThread
+    public class AppComThread
     {
-        private readonly ManualResetEvent mre;
-        private readonly Thread thread;
-        private Dispatcher _dispatcher;
+        private static AppComThread instance = null;
+        private static readonly object padlock = new object();
+        private Thread thread;
+        private SynchronizationContext ctx;
+        private ManualResetEvent mre;
+        private StandAloneContext _sac;
 
-        public AppComThread(bool useNewThread = true)
+        private AppComThread()
         {
-            if (!useNewThread)
+            using (mre = new ManualResetEvent(false))
             {
-                thread = Thread.CurrentThread;
-                if (thread.GetApartmentState() != ApartmentState.STA)
-                    throw new Exception("The current thread must be marked as STA. Cannot connect to ESAPI!");
-                _dispatcher = Dispatcher.CurrentDispatcher;
-            }
-            else
-            {
-                using (mre = new ManualResetEvent(false))
+                thread = new Thread(() =>
                 {
-                    Exception ex = null;
-                    thread = new Thread(() =>
+                    System.Windows.Forms.Application.Idle += Initialize;
+                    System.Windows.Forms.Application.Run();
+                });
+                thread.IsBackground = true;
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+                mre.WaitOne();
+            }
+        }
+
+        public static AppComThread Instance
+        {
+            get
+            {
+                lock (padlock)
+                {
+                    if (instance == null)
                     {
-                        _dispatcher = Dispatcher.CurrentDispatcher;
-                        _dispatcher.UnhandledException += _dispatcher_UnhandledException;
-                        mre.Set();
-                        Dispatcher.Run();
-                    });
-                    thread.Name = "ESAPIX Thread";
-                    thread.SetApartmentState(ApartmentState.STA);
-                    thread.Start();
-                    mre.WaitOne();
-                    if (ex != null) { throw ex; }
+                        instance = new AppComThread();
+                    }
+                    return instance;
                 }
             }
         }
 
-        private void _dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        public void SetContext(Func<VMS.TPS.Common.Model.API.Application> createAppFunc)
         {
-            _dispatcher.UnhandledException -= _dispatcher_UnhandledException;
-            throw e.Exception;
+            BeginInvoke(new Action(() => { _sac = new StandAloneContext(createAppFunc()); }));
         }
 
-        public async Task InvokeAsync(Action action)
+        public void Execute(Action<StandAloneContext> sacAction)
         {
-            await Task.Run(async () => await _dispatcher.InvokeAsync(action));
+            BeginInvoke(new Action(() => { sacAction(_sac); }));
         }
 
-        public void Invoke(Action action)
+        private void BeginInvoke(Delegate dlg, params Object[] args)
         {
-            try
-            {
-                _dispatcher.Invoke(action);
-            }
-            catch (Exception e)
-            {
-                var wrapped = new ScriptException(e);
-                XContext.Instance.CurrentContext.Logger.Log(wrapped.Message);
-                XContext.Instance.CurrentContext.Logger.Log(e.GetRootException().Message);
-                throw wrapped;
-            }
+            if (ctx == null) throw new ObjectDisposedException("ESAPIX_Thread");
+            ctx.Post((_) => dlg.DynamicInvoke(args), null);
         }
 
+        private object Invoke(Delegate dlg, params Object[] args)
+        {
+            if (ctx == null) throw new ObjectDisposedException("ESAPIX_Thread");
+            object result = null;
+            ctx.Send((_) => result = dlg.DynamicInvoke(args), null);
+            return result;
+        }
+        protected virtual void Initialize(object sender, EventArgs e)
+        {
+            ctx = SynchronizationContext.Current;
+            mre.Set();
+            System.Windows.Forms.Application.Idle -= Initialize;
+        }
         public void Dispose()
         {
-            _dispatcher.InvokeShutdown();
+            if (ctx != null)
+            {
+                ctx.Send((_) => System.Windows.Forms.Application.ExitThread(), null);
+                ctx = null;
+            }
         }
 
         public int ThreadId => thread.ManagedThreadId;

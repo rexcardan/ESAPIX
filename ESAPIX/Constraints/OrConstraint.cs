@@ -1,6 +1,6 @@
 ﻿#region
 
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using System;
 using static ESAPIX.Constraints.ResultType;
 

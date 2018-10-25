@@ -12,9 +12,9 @@ using System.Windows.Controls;
 using System.Windows.Threading;
 using Prism.Commands;
 using ESAPIX.Common;
-using ESAPIX.Facade.API;
 using ESAPIX.Helpers;
 using ESAPIX.Common.Args;
+using VMS.TPS.Common.Model.API;
 
 #endregion
 
@@ -57,10 +57,7 @@ namespace ESAPIX.AppKit.Overlay
             await Task.Run(() =>
             {
                 UpdateStatus("Caching Summaries...");
-                _summaries = _app.Application.PatientSummaries.Select(p =>
-                {
-                    return new PatientSummary() { Id = p.Id, FirstName = p.FirstName, LastName = p.LastName };
-                }).ToList();
+                _summaries = _app.Application.PatientSummaries.ToList();
                 UpdateStatus("");
             });
             patientId.IsEnabled = true;
@@ -77,31 +74,22 @@ namespace ESAPIX.AppKit.Overlay
             {
                 _selCourse = value;
                 var plans = new List<string>();
-                Action asyncA = async () =>
+                var course = _app.Patient.Courses.FirstOrDefault(c => c.Id == _selCourse);
+                _app.SetCourse(course);
+                UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
+                    _app.Patient.FirstName, "Loading plans...."));
+                plans = course != null ? course.PlanSetups.Select(ps => ps.Id).ToList() : new List<string>();
+                UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
+                    _app.Patient.FirstName, _app.Patient.Id));
+                //Update UI
+                _disp.Invoke(() =>
                 {
-                    //Call VMS
-                    await Task.Run(() =>
-                    {
-                        var course = _app.Patient.Courses.FirstOrDefault(c => c.Id == _selCourse);
-                        _app.SetCourse(course);
-                        UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
-                            _app.Patient.FirstName, "Loading plans...."));
-                        plans = course != null ? course.PlanSetups.Select(ps => ps.Id).ToList() : new List<string>();
-                        UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
-                            _app.Patient.FirstName, _app.Patient.Id));
-                    });
-
-                    //Update UI
-                    _disp.Invoke(() =>
-                    {
-                        PlanItems.Clear();
-                        plans.ForEach(PlanItems.Add);
-                        SelectedPlanItem = PlanItems.FirstOrDefault();
-                        OnPropertyChanged("SelectedPlanItem");
-                        OnPropertyChanged("SelectedCourse");
-                    });
-                };
-                asyncA.Invoke();
+                    PlanItems.Clear();
+                    plans.ForEach(PlanItems.Add);
+                    SelectedPlanItem = PlanItems.FirstOrDefault();
+                    OnPropertyChanged("SelectedPlanItem");
+                    OnPropertyChanged("SelectedCourse");
+                });
             }
         }
 
@@ -190,7 +178,7 @@ namespace ESAPIX.AppKit.Overlay
                     //Close last patient
                     await Task.Run(() =>
                     {
-                        if (_app.Patient != null && _app.Patient.IsLive)
+                        if (_app.Patient != null)
                         {
                             Debug.WriteLine($"Closing patient {_app.Patient.LastName}");
                             _app.ClosePatient();

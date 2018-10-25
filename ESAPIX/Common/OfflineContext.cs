@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using ESAPIX.Interfaces;
 using ESAPIX.Logging;
 

@@ -22,14 +22,7 @@ namespace ESAPIX.Common.Args
                     sac.SetPatient(patientId);
                 }
             }
-            { //USER
-                string currentUser = ArgumentParser.CurrentUserId(commandLineArgs);
-                if (!string.IsNullOrEmpty(currentUser))
-                {
-                    sac.CurrentUser = new ESAPIX.Facade.API.User();
-                    sac.CurrentUser.Id = currentUser;
-                }
-            }
+
             {
                 string courseId = ArgumentParser.GetCourseId(commandLineArgs);
                 if (!string.IsNullOrEmpty(courseId))

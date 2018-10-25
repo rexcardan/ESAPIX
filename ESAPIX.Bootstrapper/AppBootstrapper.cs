@@ -5,7 +5,6 @@ using System.Windows.Controls;
 using System.Windows.Threading;
 using ESAPIX.AppKit;
 using ESAPIX.AppKit.Overlay;
-using ESAPIX.Facade.Serialization;
 using System.Linq;
 using ESAPIX.Common;
 using System;
@@ -26,19 +25,8 @@ namespace ESAPIX.Bootstrapper
         /// <param name="singleThread">indicates whether or not to use a single thread (default is multithread)</param>
         public AppBootstrapper(Func<VMS.TPS.Common.Model.API.Application> createAppFunc) : base()
         {
-            _ctx = new StandAloneContext(createAppFunc);
-            _ctx.UIDispatcher = Dispatcher.CurrentDispatcher;
-        }
-
-        /// <summary>
-        /// Constructs a bootstrapper for standalone applications from a offline context json file
-        /// </summary>
-        /// <param name="offlineContextPath">the path to the offline context json file</param>
-        public AppBootstrapper(string offlineContextPath) : base()
-        {
-            var ctx = FacadeSerializer.DeserializeContext(offlineContextPath);
-            ctx.Thread = new AppComThread();
-            _ctx = ctx;
+            var thread = AppComThread.Instance;
+            thread.SetContext(createAppFunc);
         }
 
         /// <summary>

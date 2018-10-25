@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ESAPIX.Exceptions;
 using ESAPIX.Extensions;
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using ESAPIX.Helpers.Filters;
 using ESAPIX.Helpers.IO;
 using ESAPIX.Logging;

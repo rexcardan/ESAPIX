@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 using ESAPIX.Common.Args;
-using ESAPIX.Facade;
-using ESAPIX.Facade.API;
+using VMS.TPS.Common.Model.API;
 using ESAPIX.Interfaces;
 using ESAPIX.Logging;
-using X = ESAPIX.Facade.API;
 #endregion
 
 namespace ESAPIX.Common
@@ -21,31 +19,15 @@ namespace ESAPIX.Common
     {
         private Application _app;
 
-        public StandAloneContext(Func<dynamic> createVMSApp, bool multithreaded = false)
+        public StandAloneContext(Application app)
         {
             Exception e = null;
-            if (createVMSApp == null)
-            {
-                throw new Exception("Must assign a function to create VMS app. Call SetAppFunction() prior to this.");
-            }
 
-            var thread = new AppComThread(multithreaded);
-            thread.Invoke(() =>
-            {
-                var vms = createVMSApp();
-                _app = new X.Application(vms);
-            });
-            this.Thread = thread;
+            _app = app;
 
             if (_app == null)
                 throw new Exception("App was not created. Check to make sure the VMS dll references are correct.", e);
 
-            if (ExpandoGetter.GetClient(_app) == null)
-                throw new Exception(
-                    "App was not created. Make sure FacadeInitializer.Initialize() in ESAPIX.Bootstrapper is being called before invoking static methods",
-                    e);
-
-            XContext.Instance.CurrentContext = this;
             CurrentUser = _app?.CurrentUser;
             Logger = new Logger();
         }
@@ -101,17 +83,6 @@ namespace ESAPIX.Common
             _app.ClosePatient();
             Patient = _app.OpenPatientById(id);
             var found = Patient != null;
-            if (found)
-                OnPatientChanged(Patient);
-            else
-                OnPatientChanged(null);
-            return found;
-        }
-
-        public async Task<bool> SetPatientAsync(string id)
-        {
-            Patient = await Task.Run(() => { return _app.OpenPatientById(id); });
-            var found = Patient.IsLive;
             if (found)
                 OnPatientChanged(Patient);
             else
