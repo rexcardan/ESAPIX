@@ -56,12 +56,72 @@ namespace ESAPIX.Common
 
         public void SetContext(Func<VMS.TPS.Common.Model.API.Application> createAppFunc)
         {
-            BeginInvoke(new Action(() => { _sac = new StandAloneContext(createAppFunc()); }));
+            Invoke(new Action(() => { _sac = new StandAloneContext(createAppFunc()); }));
         }
 
-        public void Execute(Action<StandAloneContext> sacAction)
+        public T GetValue<T>(Func<StandAloneContext, T> sacFunc)
         {
-            BeginInvoke(new Action(() => { sacAction(_sac); }));
+            T toReturn = default(T);
+            Invoke(() =>
+            {
+                toReturn = sacFunc(_sac);
+            });
+            return toReturn;
+        }
+
+        public async Task<T> GetValueAsync<T>(Func<StandAloneContext, T> sacFunc)
+        {
+            T toReturn = default(T);
+            await InvokeAsync(() =>
+            {
+                toReturn = sacFunc(_sac);
+            });
+            return toReturn;
+        }
+
+        public void Execute(Action<StandAloneContext> sacOp)
+        {
+            Invoke(() =>
+            {
+                sacOp(_sac);
+            });
+        }
+
+        public Task ExecuteAsync(Action<StandAloneContext> sacOp)
+        {
+            return InvokeAsync(() =>
+            {
+                sacOp(_sac);
+            });
+        }
+
+        public async Task InvokeAsync(Action action)
+        {
+            var task = Task.Run(() =>
+            {
+                Delegate del = action;
+                return Invoke(del);
+            });
+            await task;
+            if (task.Exception != null)
+            {
+                var wrapped = new ScriptException(task.Exception);
+                throw wrapped;
+            }
+        }
+
+        public void Invoke(Action action)
+        {
+            try
+            {
+                Delegate del = action;
+                Invoke(del);
+            }
+            catch (Exception e)
+            {
+                var wrapped = new ScriptException(e);
+                throw wrapped;
+            }
         }
 
         private void BeginInvoke(Delegate dlg, params Object[] args)
