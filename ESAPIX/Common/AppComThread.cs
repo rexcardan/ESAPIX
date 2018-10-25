@@ -56,7 +56,7 @@ namespace ESAPIX.Common
 
         public void SetContext(Func<VMS.TPS.Common.Model.API.Application> createAppFunc)
         {
-            Invoke(new Action(() => { _sac = new StandAloneContext(createAppFunc()); }));
+            Invoke(new Action(() => { _sac = new StandAloneContext(createAppFunc()); _sac.Thread = this; }));
         }
 
         public T GetValue<T>(Func<StandAloneContext, T> sacFunc)

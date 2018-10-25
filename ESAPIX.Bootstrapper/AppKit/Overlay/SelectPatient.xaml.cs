@@ -54,7 +54,7 @@ namespace ESAPIX.AppKit.Overlay
         private async void LoadSummaries()
         {
             patientId.IsEnabled = false;
-            await Task.Run(() =>
+            await AppComThread.Instance.InvokeAsync(() =>
             {
                 UpdateStatus("Caching Summaries...");
                 _summaries = _app.Application.PatientSummaries.ToList();
@@ -72,24 +72,28 @@ namespace ESAPIX.AppKit.Overlay
             get { return _selCourse; }
             set
             {
-                _selCourse = value;
-                var plans = new List<string>();
-                var course = _app.Patient.Courses.FirstOrDefault(c => c.Id == _selCourse);
-                _app.SetCourse(course);
-                UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
-                    _app.Patient.FirstName, "Loading plans...."));
-                plans = course != null ? course.PlanSetups.Select(ps => ps.Id).ToList() : new List<string>();
-                UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
-                    _app.Patient.FirstName, _app.Patient.Id));
-                //Update UI
-                _disp.Invoke(() =>
+                AppComThread.Instance.Invoke(() =>
                 {
-                    PlanItems.Clear();
-                    plans.ForEach(PlanItems.Add);
-                    SelectedPlanItem = PlanItems.FirstOrDefault();
-                    OnPropertyChanged("SelectedPlanItem");
-                    OnPropertyChanged("SelectedCourse");
+                    _selCourse = value;
+                    var plans = new List<string>();
+                    var course = _app.Patient.Courses.FirstOrDefault(c => c.Id == _selCourse);
+                    _app.SetCourse(course);
+                    UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
+                        _app.Patient.FirstName, "Loading plans...."));
+                    plans = course != null ? course.PlanSetups.Select(ps => ps.Id).ToList() : new List<string>();
+                    UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
+                        _app.Patient.FirstName, _app.Patient.Id));
+                    //Update UI
+                    _disp.Invoke(() =>
+                    {
+                        PlanItems.Clear();
+                        plans.ForEach(PlanItems.Add);
+                        SelectedPlanItem = PlanItems.FirstOrDefault();
+                        OnPropertyChanged("SelectedPlanItem");
+                        OnPropertyChanged("SelectedCourse");
+                    });
                 });
+               
             }
         }
 
