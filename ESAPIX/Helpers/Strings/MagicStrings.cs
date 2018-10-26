@@ -1,4 +1,4 @@
-﻿namespace ESAPIX.Helpers
+﻿namespace ESAPIX.Helpers.Strings
 {
     /// <summary>
     ///     Class that holds constant strings from the Eclipse Scripting API

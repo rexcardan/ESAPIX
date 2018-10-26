@@ -2,7 +2,7 @@
 using VMS.TPS.Common.Model.API;
 using System.Linq;
 using VMS.TPS.Common.Model.Types;
-using static ESAPIX.Helpers.MagicStrings;
+using static ESAPIX.Helpers.Strings.MagicStrings;
 
 namespace ESAPIX.Constraints.DVH.Query
 {

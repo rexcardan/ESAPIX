@@ -158,6 +158,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\ConsoleTests\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -277,47 +280,4 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>
-if $(ConfigurationName) == 11.0-RELEASE goto :rel110
-if $(ConfigurationName) == 13.6-RELEASE goto :rel136
-if $(ConfigurationName) == 13.7-RELEASE goto :rel137
-if $(ConfigurationName) == 15.0-RELEASE goto :rel150
-if $(ConfigurationName) == 15.1-RELEASE goto :rel151
-if $(ConfigurationName) == 15.5-RELEASE goto :rel155
-
-goto :exit
-
-:rel110
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\11.0\lib\net45\$(ProjectName).dll"
-goto :exit
-:rel136
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\13.6\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel137
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\13.7\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel150
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\15.0\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel151
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\15.1\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel155
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\$(ProjectName)\15.5\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:exit</PostBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-		Other similar extension points exist, see Microsoft.Common.targets.
-		<Target Name="BeforeBuild">
-		</Target>
-		<Target Name="AfterBuild">
-		</Target>
-	-->
 </Project>

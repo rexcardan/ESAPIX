@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ESAPIX.Helpers
+namespace ESAPIX.Helpers.Strings
 {
     /// <summary>
     /// Class to help calculate approximate string (when exact matches are not required).

@@ -11,6 +11,7 @@ using System.Threading;
 using ESAPIX.Common;
 using System.Linq;
 using ESAPIX.Common.Args;
+using V = VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Bootstrapper
 {
@@ -33,7 +34,6 @@ namespace ESAPIX.Bootstrapper
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
-            Container.RegisterInstance<IScriptContext>(_ctx);
             Container.RegisterInstance<IEventAggregator>(_ea);
             Container.RegisterInstance(Container);
             AdditionalRegistrations?.Invoke(Container);
@@ -80,8 +80,10 @@ namespace ESAPIX.Bootstrapper
 
         public void Run(string[] commandLineArgs)
         {
-            var sac = _ctx as StandAloneContext;
-            ArgContextSetter.Set(sac, commandLineArgs);
+            AppComThread.Instance.Execute((sc) =>
+            {
+                ArgContextSetter.Set(sc, commandLineArgs);
+            });
             base.Run();
         }
 

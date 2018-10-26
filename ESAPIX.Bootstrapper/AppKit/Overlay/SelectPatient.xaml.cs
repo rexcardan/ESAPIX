@@ -15,6 +15,8 @@ using ESAPIX.Common;
 using ESAPIX.Helpers;
 using ESAPIX.Common.Args;
 using VMS.TPS.Common.Model.API;
+using F = ESAPIX.Facade.API;
+using ESAPIX.Helpers.Strings;
 
 #endregion
 
@@ -25,18 +27,16 @@ namespace ESAPIX.AppKit.Overlay
     /// </summary>
     public partial class SelectPatient : Page, INotifyPropertyChanged
     {
-        private readonly StandAloneContext _app;
         private readonly Dispatcher _disp;
         private string _selCourse;
 
         private string _selectedPlanItem;
-        private List<PatientSummary> _summaries;
+        private List<F.PatientSummary> _summaries;
 
-        public SelectPatient(StandAloneContext app)
+        public SelectPatient()
         {
             _disp = Dispatcher.CurrentDispatcher;
             InitializeComponent();
-            _app = app;
             //Preload summaries
             LoadSummaries();
             DataContext = this;
@@ -45,19 +45,30 @@ namespace ESAPIX.AppKit.Overlay
             showContextButton.Visibility = Visibility.Collapsed;
             Courses = new ObservableCollection<string>();
             PlanItems = new ObservableCollection<string>();
-            SaveContextCommand = new DelegateCommand(() =>
+            SaveContextCommand = new DelegateCommand(async () =>
             {
-               ContextIO.SaveToFile(_app);
+                await AppComThread.Instance.ExecuteAsync(sc =>
+                {
+                    ContextIO.SaveToFile(sc);
+                });
             });
         }
 
         private async void LoadSummaries()
         {
             patientId.IsEnabled = false;
-            await AppComThread.Instance.InvokeAsync(() =>
+            await AppComThread.Instance.InvokeAsync(async () =>
             {
                 UpdateStatus("Caching Summaries...");
-                _summaries = _app.Application.PatientSummaries.ToList();
+                _summaries = await AppComThread.Instance.GetValueAsync(sac =>
+                {
+                    return sac.Application.PatientSummaries.Select(p => new F.PatientSummary()
+                    {
+                        Id = p.Id,
+                        FirstName = p.FirstName,
+                        LastName = p.LastName,
+                    }).ToList();
+                });
                 UpdateStatus("");
             });
             patientId.IsEnabled = true;
@@ -72,28 +83,29 @@ namespace ESAPIX.AppKit.Overlay
             get { return _selCourse; }
             set
             {
-                AppComThread.Instance.Invoke(() =>
+                var (coursePlans, lastName, firstName, id) = AppComThread.Instance.GetValue((sc) =>
                 {
                     _selCourse = value;
                     var plans = new List<string>();
-                    var course = _app.Patient.Courses.FirstOrDefault(c => c.Id == _selCourse);
-                    _app.SetCourse(course);
-                    UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
-                        _app.Patient.FirstName, "Loading plans...."));
+                    var course = sc.Patient.Courses.FirstOrDefault(c => c.Id == _selCourse);
+                    sc.SetCourse(course);
+                    //Get to string for dispatcher
+                    var (lastName2, firstName2, id2) = (sc.Patient.LastName, sc.Patient.FirstName, sc.Patient.Id); 
                     plans = course != null ? course.PlanSetups.Select(ps => ps.Id).ToList() : new List<string>();
-                    UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", _app.Patient.LastName,
-                        _app.Patient.FirstName, _app.Patient.Id));
-                    //Update UI
-                    _disp.Invoke(() =>
-                    {
-                        PlanItems.Clear();
-                        plans.ForEach(PlanItems.Add);
-                        SelectedPlanItem = PlanItems.FirstOrDefault();
-                        OnPropertyChanged("SelectedPlanItem");
-                        OnPropertyChanged("SelectedCourse");
-                    });
+                    return (plans, lastName2, firstName2, id2);
                 });
-               
+
+                UpdateStatus(string.Format("Current Context is {0}, {1} | {2}", lastName,
+                     firstName, id));
+                //Update UI
+                _disp.Invoke(() =>
+                {
+                    PlanItems.Clear();
+                    coursePlans.ForEach(PlanItems.Add);
+                    SelectedPlanItem = PlanItems.FirstOrDefault();
+                    OnPropertyChanged("SelectedPlanItem");
+                    OnPropertyChanged("SelectedCourse");
+                });
             }
         }
 
@@ -104,10 +116,10 @@ namespace ESAPIX.AppKit.Overlay
             {
                 _selectedPlanItem = value;
                 if (value != null)
-                    _app.Thread.InvokeAsync(() =>
+                    AppComThread.Instance.ExecuteAsync((sc) =>
                     {
-                        var plan = _app.Course.PlanSetups.FirstOrDefault(ps => ps.Id == value);
-                        _app.SetPlanSetup(plan);
+                        var plan = sc.Course.PlanSetups.FirstOrDefault(ps => ps.Id == value);
+                        sc.SetPlanSetup(plan);
                     });
             }
         }
@@ -116,8 +128,11 @@ namespace ESAPIX.AppKit.Overlay
 
         private void UpdateStatus(string p)
         {
-            Status = p;
-            OnPropertyChanged("Status");
+            _disp.Invoke(() =>
+            {
+                Status = p;
+                OnPropertyChanged("Status");
+            });
         }
 
         protected void OnPropertyChanged(string propertyName)
@@ -161,41 +176,44 @@ namespace ESAPIX.AppKit.Overlay
             candidates.ForEach(c => Suggestions.Add(c.s));
         }
 
-        public ObservableCollection<PatientSummary> Suggestions { get; set; } = new ObservableCollection<PatientSummary>();
+        public ObservableCollection<F.PatientSummary> Suggestions { get; set; } = new ObservableCollection<F.PatientSummary>();
 
         private async void patientId_DropDownClosed(object sender, EventArgs e)
         {
             //Mode up selected
-            var patientSummary = patientId.SelectedItem as PatientSummary;
+            var patientSummary = patientId.SelectedItem as F.PatientSummary;
             patientSummary = patientSummary ?? Suggestions.FirstOrDefault();
             await ModeUpSelected(patientSummary);
         }
 
-        private async Task ModeUpSelected(PatientSummary patientSummary)
+        private async Task ModeUpSelected(F.PatientSummary patientSummary)
         {
             //Load text correctly
             if (patientSummary != null)
             {
                 patientId.Text = $"({patientSummary.Id}) {patientSummary.LastName}, {patientSummary.FirstName}";
-                if (patientSummary.Id != _app.Patient?.Id)
+                if (patientSummary.Id != AppComThread.Instance.GetValue(sc => sc.Patient?.Id))
                 {
                     //Close last patient
-                    await Task.Run(() =>
+                    await AppComThread.Instance.ExecuteAsync((sc) =>
                     {
-                        if (_app.Patient != null)
+                        if (sc.Patient != null)
                         {
-                            Debug.WriteLine($"Closing patient {_app.Patient.LastName}");
-                            _app.ClosePatient();
+                            Debug.WriteLine($"Closing patient {sc.Patient.LastName}");
+                            sc.ClosePatient();
                         }
                     });
 
-                    //Mode up selected
-                    if (_app.SetPatient(patientSummary.Id))
+
+                    //Mode up selected (if patient exists)
+                    if (AppComThread.Instance.GetValue(sc => sc.SetPatient(patientSummary.Id)))
                     {
                         Courses.Clear();
-                        var courseNames = _app.Patient.Courses.Select(c => c.Id).ToList();
+                        var courseNames = AppComThread.Instance.GetValue(sc =>
+                        {
+                            return sc.Patient.Courses.Select(c => c.Id).ToList();
+                        });
                         courseNames.ForEach(Courses.Add);
-
                         SelectedCourse = Courses.FirstOrDefault();
                         OnPropertyChanged("Courses");
                         OnPropertyChanged("SelectedCourse");
@@ -205,16 +223,16 @@ namespace ESAPIX.AppKit.Overlay
             }
         }
 
-        private void patientId_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private async void patientId_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == System.Windows.Input.Key.Back)
             {
                 SearchForPatientCandidates(patientId.Text);
             }
-            if(e.Key == System.Windows.Input.Key.Enter)
+            if (e.Key == System.Windows.Input.Key.Enter)
             {
                 var patientSummary = Suggestions.FirstOrDefault();
-                ModeUpSelected(patientSummary);
+                await ModeUpSelected(patientSummary);
             }
         }
 

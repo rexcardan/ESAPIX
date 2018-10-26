@@ -44,7 +44,7 @@ namespace ESAPIX.Bootstrapper
                 var stackPanel = new DockPanel();
                 stackPanel.VerticalAlignment = VerticalAlignment.Stretch;
                 shell.Content = stackPanel;
-                var selectPat = new SelectPatient(sac);
+                var selectPat = new SelectPatient();
                 var selectPatContent = (FrameworkElement)selectPat.Content;
                 selectPatContent.DataContext = selectPat;
                 selectPat.Content = null;

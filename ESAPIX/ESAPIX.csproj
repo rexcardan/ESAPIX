@@ -151,6 +151,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\ConsoleTests\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -232,19 +235,26 @@
     <Compile Include="Helpers\Brachy\Ir192AnisotropyCalculator.cs" />
     <Compile Include="Helpers\Brachy\Ir192RadialDoseCalculator.cs" />
     <Compile Include="Helpers\Brachy\PolarPosition.cs" />
+    <Compile Include="Helpers\Copiers\BeamCopier.cs" />
+    <Compile Include="Helpers\Copiers\PlanCopier.cs" />
     <Compile Include="Helpers\DVH\DVHParams.cs" />
     <Compile Include="Helpers\DVH\Miner.cs" />
     <Compile Include="Helpers\DVH\StructureQuery.cs" />
     <Compile Include="Helpers\IO\CsvFile.cs" />
     <Compile Include="Helpers\IO\FileHelper.cs" />
     <Compile Include="Helpers\Filters\MatchType.cs" />
-    <Compile Include="Helpers\Levenshtein.cs" />
-    <Compile Include="Helpers\MagicStrings.cs" />
+    <Compile Include="Helpers\Strings\BestWordDistance.cs" />
+    <Compile Include="Helpers\Strings\Levenshtein.cs" />
+    <Compile Include="Helpers\Strings\MagicStrings.cs" />
     <Compile Include="Helpers\MathHelper.cs" />
     <Compile Include="Helpers\ObjFileWriter.cs" />
+    <Compile Include="Constraints\TG263.cs" />
+    <Compile Include="Helpers\Transform.cs" />
     <Compile Include="Interfaces\IScriptContext.cs" />
     <Compile Include="Interfaces\ISecureStorable.cs" />
     <Compile Include="Interfaces\IVMSThread.cs" />
+    <Compile Include="Logging\GlobalLogger.cs" />
+    <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -816,6 +826,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Resources\StructureNamesConcrete.csv" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Styles\UAB_Styles.xaml">
@@ -830,52 +841,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\AllowedStructureNames.txt" />
     <Content Include="Resources\esapix.ico" />
     <Content Include="Resources\esapix.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>
-if $(ConfigurationName) == 11.0-RELEASE goto :rel110
-if $(ConfigurationName) == 13.6-RELEASE goto :rel136
-if $(ConfigurationName) == 13.7-RELEASE goto :rel137
-if $(ConfigurationName) == 15.0-RELEASE goto :rel150
-if $(ConfigurationName) == 15.1-RELEASE goto :rel151
-if $(ConfigurationName) == 15.5-RELEASE goto :rel155
-
-goto :exit
-
-:rel110
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\11.0\lib\net45\$(ProjectName).dll"
-goto :exit
-:rel136
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\13.6\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel137
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\13.7\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel150
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.0\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel151
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.1\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:rel155
-copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.5\lib\net45\$(ProjectName).dll"
-goto :exit
-
-:exit</PostBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-		Other similar extension points exist, see Microsoft.Common.targets.
-		<Target Name="BeforeBuild">
-		</Target>
-		<Target Name="AfterBuild">
-		</Target>
-	-->
 </Project>

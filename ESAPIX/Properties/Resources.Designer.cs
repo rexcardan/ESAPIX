@@ -59,5 +59,71 @@ namespace ESAPIX.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ^(A_Aorta~?(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Aorta_Asc~?(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Brachiocephls~?(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Carotid~?(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Carotid~?_L(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Carotid~?_R(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Celiac~?(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Coronary~?(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Coronary~?_L(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Coronary~?_R(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Femoral_Cflx~?_L(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Femoral_Cflx~?_R(\^[\w\d_\+-]+)?)$	ORGAN
+        ///^(A_Femoral~?_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AllowedStructureNames {
+            get {
+                return ResourceManager.GetString("AllowedStructureNames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A_Aorta
+        ///A_Aorta_Asc
+        ///A_Brachiocephls
+        ///A_Carotid
+        ///A_Carotid_L
+        ///A_Carotid_R
+        ///A_Celiac
+        ///A_Coronary
+        ///A_Coronary_L
+        ///A_Coronary_R
+        ///A_Femoral_Cflx_L
+        ///A_Femoral_Cflx_R
+        ///A_Femoral_L
+        ///A_Femoral_R
+        ///A_Humeral_Cflx_L
+        ///A_Humeral_Cflx_R
+        ///A_Humeral_L
+        ///A_Humeral_R
+        ///A_Hypophyseal_I
+        ///A_Hypophyseal_S
+        ///A_Iliac_Cflx_L
+        ///A_Iliac_Cflx_R
+        ///A_Iliac_Ext_L
+        ///A_Iliac_Ext_R
+        ///A_Iliac_Int_L
+        ///A_Iliac_Int_R
+        ///A_Iliac_L
+        ///A_Iliac_R
+        ///A_LAD
+        ///A_Mesenteric_I
+        ///A_Mesenteric_S
+        ///A_Pulmonary
+        ///A_Subclavian
+        ///A_Subclavian_L
+        ///A_Subclavian_R
+        ///A_Vertebral
+        ///A_V [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StructureNamesConcrete {
+            get {
+                return ResourceManager.GetString("StructureNamesConcrete", resourceCulture);
+            }
+        }
     }
 }

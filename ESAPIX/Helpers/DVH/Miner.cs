@@ -9,6 +9,7 @@ using VMS.TPS.Common.Model.API;
 using ESAPIX.Helpers.Filters;
 using ESAPIX.Helpers.IO;
 using ESAPIX.Logging;
+using ESAPIX.Helpers.Strings;
 
 namespace ESAPIX.Helpers.DVH
 {

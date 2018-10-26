@@ -61,7 +61,7 @@ namespace ESAPIX.Common
 
         public StructureSet StructureSet { get; set; }
 
-        public IVMSThread Thread { get; set; }
+        public AppComThread Thread { get; set; }
 
         public Dispatcher UIDispatcher { get; set; }
 

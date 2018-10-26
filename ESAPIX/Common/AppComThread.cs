@@ -20,6 +20,7 @@ namespace ESAPIX.Common
         private static readonly object padlock = new object();
         private Thread thread;
         private SynchronizationContext ctx;
+        private TaskScheduler _scheduler;
         private ManualResetEvent mre;
         private StandAloneContext _sac;
 
@@ -99,8 +100,7 @@ namespace ESAPIX.Common
         {
             var task = Task.Run(() =>
             {
-                Delegate del = action;
-                return Invoke(del);
+                Invoke(action);
             });
             await task;
             if (task.Exception != null)
@@ -112,10 +112,30 @@ namespace ESAPIX.Common
 
         public void Invoke(Action action)
         {
+            var timeout = 3000;
+            var cts = new CancellationTokenSource();
             try
             {
-                Delegate del = action;
-                Invoke(del);
+                cts.CancelAfter(timeout);
+                var task = Task.Factory.StartNew(() =>
+                {
+                    Delegate del = action;
+                    Invoke(del);
+                },
+                  cts.Token,
+                  TaskCreationOptions.None,
+                  _scheduler);
+                //Wait
+                task.GetAwaiter().GetResult();
+                if (task.Exception != null)
+                {
+                    throw task.Exception;
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                //handle cancellation
+                throw new Exception("ESAPIX Timeout!");
             }
             catch (Exception e)
             {
@@ -124,11 +144,11 @@ namespace ESAPIX.Common
             }
         }
 
-        private void BeginInvoke(Delegate dlg, params Object[] args)
-        {
-            if (ctx == null) throw new ObjectDisposedException("ESAPIX_Thread");
-            ctx.Post((_) => dlg.DynamicInvoke(args), null);
-        }
+        //private void BeginInvoke(Delegate dlg, params Object[] args)
+        //{
+        //    if (ctx == null) throw new ObjectDisposedException("ESAPIX_Thread");
+        //    ctx.Post((_) => dlg.DynamicInvoke(args), null);
+        //}
 
         private object Invoke(Delegate dlg, params Object[] args)
         {
@@ -137,9 +157,11 @@ namespace ESAPIX.Common
             ctx.Send((_) => result = dlg.DynamicInvoke(args), null);
             return result;
         }
+
         protected virtual void Initialize(object sender, EventArgs e)
         {
             ctx = SynchronizationContext.Current;
+            _scheduler = TaskScheduler.FromCurrentSynchronizationContext();
             mre.Set();
             System.Windows.Forms.Application.Idle -= Initialize;
         }
