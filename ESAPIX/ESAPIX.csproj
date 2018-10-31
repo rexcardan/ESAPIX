@@ -210,7 +210,12 @@
     <Compile Include="Extensions\ApiDataObjectExtensions.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\ExpandoExtensions.cs" />
+    <Compile Include="Extensions\FImageExtensions.cs" />
     <Compile Include="Extensions\MayoConstraintExtensions.cs" />
+    <Compile Include="Extensions\F.PlanningItemExtensions.cs" />
+    <Compile Include="Extensions\FQueryExtensions.cs" />
+    <Compile Include="Extensions\F.PlanSumExtensions.cs" />
+    <Compile Include="Extensions\FPlanSetupExtensions.cs" />
     <Compile Include="Extensions\QueryExtensions.cs" />
     <Compile Include="Constraints\DVH\Query\Discriminator.cs" />
     <Compile Include="Constraints\DVH\Query\MayoConstraint.cs" />
@@ -230,6 +235,7 @@
     <Compile Include="Extensions\PlanSumExtensions.cs" />
     <Compile Include="Extensions\SerializationExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\FStructureExtensions.cs" />
     <Compile Include="Extensions\StructureExtensions.cs" />
     <Compile Include="Extensions\VVectorExtensions.cs" />
     <Compile Include="Facade\DefaultHelper.cs" />
@@ -851,4 +857,47 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <PropertyGroup>
+    <PostBuildEvent>
+if $(ConfigurationName) == 11.0-RELEASE goto :rel110
+if $(ConfigurationName) == 13.6-RELEASE goto :rel136
+if $(ConfigurationName) == 13.7-RELEASE goto :rel137
+if $(ConfigurationName) == 15.0-RELEASE goto :rel150
+if $(ConfigurationName) == 15.1-RELEASE goto :rel151
+if $(ConfigurationName) == 15.5-RELEASE goto :rel155
+
+goto :exit
+
+:rel110
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\11.0\lib\net45\$(ProjectName).dll"
+goto :exit
+:rel136
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\13.6\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel137
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\13.7\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel150
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.0\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel151
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.1\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:rel155
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)ESAPIX.Nuget\ESAPIX\15.5\lib\net45\$(ProjectName).dll"
+goto :exit
+
+:exit</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+		Other similar extension points exist, see Microsoft.Common.targets.
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+	-->
 </Project>

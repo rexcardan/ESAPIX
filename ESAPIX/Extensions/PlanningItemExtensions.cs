@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using ESAPIX.Constraints.DVH.Query;
 using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
-
 #endregion
 
 namespace ESAPIX.Extensions
