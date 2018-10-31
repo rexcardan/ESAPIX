@@ -456,16 +456,6 @@ namespace ESAPIX.Facade.API
             _client = (client);
         }
 
-        public ScriptContext(System.Object context, System.Object user)
-        {
-            if ((XC.Instance) != (null))
-            {
-                _client = (VMSConstructor.ConstructScriptContextFunc0(context, user));
-            }
-            else
-            {
-                throw new Exception("There is no VMS Context to create the class");
-            }
-        }
+    
     }
 }

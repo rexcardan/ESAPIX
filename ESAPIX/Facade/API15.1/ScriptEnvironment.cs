@@ -16,13 +16,6 @@ namespace ESAPIX.Facade.API
     public class ScriptEnvironment
     {
         internal dynamic _client;
-        public bool IsLive
-        {
-            get
-            {
-                return !DefaultHelper.IsDefault(_client) && !(_client is ExpandoObject);
-            }
-        }
 
         public System.String ApplicationName
         {
@@ -239,18 +232,6 @@ namespace ESAPIX.Facade.API
         public ScriptEnvironment(dynamic client)
         {
             _client = (client);
-        }
-
-        public ScriptEnvironment(System.String appName, System.Collections.Generic.IEnumerable<VMS.TPS.Common.Model.IApplicationScript> scripts, System.Action<System.Reflection.Assembly,System.Object,System.Windows.Window,System.Object> scriptExecutionEngine)
-        {
-            if ((XC.Instance) != (null))
-            {
-                _client = (VMSConstructor.ConstructScriptEnvironmentFunc0(appName, scripts, scriptExecutionEngine));
-            }
-            else
-            {
-                throw new Exception("There is no VMS Context to create the class");
-            }
         }
     }
 }

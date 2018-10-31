@@ -1,9 +1,10 @@
-﻿using ESAPIX.Logging;
+﻿#if VMS155
+using ESAPIX.Logging;
 using System;
 using System.Linq;
 using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
-[assembly: ESAPIScript(IsWriteable = true)]
+//[assembly: ESAPIScript(IsWriteable = true)]
 
 namespace ESAPIX.Helpers.Copiers
 {
@@ -62,3 +63,4 @@ namespace ESAPIX.Helpers.Copiers
         }
     }
 }
+#endif

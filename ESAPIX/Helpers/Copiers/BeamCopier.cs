@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if VMS155
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using VMS.TPS.Common.Model.API;
@@ -79,3 +80,4 @@ namespace ESAPIX.Helpers.Copiers
         }
     }
 }
+#endif
