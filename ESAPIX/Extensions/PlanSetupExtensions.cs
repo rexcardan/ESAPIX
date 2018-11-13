@@ -1,5 +1,8 @@
 ﻿#region
 
+using ESAPIX.Constraints;
+using ESAPIX.Constraints.DVH;
+using System.Collections.Generic;
 using System.Linq;
 using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
@@ -27,5 +30,22 @@ namespace ESAPIX.Extensions
 #endif
         }
 
+#if (!VMS110 && !VMS136 && !VMS137)
+        public static (List<ProtocolPhasePrescription> rxs, List<ProtocolPhaseMeasure> measures) GetProtocolPrescriptionsAndMeasures(this PlanSetup ps)
+        {
+            List<ProtocolPhasePrescription> rxs = new List<ProtocolPhasePrescription>();
+            List<ProtocolPhaseMeasure> measures = new List<ProtocolPhaseMeasure>();
+            ps.GetProtocolPrescriptionsAndMeasures(ref rxs, ref measures);
+            return (rxs, measures);
+        }
+
+        public static List<DoseStructureConstraint> GetConstraints(this PlanSetup ps)
+        {
+            List<ProtocolPhasePrescription> rxs = new List<ProtocolPhasePrescription>();
+            List<ProtocolPhaseMeasure> measures = new List<ProtocolPhaseMeasure>();
+            ps.GetProtocolPrescriptionsAndMeasures(ref rxs, ref measures);
+            return rxs.Select(r => r.ToConstraint()).ToList();
+        }
+#endif
     }
 }
