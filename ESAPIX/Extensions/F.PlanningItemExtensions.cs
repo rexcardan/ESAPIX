@@ -104,7 +104,7 @@ namespace ESAPIX.Extensions
             }
             else if (pi is PlanSum)
             {
-                return (pi as PlanSum).Course();
+                return (pi as PlanSum).Course;
             }
             return null;
         }
