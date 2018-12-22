@@ -112,7 +112,7 @@ namespace ESAPIX.Common
 
         public void Invoke(Action action)
         {
-            var timeout = 3000;
+            var timeout = 5000;
             var cts = new CancellationTokenSource();
             try
             {
@@ -167,6 +167,14 @@ namespace ESAPIX.Common
         }
         public void Dispose()
         {
+            Invoke(new Action(() =>
+            {
+                if (_sac != null)
+                {
+                    _sac.Application.Dispose();
+                    _sac = null;
+                }
+            }));
             if (ctx != null)
             {
                 ctx.Send((_) => System.Windows.Forms.Application.ExitThread(), null);

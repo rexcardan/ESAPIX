@@ -12,6 +12,9 @@ using ESAPIX.Common;
 using System.Linq;
 using ESAPIX.Common.Args;
 using V = VMS.TPS.Common.Model.API;
+using Prism.Ioc;
+using Unity;
+using Prism.Unity.Ioc;
 
 namespace ESAPIX.Bootstrapper
 {
@@ -116,6 +119,11 @@ namespace ESAPIX.Bootstrapper
             shell.ContentRendered -= shell_ContentRendered;
             //Force foreground
             shell.Activate();
+        }
+
+        protected override IContainerExtension CreateContainerExtension()
+        {
+            return new UnityContainerExtension();
         }
 
         #endregion
