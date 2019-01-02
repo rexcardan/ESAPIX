@@ -241,6 +241,30 @@ namespace ESAPIX.Extensions
             return mergedDVH;
         }
 
+        /// <summary>
+        /// Adds the beam contributions to each reference point
+        /// </summary>
+        /// <param name="pi">the planning item containing the reference points</param>
+        /// <returns>the reference points with the summed doses from each beam</returns>
+        public static IEnumerable<ESAPIX.Facade.API.FieldReferencePoint> GetFieldReferencePointsCumulative(this PlanningItem pi)
+        {
+            var beams = pi.GetBeams();
+            var referencePointClusters = beams.SelectMany(b => b.FieldReferencePoints)
+                .GroupBy(frp => frp.ReferencePoint.Id);
+            foreach (var cluster in referencePointClusters)
+            {
+                var rp = new ESAPIX.Facade.API.FieldReferencePoint();
+                rp.Name = cluster.First().Name;
+                rp.Id = cluster.Key;
+                rp.Comment = rp.Comment;
+                rp.HistoryDateTime = cluster.First().HistoryDateTime;
+                rp.HistoryUserName = cluster.First().HistoryUserName;
+                rp.EffectiveDepth = cluster.First().EffectiveDepth;
+                rp.FieldDose = new DoseValue(cluster.Sum(c => c.FieldDose.Dose), cluster.First().FieldDose.Unit);
+                yield return rp;
+            }
+        }
+
         #endregion
 
         #region DOSE QUERIES
