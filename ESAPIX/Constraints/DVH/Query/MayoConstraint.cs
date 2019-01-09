@@ -24,7 +24,12 @@ namespace ESAPIX.Constraints.DVH.Query
             var split = constraint.SplitOnWhiteSpace();
             if (split.Length != 3)
                 throw new ArgumentException(
-                    "Mayo constraints much be 3 parts separated by whitespace : {MayoQuery} {Discriminator} {ConstraintValue}");
+                    "Mayo constraints much be 3 parts separated by whitespace : {Query} {Discriminator} {ConstraintValue}");
+            if (!MayoQueryReader.IsValid(split[0]))
+            {
+                throw new ArgumentException(
+                  "Not a valid TG263 query! (Examples: D90%[Gy], V20Gy[%], etc)");
+            }
             var mq = MayoQuery.Read(split[0]);
             var discrimator = DiscriminatorConverter.ReadDiscrimator(split[1]);
             var constraintValue = double.Parse(split[2]);

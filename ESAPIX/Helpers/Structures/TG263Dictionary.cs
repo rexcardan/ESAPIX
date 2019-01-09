@@ -70,7 +70,8 @@ namespace ESAPIX.Helpers.Structures
                 bool isNameMatch = nameValidator.IsMatch(id);
                 if (isNameMatch)
                 {
-                    recommendedTypes.Add(tg263.DICOMType);
+                    if (!string.IsNullOrEmpty(tg263.DICOMType))
+                        recommendedTypes.Add(tg263.DICOMType);
                 }
             }
 
@@ -93,6 +94,7 @@ namespace ESAPIX.Helpers.Structures
 
         public static (bool IsNameOk, List<string> RecommendedNames) GetNameCompliance(string id, bool doFetchRecommendations = true)
         {
+            if (id == null) { return (false, new List<string>()); }
             if (tg263Structures == null) { LoadDictionaryFromResources(); }
             foreach (var allowedPatternAndType in tg263Structures)
             {

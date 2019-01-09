@@ -51,8 +51,9 @@ namespace ESAPIX.Helpers.Structures
             }
 
             //SORT
-            candidates = candidates.OrderBy(s => Math.Min(s.BestWordDistance, s.Distance))
-           .ThenBy(s => Math.Max(s.BestWordDistance, s.Distance)).ToList();
+            candidates = candidates.Where(c => !string.IsNullOrEmpty(c.RecommendedId))
+                .OrderBy(s => Math.Min(s.BestWordDistance, s.Distance))
+                .ThenBy(s => Math.Max(s.BestWordDistance, s.Distance)).ToList();
 
             return candidates
            .Take(numberOfRecommendations).Select(c => c.RecommendedId).ToList();
