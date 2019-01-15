@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace ESAPIX.Helpers.Strings
 {
-    public class BestWordDistance
+    public class AverageWordDistance
     {
-        public static int Calculate(string[] sourceWords, string[] words)
+        public static double Calculate(string[] sourceWords, string[] words)
         {
-            List<int> wordDistances = new List<int>();
+            if (!words.Any()) { return 0; } // Cannot evaluate
+            List<double> wordDistances = new List<double>();
             foreach (var w in words)
             {
-                int minDistance = int.MaxValue;
+                double minDistance = int.MaxValue;
                 foreach (var sw in sourceWords)
                 {
                     var distance = Levenshtein.ComputeDistance(w.ToUpper(), sw.ToUpper());
@@ -21,7 +22,7 @@ namespace ESAPIX.Helpers.Strings
                 }
                 wordDistances.Add(minDistance);
             }
-            return (int)Math.Round(wordDistances.Average());
+            return wordDistances.Average();
         }
     }
 }

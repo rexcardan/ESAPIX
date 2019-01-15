@@ -5,58 +5,70 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static ESAPIX.Helpers.Structures.TG263Dictionary;
 
 namespace ESAPIX.Helpers.Structures
 {
     public class StructureIdRecommender
     {
-        public static List<string> GetClosestNames(string id, int numberOfRecommendations)
+        public static async Task<List<StringMetrics>> GetClosestNames(string id, int numberOfRecommendations)
         {
-            List<string> closest = new List<string>();
+            return await Task.Run(() =>
+            {
+                List<string> closest = new List<string>();
 
-            var dict = TG263Dictionary.GetDictionary();
+                var twoDigit = Regex.Match(id, @"\d{2}").Value;
+                var fourDigit = Regex.Match(id, @"\d{4}").Value;
 
-            var candidates = dict.Where(d => d.StructureId != null).Select(s =>
-                {
-                    var sourceWords = s.StructIdWords;
+                var dict = TG263Dictionary.Instance.GetDictionary();
 
-                    var words = id.Split('_').ToList();
-                    words.AddRange(id.Split(' '));
-                    words.AddRange(StringHelper.SplitCamelCase(id));
-                    words = words.Distinct().ToList();
+                var targetWords = WordSplitter.Split(id);
 
-                    return new
+                var commentPermutations = GetCommentedPermutations(id);
+                var commented = commentPermutations
+                    .Where(c =>
                     {
-                        RecommendedId = s.StructureId,
-                        Distance = Levenshtein.ComputeDistance(s.StructureId.ToUpper(), id.ToUpper()),
-                        BestWordDistance = BestWordDistance.Calculate(sourceWords.ToArray(), words.ToArray())
+                        var isOkay = TG263Dictionary.Instance.GetNameCompliance(c, false).GetAwaiter().GetResult();
+                        return isOkay.IsNameOk;
+                    })
+                    .Select(c =>
+                    {
+                        var commentWords = WordSplitter.Split(c);
+                        return new ConcreteStructureId()
+                        {
+                            StructureId = c,
+                            StructIdWords = commentWords
+                        };
+                    }).ToList();
+
+                var concreteIds = dict.Where(d => d.StructureIds != null && d.StructureIds.Any())
+                    .SelectMany(s => s.StructureIds)
+                    .Concat(commented).ToList();
+
+                var candidates = concreteIds.Select(s =>
+                {
+                    var strId = s.StructureId;
+                    var words = s.StructIdWords.ToArray();
+                    if (strId.Contains("00") && !string.IsNullOrEmpty(twoDigit))
+                    {
+                        strId = strId.Replace("00", twoDigit);
+                        words = words.Select(w => w.Replace("00", twoDigit)).ToArray();
+                    }
+                    var metric = new StringMetrics()
+                    {
+                        Id = strId,
+                        Levenshtein = Levenshtein.ComputeDistance(strId.ToUpper(), id.ToUpper()),
+                        AverageWord = AverageWordDistance.Calculate(words, targetWords.ToArray()),
                     };
+                    return metric;
                 }).ToList();
 
+                //SORT
+                var ordered = candidates
+                    .OrderBy(s => (s.Weighted)).ThenBy(o => o.Levenshtein);
 
-            var bestMatch = candidates.Min(c => Math.Min(c.BestWordDistance, c.Distance));
-
-            var commentPermutations = GetCommentedPermutations(id);
-            var commented = commentPermutations
-                .FirstOrDefault(c => TG263Dictionary.GetNameCompliance(c, false).IsNameOk);
-            if (commented != null)
-            {
-                var distance = Levenshtein.ComputeDistance(commented.ToUpper(), id.ToUpper());
-                candidates.Add(new
-                {
-                    RecommendedId = commented,
-                    Distance = Levenshtein.ComputeDistance(commented.ToUpper(), id.ToUpper()),
-                    BestWordDistance = int.MaxValue
-                });
-            }
-
-            //SORT
-            candidates = candidates.Where(c => !string.IsNullOrEmpty(c.RecommendedId))
-                .OrderBy(s => Math.Min(s.BestWordDistance, s.Distance))
-                .ThenBy(s => Math.Max(s.BestWordDistance, s.Distance)).ToList();
-
-            return candidates
-           .Take(numberOfRecommendations).Select(c => c.RecommendedId).ToList();
+                return ordered.Take(numberOfRecommendations).ToList();
+            });
         }
 
         /// <summary>
@@ -75,6 +87,8 @@ namespace ESAPIX.Helpers.Structures
                 newId = Regex.Replace(newId, @"\s+", "");
                 permutations.Add(newId);
             }
+            if (id.Contains("_"))
+                permutations.Add(id.Replace("_", "^"));
             return permutations;
         }
     }

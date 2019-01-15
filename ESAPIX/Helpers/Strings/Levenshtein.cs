@@ -58,5 +58,12 @@ namespace ESAPIX.Helpers.Strings
             // Step 7
             return d[n, m];
         }
+
+        public static double NormalizedDistance(string string1, string string2)
+        {
+            return 1 - (double)(ComputeDistance(string1, string2) / (Math.Max(string1.Length, string2.Length)));
+        }
     }
+
+
 }
