@@ -202,13 +202,13 @@ namespace ESAPIX.Constraints
             var structures = _pi.GetStructures();
             if (structures == null)
             {
-                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE, "No structure set", string.Empty));
                 return this;
             }
             foreach (var id in structureIds)
                 if (!_pi.ContainsStructure(id))
                 {
-                    Results.Add(new ConstraintResult(null, NOT_APPLICABLE, $"Missing {id}, or {id} is empty",
+                    Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE, $"Missing {id}, or {id} is empty",
                         string.Empty));
                     return this;
                 }
@@ -226,7 +226,7 @@ namespace ESAPIX.Constraints
             var structures = _pi.GetStructures();
             if (structures == null)
             {
-                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE, "No structure set", string.Empty));
                 return this;
             }
             foreach (var id in structureIds)
@@ -238,7 +238,7 @@ namespace ESAPIX.Constraints
                 }
             }
 
-            Results.Add(new ConstraintResult(null, NOT_APPLICABLE, $"Does not contain one: {string.Join(",", structureIds)}, or all are empty",
+            Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE, $"Does not contain one: {string.Join(",", structureIds)}, or all are empty",
                          string.Empty));
             return this;
         }
@@ -253,14 +253,14 @@ namespace ESAPIX.Constraints
             var structures = _pi.GetStructures();
             if (structures == null)
             {
-                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE, "No structure set", string.Empty));
                 return this;
             }
             foreach (var dt in dicomTypes)
             {
                 if (!structures.Any(s => s.DicomType == dt && !s.IsEmpty))
                 {
-                    Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+                    Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE,
                         $"Missing type {dt}, or {dt} structure is empty", string.Empty));
                     return this;
                 }
@@ -280,7 +280,7 @@ namespace ESAPIX.Constraints
             var structures = _pi.GetStructures();
             if (structures == null)
             {
-                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "No structure set", string.Empty));
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE, "No structure set", string.Empty));
                 return this;
             }
             foreach (var dt in dicomTypes)
@@ -292,7 +292,7 @@ namespace ESAPIX.Constraints
                 }
             }
 
-            Results.Add(new ConstraintResult(null, NOT_APPLICABLE,
+            Results.Add(new ConstraintResult(null, NOT_APPLICABLE_MISSING_STRUCTURE,
                        $"Does not contain one: {string.Join(",", dicomTypes)}, or all are empty", string.Empty));
             return this;
         }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using ESAPIX.Common;
 
 namespace $safeprojectname$
 {
@@ -26,5 +27,11 @@ namespace $safeprojectname$
         //bs.IsPatientSelectionEnabled = false;
         bs.Run(args);
     }
+
+    protected override void OnExit(ExitEventArgs e)
+    {
+        AppComThread.Instance.Dispose();
+        base.OnExit(e);
     }
+}
 }
