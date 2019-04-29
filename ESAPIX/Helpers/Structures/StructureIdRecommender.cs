@@ -57,15 +57,15 @@ namespace ESAPIX.Helpers.Structures
                     var metric = new StringMetrics()
                     {
                         Id = strId,
-                        Levenshtein = Levenshtein.ComputeDistance(strId.ToUpper(), id.ToUpper()),
-                        AverageWord = AverageWordDistance.Calculate(words, targetWords.ToArray()),
+                        Dice = Dice.ComputeDistance(strId.ToUpper(), id.ToUpper()),
+                        Levenshtein = Levenshtein.ComputeDistance(strId.ToUpper(), id.ToUpper())
                     };
                     return metric;
                 }).ToList();
 
                 //SORT
                 var ordered = candidates
-                    .OrderBy(s => (s.Weighted)).ThenBy(o => o.Levenshtein);
+                    .OrderBy(s => (s.Dice*s.Levenshtein));
 
                 return ordered.Take(numberOfRecommendations).ToList();
             });

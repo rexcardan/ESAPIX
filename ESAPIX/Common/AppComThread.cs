@@ -176,7 +176,7 @@ namespace ESAPIX.Common
             {
                 if (_sac != null)
                 {
-                    _sac.Application.Dispose();
+                    _sac.Application?.Dispose();
                     _sac = null;
                 }
             }));
