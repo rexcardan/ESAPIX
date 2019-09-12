@@ -67,8 +67,8 @@ namespace ESAPIX.Extensions
                     yield return beam;
             else if (pi is PlanSum)
                 foreach (var ps in (pi as PlanSum).PlanSetups)
-                foreach (var beam in ps.Beams)
-                    yield return beam;
+                    foreach (var beam in ps.Beams)
+                        yield return beam;
         }
 
         /// <summary>
@@ -104,7 +104,12 @@ namespace ESAPIX.Extensions
             }
             else if (pi is PlanSum)
             {
+
+#if VMS110
+                return (pi as PlanSum).Course();
+#else
                 return (pi as PlanSum).Course;
+#endif
             }
             return null;
         }
@@ -257,7 +262,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseAtVolume(new[] {s}, volume, vPres, dPres);
+            return i.GetDoseAtVolume(new[] { s }, volume, vPres, dPres);
         }
 
         /// <summary>
@@ -316,7 +321,7 @@ namespace ESAPIX.Extensions
         public static DoseValue GetDoseComplementAtVolume(this PlanningItem i, Structure s, double volume,
             VolumePresentation vPres, DoseValuePresentation dPres)
         {
-            return i.GetDoseComplementAtVolume(new[] {s}, volume, vPres, dPres);
+            return i.GetDoseComplementAtVolume(new[] { s }, volume, vPres, dPres);
         }
 
         #endregion
@@ -335,7 +340,7 @@ namespace ESAPIX.Extensions
         {
             dv = dv.ConvertToSystemUnits(pi);
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
             return dvhCurve.GetVolumeAtDose(dv);
         }
 
@@ -352,7 +357,7 @@ namespace ESAPIX.Extensions
         {
             dv = dv.ConvertToSystemUnits(pi);
             var dPres = dv.GetPresentation();
-            var dvhCurve = pi.GetComplexDVH(new List<Structure> {s}, vPres, dPres);
+            var dvhCurve = pi.GetComplexDVH(new List<Structure> { s }, vPres, dPres);
             return dvhCurve.GetComplementVolumeAtDose(dv);
         }
 
@@ -385,7 +390,7 @@ namespace ESAPIX.Extensions
         {
             dv = dv.ConvertToSystemUnits(pi);
             var vol = ss.Sum(s => pi.GetVolumeAtDose(s, dv, VolumePresentation.AbsoluteCm3));
-            return vPres == VolumePresentation.AbsoluteCm3 ? vol : vol / ss.Sum(s => s.Volume)*100;
+            return vPres == VolumePresentation.AbsoluteCm3 ? vol : vol / ss.Sum(s => s.Volume) * 100;
         }
 
         #endregion

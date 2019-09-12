@@ -1,43 +1,43 @@
 #region
 using System;
-using System.Diagnostics;
+using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-using ESAPIX.Interfaces;
-using ESAPIX.AppKit.Exceptions;
-using ESAPIX.Extensions;
-using System.Windows.Threading;
-using System.Windows.Forms;
-using VMS.TPS.Common.Model.API;
 
 #endregion
 
 namespace ESAPIX.Common
 {
-    public class AppComThread
+    public class AppComThread : IDisposable
     {
+        BlockingCollection<Task> _jobs = new BlockingCollection<Task>();
         private static AppComThread instance = null;
         private static readonly object padlock = new object();
         private Thread thread;
-        private SynchronizationContext ctx;
-        private TaskScheduler _scheduler;
-        private ManualResetEvent mre;
         private StandAloneContext _sac;
+        CancellationTokenSource cts;
 
         private AppComThread()
         {
-            using (mre = new ManualResetEvent(false))
+            cts = new CancellationTokenSource();
+            thread = new Thread(() =>
             {
-                thread = new Thread(() =>
+                foreach (var job in _jobs.GetConsumingEnumerable(cts.Token))
                 {
-                    System.Windows.Forms.Application.Idle += Initialize;
-                    System.Windows.Forms.Application.Run();
-                });
-                thread.IsBackground = true;
-                thread.SetApartmentState(ApartmentState.STA);
-                thread.Start();
-                mre.WaitOne();
-            }
+                    try
+                    {
+                        job.RunSynchronously();
+                    }
+                    catch(Exception e)
+                    {
+                        _sac?.Logger.Error(e);
+                    }
+
+                }
+            });
+            thread.IsBackground = true;
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
 
         public static AppComThread Instance
@@ -101,75 +101,20 @@ namespace ESAPIX.Common
             });
         }
 
-        public async Task InvokeAsync(Action action)
+        public Task InvokeAsync(Action action)
         {
-            var task = Task.Run(() =>
-            {
-                Invoke(action);
-            });
-            await task;
-            if (task.Exception != null)
-            {
-                var wrapped = new ScriptException(task.Exception);
-                throw wrapped;
-            }
+            var task = new Task(action);
+            _jobs.Add(task);
+            return task;
         }
 
         public void Invoke(Action action)
         {
-            var timeout = 5000;
-            var cts = new CancellationTokenSource();
-            try
-            {
-                cts.CancelAfter(timeout);
-                var task = Task.Factory.StartNew(() =>
-                {
-                    Delegate del = action;
-                    Invoke(del);
-                },
-                  cts.Token,
-                  TaskCreationOptions.None,
-                  _scheduler);
-                //Wait
-                task.GetAwaiter().GetResult();
-                if (task.Exception != null)
-                {
-                    throw task.Exception;
-                }
-            }
-            catch (OperationCanceledException)
-            {
-                //handle cancellation
-                throw new Exception("ESAPIX Timeout!");
-            }
-            catch (Exception e)
-            {
-                var wrapped = new ScriptException(e);
-                throw wrapped;
-            }
+            var task = new Task(action);
+            _jobs.Add(task);
+            task.GetAwaiter().GetResult();
         }
 
-        //private void BeginInvoke(Delegate dlg, params Object[] args)
-        //{
-        //    if (ctx == null) throw new ObjectDisposedException("ESAPIX_Thread");
-        //    ctx.Post((_) => dlg.DynamicInvoke(args), null);
-        //}
-
-        private object Invoke(Delegate dlg, params Object[] args)
-        {
-            if (ctx == null) throw new ObjectDisposedException("ESAPIX_Thread");
-            object result = null;
-            ctx.Send((_) => result = dlg.DynamicInvoke(args), null);
-            return result;
-        }
-
-        protected virtual void Initialize(object sender, EventArgs e)
-        {
-            ctx = SynchronizationContext.Current;
-            _scheduler = TaskScheduler.FromCurrentSynchronizationContext();
-            mre.Set();
-            System.Windows.Forms.Application.Idle -= Initialize;
-        }
         public void Dispose()
         {
             Invoke(new Action(() =>
@@ -180,11 +125,8 @@ namespace ESAPIX.Common
                     _sac = null;
                 }
             }));
-            if (ctx != null)
-            {
-                ctx.Send((_) => System.Windows.Forms.Application.ExitThread(), null);
-                ctx = null;
-            }
+
+            cts.Cancel();
         }
 
         public int ThreadId => thread.ManagedThreadId;

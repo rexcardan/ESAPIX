@@ -30,7 +30,7 @@ namespace ESAPIX.Extensions
 #endif
         }
 
-#if (!VMS110 && !VMS136 && !VMS137)
+#if (!VMS110 && !VMS136 && !VMS137 && !VMS150)
         public static (List<ProtocolPhasePrescription> rxs, List<ProtocolPhaseMeasure> measures) GetProtocolPrescriptionsAndMeasures(this PlanSetup ps)
         {
             List<ProtocolPhasePrescription> rxs = new List<ProtocolPhasePrescription>();

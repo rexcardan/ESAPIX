@@ -76,7 +76,7 @@ namespace ESAPIX.Common.Args
             if (commandLineArgs.Contains(key))
             {
                 var index = commandLineArgs.ToList().IndexOf(key);
-                var parts = commandLineArgs.Skip(index+1).TakeWhile(k => !k.StartsWith("-")).ToArray();
+                var parts = commandLineArgs.Skip(index+1).TakeWhile(k => !ArgumentKey.IsKey(k)).ToArray();
                 return string.Join(" ", parts);
             }
             return null;
@@ -87,7 +87,7 @@ namespace ESAPIX.Common.Args
             if (commandLineArgs.Contains(key))
             {
                 var index = commandLineArgs.ToList().IndexOf(key);
-                return commandLineArgs.Skip(index+1).TakeWhile(k => !k.StartsWith("-")).ToArray();
+                return commandLineArgs.Skip(index+1).TakeWhile(k => !ArgumentKey.IsKey(k)).ToArray();
             }
             return null;
         }

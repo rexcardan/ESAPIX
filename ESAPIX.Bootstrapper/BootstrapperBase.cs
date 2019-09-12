@@ -2,7 +2,6 @@
 using System;
 using System.Threading.Tasks;
 using System.Windows;
-using Microsoft.Practices.Unity;
 using Prism.Events;
 using ESAPIX.Interfaces;
 using ESAPIX.AppKit.Exceptions;
@@ -18,7 +17,7 @@ using Prism.Unity.Ioc;
 
 namespace ESAPIX.Bootstrapper
 {
-    public class BootstrapperBase<T> : UnityBootstrapper where T : Window
+    public class BootstrapperBase<T> : PrismApplication where T : Window
     {
         protected IScriptContext _ctx;
         private EventAggregator _ea;

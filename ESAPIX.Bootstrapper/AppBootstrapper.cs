@@ -8,13 +8,18 @@ using ESAPIX.AppKit.Overlay;
 using System.Linq;
 using ESAPIX.Common;
 using System;
+using Prism.Unity;
+using Prism.Ioc;
+using CommonServiceLocator;
 
 #endregion
 
 namespace ESAPIX.Bootstrapper
 {
-    public class AppBootstrapper<T> : BootstrapperBase<T> where T : Window
+    public class AppBootstrapper<T> : PrismApplication where T : Window
     {
+        private EventHandler _coverHandler;
+
         public bool IsPatientSelectionEnabled { get; set; } = true;
 
         /// <summary>
@@ -27,6 +32,10 @@ namespace ESAPIX.Bootstrapper
         {
             var thread = AppComThread.Instance;
             thread.SetContext(createAppFunc);
+            _coverHandler = new EventHandler((o, args) =>
+            {
+                OnContentRendered(o as Window);
+            });
         }
 
         /// <summary>
@@ -34,9 +43,8 @@ namespace ESAPIX.Bootstrapper
         /// overlaid in the application
         /// </summary>
         /// <param name="shell"></param>
-        protected override void OnContentRendered(Window shell)
+        protected void OnContentRendered(Window shell)
         {
-            base.OnContentRendered(shell);
             if (shell != null && IsPatientSelectionEnabled)
             {
                 var sac = _ctx as StandAloneContext;
@@ -66,6 +74,17 @@ namespace ESAPIX.Bootstrapper
                 (_ctx as StandAloneContext).Dispose();
                 Application.Current.Shutdown();
             }
+        }
+
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override Window CreateShell()
+        {
+            var win = ServiceLocator.Current.GetInstance<T>();
+            win.ContentRendered += OnContentRendered;
         }
     }
 }
