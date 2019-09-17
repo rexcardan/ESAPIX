@@ -12,8 +12,9 @@ namespace ESAPIX.Constraints
         {
             switch (priority)
             {
-                case PriorityType.MAJOR_DEVIATION:
                 case PriorityType.PRIORITY_1: return ResultType.ACTION_LEVEL_3;
+                case PriorityType.PRIORITY_2: return ResultType.ACTION_LEVEL_2;
+                case PriorityType.PRIORITY_3: return ResultType.ACTION_LEVEL_1;
                 default: return ResultType.ACTION_LEVEL_1;
             }
         }

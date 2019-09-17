@@ -44,7 +44,7 @@ namespace ESAPIX.Common.Args
                         var plansInScope = ArgumentParser.GetPlansInScope(commandLineArgs);
                         if (plansInScope != null && plansInScope.Any())
                         {
-                            var plans = sac.Course.PlanSetups.Where(p => plansInScope.Contains(p.UID));
+                            var plans = sac.Patient.Courses.SelectMany(c=>c.PlanSetups).Where(p => plansInScope.Contains(p.UID));
                             sac.SetPlansInScope(plans);
                         }
                     }
@@ -70,7 +70,7 @@ namespace ESAPIX.Common.Args
                         var explansInScope = ArgumentParser.GetExternalPlansInScope(commandLineArgs);
                         if (explansInScope != null && explansInScope.Any())
                         {
-                            var plans = sac.Course.ExternalPlanSetups.Where(p => explansInScope.Contains(p.UID));
+                            var plans = sac.Patient.Courses.SelectMany(c => c.ExternalPlanSetups).Where(p => explansInScope.Contains(p.UID));
                             sac.SetExternalPlansInScope(plans);
                         }
                     }
@@ -78,7 +78,7 @@ namespace ESAPIX.Common.Args
                         var brachyInScope = ArgumentParser.GetBrachyPlansInScope(commandLineArgs);
                         if (brachyInScope != null && brachyInScope.Any())
                         {
-                            var plans = sac.Course.BrachyPlanSetups.Where(p => brachyInScope.Contains(p.UID));
+                            var plans = sac.Patient.Courses.SelectMany(c => c.BrachyPlanSetups).Where(p => brachyInScope.Contains(p.UID));
                             sac.SetBrachyPlansInScope(plans);
                         }
                     }
@@ -88,7 +88,7 @@ namespace ESAPIX.Common.Args
                         var ionPlansInScope = ArgumentParser.GetIonPlansInScope(commandLineArgs);
                         if (ionPlansInScope != null && ionPlansInScope.Any())
                         {
-                            var plans = sac.Course.IonPlanSetups.Where(p => ionPlansInScope.Contains(p.UID));
+                            var plans = sac.Patient.Courses.SelectMany(c => c.IonPlanSetups).Where(p => ionPlansInScope.Contains(p.UID));
                             sac.SetIonPlansInScope(plans);
                         }
                     }

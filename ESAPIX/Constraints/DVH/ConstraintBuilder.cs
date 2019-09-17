@@ -10,7 +10,7 @@ namespace ESAPIX.Constraints.DVH
 {
     public class ConstraintBuilder
     {
-        public static IConstraint Build(string structureName, string mayoConstraint, PriorityType priority = PriorityType.IDEAL)
+        public static IConstraint Build(string structureName, string mayoConstraint, PriorityType priority = PriorityType.PRIORITY_1)
         {
             var mayo = MayoConstraint.Read(mayoConstraint);
             return mayo.ToDVHConstraint(structureName, priority);

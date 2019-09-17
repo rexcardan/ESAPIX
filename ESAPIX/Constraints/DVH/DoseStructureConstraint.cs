@@ -15,7 +15,7 @@ namespace ESAPIX.Constraints.DVH
     public abstract class DoseStructureConstraint : IPriorityConstraint
     {
         /// <summary>
-        ///     The string structure name corresponding to the structure ID in Eclipse. Separate with '&' character for multiple
+        ///     The string structure name corresponding to the structure ID in Eclipse. Separate with '|' character for multiple
         ///     structures
         /// </summary>
         public string StructureName { get; set; }
@@ -45,7 +45,7 @@ namespace ESAPIX.Constraints.DVH
         ///     Splits structure names separated by & character
         /// </summary>
         [JsonIgnore]
-        public string[] StructureNames => StructureName.Split(new[] {"&"}, StringSplitOptions.RemoveEmptyEntries);
+        public string[] StructureNames => StructureName.Split(new[] {"|"}, StringSplitOptions.RemoveEmptyEntries);
 
         public virtual string Name => ToString();
         public string FullName => $"{StructureName} {Name}";
@@ -62,7 +62,7 @@ namespace ESAPIX.Constraints.DVH
             if (!valid) return new ConstraintResult(this, ResultType.NOT_APPLICABLE, "Plan is null");
 
             //Check structure exists
-            var structures = StructureName.Split('&');
+            var structures = StructureName.Split('|').Select(n=>n.Trim());
             foreach (var s in structures)
             {
                 valid = pi.ContainsStructure(s);
@@ -84,8 +84,9 @@ namespace ESAPIX.Constraints.DVH
         {
             switch (Priority)
             {
-                case PriorityType.MAJOR_DEVIATION:
                 case PriorityType.PRIORITY_1: return ResultType.ACTION_LEVEL_3;
+                case PriorityType.PRIORITY_2: return ResultType.ACTION_LEVEL_2;
+                case PriorityType.PRIORITY_3: return ResultType.ACTION_LEVEL_1;
                 default: return ResultType.ACTION_LEVEL_1;
             }
         }
