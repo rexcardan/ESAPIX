@@ -3,9 +3,9 @@
     <TargetFramework>net452</TargetFramework>
     <Platforms>x64</Platforms>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.5.3.8</AssemblyVersion>
-    <FileVersion>1.5.3.8</FileVersion>
-    <Version>1.5.3.8</Version>
+    <AssemblyVersion>1.5.3.10</AssemblyVersion>
+    <FileVersion>1.5.3.10</FileVersion>
+    <Version>1.5.3.10</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Rex Cardan © 2019</Copyright>
     <RootNamespace>ESAPIX</RootNamespace>
@@ -64,20 +64,22 @@
     <Compile Remove="Facade\API15.5\TradeoffPlanGenerationIntermediateDoseMode.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="ESAPI_15.5" Version="15.5.11.13" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
+ 
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="WindowsBase" />
     <Reference Include="VMS.TPS.Common.Model.API">
-      <HintPath>lib\15.5\VMS.TPS.Common.Model.API.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Varian\RTM\15.5\esapi\API\VMS.TPS.Common.Model.API.dll</HintPath>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>lib\15.5\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Varian\RTM\15.5\esapi\API\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
 </Project>

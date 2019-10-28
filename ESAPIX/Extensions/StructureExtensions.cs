@@ -7,6 +7,7 @@ using ESAPIX.Constraints;
 using System.Collections.Generic;
 using ESAPIX.Constraints.DVH.Query;
 using ESAPIX.Helpers;
+using static ESAPIX.Helpers.Strings.MagicStrings;
 
 #endregion
 
@@ -65,6 +66,95 @@ namespace ESAPIX.Extensions
         public static void ToObjFile(this Structure s, string objPath)
         {
             ObjFileWriter.Write(s.MeshGeometry, objPath);
+        }
+
+        /// <summary>
+        /// Copies a structure onto another structure within the z bounds of the input
+        /// </summary>
+        /// <param name="copy">the structure data will be copied into</param>
+        /// <param name="toCopy">the structure from which we are copying</param>
+        /// <param name="im">the image containing the contours</param>
+        /// <param name="zBounds">the lower and upper bounds along the z axis where copying will occur</param>
+        public static void CopyStructureInBounds(this Structure copy, Structure toCopy, Image im, (double LowerZBound, double UpperZBound) zBounds)
+        {
+            for (int z = 0; z < im.ZSize; z++)
+            {
+                var zPos = im.Origin.z + z * im.ZRes;
+                if (zPos >= zBounds.LowerZBound && zPos <= zBounds.UpperZBound)
+                {
+                    copy.ClearAllContoursOnImagePlane(z);
+                    var zContour = toCopy.GetContoursOnImagePlane(z);
+                    zContour.ToList().ForEach(c => copy.AddContourOnImagePlane(c, z));
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// Returns the geometric midpoint of a structure (not the "Center" that ESAPI returns). Center
+        /// is a weighted average of voxel position but midpoint doesn't use distribution of voxels to set
+        /// </summary>
+        /// <param name="str">the structure of which to find the midpoint</param>
+        /// <returns>Returns the geometric midpoint of a structure</returns>
+        public static VVector GetMidpoint(this Structure str)
+        {
+            if (str?.MeshGeometry == null) { return new VVector(double.NaN, double.NaN, double.NaN); }
+            return new VVector(str.MeshGeometry.Bounds.X + str.MeshGeometry.Bounds.SizeX / 2,
+                                                       str.MeshGeometry.Bounds.Y + str.MeshGeometry.Bounds.SizeY / 2,
+                                                       str.MeshGeometry.Bounds.Z + str.MeshGeometry.Bounds.SizeZ / 2);
+        }
+
+        public static void ClearAllContours(this Structure str, Image im)
+        {
+            for (int z = 0; z < im.ZSize; z++)
+            {
+                str.ClearAllContoursOnImagePlane(z);
+            }
+        }
+
+        /// <summary>
+        /// Performs margin on structure ONLY in the bounds of the input, keeps original contour in
+        /// all other Z coordinates
+        /// </summary>
+        /// <param name="baseStructure">base structure</param>
+        /// <param name="margins">asymmetric margins to perform</param>
+        /// <param name="ss">the structure set containing the structure</param>
+        /// <param name="zBounds">the lower and upper bounds along the z axis where margin will occur</param>
+        public static void AsymmetricMarginInBounds(this Structure baseStructure, AxisAlignedMargins margins, StructureSet ss, (double LowerZBound, double UpperZBound) zBounds)
+        {
+            var marginStr = ss.CreateStructureIfNotExists("tempAsMrg", DICOMType.CONTROL);
+            marginStr.SegmentVolume = baseStructure.AsymmetricMargin(margins);
+
+            for (int z = 0; z < ss.Image.ZSize; z++)
+            {
+                var zPos = ss.Image.Origin.z + z * ss.Image.ZRes;
+                if (zPos >= zBounds.LowerZBound && zPos <= zBounds.UpperZBound)
+                {
+                    baseStructure.ClearAllContoursOnImagePlane(z);
+                    var zContour = marginStr.GetContoursOnImagePlane(z);
+                    zContour.ToList().ForEach(c => baseStructure.AddContourOnImagePlane(c, z));
+                }
+            }
+
+            ss.RemoveStructure(marginStr);
+        }
+
+        /// <summary>
+        /// Crops a structure and removes contours outside of the input z bounds
+        /// </summary>
+        /// <param name="baseStructure">base structure</param>
+        /// <param name="im">the image containing the contours</param>
+        /// <param name="zBounds">the lower and upper bounds along the z axis where copying will occur</param>
+        public static void CropInBounds(this Structure baseStructure, Image im, (double LowerZBound, double UpperZBound) zBounds)
+        {
+            for (int z = 0; z < im.ZSize; z++)
+            {
+                var zPos = im.Origin.z + z * im.ZRes;
+                if (zPos < zBounds.LowerZBound || zPos > zBounds.UpperZBound)
+                {
+                    baseStructure.ClearAllContoursOnImagePlane(z);
+                }
+            }
         }
     }
 }

@@ -169,6 +169,48 @@ namespace ESAPIX.Constraints
         }
 
         /// <summary>
+        /// Asserts planning item is ion plan setup type
+        /// </summary>
+        /// <returns>the asserter object</returns>
+        public PQAsserter IsIonPlanSetup()
+        {
+            // Check for structure set. If plan does not have a structure set, test is not applicable
+            if (_pi is IonPlanSetup)
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            else
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Must be ion plan setup only", string.Empty));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts planning item is brachy plan setup type
+        /// </summary>
+        /// <returns>the asserter object</returns>
+        public PQAsserter IsBrachyPlanSetup()
+        {
+            // Check for structure set. If plan does not have a structure set, test is not applicable
+            if (_pi is BrachyPlanSetup)
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            else
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Must be brachy plan setup only", string.Empty));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts planning item is brachy plan setup type
+        /// </summary>
+        /// <returns>the asserter object</returns>
+        public PQAsserter IsExternalPlanSetup()
+        {
+            // Check for structure set. If plan does not have a structure set, test is not applicable
+            if (_pi is ExternalPlanSetup)
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            else
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Must be external plan setup only", string.Empty));
+            return this;
+        }
+
+        /// <summary>
         /// Asserts is plan setup AND contains electron fields
         /// </summary>
         /// <returns>the asserter object</returns>
@@ -354,9 +396,8 @@ namespace ESAPIX.Constraints
         }
 
         /// <summary>
-        /// Asserts the plan contains all fields of specified MLCPlanType
+        /// Asserts the plan contains at least one photon beam
         /// </summary>
-        /// <param name="mType">the MLC type which all beams must have</param>
         /// <returns>the asserter object</returns>
         public PQAsserter ContainsOneOrMorePhotonBeams()
         {
@@ -379,9 +420,8 @@ namespace ESAPIX.Constraints
         }
 
         /// <summary>
-        /// Asserts the plan contains all fields of specified MLCPlanType
+        /// Asserts the plan contains at least one proton beam
         /// </summary>
-        /// <param name="mType">the MLC type which all beams must have</param>
         /// <returns>the asserter object</returns>
         public PQAsserter ContainsOneOrMoreProtonBeams()
         {
@@ -397,7 +437,31 @@ namespace ESAPIX.Constraints
             var containsProtons = ens.Any(e => e.EndsWith("P"));
 
             if (!containsProtons)
-                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Doesn't contain photon fields", string.Empty));
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Doesn't contain proton fields", string.Empty));
+            else
+                Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
+            return this;
+        }
+
+        /// <summary>
+        /// Asserts the plan contains at least one proton beam
+        /// </summary>
+        /// <returns>the asserter object</returns>
+        public PQAsserter IsIonPlan()
+        {
+            var isPlanSetup = IsPlanSetup().Results.Last();
+            if (!isPlanSetup.IsSuccess)
+            {
+                Results.Add(isPlanSetup);
+                return this;
+            }
+
+            var ps = _pi as PlanSetup;
+            var ens = ps.Beams.Select(b => b.EnergyModeDisplayName).ToList();
+            var containsProtons = ens.Any(e => e.EndsWith("P"));
+
+            if (!containsProtons)
+                Results.Add(new ConstraintResult(null, NOT_APPLICABLE, "Doesn't contain proton fields", string.Empty));
             else
                 Results.Add(new ConstraintResult(null, PASSED, string.Empty, string.Empty));
             return this;

@@ -37,29 +37,20 @@ namespace ESAPIX.Constraints
         }
 
         /// <summary>
-        /// A list of custom settings appropriate for the constraint implemented. Use ValidateSettings
-        /// method to ensure setting strings are correct
+        /// A custom class of custom settings appropriate for the constraint implemented. Use ValidateSettings or
+        /// data annotations to ensure setting strings are correct
         /// </summary>
-        public Dictionary<string, string> ConstraintSettings { get; set; }
-            = new Dictionary<string, string>();
+        public object ConstraintSettings { get; set; }
 
         /// <summary>
-        /// A method to validate the settings values to make sure they are appropriate.
+        /// A optional method to validate the settings values to make sure they are appropriate.
         /// This will be called when settings are changed. 
         /// </summary>
         /// <returns>Returns a dictionary of keys matching the settings keys with validation
         /// results for each key</returns>
-        public virtual Dictionary<string, ValidationResult> ValidateSettings()
+        public virtual List<ValidationResult> ValidateSettings()
         {
-            if (!ConstraintSettings.Any())
-            {
-                return new Dictionary<string, ValidationResult>();
-            }
-            else
-            {
-                throw new NotImplementedException("Must override ValidateSettings method if " +
-                    "settings feature is used.");
-            }
+            return new List<ValidationResult>();
         }
     }
 }
