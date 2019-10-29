@@ -351,17 +351,16 @@ namespace ESAPIX.Extensions
         /// <returns>Return the 3D dose matrix associated with the planning item</returns>
         public static double[,,] GetDoseMatrix(this PlanningItem pi, DoseValue.DoseUnit unit)
         {
-            if ( unit == DoseValue.DoseUnit.Unknown )
-                throw new ArgumentException("Can't get dose matrix for Unknown dose unit.");
-
             var oldPresentation = pi.DoseValuePresentation;
             pi.DoseValuePresentation = DoseValuePresentation.Absolute;
-            double factor;
+            double factor = 1.0;
             if ( unit == DoseValue.DoseUnit.Percent)
+            {
                 factor = 100 * pi.Dose.VoxelToDoseValue(int.MaxValue).GetDose(DoseValue.DoseUnit.Gy) / pi.TotalPrescribedDoseGy();
-            else
-                factor = pi.Dose.VoxelToDoseValue(int.MaxValue).GetDose(unit); 
-            factor /= (double)int.MaxValue;
+                factor /= (double)int.MaxValue;
+            }
+            else if ( unit != DoseValue.DoseUnit.Unknown )
+                factor = pi.Dose.VoxelToDoseValue(int.MaxValue).GetDose(unit) / (double)int.MaxValue;
             pi.DoseValuePresentation = oldPresentation;
 
             int nx = pi.Dose.XSize;
