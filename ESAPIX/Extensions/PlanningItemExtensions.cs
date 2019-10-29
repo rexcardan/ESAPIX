@@ -343,6 +343,43 @@ namespace ESAPIX.Extensions
             return i.GetDoseComplementAtVolume(new[] {s}, volume, vPres, dPres);
         }
 
+        /// <summary>
+        ///     Return the 3D dose matrix
+        /// </summary>
+        /// <param name="pi">the current planning item</param>
+        /// <param name="unit">the units for the returned dose matrix</param>
+        /// <returns>Return the 3D dose matrix associated with the planning item</returns>
+        public static double[,,] GetDoseMatrix(this PlanningItem pi, DoseValue.DoseUnit unit)
+        {
+            if ( unit == DoseValue.DoseUnit.Unknown )
+                throw new ArgumentException("Can't get dose matrix for Unknown dose unit.");
+
+            var oldPresentation = pi.DoseValuePresentation;
+            pi.DoseValuePresentation = DoseValuePresentation.Absolute;
+            double factor;
+            if ( unit == DoseValue.DoseUnit.Percent)
+                factor = 100 * pi.Dose.VoxelToDoseValue(int.MaxValue).GetDose(DoseValue.DoseUnit.Gy) / pi.TotalPrescribedDoseGy();
+            else
+                factor = pi.Dose.VoxelToDoseValue(int.MaxValue).GetDose(unit); 
+            factor /= (double)int.MaxValue;
+            pi.DoseValuePresentation = oldPresentation;
+
+            int nx = pi.Dose.XSize;
+            int ny = pi.Dose.YSize;
+            int nz = pi.Dose.ZSize;
+            double [,,] dose = new double[nx,ny,nz];
+            int [,] slice = new int[nx,ny];
+
+            for(int kz=0;kz<nz;kz++)
+            {
+                pi.Dose.GetVoxels(kz,slice);
+                for(int ix=0;ix<nx;ix++)
+                   for(int jy=0;jy<ny;jy++)
+                        dose[ix,jy,kz] = factor * slice[ix,jy];
+            }
+
+            return dose;
+        }
         #endregion
 
         #region VOLUME QUERIES
