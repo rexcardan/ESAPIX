@@ -43,6 +43,10 @@ namespace ESAPIX.Constraints
         public object ConstraintSettings { get; set; }
 
         /// <summary>
+        /// Used for serialization and deserialization of settings
+        /// </summary>
+        public Type ConstraintSettingsType { get; set; }
+        /// <summary>
         /// A optional method to validate the settings values to make sure they are appropriate.
         /// This will be called when settings are changed. 
         /// </summary>

@@ -3,7 +3,6 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-
 #endregion
 
 namespace ESAPIX.Common
@@ -16,26 +15,20 @@ namespace ESAPIX.Common
         private Thread thread;
         private StandAloneContext _sac;
         CancellationTokenSource cts;
+        Exception closingException = null;
 
         private AppComThread()
         {
             cts = new CancellationTokenSource();
+
             thread = new Thread(() =>
             {
                 foreach (var job in _jobs.GetConsumingEnumerable(cts.Token))
                 {
-                    try
-                    {
-                        job.RunSynchronously();
-                    }
-                    catch(Exception e)
-                    {
-                        _sac?.Logger.Error(e);
-                    }
-
+                    job.RunSynchronously();
                 }
             });
-            thread.IsBackground = true;
+            thread.IsBackground = false;
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
@@ -112,7 +105,15 @@ namespace ESAPIX.Common
         {
             var task = new Task(action);
             _jobs.Add(task);
-            task.GetAwaiter().GetResult();
+            try
+            {
+                task.GetAwaiter().GetResult();
+            }
+            catch (Exception e)
+            {
+                _sac?.Logger.Error(e);
+                Dispose();
+            }
         }
 
         public void Dispose()
@@ -126,7 +127,9 @@ namespace ESAPIX.Common
                 }
             }));
 
-            cts.Cancel();
+            _jobs.CompleteAdding();
+
+            thread.Join();
         }
 
         public int ThreadId => thread.ManagedThreadId;
