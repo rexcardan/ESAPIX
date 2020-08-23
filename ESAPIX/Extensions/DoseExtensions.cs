@@ -100,17 +100,25 @@ namespace ESAPIX.Extensions
                 // Need to convert to system units first (ugh!)
                 var oldPresentation = pi.DoseValuePresentation;
                 pi.DoseValuePresentation = DoseValuePresentation.Absolute;
+                var systemUnits = DoseValue.DoseUnit.Unknown;
                 if (pi?.Dose != null)
                 {
-                    var systemUnits = pi.Dose.DoseMax3D.Unit;
-                    pi.DoseValuePresentation = oldPresentation;
-                    //Thanks ESAPIX!
-                    newDv = dv.ConvertUnits(systemUnits);
+                    systemUnits = pi.Dose.DoseMax3D.Unit;  
                 }
-                else
+                else if (pi is PlanSetup ps )
                 {
-                    throw new Exception("Cannot determine system units for dose. Plan dose is null");
+                    if (ps?.DosePerFraction != null)
+                        systemUnits = ps.DosePerFraction.Unit;
+                    else if (ps?.PrimaryReferencePoint.TotalDoseLimit != null)
+                        systemUnits = ps.PrimaryReferencePoint.TotalDoseLimit.Unit;
                 }
+                
+                if (systemUnits == DoseValue.DoseUnit.Unknown)
+                    throw new Exception("Cannot determine system units for dose.");
+                
+                pi.DoseValuePresentation = oldPresentation;
+                //Thanks ESAPIX!
+                newDv = dv.ConvertUnits(systemUnits);
             }
             return newDv;
         }
@@ -129,17 +137,25 @@ namespace ESAPIX.Extensions
                 // Need to convert to system units first (ugh!)
                 var oldPresentation = pi.DoseValuePresentation;
                 pi.DoseValuePresentation = DoseValuePresentation.Absolute;
+                var systemUnits = DoseValue.DoseUnit.Unknown;
                 if (pi?.Dose != null)
                 {
-                    var systemUnits = pi.Dose.DoseMax3D.Unit;
-                    pi.DoseValuePresentation = oldPresentation;
-                    //Thanks ESAPIX!
-                    newDv = dv.ConvertUnits(systemUnits);
+                    systemUnits = pi.Dose.DoseMax3D.Unit;
                 }
-                else
+                else if (pi is ESAPIX.Facade.API.PlanSetup ps)
                 {
-                    throw new Exception("Cannot determine system units for dose. Plan dose is null");
+                    if (ps?.DosePerFraction != null)
+                        systemUnits = ps.DosePerFraction.Unit;
+                    else if (ps?.PrimaryReferencePoint.TotalDoseLimit != null)
+                        systemUnits = ps.PrimaryReferencePoint.TotalDoseLimit.Unit;
                 }
+
+                if (systemUnits == DoseValue.DoseUnit.Unknown)
+                    throw new Exception("Cannot determine system units for dose.");
+
+                pi.DoseValuePresentation = oldPresentation;
+                //Thanks ESAPIX!
+                newDv = dv.ConvertUnits(systemUnits);
             }
             return newDv;
         }
