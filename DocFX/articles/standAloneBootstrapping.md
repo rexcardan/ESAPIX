@@ -72,8 +72,8 @@ namespace YOURPROJECTNAME.ViewModels
         }
     }
 }
-
 ```
+
 9. Open the App.xaml file, and remove the * StartupUri="MainWindow"* at the top.
 10. Open up the App.cs file and replace the App class with this:
 
