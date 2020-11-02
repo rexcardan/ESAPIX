@@ -1,3 +1,5 @@
+#if false
+
 using System;
 using System.Windows.Media.Media3D;
 using System.Windows.Media;
@@ -13,27 +15,28 @@ using Types = VMS.TPS.Common.Model.Types;
 
 namespace ESAPIX.Facade.API
 {
-    //public class TradeoffPlanGenerationIntermediateDoseMode : System.Enum, System.IComparable, System.IFormattable, System.IConvertible
-    //{
-    //    public System.Int32 value__
-    //    {
-    //        get
-    //        {
-    //        }
+    public class TradeoffPlanGenerationIntermediateDoseMode : System.Enum, System.IComparable, System.IFormattable, System.IConvertible
+    {
+        public System.Int32 value__
+        {
+            get
+            {
+            }
 
-    //        set
-    //        {
-    //        }
-    //    }
+            set
+            {
+            }
+        }
 
-    //    public TradeoffPlanGenerationIntermediateDoseMode()
-    //    {
-    //        _client = (new ExpandoObject());
-    //    }
+        public TradeoffPlanGenerationIntermediateDoseMode()
+        {
+            _client = (new ExpandoObject());
+        }
 
-    //    public TradeoffPlanGenerationIntermediateDoseMode(dynamic client)
-    //    {
-    //        _client = (client);
-    //    }
-    //}
+        public TradeoffPlanGenerationIntermediateDoseMode(dynamic client)
+        {
+            _client = (client);
+        }
+    }
 }
+#endif

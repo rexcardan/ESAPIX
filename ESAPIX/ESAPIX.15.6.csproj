@@ -22,11 +22,11 @@
   </PropertyGroup>
   <PropertyGroup>
     <PlatformTarget>x64</PlatformTarget>
-    <DefineConstants>TRACE;VMS16</DefineConstants>
+    <DefineConstants>TRACE;VMS156</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
-    <DefineConstants>TRACE;VMS155</DefineConstants>
+    <DefineConstants>TRACE;VMS156</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Facade\API11.0\**" />

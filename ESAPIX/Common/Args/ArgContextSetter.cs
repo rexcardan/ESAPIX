@@ -83,7 +83,7 @@ namespace ESAPIX.Common.Args
                         }
                     }
 #endif
-#if (VMS151 || VMS150 || VMS155)
+#if (VMS151 || VMS150 || VMS155 || VMS156)
                     {
                         var ionPlansInScope = ArgumentParser.GetIonPlansInScope(commandLineArgs);
                         if (ionPlansInScope != null && ionPlansInScope.Any())
