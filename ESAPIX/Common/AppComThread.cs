@@ -26,6 +26,11 @@ namespace ESAPIX.Common
                 foreach (var job in _jobs.GetConsumingEnumerable(cts.Token))
                 {
                     job.RunSynchronously();
+                    if (job.Exception != null)
+                    {
+                        OnExceptionRaisedHandler(job.Exception);
+                        break;
+                    }
                 }
             });
             thread.IsBackground = false;
@@ -112,11 +117,13 @@ namespace ESAPIX.Common
             catch (Exception e)
             {
                 _sac?.Logger.Error(e);
-                Dispose();
+                DisposeVMS();
+                OnExceptionRaisedHandler(e);
+                throw e;
             }
         }
 
-        public void Dispose()
+        public void DisposeVMS()
         {
             Invoke(new Action(() =>
             {
@@ -126,12 +133,31 @@ namespace ESAPIX.Common
                     _sac = null;
                 }
             }));
-
+            while (_jobs.Count > 0)
+            {
+                Task item;
+                _jobs.TryTake(out item);
+            }
             _jobs.CompleteAdding();
+        }
 
+        public void Dispose()
+        {
+            if (!_jobs.IsAddingCompleted)
+            {
+                DisposeVMS();
+            }
             thread.Join();
         }
 
         public int ThreadId => thread.ManagedThreadId;
+
+        public delegate void ExceptionRaisedHandler(Exception ex);
+        public event ExceptionRaisedHandler ExceptionRaised;
+
+        public void OnExceptionRaisedHandler(Exception ex)
+        {
+            ExceptionRaised?.Invoke(ex);
+        }
     }
 }
