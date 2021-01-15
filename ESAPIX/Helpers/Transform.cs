@@ -102,5 +102,40 @@ namespace ESAPIX.Helpers
             tx.Invert();
             return tx;
         }
+
+        /// <summary>
+        /// Provides the transform from DICOM coordinates to BEV coordinates
+        /// </summary>
+        /// <param name="gantryAngle">gantry angle in degrees (IEC)</param>
+        /// <param name="collimatorAngle">collimator angle in degrees (IEC)</param>
+        /// <param name="patientSupportAngle">support anlge in degrees (IEC)</param>
+        /// <returns></returns>
+        public static Matrix3D BEVTransform(double gantryAngle, double collimatorAngle, double patientSupportAngle, Matrix3D dicomToIEC)
+        {
+            var gantryTx = Matrix3D.Identity;
+            double gAngle = gantryAngle * Math.PI / 180;
+            gantryTx.M11 = Math.Cos(gAngle);
+            gantryTx.M13 = Math.Sin(gAngle);
+            gantryTx.M31 = -Math.Sin(gAngle);
+            gantryTx.M33 = Math.Cos(gAngle);
+
+            var collTx = Matrix3D.Identity;
+            double cAngle = collimatorAngle * Math.PI / 180;
+            collTx.M11 = Math.Cos(cAngle);
+            collTx.M21 = Math.Sin(cAngle);
+            collTx.M12 = -Math.Sin(cAngle);
+            collTx.M22 = Math.Cos(cAngle);
+
+            var supportTx = Matrix3D.Identity;
+            double sAngle = -patientSupportAngle * Math.PI / 180;
+            supportTx.M11 = Math.Cos(sAngle);
+            supportTx.M21 = Math.Sin(sAngle);
+            supportTx.M12 = -Math.Sin(sAngle);
+            supportTx.M22 = Math.Cos(sAngle);
+
+            var intermediate = Matrix3D.Multiply(dicomToIEC, supportTx);
+            var intermediate2 = Matrix3D.Multiply(intermediate, gantryTx);
+            return Matrix3D.Multiply(intermediate2, collTx);
+        }
     }
 }
