@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <Platforms>x64</Platforms>
+    <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyVersion>1.5.3.11</AssemblyVersion>
+    <FileVersion>1.5.3.11</FileVersion>
+    <Version>1.5.3.11</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Rex Cardan © 2020</Copyright>
+    <RootNamespace>ESAPIX</RootNamespace>
+    <AssemblyName>ESAPIX</AssemblyName>
+    <ApplicationIcon>Resources\esapix.ico</ApplicationIcon>
+    <PackageId>ESAPIX_15.6</PackageId>
+    <Authors>Rex Cardan, PhD</Authors>
+    <Company>UAB Medicine</Company>
+    <PackageProjectUrl>https://rexcardan.github.io/ESAPIX/</PackageProjectUrl>
+    <PackageTags>Varian, ESAPI, C#</PackageTags>
+    <Description>ESAPI Extensions and helpers for quickly building robust clinical and research apps.</Description>
+    <PackageIconUrl>https://ucefmw.dm2304.livefilestore.com/y4mAK-jtRw4my6MHnrJqIuGR_XHWE0uCfjMm4lipJ1TR8qa6_C06cJIX6hcC2IH4S5ywGByzcODbHx4-WfZvNEl0TkAeOfOOJbj_TUVN7xPOrSVdwIz-UpGcnHxAJy4nxoYgkmkApe4-z3n2evvl0js95a8DfZkwlUND4sNQniz_ff7mzANhFPzF5S4nODZFDzbrIrVqhLijn6HzJvnPSlPlQ?width=50&amp;amp;height=50&amp;amp;cropmode=none</PackageIconUrl>
+    <RepositoryUrl>https://github.com/rexcardan/ESAPIX</RepositoryUrl>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>TRACE;VMS156</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>TRACE;VMS156</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Facade\API11.0\**" />
+    <Compile Remove="Facade\API13.6\**" />
+    <Compile Remove="Facade\API13.7\**" />
+    <Compile Remove="Facade\API15.0\**" />
+    <Compile Remove="Facade\API15.1\**" />
+    <Compile Remove="Facade\API15.5\**" />
+    <Compile Remove="lib\11.0\**" />
+    <Compile Remove="lib\13.6\**" />
+    <Compile Remove="lib\13.7\**" />
+    <Compile Remove="lib\15.0\**" />
+    <Compile Remove="lib\15.1\**" />
+    <Compile Remove="lib\15.5\**" />
+    <EmbeddedResource Remove="Facade\API11.0\**" />
+    <EmbeddedResource Remove="Facade\API13.6\**" />
+    <EmbeddedResource Remove="Facade\API13.7\**" />
+    <EmbeddedResource Remove="Facade\API15.0\**" />
+    <EmbeddedResource Remove="Facade\API15.1\**" />
+    <EmbeddedResource Remove="lib\11.0\**" />
+    <EmbeddedResource Remove="lib\13.6\**" />
+    <EmbeddedResource Remove="lib\13.7\**" />
+    <EmbeddedResource Remove="lib\15.0\**" />
+    <EmbeddedResource Remove="lib\15.1\**" />
+    <None Remove="Facade\API11.0\**" />
+    <None Remove="Facade\API13.6\**" />
+    <None Remove="Facade\API13.7\**" />
+    <None Remove="Facade\API15.0\**" />
+    <None Remove="Facade\API15.1\**" />
+    <None Remove="Facade\API15.5\**" />
+    <None Remove="lib\11.0\**" />
+    <None Remove="lib\13.6\**" />
+    <None Remove="lib\13.7\**" />
+    <None Remove="lib\15.0\**" />
+    <None Remove="lib\15.1\**" />
+    <None Remove="lib\15.5\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Facade\API15.5\TradeoffPlanGenerationIntermediateDoseMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="VMS.TPS.Common.Model.API">
+      <HintPath>C:\Program Files (x86)\Varian\RTM\15.5\esapi\API\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.Types">
+      <HintPath>C:\Program Files (x86)\Varian\RTM\15.5\esapi\API\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+</Project>
