@@ -49,7 +49,6 @@ namespace ESAPIX.Helpers.Autoplanning
 
             //Get bounding Zs-physician drawn CTV, brain
             var minZCTV = ss.Find("CTV").MeshGeometry.Bounds.Z;
-            var maxZCTV = ss.Find("CTV").MeshGeometry.Bounds.Z + ss.Find("CTV").MeshGeometry.Bounds.SizeZ;
             var minZBrain = ss.Find("Brain").MeshGeometry.Bounds.Z - 10; // add 1cm toward spine
             var maxZBrain = ss.Find("Brain").MeshGeometry.Bounds.Z + ss.Find("Brain").MeshGeometry.Bounds.SizeZ;
 
@@ -85,9 +84,9 @@ namespace ESAPIX.Helpers.Autoplanning
 
             //We don't want to do margin on the brain structure...just the part of the brain CTV containing the cord/brainstem
             ss.Find(OTV_BRAIN).SegmentVolume = ss.Find("CTV").SegmentVolume
-                .Sub(ss.Find("Brain").SegmentVolume)//CTV-Brain
+                .Sub(ss.Find("Brain").SegmentVolume.Margin(3))//CTV-Brain
                 .AsymmetricMargin(sMargin)//4mm/1cm
-                .Or(ss.Find(CTV_BRAIN)); //combine margined cord with non-margin brain
+                .Or(ss.Find(CTV_BRAIN).SegmentVolume.Margin(3)); //combine margined cord with non-margin brain
 
             //Clean up - remove unneccesary spine targets if not required
             if (nSpineFieldsRequired == 1)
