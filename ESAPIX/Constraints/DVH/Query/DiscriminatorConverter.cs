@@ -21,7 +21,7 @@ namespace ESAPIX.DVH
             {
                 case "<=": return Discriminator.LESS_THAN_OR_EQUAL;
                 case "<": return Discriminator.LESS_THAN;
-                case ">=": return Discriminator.GREATHER_THAN_OR_EQUAL;
+                case ">=": return Discriminator.GREATER_THAN_OR_EQUAL;
                 case ">": return Discriminator.GREATER_THAN;
                 case "=": return Discriminator.EQUAL;
                 default: throw new ArgumentException("Not a valid comparitor (eg >=, =, <=...)");
@@ -40,7 +40,7 @@ namespace ESAPIX.DVH
             {
                 case Discriminator.EQUAL: return "=";
                 case Discriminator.GREATER_THAN: return ">";
-                case Discriminator.GREATHER_THAN_OR_EQUAL: return ">=";
+                case Discriminator.GREATER_THAN_OR_EQUAL: return ">=";
                 case Discriminator.LESS_THAN: return "<";
                 case Discriminator.LESS_THAN_OR_EQUAL: return "<=";
                 default: throw new ArgumentException("Not a valid discriminator!");

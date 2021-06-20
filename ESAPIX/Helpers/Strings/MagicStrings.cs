@@ -46,6 +46,11 @@
             public const string UNKNOWN = "Unknown";
         }
 
+        public static class Technique
+        {
+            public const string MODULATED_SCANNING = "MODULAT_SCANNING";
+        }
+
         public static class PlanIntent
         {
             public const string PROPHYLACTIC = "Prophylactic";

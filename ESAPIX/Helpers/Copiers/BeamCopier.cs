@@ -1,4 +1,5 @@
-﻿#if VMS156
+﻿#if (VMS156 || VMS161)
+using ESAPIX.Helpers.Strings;
 using System;
 using System.Collections.Generic;
 using System.Linq;

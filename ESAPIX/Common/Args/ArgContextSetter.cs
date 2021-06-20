@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VMS.TPS.Common.Model.API;
 
 namespace ESAPIX.Common.Args
 {
     public class ArgContextSetter
-    {
+    {        
         /// <summary>
         /// Sets up a stand alone context to emulate a plugin by injection command line arguments
         /// </summary>
@@ -44,7 +45,7 @@ namespace ESAPIX.Common.Args
                         var plansInScope = ArgumentParser.GetPlansInScope(commandLineArgs);
                         if (plansInScope != null && plansInScope.Any())
                         {
-                            var plans = sac.Patient.Courses.SelectMany(c=>c.PlanSetups).Where(p => plansInScope.Contains(p.UID));
+                            var plans = sac.Patient.Courses.SelectMany(c => c.PlanSetups).Where(p => plansInScope.Contains(p.UID));
                             sac.SetPlansInScope(plans);
                         }
                     }
@@ -83,7 +84,7 @@ namespace ESAPIX.Common.Args
                         }
                     }
 #endif
-#if (VMS151 || VMS150 || VMS155 || VMS156)
+#if (VMS151 || VMS150 || VMS155 || VMS156 || VMS161)
                     {
                         var ionPlansInScope = ArgumentParser.GetIonPlansInScope(commandLineArgs);
                         if (ionPlansInScope != null && ionPlansInScope.Any())

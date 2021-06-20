@@ -3,6 +3,8 @@
 using VMS.TPS.Common.Model.API;
 using System;
 using VMS.TPS.Common.Model.Types;
+using ESAPIX.Constraints.DVH.Query;
+using ESAPIX.DVH;
 
 #endregion
 
@@ -123,42 +125,6 @@ namespace ESAPIX.Extensions
             return newDv;
         }
 
-        /// <summary>
-        /// Converts the dose to the system units. It cannot convert from % to abs dose. Will return NaN if asked
-        /// </summary>
-        /// <param name="dv">the dose value to be converted</param>
-        /// <param name="unit">the unit desired for the returned dose</param>
-        /// <returns>the dose in the desired units</returns>
-        public static DoseValue ConvertToSystemUnits(this DoseValue dv, ESAPIX.Facade.API.PlanningItem pi)
-        {
-            var newDv = new DoseValue(dv.Dose, dv.Unit);
-            if (dv.GetPresentation() != DoseValuePresentation.Relative)
-            {
-                // Need to convert to system units first (ugh!)
-                var oldPresentation = pi.DoseValuePresentation;
-                pi.DoseValuePresentation = DoseValuePresentation.Absolute;
-                var systemUnits = DoseValue.DoseUnit.Unknown;
-                if (pi?.Dose != null)
-                {
-                    systemUnits = pi.Dose.DoseMax3D.Unit;
-                }
-                else if (pi is ESAPIX.Facade.API.PlanSetup ps)
-                {
-                    if (ps?.DosePerFraction != null)
-                        systemUnits = ps.DosePerFraction.Unit;
-                    else if (ps?.PrimaryReferencePoint.TotalDoseLimit != null)
-                        systemUnits = ps.PrimaryReferencePoint.TotalDoseLimit.Unit;
-                }
-
-                if (systemUnits == DoseValue.DoseUnit.Unknown)
-                    throw new Exception("Cannot determine system units for dose.");
-
-                pi.DoseValuePresentation = oldPresentation;
-                //Thanks ESAPIX!
-                newDv = dv.ConvertUnits(systemUnits);
-            }
-            return newDv;
-        }
 
         #region COMPARISONS
 

@@ -15,7 +15,6 @@ namespace ESAPIX.Common
         private Thread thread;
         private StandAloneContext _sac;
         CancellationTokenSource cts;
-        Exception closingException = null;
 
         private AppComThread()
         {

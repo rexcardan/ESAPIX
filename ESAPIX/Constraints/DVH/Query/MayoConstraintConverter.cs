@@ -55,7 +55,7 @@ namespace ESAPIX.DVH
             }
         }
 
-        private static DoseUnit GetDoseUnits(Units mayoUnit)
+        public static DoseUnit GetDoseUnits(Units mayoUnit)
         {
             switch (mayoUnit)
             {
@@ -98,7 +98,7 @@ namespace ESAPIX.DVH
             {
                 case Discriminator.EQUAL:
                 case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                case Discriminator.GREATER_THAN_OR_EQUAL:
                     c = new MinDoseAtVolConstraint
                     {
                         ConstraintDose = dv,
@@ -135,7 +135,7 @@ namespace ESAPIX.DVH
             {
                 case Discriminator.EQUAL:
                 case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                case Discriminator.GREATER_THAN_OR_EQUAL:
                     c = new MinMeanDoseConstraint
                     {
                         ConstraintDose = dv,
@@ -170,7 +170,7 @@ namespace ESAPIX.DVH
             {
                 case Discriminator.EQUAL:
                 case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                case Discriminator.GREATER_THAN_OR_EQUAL:
                     c = new MinComplementVolumeAtDose
                     {
                         ConstraintDose = dv,
@@ -209,7 +209,7 @@ namespace ESAPIX.DVH
             {
                 case Discriminator.EQUAL:
                 case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                case Discriminator.GREATER_THAN_OR_EQUAL:
                     c = new MinComplementDoseAtVolumeConstraint
                     {
                         ConstraintDose = dv,
@@ -248,7 +248,7 @@ namespace ESAPIX.DVH
             {
                 case Discriminator.EQUAL:
                 case Discriminator.GREATER_THAN:
-                case Discriminator.GREATHER_THAN_OR_EQUAL:
+                case Discriminator.GREATER_THAN_OR_EQUAL:
                     c = new MinVolAtDoseConstraint
                     {
                         ConstraintDose = dv,

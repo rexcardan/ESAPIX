@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
+    <TargetFramework>net461</TargetFramework>
     <Platforms>x64</Platforms>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.5.3.11</AssemblyVersion>
-    <FileVersion>1.5.3.11</FileVersion>
-    <Version>1.5.3.11</Version>
+    <Build>$([System.DateTime]::op_Subtraction($([System.DateTime]::get_Now().get_Date()),$([System.DateTime]::new(2000,1,1))).get_TotalDays())</Build>
+    <Revision>$([MSBuild]::Divide($([System.DateTime]::get_Now().get_TimeOfDay().get_TotalMinutes()), 2).ToString('F0'))</Revision>
+    <Version>1.6.$(Build).$(Revision)</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>Rex Cardan © 2020</Copyright>
+    <Copyright>Rex Cardan © 2021</Copyright>
     <RootNamespace>ESAPIX</RootNamespace>
     <AssemblyName>ESAPIX</AssemblyName>
     <ApplicationIcon>Resources\esapix.ico</ApplicationIcon>
-    <PackageId>ESAPIX_15.6</PackageId>
+    <PackageId>ESAPIX_16.1</PackageId>
     <Authors>Rex Cardan, PhD</Authors>
     <Company>UAB Medicine</Company>
     <PackageProjectUrl>https://rexcardan.github.io/ESAPIX/</PackageProjectUrl>
@@ -22,11 +22,11 @@
   </PropertyGroup>
   <PropertyGroup>
     <PlatformTarget>x64</PlatformTarget>
-    <DefineConstants>TRACE;VMS156</DefineConstants>
+    <DefineConstants>TRACE;VMS161</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
-    <DefineConstants>TRACE;VMS156</DefineConstants>
+    <DefineConstants>TRACE;VMS161</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="lib\11.0\**" />
@@ -35,6 +35,7 @@
     <Compile Remove="lib\15.0\**" />
     <Compile Remove="lib\15.1\**" />
     <Compile Remove="lib\15.5\**" />
+    <Compile Remove="lib\15.6\**" />
     <EmbeddedResource Remove="lib\11.0\**" />
     <EmbeddedResource Remove="lib\13.6\**" />
     <EmbeddedResource Remove="lib\13.7\**" />
@@ -46,9 +47,7 @@
     <None Remove="lib\15.0\**" />
     <None Remove="lib\15.1\**" />
     <None Remove="lib\15.5\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Helpers\Autoplanning\ProtonCSIBuilder.cs" />
+    <None Remove="lib\15.6\**" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
@@ -61,15 +60,11 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="VMS.TPS.Common.Model.API">
-      <HintPath>C:\Program Files (x86)\Varian\RTM\15.5\esapi\API\VMS.TPS.Common.Model.API.dll</HintPath>
+      <HintPath>lib\16.1\VMS.TPS.Common.Model.API.dll</HintPath>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>C:\Program Files (x86)\Varian\RTM\15.5\esapi\API\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>lib\16.1\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
-  </ItemGroup>
- 
-  <ItemGroup>
-    <Folder Include="Helpers\Autoplanning\" />
   </ItemGroup>
 </Project>

@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using ESAPIX.Constraints.DVH.Query;
 using ESAPIX.Helpers;
 using static ESAPIX.Helpers.Strings.MagicStrings;
+using System;
+using ESAPIX.Common;
 
 #endregion
 
@@ -32,8 +34,8 @@ namespace ESAPIX.Extensions
             {
                 image.GetVoxels(sliceZ, buffer);
                 for (var x = 0; x < image.XSize; x++)
-                for (var y = 0; y < image.YSize; y++)
-                {
+                    for (var y = 0; y < image.YSize; y++)
+                    {
                         var dx = (x * image.XRes * image.XDirection + image.Origin).x;
                         var dy = (y * image.YRes * image.YDirection + image.Origin).y;
                         var dz = (sliceZ * image.ZRes * image.ZDirection + image.Origin).z;
@@ -47,7 +49,7 @@ namespace ESAPIX.Extensions
         public static Dictionary<TargetStat, double> GetTargetStats(this Structure s, PlanningItem pi, DoseValue referenceDose, params TargetStat[] desiredStats)
         {
             Dictionary<TargetStat, double> stats = new Dictionary<TargetStat, double>();
-            foreach(var ds in desiredStats)
+            foreach (var ds in desiredStats)
             {
                 switch (ds)
                 {
@@ -77,16 +79,28 @@ namespace ESAPIX.Extensions
         /// <param name="zBounds">the lower and upper bounds along the z axis where copying will occur</param>
         public static void CopyStructureInBounds(this Structure copy, Structure toCopy, Image im, (double LowerZBound, double UpperZBound) zBounds)
         {
-            for (int z = 0; z < im.ZSize; z++)
+            var zSize = im.ZSize;
+            var zOrigin = im.Origin.z;
+            var zRes = im.ZRes;
+
+            for (int z = 0; z < zSize; z++)
             {
-                var zPos = im.Origin.z + z * im.ZRes;
+                if (Environment.UserInteractive)
+                {
+                    var ui = new ConsoleUI();
+                    ui.WriteProgressBar((int)(z * 100.0 / zSize) + 1, true);
+                }
+                var zPos = zOrigin + z * zRes;
                 if (zPos >= zBounds.LowerZBound && zPos <= zBounds.UpperZBound)
                 {
                     copy.ClearAllContoursOnImagePlane(z);
                     var zContour = toCopy.GetContoursOnImagePlane(z);
                     zContour.ToList().ForEach(c => copy.AddContourOnImagePlane(c, z));
                 }
-
+            }
+            if (Environment.UserInteractive)
+            {
+                Console.WriteLine(); // End progress bar
             }
         }
 

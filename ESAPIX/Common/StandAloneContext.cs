@@ -133,7 +133,7 @@ namespace ESAPIX.Common
             SetBrachyPlanSetup(null);
             SetExternalPlanSetup(null);
 #endif
-#if (VMS150 || VMS151 || VMS155 || VMS156)
+#if (VMS150 || VMS151 || VMS155 || VMS156 || VMS161)
             SetIonPlanSetup(null);
 #endif
             OnPatientChanged(null);
@@ -182,7 +182,7 @@ namespace ESAPIX.Common
 
         public delegate void PatientChangedHandler(Patient newPatient);
 
-#if (VMS150 || VMS151 || VMS155 || VMS156)
+#if (VMS150 || VMS151 || VMS155 || VMS156 || VMS161)
         public IonPlanSetup IonPlanSetup { get; set; }
         public IEnumerable<IonPlanSetup> IonPlansInScope { get; set; }
 
