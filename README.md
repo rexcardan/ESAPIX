@@ -14,6 +14,7 @@ debugging plugins, and with the ESAPIX.Bootstrapping library : dependency inject
 * 15.1
 * 15.5
 * 15.6
+* 16.1
 
 
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
