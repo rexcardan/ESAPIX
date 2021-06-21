@@ -125,7 +125,7 @@ namespace ESAPIX.Helpers.Autoplanning
         public static void AddBeams(IonPlanSetup ion, VMS.TPS.Common.Model.Types.ProtonBeamMachineParameters mParams, string snoutID, string rsId)
         {
             var ss = ion.StructureSet;
-            var f1 = (IonBeam)ion.AddModulatedScanningBeam(mParams, snoutID, 42, 120, 0, ss.Find(CTV_BRAIN).GetMidpoint());
+            var f1 = (IonBeam)ion.AddModulatedScanningBeam(mParams, snoutID, 42, 120, 0, ss.Find(CTV_BRAIN).CenterPoint);
             var ibp = f1.GetEditableParameters();
             ibp.TargetStructure = ss.Find(OTV_BRAIN);
             ibp.PreSelectedRangeShifter1Id = rsId;
@@ -134,14 +134,14 @@ namespace ESAPIX.Helpers.Autoplanning
             f1.ProximalTargetMargin = 8;
             f1.LateralMargins = new VRect<double>(7, 7, 7, 7);
 
-            var f2 = (IonBeam)ion.AddModulatedScanningBeam(mParams, snoutID, 42, 240, 0, ss.Find(OTV_BRAIN).GetMidpoint());
+            var f2 = (IonBeam)ion.AddModulatedScanningBeam(mParams, snoutID, 42, 240, 0, ss.Find(OTV_BRAIN).CenterPoint);
             ibp = f2.GetEditableParameters();
             ibp.PreSelectedRangeShifter1Id = rsId;
             ibp.TargetStructure = ss.Find(OTV_BRAIN);
             f2.ApplyParameters(ibp);
             f2.DistalTargetMargin = 10;
             f2.ProximalTargetMargin = 8;
-            f1.LateralMargins = new VRect<double>(7, 7, 7, 7);
+            f2.LateralMargins = new VRect<double>(7, 7, 7, 7);
 
             var f3 = (IonBeam)ion.AddModulatedScanningBeam(mParams, snoutID, 42, 180.1, 0, ss.Find(OTV_UPP).GetMidpoint());
             ibp = f3.GetEditableParameters();
@@ -150,7 +150,7 @@ namespace ESAPIX.Helpers.Autoplanning
             f3.ApplyParameters(ibp);
             f3.DistalTargetMargin = 10;
             f3.ProximalTargetMargin = 8;
-            f1.LateralMargins = new VRect<double>(7, 0, 7, 0);
+            f3.LateralMargins = new VRect<double>(7, 0, 7, 0);
 
             if (ss.Find(CTV_LOW) != null)
             {
@@ -161,7 +161,7 @@ namespace ESAPIX.Helpers.Autoplanning
                 f4.ApplyParameters(ibp);
                 f4.DistalTargetMargin = 10;
                 f4.ProximalTargetMargin = 8;
-                f1.LateralMargins = new VRect<double>(7, 0, 7, 0);
+                f4.LateralMargins = new VRect<double>(7, 0, 7, 0);
             }
         }
     }
