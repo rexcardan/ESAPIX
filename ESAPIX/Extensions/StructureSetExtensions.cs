@@ -1,6 +1,7 @@
 ﻿using ESAPIX.Common;
 using ESAPIX.Helpers.Strings;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using VMS.TPS.Common.Model.API;
@@ -37,6 +38,21 @@ namespace ESAPIX.Extensions
                 }
             }
             return null;
+        }
+
+        public static List<Structure> FindAll(this StructureSet ss, string structureId, string regex = null)
+        {
+            List<Structure> matches = new List<Structure>();
+            foreach (var struc in ss.Structures)
+            {
+                var regexMatched = !string.IsNullOrEmpty(regex) &&
+                                   Regex.IsMatch(struc.Id, regex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                if (0 == string.Compare(structureId, struc.Id, true) || regexMatched)
+                {
+                    matches.Add(struc); //matched
+                }
+            }
+            return matches;
         }
 
         public static void RemoveAll(this StructureSet ss, string regex)

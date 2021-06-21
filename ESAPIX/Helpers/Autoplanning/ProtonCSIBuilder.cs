@@ -83,7 +83,7 @@ namespace ESAPIX.Helpers.Autoplanning
             }
 
             //We don't want to do margin on the brain structure...just the part of the brain CTV containing the cord/brainstem
-            ss.Find(OTV_BRAIN).SegmentVolume = ss.Find("CTV").SegmentVolume
+            ss.Find(OTV_BRAIN).SegmentVolume = ss.Find(CTV_BRAIN).SegmentVolume
                 .Sub(ss.Find("Brain").SegmentVolume.Margin(3))//CTV-Brain
                 .AsymmetricMargin(sMargin)//4mm/1cm
                 .Or(ss.Find(CTV_BRAIN).SegmentVolume.Margin(3)); //combine margined cord with non-margin brain
