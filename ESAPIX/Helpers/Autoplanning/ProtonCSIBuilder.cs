@@ -125,7 +125,7 @@ namespace ESAPIX.Helpers.Autoplanning
         public static void AddBeams(IonPlanSetup ion, VMS.TPS.Common.Model.Types.ProtonBeamMachineParameters mParams, string snoutID, string rsId)
         {
             var ss = ion.StructureSet;
-            var f1 = (IonBeam)ion.AddModulatedScanningBeam(mParams, snoutID, 42, 120, 0, ss.Find(CTV_BRAIN).CenterPoint);
+            var f1 = (IonBeam)ion.AddModulatedScanningBeam(mParams, snoutID, 42, 120, 0, ss.Find(CTV_BRAIN).GetMidpoint());
             var ibp = f1.GetEditableParameters();
             ibp.TargetStructure = ss.Find(OTV_BRAIN);
             ibp.PreSelectedRangeShifter1Id = rsId;
