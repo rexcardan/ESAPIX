@@ -32,6 +32,7 @@ namespace ESAPIX.Common
                     }
                 }
             });
+            thread.Name = "ESAPIX Thread";
             thread.IsBackground = false;
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
@@ -101,24 +102,47 @@ namespace ESAPIX.Common
         public Task InvokeAsync(Action action)
         {
             var task = new Task(action);
-            _jobs.Add(task);
-            return task;
+            if (Thread.CurrentThread.ManagedThreadId == thread.ManagedThreadId)
+            {
+                task.Start();
+                return task;
+            }
+            else
+            {
+                _jobs.Add(task);
+                return task;
+            }
         }
 
         public void Invoke(Action action)
         {
-            var task = new Task(action);
-            _jobs.Add(task);
-            try
+            if(Thread.CurrentThread.ManagedThreadId == thread.ManagedThreadId)
             {
-                task.GetAwaiter().GetResult();
+                //just execute - already on right thread
+                try
+                {
+                    action.Invoke();
+                }
+                catch (Exception e)
+                {
+                    OnExceptionRaisedHandler(e);
+                }
             }
-            catch (Exception e)
+            else
             {
-                _sac?.Logger.Error(e);
-                DisposeVMS();
-                OnExceptionRaisedHandler(e);
-                throw e;
+                var task = new Task(action);
+                _jobs.Add(task);
+                try
+                {
+                    task.GetAwaiter().GetResult();
+                }
+                catch (Exception e)
+                {
+                    _sac?.Logger.Error(e);
+                    DisposeVMS();
+                    OnExceptionRaisedHandler(e);
+                    throw e;
+                }
             }
         }
 
