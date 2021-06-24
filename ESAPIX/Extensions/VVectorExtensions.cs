@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Numerics;
 using VMS.TPS.Common.Model.Types;
 
 #endregion
@@ -23,6 +24,16 @@ namespace ESAPIX.Extensions
         public static VVector Round(this VVector v)
         {
             return new VVector(Math.Round(v.x), Math.Round(v.y), Math.Round(v.z));
+        }
+
+        /// <summary>
+        /// Converts to a vector from System.Numerics for math operations
+        /// </summary>
+        /// <param name="v">the vector to convert</param>
+        /// <returns>a vector from System.Numerics</returns>
+        public static Vector3 ToVector3(this VVector v)
+        {
+            return new Vector3((float)v.x, (float)v.y, (float)v.z);
         }
     }
 }
