@@ -2,6 +2,7 @@
 using ESAPIX.Interfaces;
 using System;
 using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ESAPIX.Services
