@@ -67,6 +67,7 @@ namespace ESAPIX.Helpers.DVH
                     if (pat == null)
                     {
                         Logger.Log($"Couldn't find patient {id}");
+                        csv.AddRow(id, "Patient not found in database");
                         throw new PatientNotFoundException(id);
                     }
 
@@ -108,6 +109,13 @@ namespace ESAPIX.Helpers.DVH
                             }
                             csv.AddRow(rowItems.ToArray());
                         }
+
+                        if (!s_structures.Any())
+                        {
+                            List<dynamic> rowItems = new List<dynamic>();
+                            rowItems.AddRange(new dynamic[] { pat.Id, pi.GetCourse().Id, pi.Id, "No matching structures" });
+                            csv.AddRow(rowItems.ToArray());
+                        }
                     }
 
                     Logger.Log($"Closing patient {id}");
@@ -131,23 +139,26 @@ namespace ESAPIX.Helpers.DVH
         private IEnumerable<Structure> GetFilteredStructures(PlanningItem pi, StructureQuery[] metricsDesired)
         {
             var structureIds = metricsDesired.Select(m => m.StructureId).Distinct().ToList();
-            return pi.GetStructureSet().Structures.Where(s => structureIds.Contains(s.Id));
+            return pi.GetStructureSet().Structures.Where(s => structureIds.Any(str => s.Id.ToLower().Contains(str.ToLower())));
         }
 
         private IEnumerable<PlanningItem> FilterPlanningItems(Patient pat, IEnumerable<StructureSet> s_structureSets)
         {
             IEnumerable<PlanningItem> planSetups = pat.Courses.SelectMany(c => c.PlanSetups)
-                    .Where(p => s_structureSets.Any(s => s.Id == p.StructureSet.Id));
+                    .Where(p => s_structureSets.Any(s => p.StructureSet != null && s.Id == p.StructureSet.Id))
+                    .Where(p => p.IsTreated)
+                    .Where(p => p.PlanIntent!=MagicStrings.PlanIntent.VERIFICATION)
+                    .ToList();
 
             if (IncludePlanSums)
             {
                 IEnumerable<PlanningItem> planSums = pat.Courses.SelectMany(c => c.PlanSums)
-                  .Where(p => s_structureSets.Any(s => s.Id == p.StructureSet.Id));
-                return planSetups.Concat(planSums);
+                  .Where(p => s_structureSets.Any(s => p.StructureSet != null && s.Id == p.StructureSet.Id));
+                return planSetups.Concat(planSums).Where(p => p.Dose != null);
             }
             else
             {
-                return planSetups;
+                return planSetups.Where(p => p.Dose != null);
             }
         }
 

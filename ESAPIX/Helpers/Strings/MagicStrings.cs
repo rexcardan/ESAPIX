@@ -59,6 +59,7 @@
             public const string SERVICE = "Service";
             public const string MACHINE_QA = "Machine QA";
             public const string CURATIVE = "Curative";
+            public const string VERIFICATION = "VERIFICATION";
         }
     }
 }
