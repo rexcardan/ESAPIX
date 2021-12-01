@@ -19,6 +19,9 @@ debugging plugins, and with the ESAPIX.Bootstrapping library : dependency inject
 
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
+## Where is the ESAPIX Bootstrapper
+The bootstrapper used to be used to create a basic WPF application. Currently we recommend just using the WPF example as the starting place of your project and no longer using the Bootstrapping library. Clone https://github.com/rexcardan/ESAPIX_WPF_Example and start your project from there
+
 ----------
 
 # Getting Started
